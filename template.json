@@ -1,0 +1,52 @@
+{
+	"Actor": {
+		"types": ["character", "robot", "npc", "creature"],
+		"templates": {
+			"base": {},
+			"stats": {},
+			"derived": {}
+		},
+		"character": {
+			"templates": ["base", "stats", "derived"]
+		},		
+		"npc": {
+			"templates": ["base", "derived", "stats"]
+		},
+		"creature": {}
+	},
+	"Item": {
+		"types": [
+			"weapon",
+            "skill"
+		],
+		"templates": {
+			"base": {
+				"description": "",
+				"favorite": false
+			},
+			"physical": {
+				"weight": 0,
+				"cost": 0,
+				"quantity": 1,
+				"rarity": 0,
+				"stashed": false
+			},
+			"equipable": {
+				"equippable": true,
+				"equipped": false
+			}
+		},
+		"skill": {
+			"templates": ["base"],
+			"value": 0,
+			"tag": false,
+			"defaultAttribute": "str",
+			"summary": ""
+		},		
+		"weapon": {
+			"templates": ["base", "physical", "equipable"],
+			"melee": false,
+			"weaponType": ""
+		}
+	}
+}

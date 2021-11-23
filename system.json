@@ -1,0 +1,25 @@
+{
+    "name": "ac2d20",
+    "title": "!Achtung Cthulhu 2d20",
+    "description": "The unofficial !Achtung Cthulhu 2d20 System for FoundryVTT",
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.8.6",
+    "compatibleCoreVersion": "0.8.9",
+    "templateVersion": 1,
+    "author": "HappySteve",
+    "scripts": [],
+    "esmodules": ["module/ac2d20.js"],
+    "styles": ["css/ac2d20.css"],
+    "packs": [],
+    "languages": [{
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }],
+    "socket": true,
+    "gridDistance": 1,
+    "gridUnits": "m",
+    "url": "https://github.com/superseva/AC2d20",
+    "manifest": "https://raw.githubusercontent.com/superseva/AC2d20/master/system.json"
+  }
+  
