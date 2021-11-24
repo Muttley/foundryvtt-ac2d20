@@ -80,9 +80,9 @@ export class ACActorSheet extends ActorSheet {
         }
 
         let allInjuries = [];
-        for (const [key, bp] of Object.entries(this.actor.data.data.body_parts)) {
-            allInjuries.push.apply(allInjuries, bp.injuries);
-        }
+        // for (const [key, bp] of Object.entries(this.actor.data.data.body_parts)) {
+        //     allInjuries.push.apply(allInjuries, bp.injuries);
+        // }
         context.treatedInjuriesCount = allInjuries.filter(i => i == 1).length;
         context.openInjuriesCount = allInjuries.filter(i => i == 2).length;
 

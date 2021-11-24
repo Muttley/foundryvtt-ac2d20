@@ -3,7 +3,31 @@
 		"types": ["character", "npc", "creature"],
 		"templates": {
 			"base": {},
-			"stats": {},
+			"stats": {
+				"attributes": {
+					"str": {
+						"value": 1
+					},
+					"per": {
+						"value": 1
+					},
+					"end": {
+						"value": 1
+					},
+					"cha": {
+						"value": 1
+					},
+					"int": {
+						"value": 1
+					},
+					"agi": {
+						"value": 1
+					},
+					"luc": {
+						"value": 1
+					}
+				}
+			},
 			"derived": {}
 		},
 		"character": {
