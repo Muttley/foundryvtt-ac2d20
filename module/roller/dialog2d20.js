@@ -28,7 +28,7 @@ export class Dialog2d20 extends Dialog {
             let skill = html.find('[name="skill"]').val();
             let complication = html.find('[name="complication"]').val();
             let isTag = html.find('[name="tag"]').is(':checked');
-            game.fallout.Roller2D20.rollD20({ rollname: this.rollName, dicenum: this.diceNum, attribute: attr, skill: skill, tag: isTag, complication: complication })
+            game.ac2d20.Roller2D20.rollD20({ rollname: this.rollName, dicenum: this.diceNum, attribute: attr, skill: skill, tag: isTag, complication: complication })
         });
     }
 
@@ -45,7 +45,7 @@ export class Dialog2d20 extends Dialog {
         dialogData.skill = skill;
         dialogData.tag = tag;
         dialogData.complication = complication;
-        const html = await renderTemplate("systems/fallout/templates/dialogs/dialog2d20.html", dialogData);
+        const html = await renderTemplate("systems/ac2d20/templates/dialogs/dialog2d20.html", dialogData);
         let d = new Dialog2d20(rollName, diceNum, attribute, skill, tag, complication, {
             title: rollName,
             content: html,

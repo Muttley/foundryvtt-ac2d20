@@ -6,8 +6,18 @@ import { ACActorSheet } from "./sheets/actor-sheet.mjs";
 import { ACItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { AC2D20 } from "./helpers/config.mjs";
-
+import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
+import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs"
+//Import Roll2D20
+import { Roller2D20 } from "./roller/ac2d20-roller.mjs"
+import { Dialog2d20 } from './roller/dialog2d20.js'
+import { DialogD6 } from './roller/dialogD6.js'
 import DieACChallenge from './roller/challengeDie.js'
+
+/* -------------------------------------------- */
+/*  Handlebars Helpers                          */
+/* -------------------------------------------- */
+registerHandlebarsHelpers();
 
 
 Hooks.once('init', async function () {
@@ -16,7 +26,10 @@ Hooks.once('init', async function () {
     console.warn('INIT')
     game.ac2d20 = {
         ACActor,
-        ACItem
+        ACItem,
+        Roller2D20,
+        Dialog2d20,
+        DialogD6
     };
 
     // Add custom constants for configuration.
@@ -36,19 +49,16 @@ Hooks.once('init', async function () {
     CONFIG.Item.documentClass = ACItem;
     CONFIG.Dice.terms["p"] = DieACChallenge;
 
-
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("ac2d20", ACActorSheet, { makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("ac2d20", ACItemSheet, { makeDefault: true });
+
+    return preloadHandlebarsTemplates();
 });
 
-Hooks.on('ready', () => {
-    //console.warn('ready')
-    // CONFIG.Dice.terms['p'] = DieACChallenge;
-    //console.warn(CONFIG.Dice.terms)
-})
+
 
 /* -------------------------------------------- */
 /*  DICE SO NICE                                */
@@ -65,9 +75,9 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
             name: "ac2d20",
             description: "Achtung Cthulhu 2d20",
             category: "Colors",
-            foreground: "#fcef71",
-            background: "#008cd1",
-            outline: "gray",
+            foreground: "#4d5a46",
+            background: "#4d5a46",
+            outline: "#4d5a46",
             texture: "none",
         }
     );

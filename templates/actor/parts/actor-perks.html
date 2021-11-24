@@ -1,9 +1,9 @@
 <ol class="items-list">
   <li class="item skill flexrow items-header">
-    <div class="item-name">{{localize "FALLOUT.TEMPLATES.PERK"}}</div>
-    <div class="item-perk-value">{{localize "FALLOUT.TEMPLATES.Rank"}}</div>
+    <div class="item-name">{{localize "AC2D20.TEMPLATES.PERK"}}</div>
+    <div class="item-perk-value">{{localize "AC2D20.TEMPLATES.Rank"}}</div>
     <div class="item-controls">
-      <a class="item-control item-create" title="Create item" data-type="perk"><i class="fas fa-plus"></i> {{localize "FALLOUT.TEMPLATES.Add_Perk"}}</a>
+      <a class="item-control item-create" title="Create item" data-type="perk"><i class="fas fa-plus"></i> {{localize "AC2D20.TEMPLATES.Add_Perk"}}</a>
     </div>
   </li>
   {{#each perks as |item id|}}
@@ -17,17 +17,17 @@
       </div>
       <div class="item-controls">
         {{#ifCond item.data.stashed '!=' null}}
-        <a class="item-control item-stash {{#unless item.data.stashed}}item-unstashed{{/unless}}" title='{{localize "FALLOUT.UI.stashed"}}'>
+        <a class="item-control item-stash {{#unless item.data.stashed}}item-unstashed{{/unless}}" title='{{localize "AC2D20.UI.stashed"}}'>
           <i class="fas fa-briefcase"></i>
         </a>
         {{/ifCond}}
         {{#if item.data.equippable}}
-        <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "FALLOUT.equipped"}}'>
+        <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.equipped"}}'>
           <i class="fas fa-tshirt"></i>
         </a>
         {{/if}}
-        <a class="item-control item-edit" title="{{localize 'FALLOUT.TEMPLATES.Edit_Item'}}"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="{{localize 'FALLOUT.TEMPLATES.Delete_Item'}}"><i class="fas fa-trash"></i></a>
+        <a class="item-control item-edit" title="{{localize 'AC2D20.TEMPLATES.Edit_Item'}}"><i class="fas fa-edit"></i></a>
+        <a class="item-control item-delete" title="{{localize 'AC2D20.TEMPLATES.Delete_Item'}}"><i class="fas fa-trash"></i></a>
       </div>
     </div>
   </li>

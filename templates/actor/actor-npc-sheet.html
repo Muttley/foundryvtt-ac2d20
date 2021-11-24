@@ -1,13 +1,13 @@
 <form class="{{cssClass}} {{actor.type}} flexcol theme-wrapper" autocomplete="off">
 
   {{!-- Sheet Header --}}
-  {{> "systems/fallout/templates/actor/parts/actor-header.html"}}
+  {{> "systems/ac2d20/templates/actor/parts/actor-header.html"}}
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="skills">{{localize "FALLOUT.TEMPLATES.Abilities"}}</a>
-    <a class="item" data-tab="data">{{localize "FALLOUT.TEMPLATES.Data"}}</a>
+    <a class="item" data-tab="skills">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
+    <a class="item" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
     <!-- <a class="item" data-tab="effects">Effects</a> -->
   </nav>
 
@@ -33,7 +33,7 @@
           {{!-- SKILLS --}}
           <div class="flexrow resource-row">
             <div class="box">
-              <div class="box-header text-center">{{localize "FALLOUT.TEMPLATES.SKILLS"}}</div>
+              <div class="box-header text-center">{{localize "AC2D20.TEMPLATES.SKILLS"}}</div>
               <div>
                 <ol class="items-list grid">
                   {{#each skills as |item id|}}
@@ -65,13 +65,13 @@
               </div>
             </div>
             <div class="box no-padding bgOdd">
-              <h4 class="box-header text-center">{{localize "FALLOUT.TEMPLATES.INITIATIVE"}}</h4>
+              <h4 class="box-header text-center">{{localize "AC2D20.TEMPLATES.INITIATIVE"}}</h4>
               <div class="text-center">
                 <input class="num-short-2" type="number" name="data.initiative.value" value="{{data.initiative.value}}">
               </div>
             </div>
             <div class="box no-padding bgEven">
-              <h4 class="box-header text-center">{{localize "FALLOUT.TEMPLATES.DEFENSE"}}</h4>
+              <h4 class="box-header text-center">{{localize "AC2D20.TEMPLATES.DEFENSE"}}</h4>
               <div class="text-center">
                 <input class="num-short-2" type="number" name="data.defense.value" value="{{data.defense.value}}">
               </div>
@@ -81,14 +81,14 @@
           {{!-- CARRY | MELEE BONUS --}}
           <div class="flexrow resource-row">
             <div class="box no-padding bgOdd">
-              <h4 class="box-header text-center">{{localize "FALLOUT.UI.CarryWeight"}}</h4>
+              <h4 class="box-header text-center">{{localize "AC2D20.UI.CarryWeight"}}</h4>
               <div class="text-center">
-                <label><input class="num-short-3" type="number" name="data.carryWeight.base" value="{{data.carryWeight.base}}"> {{localize "FALLOUT.TEMPLATES.lbs"}}</label>
+                <label><input class="num-short-3" type="number" name="data.carryWeight.base" value="{{data.carryWeight.base}}"> {{localize "AC2D20.TEMPLATES.lbs"}}</label>
 
               </div>
             </div>
             <div class="box no-padding bgEven">
-              <h4 class="box-header text-center">{{localize "FALLOUT.TEMPLATES.MELEE_BONUS"}}</h4>
+              <h4 class="box-header text-center">{{localize "AC2D20.TEMPLATES.MELEE_BONUS"}}</h4>
               <div class="text-center">
                 <input class="num-short-2" type="number" name="data.meleeDamage.base" value="{{data.meleeDamage.base}}">
               </div>
@@ -97,7 +97,7 @@
 
           {{!-- RESISTANCES --}}
           <div class="box no-padding bgOdd">
-            <h4 class="box-header text-center">{{localize "FALLOUT.TEMPLATES.RESISTANCES"}}</h4>
+            <h4 class="box-header text-center">{{localize "AC2D20.TEMPLATES.RESISTANCES"}}</h4>
             {{#each data.resistance as |res key|}}
             <div class="flexrow resource-row">
               <span class="align-mid" style="display: flex;">
@@ -109,34 +109,34 @@
           </div>
           {{!-- INJURIES --}}
           <div class="box no-padding bgEven">
-            <h4 class="box-header text-center">{{localize "FALLOUT.TEMPLATES.LOCATIONS_INJURIES"}}</h4>
+            <h4 class="box-header text-center">{{localize "AC2D20.TEMPLATES.LOCATIONS_INJURIES"}}</h4>
             <textarea class="color-prim" name="data.injuries" rows="8" style="resize: none;" placeholder="You can use this to write locations, their values or critical inuries suffered.(ex. Wing | 2-4 | Injuries: 3 Opened, 2 Treated)">{{data.injuries}}</textarea>
           </div>
         </div>
         {{!-- RIGHT COLUMN __________________________________________________ --}}
         <div class="right-column">
           <div class="box no-padding bgOdd">
-            <h4 class="box-header text-center">{{localize "FALLOUT.TEMPLATES.ATTACKS"}}</h4>
+            <h4 class="box-header text-center">{{localize "AC2D20.TEMPLATES.ATTACKS"}}</h4>
             <div>
               {{!-- Owned Weapons Tab --}}
-              {{> "systems/fallout/templates/actor/parts/actor-weapons.html"}}
+              {{> "systems/ac2d20/templates/actor/parts/actor-weapons.html"}}
             </div>
           </div>
           <div class="resource-row">
             {{!-- Owned Abilities Tab --}}
-            {{> "systems/fallout/templates/actor/parts/actor-special_abilities.html"}}
+            {{> "systems/ac2d20/templates/actor/parts/actor-special_abilities.html"}}
           </div>
           <div class="resource-row">
             <ol class="items-list">
               <li class="item consumable flexrow items-header">
-                <div class="flexrow flexlarge item-name upperC">{{localize 'FALLOUT.UI.INVENTORY'}}</div>
+                <div class="flexrow flexlarge item-name upperC">{{localize 'AC2D20.UI.INVENTORY'}}</div>
                 <div class="item-controls">
                   <a class="item-control item-create" title="Create Miscellany" data-type="miscellany"><i class="fas fa-plus"></i>
-                    {{localize 'FALLOUT.UI.Add'}}</a>
+                    {{localize 'AC2D20.UI.Add'}}</a>
                 </div>
               </li>
               {{#each inventory as |item id|}}
-              {{> "systems/fallout/templates/actor/parts/simple-expandable-item.html" item=item}}
+              {{> "systems/ac2d20/templates/actor/parts/simple-expandable-item.html" item=item}}
               {{/each}}
             </ol>
           </div>
@@ -152,7 +152,7 @@
 
     {{!-- Active Effects Tab --}}
     <!-- <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-      {{> "systems/fallout/templates/actor/parts/actor-effects.html"}}
+      {{> "systems/ac2d20/templates/actor/parts/actor-effects.html"}}
     </div> -->
 
   </section>

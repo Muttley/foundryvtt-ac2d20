@@ -88,20 +88,20 @@ export class Roller2D20 {
             results: dicesRolled,
             successTreshold: successTreshold
         }
-        const html = await renderTemplate("systems/fallout/templates/chat/roll2d20.html", rollData);
-        let falloutRoll = {}
-        falloutRoll.rollname = rollname;
-        falloutRoll.dicesRolled = dicesRolled;
-        falloutRoll.successTreshold = successTreshold;
-        falloutRoll.critTreshold = critTreshold;
-        falloutRoll.complicationTreshold = complicationTreshold;
-        falloutRoll.rerollIndexes = rerollIndexes;
-        falloutRoll.diceFace = "d20";
+        const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.html", rollData);
+        let ac2d20Roll = {}
+        ac2d20Roll.rollname = rollname;
+        ac2d20Roll.dicesRolled = dicesRolled;
+        ac2d20Roll.successTreshold = successTreshold;
+        ac2d20Roll.critTreshold = critTreshold;
+        ac2d20Roll.complicationTreshold = complicationTreshold;
+        ac2d20Roll.rerollIndexes = rerollIndexes;
+        ac2d20Roll.diceFace = "d20";
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { falloutroll: falloutRoll },
+            flags: { ac2d20roll: ac2d20Roll },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };
@@ -130,7 +130,7 @@ export class Roller2D20 {
     }
 
     static async rollD6({ rollname = "Roll D6", dicenum = 2, weapon = null } = {}) {
-        let formula = `${dicenum}dc`;
+        let formula = `${dicenum}dp`;
         let roll = new Roll(formula);
         await roll.evaluate({ async: true });
         await Roller2D20.parseD6Roll({
@@ -185,7 +185,7 @@ export class Roller2D20 {
             return;
         }
         let numOfDice = rerollIndexes.length;
-        let formula = `${numOfDice}dc`;
+        let formula = `${numOfDice}dp`;
         let _roll = new Roll(formula);
         await _roll.evaluate({ async: true });
         await Roller2D20.parseD6Roll({
@@ -197,12 +197,12 @@ export class Roller2D20 {
         });
     }
 
-    static async addD6({ rollname = "Roll D6", dicenum = 2, falloutRoll = null, dicesRolled = [], weapon = null } = {}) {
-        let formula = `${dicenum}dc`;
+    static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], weapon = null } = {}) {
+        let formula = `${dicenum}dp`;
         let _roll = new Roll(formula);
         await _roll.evaluate({ async: true });
-        let newRollName = `${falloutRoll.rollname} [+ ${dicenum} DC]`;
-        let oldDiceRolled = falloutRoll.dicesRolled;
+        let newRollName = `${ac2d20Roll.rollname} [+ ${dicenum} DC]`;
+        let oldDiceRolled = ac2d20Roll.dicesRolled;
         await Roller2D20.parseD6Roll({
             rollname: newRollName,
             roll: _roll,
@@ -224,7 +224,7 @@ export class Roller2D20 {
             for (let de in weapon.data.damage.damageEffect) {
                 if (weapon.data.damage.damageEffect[de].value) {
                     let rank = weapon.data.damage.damageEffect[de].rank ?? "";
-                    let damageEffectLabel = game.i18n.localize(`FALLOUT.WEAPONS.damageEffect.${de}`);
+                    let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
                     let efectLabel = `${damageEffectLabel}${rank}`;
                     weaponDamageEffectsList.push(efectLabel);
                 }
@@ -239,19 +239,19 @@ export class Roller2D20 {
             weaponDamageTypesList: weaponDamageTypesList,
             weaponDamageEffects: weaponDamageEffects
         }
-        const html = await renderTemplate("systems/fallout/templates/chat/rollD6.html", rollData);
-        let falloutRoll = {}
-        falloutRoll.rollname = rollname;
-        falloutRoll.dicesRolled = dicesRolled;
-        falloutRoll.damage = damage;
-        falloutRoll.effects = effects;
-        falloutRoll.rerollIndexes = rerollIndexes;
-        falloutRoll.diceFace = "d6";
+        const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.html", rollData);
+        let ac2d20Roll = {}
+        ac2d20Roll.rollname = rollname;
+        ac2d20Roll.dicesRolled = dicesRolled;
+        ac2d20Roll.damage = damage;
+        ac2d20Roll.effects = effects;
+        ac2d20Roll.rerollIndexes = rerollIndexes;
+        ac2d20Roll.diceFace = "d6";
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { falloutroll: falloutRoll, weapon: weapon },
+            flags: { ac2d20roll: ac2d20Roll, weapon: weapon },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };

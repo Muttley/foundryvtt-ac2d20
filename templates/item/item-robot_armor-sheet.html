@@ -1,12 +1,12 @@
 <form class="{{cssClass}}" autocomplete="off">
-    {{> "systems/fallout/templates/item/parts/item-header.html"}}
+    {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
 
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="attributes">{{localize "FALLOUT.TEMPLATES.Attributes"}}</a>
-        <a class="item" data-tab="mods">{{localize "FALLOUT.MODS.mods"}}</a>
-        <a class="item" data-tab="description">{{localize "FALLOUT.TEMPLATES.Description"}}</a>
-        <a class="item" data-tab="effects">{{localize "FALLOUT.TEMPLATES.Effects"}}</a>
+        <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
+        <a class="item" data-tab="mods">{{localize "AC2D20.MODS.mods"}}</a>
+        <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+        <a class="item" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
     </nav>
 
     {{!-- Sheet Body --}}
@@ -19,15 +19,15 @@
         {{!-- Mods Tab --}}
         <div class="tab" data-group="primary" data-tab="mods">
             <div class="flexrow resource-row align-mid">
-                <label class="resource-label">{{localize "FALLOUT.MODS.mods"}}</label>
+                <label class="resource-label">{{localize "AC2D20.MODS.mods"}}</label>
                 <div class="flexrow align-mid">
                     <span>
-                        <label for="data.mods.current">{{localize "FALLOUT.TEMPLATES.current"}}</label>
+                        <label for="data.mods.current">{{localize "AC2D20.TEMPLATES.current"}}</label>
                         <input type="number" name="data.mods.current" class="num-short-2" value="{{data.mods.current}}">
                     </span>
                     <span class="text-center">/</span>
                     <span>
-                        <label for="data.mods.max">{{localize "FALLOUT.TEMPLATES.max"}}</label>
+                        <label for="data.mods.max">{{localize "AC2D20.TEMPLATES.max"}}</label>
                         <input type="number" name="data.mods.max" class="num-short-2" value="{{data.mods.max}}">
                     </span>
                 </div>
@@ -40,10 +40,10 @@
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
             <div class="resource-row align-mid">
-                <label class="resource-label">{{localize "FALLOUT.TEMPLATES.Armor_Type"}} &nbsp;</label>
+                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Armor_Type"}} &nbsp;</label>
                 <select name="data.appareltype">
                     {{#select data.appareltype}}
-                    {{#each FALLOUT.ROBOT_APPAREL_TYPE as |apparelType key |}}
+                    {{#each AC2D20.ROBOT_APPAREL_TYPE as |apparelType key |}}
                     <option class="capitalized" value="{{key}}">{{localize apparelType}}</option>
                     {{/each}}
                     {{/select}}
@@ -52,38 +52,38 @@
             <hr />
             <div class="grid grid-3col">
                 <div class="locations pad-5">
-                    <h4 class="resource-header">{{localize "FALLOUT.TEMPLATES.Locations"}}</h4>
+                    <h4 class="resource-header">{{localize "AC2D20.TEMPLATES.Locations"}}</h4>
                     {{#each data.location as |isChecked key|}}
                     <div class="location flexrow align-mid">
-                        <label class="checkbox-label">{{localize (concat 'FALLOUT.BODYLOCATION.robot.' key)}}</label>
+                        <label class="checkbox-label">{{localize (concat 'AC2D20.BODYLOCATION.robot.' key)}}</label>
                         <input class="input-checkbox" type="checkbox" name="data.location.{{key}}" {{checked isChecked}} data-dtype="Boolean" />
                     </div>
                     {{/each}}
                 </div>
                 <div class="resistances pad-5">
-                    <h4 class="resource-header">{{localize "FALLOUT.TEMPLATES.Resistances"}}</h4>
+                    <h4 class="resource-header">{{localize "AC2D20.TEMPLATES.Resistances"}}</h4>
                     {{#each data.resistance as |resistance key|}}
                     <div class="flexrow resource-row align-mid">
-                        <label for="data.resistance.{{key}}" class="capitalized">{{localize (concat 'FALLOUT.RESISTANCE.'key)}}</label>
+                        <label for="data.resistance.{{key}}" class="capitalized">{{localize (concat 'AC2D20.RESISTANCE.'key)}}</label>
                         <input class="num-short-2" type="number" name="data.resistance.{{key}}" value="{{resistance}}" />
                     </div>
                     {{/each}}
                 </div>
                 <div class="equiped pad-5">
-                    <h4 class="resource-header">{{localize "FALLOUT.TEMPLATES.GENERAL"}}</h4>
+                    <h4 class="resource-header">{{localize "AC2D20.TEMPLATES.GENERAL"}}</h4>
                     <div class="flexrow resource-row align-mid">
-                        <label class="capitalized checkbox-label">{{localize "FALLOUT.equipped"}}</label>
+                        <label class="capitalized checkbox-label">{{localize "AC2D20.equipped"}}</label>
                         <input class="input-checkbox" type="checkbox" name="data.equipped" {{checked data.equipped}} data-dtype="Boolean" />
                     </div>
 
-                    <h4 class="resource-header">{{localize "FALLOUT.UI.CarryWeight"}}</h4>
+                    <h4 class="resource-header">{{localize "AC2D20.UI.CarryWeight"}}</h4>
                     <div class="flexrow resource-row align-mid">
-                        <label class="capitalized checkbox-label">{{localize "FALLOUT.UI.CarryWeight"}}</label>
+                        <label class="capitalized checkbox-label">{{localize "AC2D20.UI.CarryWeight"}}</label>
                         <input type="number" class="num-short-3" name="data.carry" value="{{data.carry}}">
                     </div>
-                    <h4 class="resource-header">{{localize "FALLOUT.UI.Perks"}}</h4>
+                    <h4 class="resource-header">{{localize "AC2D20.UI.Perks"}}</h4>
                     <div class="resource-row align-mid">
-                        <label class="capitalized checkbox-label">{{localize "FALLOUT.UI.Perks"}}</label>
+                        <label class="capitalized checkbox-label">{{localize "AC2D20.UI.Perks"}}</label>
                         <input type="text" name="data.perks" value="{{data.perks}}">
                     </div>
 
@@ -93,7 +93,7 @@
 
         {{!-- Active Effects Tab --}}
         <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-            {{> "systems/fallout/templates/item/parts/item-effects.html"}}
+            {{> "systems/ac2d20/templates/item/parts/item-effects.html"}}
         </div>
     </section>
 </form>

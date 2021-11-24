@@ -1,11 +1,11 @@
-<div class="fallout-chat-message">
+<div class="ac2d20-chat-message">
     <div class="content">
         <h2>{{rollname}}</h2>
         <div class="damage-plaq flexrow">
-            <p class="flexlarge" style="margin: 0;">{{localize "FALLOUT.UI.Damage"}}: {{damage}} | {{localize "FALLOUT.TEMPLATES.Effects"}}: {{effects}}</p>
+            <p class="flexlarge" style="margin: 0;">{{localize "AC2D20.UI.Damage"}}: {{damage}} | {{localize "AC2D20.TEMPLATES.Effects"}}: {{effects}}</p>
             <div style="text-align: end;">
                 {{#each weaponDamageTypesList as |damageType|}}
-                <i class="fo-{{damageType}}" title="{{localize (concat 'FALLOUT.RESISTANCE.' damageType)}}"></i>
+                <i class="fo-{{damageType}}" title="{{localize (concat 'AC2D20.RESISTANCE.' damageType)}}"></i>
                 {{/each}}
             </div>
         </div>
@@ -16,8 +16,8 @@
             {{/each}}
         </div>
         <div class="flexrow">
-            <button class="reroll-button">{{localize "FALLOUT.TEMPLATES.Re_roll"}} <span class="fo-pip-boy fo-blue"></span></button>
-            <button class="add-button">{{localize "FALLOUT.UI.Add"}} <span class="fo-pip-boy fo-blue"></span></button>
+            <button class="reroll-button">{{localize "AC2D20.TEMPLATES.Re_roll"}} <span class="fo-pip-boy fo-blue"></span></button>
+            <button class="add-button">{{localize "AC2D20.UI.Add"}} <span class="fo-pip-boy fo-blue"></span></button>
         </div>
     </div>
 </div>

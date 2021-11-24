@@ -153,7 +153,7 @@ export class ACActor extends Actor {
 
         // Add Skills to Characters and Robots
         if (this.type === 'character' || this.type === 'robot') {
-            let packSkills = await game.packs.get('fallout.skills').getDocuments();
+            let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
             const items = this.items.map(i => i.toObject());
             packSkills.forEach(s => {
                 items.push(s.toObject());

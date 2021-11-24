@@ -3,49 +3,49 @@
     <div style="padding-right:10px;">
         <div class="box">
             <div class="box-header">
-                <h4>{{localize "FALLOUT.TEMPLATES.DERIVED"}}</h4>
+                <h4>{{localize "AC2D20.TEMPLATES.DERIVED"}}</h4>
             </div>
             <div class="flexrow resource-row align-mid">
-                <label class="resource-label">{{localize "FALLOUT.TEMPLATES.MELEE_DAMAGE"}}</label>
+                <label class="resource-label">{{localize "AC2D20.TEMPLATES.MELEE_DAMAGE"}}</label>
                 <input class="num-short-2" type="number" name="data.meleeDamage.base" value="{{data.meleeDamage.base}}">
             </div>
             <div class="flexrow resource-row align-mid">
-                <label class="resource-label">{{localize "FALLOUT.TEMPLATES.DEFENSE"}}</label>
+                <label class="resource-label">{{localize "AC2D20.TEMPLATES.DEFENSE"}}</label>
                 <input class="num-short-2" type="number" name="data.defense.base" value="{{data.defense.base}}">
             </div>
             <div class="flexrow resource-row align-mid">
-                <label class="resource-label">{{localize "FALLOUT.TEMPLATES.INITIATIVE"}}</label>
+                <label class="resource-label">{{localize "AC2D20.TEMPLATES.INITIATIVE"}}</label>
                 <input class="num-short-2" type="number" name="data.initiative.value" value="{{data.initiative.value}}">
             </div>
         </div>
 
         <div class="box">
             <div class="box-header">
-                <h4>{{localize "FALLOUT.TEMPLATES.RESISTANCE_GENERAL_BONUS"}}</h4>
+                <h4>{{localize "AC2D20.TEMPLATES.RESISTANCE_GENERAL_BONUS"}}</h4>
             </div>
             <div class="flexcol">
                 <div class="flexrow resource-row">
                     <span>
                         <i class="fo-physical"></i>
-                        <label for="data.resistance.physical">{{localize "FALLOUT.TEMPLATES.PHYS"}}</label>
+                        <label for="data.resistance.physical">{{localize "AC2D20.TEMPLATES.PHYS"}}</label>
                     </span>
                     <input type="number" name="data.resistance.physical" class="num-short-2" value="{{data.resistance.physical}}">
                 </div>
                 <div class="flexrow resource-row">
-                    <span><i class="fo-energy"></i><label for="data.resistance.energy">{{localize "FALLOUT.TEMPLATES.ENG"}}</label></span>
+                    <span><i class="fo-energy"></i><label for="data.resistance.energy">{{localize "AC2D20.TEMPLATES.ENG"}}</label></span>
                     <input type="number" name="data.resistance.energy" class="num-short-2" value="{{data.resistance.energy}}">
                 </div>
                 <div class="flexrow resource-row">
                     <span>
                         <i class="fo-radiation"></i>
-                        <label for="data.resistance.radiation">{{localize "FALLOUT.TEMPLATES.RAD"}}</label>
+                        <label for="data.resistance.radiation">{{localize "AC2D20.TEMPLATES.RAD"}}</label>
                     </span>
                     <input type="number" name="data.resistance.radiation" class="num-short-2" value="{{data.resistance.radiation}}">
                 </div>
                 <div class="flexrow resource-row">
                     <span>
                         <i class="fo-poison"></i>
-                        <label for="data.resistance.poison">{{localize "FALLOUT.TEMPLATES.POISON"}}</label>
+                        <label for="data.resistance.poison">{{localize "AC2D20.TEMPLATES.POISON"}}</label>
                     </span>
                     <input type="number" name="data.resistance.poison" class="num-short-2" value="{{data.resistance.poison}}">
                 </div>
@@ -59,15 +59,15 @@
         <div class="status-help-bar">
             <div class="help-item">
                 <span class="symbol healthy"></span>
-                <p>{{localize "FALLOUT.TEMPLATES.Healthy"}}</p>
+                <p>{{localize "AC2D20.TEMPLATES.Healthy"}}</p>
             </div>
             <div class="help-item">
                 <span class="symbol wounded"></span>
-                <p>{{localize "FALLOUT.TEMPLATES.Treated_injury_Right_Click"}}</p>
+                <p>{{localize "AC2D20.TEMPLATES.Treated_injury_Right_Click"}}</p>
             </div>
             <div class="help-item">
                 <span class="symbol crippled"></span>
-                <p>{{localize "FALLOUT.TEMPLATES.Injury_Left_Click"}}</p>
+                <p>{{localize "AC2D20.TEMPLATES.Injury_Left_Click"}}</p>
             </div>
         </div>
         {{!-- PIP BOY --}}
@@ -78,17 +78,17 @@
             <div class="body-part armR {{data.body_parts.armR.status}}"></div>
             <div class="body-part legL {{data.body_parts.legL.status}}"></div>
             <div class="body-part legR {{data.body_parts.legR.status}}"></div>
-            {{> "systems/fallout/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.head
+            {{> "systems/ac2d20/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.head
             keypart="head"}}
-            {{> "systems/fallout/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.torso
+            {{> "systems/ac2d20/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.torso
             keypart="torso"}}
-            {{> "systems/fallout/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.armL
+            {{> "systems/ac2d20/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.armL
             keypart="armL"}}
-            {{> "systems/fallout/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.armR
+            {{> "systems/ac2d20/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.armR
             keypart="armR"}}
-            {{> "systems/fallout/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.legL
+            {{> "systems/ac2d20/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.legL
             keypart="legL"}}
-            {{> "systems/fallout/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.legR
+            {{> "systems/ac2d20/templates/actor/parts/body-status-plaque.html" bodypart=data.body_parts.legR
             keypart="legR"}}
         </div>
 
@@ -98,7 +98,7 @@
     <div style="padding-left:10px;">
         <div class="resource-plate-header plate-31-o" style="padding-right: 5px;">
             <div class="label">
-                <h3 style="margin:0;"><strong>{{localize "FALLOUT.HEALTH.health"}}</strong></h3>
+                <h3 style="margin:0;"><strong>{{localize "AC2D20.HEALTH.health"}}</strong></h3>
             </div>
             <div class="flexrow align-mid">
                 <input class="num-short-3" style="font-size:18px; background-color: beige; color: black;" type="number" name="data.health.value" value="{{data.health.value}}">
@@ -110,14 +110,14 @@
         <div class="resource-plate-header plate-3-r" style="margin-bottom: 10px;">
             <div class="flexrow align-mid">
                 <div class="symbol crippled"></div>
-                <h4 style="margin:0"><strong>{{localize "FALLOUT.TEMPLATES.INJURIES"}}: {{openInjuriesCount}}</strong></h4>
+                <h4 style="margin:0"><strong>{{localize "AC2D20.TEMPLATES.INJURIES"}}: {{openInjuriesCount}}</strong></h4>
             </div>
         </div>
 
         {{#ifCond actor.type '==' 'character'}}
         <div class="box">
             <div class="box-header">
-                <h4 class="tab-switch" data-tab="apparel">{{localize "FALLOUT.TEMPLATES.POWER_ARMOR_HEALTH"}}</h4>
+                <h4 class="tab-switch" data-tab="apparel">{{localize "AC2D20.TEMPLATES.POWER_ARMOR_HEALTH"}}</h4>
             </div>
             <div class="power-armor-status">
                 <div class="body-part" style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0;">
@@ -156,7 +156,7 @@
         {{#ifCond actor.type '==' 'robot'}}
         <div class="box">
             <div class="box-header">
-                <h4 class="tab-switch" data-tab="inventory">{{localize "FALLOUT.TEMPLATES.MODULES"}}</h4>
+                <h4 class="tab-switch" data-tab="inventory">{{localize "AC2D20.TEMPLATES.MODULES"}}</h4>
             </div>
             <div>
                 <ol class="items-list">
@@ -178,15 +178,15 @@
 <div class="box no-padding" style="margin-top: 5px; margin-bottom: 0px;">
     <div class="flexrow align-mid">
         <div class="flex-center">
-            <label for="">{{data.carryWeight.base}} .{{localize "FALLOUT.TEMPLATES.lbs"}} + </label>
+            <label for="">{{data.carryWeight.base}} .{{localize "AC2D20.TEMPLATES.lbs"}} + </label>
             <input type="number" name="data.carryWeight.mod" class="num-short-2" value="{{data.carryWeight.mod}}">
-            <label for=""> = {{localize "FALLOUT.TEMPLATES.MAX"}}: {{data.carryWeight.value}} .{{localize "FALLOUT.TEMPLATES.lbs"}}</label>
+            <label for=""> = {{localize "AC2D20.TEMPLATES.MAX"}}: {{data.carryWeight.value}} .{{localize "AC2D20.TEMPLATES.lbs"}}</label>
         </div>
         <div class="text-center">
-            <label>{{localize "FALLOUT.TEMPLATES.Encumbrance_Level"}}: {{data.encumbranceLevel}}</label>
+            <label>{{localize "AC2D20.TEMPLATES.Encumbrance_Level"}}: {{data.encumbranceLevel}}</label>
         </div>
         <div style="text-align: right;">
-            <label>{{localize "FALLOUT.TEMPLATES.Total"}}: {{data.totalWeight}} / {{data.carryWeight.value}} .{{localize "FALLOUT.TEMPLATES.lbs"}}</label>
+            <label>{{localize "AC2D20.TEMPLATES.Total"}}: {{data.totalWeight}} / {{data.carryWeight.value}} .{{localize "AC2D20.TEMPLATES.lbs"}}</label>
         </div>
     </div>
 </div>
@@ -194,12 +194,12 @@
 {{!-- FAVOURITE ROW // EQUIPPED --}}
 <div class="status footer grid grid-5col">
     <div class="grid-span-2">
-        {{> "systems/fallout/templates/actor/parts/actor-favorite_weapons.html"}}
+        {{> "systems/ac2d20/templates/actor/parts/actor-favorite_weapons.html"}}
     </div>
     <div class="grid-span-2">
-        {{> "systems/fallout/templates/actor/parts/actor-equipped_apparel.html"}}
+        {{> "systems/ac2d20/templates/actor/parts/actor-equipped_apparel.html"}}
     </div>
     <div>
-        {{> "systems/fallout/templates/actor/parts/actor-conditions.html"}}
+        {{> "systems/ac2d20/templates/actor/parts/actor-conditions.html"}}
     </div>
 </div>

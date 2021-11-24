@@ -1,4 +1,3 @@
-//import { FALLOUT } from "./config.mjs"
 export const registerHandlebarsHelpers = function () {
 
     /* -------------------------------------------- */
@@ -66,7 +65,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     /* -------------------------------------------- */
-    /*  FALLOUT HELPERS                             */
+    /*  AC2D20 HELPERS                             */
     /* -------------------------------------------- */
 
     Handlebars.registerHelper('damageFaIconClass', function (str) {
@@ -81,7 +80,7 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('getBodypartValue', function (str) {
-        return CONFIG.FALLOUT.BodyValues[str];
+        return CONFIG.AC2D20.BodyValues[str];
     });
 
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
