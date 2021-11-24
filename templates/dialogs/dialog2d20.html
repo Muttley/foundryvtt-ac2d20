@@ -1,18 +1,18 @@
 <div class="ac2d20-dialog">
     <div class="flexrow ">
         <div class="resource flexrow flex-group-left">
-            <p class="title-label">{{localize "AC2D20.TEMPLATES.Attribute"}}</p>
+            <p class="title-label">{{localize "AC2D20.TEMPLATES.Attr"}}</p>
             <input type="number" name="attribute" value="{{attribute}}">
         </div>
-        <div class="resource flexrow flex-group-left tile">
-            <p class="title-label">{{localize "ITEM.TypeSkill"}}</p>
+        <div class="resource flexrow flex-group-left">
+            <p class="title-label">{{localize "AC2D20.TEMPLATES.Skill"}}</p>
             <input type="number" name="skill" value="{{skill}}">
         </div>
-        <div class="resource flexrow flex-group-left green">
-            <p class="title-label">{{localize "AC2D20.TEMPLATES.Tag"}}</p>
-            <input type="checkbox" name="tag" {{#ifCond tag '==' true}}checked{{/ifCond}}>
+        <div class="resource flexrow flex-group-left">
+            <p class="title-label">{{localize "AC2D20.TEMPLATES.Focus"}}</p>
+            <input type="checkbox" name="focus" {{#ifCond focus '==' true}}checked{{/ifCond}}>
         </div>
-        <div class="resource flexrow flex-group-left red">
+        <div class="resource flexrow flex-group-left">
             <p class="title-label">{{localize "AC2D20.TEMPLATES.Compl"}}</p>
             <input type="number" name="complication" value="{{complication}}">
         </div>

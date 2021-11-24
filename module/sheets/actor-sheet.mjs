@@ -237,12 +237,12 @@ export class ACActorSheet extends ActorSheet {
         // ! Everything below here is only needed if the sheet is editable
         if (!this.isEditable) return;
 
-        // * SKILLS LISTENERS [clic, right-click, value change, tag ]
+        // * SKILLS LISTENERS [clic, right-click, value change, focus ]
         // Click Skill Item
         html.find('.skill .item-name').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[item.data.data.defaultAttribute].value, item.data.data.tag);
+            this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[item.data.data.defaultAttribute].value, item.data.data.focus);
         });
         // Change Skill Rank value
         html.find('.skill .item-skill-value input').change(async (ev) => {
@@ -252,11 +252,11 @@ export class ACActorSheet extends ActorSheet {
             let updatedItem = { _id: item.id, data: { value: newRank } };
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
-        // Toggle Tag value
-        html.find('.skill .item-skill-tag').click(async (ev) => {
+        // Toggle Focus value
+        html.find('.skill .item-skill-focus').click(async (ev) => {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            let updatedItem = { _id: item.id, data: { tag: !item.data.data.tag } };
+            let updatedItem = { _id: item.id, data: { focus: !item.data.data.focus } };
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
 
@@ -430,7 +430,7 @@ export class ACActorSheet extends ActorSheet {
             if (item.actor?.type == "creature") {
                 skillName = game.i18n.localize(`AC2D20.CREATURE.${item.data.data.skill}`);
                 skill = item.actor.data.data[item.data.data.skill];
-                skill['tag'] = true;
+                skill['focus'] = true;
                 attribute = item.actor.data.data[item.data.data.attribute];
             } else {
                 skillName = CONFIG.AC2D20.WEAPONS.weaponSkill[item.data.data.weaponType];
@@ -440,12 +440,12 @@ export class ACActorSheet extends ActorSheet {
                 else
                     skill = {
                         "value": 0,
-                        "tag": false,
+                        "focus": false,
                         "defaultAttribute": "str"
                     };
                 attribute = item.actor.data.data.attributes[skill.defaultAttribute];
             }
-            game.ac2d20.Dialog2d20.createDialog({ rollName: rollName, diceNum: 2, attribute: attribute.value, skill: skill.value, tag: skill.tag, complication: 20 });
+            game.ac2d20.Dialog2d20.createDialog({ rollName: rollName, diceNum: 2, attribute: attribute.value, skill: skill.value, focus: skill.focus, complication: 20 });
         });
 
         // * POWER ARMOR MONITOR
@@ -532,10 +532,10 @@ export class ACActorSheet extends ActorSheet {
 
     _onRightClickSkill(itemId, attribute) {
         const item = this.actor.items.get(itemId);
-        this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[attribute].value, item.data.data.tag);
+        this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[attribute].value, item.data.data.focus);
     }
-    _onRollSkill(skillName, rank, attribute, tag) {
-        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: attribute, skill: rank, tag: tag, complication: 20 })
+    _onRollSkill(skillName, rank, attribute, focus) {
+        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: attribute, skill: rank, focus: focus, complication: 20 })
     }
 
     _onItemSummary(event) {

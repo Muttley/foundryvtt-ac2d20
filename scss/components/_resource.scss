@@ -1,3 +1,19 @@
-.resource-label {
-  font-weight: bold;
+input[type="text"],
+input[type="number"] {
+	background-color: $c-light;
+	color: $c-dark;
+	&.underline {
+		background-color: unset;
+		border: unset;
+		border-bottom: 1px solid $c-dark;
+		color: $c-dark;
+		&::placeholder {
+			color: #999;
+		}
+	}
+}
+
+select {
+	color: $c-dark;
+	background-color: darken($c-light, 10%);
 }

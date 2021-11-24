@@ -137,8 +137,8 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
             description: "Achtung Cthulhu 2d20",
             category: "Colors",
             foreground: "#000000",
-            background: "#4d5a46",
-            outline: "#4d5a46",
+            background: "#000000",
+            outline: "#000000",
             texture: "none",
         }
     );

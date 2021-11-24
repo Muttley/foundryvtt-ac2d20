@@ -70,44 +70,44 @@ export class ACItemSheet extends ItemSheet {
         if (!this.isEditable) return;
 
         // Weapon Qualities Toggle
-        html.find(".wpn-tag-toggler").click(async (ev) => {
-            let tagEl = $(ev.currentTarget).parent('.wpn-tag');
-            let tagKey = tagEl.data('tagKey');
-            let tagValue = !tagEl.data('tagValue');
-            tagEl.data('tagValue', tagValue);
-            let tagType = tagEl.data('tagType');
+        html.find(".wpn-focus-toggler").click(async (ev) => {
+            let focusEl = $(ev.currentTarget).parent('.wpn-focus');
+            let focusKey = focusEl.data('focusKey');
+            let focusValue = !focusEl.data('focusValue');
+            focusEl.data('focusValue', focusValue);
+            let focusType = focusEl.data('focusType');
             let itemId = this.document.data._id;
             let flagKey = "";
-            if (tagType == 'weaponQuality')
+            if (focusType == 'weaponQuality')
                 flagKey = 'weaponQualities';
-            else if (tagType == 'damageEffect')
+            else if (focusType == 'damageEffect')
                 flagKey = 'damageEffects';
             let flags = duplicate(this.item.getFlag('ac2d20', flagKey));
-            let box = tagEl.parent('.item-list');
+            let box = focusEl.parent('.item-list');
             $(box.children()).each((q, i) => {
-                let qu = flags[$(i).data('tagKey')];
-                qu['value'] = $(i).data('tagValue');
+                let qu = flags[$(i).data('focusKey')];
+                qu['value'] = $(i).data('focusValue');
             });
             await this.item.setFlag('ac2d20', flagKey, flags);
         });
 
-        // Tag Rank Change
-        html.find(".wpn-tag-rank").change(async (ev) => {
+        // Focus Rank Change
+        html.find(".wpn-focus-rank").change(async (ev) => {
             let newRank = $(ev.currentTarget).val();
-            let tagEl = $(ev.currentTarget).parent('.wpn-tag');
-            let tagKey = tagEl.data('tagKey');
-            let tagType = tagEl.data('tagType');
+            let focusEl = $(ev.currentTarget).parent('.wpn-focus');
+            let focusKey = focusEl.data('focusKey');
+            let focusType = focusEl.data('focusType');
             let itemId = this.document.data._id;
             //let wpn = game.items.get(itemId);
             let flagKey = "";
-            if (tagType == 'weaponQuality')
+            if (focusType == 'weaponQuality')
                 flagKey = 'weaponQualities';
-            else if (tagType == 'damageEffect')
+            else if (focusType == 'damageEffect')
                 flagKey = 'damageEffects';
             let flags = duplicate(this.item.getFlag('ac2d20', flagKey));
-            let box = tagEl.parent('.item-list');
+            let box = focusEl.parent('.item-list');
             $(box.children()).each((q, i) => {
-                let qu = flags[$(i).data('tagKey')];
+                let qu = flags[$(i).data('focusKey')];
                 if (qu['rank'] != null)
                     qu['rank'] = newRank;
             });

@@ -1,12 +1,217 @@
 .window-app {
   font-family: $font-primary;
+  .window-content{
+    background-image: url(../assets/paper.webp);
+  }
 }
 
+button{
+  font-family: $font-germania;
+  font-size: 16px;
+  color: $c-green-olive;
+  background-color: $c-beige;
+  &:hover {
+    //text-shadow: 0 0 10px $c-green-light;
+    box-shadow: 0 0 5px $c-green-light;
+    cursor: pointer;
+  }
+}
+
+.font-primary {
+	font-family: $font-primary;
+}
+
+.font-secondary {
+	font-family: $font-secondary;
+}
+
+.font-size-11 {
+	font-size: 11px;
+}
+
+.font-size-12 {
+	font-size: 12px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus {
+  box-shadow: 0 0 5px $c-green-light;
+}
+
+a{
+  &:hover{
+    text-shadow: 0 0 10px $c-green-olive;
+    cursor: pointer;
+  }
+}
 .rollable {
   &:hover,
   &:focus {
     color: #000;
-    text-shadow: 0 0 10px red;
+    text-shadow: 0 0 10px $c-green-light;
     cursor: pointer;
   }
+}
+
+
+
+.ac2d20-dialog {
+	.resource {
+		margin: 0 2px 5px;
+		padding: 0 5px 0 0;
+		background-color: $c-green-light;
+    //border: 1px solid $c-green-light ;
+		.title-label {
+			padding: 5px;
+			font-family: $font-germania;
+      font-size: 1rem;
+			color: $c-white;
+		}
+		input[type="number"] {
+			text-align: center;
+			background-color:$c-beige;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 5px 20px;
+		margin: 0 2px 5px;
+		//background-color: $c-beige;
+		li {
+			text-decoration: none;
+			text-align: center;
+			.dice-icon {
+				cursor: pointer;
+				width: 32px;
+				line-height: 32px;
+				display: inline-block;
+				margin-right: 1px;
+				background-repeat: no-repeat;
+				background-size: 32px 32px;
+				font-size: 16px;
+				color: $c-light;
+				font-weight: bold;
+				text-align: center;
+				background-image: url(../assets/chat/d20-green-light.svg);
+				&.marked {
+					color: $c-light;
+					background-image: url(../assets/chat/d20-olive.svg);
+				}
+			}
+		}
+	}
+}
+
+.chat-message {
+	background-image: url(../assets/paper.webp);
+}
+
+.ac2d20-chat-message {
+	.content {
+		padding: 5px;
+		h2 {
+			border: none;
+			font-family: $font-germania;
+			font-weight: 700;
+		}
+		.dices-result {
+			margin: 5px 0 5px 0;
+			min-height: 32px;
+		}
+		.success-plaq {
+			margin: 0 0 5px 0;
+			font-family: $font-germania;
+      color: $c-green-olive;
+			//padding: 10px;
+			font-size: 16px;
+			//background-image: url(../assets/chat/green-placq.webp);
+			//background-size: 100% 100%;
+			//background-repeat: no-repeat;
+			.TN {
+				font-family: $font-primary;
+				font-size: 11px;
+				font-weight: bold;
+			}
+		}
+		.complication-plaq {
+			margin: 0 0 5px 0;
+			font-family: $font-germania;
+      color: $c-red-dark;
+			//padding: 14px 10px 10px 10px;
+			//font-size: 12px;
+			//background-image: url(../assets/chat/red-placq.webp);
+			//background-size: 100% 100%;
+			//background-repeat: no-repeat;
+		}
+		.damage-plaq {
+			//color: white;
+			margin: 0 0 5px 0;
+			font-family: $font-germania;
+			//padding: 10px;
+			font-size: 16px;
+			//background-image: url(../assets/chat/yellow-placq.webp);
+			//background-size: 100% 100%;
+			//background-repeat: no-repeat;
+		}
+		.dice-icon {
+			cursor: pointer;
+			position: relative;
+			min-width: 28px;
+			line-height: 28px;
+			float: left;
+			margin-right: 1px;
+			background-repeat: no-repeat;
+			background-size: 28px 28px;
+			font-size: 16px;
+			color: rgb(0, 0, 0);
+			font-weight: bold;
+			text-align: center;
+			//-webkit-text-stroke: 1px rgb(255, 255, 255);
+			&.d20 {
+				background-image: url(../assets/chat/d20-white.svg);
+				&.complication {
+					color: honeydew !important;
+					background-image: url(../assets/chat/d20-complication.svg);
+				}
+				&.success {
+					background-image: url(../assets/chat/d20-success.svg);
+				}
+				&.crit {
+					color: gold !important;
+					background-image: url(../assets/chat/d20-crit.svg);
+				}
+				&.reroll {
+					color: #1d1d1d;
+				}
+			}
+
+			&.d6 {
+				width: 32px;
+				line-height: 32px;
+				background-size: 32px 32px;
+				margin: 2px;
+				&.face-1 {
+					background-image: url(../assets/chat/d1.webp);
+				}
+				&.face-2 {
+					background-image: url(../assets/chat/d2.webp);
+				}
+				&.face-3 {
+					background-image: url(../assets/chat/d3.webp);
+				}
+				&.face-4 {
+					background-image: url(../assets/chat/d4.webp);
+				}
+				&.face-5 {
+					background-image: url(../assets/chat/d5.webp);
+				}
+				&.face-6 {
+					background-image: url(../assets/chat/d6.webp);
+				}
+			}
+
+			&.dice-selected {
+				opacity: 0.45;
+			}
+		}
+	}
 }

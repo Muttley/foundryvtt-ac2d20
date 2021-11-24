@@ -9,7 +9,7 @@
     "author": "HappySteve",
     "scripts": [],
     "esmodules": ["module/ac2d20.mjs"],
-    "styles": [],
+    "styles": ["css/ac2d20.css"],
     "packs": [],
     "languages": [{
       "lang": "en",

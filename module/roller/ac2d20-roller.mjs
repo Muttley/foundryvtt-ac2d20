@@ -5,10 +5,10 @@ export class Roller2D20 {
     complicationTreshold = 20;
     successes = 0;
 
-    static async rollD20({ rollname = "Roll xD20", dicenum = 2, attribute = 0, skill = 0, tag = false, difficulty = 1, complication = 20 } = {}) {
+    static async rollD20({ rollname = "Roll xD20", dicenum = 2, attribute = 0, skill = 0, focus = false, difficulty = 1, complication = 20 } = {}) {
         let dicesRolled = [];
         let successTreshold = parseInt(attribute) + parseInt(skill);
-        let critTreshold = tag ? parseInt(skill) : 1;
+        let critTreshold = focus ? parseInt(skill) : 1;
         let complicationTreshold = parseInt(complication);
         let formula = `${dicenum}d20`;
         let roll = new Roll(formula);

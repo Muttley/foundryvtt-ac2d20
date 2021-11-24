@@ -1,7 +1,7 @@
 <ol class="items-list">
   <li class="item skill flexrow items-header">
     <div class="item-name">{{localize "AC2D20.TEMPLATES.SKILL"}}</div>
-    <div class="item-skill-tag">{{localize "AC2D20.TEMPLATES.Tag"}}</div>
+    <div class="item-skill-focus">{{localize "AC2D20.TEMPLATES.Focus"}}</div>
     <div class="item-skill-value">{{localize "AC2D20.TEMPLATES.Rank"}}</div>
   </li>
   {{#each skills as |item id|}}
@@ -9,8 +9,8 @@
     <div class="item-name">
       <h4><a class="color-secondary"><span class="resource-label upperC">{{item.name}}</span> [{{localize (concat 'AC2D20.AbilityAbbr.' item.data.defaultAttribute)}}]</a></h4>
     </div>
-    <div class="item-skill-tag">
-      <input type="checkbox" name="tag" {{#ifCond item.data.tag '==' true}}checked{{/ifCond}}>
+    <div class="item-skill-focus">
+      <input type="checkbox" name="focus" {{#ifCond item.data.focus '==' true}}checked{{/ifCond}}>
     </div>
     <div class="item-skill-value">
       <input type="number" class="num-short-2" name="value" value="{{item.data.value}}">

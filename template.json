@@ -63,7 +63,7 @@
 		"skill": {
 			"templates": ["base"],
 			"value": 0,
-			"tag": false,
+			"focus": false,
 			"defaultAttribute": "str",
 			"summary": ""
 		},		

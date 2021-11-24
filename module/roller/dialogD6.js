@@ -7,7 +7,7 @@ export class DialogD6 extends Dialog {
         this.options.classes = ["dice-icon"];
     }
 
-    static async createDialog({ rollName = "DC Roll", diceNum = 2, ac2d20Roll = null, weapon = null } = {}) {
+    static async createDialog({ rollName = "Challenge Roll", diceNum = 2, ac2d20Roll = null, weapon = null } = {}) {
         let dialogData = {}
         dialogData.rollName = rollName;
         dialogData.diceNum = diceNum;

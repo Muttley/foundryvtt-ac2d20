@@ -1,13 +1,220 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
 /* Global styles */
 .window-app {
   font-family: "Roboto", sans-serif;
 }
 
+.window-app .window-content {
+  background-image: url(../assets/paper.webp);
+}
+
+button {
+  font-family: "Germania One", cursive;
+  font-size: 16px;
+  color: #494e31;
+  background-color: #f0eeea;
+}
+
+button:hover {
+  box-shadow: 0 0 5px #759549;
+  cursor: pointer;
+}
+
+.font-primary {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-secondary {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-size-11 {
+  font-size: 11px;
+}
+
+.font-size-12 {
+  font-size: 12px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="time"]:focus {
+  box-shadow: 0 0 5px #759549;
+}
+
+a:hover {
+  text-shadow: 0 0 10px #494e31;
+  cursor: pointer;
+}
+
 .rollable:hover, .rollable:focus {
   color: #000;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 0 10px #759549;
   cursor: pointer;
+}
+
+.ac2d20-dialog .resource {
+  margin: 0 2px 5px;
+  padding: 0 5px 0 0;
+  background-color: #759549;
+}
+
+.ac2d20-dialog .resource .title-label {
+  padding: 5px;
+  font-family: "Germania One", cursive;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.ac2d20-dialog .resource input[type="number"] {
+  text-align: center;
+  background-color: #f0eeea;
+}
+
+.ac2d20-dialog ul {
+  list-style: none;
+  padding: 5px 20px;
+  margin: 0 2px 5px;
+}
+
+.ac2d20-dialog ul li {
+  text-decoration: none;
+  text-align: center;
+}
+
+.ac2d20-dialog ul li .dice-icon {
+  cursor: pointer;
+  width: 32px;
+  line-height: 32px;
+  display: inline-block;
+  margin-right: 1px;
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  font-size: 16px;
+  color: #ebe7d7;
+  font-weight: bold;
+  text-align: center;
+  background-image: url(../assets/chat/d20-green-light.svg);
+}
+
+.ac2d20-dialog ul li .dice-icon.marked {
+  color: #ebe7d7;
+  background-image: url(../assets/chat/d20-olive.svg);
+}
+
+.chat-message {
+  background-image: url(../assets/paper.webp);
+}
+
+.ac2d20-chat-message .content {
+  padding: 5px;
+}
+
+.ac2d20-chat-message .content h2 {
+  border: none;
+  font-family: "Germania One", cursive;
+  font-weight: 700;
+}
+
+.ac2d20-chat-message .content .dices-result {
+  margin: 5px 0 5px 0;
+  min-height: 32px;
+}
+
+.ac2d20-chat-message .content .success-plaq {
+  margin: 0 0 5px 0;
+  font-family: "Germania One", cursive;
+  color: #494e31;
+  font-size: 16px;
+}
+
+.ac2d20-chat-message .content .success-plaq .TN {
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.ac2d20-chat-message .content .complication-plaq {
+  margin: 0 0 5px 0;
+  font-family: "Germania One", cursive;
+  color: #6b0b0b;
+}
+
+.ac2d20-chat-message .content .damage-plaq {
+  margin: 0 0 5px 0;
+  font-family: "Germania One", cursive;
+  font-size: 16px;
+}
+
+.ac2d20-chat-message .content .dice-icon {
+  cursor: pointer;
+  position: relative;
+  min-width: 28px;
+  line-height: 28px;
+  float: left;
+  margin-right: 1px;
+  background-repeat: no-repeat;
+  background-size: 28px 28px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ac2d20-chat-message .content .dice-icon.d20 {
+  background-image: url(../assets/chat/d20-white.svg);
+}
+
+.ac2d20-chat-message .content .dice-icon.d20.complication {
+  color: honeydew !important;
+  background-image: url(../assets/chat/d20-complication.svg);
+}
+
+.ac2d20-chat-message .content .dice-icon.d20.success {
+  background-image: url(../assets/chat/d20-success.svg);
+}
+
+.ac2d20-chat-message .content .dice-icon.d20.crit {
+  color: gold !important;
+  background-image: url(../assets/chat/d20-crit.svg);
+}
+
+.ac2d20-chat-message .content .dice-icon.d20.reroll {
+  color: #1d1d1d;
+}
+
+.ac2d20-chat-message .content .dice-icon.d6 {
+  width: 32px;
+  line-height: 32px;
+  background-size: 32px 32px;
+  margin: 2px;
+}
+
+.ac2d20-chat-message .content .dice-icon.d6.face-1 {
+  background-image: url(../assets/chat/d1.webp);
+}
+
+.ac2d20-chat-message .content .dice-icon.d6.face-2 {
+  background-image: url(../assets/chat/d2.webp);
+}
+
+.ac2d20-chat-message .content .dice-icon.d6.face-3 {
+  background-image: url(../assets/chat/d3.webp);
+}
+
+.ac2d20-chat-message .content .dice-icon.d6.face-4 {
+  background-image: url(../assets/chat/d4.webp);
+}
+
+.ac2d20-chat-message .content .dice-icon.d6.face-5 {
+  background-image: url(../assets/chat/d5.webp);
+}
+
+.ac2d20-chat-message .content .dice-icon.d6.face-6 {
+  background-image: url(../assets/chat/d6.webp);
+}
+
+.ac2d20-chat-message .content .dice-icon.dice-selected {
+  opacity: 0.45;
 }
 
 .grid,
@@ -266,8 +473,28 @@
   padding: 0 8px;
 }
 
-.ac2d20 .resource-label {
-  font-weight: bold;
+.ac2d20 input[type="text"],
+.ac2d20 input[type="number"] {
+  background-color: #ebe7d7;
+  color: #1f1f2b;
+}
+
+.ac2d20 input[type="text"].underline,
+.ac2d20 input[type="number"].underline {
+  background-color: unset;
+  border: unset;
+  border-bottom: 1px solid #1f1f2b;
+  color: #1f1f2b;
+}
+
+.ac2d20 input[type="text"].underline::placeholder,
+.ac2d20 input[type="number"].underline::placeholder {
+  color: #999;
+}
+
+.ac2d20 select {
+  color: #1f1f2b;
+  background-color: #dad3b5;
 }
 
 .ac2d20 .items-header {
@@ -276,7 +503,7 @@
   padding: 0;
   align-items: center;
   background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
+  border: #759549;
   font-weight: bold;
 }
 
@@ -298,7 +525,7 @@
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: #444;
+  color: #1f1f2b;
 }
 
 .ac2d20 .items-list .item-list {
@@ -338,7 +565,7 @@
 .ac2d20 .items-list .item {
   align-items: center;
   padding: 0 2px;
-  border-bottom: 1px solid #c9c7b8;
+  border-bottom: 1px solid #ebe7d7;
 }
 
 .ac2d20 .items-list .item:last-child {
@@ -346,7 +573,7 @@
 }
 
 .ac2d20 .items-list .item .item-name {
-  color: #191813;
+  color: #1f1f2b;
 }
 
 .ac2d20 .items-list .item .item-name .item-image {
@@ -401,4 +628,4 @@
 .ac2d20 .effects .item .effect-controls {
   border: none;
 }
-/*# sourceMappingURL=2d20.css.map */
+/*# sourceMappingURL=ac2d20.css.map */
