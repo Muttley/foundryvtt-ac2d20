@@ -1,40 +1,40 @@
-<div class="ac2d20 ap-tracker">
+<div class="ac2d20 momentum-tracker">
     {{#if (eq isGM true)}}
-    <div class="ap-resource gm" data-type="gmAP">
+    <div class="ap-resource gm" data-type="gmMomentum">
         <div class="flexcol">
-            <h4>{{localize "AC2D20.TEMPLATES.OVERSEER_AP"}}</h4>
+            <h4>{{localize "AC2D20.TEMPLATES.GM_MOMENTUM"}}</h4>
         </div>
         <div class="flexrow align-mid">
             <a class="ap-btn ap-sub">-</a>
-            <input type="number" class="ap-input num-short-3" value={{gmAP}}>
+            <input type="number" class="ap-input num-short-3" value={{gmMomentum}}>
             <a class="ap-btn ap-add">+</a>
         </div>
     </div>
     {{/if}}
 
     {{#if (eq isGM true)}}
-    <div class="ap-resource maxAP-box" data-type="maxAP">
+    <div class="ap-resource maxMomentum-box" data-type="maxMomentum">
         <div class="flexcol">
-            <h4>{{localize "AC2D20.TEMPLATES.MAX_PARTY_AP"}}</h4>
+            <h4>{{localize "AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM"}}</h4>
         </div>
         <div class="flexrow align-mid">
             <a class="ap-btn ap-sub">-</a>
-            <input type="number" class="ap-input num-short-3" value="{{maxAP}}">
+            <input type="number" class="ap-input num-short-3" value="{{maxMomentum}}">
             <a class="ap-btn ap-add">+</a>
         </div>
     </div>
     {{/if}}
 
-    <div class="ap-resource party" data-type="partyAP">
+    <div class="ap-resource party" data-type="partyMomentum">
         {{#if (eq isGM true)}}
         <a class='toggle-maxAp'><i class="fas fa-cog"></i></a>
         {{/if}}
         <div class="flexcol">
-            <h4>{{localize "AC2D20.TEMPLATES.PARTY_AP"}}</h4>
+            <h4>{{localize "AC2D20.TEMPLATES.PARTY_MOMENTUM"}}</h4>
         </div>
         <div class="flexrow align-mid">
             <a class="ap-btn ap-sub">-</a>
-            <input type="number" class="ap-input num-short-3" value="{{partyAP}}">
+            <input type="number" class="ap-input num-short-3" value="{{partyMomentum}}">
             <a class="ap-btn ap-add">+</a>
         </div>
     </div>

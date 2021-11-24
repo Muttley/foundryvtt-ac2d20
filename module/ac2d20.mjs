@@ -13,6 +13,10 @@ import { Roller2D20 } from "./roller/ac2d20-roller.mjs"
 import { Dialog2d20 } from './roller/dialog2d20.js'
 import { DialogD6 } from './roller/dialogD6.js'
 import DieACChallenge from './roller/challengeDie.js'
+//Settings
+import { registerSettings } from './settings.js';
+//Momentum
+import { MomentumTracker } from './app/momentum-tracker.mjs'
 
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
@@ -23,7 +27,7 @@ registerHandlebarsHelpers();
 Hooks.once('init', async function () {
     // Add utility classes to the global game object so that they're more easily
     // accessible in global contexts.
-    console.warn('INIT')
+
     game.ac2d20 = {
         ACActor,
         ACItem,
@@ -54,6 +58,9 @@ Hooks.once('init', async function () {
     Actors.registerSheet("ac2d20", ACActorSheet, { makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("ac2d20", ACItemSheet, { makeDefault: true });
+
+    // Register custom system settings
+    registerSettings();
 
     return preloadHandlebarsTemplates();
 });

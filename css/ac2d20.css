@@ -410,6 +410,69 @@ a:hover {
   text-align: center;
 }
 
+.ac2d20.momentum-tracker {
+  position: absolute;
+  display: block;
+  margin: 5px;
+  bottom: 40px !important;
+  right: 320px !important;
+  max-width: 180px;
+}
+
+.ac2d20.momentum-tracker .ap-resource {
+  position: relative;
+  padding: 10px 20px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 9px;
+  margin-bottom: 10px;
+}
+
+.ac2d20.momentum-tracker .ap-resource.gm {
+  background-color: #494e31;
+}
+
+.ac2d20.momentum-tracker .ap-resource.party {
+  background-color: #759549;
+}
+
+.ac2d20.momentum-tracker .ap-resource.maxMomentum-box {
+  background-color: #494e31;
+}
+
+.ac2d20.momentum-tracker .ap-resource .toggle-maxAp {
+  position: absolute;
+  top: 8px;
+  right: 5px;
+  color: beige;
+}
+
+.ac2d20.momentum-tracker .ap-resource:last-child {
+  margin-bottom: 0;
+}
+
+.ac2d20.momentum-tracker .ap-resource h4 {
+  margin: 0 0 2px 0;
+  color: bisque;
+}
+
+.ac2d20.momentum-tracker .ap-resource input[type="number"] {
+  margin: 0 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.ac2d20.momentum-tracker .ap-resource .ap-btn {
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 6px;
+}
+
 /* Styles limited to ac2d20 sheets */
 .ac2d20 {
   /* ----------------------------------------- */
