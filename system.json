@@ -8,7 +8,7 @@
     "templateVersion": 1,
     "author": "HappySteve",
     "scripts": [],
-    "esmodules": ["module/ac2d20.js"],
+    "esmodules": ["module/ac2d20.mjs"],
     "styles": ["css/ac2d20.css"],
     "packs": [],
     "languages": [{
@@ -19,7 +19,7 @@
     "socket": true,
     "gridDistance": 1,
     "gridUnits": "m",
-    "url": "https://github.com/superseva/AC2d20",
-    "manifest": "https://raw.githubusercontent.com/superseva/AC2d20/master/system.json"
+    "url": "https://github.com/superseva/ac2d20",
+    "manifest": "https://raw.githubusercontent.com/superseva/ac2d20/master/system.json"
   }
   

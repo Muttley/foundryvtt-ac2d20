@@ -1,6 +1,6 @@
 {
 	"Actor": {
-		"types": ["character", "robot", "npc", "creature"],
+		"types": ["character", "npc", "creature"],
 		"templates": {
 			"base": {},
 			"stats": {},
