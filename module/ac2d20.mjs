@@ -7,7 +7,7 @@ import { ACItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { AC2D20 } from "./helpers/config.mjs";
 
-import { DieACChallenge } from "./roller/challengeDie.js"
+import DieACChallenge from './roller/challengeDie.js'
 
 
 Hooks.once('init', async function () {
@@ -15,8 +15,8 @@ Hooks.once('init', async function () {
     // accessible in global contexts.
     console.warn('INIT')
     game.ac2d20 = {
-        FalloutActor,
-        FalloutItem
+        ACActor,
+        ACItem
     };
 
     // Add custom constants for configuration.
