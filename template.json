@@ -94,9 +94,8 @@
 		"skill": {
 			"templates": ["base"],
 			"value": 0,
-			"focus":true,
 			"focuses": [],
-			"defaultAttribute": "str",
+			"defaultAttribute": "agi",
 			"summary": ""
 		},		
 		"weapon": {

@@ -582,10 +582,33 @@ a:hover {
   padding: 0 8px;
 }
 
+.ac2d20 .section-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.ac2d20 .section-title h3 {
+  font-family: Germania One;
+  color: #ebe7d7;
+  background-color: #494e31;
+  padding: 2px 5px;
+  margin-bottom: 0;
+  width: fit-content;
+}
+
+.ac2d20 .section-title .right-slope {
+  min-width: 22px;
+  background-repeat: no-repeat;
+}
+
+.ac2d20 .section-title .right-slope.olive {
+  background-image: url(../assets/right-slope-olive.webp);
+}
+
 .ac2d20 .attribute-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  color: white;
+  color: #ebe7d7;
 }
 
 .ac2d20 .attribute-grid .attribute-cell {
@@ -612,7 +635,6 @@ a:hover {
 
 .ac2d20 .stress-derived-box {
   padding: 5px;
-  background-color: #759549;
   margin-bottom: 10px;
 }
 
@@ -632,7 +654,7 @@ a:hover {
 .ac2d20 .derived-box h3 {
   padding: 2px 5px;
   margin: 0;
-  color: white;
+  color: #ebe7d7;
   background-color: #494e31;
   font-family: Germania One;
 }

@@ -23,22 +23,25 @@
         <input type="number" name="data.value" value="{{data.value}}">
       </div>
       <div class="flexrow">
-        <label>{{localize "AC2D20.TEMPLATES.Skill_Focus"}}</label>
-        <input type="checkbox" name="data.focus" {{#ifCond data.focus '==' true}}checked{{/ifCond}}>
-      </div>
-      <div class="flexrow">
         <label>{{localize "AC2D20.TEMPLATES.Default_Attribute"}}</label>
         <select name="data.defaultAttribute">
           {{#select data.defaultAttribute}}
-          <option value="str">{{localize "AC2D20.AbilityStr"}}</option>
-          <option value="per">{{localize "AC2D20.AbilityPer"}}</option>
-          <option value="end">{{localize "AC2D20.AbilityEnd"}}</option>
-          <option value="cha">{{localize "AC2D20.AbilityCha"}}</option>
-          <option value="int">{{localize "AC2D20.AbilityInt"}}</option>
-          <option value="agi">{{localize "AC2D20.AbilityAgi"}}</option>
-          <option value="luc">{{localize "AC2D20.AbilityLuc"}}</option>
+          <option value="agi">{{localize "AC2D20.Ability.agi"}}</option>
+          <option value="bra">{{localize "AC2D20.Ability.bra"}}</option>
+          <option value="coo">{{localize "AC2D20.Ability.coo"}}</option>
+          <option value="ins">{{localize "AC2D20.Ability.ins"}}</option>
+          <option value="rea">{{localize "AC2D20.Ability.rea"}}</option>
+          <option value="wil">{{localize "AC2D20.Ability.wil"}}</option>
           {{/select}}
         </select>
+      </div>
+      <div class="flexcol">
+        <div><button class="add-focus">+Add Focus</button></div>
+        {{#each data.focuses as |focus key|}}
+        <div>
+          <input type="text" class='focus-title' value="{{focus.title}}">
+        </div>
+        {{/each}}
       </div>
     </div>
   </section>

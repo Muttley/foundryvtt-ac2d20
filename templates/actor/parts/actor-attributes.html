@@ -2,18 +2,18 @@
   <div class='attribute-cell olive'>Attribute</div>
   {{#each data.attributes as |attribute key|}}
   <div class="attribute-cell green">
-    <label class="resource-label align-left" data-label="{{attribute.label}}">{{localize (concat 'AC2D20.Ability.' key)}}</label>
+    <label class="resource-label align-left" data-label="{{attribute.label}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
   </div>
   {{/each}}
 
-  <div class='attribute-cell green'>Rating</div>
+  <div class='attribute-cell green'><strong>Rating</strong></div>
   {{#each data.attributes as |attribute key|}}
   <div class="attribute-cell">
     <input type="number" class="borderless" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
   </div>
   {{/each}}
 
-  <div class='attribute-cell green'>Bonus</div>
+  <div class='attribute-cell green'><strong>Bonus</strong></div>
   {{#each data.attributes as |attribute key|}}
   <div class="attribute-cell">
     <input type="number" class="borderless" name="data.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
@@ -34,40 +34,59 @@
   </div>
   <div class="derived-box">
     <input class="num-short-3" type="number" min="0">
-    <h3>Courage</h3>
+    <div class="section-title">
+      <h3>Courage</h3>
+      <span class="right-slope olive"></span>
+    </div>
   </div>
   <div class="derived-box">
     <input class="num-short-3" type="number" min="0">
-    <h3>Armor</h3>
+    <div class="section-title">
+      <h3>Armor</h3>
+      <span class="right-slope olive"></span>
+    </div>
   </div>
   <div class="derived-box">
     <input class="num-short-3" type="number" min="0">
-    <h3>Fortune</h3>
+    <div class="section-title">
+      <h3>Fortune</h3>
+      <span class="right-slope olive"></span>
+    </div>
   </div>
 
 </div>
 
-<h3 style="font-family: Germania One;">Injuries</h3>
+<div class="section-title">
+  <h3>Injuries</h3>
+  <span class="right-slope olive"></span>
+</div>
+
 <div class="injuries-grid">
   <div class="injury-cell"><textarea rows="3"></textarea></div>
   <div class="injury-cell"><textarea rows="3"></textarea></div>
   <div class="injury-cell"><textarea rows="3"></textarea></div>
 </div>
 
-<h3 style="font-family: Germania One;">Personal Truths & Scars</h3>
+<div class="section-title">
+  <h3>Personal Truths & Scars</h3>
+  <span class="right-slope olive"></span>
+</div>
 <div class="scars-grid">
-  <div class="scar-cell"><textarea rows="3"></textarea></div>
-  <div class="scar-cell"><textarea rows="3"></textarea></div>
-  <div class="scar-cell"><textarea rows="3"></textarea></div>
-  <div class="scar-cell"><textarea rows="3"></textarea></div>
-  <div class="scar-cell"><textarea rows="3"></textarea></div>
+  <div class="scar-cell"><textarea rows="4"></textarea></div>
+  <div class="scar-cell"><textarea rows="4"></textarea></div>
+  <div class="scar-cell"><textarea rows="4"></textarea></div>
+  <div class="scar-cell"><textarea rows="4"></textarea></div>
+  <div class="scar-cell"><textarea rows="4"></textarea></div>
 </div>
 
-<h3 style="font-family: Germania One;">Skills</h3>
+<div class="section-title">
+  <h3>Skills</h3>
+  <span class="right-slope olive"></span>
+</div>
 <div class="skills-grid">
   <div class="skill-cell">1</div>
   <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
+  <div class="skill-cell long">skill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell long</div>
   <div class="skill-cell">1</div>
   <div class="skill-cell">1</div>
   <div class="skill-cell long">1</div>

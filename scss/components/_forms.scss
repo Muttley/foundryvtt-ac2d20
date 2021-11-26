@@ -100,10 +100,30 @@ nav{
   }
 }
 
+.section-title{
+  display: flex;
+  flex-direction: row;
+  h3{
+    font-family: Germania One;
+    color: $c-light;
+    background-color: $c-green-olive;
+    padding: 2px 5px;
+    margin-bottom: 0;
+    width: fit-content;
+  }  
+  .right-slope{
+    min-width: 22px;
+    background-repeat: no-repeat;
+    &.olive{
+      background-image: url(../assets/right-slope-olive.webp);
+    }
+  }
+}
+
 .attribute-grid{
   display: grid;
   grid-template-columns: repeat(7, 1fr);  
-  color:white;
+  color:$c-light;
 
   .attribute-cell {
     display: flex;
@@ -127,7 +147,7 @@ nav{
 
 .stress-derived-box{
   padding: 5px;
-  background-color: $c-green-light;
+  //background-color: $c-green-light;
   margin-bottom: 10px;
   //border-top: 1px solid $c-green-olive;
   //border-bottom: 1px solid $c-green-olive;
@@ -146,7 +166,7 @@ nav{
   h3{
     padding: 2px 5px; 
     margin: 0;
-    color: white;
+    color: $c-light;
     background-color: $c-green-olive;
     font-family: Germania One;
     &.minmax{

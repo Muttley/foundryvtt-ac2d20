@@ -19,11 +19,6 @@ export class ACItemSheet extends ItemSheet {
     /** @override */
     get template() {
         const path = "systems/ac2d20/templates/item";
-        // Return a single sheet for all item types.
-        // return `${path}/item-sheet.html`;
-
-        // Alternatively, you could use the following return statement to do a
-        // unique item sheet by type, like `weapon-sheet.html`.
         return `${path}/item-${this.item.data.type}-sheet.html`;
     }
 
@@ -69,7 +64,27 @@ export class ACItemSheet extends ItemSheet {
         // Everything below here is only needed if the sheet is editable
         if (!this.isEditable) return;
 
+        // SKILL
+        html.find('.add-focus').click(async (ev) => {
+            console.log(this.item.update)
+            let itemId = this.document.data._id;
+            let focuses = this.document.data.data.focuses;
+            const focus = { title: '', isfocus: false }
+            focuses = [...focuses, focus];
+            console.log(focuses);
+            let updatedItem = { _id: itemId, data: { focuses: focuses } };
+            await this.item.update(updatedItem);
+        });
+
+        html.find('.focus-title').change(async (ev) => {
+            console.log('save new title')
+        });
+        html.find('.focus-focused').change(async (ev) => {
+            console.log('save focused value')
+        });
+
         // Weapon Qualities Toggle
+        /*
         html.find(".wpn-focus-toggler").click(async (ev) => {
             let focusEl = $(ev.currentTarget).parent('.wpn-focus');
             let focusKey = focusEl.data('focusKey');
@@ -90,8 +105,10 @@ export class ACItemSheet extends ItemSheet {
             });
             await this.item.setFlag('ac2d20', flagKey, flags);
         });
+        */
 
         // Focus Rank Change
+        /*
         html.find(".wpn-focus-rank").change(async (ev) => {
             let newRank = $(ev.currentTarget).val();
             let focusEl = $(ev.currentTarget).parent('.wpn-focus');
@@ -113,6 +130,7 @@ export class ACItemSheet extends ItemSheet {
             });
             await this.item.setFlag('ac2d20', flagKey, flags);
         });
+        */
 
         // Effects.
         html.find(".effect-control").click(ev => {
