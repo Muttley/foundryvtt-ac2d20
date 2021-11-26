@@ -121,7 +121,85 @@ nav{
     }
     input[type="number"] {
       text-align: center;
+    }    
+  }
+}
+
+.stress-derived-box{
+  padding: 5px;
+  background-color: $c-green-light;
+  margin-bottom: 10px;
+  //border-top: 1px solid $c-green-olive;
+  //border-bottom: 1px solid $c-green-olive;
+}
+
+.derived-box{
+  display:flex; 
+  justify-content: flex-end; 
+  align-items: center;
+  input[type="number"]{
+    font-size: 1.2rem; 
+    line-height: 1.2rem; 
+    height: 30px; 
+    font-family: 'Germania One';
+  }
+  h3{
+    padding: 2px 5px; 
+    margin: 0;
+    color: white;
+    background-color: $c-green-olive;
+    font-family: Germania One;
+    &.minmax{
+      padding-right: 5px; 
+      background-color: $c-green-olive;
     }
-    
+  }
+}
+
+.injuries-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  
+  margin-bottom: 10px;
+  .injury-cell {
+    padding: 2px;
+    border: 1px solid $c-green-light;
+    margin:0 -1px -1px 0;
+    textarea{
+      resize: none;
+      border: none;
+      background-color: unset;
+    }
+     
+  }
+}
+
+.scars-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  
+  margin-bottom: 10px;
+  .scar-cell {
+    padding: 2px;
+    border: 1px solid $c-green-light;
+    margin:0 -1px -1px 0;
+    textarea{
+      resize: none;
+      border: none;
+      background-color: unset;
+    }
+  }
+}
+
+.skills-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  
+  margin-bottom: 10px;
+  .skill-cell {
+    padding: 2px;
+    border: 1px solid $c-green-light;
+    margin:0 -1px -1px 0;
+    &.long{
+      grid-column-start: 3;
+      grid-column-end: 6;
+    }
   }
 }

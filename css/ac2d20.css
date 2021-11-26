@@ -610,6 +610,91 @@ a:hover {
   text-align: center;
 }
 
+.ac2d20 .stress-derived-box {
+  padding: 5px;
+  background-color: #759549;
+  margin-bottom: 10px;
+}
+
+.ac2d20 .derived-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.ac2d20 .derived-box input[type="number"] {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  height: 30px;
+  font-family: 'Germania One';
+}
+
+.ac2d20 .derived-box h3 {
+  padding: 2px 5px;
+  margin: 0;
+  color: white;
+  background-color: #494e31;
+  font-family: Germania One;
+}
+
+.ac2d20 .derived-box h3.minmax {
+  padding-right: 5px;
+  background-color: #494e31;
+}
+
+.ac2d20 .injuries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10px;
+}
+
+.ac2d20 .injuries-grid .injury-cell {
+  padding: 2px;
+  border: 1px solid #759549;
+  margin: 0 -1px -1px 0;
+}
+
+.ac2d20 .injuries-grid .injury-cell textarea {
+  resize: none;
+  border: none;
+  background-color: unset;
+}
+
+.ac2d20 .scars-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 10px;
+}
+
+.ac2d20 .scars-grid .scar-cell {
+  padding: 2px;
+  border: 1px solid #759549;
+  margin: 0 -1px -1px 0;
+}
+
+.ac2d20 .scars-grid .scar-cell textarea {
+  resize: none;
+  border: none;
+  background-color: unset;
+}
+
+.ac2d20 .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 10px;
+}
+
+.ac2d20 .skills-grid .skill-cell {
+  padding: 2px;
+  border: 1px solid #759549;
+  margin: 0 -1px -1px 0;
+}
+
+.ac2d20 .skills-grid .skill-cell.long {
+  grid-column-start: 3;
+  grid-column-end: 6;
+}
+
 .ac2d20 input[type="text"],
 .ac2d20 input[type="number"] {
   background-color: #ebe7d7;
