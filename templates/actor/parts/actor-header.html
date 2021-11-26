@@ -1,53 +1,16 @@
-<header class="sheet-header resource-plate-header {{actor.type}}-header">
+<header class="sheet-header {{actor.type}}-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
-    <div class="flexrow">
-        <div class="flexcol">
-            <h1 class="charname"><input class="underline font-lobster" name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-            <span class="flex align-mid">
-                <!-- <label for="data.origin" class="resource-label">{{localize "AC2D20.UI.ORIGIN"}}</label> -->
-                <input placeholder="Origin" type="text" class="underline" name="data.origin" value="{{data.origin}}" data-dtype="String" />
-            </span>
+    <img class="paperclip" src="systems/ac2d20/assets/paperclip-60.png" data-edit="img" height="60" />
+    <div class="flexcol" style="height: 100%; padding-left: 110px; margin-bottom: 20px;">
+        <div class="flexrow" style="padding: 10px 5px 0px 5px;">
+            <h1 class="sheet-name" style="align-self: flex-end; margin: 0 5px;"><input class="underline" name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+            <input placeholder="Nationality" type="text" class="underline" name="data.nationality" value="{{data.nationality}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
+            <input placeholder="Rank" type="text" class="underline" name="data.rank" value="{{data.rank}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
         </div>
-
-        <div class="resources grid right-side">
-            <div class="flexcol resource-plate-header plate-2">
-                <div class="resource flexrow align-mid">
-                    <label for="data.level.value" class="resource-label" style="font-size: 18px; color: white;">{{localize "AC2D20.LEVEL.Level"}}</label>
-                    <input type="number" style="font-size:18px; max-width:2rem;text-align: center; margin-right: 20px;" name="data.level.value" value="{{data.level.value}}" data-dtype="Number" />
-                </div>
-            </div>
-            <div class="flexrow resource-row align-mid resource-plate-header plate-3-g">
-                <div>
-                    <label class="label"><strong>{{localize "AC2D20.TEMPLATES.Luck"}}</strong></label>
-                    <label style="font-size: 12px; padding-left: 10px;">{{localize "AC2D20.TEMPLATES.Points"}}</label>
-                </div>
-                <div class="special-number">
-                    <input type="number" style="font-size: 22px;" name="data.luckPoints" value="{{data.luckPoints}}">
-                </div>
-            </div>
-            <div class="flexrow grid-span-2" style="font-size:12px">
-                {{#if (or (eq actor.type "character") (eq actor.type "robot"))}}
-                <div class="resource flex-group-left" style="padding-right: 10px;">
-                    <label for="data.health.value" class="resource-label">{{localize "AC2D20.LEVEL.CurrentXP"}}</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" class="underline" name="data.level.currentXP" value="{{data.level.currentXP}}" data-dtype="Number" />
-                    </div>
-                </div>
-                <div class="resource flex-group-left">
-                    <label for="data.power.value" class="resource-label">{{localize "AC2D20.LEVEL.NextXP"}}</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" class="underline" name="data.level.nextLevelXP" value="{{data.level.nextLevelXP}}" data-dtype="Number" />
-                    </div>
-                </div>
-                {{else}}
-                <div class="resource flex-group-left">
-                    <label for="data.health.value" class="resource-label">{{localize "AC2D20.LEVEL.RewardXP"}}</label>
-                    <div class="resource-content flexrow flex-center flex-between">
-                        <input type="text" class="underline" name="data.level.currentXP" value="{{data.level.currentXP}}" data-dtype="Number" />
-                    </div>
-                </div>
-                {{/if}}
-            </div>
+        <div class="flexrow" style="padding: 0 5px;">
+            <input placeholder="Archetype" type="text" class="underline" name="data.archetype" value="{{data.archetype}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
+            <input placeholder="Background" type="text" class="underline" name="data.background" value="{{data.background}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
+            <input placeholder="Characteristic" type="text" class="underline" name="data.characteristic" value="{{data.characteristic}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
         </div>
     </div>
 </header>

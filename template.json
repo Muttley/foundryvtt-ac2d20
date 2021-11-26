@@ -1,37 +1,68 @@
 {
 	"Actor": {
-		"types": ["character", "npc", "creature"],
+		"types": ["character", "npc"],
 		"templates": {
-			"base": {},
+			"base": {				
+				"fortune":{
+					"max":0,
+					"value":0
+				},
+				"injuries":{
+					"count":3, 
+					"list":[]
+				},
+				"truths":[]
+			},
 			"stats": {
 				"attributes": {
-					"str": {
-						"value": 1
-					},
-					"per": {
-						"value": 1
-					},
-					"end": {
-						"value": 1
-					},
-					"cha": {
-						"value": 1
-					},
-					"int": {
-						"value": 1
-					},
 					"agi": {
-						"value": 1
+						"value": 1,
+						"bonus":0
 					},
-					"luc": {
-						"value": 1
+					"bra": {
+						"value": 1,
+						"bonus":0
+					},
+					"coo": {
+						"value": 1,
+						"bonus":0
+					},
+					"ins": {
+						"value": 1,
+						"bonus":0
+					},
+					"rea": {
+						"value": 1,
+						"bonus":0
+					},
+					"wil": {
+						"value": 1,
+						"bonus":0
 					}
 				}
 			},
-			"derived": {}
+			"derived": {
+				"stress":{
+					"max":0,
+					"value":0
+				},
+				"armorResistance":{
+					"max":0,
+					"value":0
+				},
+				"courageResistance":{
+					"max":0,
+					"value":0
+				}
+			}
 		},
 		"character": {
-			"templates": ["base", "stats", "derived"]
+			"templates": ["base", "stats", "derived"],
+			"nationality":"",
+			"rank":"",
+			"archetype":"",
+			"background":"",
+			"characteristic":""
 		},		
 		"npc": {
 			"templates": ["base", "derived", "stats"]
@@ -63,7 +94,8 @@
 		"skill": {
 			"templates": ["base"],
 			"value": 0,
-			"focus": false,
+			"focus":true,
+			"focuses": [],
 			"defaultAttribute": "str",
 			"summary": ""
 		},		

@@ -66,23 +66,12 @@ export class ACActor extends Actor {
             return (!i.data.data.stashed && i.data.data.weight != null)
         });
         // remove powered powerArmor pieces for characters
-        if (this.data.type == 'character') {
-            physicalItems = physicalItems.filter(i => {
-                if (i.data.data.appareltype == "powerArmor") {
-                    if (!i.data.data.powered)
-                        return i;
-                } else {
-                    return i;
-                }
-            });
-        }
         let physicalItemsMap = physicalItems.map(i => i.data.toObject());
         let totalWeight = 0;
         for (let i of physicalItemsMap) {
             totalWeight += parseInt(i.data.weight);
         }
         return totalWeight;
-
     }
 
 
@@ -115,7 +104,7 @@ export class ACActor extends Actor {
      * Prepare character roll data.
      */
     _getCharacterRollData(data) {
-        if (this.data.type !== 'character' || this.data.type !== 'robot') return;
+        if (this.data.type !== 'character') return;
         // Copy the ability scores to the top level, so that rolls can use
         // formulas like `@str.mod + 4`.
         if (data.attributes) {
@@ -152,14 +141,14 @@ export class ACActor extends Actor {
         }
 
         // Add Skills to Characters and Robots
-        if (this.type === 'character' || this.type === 'robot') {
-            let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
-            const items = this.items.map(i => i.toObject());
-            packSkills.forEach(s => {
-                items.push(s.toObject());
-            });
-            this.data.update({ items });
-        }
+        // if (this.type === 'character' || this.type === 'robot') {
+        //     let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
+        //     const items = this.items.map(i => i.toObject());
+        //     packSkills.forEach(s => {
+        //         items.push(s.toObject());
+        //     });
+        //     this.data.update({ items });
+        // }
     }
 
 }

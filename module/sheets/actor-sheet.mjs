@@ -13,7 +13,7 @@ export class ACActorSheet extends ActorSheet {
             template: "systems/ac2d20/templates/actor/actor-sheet.html",
             width: 720,
             height: 780,
-            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
+            tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }]
         });
     }
 
@@ -75,9 +75,9 @@ export class ACActorSheet extends ActorSheet {
      */
     _prepareCharacterData(context) {
         // Handle ability scores.
-        for (let [k, v] of Object.entries(context.data.attributes)) {
-            v.label = game.i18n.localize(CONFIG.AC2D20.attributes[k]) ?? k;
-        }
+        // for (let [k, v] of Object.entries(context.data.attributes)) {
+        //     v.label = game.i18n.localize(CONFIG.AC2D20.attributes[k]) ?? k;
+        // }
 
         let allInjuries = [];
         // for (const [key, bp] of Object.entries(this.actor.data.data.body_parts)) {

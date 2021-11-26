@@ -1,71 +1,76 @@
 export const AC2D20 = {};
 
 AC2D20.attributes = {
-  "str": "AC2D20.AbilityStr",
-  "per": "AC2D20.AbilityPer",
-  "end": "AC2D20.AbilityEnd",
-  "cha": "AC2D20.AbilityCha",
-  "int": "AC2D20.AbilityInt",
   "agi": "AC2D20.AbilityAgi",
-  "luc": "AC2D20.AbilityLuc"
+  "bra": "AC2D20.AbilityBra",
+  "coo": "AC2D20.AbilityCoo",
+  "ins": "AC2D20.AbilityIns",
+  "rea": "AC2D20.AbilityRea",
+  "wil": "AC2D20.AbilityWil",
 };
 
 AC2D20.abilityAbbreviations = {
-  "str": "AC2D20.AbilityStrAbbr",
-  "per": "AC2D20.AbilityPerAbbr",
-  "end": "AC2D20.AbilityEndAbbr",
-  "cha": "AC2D20.AbilityChaAbbr",
-  "int": "AC2D20.AbilityIntAbbr",
-  "agi": "AC2D20.AbilityAgiAbbr",
-  "luc": "AC2D20.AbilityLucAbbr"
+  "agi": "AC2D20.AbilityAgiAbr",
+  "bra": "AC2D20.AbilityBraAbr",
+  "coo": "AC2D20.AbilityCooAbr",
+  "ins": "AC2D20.AbilityInsAbr",
+  "rea": "AC2D20.AbilityReaAbr",
+  "wil": "AC2D20.AbilityWilAbr",
 };
 
-AC2D20.SKILLS = ["Athletics", "Barter", "Big Guns", "Energy Weapons", "Explosives", "Lockpick", "Medicine", "Melee Weapons", "Pilot", "Repair", "Science", "Small Guns", "Sneak", "Speech", "Survival", "Throwing", "Unarmed"];
-AC2D20.CREATURE = {
-  "skills": {
-    "melee": "AC2D20.CREATURE.melee",
-    "guns": "AC2D20.CREATURE.guns",
-    "other": "AC2D20.CREATURE.other"
+AC2D20.SKILLS = [
+  {
+    'label': 'ACADEMIA',
+    'focuses': ['Art', 'Cryptography', 'Finance', 'History', 'Linguistics', 'Occultism', 'Science']
   },
-  "attributes": {
-    "body": "AC2D20.CREATURE.body",
-    "mind": "AC2D20.CREATURE.mind",
+  {
+    'label': 'ATHLETICS',
+    'focuses': ['Climbing', 'Lifting', 'PhysicalTraining', 'Running', 'Swimming', 'Throwing']
+  },
+  {
+    'label': 'ENGINEERING',
+    'focuses': ['Architecture', 'CombatEngineering', 'Electronics', 'Explosives', 'MechanicalEngineering']
+  },
+  {
+    'label': 'FIGHTING',
+    'focuses': ['CloseQuarters', 'Handguns', 'Hand-to-Hand', 'HeavyWeapons', 'MeleeWeapons', 'Rifles',
+      'ThreatAwareness', 'Exotic']
+  },
+  {
+    'label': 'MEDICINE',
+    'focuses': ['FirstAid', 'InfectiousDiseases', 'Pharmacology', 'Psychiatry', 'Surgery', 'Toxicology']
+  },
+  {
+    'label': 'OBSERVATION',
+    'focuses': ['Hearing', 'Instincts', 'Sight', 'SmellAndTaste']
+  },
+  {
+    'label': 'PERSUASION',
+    'focuses': ['Charm', 'Innuendo', 'Intimidation', 'Negotiation', 'Rhetoric', 'Deceive', 'Invocation']
+  },
+  {
+    'label': 'RESILIENCE',
+    'focuses': ['Fortitude', 'Discipline', 'Immunity']
+  },
+  {
+    'label': 'STEALTH',
+    'focuses': ['Camouflage', 'Disguise', 'RuralStealth', 'UrbanStealth']
+  },
+  {
+    'label': 'SURVIVAL',
+    'focuses': ['AnimalHandling', 'Foraging', 'Hunting', 'Mysticism', 'Orienteering', 'Tracking']
+  },
+  {
+    'label': 'TACTICS',
+    'focuses': ['AirForce', 'Army', 'CovertOperations', 'Leadership', 'Navy', 'TechnicalProjects']
+  },
+  {
+    'label': 'VEHICLES',
+    'focuses': ['Cars', 'Motorcycles', 'HeavyVehicles', 'Tanks', 'Aircraft', 'Watercraft']
   }
-}
+];
 
-AC2D20.APPAREL_TYPE = {
-  "clothing": "AC2D20.APPAREL.clothing",
-  "outfit": "AC2D20.APPAREL.outfit",
-  "armor": "AC2D20.APPAREL.armor",
-  "headgear": "AC2D20.APPAREL.headgear",
-  "powerArmor": "AC2D20.APPAREL.powerArmor"
-}
-AC2D20.ROBOT_APPAREL_TYPE = {
-  "plating": "AC2D20.APPAREL.plating",
-  "armor": "AC2D20.APPAREL.armor"
-}
 
-AC2D20.BodyValues = {
-  "head": "1-2",
-  "torso": "3-8",
-  "armL": "9-11",
-  "armR": "12-14",
-  "legL": "15-17",
-  "legR": "18-20",
-}
-
-AC2D20.powerLevel = {
-  "normal": "normal",
-  "mighty": "mighty",
-  "legendary": "legendary"
-}
-
-AC2D20.resistanceIcons = {
-  'physical': 'fas fa-fist-raised',
-  'energy': 'fas fa-bolt',
-  'radiation': 'fas fa-radiation',
-  'poison': 'fas fa-biohazard',
-}
 
 AC2D20.WEAPONS = {
   "weaponType": {
@@ -131,12 +136,6 @@ AC2D20.WEAPONS = {
 
 }
 
-AC2D20.consumableTypes = {
-  "food": "AC2D20.FOOD",
-  "beverage": "AC2D20.BEVERAGE",
-  "chem": "AC2D20.CHEM",
-  "other": "AC2D20.OTHER"
-}
 
 
 

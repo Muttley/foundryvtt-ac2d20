@@ -1,20 +1,73 @@
-<div class="attributes-list">
-  {{#each data.attributes as |ability key|}}
-  <div class="attribute special-letter">
-    <label for="data.attributes.{{key}}.value" class="resource-label align-left"
-      data-label="{{ability.label}}">{{subString ability.label 0 1}}</label>
-    <div class='special-number'>
-      <input type="number" name="data.attributes.{{key}}.value" value="{{ability.value}}" data-dtype="Number" />
-    </div>
+<div class="attribute-grid" style="margin-bottom: 10px;">
+  <div class='attribute-cell olive'>Attribute</div>
+  {{#each data.attributes as |attribute key|}}
+  <div class="attribute-cell green">
+    <label class="resource-label align-left" data-label="{{attribute.label}}">{{localize (concat 'AC2D20.Ability.' key)}}</label>
+  </div>
+  {{/each}}
+
+  <div class='attribute-cell green'>Rating</div>
+  {{#each data.attributes as |attribute key|}}
+  <div class="attribute-cell">
+    <input type="number" class="borderless" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
+  </div>
+  {{/each}}
+
+  <div class='attribute-cell green'>Bonus</div>
+  {{#each data.attributes as |attribute key|}}
+  <div class="attribute-cell">
+    <input type="number" class="borderless" name="data.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
   </div>
   {{/each}}
 </div>
-<!-- <div class="flexrow resource-row align-mid resource-plate-header plate-3-g">
-  <div>
-    <label class="label"><strong>Luck</strong></label>
-    <label style="font-size: 12px; padding-left: 10px;">Points</label>
+
+
+<div class="flexrow">
+  <div class="flexrow flex-2">
+    <h3>STRESS</h3>
+    <span>
+      <input class="num-short-2" type="number">
+      /
+      <input class="num-short-2" type="number">
+    </span>
+
   </div>
-  <div class="special-number">
-    <input type="number" style="font-size: 22px;" name="data.luckPoints" value="{{data.luckPoints}}">
+  <div style="display:flex; justify-content: flex-end; align-items: center;">
+    <h3 style="padding: 2px 5px; margin: 0; color: white; background-color: green;">Courage</h3>
+    <input class="num-short-3" style="font-size: 26px; line-height: 26px; height: 30px; font-family: Germania One;" type="number">
   </div>
-</div> -->
+  <div style="display:flex; justify-content: flex-end">
+    <h3>Armor</h3>
+    <input class="num-short-2" type="number">
+  </div>
+  <div style="display:flex; justify-content: flex-end">
+    <h3>Fortune</h3>
+    <input class="num-short-2" type="number">
+  </div>
+
+</div>
+
+<h2>INJURIES</h2>
+<div class="flexrow">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+<h2>SCARS</h2>
+<div class="flexrow">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<h2>SKILLS</h2>
+<div class="flexcol">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>

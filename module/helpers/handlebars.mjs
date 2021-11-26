@@ -79,9 +79,9 @@ export const registerHandlebarsHelpers = function () {
             return "fas fa-biohazard";
     });
 
-    Handlebars.registerHelper('getBodypartValue', function (str) {
-        return CONFIG.AC2D20.BodyValues[str];
-    });
+    // Handlebars.registerHelper('getBodypartValue', function (str) {
+    //     return CONFIG.AC2D20.BodyValues[str];
+    // });
 
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
         if (weapon.data.data.weaponType == "creatureAttack" || weapon.actor?.type == "creature")
