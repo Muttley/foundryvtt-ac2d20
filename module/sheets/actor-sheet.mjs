@@ -323,22 +323,16 @@ export class ACActorSheet extends ActorSheet {
         // * INJURIES
 
         html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
-            let $txt = $(ev.currentTarget);
-            const injuryIndex = $txt.parents(".injury").data('index');
             let updates = [];
-            $('.injury-cell.injury').each(function (el) {
-                let _txt = $(this).find('.injury-text').val().trim();
-                _txt = _txt.replace(/  +/g, ' ');
-                //! replace new lines with encided \n so stupid textarea doesn't break
-                _txt = _txt.replace(/(?:\r\n|\r|\n)/g, '&#13;&#10;');
+            $('.injury-cell.injury').each((i, el) => {
+                let _txt = this._clearTextAreaText($(el).find('.injury-text').val());
                 let inj = {
                     text: _txt,
-                    treated: $(this).find('.controls .treated').is(":checked"),
-                    injuryType: $(this).find('.controls .injury-type').is(":checked")
+                    treated: $(el).find('.controls .treated').is(":checked"),
+                    injuryType: $(el).find('.controls .injury-type').is(":checked")
                 }
                 updates.push(inj);
             });
-            console.log(updates)
             await this.actor.update({ 'data.injuries.list': updates });
         });
 
@@ -513,6 +507,15 @@ export class ACActorSheet extends ActorSheet {
             })
         });
     }
+
+    // * UTILS
+    _clearTextAreaText(txt) {
+        txt.trim();
+        txt = txt.replace(/  +/g, ' ');
+        //! replace new lines with encided \n so stupid textarea doesn't break
+        txt = txt.replace(/(?:\r\n|\r|\n)/g, '&#13;&#10;');
+        return txt;
+    };
 
     /**
      * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset

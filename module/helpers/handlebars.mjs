@@ -104,8 +104,12 @@ export const registerHandlebarsHelpers = function () {
             return false;
     });
 
-    Handlebars.registerHelper('clearws', function (txt) {
-        return txt.trim()
+    Handlebars.registerHelper('clearTextAreaText', function (txt) {
+        txt.trim();
+        txt = txt.replace(/  +/g, ' ');
+        //! replace new lines with encided \n so stupid textarea doesn't break
+        txt = txt.replace(/(?:\r\n|\r|\n)/g, '&#13;&#10;');
+        return txt;
     });
 
     // FOR TIMES LOOP
