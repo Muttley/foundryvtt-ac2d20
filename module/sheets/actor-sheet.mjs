@@ -265,41 +265,6 @@ export class ACActorSheet extends ActorSheet {
             menuSkills = [
                 {
                     icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Strength',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'str');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Perception',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'per');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Endurance',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'end');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Charisma',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'cha');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Intelligence',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'int');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
                     name: 'AC2D20.TEMPLATES.Use_Agility',
                     callback: (t) => {
                         this._onRightClickSkill(t.data("itemId"), 'agi');
@@ -307,9 +272,37 @@ export class ACActorSheet extends ActorSheet {
                 },
                 {
                     icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Luck',
+                    name: 'AC2D20.TEMPLATES.Use_Brawn',
                     callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'luc');
+                        this._onRightClickSkill(t.data("itemId"), 'bra');
+                    },
+                },
+                {
+                    icon: '<i class="fas fa-dice"></i>',
+                    name: 'AC2D20.TEMPLATES.Use_Coordination',
+                    callback: (t) => {
+                        this._onRightClickSkill(t.data("itemId"), 'coo');
+                    },
+                },
+                {
+                    icon: '<i class="fas fa-dice"></i>',
+                    name: 'AC2D20.TEMPLATES.Use_Insight',
+                    callback: (t) => {
+                        this._onRightClickSkill(t.data("itemId"), 'ins');
+                    },
+                },
+                {
+                    icon: '<i class="fas fa-dice"></i>',
+                    name: 'AC2D20.TEMPLATES.Use_Reason',
+                    callback: (t) => {
+                        this._onRightClickSkill(t.data("itemId"), 'rea');
+                    },
+                },
+                {
+                    icon: '<i class="fas fa-dice"></i>',
+                    name: 'AC2D20.TEMPLATES.Use_Will',
+                    callback: (t) => {
+                        this._onRightClickSkill(t.data("itemId"), 'wil');
                     },
                 }
             ];

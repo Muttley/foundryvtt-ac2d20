@@ -36,10 +36,12 @@
         </select>
       </div>
       <div class="flexcol">
-        <div><button class="add-focus">+Add Focus</button></div>
+        <div><button class="focus-add">+Add Focus</button></div>
         {{#each data.focuses as |focus key|}}
-        <div>
+        <div class="flexrow focus-item">
           <input type="text" class='focus-title' value="{{focus.title}}">
+          <input type="checkbox" class="focus-cb" {{#if (eq focus.isfocus true)}}checked{{/if}}>
+          <button class="focus-delete" data-index="{{@index}}">Delete {{@index}}</button>
         </div>
         {{/each}}
       </div>

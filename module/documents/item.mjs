@@ -35,6 +35,25 @@ export class ACItem extends Item {
         return rollData;
     }
 
+    // FOCUS
+    async addFocus() {
+        let focuses = this.data.data.focuses;
+        const focus = { title: '', isfocus: false }
+        focuses = [...focuses, focus];
+        let updatedItem = { _id: this.id, data: { focuses: focuses } };
+        await this.update(updatedItem);
+    }
+    async deleteFocus(_index) {
+        console.log(_index)
+        let focuses = this.data.data.focuses;
+        focuses.splice(_index, 1);
+        let updatedItem = { _id: this.id, data: { focuses: focuses } };
+        await this.update(updatedItem);
+    }
+    async updateFocuses(_focuses) {
+        let updatedItem = { _id: this.id, data: { focuses: _focuses } };
+        await this.update(updatedItem);
+    }
     /**
      * Handle clickable rolls.
      * @param {Event} event   The originating click event

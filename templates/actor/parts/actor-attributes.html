@@ -83,41 +83,15 @@
   <h3>Skills</h3>
   <span class="right-slope olive"></span>
 </div>
+
 <div class="skills-grid">
+  {{#each skills as |item id|}}
+  <div class="skill-cell" data-item-id="{{item._id}}">{{item.name}} </div>
   <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">skill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell longskill-cell long</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">1</div>
+  <div class="skill-cell long">
+    {{#each item.data.focuses}}
+    <span class="skill" {{#if (eq this.isfocus true)}}style="color:red" {{/if}}>{{this.title}},&nbsp;</span>
+    {{/each}}
+  </div>
+  {{/each}}
 </div>

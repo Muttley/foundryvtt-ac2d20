@@ -10,13 +10,12 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px;
-  
 
   .profile-img {
     flex: 0 0 100px;
     height: 100px;
     margin-right: 10px;
-    position: absolute;
+    margin-bottom: 5px;  
     box-shadow: 0px 1px 5px black;
     border: 5px solid $c-white;
     background-color: $c-light;
@@ -47,42 +46,45 @@
     }
   }
 }
-nav{
-  
+
+nav{  
   &.sheet-tabs{
     position: absolute;
-    top: 36px;
-    right: 10px;
-    //background-color: violet;
+    display: flex;
+    top: 30px;
+    right: 0;    
     border: none;
     line-height: unset;
-    margin: 0;
-    flex:0;
-    .item{
-      border: 1px solid $c-grey;
-      position: relative;
-     //margin-right: 5px;
-      padding: 5px 10px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      font-family: $font-germania;
-      color: $c-black;
-      background-color: $c-white;
-      text-shadow: none;
-      
-      &.active{
-        color: $c-light;
-        background-color: $c-green-olive;
-        text-shadow: none;
+    margin: 0;   
+    .buttons{
+      padding: 0 5px;
+      background-color: $c-green-olive;
+      display: flex;
+      .item{
+        border: 1px solid $c-green-olive;
+        margin-top: 5px;      
+        position: relative;
+        padding: 5px 10px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-family: $font-germania;
+        color: $c-black;
+        background-color: $c-light;
+        text-shadow: none;        
+        &.active{
+          color: $c-light;
+          background-color: $c-green-light;
+          text-shadow: none;
+          margin-top: 2px;
+        }
       }
+    }    
+    img{
+      border: none;
+      border-radius: unset;
     }
-
   }
 }
-
-
-
-
 
 .sheet-body,
 .sheet-body .tab,
@@ -188,8 +190,7 @@ nav{
       resize: none;
       border: none;
       background-color: unset;
-    }
-     
+    }     
   }
 }
 

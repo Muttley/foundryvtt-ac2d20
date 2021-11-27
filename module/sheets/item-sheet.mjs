@@ -64,23 +64,24 @@ export class ACItemSheet extends ItemSheet {
         // Everything below here is only needed if the sheet is editable
         if (!this.isEditable) return;
 
-        // SKILL
-        html.find('.add-focus').click(async (ev) => {
-            console.log(this.item.update)
-            let itemId = this.document.data._id;
-            let focuses = this.document.data.data.focuses;
-            const focus = { title: '', isfocus: false }
-            focuses = [...focuses, focus];
-            console.log(focuses);
-            let updatedItem = { _id: itemId, data: { focuses: focuses } };
-            await this.item.update(updatedItem);
+        // SKILL AND FOCUS
+        html.find('.focus-add').click(async (ev) => {
+            await this.item.addFocus();
         });
 
-        html.find('.focus-title').change(async (ev) => {
-            console.log('save new title')
+        html.find('.focus-delete').click(async (ev) => {
+            await this.item.deleteFocus($(ev.currentTarget).data('index'));
         });
-        html.find('.focus-focused').change(async (ev) => {
-            console.log('save focused value')
+
+        html.find('.focus-title, .focus-cb').change(async (ev) => {
+            let focuses = [];
+            html.find(".focus-item").each(function (index) {
+                focuses = [...focuses, {
+                    title: $(this).find('.focus-title').val(),
+                    isfocus: $(this).find('.focus-cb').is(':checked')
+                }];
+            });
+            await this.item.updateFocuses(focuses)
         });
 
         // Weapon Qualities Toggle
