@@ -151,4 +151,8 @@ export class ACActor extends Actor {
         // }
     }
 
+    async updateInjuries() {
+
+    }
+
 }

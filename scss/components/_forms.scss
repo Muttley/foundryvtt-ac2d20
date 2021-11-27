@@ -183,13 +183,45 @@ nav{
   grid-template-columns: repeat(3, 1fr);  
   margin-bottom: 10px;
   .injury-cell {
+    .controls{
+      display: flex;
+      justify-content: space-between;
+      input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        filter: none;
+        box-sizing: borer-box;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin: 0;
+        &.treated{
+          background: url(../assets/injury-not-treated.webp);
+        }
+        &.injury-type{
+          background: url(../assets/injury-p.webp);
+        }        
+      }
+      input[type="checkbox"]:checked {
+        margin: 0;
+        filter: none;
+        &.treated{background: url(../assets/injury-treated.webp);}
+        &.injury-type{
+          background: url(../assets/injury-m.webp);
+        }
+        
+      }      
+    }
+    
     padding: 2px;
     border: 1px solid $c-green-light;
     margin:0 -1px -1px 0;
-    textarea{
+    .injury-text{
+      padding: 0;
       resize: none;
       border: none;
       background-color: unset;
+      white-space: normal;
     }     
   }
 }

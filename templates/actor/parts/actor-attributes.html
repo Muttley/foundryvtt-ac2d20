@@ -27,27 +27,27 @@
     <div class="derived-box" style="justify-content: start;">
       <h3 style="padding-right: 25px;">STRESS</h3>
       <h3 class='minmax'>min</h3>
-      <input class="num-short-3" type="number" min="0">
+      <input class="num-short-3" type="number" min="0" name="data.stress.value" value="{{data.stress.value}}">
       <h3 class='minmax'>max</h3>
-      <input class="num-short-3" type="number" min="0">
+      <input class="num-short-3" type="number" min="0" name="data.stress.max" value="{{data.stress.max}}">
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0">
+    <input class="num-short-3" type="number" min="0" name="data.courageResistance.value" value="{{data.courageResistance.value}}">
     <div class="section-title">
       <h3>Courage</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0">
+    <input class="num-short-3" type="number" min="0" name="data.armorResistance.value" value="{{data.armorResistance.value}}">
     <div class="section-title">
       <h3>Armor</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0">
+    <input class="num-short-3" type="number" min="0" name="data.fortune.value" value="{{data.fortune.value}}">
     <div class="section-title">
       <h3>Fortune</h3>
       <span class="right-slope olive"></span>
@@ -62,9 +62,18 @@
 </div>
 
 <div class="injuries-grid">
-  <div class="injury-cell"><textarea rows="3"></textarea></div>
-  <div class="injury-cell"><textarea rows="3"></textarea></div>
-  <div class="injury-cell"><textarea rows="3"></textarea></div>
+  {{#each data.injuries.list as |injury key|}}
+  <div class="injury-cell injury" data-index="{{@index}}">
+    {{#if (hasInjury injury.text)}}
+    <div class="controls">
+      <input type="checkbox" class="injury-type" title="{{#if (eq injury.injuryType true)}}Mental{{/if}}{{#if (ne injury.injuryType true)}}Physical{{/if}}" {{#if (eq injury.injuryType true)}}checked{{/if}}>
+      <input type="checkbox" class="treated" title="{{#if (eq injury.treated true)}}Treated{{/if}}{{#if (ne injury.treated true)}}Not Treated{{/if}}" {{#if (eq injury.treated true)}}checked{{/if}}>
+    </div>
+    <hr style="margin: 1px 0;" />
+    {{/if}}
+    <textarea class="injury-text">{{{injury.text}}}</textarea>
+  </div>
+  {{/each}}
 </div>
 
 <div class="section-title">

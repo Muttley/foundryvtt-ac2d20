@@ -689,10 +689,49 @@ a:hover {
   margin: 0 -1px -1px 0;
 }
 
-.ac2d20 .injuries-grid .injury-cell textarea {
+.ac2d20 .injuries-grid .injury-cell .controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ac2d20 .injuries-grid .injury-cell .controls input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  filter: none;
+  box-sizing: borer-box;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.ac2d20 .injuries-grid .injury-cell .controls input[type="checkbox"].treated {
+  background: url(../assets/injury-not-treated.webp);
+}
+
+.ac2d20 .injuries-grid .injury-cell .controls input[type="checkbox"].injury-type {
+  background: url(../assets/injury-p.webp);
+}
+
+.ac2d20 .injuries-grid .injury-cell .controls input[type="checkbox"]:checked {
+  margin: 0;
+  filter: none;
+}
+
+.ac2d20 .injuries-grid .injury-cell .controls input[type="checkbox"]:checked.treated {
+  background: url(../assets/injury-treated.webp);
+}
+
+.ac2d20 .injuries-grid .injury-cell .controls input[type="checkbox"]:checked.injury-type {
+  background: url(../assets/injury-m.webp);
+}
+
+.ac2d20 .injuries-grid .injury-cell .injury-text {
+  padding: 0;
   resize: none;
   border: none;
   background-color: unset;
+  white-space: normal;
 }
 
 .ac2d20 .scars-grid {

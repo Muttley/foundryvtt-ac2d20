@@ -319,6 +319,29 @@ export class ACActorSheet extends ActorSheet {
         }
 
         new ContextMenu(html.find(".skill"), null, menuSkills);
+
+        // * INJURIES
+
+        html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
+            let $txt = $(ev.currentTarget);
+            const injuryIndex = $txt.parents(".injury").data('index');
+            let updates = [];
+            $('.injury-cell.injury').each(function (el) {
+                let _txt = $(this).find('.injury-text').val().trim();
+                _txt = _txt.replace(/  +/g, ' ');
+                //! replace new lines with encided \n so stupid textarea doesn't break
+                _txt = _txt.replace(/(?:\r\n|\r|\n)/g, '&#13;&#10;');
+                let inj = {
+                    text: _txt,
+                    treated: $(this).find('.controls .treated').is(":checked"),
+                    injuryType: $(this).find('.controls .injury-type').is(":checked")
+                }
+                updates.push(inj);
+            });
+            console.log(updates)
+            await this.actor.update({ 'data.injuries.list': updates });
+        });
+
         // * END SKILLS
 
         // * AMMO COUNT UPDATE 

@@ -9,7 +9,10 @@
 				},
 				"injuries":{
 					"count":3, 
-					"list":[]
+					"list":[
+						{"text":"", "injuryType":false, "treated":false},
+						{"text":"", "injuryType":false, "treated":false},
+						{"text":"", "injuryType":false, "treated":false}]
 				},
 				"truths":[]
 			},

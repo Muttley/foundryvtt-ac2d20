@@ -97,6 +97,25 @@ export const registerHandlebarsHelpers = function () {
             return false;
     });
 
+    Handlebars.registerHelper('hasInjury', function (txt) {
+        if (txt.length > 0)
+            return true;
+        else
+            return false;
+    });
+
+    Handlebars.registerHelper('clearws', function (txt) {
+        return txt.trim()
+    });
+
+    // FOR TIMES LOOP
+    Handlebars.registerHelper('times', function (n, block) {
+        var accum = '';
+        for (var i = 0; i < n; ++i)
+            accum += block.fn(i);
+        return accum;
+    });
+
     // * Use with #if
     // {{#if (or 
     // (eq section1 "foo")
