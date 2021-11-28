@@ -226,11 +226,11 @@ nav{
   }
 }
 
-.scars-grid{
+.truths-grid{
   display: grid;
   grid-template-columns: repeat(5, 1fr);  
   margin-bottom: 10px;
-  .scar-cell {
+  .truth-cell {
     padding: 2px;
     border: 1px solid $c-green-light;
     margin:0 -1px -1px 0;

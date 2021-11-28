@@ -260,66 +260,22 @@ export class ACActorSheet extends ActorSheet {
             let updatedItem = { _id: item.id, data: { focus: !item.data.data.focus } };
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
+        // * END SKILLS
 
-        // let menuSkills = [];
-        // if (this.actor.type != 'npc') {
-        //     menuSkills = [
-        //         {
-        //             icon: '<i class="fas fa-dice-d20"></i>',
-        //             name: 'AC2D20.TEMPLATES.Use_Agility',
-        //             callback: (t) => {
-        //                 this._onRightClickSkill(t.data("itemId"), 'agi');
-        //             },
-        //         },
-        //         {
-        //             icon: '<i class="fas fa-dice-d20"></i>',
-        //             name: 'AC2D20.TEMPLATES.Use_Brawn',
-        //             callback: (t) => {
-        //                 this._onRightClickSkill(t.data("itemId"), 'bra');
-        //             },
-        //         },
-        //         {
-        //             icon: '<i class="fas fa-dice-d20"></i>',
-        //             name: 'AC2D20.TEMPLATES.Use_Coordination',
-        //             callback: (t) => {
-        //                 this._onRightClickSkill(t.data("itemId"), 'coo');
-        //             },
-        //         },
-        //         {
-        //             icon: '<i class="fas fa-dice-d20"></i>',
-        //             name: 'AC2D20.TEMPLATES.Use_Insight',
-        //             callback: (t) => {
-        //                 this._onRightClickSkill(t.data("itemId"), 'ins');
-        //             },
-        //         },
-        //         {
-        //             icon: '<i class="fas fa-dice-d20"></i>',
-        //             name: 'AC2D20.TEMPLATES.Use_Reason',
-        //             callback: (t) => {
-        //                 this._onRightClickSkill(t.data("itemId"), 'rea');
-        //             },
-        //         },
-        //         {
-        //             icon: '<i class="fas fa-dice-d20"></i>',
-        //             name: 'AC2D20.TEMPLATES.Use_Will',
-        //             callback: (t) => {
-        //                 this._onRightClickSkill(t.data("itemId"), 'wil');
-        //             },
-        //         }
-        //     ];
-        // }
-        // else {
-        //     menuSkills = [
-        //         {
-        //             icon: '<i class="fas fa-dice"></i>',
-        //             name: 'AC2D20.TEMPLATES.Delete',
-        //             callback: (t) => {
-        //                 this._onRightClickDelete(t.data("itemId"));
-        //             },
-        //         }]
-        // }
-        // new ContextMenu(html.find(".skill"), null, menuSkills);
-        // * END SKILLS        
+        // * TRUTHS
+        html.find('.truth-text').change(async (ev) => {
+            let updates = [];
+            $('.truth-cell').each((i, el) => {
+                let _txt = this._clearTextAreaText($(el).find('.truth-text').val());
+                let truth = {
+                    text: _txt
+                }
+                updates.push(truth);
+            });
+            await this.actor.update({ 'data.truths': updates });
+        });
+        // * END TRUTHS
+
 
         // * AMMO COUNT UPDATE 
         html.find('.ammo-quantity').change(async (ev) => {

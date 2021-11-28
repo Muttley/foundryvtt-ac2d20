@@ -743,19 +743,19 @@ a:hover {
   white-space: normal;
 }
 
-.ac2d20 .scars-grid {
+.ac2d20 .truths-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin-bottom: 10px;
 }
 
-.ac2d20 .scars-grid .scar-cell {
+.ac2d20 .truths-grid .truth-cell {
   padding: 2px;
   border: 1px solid #759549;
   margin: 0 -1px -1px 0;
 }
 
-.ac2d20 .scars-grid .scar-cell textarea {
+.ac2d20 .truths-grid .truth-cell textarea {
   resize: none;
   border: none;
   background-color: unset;

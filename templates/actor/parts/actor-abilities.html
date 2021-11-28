@@ -77,9 +77,9 @@
   <h3>Personal Truths & Scars</h3>
   <span class="right-slope olive"></span>
 </div>
-<div class="scars-grid">
+<div class="truths-grid">
   {{#each data.truths as |truth key|}}
-  <div class="scar-cell" data-index="{{@index}}"><textarea rows="4">{{{truth.text}}}</textarea></div>
+  <div class="truth-cell" data-index="{{@index}}"><textarea class="truth-text" rows="4">{{{truth.text}}}</textarea></div>
   {{/each}}
 </div>
 
