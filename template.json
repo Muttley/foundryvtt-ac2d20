@@ -14,7 +14,13 @@
 						{"text":"", "injuryType":false, "treated":false},
 						{"text":"", "injuryType":false, "treated":false}]
 				},
-				"truths":[]
+				"truths":[
+					{"text":""},
+					{"text":""},
+					{"text":""},
+					{"text":""},
+					{"text":""}
+				]
 			},
 			"stats": {
 				"attributes": {

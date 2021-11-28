@@ -55,7 +55,6 @@ a{
 
 
 .ac2d20-dialog {
-
 	select {
 		background-color: beige;
 		appearance: none;
@@ -73,7 +72,7 @@ a{
 		.title-label {
 			padding: 5px;
 			font-family: $font-germania;
-      font-size: 1rem;
+      		font-size: 1rem;
 			color: $c-white;
 		}
 		input[type="number"] {

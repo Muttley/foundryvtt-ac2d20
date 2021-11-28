@@ -21,7 +21,6 @@
   {{/each}}
 </div>
 
-
 <div class="flexrow stress-derived-box">
   <div class="flexrow flex-2">
     <div class="derived-box" style="justify-content: start;">
@@ -53,14 +52,12 @@
       <span class="right-slope olive"></span>
     </div>
   </div>
-
 </div>
 
 <div class="section-title">
   <h3>Injuries</h3>
   <span class="right-slope olive"></span>
 </div>
-
 <div class="injuries-grid">
   {{#each data.injuries.list as |injury key|}}
   <div class="injury-cell injury" data-index="{{@index}}">
@@ -81,18 +78,15 @@
   <span class="right-slope olive"></span>
 </div>
 <div class="scars-grid">
-  <div class="scar-cell"><textarea rows="4"></textarea></div>
-  <div class="scar-cell"><textarea rows="4"></textarea></div>
-  <div class="scar-cell"><textarea rows="4"></textarea></div>
-  <div class="scar-cell"><textarea rows="4"></textarea></div>
-  <div class="scar-cell"><textarea rows="4"></textarea></div>
+  {{#each data.truths as |truth key|}}
+  <div class="scar-cell" data-index="{{@index}}"><textarea rows="4">{{{truth.text}}}</textarea></div>
+  {{/each}}
 </div>
 
 <div class="section-title">
   <h3>Skills</h3>
   <span class="right-slope olive"></span>
 </div>
-
 <div class="skills">
   {{#each skills as |item id|}}
   <div class="item skill" data-item-id="{{item._id}}">

@@ -16,6 +16,17 @@ input[type="number"] {
 	}
 }
 
+
+.resource{
+	margin-bottom: 5px;
+	align-items: center;
+	&.green-field{
+		padding: 5px;
+		background-color: $c-green-olive;
+		color: $c-light;
+	}
+}
+
 select {
 	color: $c-dark;
 	background-color: darken($c-light, 10%);
