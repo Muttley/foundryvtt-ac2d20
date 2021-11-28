@@ -10,7 +10,13 @@
     "scripts": [],
     "esmodules": ["module/ac2d20.mjs"],
     "styles": ["css/ac2d20.css"],
-    "packs": [],
+    "packs": [{
+			"name": "skills",
+			"label": "Skills",
+			"system": "ac2d20",
+			"path": "./packs/skills.db",
+			"entity": "Item"
+		}],
     "languages": [{
       "lang": "en",
       "name": "English",

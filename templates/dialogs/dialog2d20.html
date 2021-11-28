@@ -1,9 +1,25 @@
 <div class="ac2d20-dialog">
     <div class="flexrow ">
+        {{#ifCond attribute '>' 0}}
         <div class="resource flexrow flex-group-left">
             <p class="title-label">{{localize "AC2D20.TEMPLATES.Attr"}}</p>
             <input type="number" name="attribute" value="{{attribute}}">
         </div>
+        {{/ifCond}}
+
+        {{#ifCond attribute '==' -1}}
+        <div class="resource flexrow flex-group-left">
+            <select class="select-attribute">
+                <option value="agi">{{localize (concat 'AC2D20.Ability.agi')}}</option>
+                <option value="bra">{{localize (concat 'AC2D20.Ability.bra')}}</option>
+                <option value="coo">{{localize (concat 'AC2D20.Ability.coo')}}</option>
+                <option value="ins">{{localize (concat 'AC2D20.Ability.ins')}}</option>
+                <option value="rea">{{localize (concat 'AC2D20.Ability.rea')}}</option>
+                <option value="wil">{{localize (concat 'AC2D20.Ability.wil')}}</option>
+            </select>
+        </div>
+        {{/ifCond}}
+
         <div class="resource flexrow flex-group-left">
             <p class="title-label">{{localize "AC2D20.TEMPLATES.Skill"}}</p>
             <input type="number" name="skill" value="{{skill}}">

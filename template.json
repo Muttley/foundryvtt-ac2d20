@@ -19,27 +19,27 @@
 			"stats": {
 				"attributes": {
 					"agi": {
-						"value": 1,
+						"value": 6,
 						"bonus":0
 					},
 					"bra": {
-						"value": 1,
+						"value": 6,
 						"bonus":0
 					},
 					"coo": {
-						"value": 1,
+						"value": 6,
 						"bonus":0
 					},
 					"ins": {
-						"value": 1,
+						"value": 6,
 						"bonus":0
 					},
 					"rea": {
-						"value": 1,
+						"value": 6,
 						"bonus":0
 					},
 					"wil": {
-						"value": 1,
+						"value": 6,
 						"bonus":0
 					}
 				}
@@ -74,8 +74,8 @@
 	},
 	"Item": {
 		"types": [
-			"weapon",
-            "skill"
+			"skill",
+			"weapon"
 		],
 		"templates": {
 			"base": {

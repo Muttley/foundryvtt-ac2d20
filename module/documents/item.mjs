@@ -38,7 +38,7 @@ export class ACItem extends Item {
     // FOCUS
     async addFocus() {
         let focuses = this.data.data.focuses;
-        const focus = { title: '', isfocus: false }
+        const focus = { title: '', isfocus: false, description: '' }
         focuses = [...focuses, focus];
         let updatedItem = { _id: this.id, data: { focuses: focuses } };
         await this.update(updatedItem);

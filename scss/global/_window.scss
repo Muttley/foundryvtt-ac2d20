@@ -55,6 +55,16 @@ a{
 
 
 .ac2d20-dialog {
+
+	select {
+		background-color: beige;
+		appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+		margin-left: 5px;
+		font-family: $font-germania;
+	  }
+
 	.resource {
 		margin: 0 2px 5px;
 		padding: 0 5px 0 0;

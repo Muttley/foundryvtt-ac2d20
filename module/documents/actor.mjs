@@ -132,27 +132,22 @@ export class ACActor extends Actor {
         await super._preCreate(data, options, user);
 
         // Setup Tokens
-        if (this.type === 'character' || this.type === 'robot') {
+        if (this.type === 'character') {
             this.data.token.update({ vision: true, actorLink: true, disposition: 1 });
         }
 
-        if (this.type === 'creature') {
+        if (this.type === 'npc') {
             this.data.token.update({ disposition: -1 });
         }
 
-        // Add Skills to Characters and Robots
-        // if (this.type === 'character' || this.type === 'robot') {
-        //     let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
-        //     const items = this.items.map(i => i.toObject());
-        //     packSkills.forEach(s => {
-        //         items.push(s.toObject());
-        //     });
-        //     this.data.update({ items });
-        // }
+        // Add Skills to Characters
+        if (this.type === 'character') {
+            let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
+            const items = this.items.map(i => i.toObject());
+            packSkills.forEach(s => {
+                items.push(s.toObject());
+            });
+            this.data.update({ items });
+        }
     }
-
-    async updateInjuries() {
-
-    }
-
 }

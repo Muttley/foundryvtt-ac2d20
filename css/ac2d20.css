@@ -52,6 +52,15 @@ a:hover {
   cursor: pointer;
 }
 
+.ac2d20-dialog select {
+  background-color: beige;
+  appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  margin-left: 5px;
+  font-family: "Germania One", cursive;
+}
+
 .ac2d20-dialog .resource {
   margin: 0 2px 5px;
   padding: 0 5px 0 0;
@@ -752,21 +761,62 @@ a:hover {
   background-color: unset;
 }
 
-.ac2d20 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-bottom: 10px;
-}
-
-.ac2d20 .skills-grid .skill-cell {
-  padding: 2px;
+.ac2d20 .skills {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #759549;
-  margin: 0 -1px -1px 0;
 }
 
-.ac2d20 .skills-grid .skill-cell.long {
-  grid-column-start: 3;
-  grid-column-end: 6;
+.ac2d20 .skills .skill {
+  display: flex;
+  flex-direction: row;
+  flex: 0;
+  border-bottom: 1px solid #759549;
+  align-items: stretch;
+}
+
+.ac2d20 .skills .skill .skill-name {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: 5px;
+  color: #ebe7d7;
+  background-color: #759549;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.ac2d20 .skills .skill .skill-value {
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  border-left: 1px solid #759549;
+  border-right: 1px solid #759549;
+}
+
+.ac2d20 .skills .skill .skill-focuses {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 5;
+  padding: 5px;
+}
+
+.ac2d20 .skills .skill .skill-focuses .skill-focus {
+  color: #969696;
+}
+
+.ac2d20 .skills .skill .skill-focuses .skill-focus.focused {
+  cursor: pointer;
+  color: beige;
+  background-color: #759549;
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.ac2d20 .skills .skill:last-child {
+  border-bottom: none;
 }
 
 .ac2d20 input[type="text"],
@@ -883,6 +933,7 @@ a:hover {
   font-size: 12px;
   text-align: center;
   margin: 0 6px;
+  color: grey;
 }
 
 .ac2d20 .items-list .item {
@@ -937,6 +988,10 @@ a:hover {
 .ac2d20 .item-formula {
   flex: 0 0 200px;
   padding: 0 8px;
+}
+
+.ac2d20 .item-control {
+  color: grey;
 }
 
 .ac2d20 .effects .item .effect-source,

@@ -64,6 +64,7 @@
       font-size: 12px;
       text-align: center;
       margin: 0 6px;
+      color: grey;
     }
   }
 
@@ -117,4 +118,8 @@
 .item-formula {
   flex: 0 0 200px;
   padding: 0 8px;
+}
+
+.item-control{
+  color: grey;
 }

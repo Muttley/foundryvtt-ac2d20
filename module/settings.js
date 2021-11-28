@@ -20,4 +20,11 @@ export function registerSettings() {
         default: 6,
         type: Number,
     });
+    game.settings.register('ac2d20', 'compendium-skills', {
+        name: 'Skills Compendium',
+        scope: 'world',
+        config: true,
+        default: "ac2d20.skills",
+        type: String,
+    });
 }

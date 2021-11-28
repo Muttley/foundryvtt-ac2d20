@@ -239,13 +239,14 @@ export class ACActorSheet extends ActorSheet {
 
         // * SKILLS LISTENERS [clic, right-click, value change, focus ]
         // Click Skill Item
-        html.find('.skill .item-name').click(ev => {
+        html.find('.skill .skill-name, .skill-focus.focused ').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[item.data.data.defaultAttribute].value, item.data.data.focus);
+            let isFocused = $(ev.currentTarget).hasClass('focused');
+            this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[item.data.data.defaultAttribute].value, isFocused);
         });
         // Change Skill Rank value
-        html.find('.skill .item-skill-value input').change(async (ev) => {
+        html.find('.skill .skill-value .skill-value-input').change(async (ev) => {
             let newRank = parseInt($(ev.currentTarget).val());
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
@@ -260,83 +261,65 @@ export class ACActorSheet extends ActorSheet {
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
 
-        let menuSkills = [];
-        if (this.actor.type != 'npc') {
-            menuSkills = [
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Agility',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'agi');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Brawn',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'bra');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Coordination',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'coo');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Insight',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'ins');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Reason',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'rea');
-                    },
-                },
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Use_Will',
-                    callback: (t) => {
-                        this._onRightClickSkill(t.data("itemId"), 'wil');
-                    },
-                }
-            ];
-        }
-        else {
-            menuSkills = [
-                {
-                    icon: '<i class="fas fa-dice"></i>',
-                    name: 'AC2D20.TEMPLATES.Delete',
-                    callback: (t) => {
-                        this._onRightClickDelete(t.data("itemId"));
-                    },
-                }]
-        }
-
-        new ContextMenu(html.find(".skill"), null, menuSkills);
-
-        // * INJURIES
-
-        html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
-            let updates = [];
-            $('.injury-cell.injury').each((i, el) => {
-                let _txt = this._clearTextAreaText($(el).find('.injury-text').val());
-                let inj = {
-                    text: _txt,
-                    treated: $(el).find('.controls .treated').is(":checked"),
-                    injuryType: $(el).find('.controls .injury-type').is(":checked")
-                }
-                updates.push(inj);
-            });
-            await this.actor.update({ 'data.injuries.list': updates });
-        });
-
-        // * END SKILLS
+        // let menuSkills = [];
+        // if (this.actor.type != 'npc') {
+        //     menuSkills = [
+        //         {
+        //             icon: '<i class="fas fa-dice-d20"></i>',
+        //             name: 'AC2D20.TEMPLATES.Use_Agility',
+        //             callback: (t) => {
+        //                 this._onRightClickSkill(t.data("itemId"), 'agi');
+        //             },
+        //         },
+        //         {
+        //             icon: '<i class="fas fa-dice-d20"></i>',
+        //             name: 'AC2D20.TEMPLATES.Use_Brawn',
+        //             callback: (t) => {
+        //                 this._onRightClickSkill(t.data("itemId"), 'bra');
+        //             },
+        //         },
+        //         {
+        //             icon: '<i class="fas fa-dice-d20"></i>',
+        //             name: 'AC2D20.TEMPLATES.Use_Coordination',
+        //             callback: (t) => {
+        //                 this._onRightClickSkill(t.data("itemId"), 'coo');
+        //             },
+        //         },
+        //         {
+        //             icon: '<i class="fas fa-dice-d20"></i>',
+        //             name: 'AC2D20.TEMPLATES.Use_Insight',
+        //             callback: (t) => {
+        //                 this._onRightClickSkill(t.data("itemId"), 'ins');
+        //             },
+        //         },
+        //         {
+        //             icon: '<i class="fas fa-dice-d20"></i>',
+        //             name: 'AC2D20.TEMPLATES.Use_Reason',
+        //             callback: (t) => {
+        //                 this._onRightClickSkill(t.data("itemId"), 'rea');
+        //             },
+        //         },
+        //         {
+        //             icon: '<i class="fas fa-dice-d20"></i>',
+        //             name: 'AC2D20.TEMPLATES.Use_Will',
+        //             callback: (t) => {
+        //                 this._onRightClickSkill(t.data("itemId"), 'wil');
+        //             },
+        //         }
+        //     ];
+        // }
+        // else {
+        //     menuSkills = [
+        //         {
+        //             icon: '<i class="fas fa-dice"></i>',
+        //             name: 'AC2D20.TEMPLATES.Delete',
+        //             callback: (t) => {
+        //                 this._onRightClickDelete(t.data("itemId"));
+        //             },
+        //         }]
+        // }
+        // new ContextMenu(html.find(".skill"), null, menuSkills);
+        // * END SKILLS        
 
         // * AMMO COUNT UPDATE 
         html.find('.ammo-quantity').change(async (ev) => {
@@ -375,7 +358,6 @@ export class ACActorSheet extends ActorSheet {
             await this.actor.updateEmbeddedDocuments("Item", [this._togglePowered(li.data("item-id"), item)]);
         });
 
-
         // * Toggle Equip Inventory Item
         html.find(".item-toggle").click(async (ev) => {
             const li = $(ev.currentTarget).parents(".item");
@@ -391,40 +373,18 @@ export class ACActorSheet extends ActorSheet {
         });
 
         // * INJURIES
-        html.find('.injury-mark').click(async (ev) => {
-            let status = parseInt(ev.currentTarget.dataset["status"]);
-            //if (status == 2)
-            //return;
-            let index = ev.currentTarget.dataset["index"];
-            let bodypart = ev.currentTarget.dataset["bodypart"];
-            let injuries = this.actor.data.data.body_parts[bodypart].injuries;
-            let newInjuries = [...injuries];
-            newInjuries[index] = status == 2 ? 0 : 2;
-            //newInjuries[index] = 2;
-            let newStatus = this._getBodyPartStatus(newInjuries);
-            let _update = {};
-            let _dataInjuries = `data.body_parts.${bodypart}.injuries`;
-            let _dataStatus = `data.body_parts.${bodypart}.status`;
-            _update[_dataInjuries] = newInjuries;
-            _update[_dataStatus] = newStatus;
-            await this.actor.update(_update);
-        });
-        html.find('.injury-mark').contextmenu(async (ev) => {
-            let status = parseInt(ev.currentTarget.dataset["status"]);
-            //if (status == 0)
-            //return;
-            let index = ev.currentTarget.dataset["index"];
-            let bodypart = ev.currentTarget.dataset["bodypart"];
-            let injuries = this.actor.data.data.body_parts[bodypart].injuries;
-            let newInjuries = [...injuries];
-            newInjuries[index] = status == 1 ? 0 : 1;
-            let newStatus = this._getBodyPartStatus(newInjuries);
-            let _dataInjuries = `data.body_parts.${bodypart}.injuries`;
-            let _dataStatus = `data.body_parts.${bodypart}.status`;
-            let _update = {};
-            _update[_dataInjuries] = newInjuries;
-            _update[_dataStatus] = newStatus;
-            await this.actor.update(_update);
+        html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
+            let updates = [];
+            $('.injury-cell.injury').each((i, el) => {
+                let _txt = this._clearTextAreaText($(el).find('.injury-text').val());
+                let inj = {
+                    text: _txt,
+                    treated: $(el).find('.controls .treated').is(":checked"),
+                    injuryType: $(el).find('.controls .injury-type').is(":checked")
+                }
+                updates.push(inj);
+            });
+            await this.actor.update({ 'data.injuries.list': updates });
         });
         // * END INJURIES
 
@@ -554,7 +514,7 @@ export class ACActorSheet extends ActorSheet {
         this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[attribute].value, item.data.data.focus);
     }
     _onRollSkill(skillName, rank, attribute, focus) {
-        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: attribute, skill: rank, focus: focus, complication: 20 })
+        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: 20, actor: this.actor.data.data })
     }
 
     _onItemSummary(event) {

@@ -93,14 +93,21 @@
   <span class="right-slope olive"></span>
 </div>
 
-<div class="skills-grid">
+<div class="skills">
   {{#each skills as |item id|}}
-  <div class="skill-cell" data-item-id="{{item._id}}">{{item.name}} </div>
-  <div class="skill-cell">1</div>
-  <div class="skill-cell long">
-    {{#each item.data.focuses}}
-    <span class="skill" {{#if (eq this.isfocus true)}}style="color:red" {{/if}}>{{this.title}},&nbsp;</span>
-    {{/each}}
+  <div class="item skill" data-item-id="{{item._id}}">
+    <label class="skill-name">
+      {{item.name}}
+    </label>
+    <div class="skill-value">
+      <input type="number" class="skill-value-input num-short-2 borderless" name="data.value" value="{{data.value}}">
+    </div>
+    <div class="skill-focuses">
+      {{#each item.data.focuses}}
+      <span class="skill-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}},&nbsp;</span>
+      {{/each}}
+    </div>
+    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
   </div>
   {{/each}}
 </div>
