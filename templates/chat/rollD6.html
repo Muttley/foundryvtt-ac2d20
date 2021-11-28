@@ -2,7 +2,7 @@
     <div class="content">
         <h2>{{rollname}}</h2>
         <div class="damage-plaq flexrow">
-            <p class="flexlarge" style="margin: 0;">{{localize "AC2D20.UI.Damage"}}: {{damage}} | {{localize "AC2D20.TEMPLATES.Effects"}}: {{effects}}</p>
+            <p class="flex-2" style="margin: 0;">{{localize "AC2D20.UI.Damage"}}: {{damage}} | {{localize "AC2D20.TEMPLATES.Effects"}}: {{effects}}</p>
             <div style="text-align: end;">
                 {{#each weaponDamageTypesList as |damageType|}}
                 <i class="fo-{{damageType}}" title="{{localize (concat 'AC2D20.RESISTANCE.' damageType)}}"></i>
