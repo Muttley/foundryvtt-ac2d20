@@ -99,6 +99,7 @@ export class ACActorSheet extends ActorSheet {
         // Initialize containers.
 
         const skills = [];
+        const talents = [];
         const perks = [];
         const apparel = [];
         const apparel_mods = [];
@@ -119,6 +120,9 @@ export class ACActorSheet extends ActorSheet {
             // Append to gear.
             if (i.type === 'skill') {
                 skills.push(i);
+            }
+            if (i.type === 'talent') {
+                talents.push(i);
             }
             // Append to skills.
             else if (i.type === 'perk') {
@@ -166,6 +170,7 @@ export class ACActorSheet extends ActorSheet {
             return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
         });
         context.skills = skills;
+        context.talents = talents;
 
         let clothing = apparel.filter(a => a.data.appareltype == 'clothing');
         let outfit = apparel.filter(a => a.data.appareltype == 'outfit');
@@ -477,6 +482,7 @@ export class ACActorSheet extends ActorSheet {
         event.preventDefault();
         let li = $(event.currentTarget).parents(".item");
         let item = this.actor.items.get(li.data("itemId"));
+        console.log(item)
         let moreInfo = "";
 
         if (item.data.data.effect != null) {

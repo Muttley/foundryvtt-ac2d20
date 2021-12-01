@@ -2,6 +2,8 @@
     <div class=" flexrow">
         <div class="item-name flexlarge expandable-info">
             <h4><a class="resource-label">{{item.name}}</a></h4>
+            {{log item}}
+            {{#if (eq item.type 'talent')}}<h3>{{item.data.keywords}}</h3>{{/if}}
         </div>
         <div class="item-controls">
             {{#ifCond item.data.stashed '!=' null}}

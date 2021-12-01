@@ -80,6 +80,7 @@
 	},
 	"Item": {
 		"types": [
+			"talent",
 			"skill",
 			"weapon"
 		],
@@ -106,7 +107,11 @@
 			"focuses": [],
 			"defaultAttribute": "agi",
 			"summary": ""
-		},		
+		},
+		"talent":{
+			"templates": ["base"],
+			"keywords":""
+		},
 		"weapon": {
 			"templates": ["base", "physical", "equipable"],
 			"melee": false,

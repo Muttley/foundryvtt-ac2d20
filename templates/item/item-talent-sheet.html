@@ -1,0 +1,30 @@
+<form class="{{cssClass}} item-sheet flexcol" autocomplete="off">
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs" data-group="primary">
+        {{!-- Default tab is specified in actor-sheet.mjs --}}
+        <img src="systems/ac2d20/assets/main-menu-slope.webp">
+        <div class="buttons">
+            <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
+        </div>
+    </nav>
+
+    {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            {{!-- As you add new fields, add them in here! --}}
+            <div class="resource green-field" style="display: flex;">
+                <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Keywords"}}</label>
+                <input type="text" name="data.keywords" value="{{data.keywords}}">
+            </div>
+            <div class="flexcol" style="border: 1px solid #759549; height: 85%; padding: 5px;">
+                <div class="description">
+                    {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+</form>
