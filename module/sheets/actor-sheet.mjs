@@ -312,9 +312,12 @@ export class ACActorSheet extends ActorSheet {
                         isFocus = true;
                 }
             } catch (err) { }
+            const attrValue = this.actor.data.data.attributes[item.data.data.spellType].value;
+            //  console.warn(this.actor.data.data.attributes)
+            // console.warn(item.data)
 
             // console.log(`Skill Value : ${skillRank} , Focus : ${isFocus}`)
-            game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: -1, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data })
+            game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data })
 
         });
 

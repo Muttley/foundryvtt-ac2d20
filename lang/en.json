@@ -130,6 +130,7 @@
         "Abilities": "Abilities",
         "Difficulty":"Difficulty",
         "Cost":"Cost",
+        "SpellType":"Type",
         "Talents":"Talents",
         "Spells":"Spells",
         "Add_Perk": "Add Perk",
