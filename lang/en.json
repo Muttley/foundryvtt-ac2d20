@@ -33,11 +33,10 @@
     "AC2D20.OTHER": "Other",
     "AC2D20.powered": "Powered",
     "AC2D20.RANGE": {
-        "reach":"R",
-        "close": "C",
-        "extreme": "E",
-        "long": "L",
-        "medium": "M"
+        "close":"Close",
+        "medium":"Medium",
+        "long":"Long",
+        "extreme":"Extreme"
     },
     "AC2D20.RESISTANCE": {
         "armor": "Armor",
@@ -273,14 +272,15 @@
     },
     "AC2D20.WEAPONS": {
         "damageEffect": {
-            "breaking": "Breaking",
-            "burst": "Burst",
+            "area": "Area",
+            "backlash": "Backlash",
+            "drain:": "Drain:",
+            "intense": "Intense",
             "persistent": "Persistent",
             "piercing": "Piercing",
-            "radioactive": "Radioactive",
-            "spread": "Spread",
+            "snare":  "Snare",
             "stun": "Stun",
-            "vicious": "Vicious"
+            "vicious":"Vicious"
         },
         "damageType": {
             "energy": "Energy",
@@ -290,20 +290,19 @@
         },
         "weaponQuality": {
             "accurate": "Accurate",
-            "blast": "Blast",
             "closeQuarters": "Close Quarters",
-            "concealed": "Concealed",
+            "cumbersome": "Cumbersome",
             "debilitating": "Debilitating",
-            "gatling": "Gatling",
-            "inaccurate": "Inaccurate",
-            "mine": "Mine",
-            "nightVision": "Night Vision",
-            "parry": "Parry",
-            "recon": "Recon",
+            "escalation": "Escalation",
+            "giant-killer": "Giant-Killer",
+            "heavy": "Heavy",
+            "hidden": "Hidden",
+            "inaccurate":"Inaccurate",
+            "indirect":"Indirect",
+            "munition":"Munition",
+            "parrying": "Parrying",
             "reliable": "Reliable",
-            "suppressed": "Suppressed",
-            "thrown": "Thrown",
-            "twoHanded": "Two-Handed",
+            "subtle": "Subtle",
             "unreliable": "Unreliable"
         },
         "weaponType": {

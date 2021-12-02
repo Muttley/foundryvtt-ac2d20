@@ -1,10 +1,9 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="{{cssClass}} flexcol" autocomplete="off">
   {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
 
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-    <a class="item" data-tab="mods">{{localize "AC2D20.MODS.mods"}}</a>
     <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
   </nav>
 
@@ -16,82 +15,17 @@
       {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
     </div>
 
-    {{!-- Mods Tab --}}
-    <div class="tab" data-group="primary" data-tab="mods">
-      <div class="flexrow resource-row align-mid">
-        <label class="resource-label">{{localize "AC2D20.MODS.mods"}}</label>
-        <div class="flexrow align-mid">
-          <span>
-            <label for="data.mods.current">{{localize "AC2D20.TEMPLATES.current"}}</label>
-            <input type="number" name="data.mods.current" class="num-short-2" value="{{data.mods.current}}">
-          </span>
-          <span class="text-center">/</span>
-          <span>
-            <label for="data.mods.max">{{localize "AC2D20.TEMPLATES.max"}}</label>
-            <input type="number" name="data.mods.max" class="num-short-2" value="{{data.mods.max}}">
-          </span>
-        </div>
-      </div>
-      <div class="description-field resource-row">
-        {{editor content=data.mods.list target="data.mods.list" button=true owner=owner editable=editable}}
-      </div>
-    </div>
-
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       <div class="flexrow resource-row bgOdd">
-        <label class="resource-label">{{localize "AC2D20.TEMPLATES.Weapon_Type"}}</label>
-        <select name="data.weaponType">
-          {{#select data.weaponType}}
-          {{#each AC2D20.WEAPONS.weaponType as |wType key|}}
-          <option value="{{key}}">{{localize wType}}</option>
+        <label class="resource-label">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
+        <select name="data.focus">
+          {{#select data.focus}}
+          {{#each AC2D20.WEAPONS.fightingFocuses as |foc key|}}
+          <option value="{{key}}">{{localize foc}}</option>
           {{/each}}
           {{/select}}
         </select>
-      </div>
-
-      {{#if (isCreaturesWeapon item)}}
-      <div class="resource-row grid bgOdd">
-        <div class="flexrow align-mid">
-          <label class="resource-label" for="data.attribute">{{localize "AC2D20.TEMPLATES.Creature_Attribute"}}</label>
-          <select name="data.attribute">
-            {{#select data.attribute}}
-            {{#each AC2D20.CREATURE.attributes as |attr key|}}
-            <option value="{{key}}">{{localize attr}}</option>
-            {{/each}}
-            {{/select}}
-          </select>
-        </div>
-        <div class="flexrow align-mid">
-          <label class="resource-label" for="data.skill">{{localize "AC2D20.TEMPLATES.Creature_Skill"}}</label>
-          <select name="data.skill">
-            {{#select data.skill}}
-            {{#each AC2D20.CREATURE.skills as |skill key|}}
-            <option value="{{key}}">{{localize skill}}</option>
-            {{/each}}
-            {{/select}}
-          </select>
-        </div>
-      </div>
-      {{/if}}
-
-      <div class="resource-row flexrow bgEven">
-        <label class="resource-label" for="data.damage.rating">{{localize "AC2D20.TEMPLATES.DAMAGE"}}</label>
-        <input type="number" name="data.damage.rating" value="{{data.damage.rating}}">
-      </div>
-
-      <div class="flexrow resource-row bgOdd">
-        <label class="resource-label" for="data.damage.damageType">{{localize "AC2D20.TEMPLATES.DAMAGE_TYPE"}}</label>
-        <div class="grid">
-          {{#each data.damage.damageType as |dmgType key|}}
-          <div class="flexrow toggle-label {{#ifCond dmgType '==' true}}active{{/ifCond}}">
-            <label class="font-size-13">
-              <input class="" type="checkbox" name="data.damage.damageType.{{key}}" {{#ifCond dmgType '==' true}}checked{{/ifCond}}>
-              {{localize (concat 'AC2D20.WEAPONS.damageType.' key)}} <i class="fo-{{key}}"></i>
-            </label>
-          </div>
-          {{/each}}
-        </div>
       </div>
 
       <div class="resource-row flexrow bgEven">
@@ -99,30 +33,25 @@
         <select name="data.range">
           {{#select data.range}}
           {{#each AC2D20.WEAPONS.range as |range key|}}
-          <option value="{{key}}">{{localize range}}</option>
+          <option value="{{key}}">{{localize range }}</option>
           {{/each}}
           {{/select}}
         </select>
       </div>
 
-      <div class="flexrow resource-row bgOdd">
-        <label class="resource-label" for="data.fireRate">{{localize "AC2D20.TEMPLATES.FIRE_RATE"}}</label>
-        <input type="number" name="data.fireRate" value="{{data.fireRate}}">
-      </div>
-
-      <div class="flexrow resource-row bgEven">
-        <label class="resource-label" for="data.ammo">{{localize "ITEM.TypeAmmo"}}</label>
-        <input type="text" name="data.ammo" value="{{data.ammo}}">
+      <div class="resource-row flexrow bgEven">
+        <label class="resource-label" for="data.stress">{{localize "AC2D20.STRESS.stress"}}</label>
+        <input type="number" name="data.stress" value="{{data.stress}}">
       </div>
 
       <div class="grid">
         <div class="resource-row">
-          <label class="resource-label" for=" data.damage.rating">{{localize "AC2D20.TEMPLATES.WEAPON_QUALITIES"}}</label>
-          <div class="grid item-list">
-            {{#each data.damage.weaponQuality as |item key|}}
+          <label class="resource-label" for=" data.damage.rating">{{localize "AC2D20.TEMPLATES.Weapon_Qualities"}}</label>
+          <div class=" item-list">
+            {{#each data.qualities as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
               <label>
-                <input type="checkbox" name="data.damage.weaponQuality.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' key)}}
+                <input type="checkbox" name="data.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' key)}}
               </label>
             </div>
             {{/each}}
@@ -130,25 +59,17 @@
         </div>
         <div class="resource-row">
           <label class="resource-label" for=" data.damage.rating">{{localize "AC2D20.TEMPLATES.DAMAGE_EFFECTS"}}</label>
-          <div class="grid item-list">
-            {{#each data.damage.damageEffect as |item key|}}
+          <div class=" item-list">
+            {{#each data.effect as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
               <label>
-                <input type="checkbox" name="data.damage.damageEffect.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.damageEffect.' key)}}
+                <input type="checkbox" name="data.effect.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.damageEffect.' key)}}
               </label>
-              {{#ifCond key '==' 'piercing'}}
-              <input type="number" name="data.damage.damageEffect.{{key}}.rank" class="num-short-2" value="{{item.rank}}">
-              {{/ifCond}}
+              {{#if (or (eq key 'piercing') (eq key 'persistent'))}}
+              <input type="number" name="data.effect.{{key}}.rank" class="num-short-2" value="{{item.rank}}">
+              {{/if}}
             </div>
             {{/each}}
-            <!-- {{#each data.damage.damageEffect as |item key|}}
-            <div class="wpn-focus damage-effect-focus toggle-label flex align-mid {{#ifCond item.value '==' true}}active{{/ifCond}}" data-focus-key="{{key}}" data-focus-value="{{item.value}}" data-index="{{@index}}" data-focus-type='damageEffect'>
-              <label class="wpn-focus-toggler">{{item.label}}</label>
-              {{#ifCond key '==' 'piercing'}}
-              <input type="number" class="num-short-2 wpn-focus-rank" value="{{item.rank}}">
-              {{/ifCond}}
-            </div>
-            {{/each}} -->
           </div>
         </div>
       </div>

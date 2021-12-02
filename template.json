@@ -95,6 +95,7 @@
 				"favorite": false
 			},
 			"physical": {
+				"size":0,
 				"weight": 0,
 				"cost": 0,
 				"quantity": 1,
@@ -135,7 +136,40 @@
 		"weapon": {
 			"templates": ["base", "physical", "equipable"],
 			"melee": false,
-			"weaponType": ""
+			"weaponType": "",
+			"range":"",
+			"focus":"",
+			"stress":0,
+			"ammo":3,
+			"effect":{
+				"area": { "label": "Area", "value": false, "description": "" },
+				"backlash": { "label": "Backlash", "value": false, "description": "" },
+				"drain:": { "label": "Drain:", "value": false, "description": "" },
+				"intense": { "label": "Intense", "value": false, "description": "" },
+				"persistent": { "label": "Persistent", "value": false, "rank": 1, "description": "" },
+				"piercing": { "label": "Piercing", "value": false, "rank": 1, "description": "" },
+				"snare": { "label": "Snare", "value": false, "description": "" },
+				"stun": { "label": "Stun", "value": false, "description": "" },
+				"vicious": { "label": "Vicious", "value": false, "description": "" }
+			},
+			"salvo":"",
+			"qualities":{
+				"accurate": { "label": "Accurate", "value": false, "description": "" },
+				"closeQuarters": { "label": "Close Quarters", "value": false, "description": "" },
+				"cumbersome": { "label": "Cumbersome", "value": false, "description": "" },
+				"debilitating": { "label": "Debilitating", "value": false, "description": "" },
+				"escalation": { "label": "Escalation:", "value": false, "description": "" },
+				"giant-killer": { "label": "Giant-Killer:", "value": false, "description": "" },
+				"heavy": { "label": "Heavy", "value": false, "description": "" },
+				"hidden": { "label": "Hidden", "value": false, "description": "" },
+				"inaccurate": { "label": "Inaccurate", "value": false, "description": "" },
+				"indirect": { "label": "Indirect", "value": false, "description": "" },
+				"munition": { "label": "Munition", "value": false, "description": "" },
+				"parrying": { "label": "Parrying", "value": false, "description": "" },				
+				"reliable": { "label": "Reliable", "value": false, "description": "" },
+				"subtle": { "label": "Subtle", "value": false, "description": "" },
+				"unreliable": { "label": "Unreliable", "value": false, "description": "" }
+			}
 		}
 	}
 }

@@ -73,65 +73,21 @@ AC2D20.SKILLS = [
 
 
 AC2D20.WEAPONS = {
-  "weaponType": {
-    "bigGuns": "AC2D20.WEAPONS.weaponType.bigGuns",
-    "energyWeapons": "AC2D20.WEAPONS.weaponType.energyWeapons",
-    "explosives": "AC2D20.WEAPONS.weaponType.explosives",
-    "meleeWeapons": "AC2D20.WEAPONS.weaponType.meleeWeapons",
-    "smallGuns": "AC2D20.WEAPONS.weaponType.smallGuns",
-    "throwing": "AC2D20.WEAPONS.weaponType.throwing",
-    "unarmed": "AC2D20.WEAPONS.weaponType.unarmed",
-    "creatureAttack": "AC2D20.WEAPONS.weaponType.creatureAttack"
-  },
-  "weaponSkill": {
-    "bigGuns": "Big Guns",
-    "energyWeapons": "Energy Weapons",
-    "explosives": "Explosives",
-    "meleeWeapons": "Melee Weapons",
-    "smallGuns": "Small Guns",
-    "throwing": "Throwing",
-    "unarmed": "Unarmed",
-    "creatureAttack": "Melee"
-  },
-  "damageType": {
-    'physical': 'AC2D20.WEAPONS.damageType.physical',
-    'energy': 'AC2D20.WEAPONS.damageType.energy',
-    'radiation': 'AC2D20.WEAPONS.damageType.radiation',
-    'poison': 'AC2D20.WEAPONS.damageType.poison',
+  "fightingFocuses": {
+    'CloseQuarters': 'CloseQuarters',
+    'Handguns': 'Handguns',
+    'Hand-to-Hand': 'Hand-to-Hand',
+    'HeavyWeapons': 'HeavyWeapons',
+    'MeleeWeapons': 'MeleeWeapons',
+    'Rifles': 'Rifles',
+    'ThreatAwareness': 'ThreatAwareness',
+    'Exotic': 'Exotic'
   },
   "range": {
     "close": "AC2D20.RANGE.close",
     "medium": "AC2D20.RANGE.medium",
     "long": "AC2D20.RANGE.long",
     "extreme": "AC2D20.RANGE.extreme"
-  },
-  "damageEffect": {
-    "burst": { "label": "AC2D20.WEAPONS.damageEffect.burst", "value": false, "description": "" },
-    "breaking": { "label": "AC2D20.WEAPONS.damageEffect.breaking", "value": false, "description": "" },
-    "persistent": { "label": "AC2D20.WEAPONS.damageEffect.persistent", "value": false, "description": "" },
-    "piercing": { "label": "AC2D20.WEAPONS.damageEffect.piercing", "value": false, "rank": 1, "description": "" },
-    "radioactive": { "label": "AC2D20.WEAPONS.damageEffect.radioactive", "value": false, "description": "" },
-    "spread": { "label": "AC2D20.WEAPONS.damageEffect.spread", "value": false, "description": "" },
-    "stun": { "label": "AC2D20.WEAPONS.damageEffect.stun", "value": false, "description": "" },
-    "vicious": { "label": "AC2D20.WEAPONS.damageEffect.vicious", "value": false, "description": "" }
-  },
-  "weaponQuality": {
-    "accurate": { "label": "AC2D20.WEAPONS.weaponQuality.accurate", "value": false, "description": "" },
-    "blast": { "label": "AC2D20.WEAPONS.weaponQuality.blast", "value": false, "description": "" },
-    "closeQuarters": { "label": "AC2D20.WEAPONS.weaponQuality.closeQuarters", "value": false, "description": "" },
-    "concealed": { "label": "AC2D20.WEAPONS.weaponQuality.concealed", "value": false, "description": "" },
-    "debilitating": { "label": "AC2D20.WEAPONS.weaponQuality.debilitating", "value": false, "description": "" },
-    "gatling": { "label": "AC2D20.WEAPONS.weaponQuality.gatling", "value": false, "description": "" },
-    "inaccurate": { "label": "AC2D20.WEAPONS.weaponQuality.inaccurate", "value": false, "description": "" },
-    "mine": { "label": "AC2D20.WEAPONS.weaponQuality.mine", "value": false, "description": "" },
-    "nightVision": { "label": "AC2D20.WEAPONS.weaponQuality.nightVision", "value": false, "description": "" },
-    "parry": { "label": "AC2D20.WEAPONS.weaponQuality.parry", "value": false, "description": "" },
-    "recon": { "label": "AC2D20.WEAPONS.weaponQuality.recon", "value": false, "description": "" },
-    "reliable": { "label": "AC2D20.WEAPONS.weaponQuality.reliable", "value": false, "description": "" },
-    "suppressed": { "label": "AC2D20.WEAPONS.weaponQuality.suppressed", "value": false, "description": "" },
-    "thrown": { "label": "AC2D20.WEAPONS.weaponQuality.thrown", "value": false, "description": "" },
-    "twoHanded": { "label": "AC2D20.WEAPONS.weaponQuality.twoHanded", "value": false, "description": "" },
-    "unreliable": { "label": "AC2D20.WEAPONS.weaponQuality.unreliable", "value": false, "description": "" }
   }
 
 }
