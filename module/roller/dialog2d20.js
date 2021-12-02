@@ -1,7 +1,7 @@
 export class Dialog2d20 extends Dialog {
 
 
-    constructor(rollName, diceNum, attribute, skill, focus, complication, actor, dialogData = {}, options = {}) {
+    constructor(rollName, diceNum, attribute, skill, focus, complication, actor, prefAttribute, dialogData = {}, options = {}) {
         super(dialogData, options);
         this.rollName = rollName;
         this.diceNum = diceNum;
@@ -10,6 +10,7 @@ export class Dialog2d20 extends Dialog {
         this.focus = focus;
         this.complication = complication;
         this.actor = actor;
+        this.prefAttribute = prefAttribute;
         this.options.classes = ["dice-icon"];
     }
 
@@ -42,7 +43,7 @@ export class Dialog2d20 extends Dialog {
         $(html).find(`[data-index="${this.diceNum}"]`).addClass('marked');
     }
 
-    static async createDialog({ rollName = "Roll D20", diceNum = 2, attribute = 0, skill = 0, focus = false, complication = 20, actor = null } = {}) {
+    static async createDialog({ rollName = "Roll D20", diceNum = 2, attribute = 0, skill = 0, focus = false, complication = 20, actor = null, prefAttribute = null } = {}) {
         let dialogData = {}
         dialogData.rollName = rollName;
         dialogData.diceNum = diceNum;
@@ -52,8 +53,9 @@ export class Dialog2d20 extends Dialog {
         dialogData.complication = complication;
         dialogData.attributes = ['agi', 'bra', 'coo', 'ins', 'rea', 'wil'];
         dialogData.actor = actor;
+        dialogData.prefAttribute = prefAttribute;
         const html = await renderTemplate("systems/ac2d20/templates/dialogs/dialog2d20.html", dialogData);
-        let d = new Dialog2d20(rollName, diceNum, attribute, skill, focus, complication, actor, {
+        let d = new Dialog2d20(rollName, diceNum, attribute, skill, focus, complication, actor, prefAttribute, {
             title: rollName,
             content: html,
             buttons: {
