@@ -338,6 +338,66 @@ nav{
   }
 }
 
+
+.ac-grid{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $c-green-light;
+  .item{
+    border-bottom: 1px solid $c-green-light;
+    &:last-child{
+      border-bottom: none;
+    }
+    .row{
+      display: flex;
+      flex-direction: row;
+      flex: 0;
+     
+      align-items: stretch;
+      &:last-child{
+        border-bottom: none;
+      }
+      .cell{
+        display: flex;
+        padding: 5px;
+        border-right: 1px solid $c-green-light;     
+        &:last-child{
+          border-right: none;
+        }
+        &.f1{
+          flex: 1;
+        }
+        &.f2{
+          flex: 2;
+        }
+        &.f3{
+          flex: 3;
+        }
+        &.f4{
+          flex: 4;
+        }
+        &.f5{
+          flex: 5;
+        }
+        &.roll{
+          cursor: pointer;
+        }
+        &.green{
+          color: $c-light;
+          background-color: $c-green-light;      
+          font-weight: 900;
+        }      
+      }      
+    }  
+    .item-summary{
+      padding: 5px;
+      border-top: 1px solid $c-green-light;
+      border-bottom: 1px solid $c-green-light;
+    }
+  }
+}
+
+
 .item-sheet{
   .focus-item{
     display: flex;

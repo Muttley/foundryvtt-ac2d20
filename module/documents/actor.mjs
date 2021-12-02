@@ -119,6 +119,13 @@ export class ACActor extends Actor {
         }
     }
 
+    getComplicationFromInjuries() {
+        let inj = this.data.data.injuries.list.filter((_i) => {
+            return (_i.text != "" && !_i.treated)
+        })
+        return inj.length;
+    }
+
     /**
      * Prepare NPC roll data.
      */

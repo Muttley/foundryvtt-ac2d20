@@ -62,6 +62,10 @@
 				"courageResistance":{
 					"max":0,
 					"value":0
+				},
+				"power":{
+					"max":0,
+					"value":0
 				}
 			}
 		},
@@ -125,7 +129,7 @@
 			"momentum":"",
 			"complication":20,
 			"bonusChallenge":0,
-			"spellType":"",
+			"spellType":"ins",
 			"mantle":false
 		},
 		"weapon": {

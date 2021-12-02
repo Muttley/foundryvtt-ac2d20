@@ -100,6 +100,7 @@ export class ACActorSheet extends ActorSheet {
 
         const skills = [];
         const talents = [];
+        const spells = [];
         const perks = [];
         const apparel = [];
         const apparel_mods = [];
@@ -121,8 +122,11 @@ export class ACActorSheet extends ActorSheet {
             if (i.type === 'skill') {
                 skills.push(i);
             }
-            if (i.type === 'talent') {
+            else if (i.type === 'talent') {
                 talents.push(i);
+            }
+            else if (i.type === 'spell') {
+                spells.push(i);
             }
             // Append to skills.
             else if (i.type === 'perk') {
@@ -171,6 +175,7 @@ export class ACActorSheet extends ActorSheet {
         });
         context.skills = skills;
         context.talents = talents;
+        context.spells = spells;
 
         let clothing = apparel.filter(a => a.data.appareltype == 'clothing');
         let outfit = apparel.filter(a => a.data.appareltype == 'outfit');
@@ -280,6 +285,39 @@ export class ACActorSheet extends ActorSheet {
             await this.actor.update({ 'data.truths': updates });
         });
         // * END TRUTHS
+
+        // * SPELLS GRID
+        html.find('.cell-expander').click((event) => { this._onItemSummary(event) });
+        html.find('.item.spell .row .roll').click((event) => {
+            event.preventDefault();
+            const li = $(event.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            let complication = 20 - parseInt(item.data.data.difficulty - 1)
+            complication -= item.actor.getComplicationFromInjuries();
+
+            const skillName = li.find('.row .skill-name').text();
+            const focusName = li.find('.row .focus-name').text();
+            if (!skillName)
+                return;
+
+            const skill = this.actor.items.getName(skillName);
+            let skillRank = 0;
+            try {
+                skillRank = skill.data.data.value;
+            } catch (err) { }
+            let isFocus = false;
+            try {
+                for (const [key, value] of Object.entries(skill.data.data.focuses)) {
+                    if (value.title === focusName && value.isfocus)
+                        isFocus = true;
+                }
+            } catch (err) { }
+
+            // console.log(`Skill Value : ${skillRank} , Focus : ${isFocus}`)
+            game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: -1, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data })
+
+        });
+
 
 
         // * AMMO COUNT UPDATE 
@@ -482,14 +520,6 @@ export class ACActorSheet extends ActorSheet {
         event.preventDefault();
         let li = $(event.currentTarget).parents(".item");
         let item = this.actor.items.get(li.data("itemId"));
-        console.log(item)
-        let moreInfo = "";
-
-        if (item.data.data.effect != null) {
-            moreInfo = item.data.data.effect;
-        } else {
-            moreInfo = item.data.data.description;
-        }
         // Toggle summary
         if (li.hasClass("expanded")) {
             let summary = li.children(".item-summary");
@@ -498,7 +528,7 @@ export class ACActorSheet extends ActorSheet {
             });
         } else {
             let div = $(
-                `<div class="item-summary"><div class="item-summary-wrapper"><div>${moreInfo}</div></div></div>`
+                `<div class="item-summary"><div class="item-summary-wrapper"><div>${item.data.data.description}</div></div></div>`
             );
             li.append(div.hide());
             div.slideDown(200);

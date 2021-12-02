@@ -25,6 +25,15 @@
                     <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
                     <input type="text" name="data.focus" value="{{data.focus}}">
                 </span>
+                <span class="" style="display: flex; align-items: center;">
+                    <select name="" id="">
+                        {{#select data.spellType}}
+                        <option value="ins">Traditional</option>
+                        <option value="rea">Researcher</option>
+                        <option value="wil">Dabbler</option>
+                        {{/select}}
+                    </select>
+                </span>
             </div>
             <div class="resource flexrow green-field">
                 <span class="" style="display: flex; align-items: center; margin-right: 5px;">

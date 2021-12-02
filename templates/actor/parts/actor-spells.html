@@ -1,0 +1,40 @@
+<div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+    <div class="section-title">
+        <h3>Spells</h3>
+        <span class="right-slope olive"></span>
+    </div>
+    <div class="section-title" style="border: 1px solid #759549;">
+        <h3>Power</h3>
+        <span class="right-slope olive"></span>
+        <input type="number" name="data.power.value" value="{{data.power.value}}" class="borderless num-short-3" style="height: 22px;">
+    </div>
+</div>
+<div class="ac-grid">
+    <div class="item">
+        <div class="row">
+            <div class="cell f3 green">Name</div>
+            <div class="cell f2">Skill</div>
+            <div class="cell f2">Focus</div>
+            <div class="cell f1">Diff</div>
+            <div class="cell f1">Cost</div>
+            <div class="cell f1">Dur</div>
+            <div class="cell f1"></div>
+        </div>
+    </div>
+    {{#each spells as |item key|}}
+    <div class="item spell" data-item-id="{{item._id}}">
+        <div class="row">
+            <div class="cell f3 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f2 roll skill-name">{{item.data.skill}}</div>
+            <div class="cell f2 roll focus-name">{{item.data.focus}}</div>
+            <div class="cell f1">{{item.data.difficulty}}</div>
+            <div class="cell f1">{{item.data.cost}}</div>
+            <div class="cell f1">{{item.data.duration}}</div>
+            <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
