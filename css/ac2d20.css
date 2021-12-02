@@ -550,6 +550,7 @@ a:hover {
 }
 
 .ac2d20 nav.sheet-tabs {
+  z-index: 1;
   position: absolute;
   display: flex;
   top: 30px;
@@ -868,6 +869,32 @@ a:hover {
   display: flex;
   flex-direction: row;
   margin-bottom: 5px;
+}
+
+.ac2d20 .editor-small {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ac2d20 .editor-small .editor {
+  flex: 0.96;
+}
+
+.ac2d20 .editor-small .tox {
+  flex: 1;
+}
+
+.ac2d20 .editor-small .tox .tox-editor-container {
+  min-height: 100px;
+  flex: 1;
+  background: #fff;
+}
+
+.ac2d20 .editor-small .tox .tox-edit-area {
+  flex: 1;
+  padding: 0 8px;
 }
 
 .ac2d20 input[type="text"],

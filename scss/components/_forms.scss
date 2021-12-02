@@ -49,6 +49,7 @@
 
 nav{  
   &.sheet-tabs{
+    z-index: 1;
     position: absolute;
     display: flex;
     top: 30px;
@@ -342,5 +343,31 @@ nav{
     display: flex;
     flex-direction: row;
     margin-bottom: 5px;
+  }
+}
+
+.editor-small{  
+  display: flex;
+  flex-direction: column;
+  //height: auto;
+  flex:1;
+  overflow: hidden;
+ // min-height: 220px;
+ // height: 200px;
+  .editor{
+    flex: 0.96;
+  }
+  .tox {
+    flex: 1;
+    .tox-editor-container {
+      min-height: 100px;
+      flex: 1;
+      background: $c-white;
+    }
+  
+    .tox-edit-area {
+      flex: 1;
+      padding: 0 8px;
+    }
   }
 }

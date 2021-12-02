@@ -82,6 +82,7 @@
 		"types": [
 			"talent",
 			"skill",
+			"spell",
 			"weapon"
 		],
 		"templates": {
@@ -111,6 +112,21 @@
 		"talent":{
 			"templates": ["base"],
 			"keywords":""
+		},
+		"spell":{
+			"templates": ["base"],
+			"skill":"",
+			"focus":"",
+			"difficulty":1,
+			"cost":1,
+			"duration":"",
+			"effect":"",
+			"flawed":"",
+			"momentum":"",
+			"complication":20,
+			"bonusChallenge":0,
+			"spellType":"",
+			"mantle":false
 		},
 		"weapon": {
 			"templates": ["base", "physical", "equipable"],

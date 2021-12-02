@@ -128,6 +128,8 @@
     },
     "AC2D20.TEMPLATES": {
         "Abilities": "Abilities",
+        "Difficulty":"Difficulty",
+        "Cost":"Cost",
         "Talents":"Talents",
         "Spells":"Spells",
         "Add_Perk": "Add Perk",
