@@ -217,16 +217,27 @@ export class Roller2D20 {
         let effects = dicesRolled.reduce((a, b) => ({ effect: a.effect + b.effect })).effect;
         let weaponDamageTypesList = [];
         let weaponDamageEffectsList = [];
+        let weaponQualityList = [];
         if (weapon != null) {
-            weaponDamageTypesList = Object.keys(weapon.data.damage.damageType).filter((dt) => {
-                if (weapon.data.damage.damageType[dt]) return dt;
-            });
-            for (let de in weapon.data.damage.damageEffect) {
-                if (weapon.data.damage.damageEffect[de].value) {
-                    let rank = weapon.data.damage.damageEffect[de].rank ?? "";
+            // weaponDamageTypesList = Object.keys(weapon.data.damage.damageType).filter((dt) => {
+            //     if (weapon.data.damage.damageType[dt]) return dt;
+            // });
+
+            for (let de in weapon.data.data.effect) {
+                if (weapon.data.data.effect[de].value) {
+                    let rank = weapon.data.data.effect[de].rank ?? "";
                     let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
                     let efectLabel = `${damageEffectLabel}${rank}`;
                     weaponDamageEffectsList.push(efectLabel);
+                }
+            }
+
+            for (let qu in weapon.data.data.qualities) {
+                if (weapon.data.data.qualities[qu].value) {
+                    //let rank = weapon.data.data.effect[qu].rank ?? "";
+                    let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
+                    //let quLabel = `${damageEffectLabel}${rank}`;
+                    weaponQualityList.push(quLabel);
                 }
             }
         }
@@ -237,7 +248,8 @@ export class Roller2D20 {
             effects: effects,
             results: dicesRolled,
             weaponDamageTypesList: weaponDamageTypesList,
-            weaponDamageEffects: weaponDamageEffects
+            weaponDamageEffects: weaponDamageEffects,
+            weaponQualityList: weaponQualityList
         }
         const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.html", rollData);
         let ac2d20Roll = {}

@@ -104,6 +104,10 @@ export const registerHandlebarsHelpers = function () {
             return false;
     });
 
+    Handlebars.registerHelper('getAttributeBonus', function (actor, attribute) {
+        return actor.data.data.attributes[attribute].bonus
+    });
+
     Handlebars.registerHelper('clearTextAreaText', function (txt) {
         txt.trim();
         txt = txt.replace(/  +/g, ' ');

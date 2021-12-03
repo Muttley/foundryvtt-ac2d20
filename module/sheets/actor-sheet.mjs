@@ -1,3 +1,4 @@
+import { AC2D20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 
 /**
@@ -357,6 +358,16 @@ export class ACActorSheet extends ActorSheet {
             game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
+
+        html.find('.item.weapon .row .stress').click((event) => {
+            event.preventDefault();
+            const li = $(event.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            console.log(item);
+            let stress = parseInt(item.data.data.stress) + parseInt(this.actor.data.data.attributes[item.data.data.weaponType].bonus);
+            console.log(stress);
+            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, ac2d20Roll: null, weapon: item })
+        })
 
 
 

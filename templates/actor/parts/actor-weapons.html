@@ -23,7 +23,7 @@
             <div class="cell f3 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
             <div class="cell f2 roll focus-name">{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
             <div class="cell f1">{{item.data.range}}</div>
-            <div class="cell f1">{{item.data.stress}}</div>
+            <div class="cell f1 stress" style='cursor: pointer;'>{{item.data.stress}} + {{getAttributeBonus ../actor item.data.weaponType}}</div>
             <div class="cell f1">{{item.data.salvo}}</div>
             <div class="cell f1">{{item.data.weight}}</div>
             <div class="cell f1">{{item.data.ammo}}</div>
