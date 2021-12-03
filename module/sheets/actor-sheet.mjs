@@ -514,7 +514,8 @@ export class ACActorSheet extends ActorSheet {
         this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[attribute].value, item.data.data.focus);
     }
     _onRollSkill(skillName, rank, attribute, focus) {
-        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: 20, actor: this.actor.data.data })
+        let complication = 20 - this.actor.getComplicationFromInjuries();
+        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.data.data })
     }
 
     _onItemSummary(event) {
