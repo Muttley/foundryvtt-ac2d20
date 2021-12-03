@@ -17,6 +17,18 @@
 
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
+
+      <div class="resource-row flexrow bgEven">
+        <label class="resource-label" for="data.weaponType">{{localize "AC2D20.WEAPONS.type"}}</label>
+        <select name="data.weaponType">
+          {{#select data.weaponType}}
+          {{#each AC2D20.WEAPONS.weaponTypes as |weaponType key| }}
+          <option value="{{weaponType.bonusAttribute}}">{{localize (concat 'AC2D20.WEAPONS.weaponTypes.' weaponType.label)}}</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+
       <div class="flexrow resource-row bgOdd">
         <label class="resource-label">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
         <select name="data.focus">
@@ -42,6 +54,16 @@
       <div class="resource-row flexrow bgEven">
         <label class="resource-label" for="data.stress">{{localize "AC2D20.STRESS.stress"}}</label>
         <input type="number" name="data.stress" value="{{data.stress}}">
+      </div>
+
+      <div class="resource-row flexrow bgOdd">
+        <label class="resource-label" for="data.ammo">{{localize "AC2D20.TEMPLATES.Ammo"}}</label>
+        <input type="number" name="data.ammo" value="{{data.ammo}}">
+      </div>
+
+      <div class="resource-row flexrow bgOdd">
+        <label class="resource-label" for="data.salvo">{{localize "AC2D20.TEMPLATES.Salvo"}}</label>
+        <input type="text" name="data.salvo" value="{{data.salvo}}">
       </div>
 
       <div class="grid">

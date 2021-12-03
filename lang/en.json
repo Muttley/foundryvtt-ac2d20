@@ -86,6 +86,7 @@
         "InfectiousDiseases": "Infectious Diseases",
         "Pharmacology": "Pharmacology",
         "Psychiatry": "Psychiatry",
+        "Rifles": "Rifles",
         "Surgery": "Surgery",
         "Toxicology": "Toxicology",
         "Hearing": "Hearing",
@@ -271,6 +272,7 @@
         "Weight": "Weight"
     },
     "AC2D20.WEAPONS": {
+        "type":"Weapon Type",
         "damageEffect": {
             "area": "Area",
             "backlash": "Backlash",
@@ -305,15 +307,10 @@
             "subtle": "Subtle",
             "unreliable": "Unreliable"
         },
-        "weaponType": {
-            "bigGuns": "Big Guns",
-            "creatureAttack": "Creature Attack",
-            "energyWeapons": "Energy Weapons",
-            "explosives": "Explosives",
-            "meleeWeapons": "Melee Weapons",
-            "smallGuns": "Small Guns",
-            "throwing": "Throwing",
-            "unarmed": "Unarmed"
+        "weaponTypes": {
+            "Melee": "Melee",
+            "Ranged": "Ranged",
+            "Mental": "Mental"
         }
     },
     "ACTOR.TypeCharacter": "Character",

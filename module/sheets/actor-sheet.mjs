@@ -101,12 +101,13 @@ export class ACActorSheet extends ActorSheet {
         const skills = [];
         const talents = [];
         const spells = [];
+        const weapons = [];
+
         const perks = [];
         const apparel = [];
         const apparel_mods = [];
         const robotApparel = [];
         const robot_mods = [];
-        const weapons = [];
         const weapon_mods = [];
         const ammo = [];
         const consumables = [];
@@ -288,6 +289,7 @@ export class ACActorSheet extends ActorSheet {
 
         // * SPELLS GRID
         html.find('.cell-expander').click((event) => { this._onItemSummary(event) });
+
         html.find('.item.spell .row .roll').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
@@ -315,6 +317,43 @@ export class ACActorSheet extends ActorSheet {
             //const attrValue = this.actor.data.data.attributes[item.data.data.spellType].value;
             const attrValue = -1;
             const prefAttribute = item.data.data.spellType;
+            game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+
+        });
+
+        // * WEAPON
+        html.find('.item.weapon .row .roll').click((event) => {
+            event.preventDefault();
+            const li = $(event.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            let complication = 20;
+            // if unrelliable increase complication
+            for (const [k, v] of Object.entries(item.data.data.qualities)) {
+                if (v.value && k == 'unreliable')
+                    complication -= 1;
+            }
+            complication -= item.actor.getComplicationFromInjuries();
+
+            const focusName = li.find('.row .focus-name').text();
+            if (!focusName)
+                return;
+
+            const skill = this.actor.items.getName('Fighting');
+            console.log(skill);
+            let skillRank = 0;
+            try {
+                skillRank = skill.data.data.value;
+            } catch (err) { }
+            let isFocus = false;
+            try {
+                for (const [key, value] of Object.entries(skill.data.data.focuses)) {
+                    if (value.title === focusName && value.isfocus)
+                        isFocus = true;
+                }
+            } catch (err) { }
+            const attrValue = -1;
+            // weaponType is actualy attribute abrevation
+            const prefAttribute = item.data.data.weaponType;
             game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
@@ -529,9 +568,29 @@ export class ACActorSheet extends ActorSheet {
                 summary.remove();
             });
         } else {
-            let div = $(
-                `<div class="item-summary"><div class="item-summary-wrapper"><div>${item.data.data.description}</div></div></div>`
-            );
+            let div;
+            if (item.data.type == 'weapon') {
+                let effects = [];
+                for (let [k, v] of Object.entries(item.data.data.effect)) {
+                    if (v.value) effects.push(v.label)
+                }
+                let qualities = [];
+                for (let [k, v] of Object.entries(item.data.data.qualities)) {
+                    if (v.value) qualities.push(v.label)
+                }
+                div = $(
+                    `<div class="item-summary">
+                    <div class="item-summary-wrapper">
+                    <div><strong>Effects:</strong> ${effects.join(', ')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Qualities:</strong> ${qualities.join(', ')}</div>
+                    <div>${item.data.data.description}</div>
+                    </div>
+                    </div>`
+                );
+            } else {
+                div = $(
+                    `<div class="item-summary"><div class="item-summary-wrapper"><div>${item.data.data.description}</div></div></div>`
+                );
+            }
             li.append(div.hide());
             div.slideDown(200);
         }

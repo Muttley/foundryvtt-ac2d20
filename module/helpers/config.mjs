@@ -88,7 +88,19 @@ AC2D20.WEAPONS = {
     "medium": "AC2D20.RANGE.medium",
     "long": "AC2D20.RANGE.long",
     "extreme": "AC2D20.RANGE.extreme"
-  }
+  },
+  "weaponTypes": [{
+    'label': "Melee",
+    'bonusAttribute': 'bra'
+  },
+  {
+    'label': "Ranged",
+    'bonusAttribute': 'ins'
+  },
+  {
+    'label': "Mental",
+    'bonusAttribute': 'wil'
+  }]
 
 }
 
