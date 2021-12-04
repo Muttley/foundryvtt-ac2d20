@@ -277,7 +277,7 @@
         "damageEffect": {
             "area": "Area",
             "backlash": "Backlash",
-            "drain:": "Drain:",
+            "drain:": "Drain",
             "intense": "Intense",
             "persistent": "Persistent",
             "piercing": "Piercing",

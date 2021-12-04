@@ -376,7 +376,7 @@ export class ACActorSheet extends ActorSheet {
             let newQuantity = parseInt($(ev.currentTarget).val());
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            let updatedItem = { _id: item.id, data: { quantity: newQuantity } };
+            let updatedItem = { _id: item.id, data: { ammo: newQuantity } };
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
 
