@@ -325,6 +325,15 @@ export class ACActorSheet extends ActorSheet {
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
 
+        // * RESOURCE COUNT
+        html.find('.resources-quantity').change(async (ev) => {
+            let newQuantity = parseInt($(ev.currentTarget).val());
+            const li = $(ev.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            let updatedItem = { _id: item.id, data: { resources: newQuantity } };
+            await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
+        });
+
         // * CLICK TO EXPAND
         html.find(".expandable-info").click((event) => this._onItemSummary(event));
 
@@ -575,6 +584,7 @@ export class ACActorSheet extends ActorSheet {
 
     // Toggle Equipment
     _toggleEquipped(id, item) {
+        console.log('IS EQIP', item.data.data.equipped)
         return {
             _id: id,
             data: {

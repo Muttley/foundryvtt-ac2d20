@@ -3,7 +3,7 @@
     <span class="right-slope olive"></span>
 </div>
 
-<div class="ac-grid">
+<div class="ac-grid" style="margin-bottom: 10px;">
     <div class="item">
         <div class="row">
             <div class="cell f2 green align-left"><strong>Name</strong></div>
@@ -14,9 +14,9 @@
         </div>
     </div>
     {{#each armor as |item key|}}
-    <div class="item weapon" data-item-id="{{item._id}}">
+    <div class="item armor" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f2 green align-left" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f2 green align-left cell-expander" style="cursor: pointer;">{{item.name}}</div>
             <div class="cell f1">{{item.data.resistance}}</div>
             <div class="cell f3">
                 {{#each (getArmorQualities item)}}
@@ -25,7 +25,12 @@
             </div>
             <div class="cell f1">{{item.data.rarity}}</div>
             <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
-                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <span style="display: flex;">
+                    <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
+                        <i class="fas fa-tshirt"></i>
+                    </a>
+                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                </span>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
             </div>
         </div>

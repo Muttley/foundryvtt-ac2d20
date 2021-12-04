@@ -2,3 +2,23 @@
     <h3>Equipment</h3>
     <span class="right-slope olive"></span>
 </div>
+
+<div class="ac-grid">
+    <div class="item">
+        <div class="row">
+            <div class="cell f5 green align-left align-center"><strong>Name</strong></div>
+            <div class="cell f1 align-center"></div>
+        </div>
+    </div>
+    {{#each equipment as |item key|}}
+    <div class="item equipment" data-item-id="{{item._id}}">
+        <div class="row">
+            <div class="cell f5  align-left align-center cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f1 controls align-center" style="display: flex; justify-content: space-between; border-right: none; ">
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

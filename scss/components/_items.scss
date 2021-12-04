@@ -117,6 +117,8 @@
   }
 }
 
+
+
 /* Example style for Boilerplate (can be removed if not needed) */
 .item-formula {
   flex: 0 0 200px;
@@ -124,5 +126,12 @@
 }
 
 .item-control{
-  color: grey;
+  color: $c-green-olive;
+  margin-right: 3px;
+  &.item-unequipped,
+  .item-unstashed,
+  .item-unpowered,
+  .favorite-start-dim {
+    color: rgba(73, 78, 49, 0.3);
+  }
 }

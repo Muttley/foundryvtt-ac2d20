@@ -374,8 +374,12 @@ nav{
         border-right: 1px solid $c-green-light;   
         text-align: center;  
         justify-content: center;
+        &.align-center{
+          align-items: center;
+        }
         &.align-left{
           justify-content: start;
+          text-align: left;
         }
         &:last-child{
           border-right: none;

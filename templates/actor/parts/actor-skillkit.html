@@ -2,3 +2,29 @@
     <h3>Skill Kits</h3>
     <span class="right-slope olive"></span>
 </div>
+
+<div class="ac-grid">
+    <div class="item">
+        <div class="row">
+            <div class="cell f2 green align-left align-center"><strong>Name</strong></div>
+            <div class="cell f2 align-center"><strong>Skill (Focus)</strong></div>
+            <div class="cell f2 align-center"><strong>Resources</strong></div>
+            <div class="cell f1 align-center"></div>
+        </div>
+    </div>
+    {{#each skillkits as |item key|}}
+    <div class="item skillkit" data-item-id="{{item._id}}">
+        <div class="row">
+            <div class="cell f2 green align-left align-center cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f2 align-center">{{item.data.skill}}</div>
+            <div class="cell f2 align-center">
+                <input type="number" class="resources-quantity num-short-3" style="height: 1.1rem;" name="data.resources" value="{{item.data.resources}}">
+            </div>
+            <div class="cell f1 controls align-center" style="display: flex; justify-content: space-between; border-right: none; ">
+                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

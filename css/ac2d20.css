@@ -908,8 +908,13 @@ a:hover {
   justify-content: center;
 }
 
+.ac2d20 .ac-grid .item .row .cell.align-center {
+  align-items: center;
+}
+
 .ac2d20 .ac-grid .item .row .cell.align-left {
   justify-content: start;
+  text-align: left;
 }
 
 .ac2d20 .ac-grid .item .row .cell:last-child {
@@ -1194,7 +1199,15 @@ a:hover {
 }
 
 .ac2d20 .item-control {
-  color: grey;
+  color: #494e31;
+  margin-right: 3px;
+}
+
+.ac2d20 .item-control.item-unequipped,
+.ac2d20 .item-control .item-unstashed,
+.ac2d20 .item-control .item-unpowered,
+.ac2d20 .item-control .favorite-start-dim {
+  color: rgba(73, 78, 49, 0.3);
 }
 
 .ac2d20 .effects .item .effect-source,
