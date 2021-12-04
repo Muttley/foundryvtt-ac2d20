@@ -920,6 +920,10 @@ a:hover {
   flex: 5;
 }
 
+.ac2d20 .ac-grid .item .row .cell.f05 {
+  flex: 0.5;
+}
+
 .ac2d20 .ac-grid .item .row .cell.roll {
   cursor: pointer;
 }
@@ -992,6 +996,25 @@ a:hover {
   border: none;
 }
 
+.ac2d20 .toggle-label {
+  padding: 3px;
+}
+
+.ac2d20 .toggle-label input[type="checkbox"] {
+  display: none;
+}
+
+.ac2d20 .toggle-label label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.ac2d20 .toggle-label.active {
+  color: #ebe7d7;
+  background-color: #759549;
+}
+
 .ac2d20 .resource {
   margin-bottom: 5px;
   align-items: center;
@@ -1001,6 +1024,10 @@ a:hover {
   padding: 5px;
   background-color: #494e31;
   color: #ebe7d7;
+}
+
+.ac2d20 .resource-label {
+  text-transform: capitalize;
 }
 
 .ac2d20 select {
@@ -1058,7 +1085,6 @@ a:hover {
   padding: 0;
   overflow-y: auto;
   scrollbar-width: thin;
-  color: #1f1f2b;
 }
 
 .ac2d20 .items-list .item-list {

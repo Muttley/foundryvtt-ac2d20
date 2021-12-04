@@ -1,11 +1,16 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
-  {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
 
   {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-    <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+  <nav class="sheet-tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <img src="systems/ac2d20/assets/main-menu-slope.webp">
+    <div class="buttons">
+      <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
+      <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+    </div>
   </nav>
+
+  {{> "systems/ac2d20/templates/item/parts/item-header.html"}}
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
@@ -18,8 +23,8 @@
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
 
-      <div class="resource-row flexrow bgEven">
-        <label class="resource-label" for="data.weaponType">{{localize "AC2D20.WEAPONS.type"}}</label>
+      <div class="resource-row flexrow bgEven resource">
+        <label class="resource-label" for="data.weaponType"><strong>{{localize "AC2D20.WEAPONS.type"}}</strong></label>
         <select name="data.weaponType">
           {{#select data.weaponType}}
           {{#each AC2D20.WEAPONS.weaponTypes as |weaponType key| }}
@@ -29,8 +34,8 @@
         </select>
       </div>
 
-      <div class="flexrow resource-row bgOdd">
-        <label class="resource-label">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
+      <div class="flexrow resource-row bgOdd resource">
+        <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
         <select name="data.focus">
           {{#select data.focus}}
           {{#each AC2D20.WEAPONS.fightingFocuses as |foc key|}}
@@ -40,8 +45,8 @@
         </select>
       </div>
 
-      <div class="resource-row flexrow bgEven">
-        <label class="resource-label" for="data.range">{{localize "AC2D20.TEMPLATES.RANGE"}}</label>
+      <div class="resource-row flexrow bgEven resource">
+        <label class="resource-label" for="data.range"><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}</strong></label>
         <select name="data.range">
           {{#select data.range}}
           {{#each AC2D20.WEAPONS.range as |range key|}}
@@ -51,25 +56,28 @@
         </select>
       </div>
 
-      <div class="resource-row flexrow bgEven">
-        <label class="resource-label" for="data.stress">{{localize "AC2D20.STRESS.stress"}}</label>
+      <div class="resource-row flexrow bgOdd resource">
+        <label class="resource-label" for="data.stress"><strong>{{localize "AC2D20.STRESS.stress"}}</strong></label>
         <input type="number" name="data.stress" value="{{data.stress}}">
       </div>
 
-      <div class="resource-row flexrow bgOdd">
-        <label class="resource-label" for="data.ammo">{{localize "AC2D20.TEMPLATES.Ammo"}}</label>
+      <div class="resource-row flexrow bgEven resource">
+        <label class="resource-label" for="data.ammo"><strong>{{localize "AC2D20.TEMPLATES.Ammo"}}</strong></label>
         <input type="number" name="data.ammo" value="{{data.ammo}}">
       </div>
 
-      <div class="resource-row flexrow bgOdd">
-        <label class="resource-label" for="data.salvo">{{localize "AC2D20.TEMPLATES.Salvo"}}</label>
+      <div class="resource-row flexrow bgOdd resource">
+        <label class="resource-label" for="data.salvo"><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}</strong></label>
         <input type="text" name="data.salvo" value="{{data.salvo}}">
       </div>
 
       <div class="grid">
         <div class="resource-row">
-          <label class="resource-label" for=" data.damage.rating">{{localize "AC2D20.TEMPLATES.Weapon_Qualities"}}</label>
-          <div class=" item-list">
+          <div class="section-title">
+            <h3>{{localize "AC2D20.TEMPLATES.Weapon_Qualities"}}</h3>
+            <span class="right-slope olive"></span>
+          </div>
+          <div class="items-list" style="border: 1px solid #759549;">
             {{#each data.qualities as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
               <label>
@@ -80,8 +88,11 @@
           </div>
         </div>
         <div class="resource-row">
-          <label class="resource-label" for=" data.damage.rating">{{localize "AC2D20.TEMPLATES.DAMAGE_EFFECTS"}}</label>
-          <div class=" item-list">
+          <div class="section-title">
+            <h3>{{localize "AC2D20.TEMPLATES.DAMAGE_EFFECTS"}}</h3>
+            <span class="right-slope olive"></span>
+          </div>
+          <div class="items-list" style="border: 1px solid #759549;">
             {{#each data.effect as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
               <label>

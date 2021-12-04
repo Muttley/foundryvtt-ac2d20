@@ -7,26 +7,26 @@
 <div class="ac-grid">
     <div class="item">
         <div class="row">
-            <div class="cell f3 green">Name</div>
-            <div class="cell f2">Focus</div>
-            <div class="cell f1">Range</div>
-            <div class="cell f1">Stress</div>
-            <div class="cell f1">Salvo</div>
-            <div class="cell f1">Size</div>
-            <div class="cell f1">Ammo</div>
+            <div class="cell f4 green"><strong>Name</strong></div>
+            <div class="cell f3"><strong>Focus</strong></div>
+            <div class="cell f2"><strong>Range</strong></div>
+            <div class="cell f2"><strong>Stress</strong></div>
+            <div class="cell f2"><strong>Salvo</strong></div>
+            <div class="cell f2"><strong>Size</strong></div>
+            <div class="cell f2"><strong>Ammo</strong></div>
             <div class="cell f1"></div>
         </div>
     </div>
     {{#each weapons as |item key|}}
     <div class="item weapon" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f3 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
-            <div class="cell f2 roll focus-name">{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
-            <div class="cell f1">{{item.data.range}}</div>
-            <div class="cell f1 stress" style='cursor: pointer;'>{{item.data.stress}} + {{getAttributeBonus ../actor item.data.weaponType}}</div>
-            <div class="cell f1">{{item.data.salvo}}</div>
-            <div class="cell f1">{{item.data.weight}}</div>
-            <div class="cell f1">{{item.data.ammo}}</div>
+            <div class="cell f4 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f3 roll focus-name">{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
+            <div class="cell f2">{{item.data.range}}</div>
+            <div class="cell f2 stress" style='cursor: pointer; justify-content: center;'>{{item.data.stress}} + {{getAttributeBonus ../actor item.data.weaponType}}</div>
+            <div class="cell f2">{{item.data.salvo}}</div>
+            <div class="cell f2">{{item.data.weight}}</div>
+            <div class="cell f2">{{item.data.ammo}}</div>
             <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>

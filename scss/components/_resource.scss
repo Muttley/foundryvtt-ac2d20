@@ -16,6 +16,22 @@ input[type="number"] {
 	}
 }
 
+.toggle-label {
+	input[type="checkbox"] {
+		display: none;
+	}
+	label {
+		cursor: pointer;
+		display: flex;
+		align-items: center;		
+	}
+	padding: 3px;	
+	&.active {
+		color: $c-light;
+		background-color:$c-green-light;
+	}
+}
+
 
 .resource{
 	margin-bottom: 5px;
@@ -25,6 +41,10 @@ input[type="number"] {
 		background-color: $c-green-olive;
 		color: $c-light;
 	}
+}
+
+.resource-label{
+	text-transform: capitalize;
 }
 
 select {

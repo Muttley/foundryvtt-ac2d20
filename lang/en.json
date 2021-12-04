@@ -127,6 +127,7 @@
         "Watercraft": "Watercraft"
     },
     "AC2D20.TEMPLATES": {
+        "Salvo":"Salvo",
         "Abilities": "Abilities",
         "Difficulty":"Difficulty",
         "Cost":"Cost",
@@ -136,7 +137,7 @@
         "Add_Perk": "Add Perk",
         "Addictive": "Addictive",
         "Alcoholic": "Alcoholic",
-        "Ammo": "AMMO",
+        "Ammo": "Ammo",
         "Apparel": "Apparel",
         "Apparel_Type": "Apparel Type",
         "Armor_Type": "Armor Type",
@@ -215,7 +216,7 @@
         "POISON": "POISON",
         "POWER_ARMOR_HEALTH": "POWER ARMOR HEALTH",
         "RAD": "RAD",
-        "RANGE": "RANGE",
+        "RANGE": "Range",
         "Rank": "Rank",
         "Ranks_current_maximum": "Ranks [current/maximum]",
         "Re_roll": "Re-roll",
