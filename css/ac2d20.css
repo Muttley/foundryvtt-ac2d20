@@ -597,6 +597,16 @@ a:hover {
   height: 100%;
 }
 
+.ac2d20 .sheet-body .tab .editor {
+  border: 1px solid #759549;
+  padding: 5px;
+}
+
+.ac2d20 .sheet-body .tab.flex-tab {
+  display: flex;
+  flex-direction: column;
+}
+
 .ac2d20 .tox .tox-editor-container {
   background: #fff;
 }
@@ -894,6 +904,12 @@ a:hover {
   display: flex;
   padding: 5px;
   border-right: 1px solid #759549;
+  text-align: center;
+  justify-content: center;
+}
+
+.ac2d20 .ac-grid .item .row .cell.align-left {
+  justify-content: start;
 }
 
 .ac2d20 .ac-grid .item .row .cell:last-child {

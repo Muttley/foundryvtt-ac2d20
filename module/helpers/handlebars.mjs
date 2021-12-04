@@ -108,6 +108,17 @@ export const registerHandlebarsHelpers = function () {
         return actor.data.data.attributes[attribute].bonus
     });
 
+    Handlebars.registerHelper('getArmorQualities', function (armor) {
+        let qual = Object.entries(armor.data.qualities).filter(([k, v]) => v.value).map(m => m[0]);
+        // let qualities = qual.map(m => m[0])
+        //qual.reduce((res, key) => (res[key] = obj[key], res), {});
+        console.log(qual)
+        return qual;
+        //return `Qualities of ${armor.data.qualities}`;
+        //for(Object.entities(armor))
+        //return actor.data.data.attributes[attribute].bonus
+    });
+
     Handlebars.registerHelper('clearTextAreaText', function (txt) {
         txt.trim();
         txt = txt.replace(/  +/g, ' ');

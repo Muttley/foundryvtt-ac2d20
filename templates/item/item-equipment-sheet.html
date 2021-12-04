@@ -1,4 +1,5 @@
-<form class="{{cssClass}} item-sheet flexcol" autocomplete="off">
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs" data-group="primary">
         {{!-- Default tab is specified in actor-sheet.mjs --}}
@@ -14,19 +15,11 @@
     <section class="sheet-body">
         {{!-- Attributes Tab --}}
         <div class="tab flex-tab attributes" data-group="primary" data-tab="attributes">
-            {{!-- As you add new fields, add them in here! --}}
-            <div class="resource green-field" style="display: flex;">
-                <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Keywords"}}</label>
-                <input type="text" name="data.keywords" value="{{data.keywords}}">
-            </div>
             <div class="section-title">
                 <h3>{{localize "AC2D20.TEMPLATES.Description"}}</h3>
                 <span class="right-slope olive"></span>
             </div>
-
             {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
-
         </div>
     </section>
-
 </form>

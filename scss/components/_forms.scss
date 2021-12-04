@@ -90,8 +90,19 @@ nav{
 .sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
-  height: 100%;
+  height: 100%; 
 }
+.sheet-body .tab .editor{
+  border: 1px solid $c-green-light;
+  padding: 5px;
+}
+.sheet-body .tab {
+  &.flex-tab{
+    display: flex; 
+    flex-direction: column;
+  }
+}
+
 
 .tox {
   .tox-editor-container {
@@ -360,7 +371,12 @@ nav{
       .cell{
         display: flex;
         padding: 5px;
-        border-right: 1px solid $c-green-light;     
+        border-right: 1px solid $c-green-light;   
+        text-align: center;  
+        justify-content: center;
+        &.align-left{
+          justify-content: start;
+        }
         &:last-child{
           border-right: none;
         }

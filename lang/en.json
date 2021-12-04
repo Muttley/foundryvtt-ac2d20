@@ -128,6 +128,10 @@
     },
     "AC2D20.TEMPLATES": {
         "Salvo":"Salvo",
+        "Resistance":"Resistance",
+        "Qualities":"Qualities",
+        "SkillFocus":"Skill Focus",
+        "Resources":"Resources",
         "Abilities": "Abilities",
         "Difficulty":"Difficulty",
         "Cost":"Cost",
@@ -312,6 +316,13 @@
             "Melee": "Melee",
             "Ranged": "Ranged",
             "Mental": "Mental"
+        }
+    },
+    "AC2D20.ARMOR": {
+        "qualities":{
+            "heavy":"Heavy",
+            "uncomfortable":"Uncomfortable",
+            "shield":"Shield"
         }
     },
     "ACTOR.TypeCharacter": "Character",

@@ -103,18 +103,9 @@ export class ACActorSheet extends ActorSheet {
         const talents = [];
         const spells = [];
         const weapons = [];
-
-        const perks = [];
-        const apparel = [];
-        const apparel_mods = [];
-        const robotApparel = [];
-        const robot_mods = [];
-        const weapon_mods = [];
-        const ammo = [];
-        const consumables = [];
-        const books_and_magz = [];
-        const miscellany = []
-        const gear = [];
+        const armor = [];
+        const skillkits = [];
+        const equipment = [];
         const specialAbilities = []
 
         // Iterate through items, allocating to containers
@@ -130,39 +121,17 @@ export class ACActorSheet extends ActorSheet {
             else if (i.type === 'spell') {
                 spells.push(i);
             }
-            // Append to skills.
-            else if (i.type === 'perk') {
-                perks.push(i);
-            }
-            else if (i.type === 'apparel') {
-                apparel.push(i);
-            }
-            else if (i.type === 'apparel_mod') {
-                apparel_mods.push(i);
-            }
-            else if (i.type === 'robot_armor') {
-                robotApparel.push(i);
-            }
-            else if (i.type === 'robot_mod') {
-                robot_mods.push(i);
+            else if (i.type === 'armor') {
+                armor.push(i);
             }
             else if (i.type === 'weapon') {
                 weapons.push(i);
             }
-            else if (i.type === 'weapon_mod') {
-                weapon_mods.push(i);
+            else if (i.type === 'skillkit') {
+                skillkits.push(i);
             }
-            else if (i.type === 'ammo') {
-                ammo.push(i);
-            }
-            else if (i.type === 'consumable') {
-                consumables.push(i);
-            }
-            else if (i.type === 'books_and_magz') {
-                books_and_magz.push(i);
-            }
-            else if (i.type === 'miscellany') {
-                miscellany.push(i);
+            else if (i.type === 'equipment') {
+                equipment.push(i);
             }
             else if (i.type === 'special_ability') {
                 specialAbilities.push(i)
@@ -170,57 +139,33 @@ export class ACActorSheet extends ActorSheet {
         }
 
         // Assign and return
-        skills.sort(function (a, b) {
-            var nameA = a.name.toUpperCase();
-            var nameB = b.name.toUpperCase();
-            return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
-        });
+        // skills.sort(function (a, b) {
+        //     var nameA = a.name.toUpperCase();
+        //     var nameB = b.name.toUpperCase();
+        //     return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
+        // });
         context.skills = skills;
         context.talents = talents;
         context.spells = spells;
-
-        let clothing = apparel.filter(a => a.data.appareltype == 'clothing');
-        let outfit = apparel.filter(a => a.data.appareltype == 'outfit');
-        let headgear = apparel.filter(a => a.data.appareltype == 'headgear');
-        let armor = apparel.filter(a => a.data.appareltype == 'armor');
-        let powerArmor = apparel.filter(a => a.data.appareltype == 'powerArmor');
-        let plating = robotApparel.filter(a => a.data.appareltype == 'plating');
-        let robotArmor = robotApparel.filter(a => a.data.appareltype == 'armor');
-        context.allApparel = [
-            { apparelType: 'clothing', list: clothing },
-            { apparelType: 'outfit', list: outfit },
-            { apparelType: 'headgear', list: headgear },
-            { apparelType: 'armor', list: armor },
-            { apparelType: 'powerArmor', list: powerArmor }
-        ];
-        context.allRobotApparel = [
-            { apparelType: 'plating', list: plating },
-            { apparelType: 'armor', list: robotArmor }
-        ];
-
-        context.apparel_mods = apparel_mods;
-        context.robot_mods = robot_mods;
-        context.perks = perks;
-        context.ammo = ammo;
+        context.armor = armor;
+        context.skillkits = skillkits;
+        context.equipment = equipment;
         context.weapons = weapons;
-        context.weapon_mods = weapon_mods;
         context.specialAbilities = specialAbilities;
-        context.consumables = consumables;
-        context.books_and_magz = books_and_magz;
-        context.miscellany = miscellany;
+
 
         // WRAP INVENTORY DEPENDING ON THE CHARACTER TYPE:
         // for example put apparel in inventory for all except the character actor.
 
         // NPC and Creature Inventory = all physical items that are not weapons
-        if (this.actor.type == 'npc' || this.actor.type == 'creature') {
-            context.inventory = context.items.filter(i => {
-                return (i.type !== 'weapon' && i.data.weight != null)
-            });
-        }
-        if (this.actor.type == 'character') {
-            context.inventory = [...robotApparel, ...robot_mods];
-        }
+        // if (this.actor.type == 'npc' || this.actor.type == 'creature') {
+        //     context.inventory = context.items.filter(i => {
+        //         return (i.type !== 'weapon' && i.data.weight != null)
+        //     });
+        // }
+        // if (this.actor.type == 'character') {
+        //     context.inventory = [...robotApparel, ...robot_mods];
+        // }
 
     }
 

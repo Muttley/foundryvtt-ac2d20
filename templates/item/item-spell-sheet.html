@@ -14,7 +14,7 @@
     <section class="sheet-body">
 
         {{!-- Description Tab --}}
-        <div class="tab description" style="display: flex; flex-direction: column;" data-group="primary" data-tab="description">
+        <div class="tab flex-tab description" data-group="primary" data-tab="description">
 
             <div class="resource green-field" style="display: flex; flex-direction: row; justify-content: space-between;">
                 <span class="" style="display: flex; align-items: center; margin-right: 5px;">
@@ -50,7 +50,10 @@
                     <input type="text" name="data.duration" value="{{data.duration}}">
                 </span>
             </div>
-
+            <div class="section-title">
+                <h3>{{localize "AC2D20.TEMPLATES.Description"}}</h3>
+                <span class="right-slope olive"></span>
+            </div>
             {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
         </div>
 

@@ -101,9 +101,7 @@ AC2D20.WEAPONS = {
     'label': "Mental",
     'bonusAttribute': 'wil'
   }]
-
 }
-
 
 
 

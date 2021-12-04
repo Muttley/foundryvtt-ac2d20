@@ -1,13 +1,12 @@
-<div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-    <div class="section-title">
-        <h3>Weapons</h3>
-        <span class="right-slope olive"></span>
-    </div>
+<div class="section-title">
+    <h3>Weapons</h3>
+    <span class="right-slope olive"></span>
 </div>
+
 <div class="ac-grid">
     <div class="item">
         <div class="row">
-            <div class="cell f4 green"><strong>Name</strong></div>
+            <div class="cell f4 green align-left"><strong>Name</strong></div>
             <div class="cell f3"><strong>Focus</strong></div>
             <div class="cell f2"><strong>Range</strong></div>
             <div class="cell f2"><strong>Stress</strong></div>
@@ -20,10 +19,10 @@
     {{#each weapons as |item key|}}
     <div class="item weapon" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f4 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f4 green cell-expander align-left" style="cursor: pointer;">{{item.name}}</div>
             <div class="cell f3 roll focus-name">{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
             <div class="cell f2">{{item.data.range}}</div>
-            <div class="cell f2 stress" style='cursor: pointer; justify-content: center;'>{{item.data.stress}} + {{getAttributeBonus ../actor item.data.weaponType}}</div>
+            <div class="cell f2 stress" style='cursor: pointer;'>{{item.data.stress}} + {{getAttributeBonus ../actor item.data.weaponType}}</div>
             <div class="cell f2">{{item.data.salvo}}</div>
             <div class="cell f2">{{item.data.weight}}</div>
             <div class="cell f2">

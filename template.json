@@ -87,7 +87,10 @@
 			"talent",
 			"skill",
 			"spell",
-			"weapon"
+			"weapon",
+			"armor",
+			"skillkit",
+			"equipment"
 		],
 		"templates": {
 			"base": {
@@ -171,6 +174,23 @@
 				"subtle": { "label": "Subtle", "value": false, "description": "" },
 				"unreliable": { "label": "Unreliable", "value": false, "description": "" }
 			}
+		},
+		"armor":{
+			"templates": ["base", "physical", "equipable"],
+			"resistance":1,
+			"qualities":{
+				"heavy": { "label": "Heavy", "value": false, "description": "" },
+				"uncomfortable": { "label": "Uncomfortable", "value": false, "description": "" },
+				"shield": { "label": "Shield", "value": false, "description": "" }
+			}
+		},
+		"skillkit":{
+			"templates": ["base", "physical", "equipable"],
+			"skill":"",
+			"resources":3
+		},
+		"equipment":{
+			"templates": ["base", "physical", "equipable"]
 		}
 	}
 }
