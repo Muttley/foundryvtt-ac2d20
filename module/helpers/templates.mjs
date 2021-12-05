@@ -13,6 +13,7 @@ export const preloadHandlebarsTemplates = async function () {
     "systems/ac2d20/templates/actor/parts/actor-armor.html",
     "systems/ac2d20/templates/actor/parts/actor-skillkit.html",
     "systems/ac2d20/templates/actor/parts/actor-equipment.html",
+    "systems/ac2d20/templates/actor/parts/actor-encumbrance.html",
     "systems/ac2d20/templates/actor/parts/actor-effects.html",
     "systems/ac2d20/templates/actor/parts/actor-inventory.html",
     "systems/ac2d20/templates/actor/parts/actor-special_abilities.html",

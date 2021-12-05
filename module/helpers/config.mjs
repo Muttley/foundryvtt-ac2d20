@@ -70,7 +70,7 @@ AC2D20.SKILLS = [
   }
 ];
 
-
+AC2D20.Size = ["Trivial", "Minor", "Major"];
 
 AC2D20.WEAPONS = {
   "fightingFocuses": {

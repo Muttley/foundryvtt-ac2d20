@@ -23,7 +23,7 @@
                 {{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
                 {{/each}}
             </div>
-            <div class="cell f1">{{item.data.rarity}}</div>
+            <div class="cell f1">{{item.data.restriction}}</div>
             <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
                 <span style="display: flex;">
                     <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>

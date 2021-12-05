@@ -113,6 +113,18 @@ export const registerHandlebarsHelpers = function () {
         return qual;
     });
 
+    Handlebars.registerHelper('getSizeLabel', function (num) {
+        if (num == 0)
+            return 'Trivial'
+        else if (num == 1)
+            return 'Minor'
+        else if (num == 3)
+            return 'Major'
+        else
+            return '-'
+    });
+
+
     Handlebars.registerHelper('clearTextAreaText', function (txt) {
         txt.trim();
         txt = txt.replace(/  +/g, ' ');

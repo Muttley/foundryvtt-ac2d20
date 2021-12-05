@@ -80,13 +80,30 @@ export class ACActorSheet extends ActorSheet {
         //     v.label = game.i18n.localize(CONFIG.AC2D20.attributes[k]) ?? k;
         // }
 
-        let allInjuries = [];
-        // for (const [key, bp] of Object.entries(this.actor.data.data.body_parts)) {
-        //     allInjuries.push.apply(allInjuries, bp.injuries);
-        // }
-        context.treatedInjuriesCount = allInjuries.filter(i => i == 1).length;
-        context.openInjuriesCount = allInjuries.filter(i => i == 2).length;
+        //let allInjuries = [];
+        //context.treatedInjuriesCount = allInjuries.filter(i => i == 1).length;
+        // context.openInjuriesCount = allInjuries.filter(i => i == 2).length;
 
+        let isEncumbered = false;
+        let physicalItems = context.items.filter(i => i.data.hasOwnProperty('weight'));
+        let encumberingItems = physicalItems.filter((i) => {
+            if (i.type != 'armor') {
+                return true;
+            }
+            else {
+                if (!i.data.equipped || (i.data.equipped && i.data.qualities.heavy.value)) {
+                    return true
+                }
+            }
+        });
+        context.minorItemsTotal = encumberingItems.filter(i => parseInt(i.data.weight) === 1).length;
+        context.majorItemsTotal = encumberingItems.filter(i => parseInt(i.data.weight) === 3).length;
+        let totalEncumbrance = 0;
+        for (let i = 0; i < encumberingItems.length; i++) {
+            totalEncumbrance += parseInt(encumberingItems[i].data.quantity) * parseInt(encumberingItems[i].data.weight)
+        }
+        context.totalEncumbrance = totalEncumbrance;
+        // REMOVE ARMORS THAT ARE EQUIPPED AND DOESN'T HAVE HEAVY QUALITY FROM CALCULATION
     }
 
     /**
@@ -313,8 +330,6 @@ export class ACActorSheet extends ActorSheet {
             console.log(stress);
             game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, ac2d20Roll: null, weapon: item })
         })
-
-
 
         // * AMMO COUNT UPDATE 
         html.find('.ammo-quantity').change(async (ev) => {

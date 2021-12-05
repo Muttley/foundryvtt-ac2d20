@@ -3,22 +3,24 @@
     <div class="header-fields">
         <h1 class="charname"><input name="name" class="underline" type="text" value="{{item.name}}" placeholder="Name" /></h1>
         {{#if data.weight includeZero=true}}
-        <div class="grid grid-4col">
+        <div style="display: flex; flex-direction: row; justify-content: space-between;">
             <div class="resource">
                 <label class="resource-label">{{localize "AC2D20.UI.Quantity"}}</label>
                 <input class="num-short-2" type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
             </div>
             <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.UI.Weight"}}</label>
-                <input class="num-short-2" type="text" name="data.weight" value="{{data.weight}}" data-dtype="String" />
+                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Size"}}</label>
+                <select name="data.weight">
+                    {{#select data.weight}}
+                    <option value="0" data-dtype="Number">Trivial</option>
+                    <option value="1" data-dtype="Number">Minor</option>
+                    <option value="3" data-dtype="Number">Major</option>
+                    {{/select}}
+                </select>
             </div>
             <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.UI.Cost"}}</label>
-                <input class="num-short-3" type="text" name="data.cost" value="{{data.cost}}" data-dtype="String" />
-            </div>
-            <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.UI.Rarity"}}</label>
-                <input class="num-short-2" type="number" name="data.rarity" value="{{data.rarity}}" data-dtype="Number" />
+                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Restriction"}}</label>
+                <input class="num-short-2" type="number" name="data.restriction" value="{{data.restriction}}" data-dtype="Number" />
             </div>
         </div>
         {{/if}}

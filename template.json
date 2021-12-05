@@ -66,6 +66,10 @@
 				"power":{
 					"max":0,
 					"value":0
+				},
+				"carryCapacity":{
+					"value":9,
+					"mod":0
 				}
 			}
 		},
@@ -103,7 +107,8 @@
 				"cost": 0,
 				"quantity": 1,
 				"rarity": 0,
-				"stashed": false
+				"stashed": false,
+				"restriction":0
 			},
 			"equipable": {
 				"equippable": true,

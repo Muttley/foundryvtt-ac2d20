@@ -132,6 +132,13 @@
         "Qualities":"Qualities",
         "SkillFocus":"Skill Focus",
         "Resources":"Resources",
+        "Restriction":"Restriction",
+        "Size":"Size",
+        "SizeLevels":{
+            "Trivial":"Trivial",
+            "Minor":"Minor",
+            "Major":"Major"
+        },
         "Abilities": "Abilities",
         "Difficulty":"Difficulty",
         "Cost":"Cost",
