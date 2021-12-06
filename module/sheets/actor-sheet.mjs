@@ -280,7 +280,7 @@ export class ACActorSheet extends ActorSheet {
             //const attrValue = this.actor.data.data.attributes[item.data.data.spellType].value;
             const attrValue = -1;
             const prefAttribute = item.data.data.spellType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
 
@@ -317,7 +317,7 @@ export class ACActorSheet extends ActorSheet {
             const attrValue = -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.data.data.weaponType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: "SPELL", diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
 
