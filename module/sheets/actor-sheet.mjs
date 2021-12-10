@@ -123,7 +123,7 @@ export class ACActorSheet extends ActorSheet {
         const armor = [];
         const skillkits = [];
         const equipment = [];
-        const specialAbilities = []
+        const specialRules = []
 
         // Iterate through items, allocating to containers
         for (let i of context.items) {
@@ -150,8 +150,8 @@ export class ACActorSheet extends ActorSheet {
             else if (i.type === 'equipment') {
                 equipment.push(i);
             }
-            else if (i.type === 'special_ability') {
-                specialAbilities.push(i)
+            else if (i.type === 'special_rule') {
+                specialRules.push(i)
             }
         }
 
@@ -168,7 +168,7 @@ export class ACActorSheet extends ActorSheet {
         context.skillkits = skillkits;
         context.equipment = equipment;
         context.weapons = weapons;
-        context.specialAbilities = specialAbilities;
+        context.specialRules = specialRules;
 
 
         // WRAP INVENTORY DEPENDING ON THE CHARACTER TYPE:
@@ -497,13 +497,13 @@ export class ACActorSheet extends ActorSheet {
                     `<div class="item-summary">
                     <div class="item-summary-wrapper">
                     <div><strong>Effects:</strong> ${effects.join(', ')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Qualities:</strong> ${qualities.join(', ')}</div>
-                    <div>${item.data.data.description}</div>
+                    <div>${TextEditor.enrichHTML(item.data.data.description)}</div>
                     </div>
                     </div>`
                 );
             } else {
                 div = $(
-                    `<div class="item-summary"><div class="item-summary-wrapper"><div>${item.data.data.description}</div></div></div>`
+                    `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.data.data.description)}</div></div></div>`
                 );
             }
             li.append(div.hide());

@@ -72,3 +72,11 @@ select {
 	max-width: 3rem;
 	text-align: center;
 }
+
+.clickable{
+	cursor: pointer;
+	&:hover{
+		//font-weight: bold;
+		text-shadow: 0 0 0.313rem #999;
+	}
+}

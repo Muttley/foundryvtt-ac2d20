@@ -98,7 +98,8 @@
 			"weapon",
 			"armor",
 			"skillkit",
-			"equipment"
+			"equipment",
+			"special_rule"
 		],
 		"templates": {
 			"base": {
@@ -157,7 +158,7 @@
 			"effect":{
 				"area": { "label": "Area", "value": false, "description": "" },
 				"backlash": { "label": "Backlash", "value": false, "description": "" },
-				"drain:": { "label": "Drain", "value": false, "description": "" },
+				"drain": { "label": "Drain", "value": false, "description": "" },
 				"intense": { "label": "Intense", "value": false, "description": "" },
 				"persistent": { "label": "Persistent", "value": false, "rank": 1, "description": "" },
 				"piercing": { "label": "Piercing", "value": false, "rank": 1, "description": "" },
@@ -171,8 +172,8 @@
 				"closeQuarters": { "label": "Close Quarters", "value": false, "description": "" },
 				"cumbersome": { "label": "Cumbersome", "value": false, "description": "" },
 				"debilitating": { "label": "Debilitating", "value": false, "description": "" },
-				"escalation": { "label": "Escalation:", "value": false, "description": "" },
-				"giant-killer": { "label": "Giant-Killer:", "value": false, "description": "" },
+				"escalation": { "label": "Escalation", "value": false, "description": "" },
+				"giant-killer": { "label": "Giant-Killer", "value": false, "description": "" },
 				"heavy": { "label": "Heavy", "value": false, "description": "" },
 				"hidden": { "label": "Hidden", "value": false, "description": "" },
 				"inaccurate": { "label": "Inaccurate", "value": false, "description": "" },
@@ -200,6 +201,9 @@
 		},
 		"equipment":{
 			"templates": ["base", "physical", "equipable"]
+		},
+		"special_rule":{
+			"templates": ["base"]
 		}
 	}
 }

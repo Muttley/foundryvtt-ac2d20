@@ -226,6 +226,16 @@ a:hover {
   opacity: 0.45;
 }
 
+.dice-tooltip .dice-rolls .roll.max {
+  color: unset;
+  filter: none;
+}
+
+.dice-tooltip .dice-rolls .roll.min {
+  color: unset;
+  filter: none;
+}
+
 .grid,
 .grid-2col {
   display: grid;
@@ -1004,33 +1014,6 @@ a:hover {
   text-transform: capitalize;
 }
 
-.ac2d20 .npc-skills {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.ac2d20 .npc-skills .npc-skill {
-  border-bottom: 1px solid #548da9;
-  padding: 0.3rem 0;
-}
-
-.ac2d20 .npc-skills .npc-skill .skill-name {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.ac2d20 .npc-skills .npc-skill .skill-name .name-label {
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.ac2d20 .npc-skills .npc-skill .skill-focuses .skill-focus {
-  font-style: italic;
-  cursor: pointer;
-}
-
 .ac2d20 .item-sheet .focus-item {
   display: flex;
   flex-direction: row;
@@ -1061,6 +1044,11 @@ a:hover {
 .ac2d20 .editor-small .tox .tox-edit-area {
   flex: 1;
   padding: 0 8px;
+}
+
+.ac2d20 .cell-expander,
+.ac2d20 .expandable-info {
+  cursor: pointer;
 }
 
 .ac2d20 input[type="text"],
@@ -1148,6 +1136,14 @@ a:hover {
   text-align: center;
 }
 
+.ac2d20 .clickable {
+  cursor: pointer;
+}
+
+.ac2d20 .clickable:hover {
+  text-shadow: 0 0 0.313rem #999;
+}
+
 .ac2d20 .items-header {
   height: 28px;
   margin: 2px 0;
@@ -1170,7 +1166,7 @@ a:hover {
   display: flex;
 }
 
-.ac2d20 .items-list {
+.ac2d20 .items-list-npc {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1178,75 +1174,38 @@ a:hover {
   scrollbar-width: thin;
 }
 
-.ac2d20 .items-list .item-list {
+.ac2d20 .items-list-npc .item-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.ac2d20 .items-list .item-name {
-  flex: 2;
-  margin: 0;
-  overflow: hidden;
-  font-size: 13px;
-  text-align: left;
-  align-items: center;
+.ac2d20 .items-list-npc .item {
+  padding: 0.313rem;
+}
+
+.ac2d20 .items-list-npc .item .main-row {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.ac2d20 .items-list .item-name h3, .ac2d20 .items-list .item-name h4 {
-  margin: 0;
-  white-space: nowrap;
-  overflow-x: hidden;
+.ac2d20 .items-list-npc .item .main-row .item-name {
+  font-weight: 900;
+  font-size: 0.875rem;
 }
 
-.ac2d20 .items-list .item {
-  align-items: center;
-  padding: 0 2px;
-  border-bottom: 1px solid #ebe7d7;
-}
-
-.ac2d20 .items-list .item:last-child {
-  border-bottom: none;
-}
-
-.ac2d20 .items-list .item .item-name {
-  color: #1f1f2b;
-}
-
-.ac2d20 .items-list .item .item-name .item-image {
-  flex: 0 0 30px;
-  height: 30px;
-  background-size: 30px;
-  border: none;
-  margin-right: 5px;
-}
-
-.ac2d20 .items-list .item-prop {
-  text-align: center;
-  border-left: 1px solid #c9c7b8;
-  border-right: 1px solid #c9c7b8;
-  font-size: 12px;
-}
-
-.ac2d20 .items-list .items-header {
-  height: 28px;
-  margin: 2px 0;
-  padding: 0;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.05);
-  border: 2px groove #eeede0;
+.ac2d20 .items-list-npc .item .skill-focuses .skill-focus {
   font-weight: bold;
+  font-size: 0.688rem;
 }
 
-.ac2d20 .items-list .items-header > * {
-  font-size: 12px;
-  text-align: center;
+.ac2d20 .items-list-npc .item:nth-child(odd) {
+  background: #ebe7d7;
 }
 
-.ac2d20 .items-list .items-header .item-name {
-  padding-left: 5px;
-  text-align: left;
+.ac2d20 .items-list-npc .item:nth-child(even) {
+  background: #f4f1e8;
 }
 
 .ac2d20 .item-controls {

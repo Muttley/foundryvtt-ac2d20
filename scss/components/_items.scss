@@ -24,7 +24,7 @@
 /*  Items Lists                              */
 /* ----------------------------------------- */
 
-.items-list {
+.items-list-npc {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -39,68 +39,36 @@
     padding: 0;
   }
 
-  // Item Name
-  .item-name {
-    flex: 2;
-    margin: 0;
-    overflow: hidden;
-    font-size: 13px;
-    text-align: left;
-    align-items: center;
-    display: flex;
-    h3, h4 {
-      margin: 0;
-      white-space: nowrap;
-      overflow-x: hidden;
+  .item{
+    padding: 0.313rem;
+    .main-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+      .item-name {
+        font-weight: 900;
+        font-size: 0.875rem;
+      }
     }
-  }
-
- 
-
-  // Individual Item
-  .item {
-    align-items: center;
-    padding: 0 2px; // to align with the header border
-    border-bottom: 1px solid $c-light;
-    &:last-child { border-bottom: none; }
-    .item-name {
-      color: $c-dark;
-      .item-image {
-        flex: 0 0 30px;
-        height: 30px;
-        background-size: 30px;
-        border: none;
-        margin-right: 5px;
+    .skill-focuses{
+      .skill-focus{
+        //font-style: italic;
+        font-weight: bold;
+        font-size: 0.688rem;
       }
     }
   }
 
-  .item-prop {
-    text-align: center;
-    border-left: 1px solid #c9c7b8;
-    border-right: 1px solid #c9c7b8;
-    font-size: 12px;
+  .item:nth-child(odd) {
+    background: lighten($c-light, 0%)
+  }
+  .item:nth-child(even) {
+    background: lighten($c-light, 5%)
   }
 
-  // Section Header
-  .items-header {
-    height: 28px;
-    margin: 2px 0;
-    padding: 0;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.05);
-    border: $border-groove;
-    font-weight: bold;
-    > * {
-      font-size: 12px;
-      text-align: center;
-    }
-    .item-name {
-      padding-left: 5px;
-      text-align: left;
-      // font-size: 16px;
-    }
-  }
+
+
 }
 
  // Control Buttons

@@ -454,31 +454,6 @@ nav{
   }
 }
 
-.npc-skills{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  .npc-skill{
-    border-bottom: 1px solid $c-blue-light;
-    padding: 0.3rem 0;
-    .skill-name{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      .name-label{
-        font-weight: 900;
-        cursor: pointer;
-      }
-    }
-    .skill-focuses{
-      .skill-focus{
-        font-style: italic;
-        cursor: pointer;
-      }
-    }
-  }
-}
-
 
 .item-sheet{
   .focus-item{
@@ -512,4 +487,9 @@ nav{
       padding: 0 8px;
     }
   }
+}
+
+.cell-expander,
+.expandable-info{
+  cursor: pointer;
 }

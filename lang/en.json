@@ -133,6 +133,7 @@
         "SkillFocus":"Skill Focus",
         "Resources":"Resources",
         "Restriction":"Restriction",
+        "SpecialRule":"SpecialRule",
         "Size":"Size",
         "SizeLevels":{
             "Trivial":"Trivial",
@@ -288,7 +289,7 @@
         "damageEffect": {
             "area": "Area",
             "backlash": "Backlash",
-            "drain:": "Drain",
+            "drain": "Drain",
             "intense": "Intense",
             "persistent": "Persistent",
             "piercing": "Piercing",
@@ -344,7 +345,7 @@
     "ITEM.TypeRobot_armor": "Robot Armor",
     "ITEM.TypeRobot_mod": "Robot Module",
     "ITEM.TypeSkill": "Skill",
-    "ITEM.TypeSpecial_ability": "Special Ability",
+    "ITEM.TypeSpecial_Rule": "Special Rule",
     "ITEM.TypeWeapon": "Weapon",
     "ITEM.TypeWeapon_mod": "Weapon Mod"
 }
