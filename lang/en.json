@@ -18,7 +18,7 @@
     "AC2D20.equipped": "Equipped",
     "AC2D20.STRESS": {
         "current": "Current Stress",
-        "stress": "stress",
+        "stress": "Stress",
         "max": "Max Stress"
     },
     "AC2D20.LEVEL": {
@@ -201,7 +201,7 @@
         "Healthy": "Healthy",
         "HP_Healed": "HP Healed",
         "INITIATIVE": "INITIATIVE",
-        "INJURIES": "INJURIES",
+        "INJURIES": "Injuries",
         "Injury_Left_Click": "Injury (Left Click)",
         "Irradiated": "Irradiated",
         "Issue": "Issue",

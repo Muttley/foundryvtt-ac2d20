@@ -127,6 +127,9 @@
 
 .item-control{
   color: $c-green-olive;
+  &.blue{
+    color: $c-blue-dark;
+  }
   margin-right: 3px;
   &.item-unequipped,
   .item-unstashed,

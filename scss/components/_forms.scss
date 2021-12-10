@@ -61,8 +61,10 @@ nav{
       padding: 0 5px;
       background-color: $c-green-olive;
       display: flex;
-      .item{
-        border: 1px solid $c-green-olive;
+      &.blue{
+        background-color: $c-blue-dark;
+      }
+      .item{        
         margin-top: 5px;      
         position: relative;
         padding: 5px 10px;
@@ -71,6 +73,7 @@ nav{
         font-family: $font-germania;
         color: $c-black;
         background-color: $c-light;
+        border: 1px solid $c-green-olive;
         text-shadow: none;        
         &.active{
           color: $c-light;
@@ -78,6 +81,10 @@ nav{
           text-shadow: none;
           margin-top: 2px;
         }
+        &.active.blue{
+          background-color: $c-blue-light;
+        }
+        &.blue{border: 1px solid $c-blue-dark;}
       }
     }    
     img{
@@ -124,12 +131,18 @@ nav{
     padding: 2px 5px;
     margin-bottom: 0;
     width: fit-content;
+    &.blue{
+      background-color: $c-blue-dark;
+    }
   }  
   .right-slope{
     min-width: 22px;
     background-repeat: no-repeat;
     &.olive{
       background-image: url(../assets/right-slope-olive.webp);
+    }
+    &.blue{
+      background-image: url(../assets/right-slope-blue.webp);
     }
   }
 }
@@ -416,6 +429,52 @@ nav{
       padding: 5px;
       border-top: 1px solid $c-green-light;
       border-bottom: 1px solid $c-green-light;
+    }
+  }
+}
+
+
+.label-number-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+  margin-bottom: 0.3rem;
+  input[type="number"]{
+    height: 1.1rem;
+  }
+  &.blue{
+    background-color: $c-blue-light;
+  }
+  label{
+    font-weight: 900;
+    color: $c-light; 
+    text-transform: capitalize;
+  }
+}
+
+.npc-skills{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .npc-skill{
+    border-bottom: 1px solid $c-blue-light;
+    padding: 0.3rem 0;
+    .skill-name{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .name-label{
+        font-weight: 900;
+        cursor: pointer;
+      }
+    }
+    .skill-focuses{
+      .skill-focus{
+        font-style: italic;
+        cursor: pointer;
+      }
     }
   }
 }

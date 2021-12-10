@@ -370,13 +370,6 @@ export class ACActorSheet extends ActorSheet {
             await this.actor.updateEmbeddedDocuments("Item", [this._toggleStashed(li.data("item-id"), item)]);
         });
 
-        // * Toggle Power on Power Armor Item
-        html.find(".item-powered").click(async (ev) => {
-            const li = $(ev.currentTarget).parents(".item");
-            const item = this.actor.items.get(li.data("item-id"));
-            await this.actor.updateEmbeddedDocuments("Item", [this._togglePowered(li.data("item-id"), item)]);
-        });
-
         // * Toggle Equip Inventory Item
         html.find(".item-toggle").click(async (ev) => {
             const li = $(ev.currentTarget).parents(".item");
@@ -410,69 +403,11 @@ export class ACActorSheet extends ActorSheet {
         // * Active Effect management
         html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
-        // * ROLL WEAPON SKILL
-        html.find(".weapon-roll").click((ev) => {
-            const li = $(ev.currentTarget).parents(".item");
-            const item = this.actor.items.get(li.data("item-id"));
-            let skillName, skill, attribute;
-            let rollName = item.name;
-            if (item.actor?.type == "creature") {
-                skillName = game.i18n.localize(`AC2D20.CREATURE.${item.data.data.skill}`);
-                skill = item.actor.data.data[item.data.data.skill];
-                skill['focus'] = true;
-                attribute = item.actor.data.data[item.data.data.attribute];
-            } else {
-                skillName = CONFIG.AC2D20.WEAPONS.weaponSkill[item.data.data.weaponType];
-                let skillItem = item.actor.items.find(i => i.name == skillName);
-                if (skillItem)
-                    skill = skillItem.data.data
-                else
-                    skill = {
-                        "value": 0,
-                        "focus": false,
-                        "defaultAttribute": "str"
-                    };
-                attribute = item.actor.data.data.attributes[skill.defaultAttribute];
-            }
-            game.ac2d20.Dialog2d20.createDialog({ rollName: rollName, diceNum: 2, attribute: attribute.value, skill: skill.value, focus: skill.focus, complication: 20 });
-        });
 
-        // * POWER ARMOR MONITOR
-        html.find('.power-armor-monitor-helath-value').change((ev) => {
-            const apparelId = $(ev.currentTarget).data('itemId');
-            const newHealthValue = $(ev.currentTarget).val();
-            let apparel = this.actor.items.get(apparelId);
-            if (apparel) {
-                if (apparel.data.data.appareltype == 'powerArmor') {
-                    apparel.update({ "data.health.value": newHealthValue });
-                }
-            }
 
-        });
 
-        // * ROLL WEAPON DAMAGE
-        html.find(".weapon-roll-damage").click((ev) => {
-            const li = $(ev.currentTarget).parents(".item");
-            const item = this.actor.items.get(li.data("item-id"));
-            let numOfDice = parseInt(item.data.data.damage.rating);
-            if (item.data.data.weaponType == 'meleeWeapons' || item.data.data.weaponType == 'unarmed') {
-                let dmgBonus = this.actor.data.data?.meleeDamage?.base ?? 0
-                numOfDice += dmgBonus;
-            }
-            let rollName = item.data.name;
-            game.ac2d20.DialogD6.createDialog({ rollName: rollName, diceNum: numOfDice, weapon: item.data.toObject() });
-        });
 
-        // Drag events for macros.
-        if (this.actor.isOwner) {
-            let handler = ev => this._onDragStart(ev);
-            html.find('li.item').each((i, li) => {
-                if (li.classList.contains("inventory-header")) return;
-                if (li.classList.contains("skill")) return;
-                li.setAttribute("draggable", true);
-                li.addEventListener("dragstart", handler, false);
-            });
-        }
+
 
         // !CRATURES
 
@@ -577,15 +512,6 @@ export class ACActorSheet extends ActorSheet {
         li.toggleClass("expanded");
     }
 
-    _getBodyPartStatus(injuries) {
-        let maxStatus = Math.max(...injuries);
-        let newStatus = 'healthy';
-        if (maxStatus == 1)
-            newStatus = 'wounded';
-        else if (maxStatus == 2)
-            newStatus = 'crippled';
-        return newStatus;
-    }
 
     // Toggle Stashed Item
     _toggleStashed(id, item) {
@@ -604,16 +530,6 @@ export class ACActorSheet extends ActorSheet {
             _id: id,
             data: {
                 equipped: !item.data.data.equipped,
-            },
-        };
-    }
-
-    // Toggle Powered
-    _togglePowered(id, item) {
-        return {
-            _id: id,
-            data: {
-                powered: !item.data.data.powered,
             },
         };
     }

@@ -232,7 +232,7 @@ a:hover {
   grid-column: span 2 / span 2;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin: 10px 0;
+  margin: 0 0 0.3rem 0;
   padding: 0;
 }
 
@@ -566,8 +566,11 @@ a:hover {
   display: flex;
 }
 
+.ac2d20 nav.sheet-tabs .buttons.blue {
+  background-color: #3d485a;
+}
+
 .ac2d20 nav.sheet-tabs .buttons .item {
-  border: 1px solid #494e31;
   margin-top: 5px;
   position: relative;
   padding: 5px 10px;
@@ -576,6 +579,7 @@ a:hover {
   font-family: "Germania One", cursive;
   color: #000;
   background-color: #ebe7d7;
+  border: 1px solid #494e31;
   text-shadow: none;
 }
 
@@ -584,6 +588,14 @@ a:hover {
   background-color: #759549;
   text-shadow: none;
   margin-top: 2px;
+}
+
+.ac2d20 nav.sheet-tabs .buttons .item.active.blue {
+  background-color: #548da9;
+}
+
+.ac2d20 nav.sheet-tabs .buttons .item.blue {
+  border: 1px solid #3d485a;
 }
 
 .ac2d20 nav.sheet-tabs img {
@@ -629,6 +641,10 @@ a:hover {
   width: fit-content;
 }
 
+.ac2d20 .section-title h3.blue {
+  background-color: #3d485a;
+}
+
 .ac2d20 .section-title .right-slope {
   min-width: 22px;
   background-repeat: no-repeat;
@@ -636,6 +652,10 @@ a:hover {
 
 .ac2d20 .section-title .right-slope.olive {
   background-image: url(../assets/right-slope-olive.webp);
+}
+
+.ac2d20 .section-title .right-slope.blue {
+  background-image: url(../assets/right-slope-blue.webp);
 }
 
 .ac2d20 .attribute-grid {
@@ -961,6 +981,56 @@ a:hover {
   border-bottom: 1px solid #759549;
 }
 
+.ac2d20 .label-number-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.ac2d20 .label-number-box input[type="number"] {
+  height: 1.1rem;
+}
+
+.ac2d20 .label-number-box.blue {
+  background-color: #548da9;
+}
+
+.ac2d20 .label-number-box label {
+  font-weight: 900;
+  color: #ebe7d7;
+  text-transform: capitalize;
+}
+
+.ac2d20 .npc-skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ac2d20 .npc-skills .npc-skill {
+  border-bottom: 1px solid #548da9;
+  padding: 0.3rem 0;
+}
+
+.ac2d20 .npc-skills .npc-skill .skill-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ac2d20 .npc-skills .npc-skill .skill-name .name-label {
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.ac2d20 .npc-skills .npc-skill .skill-focuses .skill-focus {
+  font-style: italic;
+  cursor: pointer;
+}
+
 .ac2d20 .item-sheet .focus-item {
   display: flex;
   flex-direction: row;
@@ -1201,6 +1271,10 @@ a:hover {
 .ac2d20 .item-control {
   color: #494e31;
   margin-right: 3px;
+}
+
+.ac2d20 .item-control.blue {
+  color: #3d485a;
 }
 
 .ac2d20 .item-control.item-unequipped,

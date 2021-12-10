@@ -8,7 +8,9 @@
 					"value":0
 				},
 				"injuries":{
-					"count":3, 
+					"count":3,
+					"value":0,
+					"treated":0,
 					"list":[
 						{"text":"", "injuryType":false, "treated":false},
 						{"text":"", "injuryType":false, "treated":false},
@@ -82,7 +84,9 @@
 			"characteristic":""
 		},		
 		"npc": {
-			"templates": ["base", "derived", "stats"]
+			"templates": ["base", "derived", "stats"],
+			"level":1,
+			"truthsText":""
 		},
 		"creature": {}
 	},

@@ -3,6 +3,7 @@ import { ACActor } from "./documents/actor.mjs";
 import { ACItem } from "./documents/item.mjs";
 // Import sheet classes.
 import { ACActorSheet } from "./sheets/actor-sheet.mjs";
+import { ACNPCSheet } from "./sheets/npc-sheet.mjs";
 import { ACItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { AC2D20 } from "./helpers/config.mjs";
@@ -55,7 +56,8 @@ Hooks.once('init', async function () {
 
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("ac2d20", ACActorSheet, { makeDefault: true });
+    Actors.registerSheet("ac2d20", ACActorSheet, { types: ["character"], makeDefault: true });
+    Actors.registerSheet("ac2d20", ACNPCSheet, { types: ["npc"], makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("ac2d20", ACItemSheet, { makeDefault: true });
 
