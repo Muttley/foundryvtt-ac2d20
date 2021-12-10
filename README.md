@@ -12,7 +12,7 @@ Unofficial Achtung Cthulhu 2d20 system for foundry
 - vehicles
 - ++ NPCs
 - NPC HEADER
-- NPC power ?
+- NPC power 
 - NPC Rolls from sheet (attr, skills, weapons, spells...)
 - Macros
 - Item Icons onCreate

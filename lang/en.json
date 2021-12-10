@@ -134,6 +134,7 @@
         "Resources":"Resources",
         "Restriction":"Restriction",
         "SpecialRule":"SpecialRule",
+        "Power":"Power",
         "Size":"Size",
         "SizeLevels":{
             "Trivial":"Trivial",

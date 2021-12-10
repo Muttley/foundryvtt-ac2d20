@@ -213,14 +213,14 @@ export class ACActorSheet extends ActorSheet {
 
         // * SKILLS LISTENERS [clic, right-click, value change, focus ]
         // Click Skill Item
-        html.find('.skill .skill-name, .skill-focus.focused ').click(ev => {
+        html.find('.roll-skill.clickable, .roll-focus.clickable').click(ev => {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let isFocused = $(ev.currentTarget).hasClass('focused');
             this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[item.data.data.defaultAttribute].value, isFocused);
         });
         // Change Skill Rank value
-        html.find('.skill .skill-value .skill-value-input').change(async (ev) => {
+        html.find('.skill-value-input').change(async (ev) => {
             let newRank = parseInt($(ev.currentTarget).val());
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
@@ -285,35 +285,46 @@ export class ACActorSheet extends ActorSheet {
         });
 
         // * WEAPON
-        html.find('.item.weapon .row .roll').click((event) => {
+        html.find('.roll-weapon.clickable').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
+            console.warn(item)
             let complication = 20;
             // if unrelliable increase complication
             for (const [k, v] of Object.entries(item.data.data.qualities)) {
                 if (v.value && k == 'unreliable')
                     complication -= 1;
             }
-            complication -= item.actor.getComplicationFromInjuries();
+            if (item.actor.data.type == 'character')
+                complication -= item.actor.getComplicationFromInjuries();
 
-            const focusName = li.find('.row .focus-name').text();
+            if (item.actor.data.type == 'npc')
+                complication -= item.actor.data.data.injuries.value;
+
+            console.warn(complication);
+
+            const focusName = li.find('.focus-name').text();
+            console.warn(focusName);
             if (!focusName)
                 return;
+
 
             const skill = this.actor.items.getName(item.data.data.skill);
             console.log(skill);
             let skillRank = 0;
             try {
                 skillRank = skill.data.data.value;
-            } catch (err) { }
+            } catch (err) {
+                console.log(err)
+            }
             let isFocus = false;
             try {
                 for (const [key, value] of Object.entries(skill.data.data.focuses)) {
                     if (value.title === focusName && value.isfocus)
                         isFocus = true;
                 }
-            } catch (err) { }
+            } catch (err) { console.log(err) }
             const attrValue = -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.data.data.weaponType;
@@ -321,7 +332,7 @@ export class ACActorSheet extends ActorSheet {
 
         });
 
-        html.find('.item.weapon .row .stress').click((event) => {
+        html.find('.roll-stress.clickable').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
