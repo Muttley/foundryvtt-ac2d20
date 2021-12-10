@@ -21,51 +21,63 @@ AC2D20.abilityAbbreviations = {
 AC2D20.SKILLS = [
   {
     'label': 'ACADEMIA',
+    'key': "Academia",
     'focuses': ['Art', 'Cryptography', 'Finance', 'History', 'Linguistics', 'Occultism', 'Science']
   },
   {
     'label': 'ATHLETICS',
+    'key': "Athletics",
     'focuses': ['Climbing', 'Lifting', 'PhysicalTraining', 'Running', 'Swimming', 'Throwing']
   },
   {
     'label': 'ENGINEERING',
+    'key': "Engineering",
     'focuses': ['Architecture', 'CombatEngineering', 'Electronics', 'Explosives', 'MechanicalEngineering']
   },
   {
     'label': 'FIGHTING',
+    'key': "Fighting",
     'focuses': ['CloseQuarters', 'Handguns', 'Hand-to-Hand', 'HeavyWeapons', 'MeleeWeapons', 'Rifles',
       'ThreatAwareness', 'Exotic']
   },
   {
     'label': 'MEDICINE',
+    'key': "Medicine",
     'focuses': ['FirstAid', 'InfectiousDiseases', 'Pharmacology', 'Psychiatry', 'Surgery', 'Toxicology']
   },
   {
     'label': 'OBSERVATION',
+    'key': "Obseration",
     'focuses': ['Hearing', 'Instincts', 'Sight', 'SmellAndTaste']
   },
   {
     'label': 'PERSUASION',
+    'key': "Persuasion",
     'focuses': ['Charm', 'Innuendo', 'Intimidation', 'Negotiation', 'Rhetoric', 'Deceive', 'Invocation']
   },
   {
     'label': 'RESILIENCE',
+    'key': "Resilience",
     'focuses': ['Fortitude', 'Discipline', 'Immunity']
   },
   {
     'label': 'STEALTH',
+    'key': "Stealth",
     'focuses': ['Camouflage', 'Disguise', 'RuralStealth', 'UrbanStealth']
   },
   {
     'label': 'SURVIVAL',
+    'key': "Survival",
     'focuses': ['AnimalHandling', 'Foraging', 'Hunting', 'Mysticism', 'Orienteering', 'Tracking']
   },
   {
     'label': 'TACTICS',
+    'key': "Tactics",
     'focuses': ['AirForce', 'Army', 'CovertOperations', 'Leadership', 'Navy', 'TechnicalProjects']
   },
   {
     'label': 'VEHICLES',
+    'key': "Vehicles",
     'focuses': ['Cars', 'Motorcycles', 'HeavyVehicles', 'Tanks', 'Aircraft', 'Watercraft']
   }
 ];
@@ -73,16 +85,6 @@ AC2D20.SKILLS = [
 AC2D20.Size = ["Trivial", "Minor", "Major"];
 
 AC2D20.WEAPONS = {
-  "fightingFocuses": {
-    'CloseQuarters': 'CloseQuarters',
-    'Handguns': 'Handguns',
-    'Hand-to-Hand': 'Hand-to-Hand',
-    'HeavyWeapons': 'HeavyWeapons',
-    'MeleeWeapons': 'MeleeWeapons',
-    'Rifles': 'Rifles',
-    'ThreatAwareness': 'ThreatAwareness',
-    'Exotic': 'Exotic'
-  },
   "range": {
     "close": "AC2D20.RANGE.close",
     "medium": "AC2D20.RANGE.medium",

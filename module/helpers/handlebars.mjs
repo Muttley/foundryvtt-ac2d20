@@ -79,9 +79,10 @@ export const registerHandlebarsHelpers = function () {
             return "fas fa-biohazard";
     });
 
-    // Handlebars.registerHelper('getBodypartValue', function (str) {
-    //     return CONFIG.AC2D20.BodyValues[str];
-    // });
+    Handlebars.registerHelper('getSkillFocusList', function (key) {
+        const _skill = CONFIG.AC2D20.SKILLS.filter((s) => s.key === key)
+        return _skill[0].focuses;
+    });
 
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
         if (weapon.data.data.weaponType == "creatureAttack" || weapon.actor?.type == "creature")

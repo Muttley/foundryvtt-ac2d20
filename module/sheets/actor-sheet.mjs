@@ -301,7 +301,7 @@ export class ACActorSheet extends ActorSheet {
             if (!focusName)
                 return;
 
-            const skill = this.actor.items.getName('Fighting');
+            const skill = this.actor.items.getName(item.data.data.skill);
             console.log(skill);
             let skillRank = 0;
             try {

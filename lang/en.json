@@ -43,18 +43,18 @@
         "courage": "courage"
     },
     "AC2D20.SKILL": {
-        "ACADEMIA": "ACADEMIA",
-        "ATHLETICS": "ATHLETICS",
-        "ENGINEERING": "ENGINEERING",
-        "FIGHTING": "FIGHTING",
-        "MEDICINE": "MEDICINE",
-        "OBSERVATION": "OBSERVATION",
-        "PERSUASION": "PERSUASION",
-        "RESILIENCE": "RESILIENCE",
-        "STEALTH": "STEALTH",
-        "SURVIVAL": "SURVIVAL",
-        "TACTICS": "TACTICS",
-        "VEHICLES": "VEHICLES"        
+        "ACADEMIA": "Academia",
+        "ATHLETICS": "Athletics",
+        "ENGINEERING": "Engineering",
+        "FIGHTING": "Fighting",
+        "MEDICINE": "Medicine",
+        "OBSERVATION": "Observation",
+        "PERSUASION": "Persuasion",
+        "RESILIENCE": "Resilience",
+        "STEALTH": "Stealth",
+        "SURVIVAL": "Survival",
+        "TACTICS": "Tactics",
+        "VEHICLES": "Vehicles"        
     },
     "AC2D20.FOCUS": {
         "Art": "Art",

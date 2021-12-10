@@ -35,6 +35,30 @@
       </div>
 
       <div class="flexrow resource-row bgOdd resource">
+        <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Skill"}}</strong></label>
+        <select name="data.skill">
+          {{#select data.skill}}
+          {{#each AC2D20.SKILLS as |skill key|}}
+          <option value="{{skill.key}}">{{localize (concat 'AC2D20.SKILL.' skill.label)}}</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+
+      <div class="flexrow resource-row bgOdd resource">
+        <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
+        <select name="data.focus">
+
+          {{#select data.focus}}
+          {{#each (getSkillFocusList data.skill) as |foc key|}}
+          {{log data.skill}}
+          <option value="{{foc}}">{{localize foc}}</option>
+          {{/each}}
+          {{/select}}
+        </select>
+      </div>
+
+      <!-- <div class="flexrow resource-row bgOdd resource">
         <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
         <select name="data.focus">
           {{#select data.focus}}
@@ -43,7 +67,7 @@
           {{/each}}
           {{/select}}
         </select>
-      </div>
+      </div> -->
 
       <div class="resource-row flexrow bgEven resource">
         <label class="resource-label" for="data.range"><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}</strong></label>
