@@ -52,7 +52,7 @@ Hooks.once('init', async function () {
     // Define custom Document classes
     CONFIG.Actor.documentClass = ACActor;
     CONFIG.Item.documentClass = ACItem;
-    CONFIG.Dice.terms["p"] = DieACChallenge;
+    CONFIG.Dice.terms["s"] = DieACChallenge;
 
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
@@ -153,7 +153,7 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
     );
 
     dice3d.addDicePreset({
-        type: "dp",
+        type: "ds",
         labels: [
             "systems/ac2d20/assets/dice/d1.webp",
             "systems/ac2d20/assets/dice/d2.webp",

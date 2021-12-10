@@ -4,7 +4,7 @@ export default class DieACChallenge extends Die {
         super(termData);
     }
 
-    static DENOMINATION = 'p';
+    static DENOMINATION = 's';
 
     /** @override */
     getResultLabel(result) {
