@@ -75,5 +75,30 @@
             <h3 class="blue">Weapons</h3>
             <span class="right-slope blue"></span>
         </div>
+        <ul class="npc-skills">
+            {{#each weapons as |item key|}}
+            <li class="item npc-skill" data-item-id="{{item._id}}">
+                <span class="skill-name">
+                    <label class="name-label">{{item.name}}</label>
+                    <label class="name-label">{{data.stress}}</label>
+                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                        <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </span>
+                <label class="skill-focuses" for="">
+                    <span class="skill-focus" data-item-id="{{item._id}}">{{data.focus}}</span>
+
+                </label>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+
+<div>
+    <div class="section-title">
+        <h3 class="blue">Special Rules</h3>
+        <span class="right-slope blue"></span>
     </div>
 </div>
