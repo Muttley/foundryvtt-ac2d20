@@ -85,7 +85,7 @@
 		},		
 		"npc": {
 			"templates": ["base", "derived", "stats"],
-			"level":1,
+			"level":"trooper",
 			"truthsText":""
 		},
 		"creature": {}

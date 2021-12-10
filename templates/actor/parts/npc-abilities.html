@@ -88,7 +88,7 @@
             <li class="item" data-item-id="{{item._id}}">
                 <span class="main-row">
                     <label class="item-name clickable roll-weapon">{{item.name}}</label>
-                    <label class="item-name clickable roll-stress">{{data.stress}}</label>
+                    <label class="item-name clickable roll-stress">{{data.stress}}<span class="cth-ico-cth"></span></label>
                     <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
                         <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -97,7 +97,8 @@
                 <div class="skill-focuses" for="">
                     <span class="skill-focus focus-name" data-item-id="{{item._id}}">{{data.focus}}</span>
                 </div>
-                <div class="qualities" for="">
+                <div class="qualities" style="font-size: 0.688rem;">
+                    <span>Range: {{data.range}} &nbsp; | &nbsp;</span>
                     {{#each data.qualities as |qu quid|}}
                     {{#if (eq qu.value true)}}
                     <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;">{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</span>
@@ -137,5 +138,20 @@
             <h3 class="blue">Spells And Rituals</h3>
             <span class="right-slope blue"></span>
         </div>
+        <ul class="items-list-npc">
+            {{#each spells as |item key|}}
+            <li class="item spell" data-item-id="{{item._id}}">
+                <div class="main-row">
+                    <label class="item-name expandable-info clickable">{{item.name}}</label>
+                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                        <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </div>
+                <div class="roll-spell skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} <span class="focus-name">({{item.data.focus}})</span></div>
+                <div class="roll-spell-cost skill-cost clickable">Cost: {{item.data.cost}}<span class="cth-ico-cth"></span></div>
+            </li>
+            {{/each}}
+        </ul>
     </div>
 </div>

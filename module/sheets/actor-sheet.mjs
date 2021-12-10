@@ -253,15 +253,19 @@ export class ACActorSheet extends ActorSheet {
         // * SPELLS GRID
         html.find('.cell-expander').click((event) => { this._onItemSummary(event) });
 
-        html.find('.item.spell .row .roll').click((event) => {
+        html.find('.roll-spell.clickable').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let complication = 20 - parseInt(item.data.data.difficulty - 1)
-            complication -= item.actor.getComplicationFromInjuries();
+            if (item.actor.data.type == 'character')
+                complication -= item.actor.getComplicationFromInjuries();
 
-            const skillName = li.find('.row .skill-name').text();
-            const focusName = li.find('.row .focus-name').text();
+            if (item.actor.data.type == 'npc')
+                complication -= item.actor.data.data.injuries.value;
+
+            const skillName = item.data.data.skill;
+            const focusName = item.data.data.focus;
             if (!skillName)
                 return;
 
@@ -283,6 +287,14 @@ export class ACActorSheet extends ActorSheet {
             game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
 
         });
+
+        html.find('.roll-spell-cost.clickable').click((event) => {
+            event.preventDefault();
+            const li = $(event.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            const cost = parseInt(item.data.data.cost);
+            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: cost, ac2d20Roll: null })
+        })
 
         // * WEAPON
         html.find('.roll-weapon.clickable').click((event) => {

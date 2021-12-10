@@ -13,8 +13,8 @@
     <div class="item">
         <div class="row">
             <div class="cell f3 green">Name</div>
-            <div class="cell f2">Skill</div>
-            <div class="cell f2">Focus</div>
+            <div class="cell f3">Skill (Focus)</div>
+            <!-- <div class="cell f2">Focus</div> -->
             <div class="cell f1">Diff</div>
             <div class="cell f1">Cost</div>
             <div class="cell f1">Dur</div>
@@ -25,10 +25,10 @@
     <div class="item spell" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f3 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
-            <div class="cell f2 roll skill-name">{{item.data.skill}}</div>
-            <div class="cell f2 roll focus-name">{{item.data.focus}}</div>
+            <div class="cell f3 roll-spell skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} ({{item.data.focus}})</div>
+            <!-- <div class="cell f2 roll-spell focus-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.focus}}</div> -->
             <div class="cell f1">{{item.data.difficulty}}</div>
-            <div class="cell f1">{{item.data.cost}}</div>
+            <div class="cell f1 roll-spell-cost clickable">{{item.data.cost}}<span class="cth-ico-cth"></span></div>
             <div class="cell f1">{{item.data.duration}}</div>
             <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>

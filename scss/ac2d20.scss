@@ -1,6 +1,13 @@
 // Add custom fonts by visiting and search https://fonts.google.com
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+.cth-ico-cth:before {
+  content: "\e900";
+}
+.cth-ico-cth-cross:before {
+  content: "\e901";
+}
+
 // Import utilities.
 @import 'utils/typography';
 @import 'utils/colors';
@@ -20,3 +27,5 @@
   @import 'components/items';
   @import 'components/effects';
 }
+
+
