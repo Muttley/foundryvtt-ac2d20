@@ -16,7 +16,14 @@
 			"system": "ac2d20",
 			"path": "./packs/skills.db",
 			"entity": "Item"
-		}],
+		},
+    {
+      "name": "ac-2d20-macros",
+      "label": "AC 2d20 Macros",
+      "system": "ac2d20",
+      "path": "./packs/ac-2d20-macros.db",
+      "entity": "Macro"
+    }],
     "languages": [{
       "lang": "en",
       "name": "English",
