@@ -316,7 +316,7 @@ export class ACActorSheet extends ActorSheet {
 
             console.warn(complication);
 
-            const focusName = li.find('.focus-name').text();
+            const focusName = item.data.data.focus;
             console.warn(focusName);
             if (!focusName)
                 return;
@@ -333,6 +333,7 @@ export class ACActorSheet extends ActorSheet {
             let isFocus = false;
             try {
                 for (const [key, value] of Object.entries(skill.data.data.focuses)) {
+                    console.warn(value.title, focusName)
                     if (value.title === focusName && value.isfocus)
                         isFocus = true;
                 }
