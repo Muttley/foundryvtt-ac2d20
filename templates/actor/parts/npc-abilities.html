@@ -2,7 +2,7 @@
     <div>
         {{#each data.attributes as |attribute key|}}
         <div class="label-number-box blue">
-            <label class="clickable">{{localize (concat 'AC2D20.Ability.' key)}}</label>
+            <label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'AC2D20.Ability.' key)}}</label>
             <input type="number" class="borderless num-short-2" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
         </div>
         {{/each}}

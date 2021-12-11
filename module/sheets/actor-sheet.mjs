@@ -211,6 +211,23 @@ export class ACActorSheet extends ActorSheet {
         // ! Everything below here is only needed if the sheet is editable
         if (!this.isEditable) return;
 
+        // ATTRIBUTE ROLL
+        html.find('.roll-attribute.clickable').click((event) => {
+
+            event.preventDefault();
+            let attr = $(event.currentTarget).data('attr');
+            let attribute = this.actor.data.data.attributes[attr];
+            let complication = 20;
+            if (this.actor.data.type == 'character')
+                complication -= this.actor.getComplicationFromInjuries();
+
+            if (this.actor.data.type == 'npc')
+                complication -= this.actor.data.data.injuries.value;
+
+            const attrName = game.i18n.localize('AC2D20.Ability.' + attr);
+            game.ac2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
+        })
+
         // * SKILLS LISTENERS [clic, right-click, value change, focus ]
         // Click Skill Item
         html.find('.roll-skill.clickable, .roll-focus.clickable').click(ev => {

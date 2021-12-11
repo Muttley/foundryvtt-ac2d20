@@ -2,7 +2,7 @@
   <div class='attribute-cell olive'>Attribute</div>
   {{#each data.attributes as |attribute key|}}
   <div class="attribute-cell green">
-    <label class="resource-label align-left" data-label="{{attribute.label}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
+    <label class="resource-label align-left roll-attribute clickable" data-label="{{attribute.label}}" data-attr="{{key}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
   </div>
   {{/each}}
 
