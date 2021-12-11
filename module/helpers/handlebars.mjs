@@ -105,8 +105,13 @@ export const registerHandlebarsHelpers = function () {
             return false;
     });
 
-    Handlebars.registerHelper('getAttributeBonus', function (actor, attribute) {
-        return actor.data.data.attributes[attribute].bonus
+    Handlebars.registerHelper('getAttributeBonus', function (actor, weaponType) {
+        if (weaponType == 'agi')
+            return actor.data.data.attributes['bra'].bonus;
+        else if (weaponType == 'coo')
+            return actor.data.data.attributes['ins'].bonus;
+        else if (weaponType == 'wil')
+            return actor.data.data.attributes['wil'].bonus;
     });
 
     Handlebars.registerHelper('getArmorQualities', function (armor) {
