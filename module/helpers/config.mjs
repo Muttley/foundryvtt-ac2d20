@@ -93,11 +93,11 @@ AC2D20.WEAPONS = {
   },
   "weaponTypes": [{
     'label': "Melee",
-    'bonusAttribute': 'bra'
+    'bonusAttribute': 'agi'
   },
   {
     'label': "Ranged",
-    'bonusAttribute': 'ins'
+    'bonusAttribute': 'coo'
   },
   {
     'label': "Mental",
