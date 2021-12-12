@@ -384,6 +384,15 @@ export class ACActorSheet extends ActorSheet {
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
 
+        //* Quantity Change
+        html.find('.quantity-count').change(async (ev) => {
+            let newQuantity = parseInt($(ev.currentTarget).val());
+            const li = $(ev.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            let updatedItem = { _id: item.id, data: { quantity: newQuantity } };
+            await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
+        });
+
         html.find('.roll-impact.clickable').click((event) => {
             event.preventDefault();
             const impact = this.actor.data.data.impact;
