@@ -6,7 +6,7 @@ The system supports Dice-So-Nice module.
 The system doesn't provide any pre-populated content.
 
 ## TODO
-- Item Icons onCreate
+- Item and Actor Icons onCreate
 - Equip Item/ Chat item/ stash item
 - Item to Macro
 - Item to Chat
