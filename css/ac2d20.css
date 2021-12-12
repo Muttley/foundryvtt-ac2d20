@@ -1281,7 +1281,7 @@ a:hover {
 
 .ac2d20 .item-controls {
   display: flex;
-  flex: 0 0 50px;
+  flex: 0 0 100px;
   justify-content: flex-end;
   align-items: center;
 }

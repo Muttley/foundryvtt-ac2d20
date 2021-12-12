@@ -4,5 +4,5 @@
 </div>
 <div style="display: flex;flex-direction: row; justify-content: space-between; border: 1px solid #759549; margin-bottom: 5px; padding: 5px;">
     <span>[Major Items: {{majorItemsTotal}}] [Minor Items: {{minorItemsTotal}}] </span>
-    <span> {{#if (gt totalEncumbrance data.carryCapacity.value)}}<span style="color:#6b0b0b;">ENCUMBERED</span>{{/if}} {{totalEncumbrance}} / {{data.carryCapacity.value}} <i class="fas fa-info-circle" title="Add effect | data.carryCapacity.value | Add | #Number | to modify the carry capacity"></i></span>
+    <span>{{#if (eq isEncumbered true)}}<span style="color:#6b0b0b;">ENCUMBERED</span>{{/if}} {{totalEncumbrance}} / {{data.carryCapacity.value}} <i class="fas fa-info-circle" title="Add effect | data.carryCapacity.value | Add | #Number | to modify the carry capacity"></i></span>
 </div>

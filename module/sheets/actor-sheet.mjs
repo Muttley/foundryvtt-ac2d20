@@ -74,15 +74,6 @@ export class ACActorSheet extends ActorSheet {
      * @return {undefined}
      */
     _prepareCharacterData(context) {
-        // Handle ability scores.
-        // for (let [k, v] of Object.entries(context.data.attributes)) {
-        //     v.label = game.i18n.localize(CONFIG.AC2D20.attributes[k]) ?? k;
-        // }
-
-        //let allInjuries = [];
-        //context.treatedInjuriesCount = allInjuries.filter(i => i == 1).length;
-        // context.openInjuriesCount = allInjuries.filter(i => i == 2).length;
-
         let isEncumbered = false;
         let physicalItems = context.items.filter(i => i.data.hasOwnProperty('weight'));
         let encumberingItems = physicalItems.filter((i) => {
@@ -101,8 +92,12 @@ export class ACActorSheet extends ActorSheet {
         for (let i = 0; i < encumberingItems.length; i++) {
             totalEncumbrance += parseInt(encumberingItems[i].data.quantity) * parseInt(encumberingItems[i].data.weight)
         }
+
+        if (totalEncumbrance > this.actor.data.data.carryCapacity.value)
+            isEncumbered = true;
+
         context.totalEncumbrance = totalEncumbrance;
-        // REMOVE ARMORS THAT ARE EQUIPPED AND DOESN'T HAVE HEAVY QUALITY FROM CALCULATION
+        context.isEncumbered = isEncumbered;
     }
 
     /**
