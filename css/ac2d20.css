@@ -684,6 +684,8 @@ a:hover {
 }
 
 .ac2d20 .section-title h3 {
+  display: flex;
+  align-items: center;
   font-family: Germania One;
   color: #ebe7d7;
   background-color: #494e31;

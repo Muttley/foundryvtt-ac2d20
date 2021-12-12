@@ -1,5 +1,5 @@
 <div class="section-title">
-    <h3>Armor</h3>
+    <h3>Armor<span class="item-create clickable" data-type="armor" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
     <span class="right-slope olive"></span>
 </div>
 
@@ -7,9 +7,9 @@
     <div class="item">
         <div class="row">
             <div class="cell f2 green align-left"><strong>Name</strong></div>
-            <div class="cell f1"><strong>Resistance</strong></div>
-            <div class="cell f3"><strong>Qualities</strong></div>
-            <div class="cell f1"><strong>Restriction</strong></div>
+            <div class="cell f1 align-center"><strong>Resistance</strong></div>
+            <div class="cell f3 align-center"><strong>Qualities</strong></div>
+            <div class="cell f1 align-center"><strong>Restriction</strong></div>
             <div class="cell f1"></div>
         </div>
     </div>
@@ -17,13 +17,13 @@
     <div class="item armor" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f2 green align-left cell-expander" style="cursor: pointer;">{{item.name}}</div>
-            <div class="cell f1">{{item.data.resistance}}</div>
-            <div class="cell f3">
+            <div class="cell f1 align-center">{{item.data.resistance}}</div>
+            <div class="cell f3 align-center">
                 {{#each (getArmorQualities item)}}
                 {{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
                 {{/each}}
             </div>
-            <div class="cell f1">{{item.data.restriction}}</div>
+            <div class="cell f1 align-center">{{item.data.restriction}}</div>
             <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
                 <span style="display: flex;">
                     <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
