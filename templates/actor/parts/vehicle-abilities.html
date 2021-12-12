@@ -89,7 +89,8 @@
                 <label>
                     <input type="checkbox" name="data.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.VEHICLES.QUALITIES.' key)}}
                 </label>
-                {{#if (or (eq key 'cargo') (eq key 'tough'))}}
+
+                {{#if (ne item.rank undefined)}}
                 <input type="number" style="height: 1.1rem;" name="data.qualities.{{key}}.rank" class="num-short-2" value="{{item.rank}}">
                 {{/if}}
             </div>
