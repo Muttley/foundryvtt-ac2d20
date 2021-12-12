@@ -23,8 +23,25 @@
 /* ----------------------------------------- */
 /*  Items Lists                              */
 /* ----------------------------------------- */
+// Child lists
+.item-list {
+  .item{
+    margin: 0;
+    .effect-name{
+      .item-image{
+        max-width: 25px;
+        max-height:25px;
+      }
+    }
+  }
+  .item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
 
-.items-list-npc {
+.items-list-npc{
   list-style: none;
   margin: 0;
   padding: 0;

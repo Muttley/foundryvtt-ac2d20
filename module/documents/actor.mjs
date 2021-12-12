@@ -106,16 +106,11 @@ export class ACActor extends Actor {
     _getCharacterRollData(data) {
         if (this.data.type !== 'character') return;
         // Copy the ability scores to the top level, so that rolls can use
-        // formulas like `@str.mod + 4`.
+        // formulas like `@bra.value + 4`.
         if (data.attributes) {
             for (let [k, v] of Object.entries(data.attributes)) {
                 data[k] = foundry.utils.deepClone(v);
             }
-        }
-
-        // Add level for easier access, or fall back to 0.
-        if (data.level) {
-            data.lvl = data.level.value ?? 0;
         }
     }
 
