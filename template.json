@@ -1,6 +1,6 @@
 {
 	"Actor": {
-		"types": ["character", "npc"],
+		"types": ["character", "npc", "vehicle"],
 		"templates": {
 			"base": {				
 				"fortune":{
@@ -88,7 +88,24 @@
 			"level":"trooper",
 			"truthsText":""
 		},
-		"creature": {}
+		"vehicle": {
+			"templates": ["base", "derived", "stats"],
+			"truthsText":"",
+			"speed":{"value":0, "max":0},
+			"scale":0,
+			"cover":{"value": "0", "max":0},
+			"impact":0,
+			"passengers":{"value":"1", "pilots":[], "gunners":[]},
+			"qualities":{
+				"cargo":{"value": false, "rank": 1, "description": "" },
+				"cumbersome":{"value": false, "description": "" },
+				"enclosed":{"value": false, "description": "" },
+				"exposed":{"value": false, "description": "" },
+				"highPerformance":{"value": false, "description": "" },
+				"singleSeat:":{"value": false, "description": "" },
+				"tough":{"value": false, "rank": 1, "description": "" }
+			}
+		}
 	},
 	"Item": {
 		"types": [

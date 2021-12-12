@@ -95,13 +95,15 @@
                     </div>
                 </span>
                 <div class="skill-focuses" for="">
-                    <span class="skill-focus focus-name" data-item-id="{{item._id}}">{{data.focus}}</span>
+                    <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{data.focus}}</strong>,</span>
+                    <span>Range: <strong>{{data.range}}</strong>,&nbsp;</span>
+                    <span>Salvo: <strong>{{data.salvo}}</strong>&nbsp;</span>
                 </div>
                 <div class="qualities" style="font-size: 0.688rem;">
-                    <span>Range: {{data.range}} &nbsp; | &nbsp;</span>
+                    <span>Qualities:</span>
                     {{#each data.qualities as |qu quid|}}
                     {{#if (eq qu.value true)}}
-                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;">{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</span>
+                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
                     {{/if}}
                     {{/each}}
                 </div>

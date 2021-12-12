@@ -1038,6 +1038,7 @@ a:hover {
   align-items: center;
   padding: 0.3rem;
   margin-bottom: 0.3rem;
+  background-color: #759549;
 }
 
 .ac2d20 .label-number-box input[type="number"] {
@@ -1235,8 +1236,7 @@ a:hover {
   font-size: 0.875rem;
 }
 
-.ac2d20 .items-list-npc .item .skill-focuses .skill-focus {
-  font-weight: bold;
+.ac2d20 .items-list-npc .item .skill-focuses * {
   font-size: 0.688rem;
 }
 

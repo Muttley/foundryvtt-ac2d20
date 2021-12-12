@@ -3,22 +3,22 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs" data-group="primary">
         {{!-- Default tab is specified in actor-sheet.mjs --}}
-        <img src="systems/ac2d20/assets/main-menu-slope-b.webp">
-        <div class="buttons blue">
-            <a class="item blue" data-tab="abilities">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
-            <a class="item blue" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
-            <a class="item blue" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
+        <img src="systems/ac2d20/assets/main-menu-slope.webp">
+        <div class="buttons">
+            <a class="item" data-tab="abilities">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
+            <a class="item" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
+            <a class="item" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
         </div>
     </nav>
 
     {{!-- Sheet Header --}}
-    {{> "systems/ac2d20/templates/actor/parts/npc-header.html"}}
+    {{> "systems/ac2d20/templates/actor/parts/vehicle-header.html"}}
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
-        {{!-- Abilities Tab !!! DONT INDENT OR TEXT AREAS INSIDE WILL BREAK !!! --}}
-        <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/npc-abilities.html"}}</div>
+        {{!-- Abilities Tab --}}
+        <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/vehicle-abilities.html"}}</div>
 
         {{!-- Biography Tab --}}
         <div class="tab data" data-group="primary" data-tab="data">

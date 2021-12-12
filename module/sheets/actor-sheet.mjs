@@ -48,11 +48,10 @@ export class ACActorSheet extends ActorSheet {
         // Prepare NPC data and items.
         if (actorData.type == 'npc') {
             this._prepareItems(context)
-
         }
 
         // Prepare Creature data and items.
-        if (actorData.type == 'creature') {
+        if (actorData.type == 'vehicle') {
             this._prepareItems(context)
 
         }
@@ -213,7 +212,6 @@ export class ACActorSheet extends ActorSheet {
 
         // ATTRIBUTE ROLL
         html.find('.roll-attribute.clickable').click((event) => {
-
             event.preventDefault();
             let attr = $(event.currentTarget).data('attr');
             let attribute = this.actor.data.data.attributes[attr];
@@ -221,7 +219,7 @@ export class ACActorSheet extends ActorSheet {
             if (this.actor.data.type == 'character')
                 complication -= this.actor.getComplicationFromInjuries();
 
-            if (this.actor.data.type == 'npc')
+            if (this.actor.data.type == 'npc' || this.actor.data.type == 'vehicle')
                 complication -= this.actor.data.data.injuries.value;
 
             const attrName = game.i18n.localize('AC2D20.Ability.' + attr);
@@ -318,7 +316,6 @@ export class ACActorSheet extends ActorSheet {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            console.warn(item)
             let complication = 20;
             // if unrelliable increase complication
             for (const [k, v] of Object.entries(item.data.data.qualities)) {
@@ -328,19 +325,14 @@ export class ACActorSheet extends ActorSheet {
             if (item.actor.data.type == 'character')
                 complication -= item.actor.getComplicationFromInjuries();
 
-            if (item.actor.data.type == 'npc')
+            if (item.actor.data.type == 'npc' || item.actor.data.type == 'vehicle')
                 complication -= item.actor.data.data.injuries.value;
 
-            console.warn(complication);
-
             const focusName = item.data.data.focus;
-            console.warn(focusName);
-            if (!focusName)
-                return;
-
+            //if (!focusName)
+            //return;
 
             const skill = this.actor.items.getName(item.data.data.skill);
-            console.log(skill);
             let skillRank = 0;
             try {
                 skillRank = skill.data.data.value;
@@ -350,12 +342,12 @@ export class ACActorSheet extends ActorSheet {
             let isFocus = false;
             try {
                 for (const [key, value] of Object.entries(skill.data.data.focuses)) {
-                    console.warn(value.title, focusName)
                     if (value.title === focusName && value.isfocus)
                         isFocus = true;
                 }
             } catch (err) { console.log(err) }
-            const attrValue = -1;
+
+            const attrValue = item.actor.type == 'vehicle' ? 6 : -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.data.data.weaponType;
             game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
@@ -396,6 +388,12 @@ export class ACActorSheet extends ActorSheet {
             let updatedItem = { _id: item.id, data: { resources: newQuantity } };
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
+
+        html.find('.roll-impact.clickable').click((event) => {
+            event.preventDefault();
+            const impact = this.actor.data.data.impact;
+            game.ac2d20.DialogD6.createDialog({ rollName: `${this.actor.data.name} Impact`, diceNum: impact, ac2d20Roll: null })
+        })
 
         // * CLICK TO EXPAND
         html.find(".expandable-info").click((event) => this._onItemSummary(event));

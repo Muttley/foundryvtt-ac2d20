@@ -1,0 +1,132 @@
+<div class="grid grid-3col">
+    <div>
+        <div class="label-number-box">
+            <label>{{localize 'AC2D20.TEMPLATES.scale'}}</label>
+            <span>
+                <input type="number" class="borderless num-short-2" name="data.scale" value="{{data.scale}}" data-dtype="Number" min="0" />
+            </span>
+        </div>
+        <div class="label-number-box">
+            <label>{{localize 'AC2D20.STRESS.stress'}}</label>
+            <span>
+                <input type="number" class="borderless num-short-2" name="data.stress.value" value="{{data.stress.value}}" data-dtype="Number" min="0" />
+                <label>/</label>
+                <input type="number" class="borderless num-short-2" name="data.stress.max" value="{{data.stress.max}}" data-dtype="Number" min="0" />
+            </span>
+        </div>
+        <div class="label-number-box">
+            <label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
+            <input type="number" class="borderless num-short-2" name="data.armorResistance.value" value="{{data.armorResistance.value}}" data-dtype="Number" min="0" />
+        </div>
+    </div>
+    <div>
+        <div class="label-number-box">
+            <span>
+                <label class="roll-attribute clickable" data-attr='bra'>{{localize 'AC2D20.Ability.bra'}}</label>
+                <input type="number" class="borderless num-short-2" name="data.attributes.bra.value" value="{{data.attributes.bra.value}}" data-dtype="Number" min="0" />
+            </span>
+            <span>
+                <label>{{localize 'AC2D20.TEMPLATES.bonus'}}</label>
+                <input type="number" class="borderless num-short-2" name="data.attributes.bra.bonus" value="{{data.attributes.bra.bonus}}" data-dtype="Number" min="0" />
+            </span>
+        </div>
+        <div class="label-number-box">
+            <label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
+            <span>
+                <input type="number" class="borderless num-short-2" name="data.injuries.value" value="{{data.injuries.value}}" data-dtype="Number" min="0" />
+                <label>/</label>
+                <input type="number" class="borderless num-short-2" name="data.injuries.count" value="{{data.injuries.count}}" data-dtype="Number" min="0" />
+            </span>
+        </div>
+        <div class="label-number-box">
+            <label>{{localize 'AC2D20.TEMPLATES.speed'}}</label>
+            <input type="number" class="borderless num-short-2" name="data.speed" value="{{data.speed}}" data-dtype="Number" min="0" />
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <div class="section-title">
+            <h3>Truths</h3>
+            <span class="right-slope olive"></span>
+        </div>
+        <div style="border:1px solid; min-height: 70px;" class="flexcol">
+            <textarea name="data.truthsText" style="resize: none;">{{data.truthsText}}</textarea>
+        </div>
+    </div>
+</div>
+
+
+<div class="grid grid-3col">
+    <div>
+        <span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
+            <label for="">Passengers:</label>
+            <input type="text" name="data.passengers.value" value='{{data.passengers.value}}' class="underline" style="text-align: center;">
+        </span>
+    </div>
+    <div>
+        <span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
+            <label for="">Cover:</label>
+            <input type="text" name="data.cover.value" value='{{data.cover.value}}' class="underline" style="text-align: center;">
+        </span>
+    </div>
+    <div>
+        <span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
+            <label for="" class="roll-impact clickable"><strong>Impact: <span class="cth-ico-cth"></span></strong></label>
+            <input type="number" name="data.impact" value='{{data.impact}}' class="underline" style="text-align: center;" data-dtype="number">
+        </span>
+    </div>
+</div>
+
+
+<div class="grid" style="gap: 1.25rem; margin-bottom: 1.25rem;">
+    <div>
+        <div class="section-title">
+            <h3 class="">Qualities</h3>
+            <span class="right-slope olive"></span>
+        </div>
+        <div class="items-list" style="border: 1px solid #759549;">
+            {{#each data.qualities as |item key|}}
+            <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
+                <label>
+                    <input type="checkbox" name="data.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.VEHICLES.QUALITIES.' key)}}
+                </label>
+                {{#if (or (eq key 'cargo') (eq key 'tough'))}}
+                <input type="number" style="height: 1.1rem;" name="data.qualities.{{key}}.rank" class="num-short-2" value="{{item.rank}}">
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div>
+        <div class="section-title">
+            <h3>Weapons</h3>
+            <span class="right-slope olive"></span>
+        </div>
+        <ul class="items-list-npc">
+            {{#each weapons as |item key|}}
+            <li class="item" data-item-id="{{item._id}}">
+                <span class="main-row">
+                    <label class="item-name clickable roll-weapon">{{item.name}}</label>
+                    <label class="item-name clickable roll-stress">{{data.stress}}<span class="cth-ico-cth"></span></label>
+                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                        <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </span>
+                <div class="skill-focuses">
+                    <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{data.focus}}</strong>,</span>
+                    <span>Range: <strong>{{data.range}}</strong>,&nbsp;</span>
+                    <span>Salvo: <strong>{{data.salvo}}</strong>&nbsp;</span>
+                </div>
+                <div class="qualities" style="font-size: 0.688rem;">
+                    <span>Qualities:</span>
+                    {{#each data.qualities as |qu quid|}}
+                    {{#if (eq qu.value true)}}
+                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

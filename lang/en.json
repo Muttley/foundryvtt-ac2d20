@@ -136,6 +136,9 @@
         "SpecialRule":"SpecialRule",
         "Power":"Power",
         "Size":"Size",
+        "speed":"Speed",
+        "bonus":"Bonus",
+        "scale":"Scale",
         "SizeLevels":{
             "Trivial":"Trivial",
             "Minor":"Minor",
@@ -333,6 +336,15 @@
             "uncomfortable":"Uncomfortable",
             "shield":"Shield"
         }
+    },
+    "AC2D20.VEHICLES.QUALITIES":{
+        "cargo":"Cargo",
+        "cumbersome":"Cumbersome",
+        "enclosed":"Enclosed",
+        "exposed":"Exposed",
+        "highPerformance":"High Performance",
+        "singleSeat:":"Single Seat",
+        "tough":"Tough"
     },
     "ACTOR.TypeCharacter": "Character",
     "ACTOR.TypeNpc": "NPC",
