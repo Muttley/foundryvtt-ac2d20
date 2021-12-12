@@ -529,29 +529,9 @@ export class ACActorSheet extends ActorSheet {
                 summary.remove();
             });
         } else {
-            let div;
-            if (item.data.type == 'weapon') {
-                let effects = [];
-                for (let [k, v] of Object.entries(item.data.data.effect)) {
-                    if (v.value) effects.push(v.label)
-                }
-                let qualities = [];
-                for (let [k, v] of Object.entries(item.data.data.qualities)) {
-                    if (v.value) qualities.push(v.label)
-                }
-                div = $(
-                    `<div class="item-summary">
-                    <div class="item-summary-wrapper">
-                    <div><strong>Effects:</strong> ${effects.join(', ')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Qualities:</strong> ${qualities.join(', ')}</div>
-                    <div>${TextEditor.enrichHTML(item.data.data.description)}</div>
-                    </div>
-                    </div>`
-                );
-            } else {
-                div = $(
-                    `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.data.data.description)}</div></div></div>`
-                );
-            }
+            let div = $(
+                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.data.data.description)}</div></div></div>`
+            );
             li.append(div.hide());
             div.slideDown(200);
         }

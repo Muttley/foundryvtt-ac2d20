@@ -84,6 +84,32 @@ export const registerHandlebarsHelpers = function () {
         return _skill[0].focuses;
     });
 
+    Handlebars.registerHelper('getWeaponEffects', function (weapon) {
+        let effects = [];
+        Object.entries(weapon.effect).forEach(([k, v]) => {
+            let effString = '';
+            if (v.value) {
+                effString += v.label;
+                if (v.rank) {
+                    effString += ` ${v.rank}`;
+                }
+                effects.push(effString)
+            }
+        })
+        return effects.join(', ')
+    });
+    Handlebars.registerHelper('getWeaponQualities', function (weapon) {
+        let qualities = [];
+        Object.entries(weapon.qualities).forEach(([k, v]) => {
+            let quString = '';
+            if (v.value) {
+                quString += v.label;
+                qualities.push(quString)
+            }
+        })
+        return qualities.join(', ')
+    });
+
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
         if (weapon.data.data.weaponType == "creatureAttack" || weapon.actor?.type == "creature")
             return true;
