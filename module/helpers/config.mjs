@@ -86,6 +86,7 @@ AC2D20.Size = ["Trivial", "Minor", "Major"];
 
 AC2D20.WEAPONS = {
   "range": {
+    "reach": "AC2D20.RANGE.reach",
     "close": "AC2D20.RANGE.close",
     "medium": "AC2D20.RANGE.medium",
     "long": "AC2D20.RANGE.long",

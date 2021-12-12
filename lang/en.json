@@ -33,6 +33,7 @@
     "AC2D20.OTHER": "Other",
     "AC2D20.powered": "Powered",
     "AC2D20.RANGE": {
+        "reach":"Reach",
         "close":"Close",
         "medium":"Medium",
         "long":"Long",

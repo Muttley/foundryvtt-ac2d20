@@ -21,7 +21,7 @@
         <div class="row">
             <div class="cell f4 green cell-expander align-left" style="cursor: pointer;">{{item.name}}</div>
             <div class="cell f3 roll-weapon clickable focus-name"><i class="fas fa-dice-d20"></i>&nbsp;{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
-            <div class="cell f2">{{item.data.range}}</div>
+            <div class="cell f2">{{localize (concat 'AC2D20.RANGE.' item.data.range)}}</div>
             <div class="cell f2 stress clickable roll-stress">{{item.data.stress}} <span class="cth-ico-cth"></span> + {{getAttributeBonus ../actor item.data.weaponType}} <span class="cth-ico-cth"></span></div>
             <div class="cell f2">{{item.data.salvo}}</div>
             <div class="cell f2">{{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel item.data.weight))}}</div>
