@@ -24,7 +24,7 @@
     {{#each spells as |item key|}}
     <div class="item spell" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f3 green cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f3 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} ({{item.data.focus}})</div>
             <!-- <div class="cell f2 roll-spell focus-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.focus}}</div> -->
             <div class="cell f1 align-center">{{item.data.difficulty}}</div>

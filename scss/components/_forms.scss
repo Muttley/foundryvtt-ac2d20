@@ -322,48 +322,7 @@ nav{
   }
 }
 
-.talents-grid{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid $c-green-light;
-  .talent{
-    display: flex;
-    flex-direction: row;
-    flex: 0;
-    border-bottom: 1px solid $c-green-light;
-    align-items: stretch;  
-    .talent-name{
-      display: flex;
-      flex: 2;
-      //align-items: center;
-      padding: 5px;
-      color: $c-light;
-      background-color: $c-green-light;      
-      font-weight: 900;
-      cursor: pointer;
-    }
-    .talent-keywords{
-      display: flex;
-      flex: 2;
-      //align-items: center;
-      padding: 5px;
-      border-left: 1px solid $c-green-light;
-      border-right: 1px solid $c-green-light;     
-    }
-    .talent-desc{
-      display: flex;
-     // align-items: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      flex: 5;
-      padding: 0 5px;   
-      font-size: 0.8rem;
-    }
-  }
-  .talent:last-child{
-    border-bottom: none;
-  }
-}
+
 
 
 .ac-grid{
@@ -396,6 +355,16 @@ nav{
         &.align-left{
           justify-content: start;
           text-align: left;
+        }
+        &.cell-name{
+          img{
+            max-width: 1.563rem;
+            max-height: 1.563rem;
+            margin-right: 0.313rem;
+          }
+        }
+        &.column{
+          flex-direction: column;
         }
         &:last-child{
           border-right: none;

@@ -6,7 +6,7 @@
 <div class="ac-grid">
     <div class="item">
         <div class="row">
-            <div class="cell f2 green align-left align-center"><strong>Name</strong></div>
+            <div class="cell f2 green align-left align-center" style="background-color: #494e31;"><strong>Name</strong></div>
             <div class="cell f2 align-center"><strong>Skill (Focus)</strong></div>
             <div class="cell f2 align-center"><strong>Resources</strong></div>
             <div class="cell f1 align-center"></div>
@@ -15,7 +15,7 @@
     {{#each skillkits as |item key|}}
     <div class="item skillkit" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f2 green align-left align-center cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f2 align-center">{{item.data.skill}}</div>
             <div class="cell f2 align-center">
                 <input type="number" class="resources-quantity num-short-3" style="height: 1.1rem;" name="data.resources" value="{{item.data.resources}}">

@@ -17,7 +17,7 @@
     {{#each weapons as |item key|}}
     <div class="item weapon" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f4 green cell-expander align-left align-center" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f4 green cell-expander align-left align-center cell-name"><img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f3 roll-weapon clickable focus-name align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
             <div class="cell f2 align-center">{{localize (concat 'AC2D20.RANGE.' item.data.range)}}</div>
             <div class="cell f2 stress clickable roll-stress align-center">{{item.data.stress}} <span class="cth-ico-cth"></span> + {{getAttributeBonus ../actor item.data.weaponType}} <span class="cth-ico-cth"></span></div>

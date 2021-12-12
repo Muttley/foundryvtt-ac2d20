@@ -6,7 +6,7 @@
 <div class="ac-grid" style="margin-bottom: 10px;">
     <div class="item">
         <div class="row">
-            <div class="cell f2 green align-left"><strong>Name</strong></div>
+            <div class="cell f2 green align-left" style="background-color: #494e31;"><strong>Name</strong></div>
             <div class="cell f1 align-center"><strong>Resistance</strong></div>
             <div class="cell f3 align-center"><strong>Qualities</strong></div>
             <div class="cell f1 align-center"><strong>Restriction</strong></div>
@@ -16,7 +16,7 @@
     {{#each armor as |item key|}}
     <div class="item armor" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f2 green align-left cell-expander" style="cursor: pointer;">{{item.name}}</div>
+            <div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f1 align-center">{{item.data.resistance}}</div>
             <div class="cell f3 align-center">
                 {{#each (getArmorQualities item)}}
