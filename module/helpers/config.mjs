@@ -27,28 +27,28 @@ AC2D20.SKILLS = [
   {
     'label': 'ATHLETICS',
     'key': "Athletics",
-    'focuses': ['Climbing', 'Lifting', 'PhysicalTraining', 'Running', 'Swimming', 'Throwing']
+    'focuses': ['Climbing', 'Lifting', 'Physical Training', 'Running', 'Swimming', 'Throwing']
   },
   {
     'label': 'ENGINEERING',
     'key': "Engineering",
-    'focuses': ['Architecture', 'CombatEngineering', 'Electronics', 'Explosives', 'MechanicalEngineering']
+    'focuses': ['Architecture', 'Combat Engineering', 'Electronics', 'Explosives', 'Mechanical Engineering']
   },
   {
     'label': 'FIGHTING',
     'key': "Fighting",
-    'focuses': ['CloseQuarters', 'Handguns', 'Hand-to-Hand', 'HeavyWeapons', 'MeleeWeapons', 'Rifles',
-      'ThreatAwareness', 'Exotic']
+    'focuses': ['Close Quarters', 'Handguns', 'Hand-to-Hand', 'Heavy Weapons', 'Melee Weapons', 'Rifles',
+      'Threat Awareness', 'Exotic']
   },
   {
     'label': 'MEDICINE',
     'key': "Medicine",
-    'focuses': ['FirstAid', 'InfectiousDiseases', 'Pharmacology', 'Psychiatry', 'Surgery', 'Toxicology']
+    'focuses': ['First Aid', 'Infectious Diseases', 'Pharmacology', 'Psychiatry', 'Surgery', 'Toxicology']
   },
   {
     'label': 'OBSERVATION',
-    'key': "Obseration",
-    'focuses': ['Hearing', 'Instincts', 'Sight', 'SmellAndTaste']
+    'key': "Observation",
+    'focuses': ['Hearing', 'Instincts', 'Sight', 'Smell and Taste']
   },
   {
     'label': 'PERSUASION',
@@ -63,22 +63,22 @@ AC2D20.SKILLS = [
   {
     'label': 'STEALTH',
     'key': "Stealth",
-    'focuses': ['Camouflage', 'Disguise', 'RuralStealth', 'UrbanStealth']
+    'focuses': ['Camouflage', 'Disguise', 'Rural Stealth', 'Urban Stealth']
   },
   {
     'label': 'SURVIVAL',
     'key': "Survival",
-    'focuses': ['AnimalHandling', 'Foraging', 'Hunting', 'Mysticism', 'Orienteering', 'Tracking']
+    'focuses': ['Animal Handling', 'Foraging', 'Hunting', 'Mysticism', 'Orienteering', 'Tracking']
   },
   {
     'label': 'TACTICS',
     'key': "Tactics",
-    'focuses': ['AirForce', 'Army', 'CovertOperations', 'Leadership', 'Navy', 'TechnicalProjects']
+    'focuses': ['Air Force', 'Army', 'Covert Operations', 'Leadership', 'Navy', 'Technical Projects']
   },
   {
     'label': 'VEHICLES',
     'key': "Vehicles",
-    'focuses': ['Cars', 'Motorcycles', 'HeavyVehicles', 'Tanks', 'Aircraft', 'Watercraft']
+    'focuses': ['Cars', 'Motorcycles', 'Heavy Vehicles', 'Tanks', 'Aircraft', 'Watercraft']
   }
 ];
 
