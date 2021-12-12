@@ -253,7 +253,7 @@
             "snare":  "Snare",
             "stun": "Stun",
             "vicious":"Vicious"
-        },
+        },        
         "damageType": {
             "energy": "Energy",
             "physical": "Physical",

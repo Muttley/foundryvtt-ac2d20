@@ -16,6 +16,7 @@ Unofficial Achtung Cthulhu 2d20 system for foundry
 - ++ 2d20 and d6 Macros
 - Item Icons onCreate
 - ++ Add Salvo Info to NPC/Vehicle weapons
+- Equip Item/ Chat item/ stash item
 - Clean lang file
 - Item to macro
 - Item to chat

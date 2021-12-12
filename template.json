@@ -174,7 +174,7 @@
 			"skill":"Fighting",
 			"effect":{
 				"area": { "label": "Area", "value": false, "description": "" },
-				"backlash": { "label": "Backlash", "value": false, "description": "" },
+				"backlash": { "label": "Backlash", "value": false, "rank": 1, "description": "" },
 				"drain": { "label": "Drain", "value": false, "description": "" },
 				"intense": { "label": "Intense", "value": false, "description": "" },
 				"persistent": { "label": "Persistent", "value": false, "rank": 1, "description": "" },

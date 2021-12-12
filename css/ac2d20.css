@@ -475,6 +475,7 @@ a:hover {
 .align-center {
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .ac2d20.momentum-tracker {
@@ -937,7 +938,7 @@ a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   flex: 5;
-  padding: 5px;
+  padding: 0 5px;
   font-size: 0.8rem;
 }
 
@@ -974,8 +975,6 @@ a:hover {
   display: flex;
   padding: 5px;
   border-right: 1px solid #759549;
-  text-align: center;
-  justify-content: center;
 }
 
 .ac2d20 .ac-grid .item .row .cell.align-center {
@@ -1282,7 +1281,7 @@ a:hover {
 
 .ac2d20 .item-controls {
   display: flex;
-  flex: 0 0 100px;
+  flex: 0 0 50px;
   justify-content: flex-end;
   align-items: center;
 }

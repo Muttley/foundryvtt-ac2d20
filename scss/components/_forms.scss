@@ -353,7 +353,7 @@ nav{
       flex-direction: row;
       flex-wrap: wrap;
       flex: 5;
-      padding: 5px;   
+      padding: 0 5px;   
       font-size: 0.8rem;
     }
   }
@@ -385,8 +385,8 @@ nav{
         display: flex;
         padding: 5px;
         border-right: 1px solid $c-green-light;   
-        text-align: center;  
-        justify-content: center;
+        //text-align: center;  
+        //justify-content: center;
         &.align-center{
           align-items: center;
         }

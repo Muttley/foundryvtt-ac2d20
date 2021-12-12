@@ -121,7 +121,7 @@
               <label>
                 <input type="checkbox" name="data.effect.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.damageEffect.' key)}}
               </label>
-              {{#if (or (eq key 'piercing') (eq key 'persistent'))}}
+              {{#if (ne item.rank undefined)}}
               <input type="number" name="data.effect.{{key}}.rank" class="num-short-2" value="{{item.rank}}">
               {{/if}}
             </div>
