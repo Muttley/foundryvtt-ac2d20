@@ -150,8 +150,8 @@
 		},
 		"spell":{
 			"templates": ["base"],
-			"skill":"",
-			"focus":"",
+			"skill":"Academia",
+			"focus":"Occultism",
 			"difficulty":1,
 			"cost":1,
 			"duration":"",

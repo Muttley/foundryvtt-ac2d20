@@ -19,11 +19,26 @@
             <div class="resource green-field" style="display: flex; flex-direction: row; justify-content: space-between;">
                 <span class="" style="display: flex; align-items: center; margin-right: 5px;">
                     <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Skill"}}</label>
-                    <input type="text" name="data.skill" value="{{data.skill}}">
+                    <!-- <input type="text" name="data.skill" value="{{data.skill}}"> -->
+                    <select name="data.skill">
+                        {{#select data.skill}}
+                        {{#each AC2D20.SKILLS as |skill key|}}
+                        <option value="{{skill.key}}">{{localize (concat 'AC2D20.SKILL.' skill.label)}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
                 </span>
                 <span class="" style="display: flex; align-items: center; margin-right: 5px;">
                     <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
-                    <input type="text" name="data.focus" value="{{data.focus}}">
+                    <!-- <input type="text" name="data.focus" value="{{data.focus}}"> -->
+                    <select name="data.focus">
+                        {{#select data.focus}}
+                        {{#each (getSkillFocusList data.skill) as |foc key|}}
+                        {{log data.skill}}
+                        <option value="{{foc}}">{{localize foc}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
                 </span>
                 <span class="" style="display: flex; align-items: center;">
                     <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.SpellType"}}</label>
