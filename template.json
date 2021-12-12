@@ -109,14 +109,14 @@
 	},
 	"Item": {
 		"types": [
-			"talent",
-			"skill",
-			"spell",
 			"weapon",
 			"armor",
+			"talent",			
+			"spell",			
 			"skillkit",
 			"equipment",
-			"special_rule"
+			"special_rule",
+			"skill"
 		],
 		"templates": {
 			"base": {

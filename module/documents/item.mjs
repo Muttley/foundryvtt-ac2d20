@@ -12,15 +12,11 @@ export class ACItem extends Item {
         super.prepareData();
     }
 
-    // async _preCreate(data, options, user) {
-    //   await super._preCreate(data, options, user);
-    //   if (data.type == "weapon") {
-    //     let flags = {};
-    //     flags['ac2d20.weaponQualities'] = duplicate(CONFIG.AC2D20.WEAPONS.weaponQuality);
-    //     flags['ac2d20.damageEffects'] = duplicate(CONFIG.AC2D20.WEAPONS.damageEffect);
-    //     this.data.update({ 'flags': flags });
-    //   }
-    // }
+    async _preCreate(data, options, user) {
+        await super._preCreate(data, options, user);
+        let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
+        this.data.update({ 'img': ico });
+    }
 
     /**
      * Prepare a data object which is passed to any Roll formulas which are created related to this Item

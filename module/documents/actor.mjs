@@ -133,13 +133,20 @@ export class ACActor extends Actor {
     async _preCreate(data, options, user) {
         await super._preCreate(data, options, user);
 
+        let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
+        this.data.update({ 'img': ico });
+
         // Setup Tokens
         if (this.type === 'character') {
             this.data.token.update({ vision: true, actorLink: true, disposition: 1 });
         }
 
         if (this.type === 'npc') {
-            this.data.token.update({ disposition: -1 });
+            this.data.token.update({ vision: true, disposition: -1 });
+        }
+
+        if (this.type === 'vehicle') {
+            this.data.token.update({ vision: true, disposition: 0 });
         }
 
         // Add Skills to Characters
