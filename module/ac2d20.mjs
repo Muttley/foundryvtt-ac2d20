@@ -96,6 +96,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                         dicesRolled: ac2d20Roll.dicesRolled
                     });
                 } else if (ac2d20Roll.diceFace == "d6") {
+                    //console.warn(message.data.flags.weapon)
                     Roller2D20.rerollD6({
                         rollname: ac2d20Roll.rollname,
                         rerollIndexes: rerollIndex,

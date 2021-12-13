@@ -218,22 +218,23 @@ export class Roller2D20 {
         let weaponDamageTypesList = [];
         let weaponDamageEffectsList = [];
         let weaponQualityList = [];
+
         if (weapon != null) {
             // weaponDamageTypesList = Object.keys(weapon.data.damage.damageType).filter((dt) => {
             //     if (weapon.data.damage.damageType[dt]) return dt;
             // });
-
-            for (let de in weapon.data.data.effect) {
-                if (weapon.data.data.effect[de].value) {
-                    let rank = weapon.data.data.effect[de].rank ?? "";
+            //console.warn(weapon)
+            for (let de in weapon.data.effect) {
+                if (weapon.data.effect[de].value) {
+                    let rank = weapon.data.effect[de].rank ?? "";
                     let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
                     let efectLabel = `${damageEffectLabel}${rank}`;
                     weaponDamageEffectsList.push(efectLabel);
                 }
             }
 
-            for (let qu in weapon.data.data.qualities) {
-                if (weapon.data.data.qualities[qu].value) {
+            for (let qu in weapon.data.qualities) {
+                if (weapon.data.qualities[qu].value) {
                     //let rank = weapon.data.data.effect[qu].rank ?? "";
                     let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
                     //let quLabel = `${damageEffectLabel}${rank}`;
@@ -259,6 +260,7 @@ export class Roller2D20 {
         ac2d20Roll.effects = effects;
         ac2d20Roll.rerollIndexes = rerollIndexes;
         ac2d20Roll.diceFace = "d6";
+
         let chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
@@ -273,6 +275,7 @@ export class Roller2D20 {
             chatData.whisper = [game.user];
         }
         await ChatMessage.create(chatData);
+
     }
 }
 
