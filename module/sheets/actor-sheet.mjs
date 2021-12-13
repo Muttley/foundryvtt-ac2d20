@@ -150,11 +150,11 @@ export class ACActorSheet extends ActorSheet {
         }
 
         // Assign and return
-        // skills.sort(function (a, b) {
-        //     var nameA = a.name.toUpperCase();
-        //     var nameB = b.name.toUpperCase();
-        //     return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
-        // });
+        skills.sort(function (a, b) {
+            var nameA = a.name.toUpperCase();
+            var nameB = b.name.toUpperCase();
+            return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
+        });
         context.skills = skills;
         context.talents = talents;
         context.spells = spells;
