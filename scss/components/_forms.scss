@@ -31,6 +31,11 @@
 
   .header-fields {
     flex: 1;
+    .post-item{
+      padding-top: 2rem;
+      cursor: pointer;
+      color: $c-green-olive;
+    }
   }
 
   h1.sheet-name {   

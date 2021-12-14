@@ -84,60 +84,16 @@ export class ACItemSheet extends ItemSheet {
             await this.item.updateFocuses(focuses)
         });
 
-        // Weapon Qualities Toggle
-        /*
-        html.find(".wpn-focus-toggler").click(async (ev) => {
-            let focusEl = $(ev.currentTarget).parent('.wpn-focus');
-            let focusKey = focusEl.data('focusKey');
-            let focusValue = !focusEl.data('focusValue');
-            focusEl.data('focusValue', focusValue);
-            let focusType = focusEl.data('focusType');
-            let itemId = this.document.data._id;
-            let flagKey = "";
-            if (focusType == 'weaponQuality')
-                flagKey = 'weaponQualities';
-            else if (focusType == 'damageEffect')
-                flagKey = 'damageEffects';
-            let flags = duplicate(this.item.getFlag('ac2d20', flagKey));
-            let box = focusEl.parent('.item-list');
-            $(box.children()).each((q, i) => {
-                let qu = flags[$(i).data('focusKey')];
-                qu['value'] = $(i).data('focusValue');
-            });
-            await this.item.setFlag('ac2d20', flagKey, flags);
-        });
-        */
-
-        // Focus Rank Change
-        /*
-        html.find(".wpn-focus-rank").change(async (ev) => {
-            let newRank = $(ev.currentTarget).val();
-            let focusEl = $(ev.currentTarget).parent('.wpn-focus');
-            let focusKey = focusEl.data('focusKey');
-            let focusType = focusEl.data('focusType');
-            let itemId = this.document.data._id;
-            //let wpn = game.items.get(itemId);
-            let flagKey = "";
-            if (focusType == 'weaponQuality')
-                flagKey = 'weaponQualities';
-            else if (focusType == 'damageEffect')
-                flagKey = 'damageEffects';
-            let flags = duplicate(this.item.getFlag('ac2d20', flagKey));
-            let box = focusEl.parent('.item-list');
-            $(box.children()).each((q, i) => {
-                let qu = flags[$(i).data('focusKey')];
-                if (qu['rank'] != null)
-                    qu['rank'] = newRank;
-            });
-            await this.item.setFlag('ac2d20', flagKey, flags);
-        });
-        */
-
         // Effects.
         html.find(".effect-control").click(ev => {
             if (this.item.isOwned) return ui.notifications.warn("Managing Active Effects within an Owned Item is not currently supported and will be added in a subsequent update.")
             onManageActiveEffect(ev, this.item)
         });
+
+        // Send to Chat
+        html.find(".post-item").click((ev) => {
+            this.item.sendToChat();
+        })
 
         // DON't LET NUMBER FIELDS EMPTY
         const numInputs = document.querySelectorAll('input[type=number]');

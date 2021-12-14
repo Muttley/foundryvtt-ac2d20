@@ -600,6 +600,12 @@ a:hover {
   flex: 1;
 }
 
+.ac2d20 .sheet-header .header-fields .post-item {
+  padding-top: 2rem;
+  cursor: pointer;
+  color: #494e31;
+}
+
 .ac2d20 .sheet-header h1.sheet-name {
   font-family: "Germania One", cursive;
   padding: 0;
