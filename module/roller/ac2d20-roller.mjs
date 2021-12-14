@@ -129,18 +129,19 @@ export class Roller2D20 {
         return r;
     }
 
-    static async rollD6({ rollname = "Roll D6", dicenum = 2, weapon = null } = {}) {
+    static async rollD6({ rollname = "Roll D6", dicenum = 2, itemId = null, actorId = null } = {}) {
         let formula = `${dicenum}ds`;
         let roll = new Roll(formula);
         await roll.evaluate({ async: true });
         await Roller2D20.parseD6Roll({
             rollname: rollname,
             roll: roll,
-            weapon: weapon
+            itemId: itemId,
+            actorId: actorId
         });
     }
 
-    static async parseD6Roll({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], addDice = [], weapon = null } = {}) {
+    static async parseD6Roll({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], addDice = [], itemId = null, actorId = null } = {}) {
         let diceResults = [
             { result: 1, effect: 0 },
             { result: 2, effect: 0 },
@@ -175,11 +176,12 @@ export class Roller2D20 {
             roll: roll,
             dicesRolled: dicesRolled,
             rerollIndexes: rerollIndexes,
-            weapon: weapon
+            itemId: itemId,
+            actorId: actorId
         });
     }
 
-    static async rerollD6({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], weapon = null } = {}) {
+    static async rerollD6({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
         if (!rerollIndexes.length) {
             ui.notifications.notify('Select Dice you want to Reroll');
             return;
@@ -193,11 +195,12 @@ export class Roller2D20 {
             roll: _roll,
             dicesRolled: dicesRolled,
             rerollIndexes: rerollIndexes,
-            weapon: weapon
+            itemId: itemId,
+            actorId: actorId
         });
     }
 
-    static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], weapon = null } = {}) {
+    static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
         let formula = `${dicenum}ds`;
         let _roll = new Roll(formula);
         await _roll.evaluate({ async: true });
@@ -208,49 +211,87 @@ export class Roller2D20 {
             roll: _roll,
             dicesRolled: dicesRolled,
             addDice: oldDiceRolled,
-            weapon: weapon
+            itemId: itemId,
+            actorId: actorId
         });
     }
 
-    static async sendD6ToChat({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], weapon = null } = {}) {
+    static async sendD6ToChat({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
         let damage = dicesRolled.reduce((a, b) => ({ result: a.result + b.result })).result;
         let effects = dicesRolled.reduce((a, b) => ({ effect: a.effect + b.effect })).effect;
-        let weaponDamageTypesList = [];
-        let weaponDamageEffectsList = [];
-        let weaponQualityList = [];
+        //let weaponDamageTypesList = [];
+        //let weaponDamageEffectsList = [];
+        //let weaponQualityList = [];
 
-        if (weapon != null) {
-            // weaponDamageTypesList = Object.keys(weapon.data.damage.damageType).filter((dt) => {
-            //     if (weapon.data.damage.damageType[dt]) return dt;
-            // });
-            //console.warn(weapon)
-            for (let de in weapon.data.effect) {
-                if (weapon.data.effect[de].value) {
-                    let rank = weapon.data.effect[de].rank ?? "";
-                    let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-                    let efectLabel = `${damageEffectLabel}${rank}`;
-                    weaponDamageEffectsList.push(efectLabel);
+        let itemEffects = [];
+        let itemQualities = [];
+
+        if (itemId && actorId) {
+            let actor = game.actors.get(actorId);
+            let item = null
+            if (actor) {
+                item = actor.items.get(itemId)
+            }
+            if (item) {
+                if (item.type === 'spell') {
+                    itemEffects = item.data.data.costEffects;
+                } else if (item.type === 'weapon') {
+                    for (let de in item.data.data.effect) {
+                        if (item.data.data.effect[de].value) {
+                            let rank = item.data.data.effect[de].rank ?? "";
+                            let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
+                            let efectLabel = `${damageEffectLabel}${rank}`;
+                            itemEffects.push(efectLabel);
+                        }
+                    }
+                    itemEffects = itemEffects.join(', ')
+
+                    for (let qu in item.data.data.qualities) {
+                        if (item.data.data.qualities[qu].value) {
+                            let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
+                            itemQualities.push(quLabel)
+                        }
+                    }
                 }
             }
 
-            for (let qu in weapon.data.qualities) {
-                if (weapon.data.qualities[qu].value) {
-                    //let rank = weapon.data.data.effect[qu].rank ?? "";
-                    let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
-                    //let quLabel = `${damageEffectLabel}${rank}`;
-                    weaponQualityList.push(quLabel);
-                }
-            }
         }
-        let weaponDamageEffects = weaponDamageEffectsList.join(', ');
+
+        // if (weapon != null) {
+        //     for (let de in weapon.data.effect) {
+        //         if (weapon.data.effect[de].value) {
+        //             let rank = weapon.data.effect[de].rank ?? "";
+        //             let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
+        //             let efectLabel = `${damageEffectLabel}${rank}`;
+        //             weaponDamageEffectsList.push(efectLabel);
+        //         }
+        //     }
+
+        //     for (let qu in weapon.data.qualities) {
+        //         if (weapon.data.qualities[qu].value) {
+        //             //let rank = weapon.data.data.effect[qu].rank ?? "";
+        //             let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
+        //             //let quLabel = `${damageEffectLabel}${rank}`;
+        //             weaponQualityList.push(quLabel);
+        //         }
+        //     }
+        // }
+        //let weaponDamageEffects = weaponDamageEffectsList.join(', ');
+        // let rollData = {
+        //     rollname: rollname,
+        //     damage: damage,
+        //     effects: effects,
+        //     results: dicesRolled,
+        //     weaponDamageEffects: weaponDamageEffects,
+        //     weaponQualityList: weaponQualityList
+        // }
         let rollData = {
             rollname: rollname,
             damage: damage,
             effects: effects,
             results: dicesRolled,
-            weaponDamageTypesList: weaponDamageTypesList,
-            weaponDamageEffects: weaponDamageEffects,
-            weaponQualityList: weaponQualityList
+            itemEffects: itemEffects,
+            itemQualities: itemQualities
         }
         const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.html", rollData);
         let ac2d20Roll = {}
@@ -265,7 +306,7 @@ export class Roller2D20 {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            flags: { ac2d20roll: ac2d20Roll, weapon: weapon },
+            flags: { ac2d20roll: ac2d20Roll, itemId: itemId, actorId: actorId },
             type: CONST.CHAT_MESSAGE_TYPES.ROLL,
             roll: roll,
         };

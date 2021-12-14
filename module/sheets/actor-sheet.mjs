@@ -302,9 +302,10 @@ export class ACActorSheet extends ActorSheet {
         html.find('.roll-spell-cost.clickable').click((event) => {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
+            const itemId = li.data("itemId");
             const item = this.actor.items.get(li.data("itemId"));
             const cost = parseInt(item.data.data.cost);
-            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: cost, ac2d20Roll: null })
+            game.ac2d20.DialogD6.createDialog({ rollName: `${item.data.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
         })
 
         // * WEAPON
@@ -354,7 +355,7 @@ export class ACActorSheet extends ActorSheet {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            //console.log(item);
+            const itemId = li.data("itemId");
             let stressBonus = 0;
             if (item.data.data.weaponType == 'agi')
                 stressBonus = item.actor.data.data.attributes['bra'].bonus;
@@ -363,9 +364,7 @@ export class ACActorSheet extends ActorSheet {
             else if (item.data.data.weaponType == 'wil')
                 stressBonus = item.actor.data.data.attributes['wil'].bonus;
             let stress = parseInt(item.data.data.stress) + parseInt(stressBonus);
-            //console.log(stress);
-            let wpnData = deepClone(item.data);
-            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, ac2d20Roll: null, weapon: wpnData })
+            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
         })
 
         // * AMMO COUNT UPDATE 

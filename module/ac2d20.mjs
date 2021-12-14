@@ -96,12 +96,12 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                         dicesRolled: ac2d20Roll.dicesRolled
                     });
                 } else if (ac2d20Roll.diceFace == "d6") {
-                    //console.warn(message.data.flags.weapon)
                     Roller2D20.rerollD6({
                         rollname: ac2d20Roll.rollname,
                         rerollIndexes: rerollIndex,
                         dicesRolled: ac2d20Roll.dicesRolled,
-                        weapon: message.data.flags.weapon
+                        itemId: message.data.flags.itemId,
+                        actorId: message.data.flags.actorId,
                     });
                 } else {
                     ui.notifications.notify('No dice face reckognized');
@@ -124,8 +124,9 @@ Hooks.on('renderChatMessage', (message, html, data) => {
         addBtn[0].setAttribute('data-messageId', message.id);
         addBtn.click((ev) => {
             let ac2d20Roll = message.data.flags.ac2d20roll;
-            let weapon = message.data.flags.weapon;
-            game.ac2d20.DialogD6.createDialog({ rollname: ac2d20Roll.rollname, diceNum: 1, ac2d20Roll: ac2d20Roll, weapon: weapon })
+            let itemId = message.data.flags.itemId;
+            let actorId = message.data.flags.actorId;
+            game.ac2d20.DialogD6.createDialog({ rollname: ac2d20Roll.rollname, diceNum: 1, ac2d20Roll: ac2d20Roll, itemId: itemId, actorId: actorId })
         });
     }
 
