@@ -60,13 +60,13 @@
         </div>
         <ul class="items-list-npc">
             {{#each skills as |item key|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item editable-item" data-item-id="{{item._id}}">
                 <span class="main-row">
                     <label class="item-name clickable roll-skill">{{item.name}}&nbsp;{{item.data.value}}</label>
-                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                    <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
                         <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    </div> -->
                 </span>
                 <label class="skill-focuses" for="">{{#each item.data.focuses}}
                     {{#if (eq this.isfocus true)}}
@@ -85,14 +85,14 @@
         </div>
         <ul class="items-list-npc">
             {{#each weapons as |item key|}}
-            <li class="item" data-item-id="{{item._id}}">
+            <li class="item editable-item" data-item-id="{{item._id}}">
                 <span class="main-row">
                     <label class="item-name clickable roll-weapon">{{item.name}}</label>
                     <label class="item-name clickable roll-stress">{{data.stress}}<span class="cth-ico-cth"></span></label>
-                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                    <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
                         <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    </div> -->
                 </span>
                 <div class="skill-focuses" for="">
                     <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{data.focus}}</strong>,</span>
@@ -122,13 +122,13 @@
         </div>
         <ul class="items-list-npc">
             {{#each specialRules as |item key|}}
-            <li class="item special-rule" data-item-id="{{item._id}}">
+            <li class="item special-rule editable-item" data-item-id="{{item._id}}">
                 <div class="main-row">
                     <label class="item-name expandable-info clickable">{{item.name}}</label>
-                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                    <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
                         <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </li>
             {{/each}}
@@ -142,13 +142,13 @@
         </div>
         <ul class="items-list-npc">
             {{#each spells as |item key|}}
-            <li class="item spell" data-item-id="{{item._id}}">
+            <li class="item spell editable-item" data-item-id="{{item._id}}">
                 <div class="main-row">
                     <label class="item-name expandable-info clickable">{{item.name}}</label>
-                    <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+                    <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
                         <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
                         <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="roll-spell skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} <span class="focus-name">({{item.data.focus}})</span></div>
                 <div class="roll-spell-cost skill-cost clickable">Cost: {{item.data.cost}}<span class="cth-ico-cth"></span></div>

@@ -201,6 +201,7 @@ export class ACActorSheet extends ActorSheet {
             item.sheet.render(true);
         });
 
+
         // -------------------------------------------------------------
         // ! Everything below here is only needed if the sheet is editable
         if (!this.isEditable) return;
@@ -454,13 +455,45 @@ export class ACActorSheet extends ActorSheet {
         // * Active Effect management
         html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
+        /* -------------------------------------------- */
+        /* ADD RIGH CLICK CONTENT MENU
+        /* -------------------------------------------- */
+        const editLabel = game.i18n.localize("AC2D20.EDIT");
+        const deleteLabel = game.i18n.localize("AC2D20.DELETE");
+        const postLabel = game.i18n.localize("AC2D20.POST");
 
+        let menu_items = [
+            {
+                icon: '<i class="fas fa-comment"></i>',
+                name: '',
+                callback: (t) => {
+                    this._onPostItem(t.data("item-id"));
+                },
+            },
+            {
+                icon: '<i class="fas fa-edit"></i>',
+                name: '',
+                callback: (t) => {
+                    this._editOwnedItemById(t.data("item-id"));
+                },
+            },
+            {
+                icon: '<i class="fas fa-trash"></i>',
+                name: '',
+                callback: (t) => {
+                    this._deleteOwnedItemById(t.data("item-id"));
+                },
+                condition: (t) => {
+                    if (t.data("coreskill")) {
+                        return t.data("coreskill").length < 1;
+                    } else {
+                        return true;
+                    }
+                },
+            },
+        ];
+        new ContextMenu(html.find(".editable-item"), null, menu_items);
 
-
-
-
-
-        // !CRATURES
 
         // ! DON'T LET NUMBER FIELDS EMPTY
         const numInputs = document.querySelectorAll('input[type=number]');
@@ -471,6 +504,21 @@ export class ACActorSheet extends ActorSheet {
                 }
             })
         });
+    }
+
+
+
+    _editOwnedItemById(_itemId) {
+        const item = this.actor.items.get(_itemId);
+        item.sheet.render(true);
+    }
+    async _deleteOwnedItemById(_itemId) {
+        const item = this.actor.items.get(_itemId);
+        await item.delete();
+    }
+    _onPostItem(_itemId) {
+        const item = this.actor.items.get(_itemId);
+        item.sendToChat();
     }
 
     // * UTILS

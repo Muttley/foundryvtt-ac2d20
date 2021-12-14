@@ -1058,6 +1058,33 @@ a:hover {
   cursor: pointer;
 }
 
+.ac2d20 #context-menu {
+  left: unset;
+  right: 0;
+  min-width: unset;
+  width: unset;
+}
+
+.ac2d20 #context-menu li.context-item {
+  line-height: 26px;
+}
+
+.ac2d20 #context-menu .context-items {
+  display: flex;
+}
+
+.ac2d20 .expand-down {
+  top: 3px !important;
+  right: 3px !important;
+  bottom: 0 !important;
+}
+
+.ac2d20 .expand-up {
+  top: 3px !important;
+  right: 3px !important;
+  bottom: 0 !important;
+}
+
 .ac2d20 input[type="text"],
 .ac2d20 input[type="number"] {
   background-color: #ebe7d7;

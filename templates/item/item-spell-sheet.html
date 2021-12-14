@@ -33,6 +33,7 @@
                     <!-- <input type="text" name="data.focus" value="{{data.focus}}"> -->
                     <select name="data.focus">
                         {{#select data.focus}}
+                        <option value="">{{localize foc}}</option>
                         {{#each (getSkillFocusList data.skill) as |foc key|}}
                         {{log data.skill}}
                         <option value="{{foc}}">{{localize foc}}</option>
@@ -52,17 +53,23 @@
                 </span>
             </div>
             <div class="resource flexrow green-field">
-                <span class="" style="display: flex; align-items: center; margin-right: 5px;">
-                    <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Difficulty"}}</label>
-                    <input type="number" name="data.difficulty" value="{{data.difficulty}}">
-                </span>
-                <span class="" style="display: flex; align-items: center; margin-right: 5px;">
-                    <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Cost"}}</label>
-                    <input type="number" name="data.cost" value="{{data.cost}}">
-                </span>
                 <span class="" style="display: flex; align-items: center;">
-                    <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Duration"}}</label>
+                    <label>{{localize "AC2D20.TEMPLATES.Difficulty"}}</label>
+                    <input type="number" class="num-short-2" name="data.difficulty" value="{{data.difficulty}}">
+                </span>
+                <span class="" style="display: flex;flex:2; justify-content: space-between; gap:3rem; align-items: center;">
+                    <label>{{localize "AC2D20.TEMPLATES.Duration"}}</label>
                     <input type="text" name="data.duration" value="{{data.duration}}">
+                </span>
+            </div>
+            <div class="resource flexrow green-field">
+                <span class="" style="display: flex; align-items: center;">
+                    <label>{{localize "AC2D20.TEMPLATES.Cost"}}</label>
+                    <input type="number" class="num-short-2" name="data.cost" value="{{data.cost}}">
+                </span>
+                <span class="" style="display: flex;flex:2; justify-content: space-between; gap:3rem; align-items: center;">
+                    <label>{{localize "AC2D20.TEMPLATES.CostEffects"}}</label>
+                    <input type="text" name="data.costEffects" value="{{data.costEffects}}">
                 </span>
             </div>
             <div class="section-title">

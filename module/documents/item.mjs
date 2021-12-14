@@ -87,4 +87,9 @@ export class ACItem extends Item {
             return roll;
         }
     }
+
+    sendToChat() {
+        //TODO
+        console.warn('Coming Soon')
+    }
 }

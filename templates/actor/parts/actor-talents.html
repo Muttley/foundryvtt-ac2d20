@@ -5,15 +5,15 @@
     </div>
     <div class="ac-grid">
         {{#each talents as |item key|}}
-        <div class="item talent" data-item-id="{{item._id}}">
+        <div class="item talent editable-item" data-item-id="{{item._id}}">
             <div class="row">
                 <div class="cell cell-name f2 align-left align-center green"><img src="{{item.img}}" />{{item.name}}</div>
                 <div class="cell f2 align-center">{{item.data.keywords}}</div>
                 <div class="cell f5 column">{{{item.data.description}}}</div>
-                <div class="cell f1 controls">
+                <!-- <div class="cell f1 controls">
                     <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                     <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
         {{/each}}

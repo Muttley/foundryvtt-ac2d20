@@ -130,6 +130,7 @@
         "speed":"Speed",
         "bonus":"Bonus",
         "scale":"Scale",
+        "equipped":"equipped",
         "SizeLevels":{
             "Trivial":"Trivial",
             "Minor":"Minor",
@@ -153,6 +154,7 @@
         "Create_Special_Rule": "Create Special Rule",
         "Create_Weapon": "Create Weapon",  
         "current": "current",
+        "CostEffects":"Cost Effects",
         "DAMAGE": "DAMAGE",
         "DAMAGE_EFFECTS": "DAMAGE EFFECTS",
         "DAMAGE_TYPE": "DAMAGE TYPE",

@@ -466,3 +466,26 @@ nav{
 .expandable-info{
   cursor: pointer;
 }
+
+#context-menu {
+  left: unset;
+  right: 0;
+  min-width: unset;
+  width: unset;
+  li.context-item {
+      line-height: 26px;
+  }
+  .context-items {
+      display: flex;
+  }
+}
+.expand-down {
+  top: 3px !important;
+  right: 3px !important;
+  bottom: 0 !important;
+}
+.expand-up {
+  top: 3px !important;
+  right: 3px !important;
+  bottom: 0 !important;
+}

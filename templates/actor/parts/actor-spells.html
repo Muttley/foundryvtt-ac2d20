@@ -12,28 +12,28 @@
 <div class="ac-grid">
     <div class="item">
         <div class="row">
-            <div class="cell f3 green">Name</div>
+            <div class="cell f4 green" style="background-color: #494e31;">Name</div>
             <div class="cell f3 align-center">Skill (Focus)</div>
             <!-- <div class="cell f2">Focus</div> -->
             <div class="cell f1 align-center">Diff</div>
-            <div class="cell f1 align-center">Cost</div>
+            <div class="cell f3 align-center">Cost</div>
             <div class="cell f1 align-center">Dur</div>
-            <div class="cell f1 align-center"></div>
+            <!-- <div class="cell f1 align-center"></div> -->
         </div>
     </div>
     {{#each spells as |item key|}}
-    <div class="item spell" data-item-id="{{item._id}}">
+    <div class="item spell editable-item" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f3 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
+            <div class="cell f4 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} ({{item.data.focus}})</div>
             <!-- <div class="cell f2 roll-spell focus-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.focus}}</div> -->
             <div class="cell f1 align-center">{{item.data.difficulty}}</div>
-            <div class="cell f1 roll-spell-cost clickable align-center">{{item.data.cost}}<span class="cth-ico-cth"></span></div>
+            <div class="cell f3 roll-spell-cost clickable align-center">{{item.data.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.data.costEffects}}</div>
             <div class="cell f1 align-center">{{item.data.duration}}</div>
-            <div class="cell f1 item-controls" style="display: flex; gap:0.313rem; border-right: none; ">
+            <!-- <div class="cell f1 item-controls" style="display: flex; gap:0.313rem; border-right: none; ">
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-            </div>
+            </div> -->
         </div>
     </div>
     {{/each}}

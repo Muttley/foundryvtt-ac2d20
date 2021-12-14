@@ -11,11 +11,11 @@
             <div class="cell f2 align-center"><strong>Range</strong></div>
             <div class="cell f2 align-center"><strong>Stress</strong></div>
             <div class="cell f2 align-center"><strong>Ammo</strong></div>
-            <div class="cell f1 align-center"></div>
+            <!-- <div class="cell f1 align-center"></div> -->
         </div>
     </div>
     {{#each weapons as |item key|}}
-    <div class="item weapon" data-item-id="{{item._id}}">
+    <div class="item weapon editable-item" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f4 green cell-expander align-left align-center cell-name"><img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f3 roll-weapon clickable focus-name align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{localize (concat 'AC2D20.FOCUS.' item.data.focus)}}</div>
@@ -24,10 +24,10 @@
             <div class="cell f2 align-center">
                 <input type="number" class="ammo-quantity num-short-3" style="height: 1.1rem;" name="data.ammo" value="{{item.data.ammo}}">
             </div>
-            <div class="cell f1 controls align-center" style="display: flex; justify-content: space-between; border-right: none; ">
+            <!-- <div class="cell f1 controls align-center" style="display: flex; justify-content: space-between; border-right: none; ">
                 <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
                 <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-            </div>
+            </div> -->
         </div>
         <div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
             <span><strong>Qualities: </strong>{{getWeaponQualities item.data}}&nbsp; | &nbsp;
