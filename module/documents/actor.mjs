@@ -159,4 +159,15 @@ export class ACActor extends Actor {
             this.data.update({ items });
         }
     }
+
+    getRollShortcuts() {
+        let out = {};
+        // Attributes
+        for (const name of ["bra", "agi", "coo", "rea", "ins", "wil"]) {
+            out[name.substring(0, 3)] = this.data.data.attributes[name].value;
+        }
+        // Power
+        out['pow'] = this.data.data.power.value;
+        return out;
+    }
 }

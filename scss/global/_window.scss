@@ -225,6 +225,21 @@ a{
 	}
 }
 
+.chat-item{
+	.item-name{
+		text-align: center;
+		h3{
+			font-family: $font-germania;
+			font-size: 1.5rem;
+		}
+	}
+	img{
+		width: 4rem;
+		height: 4rem;
+	}
+}
+
+
 .dice-tooltip .dice-rolls .roll.max {
     color: unset;
     filter: none;

@@ -266,6 +266,20 @@ a:hover {
   opacity: 0.45;
 }
 
+.chat-item .item-name {
+  text-align: center;
+}
+
+.chat-item .item-name h3 {
+  font-family: "Germania One", cursive;
+  font-size: 1.5rem;
+}
+
+.chat-item img {
+  width: 4rem;
+  height: 4rem;
+}
+
 .dice-tooltip .dice-rolls .roll.max {
   color: unset;
   filter: none;

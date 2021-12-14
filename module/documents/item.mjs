@@ -88,8 +88,30 @@ export class ACItem extends Item {
         }
     }
 
-    sendToChat() {
-        //TODO
-        console.warn('Coming Soon')
+    async sendToChat() {
+        const itemData = duplicate(this.data);
+        //console.warn(itemData)
+        itemData.isPhysical = itemData.data.hasOwnProperty('weight')
+        itemData.isWeapon = itemData.type === "weapon";
+        itemData.isArmor = itemData.type === "armor";
+        itemData.isTalent = itemData.type === "talent";
+        itemData.isSpell = itemData.type === "spell";
+        itemData.isSkillkit = itemData.type === "skillkit";
+        itemData.isSkillkit = itemData.type === "skillkit";
+        itemData.isEquipment = itemData.type === "equipment";
+        itemData.isSpecial_rule = itemData.type === "special_rule";
+        itemData.isSkill = itemData.type === "skill";
+        const html = await renderTemplate("systems/ac2d20/templates/chat/item.html", itemData);
+        const chatData = {
+            user: game.user.id,
+            rollMode: game.settings.get("core", "rollMode"),
+            content: html,
+        };
+        if (["gmroll", "blindroll"].includes(chatData.rollMode)) {
+            chatData.whisper = ChatMessage.getWhisperIDs("GM");
+        } else if (chatData.rollMode === "selfroll") {
+            chatData.whisper = [game.user];
+        }
+        ChatMessage.create(chatData);
     }
 }

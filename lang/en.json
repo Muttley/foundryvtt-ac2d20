@@ -117,6 +117,13 @@
         "Aircraft": "Aircraft",
         "Watercraft": "Watercraft"
     },
+    "AC2D20.SPELL":{
+        "SpellTypes":{
+            "ins":"Traditional",
+            "rea":"Researcher",
+            "wil":"Dabbler"
+        }
+    },
     "AC2D20.TEMPLATES": {
         "Salvo":"Salvo",
         "Resistance":"Resistance",
@@ -282,7 +289,10 @@
         "weaponTypes": {
             "Melee": "Melee",
             "Ranged": "Ranged",
-            "Mental": "Mental"
+            "Mental": "Mental",
+            "agi":"Melee",
+            "coo": "Ranged",
+            "wil": "Mental"
         }
     },
     "AC2D20.ARMOR": {
