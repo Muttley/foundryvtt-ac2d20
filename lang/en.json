@@ -284,7 +284,9 @@
             "parrying": "Parrying",
             "reliable": "Reliable",
             "subtle": "Subtle",
-            "unreliable": "Unreliable"
+            "unreliable": "Unreliable",
+            "bane":"Bane",
+            "hunger":"Hunger"
         },
         "weaponTypes": {
             "Melee": "Melee",
