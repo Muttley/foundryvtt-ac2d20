@@ -11,7 +11,7 @@ export class ACItemSheet extends ItemSheet {
         return mergeObject(super.defaultOptions, {
             classes: ["ac2d20", "sheet", "item"],
             width: 520,
-            height: 520,
+            height: 560,
             tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
         });
     }

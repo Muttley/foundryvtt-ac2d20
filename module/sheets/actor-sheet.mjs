@@ -308,6 +308,22 @@ export class ACActorSheet extends ActorSheet {
             game.ac2d20.DialogD6.createDialog({ rollName: `${item.data.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
         })
 
+        html.find('.item-value-changer').change(async (event) => {
+            event.preventDefault();
+            const keyToChange = $(event.currentTarget).data('field');
+            const newValue = $(event.currentTarget).val();
+            const li = $(event.currentTarget).parents(".item");
+            const item = this.actor.items.get(li.data("itemId"));
+            let data = {};
+            data[keyToChange] = newValue;
+            let updatedItem = { _id: item.id, data: data };
+
+
+            //updatedItem.data[keyToChange] = newValue;
+            console.warn(updatedItem)
+            await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
+        })
+
         // * WEAPON
         html.find('.roll-weapon.clickable').click((event) => {
             event.preventDefault();

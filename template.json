@@ -166,7 +166,17 @@
 			"complication":20,
 			"bonusChallenge":0,
 			"spellType":"ins",
-			"mantle":false
+			"mantle":false,
+			"ritualStress":{
+				"value":0,
+				"max":0
+			},
+			"ritualSteps":{
+				"value":0,
+				"max":0
+			},
+			"ritualResistance":"",
+			"ritualRequirements":""
 		},
 		"weapon": {
 			"templates": ["base", "physical", "equipable"],

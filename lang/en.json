@@ -230,7 +230,12 @@
         "Use_Will": "Use Will",
         "Weapon_Qualities": "WEAPON QUALITIES",
         "Weapon_Type": "Weapon Type",
-        "Weapons": "Weapons"
+        "Weapons": "Weapons",
+        "Ritual":"Ritual", 
+        "ritual_stress":"Ritual Stress",
+        "ritual_steps":"Ritual Steps",
+        "ritual_resistance": "Resistance",
+        "ritual_requirements":"Requirements"
     },
     "AC2D20.UI": {
         "Add": "Add",

@@ -438,6 +438,10 @@ a:hover {
   grid-column-end: span 12;
 }
 
+.flex {
+  display: flex;
+}
+
 .flex-group-center,
 .flex-group-left,
 .flex-group-right {
@@ -1188,6 +1192,10 @@ a:hover {
 .ac2d20 .num-short-3 {
   max-width: 3rem;
   text-align: center;
+}
+
+.ac2d20 .num-small {
+  height: 1.1rem;
 }
 
 .ac2d20 .clickable {

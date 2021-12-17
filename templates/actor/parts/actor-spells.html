@@ -26,15 +26,23 @@
         <div class="row">
             <div class="cell f4 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
             <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} ({{item.data.focus}})</div>
-            <!-- <div class="cell f2 roll-spell focus-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.focus}}</div> -->
             <div class="cell f1 align-center">{{item.data.difficulty}}</div>
             <div class="cell f3 roll-spell-cost clickable align-center">{{item.data.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.data.costEffects}}</div>
             <div class="cell f1 align-center">{{item.data.duration}}</div>
-            <!-- <div class="cell f1 item-controls" style="display: flex; gap:0.313rem; border-right: none; ">
-                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-            </div> -->
         </div>
+
+        {{#if (gt item.data.ritualStress.max 0)}}
+        <div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
+            <span>
+                <strong>Ritual Stress: </strong>
+                <input type="number" class="ritual-stress item-value-changer num-short-2 num-small" data-field="ritualStress.value" value="{{data.ritualStress.value}}" min="0"> / {{item.data.ritualStress.max}} &nbsp; &nbsp;
+                <strong>Ritual Steps: </strong>
+                <input type="number" class="ritual-steps item-value-changer num-short-2 num-small" data-field="ritualSteps.value" value="{{data.ritualSteps.value}}" min="0"> / {{item.data.ritualSteps.max}} &nbsp; &nbsp;
+                <strong>Resistance: </strong>{{item.data.ritualResistance}}
+            </span>
+        </div>
+        {{/if}}
+
     </div>
     {{/each}}
 </div>
