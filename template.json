@@ -151,7 +151,7 @@
 		"spell":{
 			"templates": ["base"],
 			"skill":"Academia",
-			"focus":"Occultism",
+			"focus":"",
 			"difficulty":1,
 			"cost":1,
 			"costEffects":"",
