@@ -27,7 +27,11 @@ export class MomentumTracker extends Application {
         this.data["isGM"] = game.user.isGM;
         this.data["partyMomentum"] = game.settings.get('ac2d20', 'partyMomentum');
         this.data["gmMomentum"] = game.settings.get('ac2d20', 'gmMomentum');
-        this.data["maxMomentum"] = game.settings.get('ac2d20', 'maxMomentum');
+        this.data["maxMomentum"] = game.settings.get('ac2d20', 'maxMomentum');        
+        if(game.user.isGM) this.data["showGMMomentumToPlayers"] = true;
+        else this.data["showGMMomentumToPlayers"] = game.settings.get('ac2d20', 'gmMomentumShowToPlayers')
+        if(game.user.isGM) this.data["maxAppShowToPlayers"] = true;
+        else this.data["maxAppShowToPlayers"] = game.settings.get('ac2d20', 'maxAppShowToPlayers')
         return this.data;
     }
 
