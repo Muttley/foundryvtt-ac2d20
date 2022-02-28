@@ -20,6 +20,22 @@ export function registerSettings() {
         default: 6,
         type: Number,
     });
+    game.settings.register('ac2d20', 'gmMomentumShowToPlayers', {
+        name: 'Show GM Momentum To Players',
+        hint: "Shows the GM momentum window to everyone. Requires refresh on players side.",
+        scope: 'world',
+        config: true,
+        default: false,
+        type: Boolean,
+    });
+    game.settings.register('ac2d20', 'maxAppShowToPlayers', {
+        name: 'Players Can Setup Max App',
+        hint: "Allows players to settup the Party's MAX AP. Requires refresh on players side.",
+        scope: 'world',
+        config: true,
+        default: false,
+        type: Boolean,
+    });
     game.settings.register('ac2d20', 'compendium-skills', {
         name: 'Skills Compendium',
         scope: 'world',

@@ -1,3 +1,9 @@
+# v 1.0.4
+
+- Setting added: "Show GM Momentum To Player"
+- Setting added: "Players Can Setup Party's Max App"
+- Changed releases manifest and package.
+
 # v 1.0.3
 
 - Bumped version to v9
