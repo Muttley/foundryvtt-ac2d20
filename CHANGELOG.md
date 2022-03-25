@@ -14,7 +14,8 @@ return;
 console.log("TRUTHS")
 console.log(act.data.data.truths)
 console.log("INJURIES")
-console.log(act.data.data.injuries.list)```
+console.log(act.data.data.injuries.list)
+```
 
 
 # v 1.0.4
