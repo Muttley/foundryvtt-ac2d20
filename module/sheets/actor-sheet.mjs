@@ -452,19 +452,36 @@ export class ACActorSheet extends ActorSheet {
         });
 
         // * INJURIES
+        // html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
+        //     let updates = [];
+        //     $('.injury-cell.injury').each((i, el) => {
+        //         console.warn($(el).find('.injury-text').val())
+        //         let _txt = this._clearTextAreaText($(el).find('.injury-text').val());
+        //         let inj = {
+        //             text: _txt,
+        //             treated: $(el).find('.controls .treated').is(":checked"),
+        //             injuryType: $(el).find('.controls .injury-type').is(":checked")
+        //         }
+        //         updates.push(inj);
+        //     });
+        //     await this.actor.update({ 'data.injuries.list': updates });
+        // });
         html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
-            let updates = [];
-            $('.injury-cell.injury').each((i, el) => {
-                let _txt = this._clearTextAreaText($(el).find('.injury-text').val());
-                let inj = {
-                    text: _txt,
-                    treated: $(el).find('.controls .treated').is(":checked"),
-                    injuryType: $(el).find('.controls .injury-type').is(":checked")
-                }
-                updates.push(inj);
-            });
-            await this.actor.update({ 'data.injuries.list': updates });
-        });
+            console.warn($(ev.currentTarget).parents(".injury"))
+            const $parent = $(ev.currentTarget).parents(".injury");
+            console.warn($parent)
+            const injuryNum = $parent.data("injury");
+            let inj = {
+                text: $parent.find('.injury-text').val(),
+                treated: $parent.find('.controls .treated').is(":checked"),
+                injuryType: $parent.find('.controls .injury-type').is(":checked")
+            }
+            console.warn(inj)
+            const dataPath = `data.injuries.${injuryNum}`
+            console.warn(dataPath)
+            await this.actor.update({[`${dataPath}`]: inj });
+
+        })
         // * END INJURIES
 
         // * Active Effect management

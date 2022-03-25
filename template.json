@@ -11,11 +11,21 @@
 					"count":3,
 					"value":0,
 					"treated":0,
+					"injury0":{
+						"text":"", "injuryType":false, "treated":false
+					},
+					"injury1":{
+						"text":"", "injuryType":false, "treated":false
+					},
+					"injury2":{
+						"text":"", "injuryType":false, "treated":false
+					},
 					"list":[
 						{"text":"", "injuryType":false, "treated":false},
 						{"text":"", "injuryType":false, "treated":false},
 						{"text":"", "injuryType":false, "treated":false}]
 				},
+				"truthsText":"",
 				"truths":[
 					{"text":""},
 					{"text":""},
