@@ -2,7 +2,7 @@
     "name": "ac2d20",
     "title": "Achtung Cthulhu 2d20",
     "description": "The unofficial !Achtung Cthulhu 2d20 System for FoundryVTT",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "minimumCoreVersion": "9",
     "compatibleCoreVersion": "9",
     "templateVersion": 1,
@@ -34,6 +34,6 @@
     "gridUnits": "m",
     "url": "https://github.com/superseva/ac2d20",    
     "manifest": "https://github.com/superseva/ac2d20/releases/latest/download/system.json",    
-    "download": "https://github.com/superseva/ac2d20/releases/download/v1.0.4/ac2d20.zip"
+    "download": "https://github.com/superseva/ac2d20/releases/download/v1.0.5/ac2d20.zip"
   }
   

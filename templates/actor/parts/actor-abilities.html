@@ -54,33 +54,56 @@
   </div>
 </div>
 
-<div class="section-title">
-  <h3>Injuries</h3>
-  <span class="right-slope olive"></span>
-</div>
-<div class="injuries-grid">
-  {{#each data.injuries.list as |injury key|}}
-  <div class="injury-cell injury" data-index="{{@index}}">
-    {{#if (hasInjury injury.text)}}
-    <div class="controls">
-      <input type="checkbox" class="injury-type" title="{{#if (eq injury.injuryType true)}}Mental{{/if}}{{#if (ne injury.injuryType true)}}Physical{{/if}}" {{#if (eq injury.injuryType true)}}checked{{/if}}>
-      <input type="checkbox" class="treated" title="{{#if (eq injury.treated true)}}Treated{{/if}}{{#if (ne injury.treated true)}}Not Treated{{/if}}" {{#if (eq injury.treated true)}}checked{{/if}}>
-    </div>
-    <hr style="margin: 1px 0;" />
-    {{/if}}
-    <textarea class="injury-text">{{{injury.text}}}</textarea>
-  </div>
-  {{/each}}
-</div>
 
-<div class="section-title">
-  <h3>Personal Truths & Scars</h3>
-  <span class="right-slope olive"></span>
-</div>
-<div class="truths-grid">
-  {{#each data.truths as |truth key|}}
-  <div class="truth-cell" data-index="{{@index}}"><textarea class="truth-text" rows="4">{{{truth.text}}}</textarea></div>
-  {{/each}}
+
+<div class="grid">
+  <div style="display: flex; flex-direction: column;">
+    <div class="section-title">
+        <h3 class="green">Personal Truths & Scars</h3>
+        <span class="right-slope olive"></span>
+    </div>
+    <div class="textbox">
+        <textarea name="data.truthsText">{{data.truthsText}}</textarea>
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: column;">
+    <div class="section-title">
+        <h3 class="green">Injuries</h3>
+        <span class="right-slope olive"></span>
+    </div>
+    <div class="injuries-grid">
+      <div class="injury-cell injury" data-injury="injury0">    
+        {{#if (hasInjury data.injuries.injury0.text)}}
+        <div class="controls">
+          <input type="checkbox" class="injury-type" title="{{#if (eq data.injuries.injury0.injuryType true)}}Mental{{/if}}{{#if (ne data.injuries.injury0.injuryType true)}}Physical{{/if}}" {{#if (eq data.injuries.injury0.injuryType true)}}checked{{/if}}>
+          <input type="checkbox" class="treated" title="{{#if (eq data.injuries.injury0.treated true)}}Treated{{/if}}{{#if (ne data.injuries.injury0.treated true)}}Not Treated{{/if}}" {{#if (eq data.injuries.injury0.treated true)}}checked{{/if}}>
+        </div>
+        <hr style="margin: 1px 0;" />
+        {{/if}}  
+        <textarea class="injury-text">{{data.injuries.injury0.text}}</textarea>
+      </div>
+      <div class="injury-cell injury" data-injury="injury1">    
+        {{#if (hasInjury data.injuries.injury1.text)}}
+        <div class="controls">
+          <input type="checkbox" class="injury-type" title="{{#if (eq data.injuries.injury1.injuryType true)}}Mental{{/if}}{{#if (ne data.injuries.injury1.injuryType true)}}Physical{{/if}}" {{#if (eq data.injuries.injury1.injuryType true)}}checked{{/if}}>
+          <input type="checkbox" class="treated" title="{{#if (eq data.injuries.injury1.treated true)}}Treated{{/if}}{{#if (ne data.injuries.injury1.treated true)}}Not Treated{{/if}}" {{#if (eq data.injuries.injury1.treated true)}}checked{{/if}}>
+        </div>
+        <hr style="margin: 1px 0;" />
+        {{/if}}  
+        <textarea class="injury-text">{{data.injuries.injury1.text}}</textarea>
+      </div>
+      <div class="injury-cell injury" data-injury="injury2">    
+        {{#if (hasInjury data.injuries.injury2.text)}}
+        <div class="controls">
+          <input type="checkbox" class="injury-type" title="{{#if (eq data.injuries.injury2.injuryType true)}}Mental{{/if}}{{#if (ne data.injuries.injury2.injuryType true)}}Physical{{/if}}" {{#if (eq data.injuries.injury2.injuryType true)}}checked{{/if}}>
+          <input type="checkbox" class="treated" title="{{#if (eq data.injuries.injury2.treated true)}}Treated{{/if}}{{#if (ne data.injuries.injury2.treated true)}}Not Treated{{/if}}" {{#if (eq data.injuries.injury2.treated true)}}checked{{/if}}>
+        </div>
+        <hr style="margin: 1px 0;" />
+        {{/if}}  
+        <textarea class="injury-text">{{data.injuries.injury2.text}}</textarea>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="section-title">

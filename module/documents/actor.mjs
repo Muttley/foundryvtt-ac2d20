@@ -115,7 +115,8 @@ export class ACActor extends Actor {
     }
 
     getComplicationFromInjuries() {
-        let inj = this.data.data.injuries.list.filter((_i) => {
+        const injuries = [this.data.data.injuries.injury0, this.data.data.injuries.injury1, this.data.data.injuries.injury2]
+        let inj = injuries.filter((_i) => {
             return (_i.text != "" && !_i.treated)
         })
         return inj.length;

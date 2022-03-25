@@ -797,7 +797,6 @@ a:hover {
 .ac2d20 .injuries-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 10px;
 }
 
 .ac2d20 .injuries-grid .injury-cell {
@@ -849,6 +848,7 @@ a:hover {
   border: none;
   background-color: unset;
   white-space: normal;
+  min-height: 6rem;
 }
 
 .ac2d20 .truths-grid {
