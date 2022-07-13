@@ -23,8 +23,8 @@ export default class DieACChallenge extends Die {
         2: 2,
         3: 0,
         4: 0,
-        5: "<img width='24' height='24' style='border: none' src='systems/conan2d20/assets/dice/d5.webp'/>",
-        6: "<img width='24' height='24' style='border: none' src='systems/conan2d20/assets/dice/d6.webp'/>",
+        5: "<img width='24' height='24' style='border: none' src='systems/ac2d20/assets/dice/d5.webp'/>",
+        6: "<img width='24' height='24' style='border: none' src='systems/ac2d20/assets/dice/d6.webp'/>",
     };
 
     get total() {
