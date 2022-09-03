@@ -19,18 +19,34 @@ export class ACItemSheet extends ItemSheet {
     /** @override */
     get template() {
         const path = "systems/ac2d20/templates/item";
-        return `${path}/item-${this.item.data.type}-sheet.html`;
+        return `${path}/item-${this.item.type}-sheet.html`;
     }
 
     /* -------------------------------------------- */
 
     /** @override */
-    getData() {
+    async getData() {
         // Retrieve base data structure.
-        const context = super.getData();
+        const context = await super.getData();
+        const item = context.item;
+        const source = item.toObject();
 
         // Use a safe clone of the item data for further operations.
-        const itemData = context.item.data;
+        //const itemData = context.item.data;
+
+        foundry.utils.mergeObject(context, {
+            source: source.system,
+            system: item.system,      
+            isEmbedded: item.isEmbedded,
+            type: item.type,      
+            flags: item.flags,      
+            AC2D20: CONFIG.AC2D20,
+            effects: prepareActiveEffectCategories(item.effects),
+            descriptionHTML: await TextEditor.enrichHTML(item.system.description, {
+              secrets: item.isOwner,
+              async: true
+            })
+          });
 
         // Retrieve the roll data for TinyMCE editors.
         context.rollData = {};
@@ -40,11 +56,11 @@ export class ACItemSheet extends ItemSheet {
         }
 
         // Add the actor's data to context.data for easier access, as well as flags.
-        context.data = itemData.data;
-        context.flags = itemData.flags;
+        //context.data = itemData.data;
+        //context.flags = itemData.flags;
 
-        context.effects = prepareActiveEffectCategories(this.item.effects);
-        context.AC2D20 = CONFIG.AC2D20;
+        //context.effects = prepareActiveEffectCategories(this.item.effects);
+        //context.AC2D20 = CONFIG.AC2D20;
 
 
         // Prepare Aditional Data

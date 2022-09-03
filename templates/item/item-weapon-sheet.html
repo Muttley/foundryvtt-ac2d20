@@ -16,16 +16,16 @@
 
     {{!-- Description Tab --}}
     <div class="tab description" data-group="primary" data-tab="description">
-      {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+      {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
     {{!-- Attributes Tab --}}
     <div class="tab attributes" data-group="primary" data-tab="attributes">
 
       <div class="resource-row flexrow bgEven resource">
-        <label class="resource-label" for="data.weaponType"><strong>{{localize "AC2D20.WEAPONS.type"}}</strong></label>
-        <select name="data.weaponType">
-          {{#select data.weaponType}}
+        <label class="resource-label" for="system.weaponType"><strong>{{localize "AC2D20.WEAPONS.type"}}</strong></label>
+        <select name="system.weaponType">
+          {{#select system.weaponType}}
           {{#each AC2D20.WEAPONS.weaponTypes as |weaponType key| }}
           <option value="{{weaponType.bonusAttribute}}">{{localize (concat 'AC2D20.WEAPONS.weaponTypes.' weaponType.label)}}</option>
           {{/each}}
@@ -35,8 +35,8 @@
 
       <div class="flexrow resource-row bgOdd resource">
         <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Skill"}}</strong></label>
-        <select name="data.skill">
-          {{#select data.skill}}
+        <select name="system.skill">
+          {{#select system.skill}}
           {{#each AC2D20.SKILLS as |skill key|}}
           <option value="{{skill.key}}">{{localize (concat 'AC2D20.SKILL.' skill.label)}}</option>
           {{/each}}
@@ -46,10 +46,10 @@
 
       <div class="flexrow resource-row bgOdd resource">
         <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
-        <select name="data.focus">
-          {{#select data.focus}}
-          {{#each (getSkillFocusList data.skill) as |foc key|}}
-          {{log data.skill}}
+        <select name="system.focus">
+          {{#select system.focus}}
+          {{#each (getSkillFocusList system.skill) as |foc key|}}
+          {{log system.skill}}
           <option value="{{foc}}">{{localize foc}}</option>
           {{/each}}
           {{/select}}
@@ -58,8 +58,8 @@
 
       <!-- <div class="flexrow resource-row bgOdd resource">
         <label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
-        <select name="data.focus">
-          {{#select data.focus}}
+        <select name="system.focus">
+          {{#select system.focus}}
           {{#each AC2D20.WEAPONS.fightingFocuses as |foc key|}}
           <option value="{{key}}">{{localize foc}}</option>
           {{/each}}
@@ -68,9 +68,9 @@
       </div> -->
 
       <div class="resource-row flexrow bgEven resource">
-        <label class="resource-label" for="data.range"><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}</strong></label>
-        <select name="data.range">
-          {{#select data.range}}
+        <label class="resource-label" for="system.range"><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}</strong></label>
+        <select name="system.range">
+          {{#select system.range}}
           {{#each AC2D20.WEAPONS.range as |range key|}}
           <option value="{{key}}">{{localize range }}</option>
           {{/each}}
@@ -79,18 +79,18 @@
       </div>
 
       <div class="resource-row flexrow bgOdd resource">
-        <label class="resource-label" for="data.stress"><strong>{{localize "AC2D20.STRESS.stress"}}</strong></label>
-        <input type="number" name="data.stress" value="{{data.stress}}">
+        <label class="resource-label" for="system.stress"><strong>{{localize "AC2D20.STRESS.stress"}}</strong></label>
+        <input type="number" name="system.stress" value="{{system.stress}}">
       </div>
 
       <div class="resource-row flexrow bgEven resource">
-        <label class="resource-label" for="data.ammo"><strong>{{localize "AC2D20.TEMPLATES.Ammo"}}</strong></label>
-        <input type="number" name="data.ammo" value="{{data.ammo}}">
+        <label class="resource-label" for="system.ammo"><strong>{{localize "AC2D20.TEMPLATES.Ammo"}}</strong></label>
+        <input type="number" name="system.ammo" value="{{system.ammo}}">
       </div>
 
       <div class="resource-row flexrow bgOdd resource">
-        <label class="resource-label" for="data.salvo"><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}</strong></label>
-        <input type="text" name="data.salvo" value="{{data.salvo}}">
+        <label class="resource-label" for="system.salvo"><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}</strong></label>
+        <input type="text" name="system.salvo" value="{{system.salvo}}">
       </div>
 
       <div class="grid">
@@ -100,10 +100,10 @@
             <span class="right-slope olive"></span>
           </div>
           <div class="items-list" style="border: 1px solid #759549;">
-            {{#each data.qualities as |item key|}}
+            {{#each system.qualities as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
               <label>
-                <input type="checkbox" name="data.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' key)}}
+                <input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' key)}}
               </label>
             </div>
             {{/each}}
@@ -115,13 +115,13 @@
             <span class="right-slope olive"></span>
           </div>
           <div class="items-list" style="border: 1px solid #759549;">
-            {{#each data.effect as |item key|}}
+            {{#each system.effect as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
               <label>
-                <input type="checkbox" name="data.effect.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.damageEffect.' key)}}
+                <input type="checkbox" name="system.effect.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.damageEffect.' key)}}
               </label>
               {{#if (ne item.rank undefined)}}
-              <input type="number" name="data.effect.{{key}}.rank" class="num-short-2" style="height: 1.1rem;" value="{{item.rank}}">
+              <input type="number" name="system.effect.{{key}}.rank" class="num-short-2" style="height: 1.1rem;" value="{{item.rank}}">
               {{/if}}
             </div>
             {{/each}}

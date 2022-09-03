@@ -234,11 +234,11 @@ export class Roller2D20 {
             }
             if (item) {
                 if (item.type === 'spell') {
-                    itemEffects = item.data.data.costEffects;
+                    itemEffects = item.system.costEffects;
                 } else if (item.type === 'weapon') {
-                    for (let de in item.data.data.effect) {
-                        if (item.data.data.effect[de].value) {
-                            let rank = item.data.data.effect[de].rank ?? "";
+                    for (let de in item.system.effect) {
+                        if (item.system.effect[de].value) {
+                            let rank = item.system.effect[de].rank ?? "";
                             let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
                             let efectLabel = `${damageEffectLabel}${rank}`;
                             itemEffects.push(efectLabel);
@@ -246,8 +246,8 @@ export class Roller2D20 {
                     }
                     itemEffects = itemEffects.join(', ')
 
-                    for (let qu in item.data.data.qualities) {
-                        if (item.data.data.qualities[qu].value) {
+                    for (let qu in item.system.qualities) {
+                        if (item.system.qualities[qu].value) {
                             let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
                             itemQualities.push(quLabel)
                         }
@@ -269,7 +269,7 @@ export class Roller2D20 {
 
         //     for (let qu in weapon.data.qualities) {
         //         if (weapon.data.qualities[qu].value) {
-        //             //let rank = weapon.data.data.effect[qu].rank ?? "";
+        //             //let rank = weapon.system.effect[qu].rank ?? "";
         //             let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
         //             //let quLabel = `${damageEffectLabel}${rank}`;
         //             weaponQualityList.push(quLabel);

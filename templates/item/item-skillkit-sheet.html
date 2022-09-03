@@ -22,7 +22,7 @@
                         <h3>{{localize "AC2D20.TEMPLATES.SkillFocus"}}</h3>
                         <span class="right-slope olive"></span>
                     </div>
-                    <input type="text" name="data.skill" value="{{data.skill}}">
+                    <input type="text" name="system.skill" value="{{system.skill}}">
                 </div>
 
                 <div class="resource-row bgOdd">
@@ -30,7 +30,7 @@
                         <h3>{{localize "AC2D20.TEMPLATES.Resources"}}</h3>
                         <span class="right-slope olive"></span>
                     </div>
-                    <input type="number" name="data.resources" value="{{data.resources}}" style="text-align:center">
+                    <input type="number" name="system.resources" value="{{system.resources}}" style="text-align:center">
                 </div>
             </div>
 
@@ -38,8 +38,7 @@
                 <h3>{{localize "AC2D20.TEMPLATES.Description"}}</h3>
                 <span class="right-slope olive"></span>
             </div>
-            {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
-
+            {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
         </div>
     </section>
 </form>

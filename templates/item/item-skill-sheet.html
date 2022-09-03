@@ -16,7 +16,7 @@
 
     {{!-- Description Tab --}}
     <div class="tab description" data-group="primary" data-tab="description">
-      {{editor content=data.description target="data.description" rollData=rollData button=true owner=owner editable=editable}}
+      {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
     </div>
 
     {{!-- Attributes Tab --}}
@@ -24,11 +24,11 @@
       {{!-- As you add new fields, add them in here! --}}
       <div class="flexrow resource green-field">
         <label>{{localize "AC2D20.TEMPLATES.Skill_Value"}}</label>
-        <input type="number" name="data.value" value="{{data.value}}" style="text-align: center;">
+        <input type="number" name="system.value" value="{{system.value}}" style="text-align: center;">
       </div>
       <div class="flexcol">
         <div><button class="focus-add" style="margin-bottom: 5px;">+Add Focus</button></div>
-        {{#each data.focuses as |focus key|}}
+        {{#each system.focuses as |focus key|}}
         <div class="focus-item">
           <input type="text" class='focus-title' value="{{focus.title}}">
           <span style="margin: 0 5px; display: flex; align-items: center;">

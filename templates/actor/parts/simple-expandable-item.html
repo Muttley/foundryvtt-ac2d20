@@ -3,16 +3,16 @@
         <div class="item-name flexlarge expandable-info">
             <h4><a class="resource-label">{{item.name}}</a></h4>
             {{log item}}
-            {{#if (eq item.type 'talent')}}<h3>{{item.data.keywords}}</h3>{{/if}}
+            {{#if (eq item.type 'talent')}}<h3>{{item.system.keywords}}</h3>{{/if}}
         </div>
         <div class="item-controls">
-            {{#ifCond item.data.stashed '!=' null}}
-            <a class="item-control item-stash {{#unless item.data.stashed}}item-unstashed{{/unless}}" title='{{localize "AC2D20.UI.stashed"}}'>
+            {{#ifCond item.system.stashed '!=' null}}
+            <a class="item-control item-stash {{#unless item.system.stashed}}item-unstashed{{/unless}}" title='{{localize "AC2D20.UI.stashed"}}'>
                 <i class="fas fa-briefcase"></i>
             </a>
             {{/ifCond}}
-            {{#if item.data.equippable}}
-            <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.equipped"}}'>
+            {{#if item.system.equippable}}
+            <a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.equipped"}}'>
                 <i class="fas fa-tshirt"></i>
             </a>
             {{/if}}

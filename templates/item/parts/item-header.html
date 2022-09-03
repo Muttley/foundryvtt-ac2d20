@@ -9,16 +9,16 @@
         </div>
 
 
-        {{#if data.weight includeZero=true}}
+        {{#if system.weight includeZero=true}}
         <div style="display: flex; flex-direction: row; justify-content: space-between;">
             <div class="resource">
                 <label class="resource-label">{{localize "AC2D20.UI.Quantity"}}</label>
-                <input class="num-short-2" type="number" name="data.quantity" value="{{data.quantity}}" data-dtype="Number" />
+                <input class="num-short-2" type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
             </div>
             <div class="resource">
                 <label class="resource-label">{{localize "AC2D20.TEMPLATES.Size"}}</label>
-                <select name="data.weight">
-                    {{#select data.weight}}
+                <select name="system.weight">
+                    {{#select system.weight}}
                     <option value="0" data-dtype="Number">Trivial</option>
                     <option value="1" data-dtype="Number">Minor</option>
                     <option value="3" data-dtype="Number">Major</option>
@@ -27,7 +27,7 @@
             </div>
             <div class="resource">
                 <label class="resource-label">{{localize "AC2D20.TEMPLATES.Restriction"}}</label>
-                <input class="num-short-2" type="number" name="data.restriction" value="{{data.restriction}}" data-dtype="Number" />
+                <input class="num-short-2" type="number" name="system.restriction" value="{{system.restriction}}" data-dtype="Number" />
             </div>
         </div>
         {{/if}}

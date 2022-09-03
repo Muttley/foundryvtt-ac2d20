@@ -99,6 +99,8 @@ export const registerHandlebarsHelpers = function () {
         return effects.join(', ')
     });
     Handlebars.registerHelper('getWeaponQualities', function (weapon) {
+        console.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        console.info(weapon)
         let qualities = [];
         Object.entries(weapon.qualities).forEach(([k, v]) => {
             let quString = '';
@@ -111,14 +113,14 @@ export const registerHandlebarsHelpers = function () {
     });
 
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
-        if (weapon.data.data.weaponType == "creatureAttack" || weapon.actor?.type == "creature")
+        if (weapon.system.weaponType == "creatureAttack" || weapon.actor?.type == "creature")
             return true;
         else
             return false;
     });
 
     Handlebars.registerHelper('isWeaponUsingMeleeBonus', function (weapon, actor) {
-        if ((weapon.data.weaponType == "unarmed" || weapon.data.weaponType == "meleeWeapons") && actor?.type != "creature")
+        if ((weapon.weaponType == "unarmed" || weapon.weaponType == "meleeWeapons") && actor?.type != "creature")
             return true;
         else
             return false;
@@ -133,15 +135,15 @@ export const registerHandlebarsHelpers = function () {
 
     Handlebars.registerHelper('getAttributeBonus', function (actor, weaponType) {
         if (weaponType == 'agi')
-            return actor.data.data.attributes['bra'].bonus;
+            return actor.system.attributes['bra'].bonus;
         else if (weaponType == 'coo')
-            return actor.data.data.attributes['ins'].bonus;
+            return actor.system.attributes['ins'].bonus;
         else if (weaponType == 'wil')
-            return actor.data.data.attributes['wil'].bonus;
+            return actor.system.attributes['wil'].bonus;
     });
 
     Handlebars.registerHelper('getArmorQualities', function (armor) {
-        let qual = Object.entries(armor.data.qualities).filter(([k, v]) => v.value).map(m => m[0]);
+        let qual = Object.entries(armor.qualities).filter(([k, v]) => v.value).map(m => m[0]);
         return qual;
     });
 
