@@ -103,7 +103,7 @@
                     <span>Qualities:</span>
                     {{#each system.qualities as |qu quid|}}
                     {{#if (eq qu.value true)}}
-                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" quality_id="{{quid}}"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
+                    <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
                     {{/if}}
                     {{/each}}
                 </div>
