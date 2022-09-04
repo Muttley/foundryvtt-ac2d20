@@ -98,8 +98,6 @@ export class ACActorSheet extends ActorSheet {
      */
     _prepareCharacterData(context) {
         let isEncumbered = false;
-        console.info("---------*********-----------")
-        console.info(context.items)
         let physicalItems = context.items.filter(i => i.system.hasOwnProperty('weight'));
         let encumberingItems = physicalItems.filter((i) => {
             if (i.type != 'armor') {
@@ -342,10 +340,6 @@ export class ACActorSheet extends ActorSheet {
             let data = {};
             data[keyToChange] = newValue;
             let updatedItem = { _id: item.id, data: data };
-
-
-            //updatedItem.data[keyToChange] = newValue;
-            console.warn(updatedItem)
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         })
 
@@ -492,18 +486,14 @@ export class ACActorSheet extends ActorSheet {
         //     await this.actor.update({ 'data.injuries.list': updates });
         // });
         html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
-            console.warn($(ev.currentTarget).parents(".injury"))
             const $parent = $(ev.currentTarget).parents(".injury");
-            console.warn($parent)
             const injuryNum = $parent.data("injury");
             let inj = {
                 text: $parent.find('.injury-text').val(),
                 treated: $parent.find('.controls .treated').is(":checked"),
                 injuryType: $parent.find('.controls .injury-type').is(":checked")
             }
-            console.warn(inj)
             const dataPath = `system.injuries.${injuryNum}`
-            console.warn(dataPath)
             await this.actor.update({[`${dataPath}`]: inj });
 
         })
@@ -640,7 +630,7 @@ export class ACActorSheet extends ActorSheet {
             });
         } else {
             let div = $(
-                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.system.description)}</div></div></div>`
+                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.system.description, {async:false})}</div></div></div>`
             );
             li.append(div.hide());
             div.slideDown(200);
@@ -661,7 +651,6 @@ export class ACActorSheet extends ActorSheet {
 
     // Toggle Equipment
     _toggleEquipped(id, item) {
-        console.log('IS EQIP', item.system.equipped)
         return {
             _id: id,
             data: {

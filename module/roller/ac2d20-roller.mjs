@@ -240,7 +240,7 @@ export class Roller2D20 {
                         if (item.system.effect[de].value) {
                             let rank = item.system.effect[de].rank ?? "";
                             let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-                            let efectLabel = `${damageEffectLabel}${rank}`;
+                            let efectLabel = `<span data-tooltip="${Handlebars.helpers.getTooltipFromConfigKey('AC2D20.WEAPONS.effects.'+de)}">${damageEffectLabel}${rank}</span>`;
                             itemEffects.push(efectLabel);
                         }
                     }

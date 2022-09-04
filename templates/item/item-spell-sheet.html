@@ -49,7 +49,6 @@
                         {{#select system.focus}}
                         <option value="">{{localize foc}}</option>
                         {{#each (getSkillFocusList system.skill) as |foc key|}}
-                        {{log system.skill}}
                         <option value="{{foc}}">{{localize foc}}</option>
                         {{/each}}
                         {{/select}}

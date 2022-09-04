@@ -37,7 +37,6 @@ export class ACItem extends Item {
         await this.update(updatedItem);
     }
     async deleteFocus(_index) {
-        console.log(_index)
         let focuses = this.system.focuses;
         focuses.splice(_index, 1);
         let updatedItem = { _id: this.id, "system.focuses": focuses } ;

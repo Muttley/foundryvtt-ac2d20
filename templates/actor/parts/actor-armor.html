@@ -20,7 +20,7 @@
                 </a></div>
             <div class="cell f1 align-center">{{item.system.resistance}}</div>
             <div class="cell f3 align-center">
-                {{#each (getArmorQualities item)}}
+                {{#each (getArmorQualities item.system.qualities)}}
                 {{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
                 {{/each}}
             </div>

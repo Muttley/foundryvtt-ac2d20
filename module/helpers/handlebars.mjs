@@ -84,32 +84,38 @@ export const registerHandlebarsHelpers = function () {
         return _skill[0].focuses;
     });
 
-    Handlebars.registerHelper('getWeaponEffects', function (weapon) {
+    Handlebars.registerHelper('getWeaponEffects', function (effect) {
         let effects = [];
-        Object.entries(weapon.effect).forEach(([k, v]) => {
+        Object.entries(effect).forEach(([k, v]) => {
             let effString = '';
+            let tooltip = ''
             if (v.value) {
-                effString += v.label;
+                let tstr = 'AC2D20.WEAPONS.effects.'+ k;
+                tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr)
+                effString += `<span data-tooltip="${tooltip}">${v.label}`;
                 if (v.rank) {
                     effString += ` ${v.rank}`;
                 }
+                effString += `</span>`
                 effects.push(effString)
             }
         })
         return effects.join(', ')
     });
-    Handlebars.registerHelper('getWeaponQualities', function (weapon) {
-        console.info("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        console.info(weapon)
-        let qualities = [];
-        Object.entries(weapon.qualities).forEach(([k, v]) => {
+
+    Handlebars.registerHelper('getWeaponQualities', function (qualities) {
+        let _qualities = [];
+        Object.entries(qualities).forEach(([k, v]) => {
             let quString = '';
+            let tooltip = ''
             if (v.value) {
-                quString += v.label;
-                qualities.push(quString)
+                let tstr = 'AC2D20.WEAPONS.qualities.'+ k;
+                tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr)
+                quString += `<span data-tooltip="${tooltip}">${v.label}</span>`;
+                _qualities.push(quString)
             }
         })
-        return qualities.join(', ')
+        return _qualities.join(', ')
     });
 
     Handlebars.registerHelper('isCreaturesWeapon', function (weapon) {
@@ -142,8 +148,8 @@ export const registerHandlebarsHelpers = function () {
             return actor.system.attributes['wil'].bonus;
     });
 
-    Handlebars.registerHelper('getArmorQualities', function (armor) {
-        let qual = Object.entries(armor.qualities).filter(([k, v]) => v.value).map(m => m[0]);
+    Handlebars.registerHelper('getArmorQualities', function (qualities) {
+        let qual = Object.entries(qualities).filter(([k, v]) => v.value).map(m => m[0]);
         return qual;
     });
 
@@ -195,4 +201,12 @@ export const registerHandlebarsHelpers = function () {
             return Array.prototype.slice.call(arguments, 0, -1).some(Boolean);
         }
     });
+
+    Handlebars.registerHelper('enrichHtmlHelper', function (rawText) {
+        return TextEditor.enrichHTML(rawText, { async: false })
+    })
+
+    Handlebars.registerHelper('getTooltipFromConfigKey', function (key) {
+        return key.split('.').reduce((o,i)=> o[i], CONFIG)
+    })
 }

@@ -85,7 +85,7 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                 ui.notifications.notify('Select Dice you want to Reroll');
             }
             else {
-                let ac2d20Roll = message.data.flags.ac2d20roll;
+                let ac2d20Roll = message.flags.ac2d20roll;
                 if (ac2d20Roll.diceFace == "d20") {
                     Roller2D20.rerollD20({
                         rollname: ac2d20Roll.rollname,
@@ -100,8 +100,8 @@ Hooks.on('renderChatMessage', (message, html, data) => {
                         rollname: ac2d20Roll.rollname,
                         rerollIndexes: rerollIndex,
                         dicesRolled: ac2d20Roll.dicesRolled,
-                        itemId: message.data.flags.itemId,
-                        actorId: message.data.flags.actorId,
+                        itemId: message.flags.itemId,
+                        actorId: message.flags.actorId,
                     });
                 } else {
                     ui.notifications.notify('No dice face reckognized');
@@ -123,9 +123,9 @@ Hooks.on('renderChatMessage', (message, html, data) => {
     if (addBtn.length > 0) {
         addBtn[0].setAttribute('data-messageId', message.id);
         addBtn.click((ev) => {
-            let ac2d20Roll = message.data.flags.ac2d20roll;
-            let itemId = message.data.flags.itemId;
-            let actorId = message.data.flags.actorId;
+            let ac2d20Roll = message.flags.ac2d20roll;
+            let itemId = message.flags.itemId;
+            let actorId = message.flags.actorId;
             game.ac2d20.DialogD6.createDialog({ rollname: ac2d20Roll.rollname, diceNum: 1, ac2d20Roll: ac2d20Roll, itemId: itemId, actorId: actorId })
         });
     }
