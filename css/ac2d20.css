@@ -764,13 +764,13 @@ a:hover {
 }
 
 .ac2d20 .stress-derived-box {
-  padding: 5px;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .ac2d20 .derived-box {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -1185,6 +1185,7 @@ a:hover {
 }
 
 .ac2d20 .num-short-2 {
+  min-width: 2rem;
   max-width: 2rem;
   text-align: center;
 }

@@ -21,32 +21,39 @@
   {{/each}}
 </div>
 
-<div class="flexrow stress-derived-box">
-  <div class="flexrow flex-2">
-    <div class="derived-box" style="justify-content: start;">
+<div class="stress-derived-box">
+  <div class="flexrow">
+    <div class="derived-box">
       <h3 style="padding-right: 25px;">STRESS</h3>
-      <h3 class='minmax'>min</h3>
-      <input class="num-short-3" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
-      <h3 class='minmax'>max</h3>
-      <input class="num-short-3" type="number" min="0" name="system.stress.max" value="{{system.stress.max}}">
+      <!-- <h3 class='minmax'>min</h3> -->
+      <input class="num-short-2" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
+      <h3 class='minmax'>/</h3>
+      <input class="num-short-2" type="number" min="0" name="system.stress.max" value="{{system.stress.max}}">
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
+    <input class="num-short-2" type="number" min="0" name="system.fatigue" value="{{system.fatigue}}">
+    <div class="section-title">
+      <h3>Fatigue</h3>
+      <span class="right-slope olive"></span>
+    </div>
+  </div>
+  <div class="derived-box">
+    <input class="num-short-2" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
     <div class="section-title">
       <h3>Courage</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
+    <input class="num-short-2" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
     <div class="section-title">
       <h3>Armor</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
+    <input class="num-short-2" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
     <div class="section-title">
       <h3>Fortune</h3>
       <span class="right-slope olive"></span>
