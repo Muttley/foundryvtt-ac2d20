@@ -1,52 +1,59 @@
 <div class="attribute-grid" style="margin-bottom: 10px;">
   <div class='attribute-cell olive'>Attribute</div>
-  {{#each data.attributes as |attribute key|}}
+  {{#each system.attributes as |attribute key|}}
   <div class="attribute-cell green">
     <label class="resource-label align-left roll-attribute clickable" data-label="{{attribute.label}}" data-attr="{{key}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
   </div>
   {{/each}}
 
   <div class='attribute-cell green'><strong>Rating</strong></div>
-  {{#each data.attributes as |attribute key|}}
+  {{#each system.attributes as |attribute key|}}
   <div class="attribute-cell">
-    <input type="number" class="borderless" name="data.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
+    <input type="number" class="borderless" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
   </div>
   {{/each}}
 
   <div class='attribute-cell green'><strong>Bonus</strong></div>
-  {{#each data.attributes as |attribute key|}}
+  {{#each system.attributes as |attribute key|}}
   <div class="attribute-cell">
-    <input type="number" class="borderless" name="data.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
+    <input type="number" class="borderless" name="system.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
   </div>
   {{/each}}
 </div>
 
-<div class="flexrow stress-derived-box">
-  <div class="flexrow flex-2">
-    <div class="derived-box" style="justify-content: start;">
+<div class="stress-derived-box">
+  <div class="flexrow">
+    <div class="derived-box">
       <h3 style="padding-right: 25px;">STRESS</h3>
-      <h3 class='minmax'>min</h3>
-      <input class="num-short-3" type="number" min="0" name="data.stress.value" value="{{data.stress.value}}">
-      <h3 class='minmax'>max</h3>
-      <input class="num-short-3" type="number" min="0" name="data.stress.max" value="{{data.stress.max}}">
+      <!-- <h3 class='minmax'>min</h3> -->
+      <input class="num-short-2" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
+      <h3 class='minmax'>/</h3>
+      <input class="num-short-2" type="number" min="0" name="system.stress.max" value="{{system.stress.max}}">
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0" name="data.courageResistance.value" value="{{data.courageResistance.value}}">
+    <input class="num-short-2" type="number" min="0" name="system.fatigue" value="{{system.fatigue}}">
+    <div class="section-title">
+      <h3>Fatigue</h3>
+      <span class="right-slope olive"></span>
+    </div>
+  </div>
+  <div class="derived-box">
+    <input class="num-short-2" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
     <div class="section-title">
       <h3>Courage</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0" name="data.armorResistance.value" value="{{data.armorResistance.value}}">
+    <input class="num-short-2" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
     <div class="section-title">
       <h3>Armor</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
-    <input class="num-short-3" type="number" min="0" name="data.fortune.value" value="{{data.fortune.value}}">
+    <input class="num-short-2" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
     <div class="section-title">
       <h3>Fortune</h3>
       <span class="right-slope olive"></span>
@@ -63,7 +70,7 @@
         <span class="right-slope olive"></span>
     </div>
     <div class="textbox">
-        <textarea name="data.truthsText">{{data.truthsText}}</textarea>
+        <textarea name="system.truthsText">{{system.truthsText}}</textarea>
     </div>
   </div>
   <div style="display: flex; flex-direction: column;">
@@ -73,34 +80,34 @@
     </div>
     <div class="injuries-grid">
       <div class="injury-cell injury" data-injury="injury0">    
-        {{#if (hasInjury data.injuries.injury0.text)}}
+        {{#if (hasInjury system.injuries.injury0.text)}}
         <div class="controls">
-          <input type="checkbox" class="injury-type" title="{{#if (eq data.injuries.injury0.injuryType true)}}Mental{{/if}}{{#if (ne data.injuries.injury0.injuryType true)}}Physical{{/if}}" {{#if (eq data.injuries.injury0.injuryType true)}}checked{{/if}}>
-          <input type="checkbox" class="treated" title="{{#if (eq data.injuries.injury0.treated true)}}Treated{{/if}}{{#if (ne data.injuries.injury0.treated true)}}Not Treated{{/if}}" {{#if (eq data.injuries.injury0.treated true)}}checked{{/if}}>
+          <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury0.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury0.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury0.injuryType true)}}checked{{/if}}>
+          <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury0.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury0.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury0.treated true)}}checked{{/if}}>
         </div>
         <hr style="margin: 1px 0;" />
         {{/if}}  
-        <textarea class="injury-text">{{data.injuries.injury0.text}}</textarea>
+        <textarea class="injury-text">{{system.injuries.injury0.text}}</textarea>
       </div>
       <div class="injury-cell injury" data-injury="injury1">    
-        {{#if (hasInjury data.injuries.injury1.text)}}
+        {{#if (hasInjury system.injuries.injury1.text)}}
         <div class="controls">
-          <input type="checkbox" class="injury-type" title="{{#if (eq data.injuries.injury1.injuryType true)}}Mental{{/if}}{{#if (ne data.injuries.injury1.injuryType true)}}Physical{{/if}}" {{#if (eq data.injuries.injury1.injuryType true)}}checked{{/if}}>
-          <input type="checkbox" class="treated" title="{{#if (eq data.injuries.injury1.treated true)}}Treated{{/if}}{{#if (ne data.injuries.injury1.treated true)}}Not Treated{{/if}}" {{#if (eq data.injuries.injury1.treated true)}}checked{{/if}}>
+          <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury1.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury1.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury1.injuryType true)}}checked{{/if}}>
+          <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury1.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury1.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury1.treated true)}}checked{{/if}}>
         </div>
         <hr style="margin: 1px 0;" />
         {{/if}}  
-        <textarea class="injury-text">{{data.injuries.injury1.text}}</textarea>
+        <textarea class="injury-text">{{system.injuries.injury1.text}}</textarea>
       </div>
       <div class="injury-cell injury" data-injury="injury2">    
-        {{#if (hasInjury data.injuries.injury2.text)}}
+        {{#if (hasInjury system.injuries.injury2.text)}}
         <div class="controls">
-          <input type="checkbox" class="injury-type" title="{{#if (eq data.injuries.injury2.injuryType true)}}Mental{{/if}}{{#if (ne data.injuries.injury2.injuryType true)}}Physical{{/if}}" {{#if (eq data.injuries.injury2.injuryType true)}}checked{{/if}}>
-          <input type="checkbox" class="treated" title="{{#if (eq data.injuries.injury2.treated true)}}Treated{{/if}}{{#if (ne data.injuries.injury2.treated true)}}Not Treated{{/if}}" {{#if (eq data.injuries.injury2.treated true)}}checked{{/if}}>
+          <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury2.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury2.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury2.injuryType true)}}checked{{/if}}>
+          <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury2.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury2.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury2.treated true)}}checked{{/if}}>
         </div>
         <hr style="margin: 1px 0;" />
         {{/if}}  
-        <textarea class="injury-text">{{data.injuries.injury2.text}}</textarea>
+        <textarea class="injury-text">{{system.injuries.injury2.text}}</textarea>
       </div>
     </div>
   </div>
@@ -117,10 +124,10 @@
       {{item.name}}
     </label>
     <div class="skill-value">
-      <input type="number" class="skill-value-input num-short-2 borderless" name="data.value" value="{{data.value}}">
+      <input type="number" class="skill-value-input num-short-2 borderless" name="system.value" value="{{system.value}}">
     </div>
     <div class="skill-focuses">
-      {{#each item.data.focuses}}
+      {{#each item.system.focuses}}
       <span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}},&nbsp;</span>
       {{/each}}
     </div>

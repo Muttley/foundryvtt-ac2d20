@@ -22,7 +22,7 @@
   <section class="sheet-body">
 
     {{!-- Owned skills Tab --}}
-<div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/actor-abilities.html"}}</div>
+    <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/actor-abilities.html"}}</div>
 
     {{!-- Talents Tab --}}
     <div class="tab" data-group="primary" data-tab="talents">
@@ -51,7 +51,7 @@
 
     {{!-- Biography Tab --}}
     <div class="tab data" data-group="primary" data-tab="data">
-      {{editor content=data.biography target="data.biography" rollData=rollData button=true owner=owner
+      {{editor biographyHTML target="system.biography" rollData=rollData button=true owner=owner
       editable=editable}}
     </div>
 

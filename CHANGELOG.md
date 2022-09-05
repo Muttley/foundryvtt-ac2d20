@@ -1,3 +1,9 @@
+# v10.0.0
+
+- System is compatible with Foundry v10
+- Added Fatigue value to the character sheet
+
+
 # v 1.0.5
 
 Fixed bug with Personal Truths and Injuries on the Actor sheet.

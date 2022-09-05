@@ -181,16 +181,14 @@ nav{
 }
 
 .stress-derived-box{
-  padding: 5px;
-  //background-color: $c-green-light;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 10px;
-  //border-top: 1px solid $c-green-olive;
-  //border-bottom: 1px solid $c-green-olive;
 }
 
 .derived-box{
   display:flex; 
-  justify-content: flex-end; 
+  //justify-content: flex-end; 
   align-items: center;
   input[type="number"]{
     font-size: 1.2rem; 

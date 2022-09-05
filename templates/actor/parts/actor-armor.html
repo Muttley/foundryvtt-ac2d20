@@ -10,31 +10,21 @@
             <div class="cell f1 align-center"><strong>Resistance</strong></div>
             <div class="cell f3 align-center"><strong>Qualities</strong></div>
             <div class="cell f1 align-center"><strong>Restriction</strong></div>
-            <!-- <div class="cell f1"></div> -->
         </div>
     </div>
     {{#each armor as |item key|}}
     <div class="item armor editable-item" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}&nbsp;<a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
+            <div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}&nbsp;<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
                     <i class="fas fa-tshirt"></i>
                 </a></div>
-            <div class="cell f1 align-center">{{item.data.resistance}}</div>
+            <div class="cell f1 align-center">{{item.system.resistance}}</div>
             <div class="cell f3 align-center">
-                {{#each (getArmorQualities item)}}
+                {{#each (getArmorQualities item.system.qualities)}}
                 {{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
                 {{/each}}
             </div>
-            <div class="cell f1 align-center">{{item.data.restriction}}</div>
-            <!-- <div class="cell f1 controls" style="display: flex; justify-content: space-between; border-right: none; ">
-                <span style="display: flex;">
-                    <a class="item-control item-toggle {{#unless item.data.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
-                        <i class="fas fa-tshirt"></i>
-                    </a>
-                    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                </span>
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-            </div> -->
+            <div class="cell f1 align-center">{{item.system.restriction}}</div>            
         </div>
     </div>
     {{/each}}

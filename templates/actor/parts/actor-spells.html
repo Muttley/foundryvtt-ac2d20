@@ -6,7 +6,7 @@
     <div class="section-title" style="border: 1px solid #759549;">
         <h3>Power</h3>
         <span class="right-slope olive"></span>
-        <input type="number" name="data.power.value" value="{{data.power.value}}" class="borderless num-short-3" style="height: 22px;">
+        <input type="number" name="system.power.value" value="{{system.power.value}}" class="borderless num-short-3" style="height: 22px;">
     </div>
 </div>
 <div class="ac-grid">
@@ -25,20 +25,20 @@
     <div class="item spell editable-item" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f4 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
-            <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.data.skill}} ({{item.data.focus}})</div>
-            <div class="cell f1 align-center">{{item.data.difficulty}}</div>
-            <div class="cell f3 roll-spell-cost clickable align-center">{{item.data.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.data.costEffects}}</div>
-            <div class="cell f1 align-center">{{item.data.duration}}</div>
+            <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} ({{item.system.focus}})</div>
+            <div class="cell f1 align-center">{{item.system.difficulty}}</div>
+            <div class="cell f3 roll-spell-cost clickable align-center">{{item.system.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.system.costEffects}}</div>
+            <div class="cell f1 align-center">{{item.system.duration}}</div>
         </div>
 
-        {{#if (gt item.data.ritualStress.max 0)}}
+        {{#if (gt item.system.ritualStress.max 0)}}
         <div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
             <span>
                 <strong>Ritual Stress: </strong>
-                <input type="number" class="ritual-stress item-value-changer num-short-2 num-small" data-field="ritualStress.value" value="{{data.ritualStress.value}}" min="0"> / {{item.data.ritualStress.max}} &nbsp; &nbsp;
+                <input type="number" class="ritual-stress item-value-changer num-short-2 num-small" data-field="ritualStress.value" value="{{system.ritualStress.value}}" min="0"> / {{item.system.ritualStress.max}} &nbsp; &nbsp;
                 <strong>Ritual Steps: </strong>
-                <input type="number" class="ritual-steps item-value-changer num-short-2 num-small" data-field="ritualSteps.value" value="{{data.ritualSteps.value}}" min="0"> / {{item.data.ritualSteps.max}} &nbsp; &nbsp;
-                <strong>Resistance: </strong>{{item.data.ritualResistance}}
+                <input type="number" class="ritual-steps item-value-changer num-short-2 num-small" data-field="ritualSteps.value" value="{{system.ritualSteps.value}}" min="0"> / {{item.system.ritualSteps.max}} &nbsp; &nbsp;
+                <strong>Resistance: </strong>{{item.system.ritualResistance}}
             </span>
         </div>
         {{/if}}

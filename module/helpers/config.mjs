@@ -92,18 +92,50 @@ AC2D20.WEAPONS = {
     "long": "AC2D20.RANGE.long",
     "extreme": "AC2D20.RANGE.extreme"
   },
-  "weaponTypes": [{
-    'label': "Melee",
-    'bonusAttribute': 'agi'
+  "weaponTypes": [
+    {
+      'label': "Melee",
+      'bonusAttribute': 'agi'
+    },
+    {
+      'label': "Ranged",
+      'bonusAttribute': 'coo'
+    },
+    {
+      'label': "Mental",
+      'bonusAttribute': 'wil'
+    }
+  ],
+  "effects": {
+    "area": "pg.99",
+    "backlash": "pg.99",
+    "drain": "pg.99",
+    "intense": "pg.99",
+    "persistent": "pg.99",
+    "piercing": "pg.99",
+    "snare": "pg.99",
+    "stun": "pg.99",
+    "vicious": "pg.99"
   },
-  {
-    'label': "Ranged",
-    'bonusAttribute': 'coo'
-  },
-  {
-    'label': "Mental",
-    'bonusAttribute': 'wil'
-  }]
+  "qualities": {
+    "accurate": "pg.99",
+    "bane": "GM's pg.58",
+    "closeQuarters": "pg.99",
+    "cumbersome": "pg.100", 
+    "debilitating": "pg.100", 
+    "escalation": "pg.100", 
+    "giant-killer": "pg.100", 
+    "heavy": "pg.100",
+    "hidden": "pg.100",
+    "hunger": "GM's pg.58 ",
+    "inaccurate": "pg.100",
+    "indirect": "pg.100",
+    "munition": "pg.100",
+    "parrying": "pg.100",
+    "reliable": "pg.100",
+    "subtle": "pg.100",
+    "unreliable": "pg.100"
+  }
 }
 
 

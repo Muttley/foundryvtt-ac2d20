@@ -20,24 +20,47 @@ export class ACActorSheet extends ActorSheet {
 
     /** @override */
     get template() {
-        return `systems/ac2d20/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+        return `systems/ac2d20/templates/actor/actor-${this.actor.type}-sheet.html`;
     }
 
     /* -------------------------------------------- */
 
     /** @override */
-    getData() {
-        // Retrieve the data structure from the base sheet. You can inspect or log
-        // the context variable to see the structure, but some key properties for
-        // sheets are the actor object, the data object, whether or not it's
-        // editable, the items array, and the effects array.
-        const context = super.getData();
-        // Use a safe clone of the actor data for further operations.
-        const actorData = context.actor.data;
+    async getData() {
+       
+        //const context = super.getData();
+        
+        //const actorData = context.actor.data;
+
+        const source = this.actor.toObject();
+        const actorData = this.actor.toObject(false);
+
+        const context = {
+            actor: actorData,
+            source: source.system,
+            system: actorData.system,
+            items: actorData.items,
+            effects: prepareActiveEffectCategories(this.actor.effects),      
+            owner: this.actor.isOwner,
+            limited: this.actor.limited,
+            options: this.options,
+            editable: this.isEditable,
+            type: this.actor.type,      
+            isCharacter: this.actor.type === "character",
+            isNPC: this.actor.type === "npc",
+            isVehicle: this.actor.type === "vehicle",
+            rollData: this.actor.getRollData.bind(this.actor)
+        }
 
         // Add the actor's data to context.data for easier access, as well as flags.
-        context.data = actorData.data;
-        context.flags = actorData.flags;
+        //context.data = actorData.data;
+        //context.flags = actorData.flags;
+
+        context.biographyHTML = await TextEditor.enrichHTML(context.system.biography, {
+            secrets: this.actor.isOwner,
+            rollData: context.rollData,
+            async: true
+          });
 
         // Prepare character data and items.
         if (actorData.type == 'character') {
@@ -75,25 +98,25 @@ export class ACActorSheet extends ActorSheet {
      */
     _prepareCharacterData(context) {
         let isEncumbered = false;
-        let physicalItems = context.items.filter(i => i.data.hasOwnProperty('weight'));
+        let physicalItems = context.items.filter(i => i.system.hasOwnProperty('weight'));
         let encumberingItems = physicalItems.filter((i) => {
             if (i.type != 'armor') {
                 return true;
             }
             else {
-                if (!i.data.equipped || (i.data.equipped && i.data.qualities.heavy.value)) {
+                if (!i.system.equipped || (i.system.equipped && i.system.qualities.heavy.value)) {
                     return true
                 }
             }
         });
-        context.minorItemsTotal = encumberingItems.filter(i => parseInt(i.data.weight) === 1).length;
-        context.majorItemsTotal = encumberingItems.filter(i => parseInt(i.data.weight) === 3).length;
+        context.minorItemsTotal = encumberingItems.filter(i => parseInt(i.system.weight) === 1).length;
+        context.majorItemsTotal = encumberingItems.filter(i => parseInt(i.system.weight) === 3).length;
         let totalEncumbrance = 0;
         for (let i = 0; i < encumberingItems.length; i++) {
-            totalEncumbrance += parseInt(encumberingItems[i].data.quantity) * parseInt(encumberingItems[i].data.weight)
+            totalEncumbrance += parseInt(encumberingItems[i].system.quantity) * parseInt(encumberingItems[i].system.weight)
         }
 
-        if (totalEncumbrance > this.actor.data.data.carryCapacity.value)
+        if (totalEncumbrance > this.actor.system.carryCapacity.value)
             isEncumbered = true;
 
         context.totalEncumbrance = totalEncumbrance;
@@ -210,13 +233,13 @@ export class ACActorSheet extends ActorSheet {
         html.find('.roll-attribute.clickable').click((event) => {
             event.preventDefault();
             let attr = $(event.currentTarget).data('attr');
-            let attribute = this.actor.data.data.attributes[attr];
+            let attribute = this.actor.system.attributes[attr];
             let complication = 20;
-            if (this.actor.data.type == 'character')
+            if (this.actor.type == 'character')
                 complication -= this.actor.getComplicationFromInjuries();
 
-            if (this.actor.data.type == 'npc' || this.actor.data.type == 'vehicle')
-                complication -= this.actor.data.data.injuries.value;
+            if (this.actor.type == 'npc' || this.actor.type == 'vehicle')
+                complication -= this.actor.system.injuries.value;
 
             const attrName = game.i18n.localize('AC2D20.Ability.' + attr);
             game.ac2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication })
@@ -228,7 +251,7 @@ export class ACActorSheet extends ActorSheet {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
             let isFocused = $(ev.currentTarget).hasClass('focused');
-            this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[item.data.data.defaultAttribute].value, isFocused);
+            this._onRollSkill(item.name, item.system.value, this.actor.system.attributes[item.system.defaultAttribute].value, isFocused);
         });
         // Change Skill Rank value
         html.find('.skill-value-input').change(async (ev) => {
@@ -242,7 +265,7 @@ export class ACActorSheet extends ActorSheet {
         html.find('.skill .item-skill-focus').click(async (ev) => {
             const li = $(ev.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            let updatedItem = { _id: item.id, data: { focus: !item.data.data.focus } };
+            let updatedItem = { _id: item.id, data: { focus: !item.system.focus } };
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         });
         // * END SKILLS
@@ -257,7 +280,7 @@ export class ACActorSheet extends ActorSheet {
                 }
                 updates.push(truth);
             });
-            await this.actor.update({ 'data.truths': updates });
+            await this.actor.update({ 'system.truths': updates });
         });
         // * END TRUTHS
 
@@ -268,34 +291,34 @@ export class ACActorSheet extends ActorSheet {
             event.preventDefault();
             const li = $(event.currentTarget).parents(".item");
             const item = this.actor.items.get(li.data("itemId"));
-            let complication = 20 - parseInt(item.data.data.difficulty - 1)
-            if (item.actor.data.type == 'character')
+            let complication = 20 - parseInt(item.system.difficulty - 1)
+            if (item.actor.type == 'character')
                 complication -= item.actor.getComplicationFromInjuries();
 
-            if (item.actor.data.type == 'npc')
-                complication -= item.actor.data.data.injuries.value;
+            if (item.actor.type == 'npc')
+                complication -= item.actor.system.injuries.value;
 
-            const skillName = item.data.data.skill;
-            const focusName = item.data.data.focus;
+            const skillName = item.system.skill;
+            const focusName = item.system.focus;
             if (!skillName)
                 return;
 
             const skill = this.actor.items.getName(skillName);
             let skillRank = 0;
             try {
-                skillRank = skill.data.data.value;
+                skillRank = skill.system.value;
             } catch (err) { }
             let isFocus = false;
             try {
-                for (const [key, value] of Object.entries(skill.data.data.focuses)) {
+                for (const [key, value] of Object.entries(skill.system.focuses)) {
                     if (value.title === focusName && value.isfocus)
                         isFocus = true;
                 }
             } catch (err) { }
-            //const attrValue = this.actor.data.data.attributes[item.data.data.spellType].value;
+            
             const attrValue = -1;
-            const prefAttribute = item.data.data.spellType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+            const prefAttribute = item.system.spellType;
+            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
 
         });
 
@@ -304,8 +327,8 @@ export class ACActorSheet extends ActorSheet {
             const li = $(event.currentTarget).parents(".item");
             const itemId = li.data("itemId");
             const item = this.actor.items.get(li.data("itemId"));
-            const cost = parseInt(item.data.data.cost);
-            game.ac2d20.DialogD6.createDialog({ rollName: `${item.data.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
+            const cost = parseInt(item.system.cost);
+            game.ac2d20.DialogD6.createDialog({ rollName: `${item.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id })
         })
 
         html.find('.item-value-changer').change(async (event) => {
@@ -317,10 +340,6 @@ export class ACActorSheet extends ActorSheet {
             let data = {};
             data[keyToChange] = newValue;
             let updatedItem = { _id: item.id, data: data };
-
-
-            //updatedItem.data[keyToChange] = newValue;
-            console.warn(updatedItem)
             await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
         })
 
@@ -331,30 +350,30 @@ export class ACActorSheet extends ActorSheet {
             const item = this.actor.items.get(li.data("itemId"));
             let complication = 20;
             // if unrelliable increase complication
-            for (const [k, v] of Object.entries(item.data.data.qualities)) {
+            for (const [k, v] of Object.entries(item.system.qualities)) {
                 if (v.value && k == 'unreliable')
                     complication -= 1;
             }
-            if (item.actor.data.type == 'character')
+            if (item.actor.type == 'character')
                 complication -= item.actor.getComplicationFromInjuries();
 
-            if (item.actor.data.type == 'npc' || item.actor.data.type == 'vehicle')
-                complication -= item.actor.data.data.injuries.value;
+            if (item.actor.type == 'npc' || item.actor.type == 'vehicle')
+                complication -= item.actor.system.injuries.value;
 
-            const focusName = item.data.data.focus;
+            const focusName = item.system.focus;
             //if (!focusName)
             //return;
 
-            const skill = this.actor.items.getName(item.data.data.skill);
+            const skill = this.actor.items.getName(item.system.skill);
             let skillRank = 0;
             try {
-                skillRank = skill.data.data.value;
+                skillRank = skill.system.value;
             } catch (err) {
                 console.log(err)
             }
             let isFocus = false;
             try {
-                for (const [key, value] of Object.entries(skill.data.data.focuses)) {
+                for (const [key, value] of Object.entries(skill.system.focuses)) {
                     if (value.title === focusName && value.isfocus)
                         isFocus = true;
                 }
@@ -362,8 +381,8 @@ export class ACActorSheet extends ActorSheet {
 
             const attrValue = item.actor.type == 'vehicle' ? 6 : -1;
             // weaponType is actualy attribute abrevation
-            const prefAttribute = item.data.data.weaponType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.data.data, prefAttribute: prefAttribute })
+            const prefAttribute = item.system.weaponType;
+            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
 
         });
 
@@ -373,14 +392,14 @@ export class ACActorSheet extends ActorSheet {
             const item = this.actor.items.get(li.data("itemId"));
             const itemId = li.data("itemId");
             let stressBonus = 0;
-            if (item.data.data.weaponType == 'agi')
-                stressBonus = item.actor.data.data.attributes['bra'].bonus;
-            else if (item.data.data.weaponType == 'coo')
-                stressBonus = item.actor.data.data.attributes['ins'].bonus;
-            else if (item.data.data.weaponType == 'wil')
-                stressBonus = item.actor.data.data.attributes['wil'].bonus;
-            let stress = parseInt(item.data.data.stress) + parseInt(stressBonus);
-            game.ac2d20.DialogD6.createDialog({ rollName: item.data.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor.data._id })
+            if (item.system.weaponType == 'agi')
+                stressBonus = item.actor.system.attributes['bra'].bonus;
+            else if (item.system.weaponType == 'coo')
+                stressBonus = item.actor.system.attributes['ins'].bonus;
+            else if (item.system.weaponType == 'wil')
+                stressBonus = item.actor.system.attributes['wil'].bonus;
+            let stress = parseInt(item.system.stress) + parseInt(stressBonus);
+            game.ac2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id })
         })
 
         // * AMMO COUNT UPDATE 
@@ -412,8 +431,8 @@ export class ACActorSheet extends ActorSheet {
 
         html.find('.roll-impact.clickable').click((event) => {
             event.preventDefault();
-            const impact = this.actor.data.data.impact;
-            game.ac2d20.DialogD6.createDialog({ rollName: `${this.actor.data.name} Impact`, diceNum: impact, ac2d20Roll: null })
+            const impact = this.actor.system.impact;
+            game.ac2d20.DialogD6.createDialog({ rollName: `${this.actor.name} Impact`, diceNum: impact, ac2d20Roll: null })
         })
 
         // * CLICK TO EXPAND
@@ -467,18 +486,14 @@ export class ACActorSheet extends ActorSheet {
         //     await this.actor.update({ 'data.injuries.list': updates });
         // });
         html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
-            console.warn($(ev.currentTarget).parents(".injury"))
             const $parent = $(ev.currentTarget).parents(".injury");
-            console.warn($parent)
             const injuryNum = $parent.data("injury");
             let inj = {
                 text: $parent.find('.injury-text').val(),
                 treated: $parent.find('.controls .treated').is(":checked"),
                 injuryType: $parent.find('.controls .injury-type').is(":checked")
             }
-            console.warn(inj)
-            const dataPath = `data.injuries.${injuryNum}`
-            console.warn(dataPath)
+            const dataPath = `system.injuries.${injuryNum}`
             await this.actor.update({[`${dataPath}`]: inj });
 
         })
@@ -596,11 +611,11 @@ export class ACActorSheet extends ActorSheet {
 
     _onRightClickSkill(itemId, attribute) {
         const item = this.actor.items.get(itemId);
-        this._onRollSkill(item.name, item.data.data.value, this.actor.data.data.attributes[attribute].value, item.data.data.focus);
+        this._onRollSkill(item.name, item.system.value, this.actor.system.attributes[attribute].value, item.system.focus);
     }
     _onRollSkill(skillName, rank, attribute, focus) {
         let complication = 20 - this.actor.getComplicationFromInjuries();
-        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.data.data })
+        game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.system })
     }
 
     _onItemSummary(event) {
@@ -615,7 +630,7 @@ export class ACActorSheet extends ActorSheet {
             });
         } else {
             let div = $(
-                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.data.data.description)}</div></div></div>`
+                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.system.description, {async:false})}</div></div></div>`
             );
             li.append(div.hide());
             div.slideDown(200);
@@ -629,18 +644,17 @@ export class ACActorSheet extends ActorSheet {
         return {
             _id: id,
             data: {
-                stashed: !item.data.data.stashed,
+                stashed: !item.system.stashed,
             },
         };
     }
 
     // Toggle Equipment
     _toggleEquipped(id, item) {
-        console.log('IS EQIP', item.data.data.equipped)
         return {
             _id: id,
             data: {
-                equipped: !item.data.data.equipped,
+                equipped: !item.system.equipped,
             },
         };
     }
@@ -650,7 +664,7 @@ export class ACActorSheet extends ActorSheet {
         return {
             _id: id,
             data: {
-                favorite: !item.data.data.favorite,
+                favorite: !item.system.favorite,
             },
         };
     }
