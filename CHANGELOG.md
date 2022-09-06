@@ -1,3 +1,7 @@
+# v10.0.1
+
+- Added Spahinsh translation (Thanks to Viajero Salvaje)
+
 # v10.0.0
 
 - System is compatible with Foundry v10
