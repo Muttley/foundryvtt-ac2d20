@@ -45,7 +45,7 @@
     </div>
     <div style="display: flex; flex-direction: column;">
         <div class="section-title">
-            <h3>Truths</h3>
+            <h3>{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
             <span class="right-slope olive"></span>
         </div>
         <div class="textbox" class="flexcol">
@@ -58,19 +58,19 @@
 <div class="grid grid-3col">
     <div>
         <span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
-            <label for="">Passengers:</label>
+            <label for="">{{localize "ACTOR.Vehicle.Passengers"}}: </label>
             <input type="text" name="system.passengers.value" value='{{system.passengers.value}}' class="underline" style="text-align: center;">
         </span>
     </div>
     <div>
         <span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
-            <label for="">Cover:</label>
+            <label for="">{{localize "ACTOR.Vehicle.Cover"}}: </label>
             <input type="text" name="system.cover.value" value='{{system.cover.value}}' class="underline" style="text-align: center;">
         </span>
     </div>
     <div>
         <span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
-            <label for="" class="roll-impact clickable"><strong>Impact: <span class="cth-ico-cth"></span></strong></label>
+            <label for="" class="roll-impact clickable"><strong>{{localize "ACTOR.Vehicle.Impact"}}: <span class="cth-ico-cth"></span></strong></label>
             <input type="number" name="system.impact" value='{{system.impact}}' class="underline" style="text-align: center;" data-dtype="number">
         </span>
     </div>
@@ -80,7 +80,7 @@
 <div class="grid" style="gap: 1.25rem; margin-bottom: 1.25rem;">
     <div>
         <div class="section-title">
-            <h3 class="">Qualities</h3>
+            <h3 class="">{{localize "AC2D20.WEAPONS.qualities"}}</h3>
             <span class="right-slope olive"></span>
         </div>
         <div class="items-list" style="border: 1px solid #759549;">
@@ -99,7 +99,7 @@
     </div>
     <div>
         <div class="section-title">
-            <h3>Weapons<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+            <h3>{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
             <span class="right-slope olive"></span>
         </div>
         <ul class="items-list-npc">
@@ -115,11 +115,11 @@
                 </span>
                 <div class="skill-focuses">
                     <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{system.focus}}</strong>,</span>
-                    <span>Range: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
+                    <span>{{localize "AC2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
                     <span>Salvo: <strong>{{system.salvo}}</strong>&nbsp;</span>
                 </div>
                 <div class="qualities" style="font-size: 0.688rem;">
-                    <span>Qualities:</span>
+                    <span>{{localize "AC2D20.WEAPONS.qualities"}}: </span>
                     {{#each system.qualities as |qu quid|}}
                     {{#if (eq qu.value true)}}
                     <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>

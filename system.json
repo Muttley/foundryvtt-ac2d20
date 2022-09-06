@@ -1,42 +1,58 @@
 {
-    "id": "ac2d20",
-    "title": "Achtung Cthulhu 2d20",
-    "description": "The unofficial !Achtung Cthulhu 2d20 System for FoundryVTT",
-    "version": "10.0.0",
-    "compatibility": {
-      "minimum": "10",
-      "verified": "10",
-      "maximum": "10"
+  "id": "ac2d20",
+  "title": "Achtung Cthulhu 2d20",
+  "description": "The unofficial !Achtung Cthulhu 2d20 System for FoundryVTT",
+  "version": "10.0.1",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  },
+  "templateVersion": 1,
+  "authors": [
+    {
+      "name": "HappySteve"
+    }
+  ],
+  "scripts": [],
+  "esmodules": [
+    "module/ac2d20.mjs"
+  ],
+  "styles": [
+    "css/ac2d20.css"
+  ],
+  "packs": [
+    {
+      "name": "skills",
+      "label": "Skills",
+      "system": "ac2d20",
+      "path": "./packs/skills.db",
+      "type": "Item"
     },
-    "templateVersion": 1,
-    "authors":[{"name":"HappySteve"}] ,
-    "scripts": [],
-    "esmodules": ["module/ac2d20.mjs"],
-    "styles": ["css/ac2d20.css"],
-    "packs": [{
-			"name": "skills",
-			"label": "Skills",
-			"system": "ac2d20",
-			"path": "./packs/skills.db",
-			"type": "Item"
-		},
     {
       "name": "ac-2d20-macros",
       "label": "AC 2d20 Macros",
       "system": "ac2d20",
       "path": "./packs/ac-2d20-macros.db",
       "type": "Macro"
-    }],
-    "languages": [{
+    }
+  ],
+  "languages": [
+    {
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
-    }],
-    "socket": true,
-    "gridDistance": 1,
-    "gridUnits": "m",
-    "url": "https://github.com/superseva/ac2d20",    
-    "manifest": "https://github.com/superseva/ac2d20/releases/latest/download/system.json",    
-    "download": "https://github.com/superseva/ac2d20/releases/download/v10.0.0/ac2d20.zip"
-  }
-  
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    }
+  ],
+  "socket": true,
+  "gridDistance": 1,
+  "gridUnits": "m",
+  "url": "https://github.com/superseva/ac2d20",
+  "manifest": "https://github.com/superseva/ac2d20/releases/latest/download/system.json",
+  "download": "https://github.com/superseva/ac2d20/releases/download/v10.0.1/ac2d20.zip"
+}

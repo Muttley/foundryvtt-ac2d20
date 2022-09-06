@@ -1,19 +1,19 @@
 <div class="attribute-grid" style="margin-bottom: 10px;">
-  <div class='attribute-cell olive'>Attribute</div>
+  <div class='attribute-cell olive'>{{localize "AC2D20.TEMPLATES.Attribute"}}</div>
   {{#each system.attributes as |attribute key|}}
   <div class="attribute-cell green">
     <label class="resource-label align-left roll-attribute clickable" data-label="{{attribute.label}}" data-attr="{{key}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
   </div>
   {{/each}}
 
-  <div class='attribute-cell green'><strong>Rating</strong></div>
+  <div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.rating"}}</strong></div>
   {{#each system.attributes as |attribute key|}}
   <div class="attribute-cell">
     <input type="number" class="borderless" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
   </div>
   {{/each}}
 
-  <div class='attribute-cell green'><strong>Bonus</strong></div>
+  <div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.bonus"}}</strong></div>
   {{#each system.attributes as |attribute key|}}
   <div class="attribute-cell">
     <input type="number" class="borderless" name="system.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
@@ -24,7 +24,7 @@
 <div class="stress-derived-box">
   <div class="flexrow">
     <div class="derived-box">
-      <h3 style="padding-right: 25px;">STRESS</h3>
+      <h3 style="padding-right: 25px;">{{localize "AC2D20.STRESS.stress"}}</h3>
       <!-- <h3 class='minmax'>min</h3> -->
       <input class="num-short-2" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
       <h3 class='minmax'>/</h3>
@@ -34,28 +34,28 @@
   <div class="derived-box">
     <input class="num-short-2" type="number" min="0" name="system.fatigue" value="{{system.fatigue}}">
     <div class="section-title">
-      <h3>Fatigue</h3>
+      <h3>{{localize "AC2D20.RESISTANCE.fatigue"}}</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
     <input class="num-short-2" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
     <div class="section-title">
-      <h3>Courage</h3>
+      <h3>{{localize "AC2D20.RESISTANCE.courage"}}</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
     <input class="num-short-2" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
     <div class="section-title">
-      <h3>Armor</h3>
+      <h3>{{localize "AC2D20.RESISTANCE.armor"}}</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
   <div class="derived-box">
     <input class="num-short-2" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
     <div class="section-title">
-      <h3>Fortune</h3>
+      <h3>{{localize "AC2D20.TEMPLATES.fortune"}}</h3>
       <span class="right-slope olive"></span>
     </div>
   </div>
@@ -66,7 +66,7 @@
 <div class="grid">
   <div style="display: flex; flex-direction: column;">
     <div class="section-title">
-        <h3 class="green">Personal Truths & Scars</h3>
+        <h3 class="green">{{localize "AC2D20.TEMPLATES.Personal_Truth_Scars"}}</h3>
         <span class="right-slope olive"></span>
     </div>
     <div class="textbox">
@@ -75,7 +75,7 @@
   </div>
   <div style="display: flex; flex-direction: column;">
     <div class="section-title">
-        <h3 class="green">Injuries</h3>
+        <h3 class="green">{{localize "AC2D20.TEMPLATES.INJURIES"}}</h3>
         <span class="right-slope olive"></span>
     </div>
     <div class="injuries-grid">
@@ -114,7 +114,7 @@
 </div>
 
 <div class="section-title">
-  <h3>Skills</h3>
+  <h3>{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
   <span class="right-slope olive"></span>
 </div>
 <div class="skills">
