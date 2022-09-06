@@ -43,7 +43,7 @@
     </div>
     <div style="display: flex; flex-direction: column;">
         <div class="section-title">
-            <h3 class="blue">Truths</h3>
+            <h3 class="blue">{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
             <span class="right-slope blue"></span>
         </div>
         <div class="textbox">
@@ -56,7 +56,7 @@
     <div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">Skills</h3>
+                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">
@@ -81,7 +81,7 @@
         </div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">Special Rules<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{ localize "AC2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">
@@ -103,7 +103,7 @@
     <div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">Weapons<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">
@@ -119,11 +119,11 @@
                     </span>
                     <div class="skill-focuses" for="">
                         <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{system.focus}}</strong>,</span>
-                        <span>Range: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
-                        <span>Salvo: <strong>{{system.salvo}}</strong>&nbsp;</span>
+                        <span>{{localize "AC2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
+                        <span>{{localize "AC2D20.TEMPLATES.Salvo"}}: <strong>{{system.salvo}}</strong>&nbsp;</span>
                     </div>
                     <div class="qualities" style="font-size: 0.688rem;">
-                        <span>Qualities:</span>
+                        <span>{{localize "AC2D20.WEAPONS.qualities"}}: </span>
                         {{#each system.qualities as |qu quid|}}
                         {{#if (eq qu.value true)}}
                         <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
@@ -136,7 +136,7 @@
         </div>
         <div style="margin-bottom: 2rem;">
             <div class="section-title">
-                <h3 class="blue">Spells And Rituals<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
             <ul class="items-list-npc">

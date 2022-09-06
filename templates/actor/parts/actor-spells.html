@@ -1,10 +1,10 @@
 <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
     <div class="section-title">
-        <h3>Spells<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+        <h3>{{localize "AC2D20.TEMPLATES.Spells"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
         <span class="right-slope olive"></span>
     </div>
     <div class="section-title" style="border: 1px solid #759549;">
-        <h3>Power</h3>
+        <h3>{{localize "AC2D20.TEMPLATES.Power"}}</h3>
         <span class="right-slope olive"></span>
         <input type="number" name="system.power.value" value="{{system.power.value}}" class="borderless num-short-3" style="height: 22px;">
     </div>
@@ -12,12 +12,12 @@
 <div class="ac-grid">
     <div class="item">
         <div class="row">
-            <div class="cell f4 green" style="background-color: #494e31;">Name</div>
-            <div class="cell f3 align-center">Skill (Focus)</div>
+            <div class="cell f4 green" style="background-color: #494e31;">{{localize "AC2D20.UI.Name"}}</div>
+            <div class="cell f3 align-center">{{localize "AC2D20.TEMPLATES.skill_focus"}}</div>
             <!-- <div class="cell f2">Focus</div> -->
-            <div class="cell f1 align-center">Diff</div>
-            <div class="cell f3 align-center">Cost</div>
-            <div class="cell f1 align-center">Dur</div>
+            <div class="cell f1 align-center">{{localize "AC2D20.TEMPLATES.Diff"}}</div>
+            <div class="cell f3 align-center">{{localize "AC2D20.TEMPLATES.Cost"}}</div>
+            <div class="cell f1 align-center">{{localize "AC2D20.TEMPLATES.Dur"}}</div>
             <!-- <div class="cell f1 align-center"></div> -->
         </div>
     </div>
@@ -34,11 +34,11 @@
         {{#if (gt item.system.ritualStress.max 0)}}
         <div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
             <span>
-                <strong>Ritual Stress: </strong>
+                <strong>{{localize "AC2D20.TEMPLATES.ritual_stress"}}: </strong>
                 <input type="number" class="ritual-stress item-value-changer num-short-2 num-small" data-field="ritualStress.value" value="{{system.ritualStress.value}}" min="0"> / {{item.system.ritualStress.max}} &nbsp; &nbsp;
-                <strong>Ritual Steps: </strong>
+                <strong>{{localize "AC2D20.TEMPLATES.ritual_steps"}}: </strong>
                 <input type="number" class="ritual-steps item-value-changer num-short-2 num-small" data-field="ritualSteps.value" value="{{system.ritualSteps.value}}" min="0"> / {{item.system.ritualSteps.max}} &nbsp; &nbsp;
-                <strong>Resistance: </strong>{{item.system.ritualResistance}}
+                <strong>{{localize "AC2D20.RESISTANCE.resistance"}}: </strong>{{item.system.ritualResistance}}
             </span>
         </div>
         {{/if}}

@@ -23,15 +23,17 @@
     },
     "AC2D20.OTHER": "Other",
     "AC2D20.RANGE": {
-        "reach":"Reach",
-        "close":"Close",
-        "medium":"Medium",
-        "long":"Long",
-        "extreme":"Extreme"
+        "reach": "Reach",
+        "close": "Close",
+        "medium": "Medium",
+        "long": "Long",
+        "extreme": "Extreme"
     },
     "AC2D20.RESISTANCE": {
         "armor": "Armor",
-        "courage": "courage"
+        "courage": "Courage",
+        "fatigue": "Fatigue",
+        "resistance": "Resistance"
     },
     "AC2D20.SKILL": {
         "ACADEMIA": "Academia",
@@ -45,7 +47,7 @@
         "STEALTH": "Stealth",
         "SURVIVAL": "Survival",
         "TACTICS": "Tactics",
-        "VEHICLES": "Vehicles"        
+        "VEHICLES": "Vehicles"
     },
     "AC2D20.FOCUS": {
         "Art": "Art",
@@ -117,51 +119,54 @@
         "Aircraft": "Aircraft",
         "Watercraft": "Watercraft"
     },
-    "AC2D20.SPELL":{
-        "SpellTypes":{
-            "ins":"Traditional",
-            "rea":"Researcher",
-            "wil":"Dabbler"
+    "AC2D20.SPELL": {
+        "SpellTypes": {
+            "ins": "Traditional",
+            "rea": "Researcher",
+            "wil": "Dabbler"
         }
     },
     "AC2D20.TEMPLATES": {
-        "Salvo":"Salvo",
-        "Resistance":"Resistance",
-        "Qualities":"Qualities",
-        "SkillFocus":"Skill Focus",
-        "Resources":"Resources",
-        "Restriction":"Restriction",
-        "SpecialRule":"SpecialRule",
-        "Power":"Power",
-        "Size":"Size",
-        "speed":"Speed",
-        "bonus":"Bonus",
-        "scale":"Scale",
-        "equipped":"equipped",
-        "SizeLevels":{
-            "Trivial":"Trivial",
-            "Minor":"Minor",
-            "Major":"Major"
+        "Salvo": "Salvo",
+        "Resistance": "Resistance",
+        "Qualities": "Qualities",
+        "SkillFocus": "Skill Focus",
+        "Resources": "Resources",
+        "Restriction": "Restriction",
+        "SpecialRule": "SpecialRule",
+        "SpecialRules": "Sepecial Rules",
+        "Power": "Power",
+        "Size": "Size",
+        "speed": "Speed",
+        "bonus": "Bonus",
+        "scale": "Scale",
+        "equipped": "equipped",
+        "SizeLevels": {
+            "Trivial": "Trivial",
+            "Minor": "Minor",
+            "Major": "Major"
         },
         "Abilities": "Abilities",
-        "Difficulty":"Difficulty",
-        "Cost":"Cost",
-        "SpellType":"Type",
-        "Talents":"Talents",
-        "Spells":"Spells",
+        "Difficulty": "Difficulty",
+        "Diff": "Diff",
+        "Cost": "Cost",
+        "SpellType": "Type",
+        "Talents": "Talents",
+        "Spells": "Spells",
+        "Spells_Rituals": "Spells And Rituals",
         "Ammo": "Ammo",
         "Attacks": "ATTACKS",
         "Attribute": "Attribute",
         "Attributes": "Attributes",
-		"Attr": "Attr.",
+        "Attr": "Attr.",
         "Compl": "Compl.",
         "Complications": "Complications",
-        "Conditions": "Conditions",        
+        "Conditions": "Conditions",
         "Create_Ammo": "Create Ammo",
         "Create_Special_Rule": "Create Special Rule",
-        "Create_Weapon": "Create Weapon",  
+        "Create_Weapon": "Create Weapon",
         "current": "current",
-        "CostEffects":"Cost Effects",
+        "CostEffects": "Cost Effects",
         "DAMAGE": "DAMAGE",
         "DAMAGE_EFFECTS": "DAMAGE EFFECTS",
         "DAMAGE_TYPE": "DAMAGE TYPE",
@@ -173,10 +178,13 @@
         "DERIVED": "DERIVED",
         "Description": "Description",
         "Duration": "Duration",
+        "Dur": "Dur",
         "Edit_Item": "Edit Item",
         "Effect": "Effect",
         "Effects": "Effects",
+        "Encumbrance": "Encumbrance",
         "Encumbrance_Level": "Encumbrance Level",
+        "Encumbered": "ENCUMBERED",
         "ENG": "ENG",
         "FAVORITE_WEAPONS": "FAVORITE WEAPONS",
         "FIRE_RATE": "FIRE RATE",
@@ -187,7 +195,7 @@
         "INITIATIVE": "INITIATIVE",
         "INJURIES": "Injuries",
         "Issue": "Issue",
-        "Keywords":"Keywords",
+        "Keywords": "Keywords",
         "lbs": "lbs",
         "Learned": "Learned",
         "Luck": "Luck",
@@ -222,20 +230,26 @@
         "Focus": "Focus",
         "TN": "TN",
         "Total": "Total",
-        "Use_Agility": "Use Agility",        
+        "Use_Agility": "Use Agility",
         "Use_Brawn": "Use Brawn",
         "Use_Coordination": "Use Coordination",
-        "Use_Insight": "Use Insight",        
+        "Use_Insight": "Use Insight",
         "Use_Reason": "Use Reason",
         "Use_Will": "Use Will",
         "Weapon_Qualities": "WEAPON QUALITIES",
         "Weapon_Type": "Weapon Type",
         "Weapons": "Weapons",
-        "Ritual":"Ritual", 
-        "ritual_stress":"Ritual Stress",
-        "ritual_steps":"Ritual Steps",
+        "Ritual": "Ritual",
+        "ritual_stress": "Ritual Stress",
+        "ritual_steps": "Ritual Steps",
         "ritual_resistance": "Resistance",
-        "ritual_requirements":"Requirements"
+        "ritual_requirements": "Requirements",
+        "fortune": "Fortune",
+        "Personal_Truth_Scars": "Personal Truths & Scars",
+        "Truths": "Truths",
+        "rating": "Rating",
+        "skill_focus": "Skill/Focus",
+        "AddFocus": "Add Focus"
     },
     "AC2D20.UI": {
         "Add": "Add",
@@ -256,7 +270,8 @@
         "Weight": "Weight"
     },
     "AC2D20.WEAPONS": {
-        "type":"Weapon Type",
+        "qualities": "Qualities",
+        "type": "Weapon Type",
         "damageEffect": {
             "area": "Area",
             "backlash": "Backlash",
@@ -264,10 +279,10 @@
             "intense": "Intense",
             "persistent": "Persistent",
             "piercing": "Piercing",
-            "snare":  "Snare",
+            "snare": "Snare",
             "stun": "Stun",
-            "vicious":"Vicious"
-        },        
+            "vicious": "Vicious"
+        },
         "damageType": {
             "energy": "Energy",
             "physical": "Physical",
@@ -283,50 +298,60 @@
             "giant-killer": "Giant-Killer",
             "heavy": "Heavy",
             "hidden": "Hidden",
-            "inaccurate":"Inaccurate",
-            "indirect":"Indirect",
-            "munition":"Munition",
+            "inaccurate": "Inaccurate",
+            "indirect": "Indirect",
+            "munition": "Munition",
             "parrying": "Parrying",
             "reliable": "Reliable",
             "subtle": "Subtle",
             "unreliable": "Unreliable",
-            "bane":"Bane",
-            "hunger":"Hunger"
+            "bane": "Bane",
+            "hunger": "Hunger"
         },
         "weaponTypes": {
             "Melee": "Melee",
             "Ranged": "Ranged",
             "Mental": "Mental",
-            "agi":"Melee",
+            "agi": "Melee",
             "coo": "Ranged",
             "wil": "Mental"
         }
     },
     "AC2D20.ARMOR": {
-        "qualities":{
-            "heavy":"Heavy",
-            "uncomfortable":"Uncomfortable",
-            "shield":"Shield"
+        "qualities": {
+            "heavy": "Heavy",
+            "uncomfortable": "Uncomfortable",
+            "shield": "Shield"
         }
     },
-    "AC2D20.VEHICLES.QUALITIES":{
-        "cargo":"Cargo",
-        "cumbersome":"Cumbersome",
-        "enclosed":"Enclosed",
-        "exposed":"Exposed",
-        "highPerformance":"High Performance",
-        "singleSeat:":"Single Seat",
-        "tough":"Tough"
+    "AC2D20.VEHICLES.QUALITIES": {
+        "cargo": "Cargo",
+        "cumbersome": "Cumbersome",
+        "enclosed": "Enclosed",
+        "exposed": "Exposed",
+        "highPerformance": "High Performance",
+        "singleSeat:": "Single Seat",
+        "tough": "Tough"
     },
     "ACTOR.TypeCharacter": "Character",
     "ACTOR.TypeNpc": "NPC",
+    "ACTOR.NpcType": {
+        "Trooper": "Trooper",
+        "Lieutenant": "Lieutenant",
+        "Nemesis": "Nemesis"
+    },
     "ACTOR.TypeVehicle": "Vehicle",
+    "ACTOR.Vehicle": {
+        "Passengers": "Passengers",
+        "Cover": "Cover",
+        "Impact": "Impact"
+    },
     "ITEM.TypeArmor": "Armor",
     "ITEM.TypeTalent": "Talent",
     "ITEM.TypeSpell": "Spell",
     "ITEM.TypeSkill": "Skill",
     "ITEM.TypeSkillkit": "Skill Kit",
-    "ITEM.TypeEquipment": "Equipment",    
+    "ITEM.TypeEquipment": "Equipment",
     "ITEM.TypeSpecial_rule": "Special Rule",
     "ITEM.TypeWeapon": "Weapon"
 }

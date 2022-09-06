@@ -1,16 +1,16 @@
 <div class="section-title">
-    <h3>Weapons<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+    <h3>{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
     <span class="right-slope olive"></span>
 </div>
 
 <div class="ac-grid" style="margin-bottom: 10px;">
     <div class="item">
         <div class="row">
-            <div class="cell f4 green align-left" style="background-color: #494e31;"><strong>Name</strong></div>
-            <div class="cell f3 align-center"><strong>Focus</strong></div>
-            <div class="cell f2 align-center"><strong>Range</strong></div>
-            <div class="cell f2 align-center"><strong>Stress</strong></div>
-            <div class="cell f2 align-center"><strong>Ammo</strong></div>
+            <div class="cell f4 green align-left" style="background-color: #494e31;"><strong>{{localize "AC2D20.UI.Name"}}</strong></div>
+            <div class="cell f3 align-center"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></div>
+            <div class="cell f2 align-center"><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}</strong></div>
+            <div class="cell f2 align-center"><strong>{{localize "AC2D20.STRESS.stress"}}</strong></div>
+            <div class="cell f2 align-center"><strong>{{localize "AC2D20.TEMPLATES.Ammo"}}</strong></div>
             <!-- <div class="cell f1 align-center"></div> -->
         </div>
     </div>
@@ -30,10 +30,10 @@
             </div> -->
         </div>
         <div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
-            <span><strong>Qualities: </strong>{{{getWeaponQualities item.system.qualities}}}&nbsp; | &nbsp;
-                <strong>Efects: </strong>{{{getWeaponEffects item.system.effect}}}&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;
-                <strong>Salvo:</strong>{{item.system.salvo}}&nbsp;&nbsp; | &nbsp;
-                <strong>Size:</strong>{{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel item.system.weight))}}
+            <span><strong>{{localize "AC2D20.WEAPONS.qualities"}}: </strong>{{{getWeaponQualities item.system.qualities}}}&nbsp; | &nbsp;
+                <strong>{{localize "AC2D20.TEMPLATES.Effects"}}: </strong>{{{getWeaponEffects item.system.effect}}}&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;
+                <strong>{{localize "AC2D20.TEMPLATES.Salvo"}}: </strong>{{item.system.salvo}}&nbsp;&nbsp; | &nbsp;
+                <strong>{{localize "AC2D20.TEMPLATES.Size"}}: </strong>{{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel item.system.weight))}}
             </span>
         </div>
     </div>
