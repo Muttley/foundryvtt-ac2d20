@@ -5,7 +5,7 @@ export class Roller2D20 {
     complicationTreshold = 20;
     successes = 0;
 
-    static async rollD20({ rollname = "Roll xD20", dicenum = 2, attribute = 0, skill = 0, focus = false, difficulty = 1, complication = 20 } = {}) {
+    static async rollD20({ rollname = "Roll xD20", dicenum = 2, attribute = 0, skill = 0, focus = false, difficulty = 1, complication = 20, actorId = null, itemId = null } = {}) {
         let dicesRolled = [];
         let successTreshold = parseInt(attribute) + parseInt(skill);
         let critTreshold = focus ? parseInt(skill) : 1;
@@ -18,11 +18,13 @@ export class Roller2D20 {
             roll: roll,
             successTreshold: successTreshold,
             critTreshold: critTreshold,
-            complicationTreshold: complicationTreshold
+            complicationTreshold: complicationTreshold,
+            actorId: actorId,
+            itemId: itemId
         });
     }
 
-    static async parseD20Roll({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [] }) {
+    static async parseD20Roll({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [], actorId = null, itemId = null }) {
         let i = 0;
         roll.dice.forEach(d => {
             d.results.forEach(r => {
@@ -54,7 +56,9 @@ export class Roller2D20 {
             critTreshold: critTreshold,
             complicationTreshold: complicationTreshold,
             dicesRolled: dicesRolled,
-            rerollIndexes: rerollIndexes
+            rerollIndexes: rerollIndexes,
+            actorId: actorId,
+            itemId: itemId
         });
     }
 
@@ -78,7 +82,7 @@ export class Roller2D20 {
         });
     }
 
-    static async sendToChat({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [] } = {}) {
+    static async sendToChat({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [], actorId = null, itemId = null } = {}) {
         let successesNum = Roller2D20.getNumOfSuccesses(dicesRolled);
         let complicationsNum = Roller2D20.getNumOfComplications(dicesRolled);
         let rollData = {
@@ -86,7 +90,9 @@ export class Roller2D20 {
             successes: successesNum,
             complications: complicationsNum,
             results: dicesRolled,
-            successTreshold: successTreshold
+            successTreshold: successTreshold,
+            actorId: actorId,
+            itemId: itemId
         }
         const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.html", rollData);
         let ac2d20Roll = {}
@@ -97,8 +103,10 @@ export class Roller2D20 {
         ac2d20Roll.complicationTreshold = complicationTreshold;
         ac2d20Roll.rerollIndexes = rerollIndexes;
         ac2d20Roll.diceFace = "d20";
+        let speaker = {actor:actorId}
         let chatData = {
             user: game.user.id,
+            speaker: speaker,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
             flags: { ac2d20roll: ac2d20Roll },

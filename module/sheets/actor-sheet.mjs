@@ -382,7 +382,7 @@ export class ACActorSheet extends ActorSheet {
             const attrValue = item.actor.type == 'vehicle' ? 6 : -1;
             // weaponType is actualy attribute abrevation
             const prefAttribute = item.system.weaponType;
-            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
+            game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute, actorId:this.actor._id, itemId: item._id })
 
         });
 
