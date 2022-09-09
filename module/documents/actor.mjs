@@ -89,9 +89,11 @@ export class ACActor extends Actor {
 
     async _preCreate(data, options, user) {
         await super._preCreate(data, options, user);
-        // set icon based on actor type        
-        let ico = `systems/ac2d20/assets/doc-icons/${this.type}.svg`;
-        this.updateSource({ 'img': ico });
+        // set icon based on actor type    
+        if(data.img == 'icons/svg/mystery-man.svg'){  
+            let ico = `systems/ac2d20/assets/doc-icons/${this.type}.svg`;
+            this.updateSource({ 'img': ico });
+        }
         // Setup Tokens
         if (this.type === 'character') {
             this.prototypeToken.updateSource({ actorLink: true, sight: { enabled: true }, disposition: 1 })
