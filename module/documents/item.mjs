@@ -11,8 +11,10 @@ export class ACItem extends Item {
 
     async _preCreate(data, options, user) {
         await super._preCreate(data, options, user);
-        let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
-        this.updateSource({ 'img': ico });
+        if(data.img=='icons/svg/item-bag.svg'){
+            let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
+            this.updateSource({ 'img': ico });
+        }
     }
 
     /**
