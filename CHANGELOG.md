@@ -1,3 +1,7 @@
+# v10.0.2
+
+- Small changes to roller so it works with Maestro Module item tracks
+
 # v10.0.1
 
 - Added Spanish translation (Thanks to Viajero Salvaje)
