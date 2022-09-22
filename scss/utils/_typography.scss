@@ -26,7 +26,6 @@ $cth-ico-cth-cross: "\e901";
   [class^="cth-"], [class*=" cth-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: '#{$icomoon-font-family}' !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
