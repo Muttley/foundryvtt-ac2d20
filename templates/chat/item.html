@@ -23,8 +23,8 @@
     <p><strong>{{localize "AC2D20.STRESS.stress"}}:</strong> {{stress}}</p>
     <p><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'AC2D20.RANGE.' range)}}</p>
     <p><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}:</strong> {{salvo}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{getWeaponQualities qualities}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{getWeaponEffects effect}}</p>
+    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getWeaponQualities qualities}}}</p>
+    <p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{{getWeaponEffects effect}}}</p>
     {{/if}}
 
     {{#if isSkillkit}}
@@ -38,7 +38,7 @@
 
     {{#if isArmor}}
     <p><strong>{{localize "AC2D20.TEMPLATES.Resistance"}}:</strong> {{resistance}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{getArmorQualities qualities}}</p>
+    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getArmorQualities qualities}}}</p>
     {{/if}}
 
     {{#if isTalent}}
