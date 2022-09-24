@@ -90,7 +90,7 @@ export class ACActor extends Actor {
     async _preCreate(data, options, user) {
         await super._preCreate(data, options, user);
         // set icon based on actor type    
-        if(data.img == 'icons/svg/mystery-man.svg'){  
+        if(data.img == undefined){  
             let ico = `systems/ac2d20/assets/doc-icons/${this.type}.svg`;
             this.updateSource({ 'img': ico });
         }

@@ -1,3 +1,7 @@
+# v10.0.3
+
+- Fixed item qualities display in chat messages
+
 # v10.0.2
 
 - Small changes to roller so it works with Maestro Module item tracks
