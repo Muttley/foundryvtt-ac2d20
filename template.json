@@ -93,12 +93,14 @@
 			"rank":"",
 			"archetype":"",
 			"background":"",
-			"characteristic":""			
+			"characteristic":"",
+			"spellcastingType":"traditional"			
 		},		
 		"npc": {
 			"templates": ["base", "derived", "stats"],
 			"level":"trooper",
-			"truthsText":""
+			"truthsText":"",
+			"spellcastingType":"traditional"
 		},
 		"vehicle": {
 			"templates": ["base", "derived", "stats"],

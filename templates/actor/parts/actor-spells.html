@@ -3,6 +3,17 @@
         <h3>{{localize "AC2D20.TEMPLATES.Spells"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
         <span class="right-slope olive"></span>
     </div>
+    <div class="section-title">
+        <h3>{{localize "AC2D20.Spellcasting.SpellcastingType"}}</h3>
+        {{#select system.spellcastingType}}
+        <select name="system.spellcastingType">
+            <option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
+            <option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
+            <option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
+        </select>
+        {{/select}}
+        <span class="right-slope olive"></span>
+    </div>
     <div class="section-title" style="border: 1px solid #759549;">
         <h3>{{localize "AC2D20.TEMPLATES.Power"}}</h3>
         <span class="right-slope olive"></span>
