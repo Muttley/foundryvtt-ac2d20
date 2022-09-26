@@ -138,5 +138,11 @@ AC2D20.WEAPONS = {
   }
 }
 
+AC2D20.spellcastingTypes = {
+  "traditional":"traditional",
+  "researcher":"researcher",
+  "dabbler":"dabbler"
+}
+
 
 

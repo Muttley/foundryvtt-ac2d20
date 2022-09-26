@@ -317,7 +317,12 @@ export class ACActorSheet extends ActorSheet {
             } catch (err) { }
             
             const attrValue = -1;
-            const prefAttribute = item.system.spellType;
+            let prefAttribute = "ins";
+            if(this.actor.system.spellcastingType=='researcher')
+                prefAttribute = "rea"
+            else if(this.actor.system.spellcastingType=='dabbler')
+                prefAttribute = "wil"
+
             game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute })
 
         });

@@ -353,5 +353,11 @@
     "ITEM.TypeSkillkit": "Skill Kit",
     "ITEM.TypeEquipment": "Equipment",
     "ITEM.TypeSpecial_rule": "Special Rule",
-    "ITEM.TypeWeapon": "Weapon"
+    "ITEM.TypeWeapon": "Weapon",
+    "AC2D20.Spellcasting":{
+        "SpellcastingType":"Spellcasting Type",
+        "traditional":"traditional",
+        "researcher":"researcher",
+        "dabbler":"dabbler"
+    }
 }

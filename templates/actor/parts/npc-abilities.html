@@ -139,6 +139,16 @@
                 <h3 class="blue">{{localize "AC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
                 <span class="right-slope blue"></span>
             </div>
+            <div style="padding: 3px 5px; background-color: #548da9">
+                <label style="color:#ebe7d7">{{localize "AC2D20.Spellcasting.SpellcastingType"}}</label>
+                {{#select system.spellcastingType}}
+                <select name="system.spellcastingType">
+                    <option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
+                    <option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
+                    <option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
+                </select>
+                {{/select}}
+            </div>
             <ul class="items-list-npc">
                 {{#each spells as |item key|}}
                 <li class="item spell editable-item" data-item-id="{{item._id}}">
