@@ -1,3 +1,7 @@
+# v10.0.5
+
+- Added carry capacity autocalculation
+
 # v10.0.4
 
 - Spellcasting types are now defined by Actor and not the spells. Traditional, Researcher and Dabbler are now set on the Character/NPC sheet under the "Spells" tab.
