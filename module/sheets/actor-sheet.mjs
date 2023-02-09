@@ -27,25 +27,36 @@ export class ACActorSheet extends ActorSheet {
 
     /** @override */
     async getData() {
-       
+
         //const context = super.getData();
-        
+
         //const actorData = context.actor.data;
 
         const source = this.actor.toObject();
         const actorData = this.actor.toObject(false);
+
+        // Sort all items alphabetically for display on the character sheet
+        actorData.items.sort((a, b) => {
+            if (a.name < b.name) {
+                return -1;
+            }
+            if (a.name > b.name) {
+                return 1;
+            }
+            return 0;
+        });
 
         const context = {
             actor: actorData,
             source: source.system,
             system: actorData.system,
             items: actorData.items,
-            effects: prepareActiveEffectCategories(this.actor.effects),      
+            effects: prepareActiveEffectCategories(this.actor.effects),
             owner: this.actor.isOwner,
             limited: this.actor.limited,
             options: this.options,
             editable: this.isEditable,
-            type: this.actor.type,      
+            type: this.actor.type,
             isCharacter: this.actor.type === "character",
             isNPC: this.actor.type === "npc",
             isVehicle: this.actor.type === "vehicle",
@@ -315,7 +326,7 @@ export class ACActorSheet extends ActorSheet {
                         isFocus = true;
                 }
             } catch (err) { }
-            
+
             const attrValue = -1;
             let prefAttribute = "ins";
             if(this.actor.system.spellcastingType=='researcher')
@@ -407,7 +418,7 @@ export class ACActorSheet extends ActorSheet {
             game.ac2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id })
         })
 
-        // * AMMO COUNT UPDATE 
+        // * AMMO COUNT UPDATE
         html.find('.ammo-quantity').change(async (ev) => {
             let newQuantity = parseInt($(ev.currentTarget).val());
             const li = $(ev.currentTarget).parents(".item");
@@ -596,7 +607,7 @@ export class ACActorSheet extends ActorSheet {
         const data = duplicate(header.dataset);
         // Initialize a default name.
         const name = `New ${type.capitalize()}`;
-        // Prepare the item object.   
+        // Prepare the item object.
         const itemData = {
             name: name,
             type: type,
