@@ -13,7 +13,22 @@ export class ACActor extends Actor {
     /** @override */
     prepareBaseData() {
         // Data modifications in this step occur before processing embedded
-        // documents or derived data.    
+        // documents or derived data.
+        
+        // Carry capacity
+        let carryCapacity = 6;
+        if(this.system.attributes.bra.value < 9){
+            carryCapacity = 6
+        }else if(this.system.attributes.bra.value == 9){
+            carryCapacity = 7
+        }
+        else if(this.system.attributes.bra.value == 10 || this.system.attributes.bra.value == 11){
+            carryCapacity = 8
+        }else{
+            carryCapacity = 9
+        }
+        this.system.carryCapacity.value = parseInt(carryCapacity)
+        console.warn(this.system.carryCapacity)
     }
 
     /**
