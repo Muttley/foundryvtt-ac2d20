@@ -8,13 +8,12 @@
     "verified": "10",
     "maximum": "10"
   },
-  "templateVersion": 1,
   "authors": [
     {
-      "name": "HappySteve"
+      "name": "HappySteve",
+      "flags": {}
     }
   ],
-  "scripts": [],
   "esmodules": [
     "module/ac2d20.mjs"
   ],
@@ -26,27 +25,33 @@
       "name": "skills",
       "label": "Skills",
       "system": "ac2d20",
-      "path": "./packs/skills.db",
-      "type": "Item"
+      "path": "packs/skills.db",
+      "type": "Item",
+      "private": false,
+      "flags": {}
     },
     {
       "name": "ac-2d20-macros",
       "label": "AC 2d20 Macros",
       "system": "ac2d20",
-      "path": "./packs/ac-2d20-macros.db",
-      "type": "Macro"
+      "path": "packs/ac-2d20-macros.db",
+      "type": "Macro",
+      "private": false,
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "es",
       "name": "Español",
-      "path": "lang/es.json"
+      "path": "lang/es.json",
+      "flags": {}
     }
   ],
   "socket": true,
