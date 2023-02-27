@@ -28,7 +28,6 @@ export class ACActor extends Actor {
             carryCapacity = 9
         }
         this.system.carryCapacity.value = parseInt(carryCapacity)
-        console.warn(this.system.carryCapacity)
     }
 
     /**
@@ -121,7 +120,11 @@ export class ACActor extends Actor {
         }
         // Add Skills to Characters
         if (this.type === 'character') {
-            let packSkills = await game.packs.get('ac2d20.skills').getDocuments();
+            const packName = game.settings.get('ac2d20', 'compendium-skills');
+            if(!packName)
+                packName = "ac2d20.skills"
+                
+            let packSkills = await game.packs.get(packName).getDocuments();
             const items = this.items.map(i => i.toObject());
             packSkills.forEach(s => {
                 items.push(s.toObject());
