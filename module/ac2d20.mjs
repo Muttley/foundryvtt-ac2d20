@@ -17,6 +17,8 @@ import { DialogD6 } from './roller/dialogD6.js'
 import DieACChallenge from './roller/challengeDie.js'
 //Settings
 import { registerSettings } from './settings.js';
+// Text Enrichers
+import { registerEnrichers } from './enrichers.mjs';
 //Momentum
 import { MomentumTracker } from './app/momentum-tracker.mjs'
 
@@ -65,6 +67,9 @@ Hooks.once('init', async function () {
 
     // Register custom system settings
     registerSettings();
+
+	// Register text enrichers.
+	registerEnrichers();
 
     return preloadHandlebarsTemplates();
 });
