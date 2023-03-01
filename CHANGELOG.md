@@ -1,3 +1,13 @@
+# v10.0.7
+
+- Added text enrichers for AC2D20 special symbols like the small cthulhu head or the cross.
+Write the **Cthulhu Head Icon(symbol)** in texts by typing **@s** ot **@stress** or **@c** or **@challenge**
+Write the **The Cross symbol** in texts by typing **@x** or **@xross**
+
+# v10.0.6
+
+- Fixed custom skill compendium usage
+
 # v10.0.5
 
 - Added carry capacity autocalculation
