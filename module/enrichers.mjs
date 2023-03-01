@@ -14,5 +14,18 @@ export function registerEnrichers() {
 				return i;
 			},
 		},
+		{
+			pattern: /@(x(ross)?)/gim,
+			enricher: async (match, options) => {
+				const i = document.createElement('i');
+				i.className = 'cth-ico-cth-cross';
+
+				// Adjust positioning slightly to align better with text.
+				i.style.position = 'relative';
+				i.style.top = '0.1em';
+
+				return i;
+			},
+		}
 	];
 }
