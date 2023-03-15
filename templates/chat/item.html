@@ -53,6 +53,15 @@
     <p><strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong> {{duration}}</p>
     {{/if}}
 
+    {{#if isSkill}}
+    <p>Focuses</p>
+    <ol>
+        {{#each focuses as |focus id|}}
+        <p {{#if focus.isfocus}}style="text-decoration:underline"{{/if}}>{{focus.title}}</p>
+        {{/each}}
+    </ol>
+    {{/if}}
+
     <hr>
     <!-- <h4>{{localize 'T.DESCRIPTION'}}:</h4> -->
     <div class="description">{{{description}}}</div>

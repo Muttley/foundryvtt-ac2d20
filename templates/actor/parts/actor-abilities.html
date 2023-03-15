@@ -119,7 +119,7 @@
 </div>
 <div class="skills">
   {{#each skills as |item id|}}
-  <div class="item skill" data-item-id="{{item._id}}">
+  <div class="item skill editable-item" data-item-id="{{item._id}}">
     <label class="skill-name clickable roll-skill">
       {{item.name}}
     </label>
@@ -131,7 +131,6 @@
       <span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}},&nbsp;</span>
       {{/each}}
     </div>
-    <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
   </div>
   {{/each}}
 </div>
