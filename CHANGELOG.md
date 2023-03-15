@@ -1,3 +1,7 @@
+# v10.0.8
+
+- Added delete button to skills
+
 # v10.0.7
 
 - Added text enrichers for AC2D20 special symbols like the small cthulhu head or the cross.
