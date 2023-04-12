@@ -1,3 +1,7 @@
+# v10.0.9
+
+- Added option in the settings to point to your json file that contains custom **descriptions** for weapon's effects/qualities. (It is a way to override those descriptions like 'pg.99' .etc)
+
 # v10.0.8
 
 - Added delete button to skills

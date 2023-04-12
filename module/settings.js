@@ -1,3 +1,4 @@
+const debounceReload = debounce(() => window.location.reload(), 100)
 export function registerSettings() {
     game.settings.register('ac2d20', 'partyMomentum', {
         name: 'Party Momentum',
@@ -43,4 +44,15 @@ export function registerSettings() {
         default: "ac2d20.skills",
         type: String,
     });
+    game.settings.register('ac2d20', "hoversJsonLocation",{
+		name: "Mouse Hover JSON file",
+        hint: "Location of the json file containing the text for qualities and damage effects.",
+		scope: "world",
+		config: true,
+		default: "systems/ac2d20/assets/hovers.json",		
+		type: String,
+        filePicker: true,
+        restricted: true,
+        onChange: debounceReload
+	});
 }
