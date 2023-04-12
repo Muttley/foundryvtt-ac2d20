@@ -74,6 +74,14 @@ Hooks.once('init', async function () {
     return preloadHandlebarsTemplates();
 });
 
+Hooks.on('ready', async () => {
+    const listLocation = await game.settings.get('ac2d20', 'hoversJsonLocation')
+    const jsonFile = await fetch(listLocation)
+    const content = await jsonFile.json();
+    CONFIG.AC2D20.WEAPONS.effects = content.effects;
+    CONFIG.AC2D20.WEAPONS.qualities = content.qualities;
+})
+
 
 Hooks.on('renderChatMessage', (message, html, data) => {
     let rrlBtn = html.find('.reroll-button');
