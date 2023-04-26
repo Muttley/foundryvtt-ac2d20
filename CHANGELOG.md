@@ -1,3 +1,9 @@
+# v10.0.10
+
+- Necessary changes to TextEnricher to support full async methods
+- Fixed Item to Chat button
+
+
 # v10.0.9
 
 - Added option in the settings to point to your json file that contains custom **descriptions** for weapon's effects/qualities. (It is a way to override those descriptions like 'pg.99' .etc)
