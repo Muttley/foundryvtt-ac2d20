@@ -202,10 +202,6 @@ export const registerHandlebarsHelpers = function () {
         }
     });
 
-    Handlebars.registerHelper('enrichHtmlHelper', function (rawText) {
-        return TextEditor.enrichHTML(rawText, { async: false })
-    })
-
     Handlebars.registerHelper('getTooltipFromConfigKey', function (key) {
         return key.split('.').reduce((o,i)=> o[i], CONFIG)
     })

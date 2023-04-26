@@ -93,6 +93,22 @@ export class ACActorSheet extends ActorSheet {
         // Add roll data for TinyMCE editors.
         //context.rollData = context.actor.getRollData();
 
+        //Prepare Items Enriched Descriptions
+        const itemTypes = ['talent']
+        let itemsEnrichedDescriptions = {};
+        for await(let itm of this.actor.items){
+            console.warn(itm)
+            if(itemTypes.includes(itm.type)){
+                const descriptionRich = await TextEditor.enrichHTML(itm.system.description, {async:true})
+                itemsEnrichedDescriptions[itm._id] = descriptionRich;
+            }
+        }
+
+
+        context.itemsEnrichedDescriptions = itemsEnrichedDescriptions;
+        context.itemsEnrichedDescriptions.name="NAME"
+        console.warn(context.itemsEnrichedDescriptions)
+
         // Prepare active effects
         context.effects = prepareActiveEffectCategories(this.actor.effects);
         context.AC2D20 = CONFIG.AC2D20;
