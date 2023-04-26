@@ -101,7 +101,7 @@
           <div class="items-list" style="border: 1px solid #759549;">
             {{#each system.qualities as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
-              <label data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' key)}}" data-tooltip-direction="RIGHT">
+              <label data-tooltip="{{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' key)}}}" data-tooltip-direction="RIGHT">
                 <input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' key)}}
               </label>
             </div>
@@ -116,7 +116,7 @@
           <div class="items-list" style="border: 1px solid #759549;">
             {{#each system.effect as |item key|}}
             <div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
-              <label data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.effects.' key)}}" data-tooltip-direction="LEFT">
+              <label data-tooltip="{{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.effects.' key)}}}" data-tooltip-direction="LEFT">
                 <input type="checkbox" name="system.effect.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.damageEffect.' key)}}
               </label>
               {{#if (ne item.rank undefined)}}

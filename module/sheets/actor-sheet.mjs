@@ -107,7 +107,7 @@ export class ACActorSheet extends ActorSheet {
      *
      * @return {undefined}
      */
-    _prepareCharacterData(context) {
+    async _prepareCharacterData(context) {
         let isEncumbered = false;
         let physicalItems = context.items.filter(i => i.system.hasOwnProperty('weight'));
         let encumberingItems = physicalItems.filter((i) => {
@@ -634,7 +634,7 @@ export class ACActorSheet extends ActorSheet {
         game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.system })
     }
 
-    _onItemSummary(event) {
+    async _onItemSummary(event) {
         event.preventDefault();
         let li = $(event.currentTarget).parents(".item");
         let item = this.actor.items.get(li.data("itemId"));
@@ -645,8 +645,9 @@ export class ACActorSheet extends ActorSheet {
                 summary.remove();
             });
         } else {
+            let _descriptionText = await TextEditor.enrichHTML(item.system.description, {async:true})
             let div = $(
-                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${TextEditor.enrichHTML(item.system.description, {async:false})}</div></div></div>`
+                `<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${_descriptionText}</div></div></div>`
             );
             li.append(div.hide());
             div.slideDown(200);
