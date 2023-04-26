@@ -80,6 +80,17 @@ Hooks.on('ready', async () => {
     const content = await jsonFile.json();
     CONFIG.AC2D20.WEAPONS.effects = content.effects;
     CONFIG.AC2D20.WEAPONS.qualities = content.qualities;
+
+    for await (const key of Object.keys(content.effects)){       
+        let qEnriched = await TextEditor.enrichHTML(content.effects[key], {async: true});
+        content.effects[key] = qEnriched.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+    }
+
+    for await (const key of Object.keys(content.qualities)){
+        let qEnriched = await TextEditor.enrichHTML(content.qualities[key], {async: true});
+        content.qualities[key] = qEnriched.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+    }
+
 })
 
 
