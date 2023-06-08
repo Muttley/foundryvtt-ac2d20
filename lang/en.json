@@ -333,27 +333,27 @@
         "singleSeat:": "Single Seat",
         "tough": "Tough"
     },
-    "ACTOR.TypeCharacter": "Character",
-    "ACTOR.TypeNpc": "NPC",
+    "TYPES.Actor.character": "Character",
+    "TYPES.Actor.npc": "NPC",
     "ACTOR.NpcType": {
         "Trooper": "Trooper",
         "Lieutenant": "Lieutenant",
         "Nemesis": "Nemesis"
     },
-    "ACTOR.TypeVehicle": "Vehicle",
+    "TYPES.Actor.vehicle": "Vehicle",
     "ACTOR.Vehicle": {
         "Passengers": "Passengers",
         "Cover": "Cover",
         "Impact": "Impact"
     },
-    "ITEM.TypeArmor": "Armor",
-    "ITEM.TypeTalent": "Talent",
-    "ITEM.TypeSpell": "Spell",
-    "ITEM.TypeSkill": "Skill",
-    "ITEM.TypeSkillkit": "Skill Kit",
-    "ITEM.TypeEquipment": "Equipment",
-    "ITEM.TypeSpecial_rule": "Special Rule",
-    "ITEM.TypeWeapon": "Weapon",
+    "TYPES.Item.armor": "Armor",
+    "TYPES.Item.talent": "Talent",
+    "TYPES.Item.spell": "Spell",
+    "TYPES.Item.skill": "Skill",
+    "TYPES.Item.skillkit": "Skill Kit",
+    "TYPES.Item.equipment": "Equipment",
+    "TYPES.Item.special_rule": "Special Rule",
+    "TYPES.Item.weapon": "Weapon",
     "AC2D20.Spellcasting":{
         "SpellcastingType":"Spellcasting Type",
         "traditional":"traditional",

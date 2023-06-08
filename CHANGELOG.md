@@ -1,3 +1,8 @@
+# v11.0.0
+
+- Foundry V11 compatible
+
+
 # v10.0.10
 
 - Necessary changes to TextEnricher to support full async methods
