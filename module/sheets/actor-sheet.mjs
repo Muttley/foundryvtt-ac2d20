@@ -567,7 +567,7 @@ export class ACActorSheet extends ActorSheet {
                 },
             },
         ];
-        new ContextMenu(html.find(".editable-item"), null, menu_items);
+        new ContextMenu(html,".editable-item", menu_items);
 
 
         // ! DON'T LET NUMBER FIELDS EMPTY

@@ -25,7 +25,7 @@
       "name": "skills",
       "label": "Skills",
       "system": "ac2d20",
-      "path": "packs/skills.db",
+      "path": "packs/skills",
       "type": "Item",
       "private": false,
       "flags": {}
@@ -34,7 +34,7 @@
       "name": "ac-2d20-macros",
       "label": "AC 2d20 Macros",
       "system": "ac2d20",
-      "path": "packs/ac-2d20-macros.db",
+      "path": "packs/ac-2d20-macros",
       "type": "Macro",
       "private": false,
       "flags": {}
