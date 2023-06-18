@@ -75,6 +75,18 @@ Hooks.once('init', async function () {
 });
 
 Hooks.on('ready', async () => {
+    // set skill list
+    const skillPackName = game.settings.get('ac2d20', 'compendium-skills');
+    let packSkills = await game.packs.get(skillPackName).getDocuments();   
+    let _skills = []
+    packSkills.forEach(s => {
+        _skills.push({
+            'label': s.name.toUpperCase(),
+            'key': s.name,
+            'focuses': s.system.focuses.map(f=> f.title)
+          });
+    });   
+    AC2D20.SKILLS = [..._skills];    
     const listLocation = await game.settings.get('ac2d20', 'hoversJsonLocation')
     const jsonFile = await fetch(listLocation)
     const content = await jsonFile.json();

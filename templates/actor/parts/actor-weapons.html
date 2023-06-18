@@ -18,7 +18,7 @@
     <div class="item weapon editable-item" data-item-id="{{item._id}}">
         <div class="row">
             <div class="cell f4 green cell-expander align-left align-center cell-name"><img src="{{item.img}}" />{{item.name}}</div>
-            <div class="cell f3 roll-weapon clickable focus-name align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{localize (concat 'AC2D20.FOCUS.' item.system.focus)}}</div>
+            <div class="cell f3 roll-weapon clickable focus-name align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.focus}}</div>
             <div class="cell f2 align-center">{{localize (concat 'AC2D20.RANGE.' item.system.range)}}</div>
             <div class="cell f2 stress clickable roll-stress align-center">{{item.system.stress}} <span class="cth-ico-cth"></span> + {{getAttributeBonus ../actor item.system.weaponType}} <span class="cth-ico-cth"></span></div>
             <div class="cell f2 align-center">
