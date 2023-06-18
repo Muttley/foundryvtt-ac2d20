@@ -1,3 +1,8 @@
+# v11.0.1
+
+- Item Sheets now look in the skill compendium when creating list of skills and focuses in dropdowns.
+You can set what compendium to use for skills in AC2d20 settings
+
 # v11.0.0
 
 - Foundry V11 compatible

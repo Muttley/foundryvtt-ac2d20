@@ -18,7 +18,7 @@ AC2D20.abilityAbbreviations = {
   "wil": "AC2D20.AbilityWilAbr",
 };
 
-
+// Depricated. This is now created from the skill compendium
 // AC2D20.SKILLS = [
 //   {
 //     'label': 'ACADEMIA',
