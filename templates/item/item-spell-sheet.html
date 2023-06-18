@@ -29,7 +29,7 @@
                     <select name="system.skill">
                         {{#select system.skill}}
                         {{#each AC2D20.SKILLS as |skill key|}}
-                        <option value="{{skill.key}}">{{localize (concat 'AC2D20.SKILL.' skill.label)}}</option>
+                        <option value="{{skill.key}}">{{skill.key}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
@@ -38,9 +38,9 @@
                     <label style="margin-right: 5px;">{{localize "AC2D20.TEMPLATES.Focus"}}</label>
                     <select name="system.focus">
                         {{#select system.focus}}
-                        <option value="">{{localize foc}}</option>
+                        <option value=""> </option>
                         {{#each (getSkillFocusList system.skill) as |foc key|}}
-                        <option value="{{foc}}">{{localize foc}}</option>
+                        <option value="{{foc}}">{{foc}}</option>
                         {{/each}}
                         {{/select}}
                     </select>
