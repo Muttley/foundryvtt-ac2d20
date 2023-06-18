@@ -27,7 +27,7 @@ export class MomentumTracker extends Application {
         this.data["isGM"] = game.user.isGM;
         this.data["partyMomentum"] = game.settings.get('ac2d20', 'partyMomentum');
         this.data["gmMomentum"] = game.settings.get('ac2d20', 'gmMomentum');
-        this.data["maxMomentum"] = game.settings.get('ac2d20', 'maxMomentum');        
+        this.data["maxMomentum"] = game.settings.get('ac2d20', 'maxMomentum');
         if(game.user.isGM) this.data["showGMMomentumToPlayers"] = true;
         else this.data["showGMMomentumToPlayers"] = game.settings.get('ac2d20', 'gmMomentumShowToPlayers')
         if(game.user.isGM) this.data["maxAppShowToPlayers"] = true;
@@ -68,6 +68,23 @@ export class MomentumTracker extends Application {
         html.find('.toggle-maxAp').click(ev => {
             html.find('.ap-resource.maxMomentum-box').slideToggle("fast", function () { MomentumTracker.closed = !MomentumTracker.closed });
         })
+    }
+
+    static async adjustAP(type, diff) {
+        diff = Math.round(diff);
+
+        if (!game.user.isGM) {
+            game.socket.emit('system.ac2d20', {
+                operation: 'adjustAP',
+                data: { diff, type },
+            });
+            return;
+        }
+
+        let momentum = game.settings.get('ac2d20', type);
+        momentum += diff;
+
+        this.setAP(type, momentum);
     }
 
     static async setAP(type, value) {
@@ -115,6 +132,10 @@ Hooks.once("ready", () => {
     let ap = new MomentumTracker();
     MomentumTracker.renderApTracker();
     game.socket.on("system.ac2d20", (ev) => {
+        if (ev.operation === "adjustAP") {
+            if (game.user.isGM)
+                MomentumTracker.adjustAP(ev.data.type, ev.data.diff);
+        }
         if (ev.operation === "setAP") {
             if (game.user.isGM)
                 MomentumTracker.setAP(ev.data.type, ev.data.value);

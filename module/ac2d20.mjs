@@ -21,6 +21,9 @@ import { registerSettings } from './settings.js';
 import { registerEnrichers } from './enrichers.mjs';
 //Momentum
 import { MomentumTracker } from './app/momentum-tracker.mjs'
+//Combat Tracker
+import Combat2d20 from "./combat/combat.mjs";
+import CombatTracker2d20 from "./combat/combat-tracker.mjs";
 
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
@@ -37,7 +40,8 @@ Hooks.once('init', async function () {
         ACItem,
         Roller2D20,
         Dialog2d20,
-        DialogD6
+        DialogD6,
+        MomentumTracker,
     };
 
     // Add custom constants for configuration.
@@ -56,6 +60,10 @@ Hooks.once('init', async function () {
     CONFIG.Actor.documentClass = ACActor;
     CONFIG.Item.documentClass = ACItem;
     CONFIG.Dice.terms["s"] = DieACChallenge;
+
+	// Combat tracker stuff
+	CONFIG.Combat.documentClass = Combat2d20;
+	CONFIG.ui.combat = CombatTracker2d20;
 
     // Register sheet application classes
     Actors.unregisterSheet("core", ActorSheet);
@@ -77,7 +85,7 @@ Hooks.once('init', async function () {
 Hooks.on('ready', async () => {
     // set skill list
     const skillPackName = game.settings.get('ac2d20', 'compendium-skills');
-    let packSkills = await game.packs.get(skillPackName).getDocuments();   
+    let packSkills = await game.packs.get(skillPackName).getDocuments();
     let _skills = []
     packSkills.forEach(s => {
         _skills.push({
@@ -85,15 +93,15 @@ Hooks.on('ready', async () => {
             'key': s.name,
             'focuses': s.system.focuses.map(f=> f.title)
           });
-    });   
-    AC2D20.SKILLS = [..._skills];    
+    });
+    AC2D20.SKILLS = [..._skills];
     const listLocation = await game.settings.get('ac2d20', 'hoversJsonLocation')
     const jsonFile = await fetch(listLocation)
     const content = await jsonFile.json();
     CONFIG.AC2D20.WEAPONS.effects = content.effects;
     CONFIG.AC2D20.WEAPONS.qualities = content.qualities;
 
-    for await (const key of Object.keys(content.effects)){       
+    for await (const key of Object.keys(content.effects)){
         let qEnriched = await TextEditor.enrichHTML(content.effects[key], {async: true});
         content.effects[key] = qEnriched.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#039;');
     }
