@@ -1,3 +1,11 @@
+# v11.0.2
+
+- Initiative-Tracker Overhaul, brought to you by Muttley. 
+(If you had Lancer mod for tracking initiative you can disable it since the system now handles initiative tracking)
+Also, check the settings where You can toggle Momentum decreasement at the end of the round.
+Many thanks to Muttley for sharing his initiative tracker modifications and spending his time to implement it.
+
+
 # v11.0.1
 
 - Item Sheets now look in the skill compendium when creating list of skills and focuses in dropdowns.

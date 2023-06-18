@@ -1,14 +1,14 @@
 <section class="{{cssClass}} directory flexcol" id="{{cssId}}" data-tab="{{tabName}}">
   <header class="combat-tracker-header">
     {{#if user.isGM}}
-      <nav class="encounters flexrow" aria-label="COMBAT.NavLabel">
-        <a class="combat-button combat-create" title="COMBAT.Create">
+      <nav class="encounters flexrow" aria-label="{{localize 'COMBAT.NavLabel'}}">
+        <a class="combat-button combat-create" title="{{localize 'COMBAT.Create'}}">
           <i class="fas fa-plus"></i>
         </a>
         {{#if combatCount}}
           <a
             class="combat-button combat-cycle"
-            title="COMBAT.EncounterPrevious"
+            title="{{localize 'COMBAT.EncounterPrevious'}}"
             {{#if previousId}}
               data-document-id="{{previousId}}"
             {{else}}
@@ -22,7 +22,7 @@
           </h4>
           <a
             class="combat-button combat-cycle"
-            title="COMBAT.EncounterNext"
+            title="{{localize 'COMBAT.EncounterNext'}}"
             {{#if nextId}}
               data-document-id="{{nextId}}"
             {{else}}
@@ -34,7 +34,7 @@
         {{/if}}
         <a
           class="combat-button combat-control"
-          title="COMBAT.Delete"
+          title="{{localize 'COMBAT.Delete'}}"
           data-control="endCombat"
           {{#unless combatCount}}
             disabled
@@ -69,7 +69,7 @@
         </a>
         <a
           class="combat-button combat-settings"
-          title="COMBAT.Settings"
+          title="{{localize 'COMBAT.Settings'}}"
           data-control="trackerSettings"
         >
           <i class="fas fa-cog"></i>
@@ -88,7 +88,7 @@
             {{#if ../user.isGM}}
               <a
                 class="combatant-control {{#if this.hidden}}active{{/if}}"
-                title="COMBAT.ToggleVis"
+                title="{{localize 'COMBAT.ToggleVis'}}"
                 data-control="toggleHidden"
               >
                 <i class="fas fa-eye-slash"></i>
@@ -96,7 +96,7 @@
 
               <a
                 class="combatant-control {{#if this.defeated}}active{{/if}}"
-                title="COMBAT.ToggleDead"
+                title="{{localize 'COMBAT.ToggleDead'}}"
                 data-control="toggleDefeated"
               >
                 <i class="fas fa-skull"></i>
@@ -106,7 +106,7 @@
             {{#if this.canPing}}
               <a
                 class="combatant-control"
-                title="COMBAT.PingCombatant"
+                title="{{localize 'COMBAT.PingCombatant'}}"
                 data-control="pingCombatant"
               >
                 <i class="fa-solid fa-bullseye-arrow"></i>
@@ -154,7 +154,7 @@
     {{#if hasCombat}}
       {{#if user.isGM}}
         {{#if round}}
-          <a class="combat-control" title="COMBAT.RoundPrev" data-control="previousRound">
+          <a class="combat-control" title="{{localize 'COMBAT.RoundPrev'}}" data-control="previousRound">
             <i class="fas fa-step-backward"></i>
           </a>
 
@@ -162,7 +162,7 @@
             {{localize 'COMBAT.End'}}
           </a>
 
-          <a class="combat-control" title="COMBAT.RoundNext" data-control="nextRound">
+          <a class="combat-control" title="{{localize 'COMBAT.RoundNext'}}" data-control="nextRound">
             <i class="fas fa-step-forward"></i>
           </a>
         {{else}}
