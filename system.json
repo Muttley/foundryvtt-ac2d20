@@ -59,5 +59,6 @@
   "gridUnits": "m",
   "url": "https://github.com/superseva/ac2d20",
   "manifest": "https://github.com/superseva/ac2d20/releases/latest/download/system.json",
-  "download": "https://github.com/superseva/ac2d20/releases/download/v11.0.1/ac2d20.zip"
+  "download": "https://github.com/superseva/ac2d20/releases/download/v11.0.1/ac2d20.zip",
+  "initiative": null
 }

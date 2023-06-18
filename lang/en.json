@@ -359,5 +359,13 @@
         "traditional":"traditional",
         "researcher":"researcher",
         "dabbler":"dabbler"
+    },
+    "AC2D20.Combat": {
+        "CombatantsTurnDone": "Turn Completed",
+        "CombatantsTurnNotDone": "Turn Not Completed",
+        "CombatEndMomentumPoolDecremented": "Momentum Pool Decremented at End of Combat",
+        "CombatHasNotStarted": "Combat Has Not Started",
+        "CombatRoundMomentumPoolDecremented": "Momentum Pool Decremented at Start of New Round",
+        "ToggleCombatantsTurnDone": "Toggle Turn Completed"
     }
 }
