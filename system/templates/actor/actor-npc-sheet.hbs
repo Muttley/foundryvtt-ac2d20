@@ -12,13 +12,13 @@
     </nav>
 
     {{!-- Sheet Header --}}
-    {{> "systems/ac2d20/templates/actor/parts/npc-header.html"}}
+    {{> "systems/ac2d20/templates/actor/parts/npc-header.hbs"}}
 
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
         {{!-- Abilities Tab !!! DONT INDENT OR TEXT AREAS INSIDE WILL BREAK !!! --}}
-        <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/npc-abilities.html"}}</div>
+        <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/npc-abilities.hbs"}}</div>
 
         {{!-- Biography Tab --}}
         <div class="tab data" data-group="primary" data-tab="data">
@@ -28,7 +28,7 @@
 
         {{!-- Active Effects Tab --}}
         <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-            {{> "systems/ac2d20/templates/actor/parts/actor-effects.html"}}
+            {{> "systems/ac2d20/templates/actor/parts/actor-effects.hbs"}}
         </div>
 
     </section>
