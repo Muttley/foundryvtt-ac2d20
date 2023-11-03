@@ -36,10 +36,10 @@ export class ACItemSheet extends ItemSheet {
 
         foundry.utils.mergeObject(context, {
             source: source.system,
-            system: item.system,      
+            system: item.system,
             isEmbedded: item.isEmbedded,
-            type: item.type,      
-            flags: item.flags,      
+            type: item.type,
+            flags: item.flags,
             AC2D20: CONFIG.AC2D20,
             effects: prepareActiveEffectCategories(item.effects),
             descriptionHTML: await TextEditor.enrichHTML(item.system.description, {

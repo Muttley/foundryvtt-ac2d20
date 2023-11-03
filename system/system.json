@@ -5,13 +5,17 @@
   "version": "11.0.2",
   "compatibility": {
     "minimum": "11",
-    "verified": "11",
-    "maximum": "11"
+    "verified": "11"
   },
   "authors": [
+		{
+			"name": "Paul Maskelyne",
+			"discord": "Muttley#3296",
+			"email": "mu77ley@gmail.com",
+			"mastodon": "@muttley@dice.camp"
+		},
     {
-      "name": "HappySteve",
-      "flags": {}
+      "name": "HappySteve"
     }
   ],
   "esmodules": [

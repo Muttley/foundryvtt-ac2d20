@@ -1,29 +1,29 @@
 // Import document classes.
-import { ACActor } from "./documents/actor.mjs";
-import { ACItem } from "./documents/item.mjs";
+import { ACActor } from "./src/documents/actor.mjs";
+import { ACItem } from "./src/documents/item.mjs";
 // Import sheet classes.
-import { ACActorSheet } from "./sheets/actor-sheet.mjs";
-import { ACNPCSheet } from "./sheets/npc-sheet.mjs";
-import { ACVehicleSheet } from "./sheets/vehicle-sheet.mjs";
-import { ACItemSheet } from "./sheets/item-sheet.mjs";
+import { ACActorSheet } from "./src/sheets/actor-sheet.mjs";
+import { ACNPCSheet } from "./src/sheets/npc-sheet.mjs";
+import { ACVehicleSheet } from "./src/sheets/vehicle-sheet.mjs";
+import { ACItemSheet } from "./src/sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
-import { AC2D20 } from "./helpers/config.mjs";
-import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
-import { registerHandlebarsHelpers } from "./helpers/handlebars.mjs"
+import { AC2D20 } from "./src/helpers/config.mjs";
+import { preloadHandlebarsTemplates } from "./src/helpers/templates.mjs";
+import { registerHandlebarsHelpers } from "./src/helpers/handlebars.mjs"
 //Import Roll2D20
-import { Roller2D20 } from "./roller/ac2d20-roller.mjs"
-import { Dialog2d20 } from './roller/dialog2d20.js'
-import { DialogD6 } from './roller/dialogD6.js'
-import DieACChallenge from './roller/challengeDie.js'
+import { Roller2D20 } from "./src/roller/ac2d20-roller.mjs"
+import { Dialog2d20 } from './src/roller/dialog2d20.js'
+import { DialogD6 } from './src/roller/dialogD6.js'
+import DieACChallenge from './src/roller/challengeDie.js'
 //Settings
-import { registerSettings } from './settings.js';
+import { registerSettings } from './src/settings.js';
 // Text Enrichers
-import { registerEnrichers } from './enrichers.mjs';
+import { registerEnrichers } from './src/enrichers.mjs';
 //Momentum
-import { MomentumTracker } from './app/momentum-tracker.mjs'
+import { MomentumTracker } from './src/app/momentum-tracker.mjs'
 //Combat Tracker
-import Combat2d20 from "./combat/combat.mjs";
-import CombatTracker2d20 from "./combat/combat-tracker.mjs";
+import Combat2d20 from "./src/combat/combat.mjs";
+import CombatTracker2d20 from "./src/combat/combat-tracker.mjs";
 
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */

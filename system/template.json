@@ -2,7 +2,7 @@
 	"Actor": {
 		"types": ["character", "npc", "vehicle"],
 		"templates": {
-			"base": {				
+			"base": {
 				"fortune":{
 					"max":0,
 					"value":0
@@ -32,7 +32,7 @@
 					{"text":""},
 					{"text":""},
 					{"text":""}
-				], 
+				],
 				"biography":""
 			},
 			"stats": {
@@ -94,8 +94,8 @@
 			"archetype":"",
 			"background":"",
 			"characteristic":"",
-			"spellcastingType":"traditional"			
-		},		
+			"spellcastingType":"traditional"
+		},
 		"npc": {
 			"templates": ["base", "derived", "stats"],
 			"level":"trooper",
@@ -125,8 +125,8 @@
 		"types": [
 			"weapon",
 			"armor",
-			"talent",			
-			"spell",			
+			"talent",
+			"spell",
 			"skillkit",
 			"equipment",
 			"special_rule",
@@ -221,13 +221,13 @@
 				"debilitating": { "label": "Debilitating", "value": false, "description": "" },
 				"escalation": { "label": "Escalation", "value": false, "description": "" },
 				"giant-killer": { "label": "Giant-Killer", "value": false, "description": "" },
-				"heavy": { "label": "Heavy", "value": false, "description": "" },				
+				"heavy": { "label": "Heavy", "value": false, "description": "" },
 				"hidden": { "label": "Hidden", "value": false, "description": "" },
 				"hunger": { "label": "Hunger", "value": false, "description": "" },
 				"inaccurate": { "label": "Inaccurate", "value": false, "description": "" },
 				"indirect": { "label": "Indirect", "value": false, "description": "" },
 				"munition": { "label": "Munition", "value": false, "description": "" },
-				"parrying": { "label": "Parrying", "value": false, "description": "" },				
+				"parrying": { "label": "Parrying", "value": false, "description": "" },
 				"reliable": { "label": "Reliable", "value": false, "description": "" },
 				"subtle": { "label": "Subtle", "value": false, "description": "" },
 				"unreliable": { "label": "Unreliable", "value": false, "description": "" }
