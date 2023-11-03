@@ -9,7 +9,7 @@ export default gulp.series(
 	gulp.parallel(
 		css.compile,
 		// lang.compile,
-		// javascript.lint,
+		javascript.lint,
 		javascript.compile
 	),
 
@@ -23,7 +23,7 @@ export default gulp.series(
 export const build = gulp.parallel(
 	css.compile,
 	// lang.compile,
-	// javascript.lint,
+	javascript.lint,
 	javascript.compile,
 	packs.compile
 );
