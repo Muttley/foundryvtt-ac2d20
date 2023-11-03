@@ -1,4 +1,4 @@
-import { AC2D20 } from "../helpers/config.mjs";
+// import { AC2D20 } from "../helpers/config.mjs";
 import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
 
 /**
@@ -74,18 +74,18 @@ export class ACActorSheet extends ActorSheet {
 		});
 
 		// Prepare character data and items.
-		if (actorData.type == "character") {
+		if (actorData.type === "character") {
 			this._prepareItems(context);
 			this._prepareCharacterData(context);
 		}
 
 		// Prepare NPC data and items.
-		if (actorData.type == "npc") {
+		if (actorData.type === "npc") {
 			this._prepareItems(context);
 		}
 
 		// Prepare Creature data and items.
-		if (actorData.type == "vehicle") {
+		if (actorData.type === "vehicle") {
 			this._prepareItems(context);
 
 		}
@@ -98,7 +98,9 @@ export class ACActorSheet extends ActorSheet {
 		let itemsEnrichedDescriptions = {};
 		for await (let itm of this.actor.items) {
 			if (itemTypes.includes(itm.type)) {
-				const descriptionRich = await TextEditor.enrichHTML(itm.system.description, {async: true});
+				const descriptionRich =
+					await TextEditor.enrichHTML(itm.system.description, {async: true});
+
 				itemsEnrichedDescriptions[itm._id] = descriptionRich;
 			}
 		}
@@ -123,18 +125,28 @@ export class ACActorSheet extends ActorSheet {
 		let isEncumbered = false;
 		let physicalItems = context.items.filter(i => i.system.hasOwnProperty("weight"));
 		let encumberingItems = physicalItems.filter(i => {
-			if (i.type != "armor") {
+			if (i.type !== "armor") {
 				return true;
 			}
 			else if (!i.system.equipped || (i.system.equipped && i.system.qualities.heavy.value)) {
 				return true;
 			}
+			else {
+				return false;
+			}
 		});
-		context.minorItemsTotal = encumberingItems.filter(i => parseInt(i.system.weight) === 1).length;
-		context.majorItemsTotal = encumberingItems.filter(i => parseInt(i.system.weight) === 3).length;
+		context.minorItemsTotal = encumberingItems.filter(
+			i => parseInt(i.system.weight) === 1
+		).length;
+
+		context.majorItemsTotal = encumberingItems.filter(
+			i => parseInt(i.system.weight) === 3
+		).length;
+
 		let totalEncumbrance = 0;
 		for (let i = 0; i < encumberingItems.length; i++) {
-			totalEncumbrance += parseInt(encumberingItems[i].system.quantity) * parseInt(encumberingItems[i].system.weight);
+			totalEncumbrance += parseInt(encumberingItems[i].system.quantity)
+				* parseInt(encumberingItems[i].system.weight);
 		}
 
 		if (totalEncumbrance > this.actor.system.carryCapacity.value) isEncumbered = true;
@@ -255,9 +267,9 @@ export class ACActorSheet extends ActorSheet {
 			let attr = $(event.currentTarget).data("attr");
 			let attribute = this.actor.system.attributes[attr];
 			let complication = 20;
-			if (this.actor.type == "character") complication -= this.actor.getComplicationFromInjuries();
+			if (this.actor.type === "character") complication -= this.actor.getComplicationFromInjuries();
 
-			if (this.actor.type == "npc" || this.actor.type == "vehicle") complication -= this.actor.system.injuries.value;
+			if (this.actor.type === "npc" || this.actor.type === "vehicle") complication -= this.actor.system.injuries.value;
 
 			const attrName = game.i18n.localize(`AC2D20.Ability.${attr}`);
 			game.ac2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication });
@@ -269,7 +281,13 @@ export class ACActorSheet extends ActorSheet {
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
 			let isFocused = $(ev.currentTarget).hasClass("focused");
-			this._onRollSkill(item.name, item.system.value, this.actor.system.attributes[item.system.defaultAttribute].value, isFocused);
+
+			this._onRollSkill(
+				item.name,
+				item.system.value,
+				this.actor.system.attributes[item.system.defaultAttribute].value,
+				isFocused
+			);
 		});
 		// Change Skill Rank value
 		html.find(".skill-value-input").change(async ev => {
@@ -312,9 +330,9 @@ export class ACActorSheet extends ActorSheet {
 			const li = $(event.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
 			let complication = 20 - parseInt(item.system.difficulty - 1);
-			if (item.actor.type == "character") complication -= item.actor.getComplicationFromInjuries();
+			if (item.actor.type === "character") complication -= item.actor.getComplicationFromInjuries();
 
-			if (item.actor.type == "npc") complication -= item.actor.system.injuries.value;
+			if (item.actor.type === "npc") complication -= item.actor.system.injuries.value;
 
 			const skillName = item.system.skill;
 			const focusName = item.system.focus;
@@ -328,7 +346,7 @@ export class ACActorSheet extends ActorSheet {
 			catch(err) { }
 			let isFocus = false;
 			try {
-				for (const [key, value] of Object.entries(skill.system.focuses)) {
+				for (const [, value] of Object.entries(skill.system.focuses)) {
 					if (value.title === focusName && value.isfocus) isFocus = true;
 				}
 			}
@@ -336,10 +354,23 @@ export class ACActorSheet extends ActorSheet {
 
 			const attrValue = -1;
 			let prefAttribute = "ins";
-			if (this.actor.system.spellcastingType=="researcher") prefAttribute = "rea";
-			else if (this.actor.system.spellcastingType=="dabbler") prefAttribute = "wil";
+			if (this.actor.system.spellcastingType === "researcher") {
+				prefAttribute = "rea";
+			}
+			else if (this.actor.system.spellcastingType === "dabbler") {
+				prefAttribute = "wil";
+			}
 
-			game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute });
+			game.ac2d20.Dialog2d20.createDialog({
+				rollName: item.name,
+				diceNum: 2,
+				attribute: attrValue,
+				skill: skillRank,
+				focus: isFocus,
+				complication: complication,
+				actor: this.actor.system,
+				prefAttribute: prefAttribute,
+			});
 
 		});
 
@@ -372,11 +403,16 @@ export class ACActorSheet extends ActorSheet {
 			let complication = 20;
 			// if unrelliable increase complication
 			for (const [k, v] of Object.entries(item.system.qualities)) {
-				if (v.value && k == "unreliable") complication -= 1;
+				if (v.value && k === "unreliable") complication -= 1;
 			}
-			if (item.actor.type == "character") complication -= item.actor.getComplicationFromInjuries();
 
-			if (item.actor.type == "npc" || item.actor.type == "vehicle") complication -= item.actor.system.injuries.value;
+			if (item.actor.type === "character") {
+				complication -= item.actor.getComplicationFromInjuries();
+			}
+
+			if (item.actor.type === "npc" || item.actor.type === "vehicle") {
+				complication -= item.actor.system.injuries.value;
+			}
 
 			const focusName = item.system.focus;
 			// if (!focusName)
@@ -392,7 +428,7 @@ export class ACActorSheet extends ActorSheet {
 			}
 			let isFocus = false;
 			try {
-				for (const [key, value] of Object.entries(skill.system.focuses)) {
+				for (const [, value] of Object.entries(skill.system.focuses)) {
 					if (value.title === focusName && value.isfocus) isFocus = true;
 				}
 			}
@@ -400,10 +436,21 @@ export class ACActorSheet extends ActorSheet {
 				console.log(err);
 			}
 
-			const attrValue = item.actor.type == "vehicle" ? 6 : -1;
+			const attrValue = item.actor.type === "vehicle" ? 6 : -1;
 			// weaponType is actualy attribute abrevation
 			const prefAttribute = item.system.weaponType;
-			game.ac2d20.Dialog2d20.createDialog({ rollName: item.name, diceNum: 2, attribute: attrValue, skill: skillRank, focus: isFocus, complication: complication, actor: this.actor.system, prefAttribute: prefAttribute, actorId: this.actor._id, itemId: item._id });
+			game.ac2d20.Dialog2d20.createDialog({
+				rollName: item.name,
+				diceNum: 2,
+				attribute: attrValue,
+				skill: skillRank,
+				focus: isFocus,
+				complication: complication,
+				actor: this.actor.system,
+				prefAttribute: prefAttribute,
+				actorId: this.actor._id,
+				itemId: item._id,
+			});
 
 		});
 
@@ -413,11 +460,17 @@ export class ACActorSheet extends ActorSheet {
 			const item = this.actor.items.get(li.data("itemId"));
 			const itemId = li.data("itemId");
 			let stressBonus = 0;
-			if (item.system.weaponType == "agi") stressBonus = item.actor.system.attributes.bra.bonus;
-			else if (item.system.weaponType == "coo") stressBonus = item.actor.system.attributes.ins.bonus;
-			else if (item.system.weaponType == "wil") stressBonus = item.actor.system.attributes.wil.bonus;
+			if (item.system.weaponType === "agi") stressBonus = item.actor.system.attributes.bra.bonus;
+			else if (item.system.weaponType === "coo") stressBonus = item.actor.system.attributes.ins.bonus;
+			else if (item.system.weaponType === "wil") stressBonus = item.actor.system.attributes.wil.bonus;
 			let stress = parseInt(item.system.stress) + parseInt(stressBonus);
-			game.ac2d20.DialogD6.createDialog({ rollName: item.name, diceNum: stress, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id });
+			game.ac2d20.DialogD6.createDialog({
+				rollName: item.name,
+				diceNum: stress,
+				ac2d20Roll: null,
+				itemId: itemId,
+				actorId: this.actor._id,
+			});
 		});
 
 		// * AMMO COUNT UPDATE
@@ -489,20 +542,6 @@ export class ACActorSheet extends ActorSheet {
 		});
 
 		// * INJURIES
-		// html.find('.injury-text, .treated, .injury-type').change(async (ev) => {
-		//     let updates = [];
-		//     $('.injury-cell.injury').each((i, el) => {
-		//         console.warn($(el).find('.injury-text').val())
-		//         let _txt = this._clearTextAreaText($(el).find('.injury-text').val());
-		//         let inj = {
-		//             text: _txt,
-		//             treated: $(el).find('.controls .treated').is(":checked"),
-		//             injuryType: $(el).find('.controls .injury-type').is(":checked")
-		//         }
-		//         updates.push(inj);
-		//     });
-		//     await this.actor.update({ 'data.injuries.list': updates });
-		// });
 		html.find(".injury-text, .treated, .injury-type").change(async ev => {
 			const $parent = $(ev.currentTarget).parents(".injury");
 			const injuryNum = $parent.data("injury");
@@ -521,16 +560,13 @@ export class ACActorSheet extends ActorSheet {
 		html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
 
 		/* -------------------------------------------- */
-		/* ADD RIGH CLICK CONTENT MENU
+		/* ADD RIGHT CLICK CONTENT MENU
         /* -------------------------------------------- */
-		const editLabel = game.i18n.localize("AC2D20.EDIT");
-		const deleteLabel = game.i18n.localize("AC2D20.DELETE");
-		const postLabel = game.i18n.localize("AC2D20.POST");
-
 		let menu_items = [
 			{
 				icon: '<i class="fas fa-comment"></i>',
 				name: "",
+
 				callback: t => {
 					this._onPostItem(t.data("item-id"));
 				},
@@ -558,6 +594,7 @@ export class ACActorSheet extends ActorSheet {
 				},
 			},
 		];
+
 		new ContextMenu(html, ".editable-item", menu_items);
 
 
@@ -565,7 +602,7 @@ export class ACActorSheet extends ActorSheet {
 		const numInputs = document.querySelectorAll("input[type=number]");
 		numInputs.forEach(function(input) {
 			input.addEventListener("change", function(e) {
-				if (e.target.value == "") {
+				if (e.target.value === "") {
 					e.target.value = 0;
 				}
 			});
@@ -631,12 +668,25 @@ export class ACActorSheet extends ActorSheet {
 
 	_onRightClickSkill(itemId, attribute) {
 		const item = this.actor.items.get(itemId);
-		this._onRollSkill(item.name, item.system.value, this.actor.system.attributes[attribute].value, item.system.focus);
+		this._onRollSkill(
+			item.name,
+			item.system.value,
+			this.actor.system.attributes[attribute].value,
+			item.system.focus
+		);
 	}
 
 	_onRollSkill(skillName, rank, attribute, focus) {
 		let complication = 20 - this.actor.getComplicationFromInjuries();
-		game.ac2d20.Dialog2d20.createDialog({ rollName: skillName, diceNum: 2, attribute: -1, skill: rank, focus: focus, complication: complication, actor: this.actor.system });
+		game.ac2d20.Dialog2d20.createDialog({
+			rollName: skillName,
+			diceNum: 2,
+			attribute: -1,
+			skill: rank,
+			focus: focus,
+			complication: complication,
+			actor: this.actor.system,
+		});
 	}
 
 	async _onItemSummary(event) {
@@ -651,10 +701,12 @@ export class ACActorSheet extends ActorSheet {
 			});
 		}
 		else {
-			let _descriptionText = await TextEditor.enrichHTML(item.system.description, {async: true});
-			let div = $(
-				`<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${_descriptionText}</div></div></div>`
+			let _descriptionText = await TextEditor.enrichHTML(
+				item.system.description, {async: true}
 			);
+
+			let div = $(`<div class="item-summary"><div class="item-summary-wrapper"><div class='editor-content'>${_descriptionText}</div></div></div>`);
+
 			li.append(div.hide());
 			div.slideDown(200);
 		}

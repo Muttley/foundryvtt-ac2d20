@@ -115,7 +115,7 @@ export class ACItemSheet extends ItemSheet {
 		const numInputs = document.querySelectorAll("input[type=number]");
 		numInputs.forEach(function(input) {
 			input.addEventListener("change", function(e) {
-				if (e.target.value == "") {
+				if (e.target.value === "") {
 					e.target.value = 0;
 				}
 			});

@@ -1,6 +1,7 @@
 
 /**
- * Extend the base Actor document by defining a custom roll data structure which is ideal for the Simple system.
+ * Extend the base Actor document by defining a custom roll data structure which
+ * is ideal for the Simple system.
  * @extends {Actor}
  */
 export class ACActor extends Actor {
@@ -16,20 +17,24 @@ export class ACActor extends Actor {
 		// documents or derived data.
 
 		// Carry capacity
+		const brawn = this.system.attributes.bra.value;
+
 		let carryCapacity = 6;
-		if (this.system.attributes.bra.value < 9) {
+
+		if (brawn < 9) {
 			carryCapacity = 6;
 		}
-		else if (this.system.attributes.bra.value == 9) {
+		else if (brawn === 9) {
 			carryCapacity = 7;
 		}
-		else if (this.system.attributes.bra.value == 10 || this.system.attributes.bra.value == 11) {
+		else if (brawn === 10 || brawn === 11) {
 			carryCapacity = 8;
 		}
-		else {
+		else if (brawn >= 12) {
 			carryCapacity = 9;
 		}
-		this.system.carryCapacity.value = parseInt(carryCapacity);
+
+		this.system.carryCapacity.value = carryCapacity;
 	}
 
 	/**
@@ -52,14 +57,14 @@ export class ACActor extends Actor {
      * Prepare Character type specific data
      */
 	_prepareCharacterData(actorData) {
-		if (this.type !== "character") return;
+		// if (this.type !== "character") return;
 	}
 
 	/**
      * Prepare NPC type specific data.
      */
 	_prepareNpcData(actorData) {
-		if (this.type !== "npc") return;
+		// if (this.type !== "npc") return;
 	}
 
 	/**
@@ -88,10 +93,16 @@ export class ACActor extends Actor {
 	}
 
 	getComplicationFromInjuries() {
-		const injuries = [this.system.injuries.injury0, this.system.injuries.injury1, this.system.injuries.injury2];
+		const injuries = [
+			this.system.injuries.injury0,
+			this.system.injuries.injury1,
+			this.system.injuries.injury2,
+		];
+
 		let inj = injuries.filter(_i => {
-			return (_i.text != "" && !_i.treated);
+			return (_i.text !== "" && !_i.treated);
 		});
+
 		return inj.length;
 	}
 
@@ -99,20 +110,26 @@ export class ACActor extends Actor {
      * Prepare NPC roll data.
      */
 	_getNpcRollData(data) {
-		if (this.type !== "npc") return;
+		// if (this.type !== "npc") return;
 		// Process additional NPC data here.
 	}
 
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 		// set icon based on actor type
-		if (data.img == undefined) {
+		if (data.img === undefined) {
 			let ico = `systems/ac2d20/assets/doc-icons/${this.type}.svg`;
 			this.updateSource({ img: ico });
 		}
 		// Setup Tokens
 		if (this.type === "character") {
-			this.prototypeToken.updateSource({ actorLink: true, sight: { enabled: true }, disposition: 1 });
+			this.prototypeToken.updateSource({
+				actorLink: true,
+				sight: {
+					enabled: true,
+				},
+				disposition: 1,
+			});
 		}
 		if (this.type === "npc") {
 			this.prototypeToken.updateSource({ sight: { enabled: true }, disposition: -1 });
@@ -122,7 +139,7 @@ export class ACActor extends Actor {
 		}
 		// Add Skills to Characters
 		if (this.type === "character") {
-			const packName = game.settings.get("ac2d20", "compendium-skills");
+			let packName = game.settings.get("ac2d20", "compendium-skills");
 			if (!packName) packName = "ac2d20.skills";
 
 			let packSkills = await game.packs.get(packName).getDocuments();

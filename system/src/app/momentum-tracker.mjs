@@ -134,15 +134,20 @@ export class MomentumTracker extends Application {
 
 Hooks.once("ready", () => {
 	if (MomentumTracker._instance) return;
-	let ap = new MomentumTracker();
+
+	new MomentumTracker();
+
 	MomentumTracker.renderApTracker();
+
 	game.socket.on("system.ac2d20", ev => {
 		if (ev.operation === "adjustAP") {
 			if (game.user.isGM) MomentumTracker.adjustAP(ev.data.type, ev.data.diff);
 		}
+
 		if (ev.operation === "setAP") {
 			if (game.user.isGM) MomentumTracker.setAP(ev.data.type, ev.data.value);
 		}
+
 		if (ev.operation === "updateAP") MomentumTracker.updateAP();
 	});
 });

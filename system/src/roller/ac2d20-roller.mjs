@@ -10,13 +10,15 @@ export class Roller2D20 {
 	successes = 0;
 
 	static async rollD20({ rollname = "Roll xD20", dicenum = 2, attribute = 0, skill = 0, focus = false, difficulty = 1, complication = 20, actorId = null, itemId = null } = {}) {
-		let dicesRolled = [];
+		// let dicesRolled = [];
 		let successTreshold = parseInt(attribute) + parseInt(skill);
 		let critTreshold = focus ? parseInt(skill) : 1;
 		let complicationTreshold = parseInt(complication);
 		let formula = `${dicenum}d20`;
 		let roll = new Roll(formula);
+
 		await roll.evaluate({ async: true });
+
 		await Roller2D20.parseD20Roll({
 			rollname: rollname,
 			roll: roll,
@@ -43,12 +45,24 @@ export class Roller2D20 {
 				if (r.result >= complicationTreshold) {
 					diceComplication = 1;
 				}
-				// if there are no rollIndexes sent then it is a new roll. Otherwise it's a re-roll and we should replace dices at given indexes
+				// if there are no rollIndexes sent then it is a new roll.
+				// Otherwise it's a re-roll and we should replace dices at given
+				// indexes
 				if (!rerollIndexes.length) {
-					dicesRolled.push({ success: diceSuccess, reroll: false, result: r.result, complication: diceComplication });
+					dicesRolled.push({
+						success: diceSuccess,
+						reroll: false,
+						result: r.result,
+						complication: diceComplication,
+					});
 				}
 				else {
-					dicesRolled[rerollIndexes[i]] = { success: diceSuccess, reroll: true, result: r.result, complication: diceComplication };
+					dicesRolled[rerollIndexes[i]] = {
+						success: diceSuccess,
+						reroll: true,
+						result: r.result,
+						complication: diceComplication,
+					};
 					i++;
 				}
 			});
@@ -169,7 +183,9 @@ export class Roller2D20 {
 			d.results.forEach(r => {
 				let diceResult = diceResults[r.result - 1];
 				diceResult.face = r.result;
-				// if there are no rollIndexes sent then it is a new roll. Otherwise it's a re-roll and we should replace dices at given indexes
+				// if there are no rollIndexes sent then it is a new roll.
+				// Otherwise it's a re-roll and we should replace dices at given
+				// indexes
 				if (!rerollIndexes.length) {
 					dicesRolled.push(diceResult);
 				}
@@ -271,34 +287,6 @@ export class Roller2D20 {
 
 		}
 
-		// if (weapon != null) {
-		//     for (let de in weapon.data.effect) {
-		//         if (weapon.data.effect[de].value) {
-		//             let rank = weapon.data.effect[de].rank ?? "";
-		//             let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-		//             let efectLabel = `${damageEffectLabel}${rank}`;
-		//             weaponDamageEffectsList.push(efectLabel);
-		//         }
-		//     }
-
-		//     for (let qu in weapon.data.qualities) {
-		//         if (weapon.data.qualities[qu].value) {
-		//             //let rank = weapon.system.effect[qu].rank ?? "";
-		//             let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
-		//             //let quLabel = `${damageEffectLabel}${rank}`;
-		//             weaponQualityList.push(quLabel);
-		//         }
-		//     }
-		// }
-		// let weaponDamageEffects = weaponDamageEffectsList.join(', ');
-		// let rollData = {
-		//     rollname: rollname,
-		//     damage: damage,
-		//     effects: effects,
-		//     results: dicesRolled,
-		//     weaponDamageEffects: weaponDamageEffects,
-		//     weaponQualityList: weaponQualityList
-		// }
 		let rollData = {
 			rollname: rollname,
 			damage: damage,

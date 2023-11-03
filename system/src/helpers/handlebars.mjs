@@ -28,10 +28,12 @@ export const registerHandlebarsHelpers = function() {
 	Handlebars.registerHelper("ifCond", function(v1, operator, v2, options) {
 		switch (operator) {
 			case "==":
+				// eslint-disable-next-line eqeqeq
 				return v1 == v2 ? options.fn(this) : options.inverse(this);
 			case "===":
 				return v1 === v2 ? options.fn(this) : options.inverse(this);
 			case "!=":
+				// eslint-disable-next-line eqeqeq
 				return v1 != v2 ? options.fn(this) : options.inverse(this);
 			case "!==":
 				return v1 !== v2 ? options.fn(this) : options.inverse(this);
@@ -69,14 +71,14 @@ export const registerHandlebarsHelpers = function() {
 	/* -------------------------------------------- */
 
 	Handlebars.registerHelper("damageFaIconClass", function(str) {
-		if (str == "physical") return "fas fa-fist-raised";
-		else if (str == "energy") return "fas fa-bolt";
-		else if (str == "radiation") return "fas fa-radiation";
-		else if (str == "poison") return "fas fa-biohazard";
+		if (str === "physical") return "fas fa-fist-raised";
+		else if (str === "energy") return "fas fa-bolt";
+		else if (str === "radiation") return "fas fa-radiation";
+		else if (str === "poison") return "fas fa-biohazard";
 	});
 
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
-		if (key=="") return [];
+		if (key === "") return [];
 		const _skill = CONFIG.AC2D20.SKILLS.filter(s => s.key === key);
 		return _skill[0].focuses;
 	});
@@ -116,12 +118,12 @@ export const registerHandlebarsHelpers = function() {
 	});
 
 	Handlebars.registerHelper("isCreaturesWeapon", function(weapon) {
-		if (weapon.system.weaponType == "creatureAttack" || weapon.actor?.type == "creature") return true;
+		if (weapon.system.weaponType === "creatureAttack" || weapon.actor?.type === "creature") return true;
 		else return false;
 	});
 
 	Handlebars.registerHelper("isWeaponUsingMeleeBonus", function(weapon, actor) {
-		if ((weapon.weaponType == "unarmed" || weapon.weaponType == "meleeWeapons") && actor?.type != "creature") return true;
+		if ((weapon.weaponType === "unarmed" || weapon.weaponType === "meleeWeapons") && actor?.type !== "creature") return true;
 		else return false;
 	});
 
@@ -131,9 +133,9 @@ export const registerHandlebarsHelpers = function() {
 	});
 
 	Handlebars.registerHelper("getAttributeBonus", function(actor, weaponType) {
-		if (weaponType == "agi") return actor.system.attributes.bra.bonus;
-		else if (weaponType == "coo") return actor.system.attributes.ins.bonus;
-		else if (weaponType == "wil") return actor.system.attributes.wil.bonus;
+		if (weaponType === "agi") return actor.system.attributes.bra.bonus;
+		else if (weaponType === "coo") return actor.system.attributes.ins.bonus;
+		else if (weaponType === "wil") return actor.system.attributes.wil.bonus;
 	});
 
 	Handlebars.registerHelper("getArmorQualities", function(qualities) {
@@ -142,9 +144,9 @@ export const registerHandlebarsHelpers = function() {
 	});
 
 	Handlebars.registerHelper("getSizeLabel", function(num) {
-		if (num == 0) return "Trivial";
-		else if (num == 1) return "Minor";
-		else if (num == 3) return "Major";
+		if (num === 0) return "Trivial";
+		else if (num === 1) return "Minor";
+		else if (num === 3) return "Major";
 		else return "-";
 	});
 

@@ -11,14 +11,15 @@ export class ACItem extends Item {
 
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
-		if (data.img==undefined) {
+		if (data.img === undefined) {
 			let ico = `systems/ac2d20/assets/doc-icons/${data.type}.svg`;
 			this.updateSource({ img: ico });
 		}
 	}
 
 	/**
-     * Prepare a data object which is passed to any Roll formulas which are created related to this Item
+     * Prepare a data object which is passed to any Roll formulas which are
+	 * created related to this Item
      * @private
      */
 	getRollData() {

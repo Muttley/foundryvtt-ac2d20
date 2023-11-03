@@ -30,7 +30,6 @@ import CombatTracker2d20 from "./src/combat/combat-tracker.mjs";
 /* -------------------------------------------- */
 registerHandlebarsHelpers();
 
-
 Hooks.once("init", async function() {
 	// Add utility classes to the global game object so that they're more easily
 	// accessible in global contexts.
@@ -130,7 +129,7 @@ Hooks.on("renderChatMessage", (message, html, data) => {
 			}
 			else {
 				let ac2d20Roll = message.flags.ac2d20roll;
-				if (ac2d20Roll.diceFace == "d20") {
+				if (ac2d20Roll.diceFace === "d20") {
 					Roller2D20.rerollD20({
 						rollname: ac2d20Roll.rollname,
 						rerollIndexes: rerollIndex,
@@ -140,7 +139,7 @@ Hooks.on("renderChatMessage", (message, html, data) => {
 						dicesRolled: ac2d20Roll.dicesRolled,
 					});
 				}
-				else if (ac2d20Roll.diceFace == "d6") {
+				else if (ac2d20Roll.diceFace === "d6") {
 					Roller2D20.rerollD6({
 						rollname: ac2d20Roll.rollname,
 						rerollIndexes: rerollIndex,
@@ -173,7 +172,13 @@ Hooks.on("renderChatMessage", (message, html, data) => {
 			let ac2d20Roll = message.flags.ac2d20roll;
 			let itemId = message.flags.itemId;
 			let actorId = message.flags.actorId;
-			game.ac2d20.DialogD6.createDialog({ rollname: ac2d20Roll.rollname, diceNum: 1, ac2d20Roll: ac2d20Roll, itemId: itemId, actorId: actorId });
+			game.ac2d20.DialogD6.createDialog({
+				rollname: ac2d20Roll.rollname,
+				diceNum: 1,
+				ac2d20Roll: ac2d20Roll,
+				itemId: itemId,
+				actorId: actorId,
+			});
 		});
 	}
 
