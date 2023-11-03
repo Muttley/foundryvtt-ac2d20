@@ -4,12 +4,12 @@ export function registerEnrichers() {
 		{
 			pattern: /@(s(tress)?|c(hallenge)?)/gim,
 			enricher: async (match, options) => {
-				const i = document.createElement('i');
-				i.className = 'cthl-cthulhu';
+				const i = document.createElement("i");
+				i.className = "cthl-cthulhu";
 
 				// Adjust positioning slightly to align better with text.
-				i.style.position = 'relative';
-				i.style.top = '0.2em';
+				i.style.position = "relative";
+				i.style.top = "0.2em";
 
 				return i;
 			},
@@ -17,15 +17,15 @@ export function registerEnrichers() {
 		{
 			pattern: /@(x(ross)?)/gim,
 			enricher: async (match, options) => {
-				const i = document.createElement('i');
-				i.className = 'cth-ico-cth-cross';
+				const i = document.createElement("i");
+				i.className = "cth-ico-cth-cross";
 
 				// Adjust positioning slightly to align better with text.
-				i.style.position = 'relative';
-				i.style.top = '0.1em';
+				i.style.position = "relative";
+				i.style.top = "0.1em";
 
 				return i;
 			},
-		}
+		},
 	];
 }
