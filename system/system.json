@@ -44,6 +44,17 @@
 			"flags": {}
 		}
 	],
+	"packFolders": [
+		{
+			"name": "Achtung! Cthulhu 2d20",
+			"sorting": "a",
+			"color": "#494e32",
+			"packs": [
+				"macros",
+				"skills"
+			]
+		}
+	],
 	"languages": [
 		{
 			"lang": "en",
