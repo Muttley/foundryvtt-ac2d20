@@ -1,0 +1,47 @@
+{
+	"_id": "H5aEzF4jxrSfeTIx",
+	"_key": "!items!H5aEzF4jxrSfeTIx",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Climbing"
+			},
+			{
+				"isfocus": false,
+				"title": "Swimming"
+			},
+			{
+				"isfocus": false,
+				"title": "Running"
+			},
+			{
+				"isfocus": false,
+				"title": "Physical Training"
+			},
+			{
+				"isfocus": false,
+				"title": "Throwing"
+			},
+			{
+				"isfocus": false,
+				"title": "Lifting"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Athletics",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

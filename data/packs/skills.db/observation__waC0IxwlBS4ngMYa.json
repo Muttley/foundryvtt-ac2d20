@@ -1,0 +1,39 @@
+{
+	"_id": "waC0IxwlBS4ngMYa",
+	"_key": "!items!waC0IxwlBS4ngMYa",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Hearing"
+			},
+			{
+				"isfocus": false,
+				"title": "Instincts"
+			},
+			{
+				"isfocus": false,
+				"title": "Sight"
+			},
+			{
+				"isfocus": false,
+				"title": "Smell and Taste"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Observation",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

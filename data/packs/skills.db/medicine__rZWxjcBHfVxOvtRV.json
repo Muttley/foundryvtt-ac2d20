@@ -1,0 +1,47 @@
+{
+	"_id": "rZWxjcBHfVxOvtRV",
+	"_key": "!items!rZWxjcBHfVxOvtRV",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "First Aid"
+			},
+			{
+				"isfocus": false,
+				"title": "Infectious Diseases"
+			},
+			{
+				"isfocus": false,
+				"title": "Pharmacology"
+			},
+			{
+				"isfocus": false,
+				"title": "Psychiatry"
+			},
+			{
+				"isfocus": false,
+				"title": "Surgery"
+			},
+			{
+				"isfocus": false,
+				"title": "Toxicology"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Medicine",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

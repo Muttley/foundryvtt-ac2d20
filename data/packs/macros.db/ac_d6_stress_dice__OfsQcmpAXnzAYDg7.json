@@ -1,0 +1,15 @@
+{
+	"_id": "OfsQcmpAXnzAYDg7",
+	"_key": "!macros!OfsQcmpAXnzAYDg7",
+	"author": "zSo9baAk8tjHoDE4",
+	"command": "game.ac2d20.DialogD6.createDialog({ rollName: 'Stress Dice', diceNum: 1 })",
+	"folder": null,
+	"img": "systems/ac2d20/assets/d6-cthulhu.webp",
+	"name": "AC D6 Stress Dice",
+	"permission": {
+		"default": 0,
+		"zSo9baAk8tjHoDE4": 3
+	},
+	"scope": "global",
+	"type": "script"
+}

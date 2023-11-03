@@ -1,0 +1,35 @@
+{
+	"_id": "O34WIFluPGUZ5jAX",
+	"_key": "!items!O34WIFluPGUZ5jAX",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Fortitude"
+			},
+			{
+				"isfocus": false,
+				"title": "Discipline"
+			},
+			{
+				"isfocus": false,
+				"title": "Immunity"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Resilience",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

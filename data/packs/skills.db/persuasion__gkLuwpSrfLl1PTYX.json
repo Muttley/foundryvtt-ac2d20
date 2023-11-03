@@ -1,0 +1,51 @@
+{
+	"_id": "gkLuwpSrfLl1PTYX",
+	"_key": "!items!gkLuwpSrfLl1PTYX",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Charm"
+			},
+			{
+				"isfocus": false,
+				"title": "Innuendo"
+			},
+			{
+				"isfocus": false,
+				"title": "Intimidation"
+			},
+			{
+				"isfocus": false,
+				"title": "Negotiation"
+			},
+			{
+				"isfocus": false,
+				"title": "Rhetoric"
+			},
+			{
+				"isfocus": false,
+				"title": "Deceive"
+			},
+			{
+				"isfocus": false,
+				"title": "Invocation"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Persuasion",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

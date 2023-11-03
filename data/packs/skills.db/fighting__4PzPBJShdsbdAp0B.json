@@ -1,0 +1,55 @@
+{
+	"_id": "4PzPBJShdsbdAp0B",
+	"_key": "!items!4PzPBJShdsbdAp0B",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Hand-to-Hand"
+			},
+			{
+				"isfocus": false,
+				"title": "Melee Weapons"
+			},
+			{
+				"isfocus": false,
+				"title": "Handguns"
+			},
+			{
+				"isfocus": false,
+				"title": "Close Quarters"
+			},
+			{
+				"isfocus": false,
+				"title": "Rifles"
+			},
+			{
+				"isfocus": false,
+				"title": "Heavy Weapons"
+			},
+			{
+				"isfocus": false,
+				"title": "Threat Awareness"
+			},
+			{
+				"isfocus": false,
+				"title": "Exotic"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Fighting",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

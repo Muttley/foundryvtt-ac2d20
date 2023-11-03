@@ -1,0 +1,79 @@
+{
+	"id": "ac2d20",
+	"title": "Achtung! Cthulhu 2d20",
+	"description": "The Unofficial Achtung! Cthulhu 2d20 System for FoundryVTT",
+	"version": "11.1.0",
+	"compatibility": {
+		"minimum": "11",
+		"verified": "11"
+	},
+	"authors": [
+		{
+			"name": "Paul Maskelyne",
+			"discord": "Muttley#3296",
+			"email": "mu77ley@gmail.com",
+			"mastodon": "@muttley@dice.camp"
+		},
+		{
+			"name": "HappySteve"
+		}
+	],
+	"esmodules": [
+		"ac2d20-compiled.mjs"
+	],
+	"styles": [
+		"css/ac2d20.css"
+	],
+	"packs": [
+		{
+			"name": "macros",
+			"label": "Macros",
+			"system": "ac2d20",
+			"path": "packs/macros",
+			"type": "Macro",
+			"private": false,
+			"flags": {}
+		},
+		{
+			"name": "skills",
+			"label": "Skills",
+			"system": "ac2d20",
+			"path": "packs/skills",
+			"type": "Item",
+			"private": false,
+			"flags": {}
+		}
+	],
+	"packFolders": [
+		{
+			"name": "Achtung! Cthulhu 2d20",
+			"sorting": "a",
+			"color": "#494e32",
+			"packs": [
+				"macros",
+				"skills"
+			]
+		}
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json",
+			"flags": {}
+		},
+		{
+			"lang": "es",
+			"name": "Español",
+			"path": "lang/es.json",
+			"flags": {}
+		}
+	],
+	"socket": true,
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"url": "https://github.com/Muttley/foundryvtt-ac2d20",
+	"manifest": "https://raw.githubusercontent.com/Muttley/foundryvtt-ac2d20/main/system/system.json",
+	"download": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/ac2d20.zip",
+	"initiative": null
+}

@@ -1,0 +1,47 @@
+{
+	"_id": "iWSZrbyudnW5AmYN",
+	"_key": "!items!iWSZrbyudnW5AmYN",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Cars"
+			},
+			{
+				"isfocus": false,
+				"title": "Motorcycles"
+			},
+			{
+				"isfocus": false,
+				"title": "Heavy Vehicles"
+			},
+			{
+				"isfocus": false,
+				"title": "Tanks"
+			},
+			{
+				"isfocus": false,
+				"title": "Aircraft"
+			},
+			{
+				"isfocus": false,
+				"title": "Watercraft"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Vehicles",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}
