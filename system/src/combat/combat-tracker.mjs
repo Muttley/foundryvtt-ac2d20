@@ -3,7 +3,7 @@ export default class CombatTracker2d20 extends CombatTracker {
 	static get defaultOptions() {
 		return {
 			...super.defaultOptions,
-			template: "systems/ac2d20/templates/combat/combat-tracker.html",
+			template: "systems/ac2d20/templates/combat/combat-tracker.hbs",
 		};
 	}
 

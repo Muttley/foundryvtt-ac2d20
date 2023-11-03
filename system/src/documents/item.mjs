@@ -104,7 +104,7 @@ export class ACItem extends Item {
 		itemData.isEquipment = this.type === "equipment";
 		itemData.isSpecial_rule = this.type === "special_rule";
 		itemData.isSkill = this.type === "skill";
-		const html = await renderTemplate("systems/ac2d20/templates/chat/item.html", itemData);
+		const html = await renderTemplate("systems/ac2d20/templates/chat/item.hbs", itemData);
 		const chatData = {
 			user: game.user.id,
 			rollMode: game.settings.get("core", "rollMode"),

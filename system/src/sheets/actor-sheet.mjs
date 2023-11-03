@@ -11,7 +11,7 @@ export class ACActorSheet extends ActorSheet {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: ["ac2d20", "sheet", "actor"],
-			template: "systems/ac2d20/templates/actor/actor-sheet.html",
+			template: "systems/ac2d20/templates/actor/actor-sheet.hbs",
 			width: 720,
 			height: 780,
 			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }],
@@ -20,7 +20,7 @@ export class ACActorSheet extends ActorSheet {
 
 	/** @override */
 	get template() {
-		return `systems/ac2d20/templates/actor/actor-${this.actor.type}-sheet.html`;
+		return `systems/ac2d20/templates/actor/actor-${this.actor.type}-sheet.hbs`;
 	}
 
 	/* -------------------------------------------- */

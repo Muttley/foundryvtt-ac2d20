@@ -81,7 +81,7 @@ export class Dialog2d20 extends Dialog {
 		dialogData.prefAttribute = prefAttribute;
 		dialogData.actorId = actorId;
 		dialogData.itemId = itemId;
-		const html = await renderTemplate("systems/ac2d20/templates/dialogs/dialog2d20.html", dialogData);
+		const html = await renderTemplate("systems/ac2d20/templates/dialogs/dialog2d20.hbs", dialogData);
 		let d = new Dialog2d20(
 			rollName,
 			diceNum,

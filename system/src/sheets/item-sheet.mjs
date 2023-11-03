@@ -19,7 +19,7 @@ export class ACItemSheet extends ItemSheet {
 	/** @override */
 	get template() {
 		const path = "systems/ac2d20/templates/item";
-		return `${path}/item-${this.item.type}-sheet.html`;
+		return `${path}/item-${this.item.type}-sheet.hbs`;
 	}
 
 	/* -------------------------------------------- */

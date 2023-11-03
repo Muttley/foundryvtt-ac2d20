@@ -112,7 +112,7 @@ export class Roller2D20 {
 			actorId: actorId,
 			itemId: itemId,
 		};
-		const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.html", rollData);
+		const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.hbs", rollData);
 		let ac2d20Roll = {};
 		ac2d20Roll.rollname = rollname;
 		ac2d20Roll.dicesRolled = dicesRolled;
@@ -295,7 +295,7 @@ export class Roller2D20 {
 			itemEffects: itemEffects,
 			itemQualities: itemQualities,
 		};
-		const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.html", rollData);
+		const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.hbs", rollData);
 		let ac2d20Roll = {};
 		ac2d20Roll.rollname = rollname;
 		ac2d20Roll.dicesRolled = dicesRolled;
