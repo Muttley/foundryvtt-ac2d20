@@ -1,0 +1,39 @@
+{
+	"_id": "3i3bfG80UMsxmyNg",
+	"_key": "!items!3i3bfG80UMsxmyNg",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Disguise"
+			},
+			{
+				"isfocus": false,
+				"title": "Camouflage"
+			},
+			{
+				"isfocus": false,
+				"title": "Urban Stealth"
+			},
+			{
+				"isfocus": false,
+				"title": "Rural Stealth"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Stealth",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

@@ -1,0 +1,15 @@
+{
+	"_id": "fSwKOVxoCyLGF0X2",
+	"_key": "!macros!fSwKOVxoCyLGF0X2",
+	"author": "zSo9baAk8tjHoDE4",
+	"command": "game.ac2d20.Dialog2d20.createDialog({ rollName: '2D20 Roll', diceNum: 2, attribute: 6, skill: 0, focus: false, complication: 20})",
+	"folder": null,
+	"img": "systems/ac2d20/assets/d20-cross.webp",
+	"name": "AC 2d20 Dice",
+	"permission": {
+		"default": 0,
+		"zSo9baAk8tjHoDE4": 3
+	},
+	"scope": "global",
+	"type": "script"
+}

@@ -1,0 +1,51 @@
+{
+	"_id": "GmZebboXVjCfJ8fz",
+	"_key": "!items!GmZebboXVjCfJ8fz",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Art"
+			},
+			{
+				"isfocus": false,
+				"title": "Cryptography"
+			},
+			{
+				"isfocus": false,
+				"title": "Finance"
+			},
+			{
+				"isfocus": false,
+				"title": "History"
+			},
+			{
+				"isfocus": false,
+				"title": "Linguistics"
+			},
+			{
+				"isfocus": false,
+				"title": "Occultism"
+			},
+			{
+				"isfocus": false,
+				"title": "Science"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Academia",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

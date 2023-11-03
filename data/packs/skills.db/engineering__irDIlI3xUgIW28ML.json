@@ -1,0 +1,43 @@
+{
+	"_id": "irDIlI3xUgIW28ML",
+	"_key": "!items!irDIlI3xUgIW28ML",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Architecture"
+			},
+			{
+				"isfocus": false,
+				"title": "Combat Engineering"
+			},
+			{
+				"isfocus": false,
+				"title": "Electronics"
+			},
+			{
+				"isfocus": false,
+				"title": "Explosives"
+			},
+			{
+				"isfocus": false,
+				"title": "Mechanical Engineering"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Engineering",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}

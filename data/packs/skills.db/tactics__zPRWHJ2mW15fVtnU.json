@@ -1,0 +1,47 @@
+{
+	"_id": "zPRWHJ2mW15fVtnU",
+	"_key": "!items!zPRWHJ2mW15fVtnU",
+	"data": {
+		"defaultAttribute": "agi",
+		"description": "",
+		"favorite": false,
+		"focuses": [
+			{
+				"isfocus": false,
+				"title": "Air Force"
+			},
+			{
+				"isfocus": false,
+				"title": "Army"
+			},
+			{
+				"isfocus": false,
+				"title": "Covert Operations"
+			},
+			{
+				"isfocus": false,
+				"title": "Leadership"
+			},
+			{
+				"isfocus": false,
+				"title": "Navy"
+			},
+			{
+				"isfocus": false,
+				"title": "Technical Projects"
+			}
+		],
+		"summary": "",
+		"value": 0
+	},
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Tactics",
+	"permission": {
+		"dCBvoTjpxVSNlg1z": 3,
+		"default": 0
+	},
+	"type": "skill"
+}
