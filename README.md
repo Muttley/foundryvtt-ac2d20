@@ -2,6 +2,7 @@
 ![All Versions](https://img.shields.io/github/downloads/Muttley/foundryvtt-ac2d20/total)
 ![Latest Version](https://img.shields.io/github/downloads/Muttley/foundryvtt-ac2d20/latest/total)
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Fac2d20)
+[![Crowdin](https://badges.crowdin.net/foundryvtt-ac2d20/localized.svg)](https://crowdin.com/project/foundryvtt-ac2d20)
 
 # Achtung! Cthulhu 2d20 System for Foundry VTT
 
