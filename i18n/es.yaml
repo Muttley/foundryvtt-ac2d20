@@ -64,7 +64,7 @@ AC2D20.FOCUS.Intimidation: Intimidación
 AC2D20.FOCUS.Invocation: Invocación
 AC2D20.FOCUS.Leadership: Liderazgo
 AC2D20.FOCUS.Lifting: Levantar
-AC2D20.FOCUS.Linguistics: Linguística
+AC2D20.FOCUS.Linguistics: Lingüística
 AC2D20.FOCUS.Mechanical Engineering: Ingeniería Mecánica
 AC2D20.FOCUS.Melee Weapons: Armas de Melé
 AC2D20.FOCUS.Motorcycles: Motocicletas
@@ -313,9 +313,9 @@ ACTOR.NpcType.Trooper: Tropa
 ACTOR.Vehicle.Cover: Cobertura
 ACTOR.Vehicle.Impact: Impacto
 ACTOR.Vehicle.Passengers: Pasajeros
-TYPES.Actor.character: Character
-TYPES.Actor.npc: NPC
-TYPES.Actor.vehicle: Vehicle
+TYPES.Actor.character: Personaje
+TYPES.Actor.npc: PNJ
+TYPES.Actor.vehicle: Vehículo
 TYPES.Item.armor: Armor
 TYPES.Item.equipment: Equipment
 TYPES.Item.skill: Skill
