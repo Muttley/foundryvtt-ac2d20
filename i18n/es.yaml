@@ -1,4 +1,3 @@
-
 "AC2D20.VEHICLES.QUALITIES.singleSeat:": Asiento único
 AC2D20.Ability.agi: Agilidad
 AC2D20.Ability.bra: Músculo
@@ -15,6 +14,12 @@ AC2D20.AbilityAbbr.wil: vol
 AC2D20.ARMOR.qualities.heavy: Pesada
 AC2D20.ARMOR.qualities.shield: Escudo
 AC2D20.ARMOR.qualities.uncomfortable: Incómoda
+AC2D20.Combat.CombatantsTurnDone: Turn Completed
+AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
+AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
+AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
 AC2D20.EffectCreate: Crear Efecto
 AC2D20.EffectDelete: Borrar Efecto
 AC2D20.EffectEdit: Editar Efecto
@@ -113,6 +118,10 @@ AC2D20.SKILL.VEHICLES: Vehículos
 AC2D20.SPELL.SpellTypes.ins: Tradicional
 AC2D20.SPELL.SpellTypes.rea: Investigador
 AC2D20.SPELL.SpellTypes.wil: Aficionado
+AC2D20.Spellcasting.dabbler: dabbler
+AC2D20.Spellcasting.researcher: researcher
+AC2D20.Spellcasting.SpellcastingType: Spellcasting Type
+AC2D20.Spellcasting.traditional: traditional
 AC2D20.STRESS.current: Estrés actual
 AC2D20.STRESS.max: Estrés Máximo
 AC2D20.STRESS.stress: Estrés
@@ -301,17 +310,17 @@ AC2D20.WEAPONS.weaponTypes.wil: Mental
 ACTOR.NpcType.Lieutenant: Teniente
 ACTOR.NpcType.Nemesis: Némesis
 ACTOR.NpcType.Trooper: Tropa
-ACTOR.TypeCharacter: Personaje Jugador
-ACTOR.TypeNpc: PNJ
-ACTOR.TypeVehicle: Vehículo
 ACTOR.Vehicle.Cover: Cobertura
 ACTOR.Vehicle.Impact: Impacto
 ACTOR.Vehicle.Passengers: Pasajeros
-ITEM.TypeArmor: Armadura
-ITEM.TypeEquipment: Equipo
-ITEM.TypeSkill: Habilidad
-ITEM.TypeSkillkit: Kit de Habilidades
-ITEM.TypeSpecial_rule: Regla Especial
-ITEM.TypeSpell: Conjuro
-ITEM.TypeTalent: Talento
-ITEM.TypeWeapon: Arma
+TYPES.Actor.character: Character
+TYPES.Actor.npc: NPC
+TYPES.Actor.vehicle: Vehicle
+TYPES.Item.armor: Armor
+TYPES.Item.equipment: Equipment
+TYPES.Item.skill: Skill
+TYPES.Item.skillkit: Skill Kit
+TYPES.Item.special_rule: Special Rule
+TYPES.Item.spell: Spell
+TYPES.Item.talent: Talent
+TYPES.Item.weapon: Weapon
