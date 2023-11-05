@@ -6,7 +6,7 @@ $font-secondary: 'Roboto', sans-serif;
 $font-germania: 'Germania One', cursive;
 
 $icomoon-font-family: "cthulhu-icons" !default;
-$icomoon-font-path: "../fonts" !default;
+$icomoon-font-path: "../assets/fonts" !default;
 
 $cth-ico-cth: "\e900";
 $cth-ico-cth-cross: "\e901";
@@ -22,7 +22,7 @@ $cth-ico-cth-cross: "\e901";
     font-style: normal;
     font-display: block;
   }
-  
+
   [class^="cth-"], [class*=" cth-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: '#{$icomoon-font-family}' !important;
@@ -30,20 +30,20 @@ $cth-ico-cth-cross: "\e901";
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
-    line-height: 1;  
+    line-height: 1;
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .cth-ico-cth {
     &:before {
-      content: $cth-ico-cth; 
+      content: $cth-ico-cth;
     }
   }
   .cth-ico-cth-cross {
     &:before {
-      content: $cth-ico-cth-cross; 
+      content: $cth-ico-cth-cross;
     }
   }
 
