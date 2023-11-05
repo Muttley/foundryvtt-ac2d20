@@ -139,15 +139,29 @@ export class ACActor extends Actor {
 		}
 		// Add Skills to Characters
 		if (this.type === "character") {
-			let packName = game.settings.get("ac2d20", "compendium-skills");
-			if (!packName) packName = "ac2d20.skills";
+			// If the Actor data already contains skill items then this is an
+			// Actor being duplicated and we don't want to touch their
+			// items at all
+			//
+			const alreadyHasSkills = Array.isArray(data.items)
+				&& data.items.filter(i => i.type === "skill").length > 0;
 
-			let packSkills = await game.packs.get(packName).getDocuments();
-			const items = this.items.map(i => i.toObject());
-			packSkills.forEach(s => {
-				items.push(s.toObject());
-			});
-			this.updateSource({ items });
+			if (!alreadyHasSkills) {
+				let skillsCompendium = game.settings.get("ac2d20", "compendium-skills");
+
+				if (!skillsCompendium) skillsCompendium = "ac2d20.skills";
+
+				let packSkills =
+					await game.packs.get(skillsCompendium).getDocuments();
+
+				const items = this.items.map(i => i.toObject());
+
+				packSkills.forEach(s => {
+					items.push(s.toObject());
+				});
+
+				this.updateSource({ items });
+			}
 		}
 	}
 

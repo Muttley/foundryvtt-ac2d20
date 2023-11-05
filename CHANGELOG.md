@@ -1,3 +1,11 @@
+## v11.1.1
+
+### Bugfix
+- [#3] Actor skills being overwritten when an Actor is duplicated
+
+### Chore
+- Translation updates are now all handled via Crowdin to simplify the process of contributing translations.  See here for more details: https://github.com/Muttley/foundryvtt-ac2d20/wiki/Other-ways-to-contribute#translation
+
 ## v11.1.0
 
 - System migrated to new home and build process
