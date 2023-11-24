@@ -8,7 +8,7 @@
 	//background-color: $f-vault-blue;
 	bottom: 40px !important;
 	right: 320px !important;
-    max-width: 180px;
+	max-width: 180px;
 	z-index: 1000;
 
 	.ap-resource {
@@ -16,17 +16,20 @@
 		padding: 10px 20px;
 		background-size: 100% 100%;
 		background-repeat: no-repeat;
-        border-radius:9px;
+		border-radius: 9px;
 		font-family: $font-germania;
+
 		//color: white;
 		&.gm {
-            background-color: $c-green-olive;			
+			background-color: $c-green-olive;
 		}
+
 		&.party {
-            background-color: $c-green-light;
+			background-color: $c-green-light;
 		}
+
 		&.maxMomentum-box {
-            background-color: $c-green-olive;
+			background-color: $c-green-olive;
 		}
 
 		.toggle-maxAp {
@@ -37,17 +40,20 @@
 		}
 
 		margin-bottom: 10px;
+
 		&:last-child {
 			margin-bottom: 0;
 		}
+
 		h4 {
 			margin: 0 0 2px 0;
 			color: bisque;
 		}
+
 		input[type="number"] {
 			margin: 0 5px;
 			font-size: 16px;
-            text-align: center;
+			text-align: center;
 		}
 
 		.ap-btn {

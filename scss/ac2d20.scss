@@ -2,10 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .cth-ico-cth:before {
-  content: "\e900";
+	content: "\e900";
 }
+
 .cth-ico-cth-cross:before {
-  content: "\e901";
+	content: "\e901";
 }
 
 // Import utilities.
@@ -22,10 +23,8 @@
 
 /* Styles limited to ac2d20 sheets */
 .ac2d20 {
-  @import 'components/forms';
-  @import 'components/resource';
-  @import 'components/items';
-  @import 'components/effects';
+	@import 'components/forms';
+	@import 'components/resource';
+	@import 'components/items';
+	@import 'components/effects';
 }
-
-
