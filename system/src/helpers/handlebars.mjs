@@ -144,10 +144,16 @@ export const registerHandlebarsHelpers = function() {
 	});
 
 	Handlebars.registerHelper("getSizeLabel", function(num) {
-		if (num === 0) return "Trivial";
-		else if (num === 1) return "Minor";
-		else if (num === 3) return "Major";
-		else return "-";
+		switch (parseInt(num) ?? null) {
+			case 0:
+				return "Trivial";
+			case 1:
+				return "Minor";
+			case 3:
+				return "Major";
+			default:
+				return "-";
+		}
 	});
 
 
