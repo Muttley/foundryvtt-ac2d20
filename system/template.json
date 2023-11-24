@@ -1,257 +1,478 @@
 {
 	"Actor": {
-		"types": ["character", "npc", "vehicle"],
+		"types": [
+			"character",
+			"npc",
+			"vehicle"
+		],
 		"templates": {
 			"base": {
-				"fortune":{
-					"max":0,
-					"value":0
+				"biography": "",
+				"fortune": {
+					"max": 0,
+					"value": 0
 				},
-				"injuries":{
-					"count":3,
-					"value":0,
-					"treated":0,
-					"injury0":{
-						"text":"", "injuryType":false, "treated":false
+				"injuries": {
+					"count": 3,
+					"injury0": {
+						"injuryType": false,
+						"text": "",
+						"treated": false
 					},
-					"injury1":{
-						"text":"", "injuryType":false, "treated":false
+					"injury1": {
+						"injuryType": false,
+						"text": "",
+						"treated": false
 					},
-					"injury2":{
-						"text":"", "injuryType":false, "treated":false
+					"injury2": {
+						"injuryType": false,
+						"text": "",
+						"treated": false
 					},
-					"list":[
-						{"text":"", "injuryType":false, "treated":false},
-						{"text":"", "injuryType":false, "treated":false},
-						{"text":"", "injuryType":false, "treated":false}]
+					"list": [
+						{
+							"injuryType": false,
+							"text": "",
+							"treated": false
+						},
+						{
+							"injuryType": false,
+							"text": "",
+							"treated": false
+						},
+						{
+							"injuryType": false,
+							"text": "",
+							"treated": false
+						}
+					],
+					"treated": 0,
+					"value": 0
 				},
-				"truthsText":"",
-				"truths":[
-					{"text":""},
-					{"text":""},
-					{"text":""},
-					{"text":""},
-					{"text":""}
+				"truths": [
+					{
+						"text": ""
+					},
+					{
+						"text": ""
+					},
+					{
+						"text": ""
+					},
+					{
+						"text": ""
+					},
+					{
+						"text": ""
+					}
 				],
-				"biography":""
+				"truthsText": ""
+			},
+			"derived": {
+				"armorResistance": {
+					"max": 0,
+					"value": 0
+				},
+				"carryCapacity": {
+					"mod": 0,
+					"value": 6
+				},
+				"courageResistance": {
+					"max": 0,
+					"value": 0
+				},
+				"fatigue": 0,
+				"power": {
+					"max": 0,
+					"value": 0
+				},
+				"stress": {
+					"max": 0,
+					"value": 0
+				}
 			},
 			"stats": {
 				"attributes": {
 					"agi": {
-						"value": 6,
-						"bonus":0
+						"bonus": 0,
+						"value": 6
 					},
 					"bra": {
-						"value": 6,
-						"bonus":0
+						"bonus": 0,
+						"value": 6
 					},
 					"coo": {
-						"value": 6,
-						"bonus":0
+						"bonus": 0,
+						"value": 6
 					},
 					"ins": {
-						"value": 6,
-						"bonus":0
+						"bonus": 0,
+						"value": 6
 					},
 					"rea": {
-						"value": 6,
-						"bonus":0
+						"bonus": 0,
+						"value": 6
 					},
 					"wil": {
-						"value": 6,
-						"bonus":0
+						"bonus": 0,
+						"value": 6
 					}
 				}
-			},
-			"derived": {
-				"stress":{
-					"max":0,
-					"value":0
-				},
-				"armorResistance":{
-					"max":0,
-					"value":0
-				},
-				"courageResistance":{
-					"max":0,
-					"value":0
-				},
-				"power":{
-					"max":0,
-					"value":0
-				},
-				"carryCapacity":{
-					"value":6,
-					"mod":0
-				},
-				"fatigue":0
 			}
 		},
 		"character": {
-			"templates": ["base", "stats", "derived"],
-			"nationality":"",
-			"rank":"",
-			"archetype":"",
-			"background":"",
-			"characteristic":"",
-			"spellcastingType":"traditional"
+			"archetype": "",
+			"background": "",
+			"characteristic": "",
+			"nationality": "",
+			"rank": "",
+			"spellcastingType": "traditional",
+			"templates": [
+				"base",
+				"derived",
+				"stats"
+			]
 		},
 		"npc": {
-			"templates": ["base", "derived", "stats"],
-			"level":"trooper",
-			"truthsText":"",
-			"spellcastingType":"traditional"
+			"level": "trooper",
+			"spellcastingType": "traditional",
+			"templates": [
+				"base",
+				"derived",
+				"stats"
+			],
+			"truthsText": ""
 		},
 		"vehicle": {
-			"templates": ["base", "derived", "stats"],
-			"truthsText":"",
-			"speed":{"value":0, "max":0},
-			"scale":0,
-			"cover":{"value": "0", "max":0},
-			"impact":0,
-			"passengers":{"value":"1", "pilots":[], "gunners":[]},
-			"qualities":{
-				"cargo":{"value": false, "rank": 1, "description": "" },
-				"cumbersome":{"value": false, "description": "" },
-				"enclosed":{"value": false, "description": "" },
-				"exposed":{"value": false, "description": "" },
-				"highPerformance":{"value": false, "description": "" },
-				"singleSeat:":{"value": false, "description": "" },
-				"tough":{"value": false, "rank": 1, "description": "" }
-			}
+			"cover": {
+				"max": 0,
+				"value": "0"
+			},
+			"impact": 0,
+			"passengers": {
+				"gunners": [],
+				"pilots": [],
+				"value": "1"
+			},
+			"qualities": {
+				"cargo": {
+					"description": "",
+					"rank": 1,
+					"value": false
+				},
+				"cumbersome": {
+					"description": "",
+					"value": false
+				},
+				"enclosed": {
+					"description": "",
+					"value": false
+				},
+				"exposed": {
+					"description": "",
+					"value": false
+				},
+				"highPerformance": {
+					"description": "",
+					"value": false
+				},
+				"singleSeat:": {
+					"description": "",
+					"value": false
+				},
+				"tough": {
+					"description": "",
+					"rank": 1,
+					"value": false
+				}
+			},
+			"scale": 0,
+			"speed": {
+				"max": 0,
+				"value": 0
+			},
+			"templates": [
+				"base",
+				"derived",
+				"stats"
+			],
+			"truthsText": ""
 		}
 	},
 	"Item": {
 		"types": [
-			"weapon",
 			"armor",
-			"talent",
-			"spell",
-			"skillkit",
 			"equipment",
+			"skill",
+			"skillkit",
 			"special_rule",
-			"skill"
+			"spell",
+			"talent",
+			"weapon"
 		],
 		"templates": {
 			"base": {
 				"description": "",
 				"favorite": false
 			},
-			"physical": {
-				"size":0,
-				"weight": 0,
-				"cost": 0,
-				"quantity": 1,
-				"rarity": 0,
-				"stashed": false,
-				"restriction":0
-			},
 			"equipable": {
 				"equippable": true,
 				"equipped": false
+			},
+			"physical": {
+				"cost": 0,
+				"quantity": 1,
+				"rarity": 0,
+				"restriction": 0,
+				"size": 0,
+				"stashed": false,
+				"weight": 0
 			}
+		},
+		"armor": {
+			"qualities": {
+				"heavy": {
+					"description": "",
+					"label": "Heavy",
+					"value": false
+				},
+				"shield": {
+					"description": "",
+					"label": "Shield",
+					"value": false
+				},
+				"uncomfortable": {
+					"description": "",
+					"label": "Uncomfortable",
+					"value": false
+				}
+			},
+			"resistance": 1,
+			"templates": [
+				"base",
+				"physical",
+				"equipable"
+			]
+		},
+		"equipment": {
+			"templates": [
+				"base",
+				"physical",
+				"equipable"
+			]
 		},
 		"skill": {
-			"templates": ["base"],
-			"value": 0,
-			"focuses": [],
 			"defaultAttribute": "agi",
-			"summary": ""
+			"focuses": [],
+			"summary": "",
+			"templates": [
+				"base"
+			],
+			"value": 0
 		},
-		"talent":{
-			"templates": ["base"],
-			"keywords":""
+		"skillkit": {
+			"resources": 3,
+			"skill": "",
+			"templates": [
+				"base",
+				"physical",
+				"equipable"
+			]
 		},
-		"spell":{
-			"templates": ["base"],
-			"skill":"Academia",
-			"focus":"",
-			"difficulty":1,
-			"cost":1,
-			"costEffects":"",
-			"damage":0,
-			"damageFormula":"",
-			"damageStressType":"",
-			"damageEffects":"",
-			"duration":"",
-			"effect":"",
-			"flawed":"",
-			"momentum":"",
-			"complication":20,
-			"bonusChallenge":0,
-			"spellType":"ins",
-			"mantle":false,
-			"ritualStress":{
-				"value":0,
-				"max":0
+		"special_rule": {
+			"templates": [
+				"base"
+			]
+		},
+		"spell": {
+			"bonusChallenge": 0,
+			"complication": 20,
+			"cost": 1,
+			"costEffects": "",
+			"damage": 0,
+			"damageEffects": "",
+			"damageFormula": "",
+			"damageStressType": "",
+			"difficulty": 1,
+			"duration": "",
+			"effect": "",
+			"flawed": "",
+			"focus": "",
+			"mantle": false,
+			"momentum": "",
+			"ritualRequirements": "",
+			"ritualResistance": "",
+			"ritualSteps": {
+				"max": 0,
+				"value": 0
 			},
-			"ritualSteps":{
-				"value":0,
-				"max":0
+			"ritualStress": {
+				"max": 0,
+				"value": 0
 			},
-			"ritualResistance":"",
-			"ritualRequirements":""
+			"skill": "Academia",
+			"spellType": "ins",
+			"templates": [
+				"base"
+			]
+		},
+		"talent": {
+			"keywords": "",
+			"templates": [
+				"base"
+			]
 		},
 		"weapon": {
-			"templates": ["base", "physical", "equipable"],
-			"melee": false,
-			"weaponType": "agi",
-			"range":"close",
-			"focus":"",
-			"stress":0,
-			"ammo":0,
-			"skill":"",
-			"effect":{
-				"area": { "label": "Area", "value": false, "description": "" },
-				"backlash": { "label": "Backlash", "value": false, "rank": 1, "description": "" },
-				"drain": { "label": "Drain", "value": false, "description": "" },
-				"intense": { "label": "Intense", "value": false, "description": "" },
-				"persistent": { "label": "Persistent", "value": false, "rank": 1, "description": "" },
-				"piercing": { "label": "Piercing", "value": false, "rank": 1, "description": "" },
-				"snare": { "label": "Snare", "value": false, "description": "" },
-				"stun": { "label": "Stun", "value": false, "description": "" },
-				"vicious": { "label": "Vicious", "value": false, "description": "" }
+			"ammo": 0,
+			"effect": {
+				"area": {
+					"description": "",
+					"label": "Area",
+					"value": false
+				},
+				"backlash": {
+					"description": "",
+					"label": "Backlash",
+					"rank": 1,
+					"value": false
+				},
+				"drain": {
+					"description": "",
+					"label": "Drain",
+					"value": false
+				},
+				"intense": {
+					"description": "",
+					"label": "Intense",
+					"value": false
+				},
+				"persistent": {
+					"description": "",
+					"label": "Persistent",
+					"rank": 1,
+					"value": false
+				},
+				"piercing": {
+					"description": "",
+					"label": "Piercing",
+					"rank": 1,
+					"value": false
+				},
+				"snare": {
+					"description": "",
+					"label": "Snare",
+					"value": false
+				},
+				"stun": {
+					"description": "",
+					"label": "Stun",
+					"value": false
+				},
+				"vicious": {
+					"description": "",
+					"label": "Vicious",
+					"value": false
+				}
 			},
-			"salvo":"",
-			"qualities":{
-				"accurate": { "label": "Accurate", "value": false, "description": "" },
-				"bane": { "label": "Bane", "value": false, "description": "" },
-				"closeQuarters": { "label": "Close Quarters", "value": false, "description": "" },
-				"cumbersome": { "label": "Cumbersome", "value": false, "description": "" },
-				"debilitating": { "label": "Debilitating", "value": false, "description": "" },
-				"escalation": { "label": "Escalation", "value": false, "description": "" },
-				"giant-killer": { "label": "Giant-Killer", "value": false, "description": "" },
-				"heavy": { "label": "Heavy", "value": false, "description": "" },
-				"hidden": { "label": "Hidden", "value": false, "description": "" },
-				"hunger": { "label": "Hunger", "value": false, "description": "" },
-				"inaccurate": { "label": "Inaccurate", "value": false, "description": "" },
-				"indirect": { "label": "Indirect", "value": false, "description": "" },
-				"munition": { "label": "Munition", "value": false, "description": "" },
-				"parrying": { "label": "Parrying", "value": false, "description": "" },
-				"reliable": { "label": "Reliable", "value": false, "description": "" },
-				"subtle": { "label": "Subtle", "value": false, "description": "" },
-				"unreliable": { "label": "Unreliable", "value": false, "description": "" }
-			}
-		},
-		"armor":{
-			"templates": ["base", "physical", "equipable"],
-			"resistance":1,
-			"qualities":{
-				"heavy": { "label": "Heavy", "value": false, "description": "" },
-				"uncomfortable": { "label": "Uncomfortable", "value": false, "description": "" },
-				"shield": { "label": "Shield", "value": false, "description": "" }
-			}
-		},
-		"skillkit":{
-			"templates": ["base", "physical", "equipable"],
-			"skill":"",
-			"resources":3
-		},
-		"equipment":{
-			"templates": ["base", "physical", "equipable"]
-		},
-		"special_rule":{
-			"templates": ["base"]
+			"focus": "",
+			"melee": false,
+			"qualities": {
+				"accurate": {
+					"description": "",
+					"label": "Accurate",
+					"value": false
+				},
+				"bane": {
+					"description": "",
+					"label": "Bane",
+					"value": false
+				},
+				"closeQuarters": {
+					"description": "",
+					"label": "Close Quarters",
+					"value": false
+				},
+				"cumbersome": {
+					"description": "",
+					"label": "Cumbersome",
+					"value": false
+				},
+				"debilitating": {
+					"description": "",
+					"label": "Debilitating",
+					"value": false
+				},
+				"escalation": {
+					"description": "",
+					"label": "Escalation",
+					"value": false
+				},
+				"giant-killer": {
+					"description": "",
+					"label": "Giant-Killer",
+					"value": false
+				},
+				"heavy": {
+					"description": "",
+					"label": "Heavy",
+					"value": false
+				},
+				"hidden": {
+					"description": "",
+					"label": "Hidden",
+					"value": false
+				},
+				"hunger": {
+					"description": "",
+					"label": "Hunger",
+					"value": false
+				},
+				"inaccurate": {
+					"description": "",
+					"label": "Inaccurate",
+					"value": false
+				},
+				"indirect": {
+					"description": "",
+					"label": "Indirect",
+					"value": false
+				},
+				"munition": {
+					"description": "",
+					"label": "Munition",
+					"value": false
+				},
+				"parrying": {
+					"description": "",
+					"label": "Parrying",
+					"value": false
+				},
+				"reliable": {
+					"description": "",
+					"label": "Reliable",
+					"value": false
+				},
+				"subtle": {
+					"description": "",
+					"label": "Subtle",
+					"value": false
+				},
+				"unreliable": {
+					"description": "",
+					"label": "Unreliable",
+					"value": false
+				}
+			},
+			"range": "close",
+			"salvo": "",
+			"skill": "",
+			"stress": 0,
+			"templates": [
+				"base",
+				"physical",
+				"equipable"
+			],
+			"weaponType": "agi"
 		}
 	}
 }
