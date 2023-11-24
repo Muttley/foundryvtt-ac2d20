@@ -164,7 +164,7 @@
 		},
 		"spell":{
 			"templates": ["base"],
-			"skill":"",
+			"skill":"Academia",
 			"focus":"",
 			"difficulty":1,
 			"cost":1,
