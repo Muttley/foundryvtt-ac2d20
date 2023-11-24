@@ -34,3 +34,4 @@ export const compileCss = gulp.series(css.compile);
 export const compileLang = gulp.series(lang.compile);
 export const compilePacks = gulp.series(packs.compile);
 export const lintJs = gulp.series(javascript.lint);
+export const lintJsFix = gulp.series(javascript.lintFix);

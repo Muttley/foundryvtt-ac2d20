@@ -25,7 +25,15 @@ export const compile = compileJavascript;
 
 // Use eslint to check for formatting issues
 //
-function lintJavascript() {
+function lintFixJavascript() {
+	return __lintJavascript(true);
+}
+
+function lintJavascript(fix=false) {
+	return __lintJavascript(false);
+}
+
+function __lintJavascript(fix=false) {
 	const tasks = SRC_LINT_PATHS.map(path => {
 		const src = path.endsWith("/")
 			? `${path}**/*.mjs`
@@ -37,7 +45,7 @@ function lintJavascript() {
 
 		return gulp
 			.src(src)
-			.pipe(eslint({ fix: false }))
+			.pipe(eslint({ fix }))
 			.pipe(eslint.format())
 			.pipe(
 				gulpIf(
@@ -50,6 +58,7 @@ function lintJavascript() {
 	return mergeStream(tasks);
 }
 export const lint = lintJavascript;
+export const lintFix = lintFixJavascript;
 
 // Watch for file changes and lint when they do
 //
