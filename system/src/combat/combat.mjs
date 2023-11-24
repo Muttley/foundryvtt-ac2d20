@@ -139,8 +139,8 @@ export default class Combat2d20 extends Combat {
 
 	async startCombat() {
 		const updateData = {
-			round: 1,
-			turn: 0,
+			"round": 1,
+			"turn": 0,
 			"flags.combatantsTurnDone": [],
 		};
 

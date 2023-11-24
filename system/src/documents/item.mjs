@@ -36,19 +36,19 @@ export class ACItem extends Item {
 		let focuses = this.system.focuses;
 		const focus = { title: "", isfocus: false, description: "" };
 		focuses = [...focuses, focus];
-		let updatedItem = { _id: this.id, "system.focuses": focuses  };
+		let updatedItem = { "_id": this.id, "system.focuses": focuses  };
 		await this.update(updatedItem);
 	}
 
 	async deleteFocus(_index) {
 		let focuses = this.system.focuses;
 		focuses.splice(_index, 1);
-		let updatedItem = { _id: this.id, "system.focuses": focuses };
+		let updatedItem = { "_id": this.id, "system.focuses": focuses };
 		await this.update(updatedItem);
 	}
 
 	async updateFocuses(_focuses) {
-		let updatedItem = { _id: this.id, "system.focuses": _focuses };
+		let updatedItem = { "_id": this.id, "system.focuses": _focuses };
 		await this.update(updatedItem);
 	}
 
