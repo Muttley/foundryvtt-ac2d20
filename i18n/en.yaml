@@ -1,0 +1,326 @@
+
+"AC2D20.VEHICLES.QUALITIES.singleSeat:": Single Seat
+AC2D20.Ability.agi: Agility
+AC2D20.Ability.bra: Brawn
+AC2D20.Ability.coo: Coordination
+AC2D20.Ability.ins: Insight
+AC2D20.Ability.rea: Reason
+AC2D20.Ability.wil: Will
+AC2D20.AbilityAbbr.agi: agi
+AC2D20.AbilityAbbr.bra: bra
+AC2D20.AbilityAbbr.coo: coo
+AC2D20.AbilityAbbr.ins: ins
+AC2D20.AbilityAbbr.rea: rea
+AC2D20.AbilityAbbr.wil: wil
+AC2D20.ARMOR.qualities.heavy: Heavy
+AC2D20.ARMOR.qualities.shield: Shield
+AC2D20.ARMOR.qualities.uncomfortable: Uncomfortable
+AC2D20.Combat.CombatantsTurnDone: Turn Completed
+AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
+AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
+AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+AC2D20.EffectCreate: Create Effect
+AC2D20.EffectDelete: Delete Effect
+AC2D20.EffectEdit: Edit Effect
+AC2D20.EffectToggle: Toggle Effect
+AC2D20.equipped: Equipped
+AC2D20.FOCUS.Air Force: Air Force
+AC2D20.FOCUS.Aircraft: Aircraft
+AC2D20.FOCUS.Animal Handling: Animal Handling
+AC2D20.FOCUS.Architecture: Architecture
+AC2D20.FOCUS.Army: Army
+AC2D20.FOCUS.Art: Art
+AC2D20.FOCUS.Camouflage: Camouflage
+AC2D20.FOCUS.Cars: Cars
+AC2D20.FOCUS.Charm: Charm
+AC2D20.FOCUS.Climbing: Climbing
+AC2D20.FOCUS.Close Quarters: Close Quarters
+AC2D20.FOCUS.Combat Engineering: Combat Engineering
+AC2D20.FOCUS.Covert Operations: Covert Operations
+AC2D20.FOCUS.Cryptography: Cryptography
+AC2D20.FOCUS.Deceive: Deceive
+AC2D20.FOCUS.Discipline: Discipline
+AC2D20.FOCUS.Disguise: Disguise
+AC2D20.FOCUS.Electronics: Electronics
+AC2D20.FOCUS.Exotic: Exotic
+AC2D20.FOCUS.Explosives: Explosives
+AC2D20.FOCUS.Finance: Finance
+AC2D20.FOCUS.First Aid: First Aid
+AC2D20.FOCUS.Foraging: Foraging
+AC2D20.FOCUS.Fortitude: Fortitude
+AC2D20.FOCUS.Hand-to-Hand: Hand-to-Hand
+AC2D20.FOCUS.Handguns: Handguns
+AC2D20.FOCUS.Hearing: Hearing
+AC2D20.FOCUS.Heavy Vehicles: Heavy Vehicles
+AC2D20.FOCUS.Heavy Weapons: Heavy Weapons
+AC2D20.FOCUS.History: History
+AC2D20.FOCUS.Hunting: Hunting
+AC2D20.FOCUS.Immunity: Immunity
+AC2D20.FOCUS.Infectious Diseases: Infectious Diseases
+AC2D20.FOCUS.Innuendo: Innuendo
+AC2D20.FOCUS.Instincts: Instincts
+AC2D20.FOCUS.Intimidation: Intimidation
+AC2D20.FOCUS.Invocation: Invocation
+AC2D20.FOCUS.Leadership: Leadership
+AC2D20.FOCUS.Lifting: Lifting
+AC2D20.FOCUS.Linguistics: Linguistics
+AC2D20.FOCUS.Mechanical Engineering: Mechanical Engineering
+AC2D20.FOCUS.Melee Weapons: Melee Weapons
+AC2D20.FOCUS.Motorcycles: Motorcycles
+AC2D20.FOCUS.Mysticism: Mysticism
+AC2D20.FOCUS.Navy: Navy
+AC2D20.FOCUS.Negotiation: Negotiation
+AC2D20.FOCUS.Occultism: Occultism
+AC2D20.FOCUS.Orienteering: Orienteering
+AC2D20.FOCUS.Pharmacology: Pharmacology
+AC2D20.FOCUS.Physical Training: Physical Training
+AC2D20.FOCUS.Psychiatry: Psychiatry
+AC2D20.FOCUS.Rhetoric: Rhetoric
+AC2D20.FOCUS.Rifles: Rifles
+AC2D20.FOCUS.Running: Running
+AC2D20.FOCUS.Rural Stealth: Rural Stealth
+AC2D20.FOCUS.Science: Science
+AC2D20.FOCUS.Sight: Sight
+AC2D20.FOCUS.Smell and Taste: Smell and Taste
+AC2D20.FOCUS.Surgery: Surgery
+AC2D20.FOCUS.Swimming: Swimming
+AC2D20.FOCUS.Tanks: Tanks
+AC2D20.FOCUS.Technical Projects: Technical Projects
+AC2D20.FOCUS.Threat Awareness: Threat Awareness
+AC2D20.FOCUS.Throwing: Throwing
+AC2D20.FOCUS.Toxicology: Toxicology
+AC2D20.FOCUS.Tracking: Tracking
+AC2D20.FOCUS.Urban Stealth: Urban Stealth
+AC2D20.FOCUS.Watercraft: Watercraft
+AC2D20.OTHER: Other
+AC2D20.RANGE.close: Close
+AC2D20.RANGE.extreme: Extreme
+AC2D20.RANGE.long: Long
+AC2D20.RANGE.medium: Medium
+AC2D20.RANGE.reach: Reach
+AC2D20.RESISTANCE.armor: Armor
+AC2D20.RESISTANCE.courage: Courage
+AC2D20.RESISTANCE.fatigue: Fatigue
+AC2D20.RESISTANCE.resistance: Resistance
+AC2D20.SKILL.ACADEMIA: Academia
+AC2D20.SKILL.ATHLETICS: Athletics
+AC2D20.SKILL.ENGINEERING: Engineering
+AC2D20.SKILL.FIGHTING: Fighting
+AC2D20.SKILL.MEDICINE: Medicine
+AC2D20.SKILL.OBSERVATION: Observation
+AC2D20.SKILL.PERSUASION: Persuasion
+AC2D20.SKILL.RESILIENCE: Resilience
+AC2D20.SKILL.STEALTH: Stealth
+AC2D20.SKILL.SURVIVAL: Survival
+AC2D20.SKILL.TACTICS: Tactics
+AC2D20.SKILL.VEHICLES: Vehicles
+AC2D20.SPELL.SpellTypes.ins: Traditional
+AC2D20.SPELL.SpellTypes.rea: Researcher
+AC2D20.SPELL.SpellTypes.wil: Dabbler
+AC2D20.Spellcasting.dabbler: dabbler
+AC2D20.Spellcasting.researcher: researcher
+AC2D20.Spellcasting.SpellcastingType: Spellcasting Type
+AC2D20.Spellcasting.traditional: traditional
+AC2D20.STRESS.current: Current Stress
+AC2D20.STRESS.max: Max Stress
+AC2D20.STRESS.stress: Stress
+AC2D20.TEMPLATES.Abilities: Abilities
+AC2D20.TEMPLATES.AddFocus: Add Focus
+AC2D20.TEMPLATES.Ammo: Ammo
+AC2D20.TEMPLATES.Attacks: ATTACKS
+AC2D20.TEMPLATES.Attr: Attr.
+AC2D20.TEMPLATES.Attribute: Attribute
+AC2D20.TEMPLATES.Attributes: Attributes
+AC2D20.TEMPLATES.bonus: Bonus
+AC2D20.TEMPLATES.Compl: Compl.
+AC2D20.TEMPLATES.Complications: Complications
+AC2D20.TEMPLATES.Conditions: Conditions
+AC2D20.TEMPLATES.Cost: Cost
+AC2D20.TEMPLATES.CostEffects: Cost Effects
+AC2D20.TEMPLATES.Create_Ammo: Create Ammo
+AC2D20.TEMPLATES.Create_Special_Rule: Create Special Rule
+AC2D20.TEMPLATES.Create_Weapon: Create Weapon
+AC2D20.TEMPLATES.current: current
+AC2D20.TEMPLATES.DAMAGE_EFFECTS: DAMAGE EFFECTS
+AC2D20.TEMPLATES.DAMAGE_TYPE: DAMAGE TYPE
+AC2D20.TEMPLATES.DAMAGE: DAMAGE
+AC2D20.TEMPLATES.Data: Data
+AC2D20.TEMPLATES.Default_Attribute: Default Attribute
+AC2D20.TEMPLATES.DEFENSE: DEFENSE
+AC2D20.TEMPLATES.Delete_Item: Delete Item
+AC2D20.TEMPLATES.Delete: Delete
+AC2D20.TEMPLATES.DERIVED: DERIVED
+AC2D20.TEMPLATES.Description: Description
+AC2D20.TEMPLATES.Diff: Diff
+AC2D20.TEMPLATES.Difficulty: Difficulty
+AC2D20.TEMPLATES.Dur: Dur
+AC2D20.TEMPLATES.Duration: Duration
+AC2D20.TEMPLATES.Edit_Item: Edit Item
+AC2D20.TEMPLATES.Effect: Effect
+AC2D20.TEMPLATES.Effects: Effects
+AC2D20.TEMPLATES.Encumbered: ENCUMBERED
+AC2D20.TEMPLATES.Encumbrance_Level: Encumbrance Level
+AC2D20.TEMPLATES.Encumbrance: Encumbrance
+AC2D20.TEMPLATES.ENG: ENG
+AC2D20.TEMPLATES.equipped: equipped
+AC2D20.TEMPLATES.FAVORITE_WEAPONS: FAVORITE WEAPONS
+AC2D20.TEMPLATES.FIRE_RATE: FIRE RATE
+AC2D20.TEMPLATES.Focus: Focus
+AC2D20.TEMPLATES.fortune: Fortune
+AC2D20.TEMPLATES.Gear: Gear
+AC2D20.TEMPLATES.GENERAL: GENERAL
+AC2D20.TEMPLATES.GM_MOMENTUM: GM Threat
+AC2D20.TEMPLATES.Healthy: Healthy
+AC2D20.TEMPLATES.HP_Healed: HP Healed
+AC2D20.TEMPLATES.INITIATIVE: INITIATIVE
+AC2D20.TEMPLATES.INJURIES: Injuries
+AC2D20.TEMPLATES.Issue: Issue
+AC2D20.TEMPLATES.Keywords: Keywords
+AC2D20.TEMPLATES.lbs: lbs
+AC2D20.TEMPLATES.Learned: Learned
+AC2D20.TEMPLATES.Luck: Luck
+AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Max Momentum
+AC2D20.TEMPLATES.max: max
+AC2D20.TEMPLATES.MAX: MAX
+AC2D20.TEMPLATES.MELEE_BONUS: MELEE BONUS
+AC2D20.TEMPLATES.MELEE_DAMAGE: MELEE DAMAGE
+AC2D20.TEMPLATES.Mod_Type: Mod Type
+AC2D20.TEMPLATES.MODULES: MODULES
+AC2D20.TEMPLATES.Name_Prefix: Name Prefix
+AC2D20.TEMPLATES.PARTY_MOMENTUM: Party Momentum
+AC2D20.TEMPLATES.Personal_Truth_Scars: Personal Truths & Scars
+AC2D20.TEMPLATES.PHYS: PHYS
+AC2D20.TEMPLATES.Points: Points
+AC2D20.TEMPLATES.POISON: POISON
+AC2D20.TEMPLATES.Power: Power
+AC2D20.TEMPLATES.Qualities: Qualities
+AC2D20.TEMPLATES.RANGE: Range
+AC2D20.TEMPLATES.Rank: Rank
+AC2D20.TEMPLATES.Ranks_current_maximum: Ranks [current/maximum]
+AC2D20.TEMPLATES.rating: Rating
+AC2D20.TEMPLATES.Re_roll: Re-roll
+AC2D20.TEMPLATES.Requirements: Requirements
+AC2D20.TEMPLATES.Resistance: Resistance
+AC2D20.TEMPLATES.Resistances: Resistances
+AC2D20.TEMPLATES.RESISTANCES: RESISTANCES
+AC2D20.TEMPLATES.Resources: Resources
+AC2D20.TEMPLATES.Restriction: Restriction
+AC2D20.TEMPLATES.ritual_requirements: Requirements
+AC2D20.TEMPLATES.ritual_resistance: Resistance
+AC2D20.TEMPLATES.ritual_steps: Ritual Steps
+AC2D20.TEMPLATES.ritual_stress: Ritual Stress
+AC2D20.TEMPLATES.Ritual: Ritual
+AC2D20.TEMPLATES.Roll_Formula: Roll Formula
+AC2D20.TEMPLATES.Salvo: Salvo
+AC2D20.TEMPLATES.scale: Scale
+AC2D20.TEMPLATES.Size: Size
+AC2D20.TEMPLATES.SizeLevels.Major: Major
+AC2D20.TEMPLATES.SizeLevels.Minor: Minor
+AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
+AC2D20.TEMPLATES.Skill_Focus: Skill Focus
+AC2D20.TEMPLATES.skill_focus: Skill/Focus
+AC2D20.TEMPLATES.Skill_Value: Skill Value
+AC2D20.TEMPLATES.Skill: Skill
+AC2D20.TEMPLATES.SkillFocus: Skill Focus
+AC2D20.TEMPLATES.Skills: Skills
+AC2D20.TEMPLATES.Source: Source
+AC2D20.TEMPLATES.SpecialRule: SpecialRule
+AC2D20.TEMPLATES.SpecialRules: Special Rules
+AC2D20.TEMPLATES.speed: Speed
+AC2D20.TEMPLATES.Spells_Rituals: Spells And Rituals
+AC2D20.TEMPLATES.Spells: Spells
+AC2D20.TEMPLATES.Status: Status
+AC2D20.TEMPLATES.Successes: Successes
+AC2D20.TEMPLATES.Talents: Talents
+AC2D20.TEMPLATES.TN: TN
+AC2D20.TEMPLATES.Total: Total
+AC2D20.TEMPLATES.Truths: Truths
+AC2D20.TEMPLATES.Use_Agility: Use Agility
+AC2D20.TEMPLATES.Use_Brawn: Use Brawn
+AC2D20.TEMPLATES.Use_Coordination: Use Coordination
+AC2D20.TEMPLATES.Use_Insight: Use Insight
+AC2D20.TEMPLATES.Use_Reason: Use Reason
+AC2D20.TEMPLATES.Use_Will: Use Will
+AC2D20.TEMPLATES.Weapon_Qualities: WEAPON QUALITIES
+AC2D20.TEMPLATES.Weapon_Type: Weapon Type
+AC2D20.TEMPLATES.Weapons: Weapons
+AC2D20.UI.Add: Add
+AC2D20.UI.CarryWeight: Carry Weight
+AC2D20.UI.Cost: Cost
+AC2D20.UI.Damage: Damage
+AC2D20.UI.favorite: Favorite
+AC2D20.UI.INVENTORY: Inventory
+AC2D20.UI.Name: Name
+AC2D20.UI.ORIGIN: ORIGIN
+AC2D20.UI.OTHER: Other
+AC2D20.UI.Quantity: Quantity
+AC2D20.UI.Rarity: Rarity
+AC2D20.UI.SPECIAL_RULE: Special Rule
+AC2D20.UI.stashed: Stashed
+AC2D20.UI.Type: Type
+AC2D20.UI.UNSORTED: Unsorted
+AC2D20.UI.Weight: Weight
+AC2D20.VEHICLES.QUALITIES.cargo: Cargo
+AC2D20.VEHICLES.QUALITIES.cumbersome: Cumbersome
+AC2D20.VEHICLES.QUALITIES.enclosed: Enclosed
+AC2D20.VEHICLES.QUALITIES.exposed: Exposed
+AC2D20.VEHICLES.QUALITIES.highPerformance: High Performance
+AC2D20.VEHICLES.QUALITIES.singleSeat: Single Seat
+AC2D20.VEHICLES.QUALITIES.tough: Tough
+AC2D20.WEAPONS.damageEffect.area: Area
+AC2D20.WEAPONS.damageEffect.backlash: Backlash
+AC2D20.WEAPONS.damageEffect.drain: Drain
+AC2D20.WEAPONS.damageEffect.intense: Intense
+AC2D20.WEAPONS.damageEffect.persistent: Persistent
+AC2D20.WEAPONS.damageEffect.piercing: Piercing
+AC2D20.WEAPONS.damageEffect.snare: Snare
+AC2D20.WEAPONS.damageEffect.stun: Stun
+AC2D20.WEAPONS.damageEffect.vicious: Vicious
+AC2D20.WEAPONS.damageType.energy: Energy
+AC2D20.WEAPONS.damageType.physical: Physical
+AC2D20.WEAPONS.damageType.poison: Poison
+AC2D20.WEAPONS.damageType.radiation: Radiation
+AC2D20.WEAPONS.qualities: Qualities
+AC2D20.WEAPONS.type: Weapon Type
+AC2D20.WEAPONS.weaponQuality.accurate: Accurate
+AC2D20.WEAPONS.weaponQuality.bane: Bane
+AC2D20.WEAPONS.weaponQuality.closeQuarters: Close Quarters
+AC2D20.WEAPONS.weaponQuality.cumbersome: Cumbersome
+AC2D20.WEAPONS.weaponQuality.debilitating: Debilitating
+AC2D20.WEAPONS.weaponQuality.escalation: Escalation
+AC2D20.WEAPONS.weaponQuality.giant-killer: Giant-Killer
+AC2D20.WEAPONS.weaponQuality.heavy: Heavy
+AC2D20.WEAPONS.weaponQuality.hidden: Hidden
+AC2D20.WEAPONS.weaponQuality.hunger: Hunger
+AC2D20.WEAPONS.weaponQuality.inaccurate: Inaccurate
+AC2D20.WEAPONS.weaponQuality.indirect: Indirect
+AC2D20.WEAPONS.weaponQuality.munition: Munition
+AC2D20.WEAPONS.weaponQuality.parrying: Parrying
+AC2D20.WEAPONS.weaponQuality.reliable: Reliable
+AC2D20.WEAPONS.weaponQuality.subtle: Subtle
+AC2D20.WEAPONS.weaponQuality.unreliable: Unreliable
+AC2D20.WEAPONS.weaponTypes.agi: Melee
+AC2D20.WEAPONS.weaponTypes.coo: Ranged
+AC2D20.WEAPONS.weaponTypes.Melee: Melee
+AC2D20.WEAPONS.weaponTypes.Mental: Mental
+AC2D20.WEAPONS.weaponTypes.Ranged: Ranged
+AC2D20.WEAPONS.weaponTypes.wil: Mental
+ACTOR.NpcType.Lieutenant: Lieutenant
+ACTOR.NpcType.Nemesis: Nemesis
+ACTOR.NpcType.Trooper: Trooper
+ACTOR.Vehicle.Cover: Cover
+ACTOR.Vehicle.Impact: Impact
+ACTOR.Vehicle.Passengers: Passengers
+TYPES.Actor.character: Character
+TYPES.Actor.npc: NPC
+TYPES.Actor.vehicle: Vehicle
+TYPES.Item.armor: Armor
+TYPES.Item.equipment: Equipment
+TYPES.Item.skill: Skill
+TYPES.Item.skillkit: Skill Kit
+TYPES.Item.special_rule: Special Rule
+TYPES.Item.spell: Spell
+TYPES.Item.talent: Talent
+TYPES.Item.weapon: Weapon

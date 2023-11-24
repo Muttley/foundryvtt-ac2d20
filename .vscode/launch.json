@@ -7,8 +7,8 @@
 		{
 			"type": "chrome",
 			"request": "launch",
-			"name": "Achtung! Cthulhu 2d20 System",
-			"url": "http://localhost:30000",
+			"name": "Achtung! Cthulhu 2d20",
+			"url": "http://localhost:31000",
 			"webRoot": "${workspaceFolder}/system"
 		}
 	]

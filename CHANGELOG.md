@@ -1,3 +1,19 @@
+## v11.1.2
+
+### Bugfix
+- [#8] Weapon sizes not correctly displayed on Gear tab of character sheet
+- [#9] Gear category labels for Skill Kits and Equipment not translated
+- [#10] Spellcasting type always shows as Traditional when posted to chat
+- [#11] Don't show brackets on spell display unless it has a Focus set
+
+## v11.1.1
+
+### Bugfix
+- [#3] Actor skills being overwritten when an Actor is duplicated
+
+### Chore
+- Translation updates are now all handled via Crowdin to simplify the process of contributing translations.  See here for more details: https://github.com/Muttley/foundryvtt-ac2d20/wiki/Other-ways-to-contribute#translation
+
 ## v11.1.0
 
 - System migrated to new home and build process

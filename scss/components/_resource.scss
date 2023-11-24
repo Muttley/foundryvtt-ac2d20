@@ -2,17 +2,20 @@ input[type="text"],
 input[type="number"] {
 	background-color: $c-light;
 	color: $c-dark;
+
 	&.underline {
 		background-color: unset;
 		border: unset;
 		border-bottom: 1px solid $c-dark;
 		color: $c-dark;
+
 		&::placeholder {
 			color: #999;
 		}
 	}
-	&.borderless {		
-		border: none;		
+
+	&.borderless {
+		border: none;
 	}
 }
 
@@ -20,30 +23,34 @@ input[type="number"] {
 	input[type="checkbox"] {
 		display: none;
 	}
+
 	label {
 		cursor: pointer;
 		display: flex;
-		align-items: center;		
+		align-items: center;
 	}
-	padding: 3px;	
+
+	padding: 3px;
+
 	&.active {
 		color: $c-light;
-		background-color:$c-green-light;
+		background-color: $c-green-light;
 	}
 }
 
 
-.resource{
+.resource {
 	margin-bottom: 5px;
 	align-items: center;
-	&.green-field{
+
+	&.green-field {
 		padding: 5px;
 		background-color: $c-green-olive;
 		color: $c-light;
 	}
 }
 
-.resource-label{
+.resource-label {
 	text-transform: capitalize;
 }
 
@@ -69,30 +76,34 @@ select {
 	max-width: 2rem;
 	text-align: center;
 }
+
 .num-short-3 {
 	max-width: 3rem;
 	text-align: center;
 }
-.num-small{
-	height:1.1rem ;
+
+.num-small {
+	height: 1.1rem;
 }
 
-.clickable{
+.clickable {
 	cursor: pointer;
-	&:hover{
+
+	&:hover {
 		//font-weight: bold;
 		text-shadow: 0 0 0.313rem #999;
 	}
 }
 
-.textbox{
-	width: 100%; 
-	height: 100%; 
-	padding: 0.3rem; 
-	border:1px solid grey;
-	textarea{
+.textbox {
+	width: 100%;
+	height: 100%;
+	padding: 0.3rem;
+	border: 1px solid grey;
+
+	textarea {
 		resize: none;
-		padding: 0;    
+		padding: 0;
 		border: unset;
 		border-radius: 0;
 		background-color: unset;
