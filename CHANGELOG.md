@@ -1,3 +1,11 @@
+## v11.1.2
+
+### Bugfix
+- [#8] Weapon sizes not correctly displayed on Gear tab of character sheet
+- [#9] Gear category labels for Skill Kits and Equipment not translated
+- [#10] Spellcasting type always shows as Traditional when posted to chat
+- [#11] Don't show brackets on spell display unless it has a Focus set
+
 ## v11.1.1
 
 ### Bugfix
