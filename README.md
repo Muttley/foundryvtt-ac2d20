@@ -20,5 +20,5 @@ This is the unofficial Achtung Cthulhu 2d20 system for Foundry VTT.
 
 ## Featuring
 
-- The system supports Dice-So-Nice module and introduces its own stress dice shortcut ("s") that you can use in chat or in journals (example: "`/r 1ds`", "`[[/r 1ds]]`", "`[[1ds]]`"
+- The system supports Dice-So-Nice module and introduces its own stress dice shortcut ("s") that you can use in chat or in journals (example: "`/r 1ds`", "`[[/r 1ds]]`", "`[[1ds]]`")
 - IMPORTANT: The system doesn't provide any pre-populated content.
