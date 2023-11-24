@@ -79,34 +79,34 @@
         <span class="right-slope olive"></span>
     </div>
     <div class="injuries-grid">
-      <div class="injury-cell injury" data-injury="injury0">    
+      <div class="injury-cell injury" data-injury="injury0">
         {{#if (hasInjury system.injuries.injury0.text)}}
         <div class="controls">
           <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury0.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury0.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury0.injuryType true)}}checked{{/if}}>
           <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury0.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury0.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury0.treated true)}}checked{{/if}}>
         </div>
         <hr style="margin: 1px 0;" />
-        {{/if}}  
+        {{/if}}
         <textarea class="injury-text">{{system.injuries.injury0.text}}</textarea>
       </div>
-      <div class="injury-cell injury" data-injury="injury1">    
+      <div class="injury-cell injury" data-injury="injury1">
         {{#if (hasInjury system.injuries.injury1.text)}}
         <div class="controls">
           <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury1.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury1.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury1.injuryType true)}}checked{{/if}}>
           <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury1.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury1.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury1.treated true)}}checked{{/if}}>
         </div>
         <hr style="margin: 1px 0;" />
-        {{/if}}  
+        {{/if}}
         <textarea class="injury-text">{{system.injuries.injury1.text}}</textarea>
       </div>
-      <div class="injury-cell injury" data-injury="injury2">    
+      <div class="injury-cell injury" data-injury="injury2">
         {{#if (hasInjury system.injuries.injury2.text)}}
         <div class="controls">
           <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury2.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury2.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury2.injuryType true)}}checked{{/if}}>
           <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury2.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury2.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury2.treated true)}}checked{{/if}}>
         </div>
         <hr style="margin: 1px 0;" />
-        {{/if}}  
+        {{/if}}
         <textarea class="injury-text">{{system.injuries.injury2.text}}</textarea>
       </div>
     </div>
@@ -128,7 +128,7 @@
     </div>
     <div class="skill-focuses">
       {{#each item.system.focuses}}
-      <span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}},&nbsp;</span>
+      <span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}}</span>,&nbsp;
       {{/each}}
     </div>
   </div>

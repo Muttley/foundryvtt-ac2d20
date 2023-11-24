@@ -35,10 +35,23 @@
     {{#each spells as |item key|}}
     <div class="item spell editable-item" data-item-id="{{item._id}}">
         <div class="row">
-            <div class="cell f4 green cell-expander align-left align-center cell-name"> <img src="{{item.img}}" />{{item.name}}</div>
-            <div class="cell f3 roll-spell skill-name clickable align-center"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} ({{item.system.focus}})</div>
+            <div class="cell f4 green cell-expander align-left align-center cell-name">
+				<img src="{{item.img}}" />
+				{{item.name}}
+			</div>
+            <div class="cell f3 roll-spell skill-name clickable align-center">
+				<i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}}
+				{{#if item.system.focus}}
+					({{item.system.focus}})
+				{{/if}}
+			</div>
             <div class="cell f1 align-center">{{item.system.difficulty}}</div>
-            <div class="cell f3 roll-spell-cost clickable align-center">{{item.system.cost}}<span class="cth-ico-cth"></span>&nbsp;{{item.system.costEffects}}</div>
+            <div class="cell f3 roll-spell-cost clickable align-center">
+				{{item.system.cost}}<span class="cth-ico-cth"></span>
+				{{#if item.system.costEffects}}
+					{{item.system.costEffects}}
+				{{/if}}
+			</div>
             <div class="cell f1 align-center">{{item.system.duration}}</div>
         </div>
 

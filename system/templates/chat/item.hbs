@@ -46,11 +46,28 @@
     {{/if}}
 
     {{#if isSpell}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.SpellType"}}:</strong> {{localize (concat 'AC2D20.SPELL.SpellTypes.' spellType)}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong> {{skill}} ({{focus}})</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Difficulty"}}:</strong> {{difficulty}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Cost"}}:</strong> {{cost}} ({{costEffects}})</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong> {{duration}}</p>
+		<p>
+			<strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong>
+			{{skill}}
+			{{#if focus}}
+				({{focus}})
+			{{/if}}
+		</p>
+		<p>
+			<strong>{{localize "AC2D20.TEMPLATES.Difficulty"}}:</strong>
+			{{difficulty}}
+		</p>
+		<p>
+			<strong>{{localize "AC2D20.TEMPLATES.Cost"}}:</strong>
+			{{cost}}<span class="cth-ico-cth"></span>
+			{{#if costEffects}}
+				({{costEffects}})
+			{{/if}}
+		</p>
+		<p>
+			<strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong>
+			{{duration}}
+		</p>
     {{/if}}
 
     {{#if isSkill}}
