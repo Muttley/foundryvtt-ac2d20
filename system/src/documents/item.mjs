@@ -100,7 +100,6 @@ export class ACItem extends Item {
 		itemData.isTalent = this.type === "talent";
 		itemData.isSpell = this.type === "spell";
 		itemData.isSkillkit = this.type === "skillkit";
-		itemData.isSkillkit = this.type === "skillkit";
 		itemData.isEquipment = this.type === "equipment";
 		itemData.isSpecial_rule = this.type === "special_rule";
 		itemData.isSkill = this.type === "skill";
