@@ -93,7 +93,9 @@ Hooks.on("ready", async () => {
 			focuses: s.system.focuses.map(f => f.title),
 		});
 	});
-	AC2D20.SKILLS = [..._skills];
+
+	AC2D20.SKILLS = _skills.sort((a, b) => a.key.localeCompare(b.key));
+
 	const listLocation = await game.settings.get("ac2d20", "hoversJsonLocation");
 	const jsonFile = await fetch(listLocation);
 	const content = await jsonFile.json();
