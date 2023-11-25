@@ -7,7 +7,6 @@
 		"css": "gulp compileCss",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
-		"lint:fix": "gulp lintJsFix",
 		"packs": "gulp compilePacks",
 		"test": "jest"
 	},
