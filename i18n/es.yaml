@@ -14,12 +14,12 @@ AC2D20.AbilityAbbr.wil: vol
 AC2D20.ARMOR.qualities.heavy: Pesada
 AC2D20.ARMOR.qualities.shield: Escudo
 AC2D20.ARMOR.qualities.uncomfortable: Incómoda
-AC2D20.Combat.CombatantsTurnDone: Turn Completed
-AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
-AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
-AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
-AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+AC2D20.Combat.CombatantsTurnDone: Turno finalizado
+AC2D20.Combat.CombatantsTurnNotDone: Turno no finalizado
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva de momentum reducida al final del combate
+AC2D20.Combat.CombatHasNotStarted: Combate no iniciado
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva de momentum reducida al inicio de un nuevo asalto
+AC2D20.Combat.ToggleCombatantsTurnDone: Conmutar turno finalizado
 AC2D20.EffectCreate: Crear Efecto
 AC2D20.EffectDelete: Borrar Efecto
 AC2D20.EffectEdit: Editar Efecto
@@ -315,11 +315,30 @@ ACTOR.Vehicle.Passengers: Pasajeros
 TYPES.Actor.character: Personaje
 TYPES.Actor.npc: PNJ
 TYPES.Actor.vehicle: Vehículo
-TYPES.Item.armor: Armor
-TYPES.Item.equipment: Equipment
-TYPES.Item.skill: Skill
-TYPES.Item.skillkit: Skill Kit
-TYPES.Item.special_rule: Special Rule
-TYPES.Item.spell: Spell
-TYPES.Item.talent: Talent
-TYPES.Item.weapon: Weapon
+TYPES.Item.armor: Armadura
+TYPES.Item.equipment: Equipo
+TYPES.Item.skill: Habilidad
+TYPES.Item.skillkit: Grupo de habilidades
+TYPES.Item.special_rule: Regla especial
+TYPES.Item.spell: Conjuro
+TYPES.Item.talent: Talento
+TYPES.Item.weapon: Arma
+AC2D20.TEMPLATES.Name: Nombre
+AC2D20.TEMPLATES.Nationality: Nacionalidad
+AC2D20.TEMPLATES.Rank: Rango
+AC2D20.TEMPLATES.Archetype: Arquetipo
+AC2D20.TEMPLATES.Background: Trasfondo
+AC2D20.TEMPLATES.Characteristic: Rasgo característico
+AC2D20.EFFECTS.Temporary: Efectos temporales
+AC2D20.EFFECTS.Passive: Efectos pasivos
+AC2D20.EFFECTS.Inactive: Efectos inactivos
+AC2D20.SETTINGS.showmomentumName: Mostrar momentum del GM a los jugadores
+AC2D20.SETTINGS.showmomentumHint: Muestra la ventana del momentum del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
+AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
+AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
+AC2D20.SETTINGS.compendiumName: Compendio de habilidades
+AC2D20.SETTINGS.compendiumHint: Cuando se crea un nuevo personaje incluirá las habilidades contenidas en este compendio.
+AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
+AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descripciones de cualidades y efectos de daño que aparecen al pasar el ratón.
+AC2D20.SETTINGS.ctName: Asistente de combate actualiza el momentum
+AC2D20.SETTINGS.ctHint: Si se activa, el asistente de combate reducirá la reserva de momentum cuando empiece un nuevo asalto, o cuando el combate finalice.
