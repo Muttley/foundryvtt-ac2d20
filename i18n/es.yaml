@@ -325,7 +325,6 @@ TYPES.Item.talent: Talento
 TYPES.Item.weapon: Arma
 AC2D20.TEMPLATES.Name: Nombre
 AC2D20.TEMPLATES.Nationality: Nacionalidad
-AC2D20.TEMPLATES.Rank: Rango
 AC2D20.TEMPLATES.Archetype: Arquetipo
 AC2D20.TEMPLATES.Background: Trasfondo
 AC2D20.TEMPLATES.Characteristic: Rasgo característico

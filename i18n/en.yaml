@@ -1,4 +1,3 @@
-
 "AC2D20.VEHICLES.QUALITIES.singleSeat:": Single Seat
 AC2D20.Ability.agi: Agility
 AC2D20.Ability.bra: Brawn
@@ -326,7 +325,6 @@ TYPES.Item.talent: Talent
 TYPES.Item.weapon: Weapon
 AC2D20.TEMPLATES.Name: Name
 AC2D20.TEMPLATES.Nationality: Nationality
-AC2D20.TEMPLATES.Rank: Rank
 AC2D20.TEMPLATES.Archetype: Archetype
 AC2D20.TEMPLATES.Background: Background
 AC2D20.TEMPLATES.Characteristic: Characteristic
