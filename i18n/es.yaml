@@ -341,3 +341,5 @@ AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
 AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descripciones de cualidades y efectos de daño que aparecen al pasar el ratón.
 AC2D20.SETTINGS.ctName: Asistente de combate actualiza el momentum
 AC2D20.SETTINGS.ctHint: Si se activa, el asistente de combate reducirá la reserva de momentum cuando empiece un nuevo asalto, o cuando el combate finalice.
+AC2D20.TEMPLATES.majoritems: Objetos grandes
+AC2D20.TEMPLATES.minoritems: Objetos pequeños

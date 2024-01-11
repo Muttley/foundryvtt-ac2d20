@@ -341,3 +341,5 @@ AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
 AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
 AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
 AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
+AC2D20.TEMPLATES.majoritems: Major Items
+AC2D20.TEMPLATES.minoritems: Minor Items
