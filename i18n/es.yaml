@@ -14,18 +14,18 @@ AC2D20.AbilityAbbr.wil: vol
 AC2D20.ARMOR.qualities.heavy: Pesada
 AC2D20.ARMOR.qualities.shield: Escudo
 AC2D20.ARMOR.qualities.uncomfortable: Incómoda
-AC2D20.Combat.CombatantsTurnDone: Turn Completed
-AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
-AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
-AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
-AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+AC2D20.Combat.CombatantsTurnDone: Turno finalizado
+AC2D20.Combat.CombatantsTurnNotDone: Turno no finalizado
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva de momentum reducida al final del combate
+AC2D20.Combat.CombatHasNotStarted: Combate no iniciado
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva de momentum reducida al inicio de un nuevo asalto
+AC2D20.Combat.ToggleCombatantsTurnDone: Conmutar turno finalizado
 AC2D20.EffectCreate: Crear Efecto
 AC2D20.EffectDelete: Borrar Efecto
 AC2D20.EffectEdit: Editar Efecto
-AC2D20.EFFECTS.Inactive: Inactive Effects
-AC2D20.EFFECTS.Passive: Passive Effects
-AC2D20.EFFECTS.Temporary: Temporary Effects
+AC2D20.EFFECTS.Inactive: Efectos inactivos
+AC2D20.EFFECTS.Passive: Efectos pasivos
+AC2D20.EFFECTS.Temporary: Efectos temporales
 AC2D20.EffectToggle: Alternar Efecto
 AC2D20.equipped: Equipado
 AC2D20.FOCUS.Air Force: Fuerza Aérea
@@ -106,16 +106,16 @@ AC2D20.RESISTANCE.armor: Armadura
 AC2D20.RESISTANCE.courage: Coraje
 AC2D20.RESISTANCE.fatigue: Fatiga
 AC2D20.RESISTANCE.resistance: Resistencia
-AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
-AC2D20.SETTINGS.compendiumName: Skills Compendium
-AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
-AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
-AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
-AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
-AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
-AC2D20.SETTINGS.maxappName: Players Can Setup Max App
-AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
-AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
+AC2D20.SETTINGS.compendiumHint: Cuando se crea un nuevo personaje incluirá las habilidades contenidas en este compendio.
+AC2D20.SETTINGS.compendiumName: Compendio de habilidades
+AC2D20.SETTINGS.ctHint: Si se activa, el asistente de combate reducirá la reserva de momentum cuando empiece un nuevo asalto, o cuando el combate finalice.
+AC2D20.SETTINGS.ctName: Asistente de combate actualiza el momentum
+AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descripciones de cualidades y efectos de daño que aparecen al pasar el ratón.
+AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
+AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
+AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
+AC2D20.SETTINGS.showmomentumHint: Muestra la ventana del momentum del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
+AC2D20.SETTINGS.showmomentumName: Mostrar momentum del GM a los jugadores
 AC2D20.SKILL.ACADEMIA: Académicas
 AC2D20.SKILL.ATHLETICS: Atletismo
 AC2D20.SKILL.ENGINEERING: Ingeniería
@@ -141,14 +141,14 @@ AC2D20.STRESS.stress: Estrés
 AC2D20.TEMPLATES.Abilities: Habilidades
 AC2D20.TEMPLATES.AddFocus: Añadir Especialidad
 AC2D20.TEMPLATES.Ammo: Munición
-AC2D20.TEMPLATES.Archetype: Archetype
+AC2D20.TEMPLATES.Archetype: Arquetipo
 AC2D20.TEMPLATES.Attacks: ATAQUES
 AC2D20.TEMPLATES.Attr: Atri.
 AC2D20.TEMPLATES.Attribute: Atributo
 AC2D20.TEMPLATES.Attributes: Atributos
-AC2D20.TEMPLATES.Background: Background
+AC2D20.TEMPLATES.Background: Trasfondo
 AC2D20.TEMPLATES.bonus: Bono
-AC2D20.TEMPLATES.Characteristic: Characteristic
+AC2D20.TEMPLATES.Characteristic: Rasgo característico
 AC2D20.TEMPLATES.Compl: Compl.
 AC2D20.TEMPLATES.Complications: Complicaciones
 AC2D20.TEMPLATES.Conditions: Condiciones
@@ -196,18 +196,18 @@ AC2D20.TEMPLATES.Keywords: Palabras Clave
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendida
 AC2D20.TEMPLATES.Luck: Suerte
-AC2D20.TEMPLATES.majoritems: Major Items
+AC2D20.TEMPLATES.majoritems: Objetos grandes
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Inercia Máxima
 AC2D20.TEMPLATES.max: max
 AC2D20.TEMPLATES.MAX: MAX
 AC2D20.TEMPLATES.MELEE_BONUS: BONO MELÉ
 AC2D20.TEMPLATES.MELEE_DAMAGE: DAÑO MELÉ
-AC2D20.TEMPLATES.minoritems: Minor Items
+AC2D20.TEMPLATES.minoritems: Objetos pequeños
 AC2D20.TEMPLATES.Mod_Type: Tipo Mod
 AC2D20.TEMPLATES.MODULES: MODULOS
 AC2D20.TEMPLATES.Name_Prefix: Prefijo del Nombre
-AC2D20.TEMPLATES.Name: Name
-AC2D20.TEMPLATES.Nationality: Nationality
+AC2D20.TEMPLATES.Name: Nombre
+AC2D20.TEMPLATES.Nationality: Nacionalidad
 AC2D20.TEMPLATES.PARTY_MOMENTUM: Inercia Grupo
 AC2D20.TEMPLATES.Personal_Truth_Scars: Verdades Personales & Cicatrices
 AC2D20.TEMPLATES.PHYS: FIS
@@ -335,11 +335,11 @@ ACTOR.Vehicle.Passengers: Pasajeros
 TYPES.Actor.character: Personaje
 TYPES.Actor.npc: PNJ
 TYPES.Actor.vehicle: Vehículo
-TYPES.Item.armor: Armor
-TYPES.Item.equipment: Equipment
-TYPES.Item.skill: Skill
-TYPES.Item.skillkit: Skill Kit
-TYPES.Item.special_rule: Special Rule
-TYPES.Item.spell: Spell
-TYPES.Item.talent: Talent
-TYPES.Item.weapon: Weapon
+TYPES.Item.armor: Armadura
+TYPES.Item.equipment: Equipo
+TYPES.Item.skill: Habilidad
+TYPES.Item.skillkit: Grupo de habilidades
+TYPES.Item.special_rule: Regla especial
+TYPES.Item.spell: Conjuro
+TYPES.Item.talent: Talento
+TYPES.Item.weapon: Arma
