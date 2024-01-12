@@ -1,4 +1,3 @@
-
 "AC2D20.VEHICLES.QUALITIES.singleSeat:": Single Seat
 AC2D20.Ability.agi: Agility
 AC2D20.Ability.bra: Brawn
@@ -324,3 +323,23 @@ TYPES.Item.special_rule: Special Rule
 TYPES.Item.spell: Spell
 TYPES.Item.talent: Talent
 TYPES.Item.weapon: Weapon
+AC2D20.TEMPLATES.Name: Name
+AC2D20.TEMPLATES.Nationality: Nationality
+AC2D20.TEMPLATES.Archetype: Archetype
+AC2D20.TEMPLATES.Background: Background
+AC2D20.TEMPLATES.Characteristic: Characteristic
+AC2D20.EFFECTS.Temporary: Temporary Effects
+AC2D20.EFFECTS.Passive: Passive Effects
+AC2D20.EFFECTS.Inactive: Inactive Effects
+AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
+AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
+AC2D20.SETTINGS.maxappName: Players Can Setup Max App
+AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
+AC2D20.SETTINGS.compendiumName: Skills Compendium
+AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
+AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
+AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
+AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
+AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
+AC2D20.TEMPLATES.majoritems: Major Items
+AC2D20.TEMPLATES.minoritems: Minor Items
