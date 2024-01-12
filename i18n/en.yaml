@@ -23,6 +23,9 @@ AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
 AC2D20.EffectCreate: Create Effect
 AC2D20.EffectDelete: Delete Effect
 AC2D20.EffectEdit: Edit Effect
+AC2D20.EFFECTS.Inactive: Inactive Effects
+AC2D20.EFFECTS.Passive: Passive Effects
+AC2D20.EFFECTS.Temporary: Temporary Effects
 AC2D20.EffectToggle: Toggle Effect
 AC2D20.equipped: Equipped
 AC2D20.FOCUS.Air Force: Air Force
@@ -103,6 +106,16 @@ AC2D20.RESISTANCE.armor: Armor
 AC2D20.RESISTANCE.courage: Courage
 AC2D20.RESISTANCE.fatigue: Fatigue
 AC2D20.RESISTANCE.resistance: Resistance
+AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
+AC2D20.SETTINGS.compendiumName: Skills Compendium
+AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
+AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
+AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
+AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
+AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
+AC2D20.SETTINGS.maxappName: Players Can Setup Max App
+AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
+AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
 AC2D20.SKILL.ACADEMIA: Academia
 AC2D20.SKILL.ATHLETICS: Athletics
 AC2D20.SKILL.ENGINEERING: Engineering
@@ -128,11 +141,14 @@ AC2D20.STRESS.stress: Stress
 AC2D20.TEMPLATES.Abilities: Abilities
 AC2D20.TEMPLATES.AddFocus: Add Focus
 AC2D20.TEMPLATES.Ammo: Ammo
+AC2D20.TEMPLATES.Archetype: Archetype
 AC2D20.TEMPLATES.Attacks: ATTACKS
 AC2D20.TEMPLATES.Attr: Attr.
 AC2D20.TEMPLATES.Attribute: Attribute
 AC2D20.TEMPLATES.Attributes: Attributes
+AC2D20.TEMPLATES.Background: Background
 AC2D20.TEMPLATES.bonus: Bonus
+AC2D20.TEMPLATES.Characteristic: Characteristic
 AC2D20.TEMPLATES.Compl: Compl.
 AC2D20.TEMPLATES.Complications: Complications
 AC2D20.TEMPLATES.Conditions: Conditions
@@ -180,14 +196,18 @@ AC2D20.TEMPLATES.Keywords: Keywords
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Learned
 AC2D20.TEMPLATES.Luck: Luck
+AC2D20.TEMPLATES.majoritems: Major Items
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Max Momentum
 AC2D20.TEMPLATES.max: max
 AC2D20.TEMPLATES.MAX: MAX
 AC2D20.TEMPLATES.MELEE_BONUS: MELEE BONUS
 AC2D20.TEMPLATES.MELEE_DAMAGE: MELEE DAMAGE
+AC2D20.TEMPLATES.minoritems: Minor Items
 AC2D20.TEMPLATES.Mod_Type: Mod Type
 AC2D20.TEMPLATES.MODULES: MODULES
 AC2D20.TEMPLATES.Name_Prefix: Name Prefix
+AC2D20.TEMPLATES.Name: Name
+AC2D20.TEMPLATES.Nationality: Nationality
 AC2D20.TEMPLATES.PARTY_MOMENTUM: Party Momentum
 AC2D20.TEMPLATES.Personal_Truth_Scars: Personal Truths & Scars
 AC2D20.TEMPLATES.PHYS: PHYS
@@ -323,23 +343,3 @@ TYPES.Item.special_rule: Special Rule
 TYPES.Item.spell: Spell
 TYPES.Item.talent: Talent
 TYPES.Item.weapon: Weapon
-AC2D20.TEMPLATES.Name: Name
-AC2D20.TEMPLATES.Nationality: Nationality
-AC2D20.TEMPLATES.Archetype: Archetype
-AC2D20.TEMPLATES.Background: Background
-AC2D20.TEMPLATES.Characteristic: Characteristic
-AC2D20.EFFECTS.Temporary: Temporary Effects
-AC2D20.EFFECTS.Passive: Passive Effects
-AC2D20.EFFECTS.Inactive: Inactive Effects
-AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
-AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
-AC2D20.SETTINGS.maxappName: Players Can Setup Max App
-AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
-AC2D20.SETTINGS.compendiumName: Skills Compendium
-AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
-AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
-AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
-AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
-AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
-AC2D20.TEMPLATES.majoritems: Major Items
-AC2D20.TEMPLATES.minoritems: Minor Items

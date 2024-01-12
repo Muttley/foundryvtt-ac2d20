@@ -1,7 +1,10 @@
 # v11.2.0
 
 ## Bugfix
+- [#14] Some localization fixes (lozanoje)
 - [#17] Text enricher for Cthulhu symbol not displaying the correct character
+
+*Many thanks to lozanoje for contributing code included in this build*
 
 # v11.1.2
 
