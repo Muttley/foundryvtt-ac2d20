@@ -2,6 +2,7 @@
 
 ## Bugfix
 - [#14] Some localization fixes (lozanoje)
+- [#16] Enable the prosemirror editor for item descriptions (lozanoje)
 - [#17] Text enricher for Cthulhu symbol not displaying the correct character
 
 *Many thanks to lozanoje for contributing code included in this build*
