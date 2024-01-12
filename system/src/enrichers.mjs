@@ -5,7 +5,7 @@ export function registerEnrichers() {
 			pattern: /@(s(tress)?|c(hallenge)?)/gim,
 			enricher: async (match, options) => {
 				const i = document.createElement("i");
-				i.className = "cthl-cthulhu";
+				i.className = "cth-ico-cth";
 
 				// Adjust positioning slightly to align better with text.
 				i.style.position = "relative";
