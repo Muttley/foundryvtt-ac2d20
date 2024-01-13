@@ -1,47 +1,47 @@
 <form class="{{cssClass}} item-sheet flexcol" autocomplete="off">
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs" data-group="primary">
-    {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <img src="systems/ac2d20/assets/main-menu-slope.webp">
-    <div class="buttons">
-      <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-      <a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
-    </div>
-  </nav>
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs" data-group="primary">
+		{{!-- Default tab is specified in actor-sheet.mjs --}}
+		<img src="systems/ac2d20/assets/main-menu-slope.webp">
+		<div class="buttons">
+			<a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
+			<a class="item" data-tab="description">{{localize "AC2D20.TEMPLATES.Description"}}</a>
+		</div>
+	</nav>
 
-  {{> "systems/ac2d20/templates/item/parts/item-header.hbs"}}
+	{{> item/parts/item-header }}
 
-  {{!-- Sheet Body --}}
-  <section class="sheet-body">
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
 
-    {{!-- Description Tab --}}
-    <div class="tab description" data-group="primary" data-tab="description">
-      {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
-    </div>
+		{{!-- Description Tab --}}
+		<div class="tab description" data-group="primary" data-tab="description">
+			{{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+		</div>
 
-    {{!-- Attributes Tab --}}
-    <div class="tab attributes" data-group="primary" data-tab="attributes">
-      {{!-- As you add new fields, add them in here! --}}
-      <div class="flexrow resource green-field">
-        <label>{{localize "AC2D20.TEMPLATES.Skill_Value"}}</label>
-        <input type="number" name="system.value" value="{{system.value}}" style="text-align: center;">
-      </div>
-      <div class="flexcol">
-        <div><button class="focus-add" style="margin-bottom: 5px;">{{localize "AC2D20.TEMPLATES.AddFocus"}}</button></div>
-        {{#each system.focuses as |focus key|}}
-        <div class="focus-item">
-          <input type="text" class='focus-title' value="{{focus.title}}">
-          <span style="margin: 0 5px; display: flex; align-items: center;">
-            <label>Focus</label>
-            <input type="checkbox" class="focus-cb" {{#if (eq focus.isfocus true)}}checked{{/if}}>
-          </span>
-          <div class="item-controls">
-            <a class="item-control focus-delete" data-index="{{@index}}" title=" Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </div>
-        {{/each}}
-      </div>
-    </div>
-  </section>
+		{{!-- Attributes Tab --}}
+		<div class="tab attributes" data-group="primary" data-tab="attributes">
+			{{!-- As you add new fields, add them in here! --}}
+			<div class="flexrow resource green-field">
+				<label>{{localize "AC2D20.TEMPLATES.Skill_Value"}}</label>
+				<input type="number" name="system.value" value="{{system.value}}" style="text-align: center;">
+			</div>
+			<div class="flexcol">
+				<div><button class="focus-add" style="margin-bottom: 5px;">{{localize "AC2D20.TEMPLATES.AddFocus"}}</button></div>
+				{{#each system.focuses as |focus key|}}
+				<div class="focus-item">
+					<input type="text" class='focus-title' value="{{focus.title}}">
+					<span style="margin: 0 5px; display: flex; align-items: center;">
+						<label>{{localize 'AC2D20.TEMPLATES.Focus'}}</label>
+						<input type="checkbox" class="focus-cb" {{#if (eq focus.isfocus true)}}checked{{/if}}>
+					</span>
+					<div class="item-controls">
+						<a class="item-control focus-delete" data-index="{{@index}}" title=" Delete Item"><i class="fas fa-trash"></i></a>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</section>
 
 </form>

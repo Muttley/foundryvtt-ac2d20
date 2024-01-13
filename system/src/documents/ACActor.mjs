@@ -4,7 +4,7 @@
  * is ideal for the Simple system.
  * @extends {Actor}
  */
-export class ACActor extends Actor {
+export default class ACActor extends Actor {
 
 	/** @override */
 	prepareData() {

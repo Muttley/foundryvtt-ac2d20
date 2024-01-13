@@ -54,9 +54,8 @@ $cth-ico-cth-cross: "\e901";
 @font-face {
 	font-family: 'AC Cthulhu Icons';
 	src: url('../fonts/AC-Cthulhu-Icons.eot');
-	src: url('../fonts/AC-Cthulhu-Icons.eot?#iefix') format('embedded-opentype'),
+	src: url('../fonts/AC-Cthulhu-Icons.ttf') format('truetype'),
 		url('../fonts/AC-Cthulhu-Icons.woff') format('woff'),
-		url('../fonts/AC-Cthulhu-Icons.ttf') format('truetype'),
 		url('../fonts/AC-Cthulhu-Icons.svg#AC-Cthulhu-Icons') format('svg');
 	font-weight: normal;
 	font-style: normal;

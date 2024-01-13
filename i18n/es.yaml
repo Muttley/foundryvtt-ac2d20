@@ -14,15 +14,18 @@ AC2D20.AbilityAbbr.wil: vol
 AC2D20.ARMOR.qualities.heavy: Pesada
 AC2D20.ARMOR.qualities.shield: Escudo
 AC2D20.ARMOR.qualities.uncomfortable: Incómoda
-AC2D20.Combat.CombatantsTurnDone: Turn Completed
-AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
-AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
-AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
-AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
+AC2D20.Combat.CombatantsTurnDone: Turno finalizado
+AC2D20.Combat.CombatantsTurnNotDone: Turno no finalizado
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva de momentum reducida al final del combate
+AC2D20.Combat.CombatHasNotStarted: Combate no iniciado
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva de momentum reducida al inicio de un nuevo asalto
+AC2D20.Combat.ToggleCombatantsTurnDone: Conmutar turno finalizado
 AC2D20.EffectCreate: Crear Efecto
 AC2D20.EffectDelete: Borrar Efecto
 AC2D20.EffectEdit: Editar Efecto
+AC2D20.EFFECTS.Inactive: Efectos inactivos
+AC2D20.EFFECTS.Passive: Efectos pasivos
+AC2D20.EFFECTS.Temporary: Efectos temporales
 AC2D20.EffectToggle: Alternar Efecto
 AC2D20.equipped: Equipado
 AC2D20.FOCUS.Air Force: Fuerza Aérea
@@ -93,6 +96,10 @@ AC2D20.FOCUS.Toxicology: Toxicología
 AC2D20.FOCUS.Tracking: Rastrear
 AC2D20.FOCUS.Urban Stealth: Sigilo Urbano
 AC2D20.FOCUS.Watercraft: Vehículos Acuáticos
+AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
+AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.completed_schema: Completed applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.OTHER: Otro
 AC2D20.RANGE.close: Corto
 AC2D20.RANGE.extreme: Extremo
@@ -103,6 +110,22 @@ AC2D20.RESISTANCE.armor: Armadura
 AC2D20.RESISTANCE.courage: Coraje
 AC2D20.RESISTANCE.fatigue: Fatiga
 AC2D20.RESISTANCE.resistance: Resistencia
+AC2D20.SETTINGS.compendiumHint: Cuando se crea un nuevo personaje incluirá las habilidades contenidas en este compendio.
+AC2D20.SETTINGS.compendiumName: Compendio de habilidades
+AC2D20.SETTINGS.ctHint: Si se activa, el asistente de combate reducirá la reserva de momentum cuando empiece un nuevo asalto, o cuando el combate finalice.
+AC2D20.SETTINGS.ctName: Asistente de combate actualiza el momentum
+AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features
+AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
+AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descripciones de cualidades y efectos de daño que aparecen al pasar el ratón.
+AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
+AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
+AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
+AC2D20.SETTINGS.showmomentumHint: Muestra la ventana del momentum del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
+AC2D20.SETTINGS.showmomentumName: Mostrar momentum del GM a los jugadores
+AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.systemVersion.label: System Version
+AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
 AC2D20.SKILL.ACADEMIA: Académicas
 AC2D20.SKILL.ATHLETICS: Atletismo
 AC2D20.SKILL.ENGINEERING: Ingeniería
@@ -128,11 +151,14 @@ AC2D20.STRESS.stress: Estrés
 AC2D20.TEMPLATES.Abilities: Habilidades
 AC2D20.TEMPLATES.AddFocus: Añadir Especialidad
 AC2D20.TEMPLATES.Ammo: Munición
+AC2D20.TEMPLATES.Archetype: Arquetipo
 AC2D20.TEMPLATES.Attacks: ATAQUES
 AC2D20.TEMPLATES.Attr: Atri.
 AC2D20.TEMPLATES.Attribute: Atributo
 AC2D20.TEMPLATES.Attributes: Atributos
+AC2D20.TEMPLATES.Background: Trasfondo
 AC2D20.TEMPLATES.bonus: Bono
+AC2D20.TEMPLATES.Characteristic: Rasgo característico
 AC2D20.TEMPLATES.Compl: Compl.
 AC2D20.TEMPLATES.Complications: Complicaciones
 AC2D20.TEMPLATES.Conditions: Condiciones
@@ -180,14 +206,18 @@ AC2D20.TEMPLATES.Keywords: Palabras Clave
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendida
 AC2D20.TEMPLATES.Luck: Suerte
+AC2D20.TEMPLATES.majoritems: Objetos grandes
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Inercia Máxima
 AC2D20.TEMPLATES.max: max
 AC2D20.TEMPLATES.MAX: MAX
 AC2D20.TEMPLATES.MELEE_BONUS: BONO MELÉ
 AC2D20.TEMPLATES.MELEE_DAMAGE: DAÑO MELÉ
+AC2D20.TEMPLATES.minoritems: Objetos pequeños
 AC2D20.TEMPLATES.Mod_Type: Tipo Mod
 AC2D20.TEMPLATES.MODULES: MODULOS
 AC2D20.TEMPLATES.Name_Prefix: Prefijo del Nombre
+AC2D20.TEMPLATES.Name: Nombre
+AC2D20.TEMPLATES.Nationality: Nacionalidad
 AC2D20.TEMPLATES.PARTY_MOMENTUM: Inercia Grupo
 AC2D20.TEMPLATES.Personal_Truth_Scars: Verdades Personales & Cicatrices
 AC2D20.TEMPLATES.PHYS: FIS
@@ -315,11 +345,11 @@ ACTOR.Vehicle.Passengers: Pasajeros
 TYPES.Actor.character: Personaje
 TYPES.Actor.npc: PNJ
 TYPES.Actor.vehicle: Vehículo
-TYPES.Item.armor: Armor
-TYPES.Item.equipment: Equipment
-TYPES.Item.skill: Skill
-TYPES.Item.skillkit: Skill Kit
-TYPES.Item.special_rule: Special Rule
-TYPES.Item.spell: Spell
-TYPES.Item.talent: Talent
-TYPES.Item.weapon: Weapon
+TYPES.Item.armor: Armadura
+TYPES.Item.equipment: Equipo
+TYPES.Item.skill: Habilidad
+TYPES.Item.skillkit: Grupo de habilidades
+TYPES.Item.special_rule: Regla especial
+TYPES.Item.spell: Conjuro
+TYPES.Item.talent: Talento
+TYPES.Item.weapon: Arma

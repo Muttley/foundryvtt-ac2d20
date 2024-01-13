@@ -1,6 +1,11 @@
 const debounceReload = debounce(() => window.location.reload(), 100);
 
 export function registerSettings() {
+
+	// ------------------
+	//  MOMENTUM TRACKER
+	// ------------------
+	//
 	game.settings.register("ac2d20", "partyMomentum", {
 		name: "Party Momentum",
 		scope: "world",
@@ -25,9 +30,13 @@ export function registerSettings() {
 		type: Number,
 	});
 
+	// -------------------
+	//  STANDARD SETTINGS
+	// -------------------
+	//
 	game.settings.register("ac2d20", "gmMomentumShowToPlayers", {
-		name: "Show GM Momentum To Players",
-		hint: "Shows the GM momentum window to everyone. Requires refresh on players side.",
+		name: game.i18n.localize("AC2D20.SETTINGS.showmomentumName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.showmomentumHint"),
 		scope: "world",
 		config: true,
 		default: false,
@@ -35,8 +44,8 @@ export function registerSettings() {
 	});
 
 	game.settings.register("ac2d20", "maxAppShowToPlayers", {
-		name: "Players Can Setup Max App",
-		hint: "Allows players to settup the Party's MAX AP. Requires refresh on players side.",
+		name: game.i18n.localize("AC2D20.SETTINGS.maxappName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.maxappHint"),
 		scope: "world",
 		config: true,
 		default: false,
@@ -44,7 +53,8 @@ export function registerSettings() {
 	});
 
 	game.settings.register("ac2d20", "compendium-skills", {
-		name: "Skills Compendium",
+		name: game.i18n.localize("AC2D20.SETTINGS.compendiumName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.compendiumHint"),
 		scope: "world",
 		config: true,
 		default: "ac2d20.skills",
@@ -52,8 +62,8 @@ export function registerSettings() {
 	});
 
 	game.settings.register("ac2d20", "hoversJsonLocation", {
-		name: "Mouse Hover JSON file",
-		hint: "Location of the json file containing the text for qualities and damage effects.",
+		name: game.i18n.localize("AC2D20.SETTINGS.hoverName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.hoverHint"),
 		scope: "world",
 		config: true,
 		default: "systems/ac2d20/assets/hovers.json",
@@ -64,11 +74,44 @@ export function registerSettings() {
 	});
 
 	game.settings.register("ac2d20", "combatTrackerMomentumUpdate", {
-		name: "Combat Tracker Updates Momentum?",
-		hint: "If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.",
+		name: game.i18n.localize("AC2D20.SETTINGS.ctName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.ctHint"),
 		scope: "world",
 		config: true,
 		default: true,
 		type: Boolean,
+	});
+
+
+	// ----------------
+	//  DEBUG SETTINGS
+	// ----------------
+	//
+	game.settings.register("ac2d20", "debugEnabled", {
+		name: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.hint"),
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
+
+	game.settings.register("ac2d20", "worldSchemaVersion", {
+		name: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.hint"),
+		scope: "world",
+		config: game.settings.get("ac2d20", "debugEnabled"),
+		default: -1,
+		type: Number,
+	});
+
+	game.settings.register("ac2d20", "systemVersion", {
+		name: game.i18n.localize("AC2D20.SETTINGS.systemVersion.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.systemVersion.hint"),
+		scope: "world",
+		config: game.settings.get("ac2d20", "debugEnabled"),
+		default: "",
+		type: String,
 	});
 }

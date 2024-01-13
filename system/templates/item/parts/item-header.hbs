@@ -1,35 +1,35 @@
 <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
-    <div class="header-fields">
-        <div style="display: flex;">
-            <h1 class="charname">
-                <input name="name" class="underline" type="text" value="{{item.name}}" placeholder="Name" />
-            </h1>
-            <div class="post-item"><i class="fas fa-comment"></i></div>
-        </div>
+	<img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+	<div class="header-fields">
+		<div style="display: flex;">
+			<h1 class="charname">
+				<input name="name" class="underline" type="text" value="{{item.name}}" placeholder="Name" />
+			</h1>
+			<div class="post-item"><i class="fas fa-comment"></i></div>
+		</div>
 
 
-        {{#if system.weight includeZero=true}}
-        <div style="display: flex; flex-direction: row; justify-content: space-between;">
-            <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.UI.Quantity"}}</label>
-                <input class="num-short-2" type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
-            </div>
-            <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Size"}}</label>
-                <select name="system.weight">
-                    {{#select system.weight}}
-                    <option value="0" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Trivial"}}</option>
-                    <option value="1" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Minor"}}</option>
-                    <option value="3" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Major"}}</option>
-                    {{/select}}
-                </select>
-            </div>
-            <div class="resource">
-                <label class="resource-label">{{localize "AC2D20.TEMPLATES.Restriction"}}</label>
-                <input class="num-short-2" type="number" name="system.restriction" value="{{system.restriction}}" data-dtype="Number" />
-            </div>
-        </div>
-        {{/if}}
-    </div>
+		{{#if system.weight includeZero=true}}
+		<div style="display: flex; flex-direction: row; justify-content: space-between;">
+			<div class="resource">
+				<label class="resource-label">{{localize "AC2D20.UI.Quantity"}}</label>
+				<input class="num-short-2" type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" />
+			</div>
+			<div class="resource">
+				<label class="resource-label">{{localize "AC2D20.TEMPLATES.Size"}}</label>
+				<select name="system.weight">
+					{{#select system.weight}}
+					<option value="0" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Trivial"}}</option>
+					<option value="1" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Minor"}}</option>
+					<option value="3" data-dtype="Number">{{localize "AC2D20.TEMPLATES.SizeLevels.Major"}}</option>
+					{{/select}}
+				</select>
+			</div>
+			<div class="resource">
+				<label class="resource-label">{{localize "AC2D20.TEMPLATES.Restriction"}}</label>
+				<input class="num-short-2" type="number" name="system.restriction" value="{{system.restriction}}" data-dtype="Number" />
+			</div>
+		</div>
+		{{/if}}
+	</div>
 </header>

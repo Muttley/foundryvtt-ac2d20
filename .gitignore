@@ -6,4 +6,5 @@ system/i18n/
 system/packs/
 
 *.code-workspace
+*.swp
 ac2d20-compiled*

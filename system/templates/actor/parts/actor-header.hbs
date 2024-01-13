@@ -1,16 +1,16 @@
 <header class="sheet-header {{actor.type}}-header">
-    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
-    <img class="paperclip" src="systems/ac2d20/assets/paperclip-60.png" data-edit="img" height="60" />
-    <div class="flexcol" style="height: 100%;">
-        <div class="flexrow" style="padding: 10px 5px 0px 5px;">
-            <h1 class="sheet-name" style="align-self: flex-end; margin: 0 5px;"><input class="underline" name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
-            <input placeholder="Nationality" type="text" class="underline" name="system.nationality" value="{{system.nationality}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
-            <input placeholder="Rank" type="text" class="underline" name="system.rank" value="{{system.rank}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
-        </div>
-        <div class="flexrow" style="padding: 0 5px;">
-            <input placeholder="Archetype" type="text" class="underline" name="system.archetype" value="{{system.archetype}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
-            <input placeholder="Background" type="text" class="underline" name="system.background" value="{{system.background}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
-            <input placeholder="Characteristic" type="text" class="underline" name="system.characteristic" value="{{system.characteristic}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
-        </div>
-    </div>
+	<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
+	<img class="paperclip" src="systems/ac2d20/assets/paperclip-60.png" data-edit="img" height="60" />
+	<div class="flexcol" style="height: 100%;">
+		<div class="flexrow" style="padding: 10px 5px 0px 5px;">
+			<h1 class="sheet-name" style="align-self: flex-end; margin: 0 5px;"><input class="underline" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'AC2D20.TEMPLATES.Name'}}" /></h1>
+			<input placeholder="{{localize 'AC2D20.TEMPLATES.Nationality'}}" type="text" class="underline" name="system.nationality" value="{{system.nationality}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
+			<input placeholder="{{localize 'AC2D20.TEMPLATES.Rank'}}" type="text" class="underline" name="system.rank" value="{{system.rank}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
+		</div>
+		<div class="flexrow" style="padding: 0 5px;">
+			<input placeholder="{{localize 'AC2D20.TEMPLATES.Archetype'}}" type="text" class="underline" name="system.archetype" value="{{system.archetype}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
+			<input placeholder="{{localize 'AC2D20.TEMPLATES.Background'}}" type="text" class="underline" name="system.background" value="{{system.background}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
+			<input placeholder="{{localize 'AC2D20.TEMPLATES.Characteristic'}}" type="text" class="underline" name="system.characteristic" value="{{system.characteristic}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
+		</div>
+	</div>
 </header>

@@ -13,6 +13,10 @@ export const registerHandlebarsHelpers = function() {
 		return outStr;
 	});
 
+	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
+		return CONFIG.AC2D20[arg1][arg2] ? CONFIG.AC2D20[arg1][arg2] : arg2;
+	});
+
 	Handlebars.registerHelper("toLowerCase", function(str) {
 		return str.toLowerCase();
 	});
@@ -80,7 +84,7 @@ export const registerHandlebarsHelpers = function() {
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
 		if (key === "") return [];
 		const _skill = CONFIG.AC2D20.SKILLS.filter(s => s.key === key);
-		return _skill[0].focuses;
+		return _skill[0]?.focuses ?? [];
 	});
 
 	Handlebars.registerHelper("getWeaponEffects", function(effect) {
@@ -88,10 +92,13 @@ export const registerHandlebarsHelpers = function() {
 		Object.entries(effect).forEach(([k, v]) => {
 			let effString = "";
 			let tooltip = "";
+			let locString = "";
 			if (v.value) {
 				let tstr = `AC2D20.WEAPONS.effects.${k}`;
+				let lstr = `AC2D20.WEAPONS.damageEffect.${k}`;
 				tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr);
-				effString += `<span data-tooltip="${tooltip}">${v.label}`;
+				locString = game.i18n.localize(lstr);
+				effString += `<span data-tooltip="${tooltip}">${locString}`;
 				if (v.rank) {
 					effString += ` ${v.rank}`;
 				}
@@ -107,10 +114,13 @@ export const registerHandlebarsHelpers = function() {
 		Object.entries(qualities).forEach(([k, v]) => {
 			let quString = "";
 			let tooltip = "";
+			let locString = "";
 			if (v.value) {
 				let tstr = `AC2D20.WEAPONS.qualities.${k}`;
+				let lstr = `AC2D20.WEAPONS.weaponQuality.${k}`;
 				tooltip = Handlebars.helpers.getTooltipFromConfigKey(tstr);
-				quString += `<span data-tooltip="${tooltip}">${v.label}</span>`;
+				locString = game.i18n.localize(lstr);
+				quString += `<span data-tooltip="${tooltip}">${locString}</span>`;
 				_qualities.push(quString);
 			}
 		});

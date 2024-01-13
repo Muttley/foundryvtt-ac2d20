@@ -4,7 +4,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class ACItemSheet extends ItemSheet {
+export default class ACItemSheet extends ItemSheet {
 
 	/** @override */
 	static get defaultOptions() {
@@ -20,6 +20,12 @@ export class ACItemSheet extends ItemSheet {
 	get template() {
 		const path = "systems/ac2d20/templates/item";
 		return `${path}/item-${this.item.type}-sheet.hbs`;
+	}
+
+	/** @inheritdoc */
+	get title() {
+		const type = game.i18n.localize(`TYPES.Item.${this.item.type}`);
+		return `[${type}] ${this.item.name}`;
 	}
 
 	/* -------------------------------------------- */

@@ -23,8 +23,6 @@ async function compileJavascript() {
 }
 export const compile = compileJavascript;
 
-// Use eslint to check for formatting issues
-//
 function lintJavascript() {
 	const tasks = SRC_LINT_PATHS.map(path => {
 		const src = path.endsWith("/")

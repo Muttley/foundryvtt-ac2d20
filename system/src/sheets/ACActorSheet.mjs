@@ -5,7 +5,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class ACActorSheet extends ActorSheet {
+export default class ACActorSheet extends ActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
@@ -21,6 +21,12 @@ export class ACActorSheet extends ActorSheet {
 	/** @override */
 	get template() {
 		return `systems/ac2d20/templates/actor/actor-${this.actor.type}-sheet.hbs`;
+	}
+
+	/** @inheritdoc */
+	get title() {
+		const type = game.i18n.localize(`TYPES.Actor.${this.actor.type}`);
+		return `[${type}] ${this.actor.name}`;
 	}
 
 	/* -------------------------------------------- */
@@ -657,7 +663,8 @@ export class ACActorSheet extends ActorSheet {
 		// Remove the type from the dataset since it's in the itemData.type prop.
 		delete itemData.data.type;
 		// Finally, create the item!
-		return await Item.create(itemData, { parent: this.actor });
+		const newItem = await Item.create(itemData, { parent: this.actor });
+		newItem.sheet.render(true);
 	}
 
 	async _onRightClickDelete(itemId) {

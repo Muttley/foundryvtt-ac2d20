@@ -1,4 +1,4 @@
-export class DialogD6 extends Dialog {
+export default class DialogD6 extends Dialog {
 
 	constructor(rollName, diceNum, dialogData = {}, options = {}) {
 		super(dialogData, options);

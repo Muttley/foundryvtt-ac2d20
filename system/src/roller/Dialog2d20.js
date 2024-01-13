@@ -1,4 +1,4 @@
-export class Dialog2d20 extends Dialog {
+export default class Dialog2d20 extends Dialog {
 
 	constructor(
 		rollName,

@@ -1,4 +1,4 @@
-export class Roller2D20 {
+export default class Roller2D20 {
 	dicesRolled = [];
 
 	successTreshold = 0;

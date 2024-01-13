@@ -1,51 +1,51 @@
 <div class="ac2d20 chat-item">
-    {{#if img}}
-    <div style="text-align: center;">
-        <img class="item-img" src="{{img}}" title="{{name}}" />
-    </div>
-    {{/if}}
+	{{#if img}}
+	<div style="text-align: center;">
+		<img class="item-img" src="{{img}}" title="{{name}}" />
+	</div>
+	{{/if}}
 
-    <div class="item-name">
-        <h3>{{name}}</h3>
-    </div>
+	<div class="item-name">
+		<h3>{{name}}</h3>
+	</div>
 
-    {{#if isPhysical}}
-    <hr>
-    <div class="flexrow" style="font-size: 0.75rem;">
-        <p><strong>{{localize "AC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel weight))}}</p>
-        <p><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}:</strong> {{restriction}}</p>
-    </div>
-    {{/if}}
-    <hr>
-    {{#if isWeapon}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'AC2D20.WEAPONS.weaponTypes.' weaponType)}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Focus"}}:</strong> {{skill}} ({{focus}})</p>
-    <p><strong>{{localize "AC2D20.STRESS.stress"}}:</strong> {{stress}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'AC2D20.RANGE.' range)}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}:</strong> {{salvo}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getWeaponQualities qualities}}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{{getWeaponEffects effect}}}</p>
-    {{/if}}
+	{{#if isPhysical}}
+	<hr>
+	<div class="flexrow" style="font-size: 0.75rem;">
+		<p><strong>{{localize "AC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel weight))}}</p>
+		<p><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}:</strong> {{restriction}}</p>
+	</div>
+	{{/if}}
+	<hr>
+	{{#if isWeapon}}
+	<p><strong>{{localize "AC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'AC2D20.WEAPONS.weaponTypes.' weaponType)}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Focus"}}:</strong> {{skill}} ({{focus}})</p>
+	<p><strong>{{localize "AC2D20.STRESS.stress"}}:</strong> {{stress}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'AC2D20.RANGE.' range)}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}:</strong> {{salvo}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getWeaponQualities qualities}}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{{getWeaponEffects effect}}}</p>
+	{{/if}}
 
-    {{#if isSkillkit}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Resources"}}:</strong> {{resources}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong> {{skill}}</p>
-    {{/if}}
+	{{#if isSkillkit}}
+	<p><strong>{{localize "AC2D20.TEMPLATES.Resources"}}:</strong> {{resources}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong> {{skill}}</p>
+	{{/if}}
 
-    {{#if isEquipment}}
-    <p><strong>{{localize "AC2D20.UI.Quantity"}}:</strong> {{quantity}}</p>
-    {{/if}}
+	{{#if isEquipment}}
+	<p><strong>{{localize "AC2D20.UI.Quantity"}}:</strong> {{quantity}}</p>
+	{{/if}}
 
-    {{#if isArmor}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Resistance"}}:</strong> {{resistance}}</p>
-    <p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getArmorQualities qualities}}}</p>
-    {{/if}}
+	{{#if isArmor}}
+	<p><strong>{{localize "AC2D20.TEMPLATES.Resistance"}}:</strong> {{resistance}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getArmorQualities qualities}}}</p>
+	{{/if}}
 
-    {{#if isTalent}}
-    <p><strong>{{localize "AC2D20.TEMPLATES.Keywords"}}:</strong> {{keywords}}</p>
-    {{/if}}
+	{{#if isTalent}}
+	<p><strong>{{localize "AC2D20.TEMPLATES.Keywords"}}:</strong> {{keywords}}</p>
+	{{/if}}
 
-    {{#if isSpell}}
+	{{#if isSpell}}
 		<p>
 			<strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong>
 			{{skill}}
@@ -68,20 +68,20 @@
 			<strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong>
 			{{duration}}
 		</p>
-    {{/if}}
+	{{/if}}
 
-    {{#if isSkill}}
-    <p>Focuses</p>
-    <ol>
-        {{#each focuses as |focus id|}}
-        <p {{#if focus.isfocus}}style="text-decoration:underline"{{/if}}>{{focus.title}}</p>
-        {{/each}}
-    </ol>
-    {{/if}}
+	{{#if isSkill}}
+	<p>Focuses</p>
+	<ol>
+		{{#each focuses as |focus id|}}
+		<p {{#if focus.isfocus}}style="text-decoration:underline"{{/if}}>{{focus.title}}</p>
+		{{/each}}
+	</ol>
+	{{/if}}
 
-    <hr>
-    <!-- <h4>{{localize 'T.DESCRIPTION'}}:</h4> -->
-    <div class="description">{{{description}}}</div>
-    <!-- <hr> -->
+	<hr>
+	<!-- <h4>{{localize 'T.DESCRIPTION'}}:</h4> -->
+	<div class="description">{{{description}}}</div>
+	<!-- <hr> -->
 
 </div>

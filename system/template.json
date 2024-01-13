@@ -310,7 +310,7 @@
 				"max": 0,
 				"value": 0
 			},
-			"skill": "Academia",
+			"skill": "",
 			"spellType": "ins",
 			"templates": [
 				"base"
