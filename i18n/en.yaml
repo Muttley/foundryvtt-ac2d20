@@ -96,6 +96,10 @@ AC2D20.FOCUS.Toxicology: Toxicology
 AC2D20.FOCUS.Tracking: Tracking
 AC2D20.FOCUS.Urban Stealth: Urban Stealth
 AC2D20.FOCUS.Watercraft: Watercraft
+AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
+AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.completed_schema: Completed applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.OTHER: Other
 AC2D20.RANGE.close: Close
 AC2D20.RANGE.extreme: Extreme
@@ -110,12 +114,18 @@ AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will inc
 AC2D20.SETTINGS.compendiumName: Skills Compendium
 AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
 AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
+AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features
+AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
 AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
 AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
 AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
 AC2D20.SETTINGS.maxappName: Players Can Setup Max App
 AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
 AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
+AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.systemVersion.label: System Version
+AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
 AC2D20.SKILL.ACADEMIA: Academia
 AC2D20.SKILL.ATHLETICS: Athletics
 AC2D20.SKILL.ENGINEERING: Engineering

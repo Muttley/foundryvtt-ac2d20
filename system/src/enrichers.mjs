@@ -1,4 +1,4 @@
-export function registerEnrichers() {
+export function registerTextEditorEnrichers() {
 	CONFIG.TextEditor.enrichers = [
 		...CONFIG.TextEditor.enrichers,
 		{

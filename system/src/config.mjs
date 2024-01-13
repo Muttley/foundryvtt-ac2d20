@@ -1,3 +1,6 @@
+export const SYSTEM_ID = "ac2d20";
+export const SYSTEM_NAME = "Achtung! Cthulhu 2d20";
+
 export const AC2D20 = {};
 
 AC2D20.attributes = {
@@ -16,6 +19,10 @@ AC2D20.abilityAbbreviations = {
 	ins: "AC2D20.AbilityInsAbr",
 	rea: "AC2D20.AbilityReaAbr",
 	wil: "AC2D20.AbilityWilAbr",
+};
+
+AC2D20.JOURNAL_UUIDS = {
+	releaseNotes: "Compendium.ac2d20.system-documentation.JournalEntry.Q2jykbXOXgzNpcSR.JournalEntryPage.g6JENp97aKkuNFcs",
 };
 
 AC2D20.Size = ["Trivial", "Minor", "Major"];

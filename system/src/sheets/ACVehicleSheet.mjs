@@ -1,12 +1,10 @@
-// import { AC2D20 } from "../helpers/config.mjs";
-// import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/effects.mjs";
-import { ACActorSheet } from "./actor-sheet.mjs";
+import ACActorSheet from "./ACActorSheet.mjs";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ACActorSheet}
  */
-export class ACVehicleSheet extends ACActorSheet {
+export default class ACVehicleSheet extends ACActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
@@ -15,7 +13,11 @@ export class ACVehicleSheet extends ACActorSheet {
 			template: "systems/ac2d20/templates/actor/vehicle-sheet.hbs",
 			width: 550,
 			height: 550,
-			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }],
+			tabs: [{
+				navSelector: ".sheet-tabs",
+				contentSelector: ".sheet-body",
+				initial: "abilities",
+			}],
 		});
 	}
 }

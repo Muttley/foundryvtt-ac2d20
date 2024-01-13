@@ -1,5 +1,9 @@
 # v11.2.0
 
+## Enhancement
+- [#20] Implement schema migration tools
+- [#22] Open new item automatically when using the Create Item buttons on a character sheet
+
 ## Bugfix
 - [#14] Some localization fixes (lozanoje)
 - [#16] Enable the prosemirror editor for item descriptions (lozanoje)

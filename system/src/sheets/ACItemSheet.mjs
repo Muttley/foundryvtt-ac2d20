@@ -4,7 +4,7 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export class ACItemSheet extends ItemSheet {
+export default class ACItemSheet extends ItemSheet {
 
 	/** @override */
 	static get defaultOptions() {

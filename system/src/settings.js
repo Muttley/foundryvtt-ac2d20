@@ -1,6 +1,11 @@
 const debounceReload = debounce(() => window.location.reload(), 100);
 
 export function registerSettings() {
+
+	// ------------------
+	//  MOMENTUM TRACKER
+	// ------------------
+	//
 	game.settings.register("ac2d20", "partyMomentum", {
 		name: "Party Momentum",
 		scope: "world",
@@ -25,6 +30,10 @@ export function registerSettings() {
 		type: Number,
 	});
 
+	// -------------------
+	//  STANDARD SETTINGS
+	// -------------------
+	//
 	game.settings.register("ac2d20", "gmMomentumShowToPlayers", {
 		name: game.i18n.localize("AC2D20.SETTINGS.showmomentumName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.showmomentumHint"),
@@ -71,5 +80,38 @@ export function registerSettings() {
 		config: true,
 		default: true,
 		type: Boolean,
+	});
+
+
+	// ----------------
+	//  DEBUG SETTINGS
+	// ----------------
+	//
+	game.settings.register("ac2d20", "debugEnabled", {
+		name: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.hint"),
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
+
+	game.settings.register("ac2d20", "worldSchemaVersion", {
+		name: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.hint"),
+		scope: "world",
+		config: game.settings.get("ac2d20", "debugEnabled"),
+		default: -1,
+		type: Number,
+	});
+
+	game.settings.register("ac2d20", "systemVersion", {
+		name: game.i18n.localize("AC2D20.SETTINGS.systemVersion.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.systemVersion.hint"),
+		scope: "world",
+		config: game.settings.get("ac2d20", "debugEnabled"),
+		default: "",
+		type: String,
 	});
 }

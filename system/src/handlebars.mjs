@@ -13,6 +13,10 @@ export const registerHandlebarsHelpers = function() {
 		return outStr;
 	});
 
+	Handlebars.registerHelper("fromConfig", function(arg1, arg2) {
+		return CONFIG.AC2D20[arg1][arg2] ? CONFIG.AC2D20[arg1][arg2] : arg2;
+	});
+
 	Handlebars.registerHelper("toLowerCase", function(str) {
 		return str.toLowerCase();
 	});

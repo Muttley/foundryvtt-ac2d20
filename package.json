@@ -5,10 +5,11 @@
 		"build": "gulp build",
 		"clean": "gulp clean",
 		"css": "gulp compileCss",
+		"export": "./utils/smelter.mjs unpack -i leveldb -s system/packs -d ./data/packs",
 		"lang": "gulp compileLang",
 		"lint": "gulp lintJs",
-		"packs": "gulp compilePacks",
-		"test": "jest"
+		"notes": "gulp compileNotes",
+		"packs": "gulp compilePacks"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^15.1.0",

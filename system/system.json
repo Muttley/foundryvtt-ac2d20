@@ -7,6 +7,9 @@
 		"minimum": "11",
 		"verified": "11"
 	},
+	"flags": {
+		"schemaVersion": "240113.1"
+	},
 	"authors": [
 		{
 			"name": "Paul Maskelyne",
@@ -25,6 +28,15 @@
 		"css/ac2d20.css"
 	],
 	"packs": [
+		{
+			"name": "system-documentation",
+			"label": "System Documentation",
+			"system": "ac2d20",
+			"path": "packs/system-documentation",
+			"type": "JournalEntry",
+			"private": false,
+			"flags": {}
+		},
 		{
 			"name": "macros",
 			"label": "Macros",
@@ -51,7 +63,8 @@
 			"color": "#494e32",
 			"packs": [
 				"macros",
-				"skills"
+				"skills",
+				"system-documentation"
 			]
 		}
 	],

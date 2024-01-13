@@ -1,4 +1,4 @@
-export class MomentumTracker extends Application {
+export default class MomentumTracker extends Application {
 	constructor(options = {}) {
 		if (MomentumTracker._instance) {
 			throw new Error("MomentumTracker already has an instance!!!");
