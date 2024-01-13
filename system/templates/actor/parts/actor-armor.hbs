@@ -1,31 +1,31 @@
 <div class="section-title">
-    <h3>{{localize "AC2D20.RESISTANCE.armor"}}<span class="item-create clickable" data-type="armor" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-    <span class="right-slope olive"></span>
+	<h3>{{localize "AC2D20.RESISTANCE.armor"}}<span class="item-create clickable" data-type="armor" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+	<span class="right-slope olive"></span>
 </div>
 
 <div class="ac-grid" style="margin-bottom: 10px;">
-    <div class="item">
-        <div class="row">
-            <div class="cell f2 green align-left" style="background-color: #494e31;"><strong>Name</strong></div>
-            <div class="cell f1 align-center"><strong>{{localize "AC2D20.RESISTANCE.resistance"}}</strong></div>
-            <div class="cell f3 align-center"><strong>{{localize "AC2D20.WEAPONS.qualities"}}</strong></div>
-            <div class="cell f1 align-center"><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}</strong></div>
-        </div>
-    </div>
-    {{#each armor as |item key|}}
-    <div class="item armor editable-item" data-item-id="{{item._id}}">
-        <div class="row">
-            <div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}&nbsp;<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
-                    <i class="fas fa-tshirt"></i>
-                </a></div>
-            <div class="cell f1 align-center">{{item.system.resistance}}</div>
-            <div class="cell f3 align-center">
-                {{#each (getArmorQualities item.system.qualities)}}
-                {{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
-                {{/each}}
-            </div>
-            <div class="cell f1 align-center">{{item.system.restriction}}</div>            
-        </div>
-    </div>
-    {{/each}}
+	<div class="item">
+		<div class="row">
+			<div class="cell f2 green align-left" style="background-color: #494e31;"><strong>Name</strong></div>
+			<div class="cell f1 align-center"><strong>{{localize "AC2D20.RESISTANCE.resistance"}}</strong></div>
+			<div class="cell f3 align-center"><strong>{{localize "AC2D20.WEAPONS.qualities"}}</strong></div>
+			<div class="cell f1 align-center"><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}</strong></div>
+		</div>
+	</div>
+	{{#each armor as |item key|}}
+	<div class="item armor editable-item" data-item-id="{{item._id}}">
+		<div class="row">
+			<div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}&nbsp;<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
+					<i class="fas fa-tshirt"></i>
+				</a></div>
+			<div class="cell f1 align-center">{{item.system.resistance}}</div>
+			<div class="cell f3 align-center">
+				{{#each (getArmorQualities item.system.qualities)}}
+				{{localize (concat 'AC2D20.ARMOR.qualities.' @this)}}
+				{{/each}}
+			</div>
+			<div class="cell f1 align-center">{{item.system.restriction}}</div>
+		</div>
+	</div>
+	{{/each}}
 </div>

@@ -1,35 +1,35 @@
 <form class="{{cssClass}} {{actor.type}} flexcol theme-wrapper" autocomplete="off">
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs" data-group="primary">
-        {{!-- Default tab is specified in actor-sheet.mjs --}}
-        <img src="systems/ac2d20/assets/main-menu-slope-b.webp">
-        <div class="buttons blue">
-            <a class="item blue" data-tab="abilities">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
-            <a class="item blue" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
-            <a class="item blue" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
-        </div>
-    </nav>
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs" data-group="primary">
+		{{!-- Default tab is specified in actor-sheet.mjs --}}
+		<img src="systems/ac2d20/assets/main-menu-slope-b.webp">
+		<div class="buttons blue">
+			<a class="item blue" data-tab="abilities">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
+			<a class="item blue" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
+			<a class="item blue" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
+		</div>
+	</nav>
 
-    {{!-- Sheet Header --}}
-    {{> "systems/ac2d20/templates/actor/parts/npc-header.hbs"}}
+	{{!-- Sheet Header --}}
+	{{> actor/parts/npc-header }}
 
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
 
-        {{!-- Abilities Tab !!! DONT INDENT OR TEXT AREAS INSIDE WILL BREAK !!! --}}
-        <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/npc-abilities.hbs"}}</div>
+		{{!-- Abilities Tab !!! DONT INDENT OR TEXT AREAS INSIDE WILL BREAK !!! --}}
+		<div class="tab" data-group="primary" data-tab="abilities">{{> actor/parts/npc-abilities }}</div>
 
-        {{!-- Biography Tab --}}
-        <div class="tab data" data-group="primary" data-tab="data">
-            {{editor biographyHTML target="system.biography" rollData=rollData button=true owner=owner
-            editable=editable}}
-        </div>
+		{{!-- Biography Tab --}}
+		<div class="tab data" data-group="primary" data-tab="data">
+			{{editor biographyHTML target="system.biography" rollData=rollData button=true owner=owner
+			editable=editable}}
+		</div>
 
-        {{!-- Active Effects Tab --}}
-        <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-            {{> "systems/ac2d20/templates/actor/parts/actor-effects.hbs"}}
-        </div>
+		{{!-- Active Effects Tab --}}
+		<div class="tab effects flexcol" data-group="primary" data-tab="effects">
+			{{> actor/parts/actor-effects }}
+		</div>
 
-    </section>
+	</section>
 </form>

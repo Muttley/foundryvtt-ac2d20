@@ -1,169 +1,169 @@
 <div class="grid grid-3col">
-    <div>
-        {{#each system.attributes as |attribute key|}}
-        <div class="label-number-box blue">
-            <label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'AC2D20.Ability.' key)}}</label>
-            <input type="number" class="borderless num-short-2" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
-        </div>
-        {{/each}}
-    </div>
-    <div>
-        <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.STRESS.stress'}}</label>
-            <span>
-                <input type="number" class="borderless num-short-2" name="system.stress.value" value="{{system.stress.value}}" data-dtype="Number" min="0" />
-                <label>/</label>
-                <input type="number" class="borderless num-short-2" name="system.stress.max" value="{{system.stress.max}}" data-dtype="Number" min="0" />
-            </span>
-        </div>
-        <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
-            <span>
-                <input type="number" class="borderless num-short-2" name="system.injuries.value" value="{{system.injuries.value}}" data-dtype="Number" min="0" />
-                <label>/</label>
-                <input type="number" class="borderless num-short-2" name="system.injuries.count" value="{{system.injuries.count}}" data-dtype="Number" min="0" />
-            </span>
-        </div>
-        <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
-            <input type="number" class="borderless num-short-2" name="system.armorResistance.value" value="{{system.armorResistance.value}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.RESISTANCE.courage'}}</label>
-            <input type="number" class="borderless num-short-2" name="system.courageResistance.value" value="{{system.courageResistance.value}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="label-number-box blue">
-            <label>{{localize 'AC2D20.TEMPLATES.Power'}}</label>
-            <span>
-                <input type="number" class="borderless num-short-2" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" min="0" />
-                <label>/</label>
-                <input type="number" class="borderless num-short-2" name="system.power.max" value="{{system.power.max}}" data-dtype="Number" min="0" />
-            </span>
-        </div>
-    </div>
-    <div style="display: flex; flex-direction: column;">
-        <div class="section-title">
-            <h3 class="blue">{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
-            <span class="right-slope blue"></span>
-        </div>
-        <div class="textbox">
-            <textarea name="system.truthsText">{{system.truthsText}}</textarea>
-        </div>
-    </div>
+	<div>
+		{{#each system.attributes as |attribute key|}}
+		<div class="label-number-box blue">
+			<label class="roll-attribute clickable" data-attr='{{key}}'>{{localize (concat 'AC2D20.Ability.' key)}}</label>
+			<input type="number" class="borderless num-short-2" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
+		</div>
+		{{/each}}
+	</div>
+	<div>
+		<div class="label-number-box blue">
+			<label>{{localize 'AC2D20.STRESS.stress'}}</label>
+			<span>
+				<input type="number" class="borderless num-short-2" name="system.stress.value" value="{{system.stress.value}}" data-dtype="Number" min="0" />
+				<label>/</label>
+				<input type="number" class="borderless num-short-2" name="system.stress.max" value="{{system.stress.max}}" data-dtype="Number" min="0" />
+			</span>
+		</div>
+		<div class="label-number-box blue">
+			<label>{{localize 'AC2D20.TEMPLATES.INJURIES'}}</label>
+			<span>
+				<input type="number" class="borderless num-short-2" name="system.injuries.value" value="{{system.injuries.value}}" data-dtype="Number" min="0" />
+				<label>/</label>
+				<input type="number" class="borderless num-short-2" name="system.injuries.count" value="{{system.injuries.count}}" data-dtype="Number" min="0" />
+			</span>
+		</div>
+		<div class="label-number-box blue">
+			<label>{{localize 'AC2D20.RESISTANCE.armor'}}</label>
+			<input type="number" class="borderless num-short-2" name="system.armorResistance.value" value="{{system.armorResistance.value}}" data-dtype="Number" min="0" />
+		</div>
+		<div class="label-number-box blue">
+			<label>{{localize 'AC2D20.RESISTANCE.courage'}}</label>
+			<input type="number" class="borderless num-short-2" name="system.courageResistance.value" value="{{system.courageResistance.value}}" data-dtype="Number" min="0" />
+		</div>
+		<div class="label-number-box blue">
+			<label>{{localize 'AC2D20.TEMPLATES.Power'}}</label>
+			<span>
+				<input type="number" class="borderless num-short-2" name="system.power.value" value="{{system.power.value}}" data-dtype="Number" min="0" />
+				<label>/</label>
+				<input type="number" class="borderless num-short-2" name="system.power.max" value="{{system.power.max}}" data-dtype="Number" min="0" />
+			</span>
+		</div>
+	</div>
+	<div style="display: flex; flex-direction: column;">
+		<div class="section-title">
+			<h3 class="blue">{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
+			<span class="right-slope blue"></span>
+		</div>
+		<div class="textbox">
+			<textarea name="system.truthsText">{{system.truthsText}}</textarea>
+		</div>
+	</div>
 </div>
 
 <div class="grid" style="gap: 1.25rem; margin-bottom: 1.25rem;">
-    <div>
-        <div style="margin-bottom: 2rem;">
-            <div class="section-title">
-                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
-                <span class="right-slope blue"></span>
-            </div>
-            <ul class="items-list-npc">
-                {{#each skills as |item key|}}
-                <li class="item editable-item" data-item-id="{{item._id}}">
-                    <span class="main-row">
-                        <label class="item-name clickable roll-skill">{{item.name}}&nbsp;{{item.system.value}}</label>
-                        <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
-                            <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div> -->
-                    </span>
-                    <label class="skill-focuses" for="">{{#each item.system.focuses}}
-                        {{#if (eq this.isfocus true)}}
-                        <span class="skill-focus roll-focus focused clickable" data-item-id="{{item._id}}">{{this.title}}&nbsp;</span>
-                        {{/if}}
-                        {{/each}}
-                    </label>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        <div style="margin-bottom: 2rem;">
-            <div class="section-title">
-                <h3 class="blue">{{ localize "AC2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-                <span class="right-slope blue"></span>
-            </div>
-            <ul class="items-list-npc">
-                {{#each specialRules as |item key|}}
-                <li class="item special-rule editable-item" data-item-id="{{item._id}}">
-                    <div class="main-row">
-                        <label class="item-name expandable-info clickable">{{item.name}}</label>
-                        <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
-                            <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div> -->
-                    </div>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        
-    </div>
-    <div>
-        <div style="margin-bottom: 2rem;">
-            <div class="section-title">
-                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-                <span class="right-slope blue"></span>
-            </div>
-            <ul class="items-list-npc">
-                {{#each weapons as |item key|}}
-                <li class="item editable-item" data-item-id="{{item._id}}">
-                    <span class="main-row">
-                        <label class="item-name clickable roll-weapon">{{item.name}}</label>
-                        <label class="item-name clickable roll-stress">{{system.stress}}<span class="cth-ico-cth"></span></label>
-                        <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
-                            <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div> -->
-                    </span>
-                    <div class="skill-focuses" for="">
-                        <span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{system.focus}}</strong>,</span>
-                        <span>{{localize "AC2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
-                        <span>{{localize "AC2D20.TEMPLATES.Salvo"}}: <strong>{{system.salvo}}</strong>&nbsp;</span>
-                    </div>
-                    <div class="qualities" style="font-size: 0.688rem;">
-                        <span>{{localize "AC2D20.WEAPONS.qualities"}}: </span>
-                        {{#each system.qualities as |qu quid|}}
-                        {{#if (eq qu.value true)}}
-                        <span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
-                        {{/if}}
-                        {{/each}}
-                    </div>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        <div style="margin-bottom: 2rem;">
-            <div class="section-title">
-                <h3 class="blue">{{localize "AC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-                <span class="right-slope blue"></span>
-            </div>
-            <div style="padding: 3px 5px; background-color: #548da9">
-                <label style="color:#ebe7d7">{{localize "AC2D20.Spellcasting.SpellcastingType"}}</label>
-                {{#select system.spellcastingType}}
-                <select name="system.spellcastingType">
-                    <option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
-                    <option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
-                    <option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
-                </select>
-                {{/select}}
-            </div>
-            <ul class="items-list-npc">
-                {{#each spells as |item key|}}
-                <li class="item spell editable-item" data-item-id="{{item._id}}">
-                    <div class="main-row">
-                        <label class="item-name expandable-info clickable">{{item.name}}</label>
-                        <!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
-                            <a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-                        </div> -->
-                    </div>
-                    <div class="roll-spell skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} <span class="focus-name">({{item.system.focus}})</span></div>
-                    <div class="roll-spell-cost skill-cost clickable">Cost: {{item.system.cost}}<span class="cth-ico-cth"></span></div>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-    </div>    
+	<div>
+		<div style="margin-bottom: 2rem;">
+			<div class="section-title">
+				<h3 class="blue">{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
+				<span class="right-slope blue"></span>
+			</div>
+			<ul class="items-list-npc">
+				{{#each skills as |item key|}}
+				<li class="item editable-item" data-item-id="{{item._id}}">
+					<span class="main-row">
+						<label class="item-name clickable roll-skill">{{item.name}}&nbsp;{{item.system.value}}</label>
+						<!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+							<a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+							<a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+						</div> -->
+					</span>
+					<label class="skill-focuses" for="">{{#each item.system.focuses}}
+						{{#if (eq this.isfocus true)}}
+						<span class="skill-focus roll-focus focused clickable" data-item-id="{{item._id}}">{{this.title}}&nbsp;</span>
+						{{/if}}
+						{{/each}}
+					</label>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div style="margin-bottom: 2rem;">
+			<div class="section-title">
+				<h3 class="blue">{{ localize "AC2D20.TEMPLATES.SpecialRules"}}<span class="item-create clickable" data-type="special_rule">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+				<span class="right-slope blue"></span>
+			</div>
+			<ul class="items-list-npc">
+				{{#each specialRules as |item key|}}
+				<li class="item special-rule editable-item" data-item-id="{{item._id}}">
+					<div class="main-row">
+						<label class="item-name expandable-info clickable">{{item.name}}</label>
+						<!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+							<a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+							<a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+						</div> -->
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+
+	</div>
+	<div>
+		<div style="margin-bottom: 2rem;">
+			<div class="section-title">
+				<h3 class="blue">{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+				<span class="right-slope blue"></span>
+			</div>
+			<ul class="items-list-npc">
+				{{#each weapons as |item key|}}
+				<li class="item editable-item" data-item-id="{{item._id}}">
+					<span class="main-row">
+						<label class="item-name clickable roll-weapon">{{item.name}}</label>
+						<label class="item-name clickable roll-stress">{{system.stress}}<span class="cth-ico-cth"></span></label>
+						<!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+							<a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+							<a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+						</div> -->
+					</span>
+					<div class="skill-focuses" for="">
+						<span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{system.focus}}</strong>,</span>
+						<span>{{localize "AC2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
+						<span>{{localize "AC2D20.TEMPLATES.Salvo"}}: <strong>{{system.salvo}}</strong>&nbsp;</span>
+					</div>
+					<div class="qualities" style="font-size: 0.688rem;">
+						<span>{{localize "AC2D20.WEAPONS.qualities"}}: </span>
+						{{#each system.qualities as |qu quid|}}
+						{{#if (eq qu.value true)}}
+						<span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
+						{{/if}}
+						{{/each}}
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div style="margin-bottom: 2rem;">
+			<div class="section-title">
+				<h3 class="blue">{{localize "AC2D20.TEMPLATES.Spells_Rituals"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+				<span class="right-slope blue"></span>
+			</div>
+			<div style="padding: 3px 5px; background-color: #548da9">
+				<label style="color:#ebe7d7">{{localize "AC2D20.Spellcasting.SpellcastingType"}}</label>
+				{{#select system.spellcastingType}}
+				<select name="system.spellcastingType">
+					<option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
+					<option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
+					<option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
+				</select>
+				{{/select}}
+			</div>
+			<ul class="items-list-npc">
+				{{#each spells as |item key|}}
+				<li class="item spell editable-item" data-item-id="{{item._id}}">
+					<div class="main-row">
+						<label class="item-name expandable-info clickable">{{item.name}}</label>
+						<!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
+							<a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
+							<a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
+						</div> -->
+					</div>
+					<div class="roll-spell skill-name clickable"><i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}} <span class="focus-name">({{item.system.focus}})</span></div>
+					<div class="roll-spell-cost skill-cost clickable">Cost: {{item.system.cost}}<span class="cth-ico-cth"></span></div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
 </div>

@@ -1,8 +1,8 @@
 <div class="section-title">
-    <h3>{{localize "AC2D20.TEMPLATES.Encumbrance"}}</h3>
-    <span class="right-slope olive"></span>
+	<h3>{{localize "AC2D20.TEMPLATES.Encumbrance"}}</h3>
+	<span class="right-slope olive"></span>
 </div>
 <div style="display: flex;flex-direction: row; justify-content: space-between; border: 1px solid #759549; margin-bottom: 5px; padding: 5px;">
-    <span>[{{localize "AC2D20.TEMPLATES.majoritems"}}: {{majorItemsTotal}}] [{{localize "AC2D20.TEMPLATES.minoritems"}}: {{minorItemsTotal}}] </span>
-    <span>{{#if (eq isEncumbered true)}}<span style="color:#6b0b0b;">{{localize "AC2D20.TEMPLATES.Encumbered"}}</span>{{/if}} {{totalEncumbrance}} / {{system.carryCapacity.value}} <i class="fas fa-info-circle" title="Add effect | system.carryCapacity.value | Add | #Number | to modify the carry capacity"></i></span>
+	<span>[{{localize "AC2D20.TEMPLATES.majoritems"}}: {{majorItemsTotal}}] [{{localize "AC2D20.TEMPLATES.minoritems"}}: {{minorItemsTotal}}] </span>
+	<span>{{#if (eq isEncumbered true)}}<span style="color:#6b0b0b;">{{localize "AC2D20.TEMPLATES.Encumbered"}}</span>{{/if}} {{totalEncumbrance}} / {{system.carryCapacity.value}} <i class="fas fa-info-circle" title="Add effect | system.carryCapacity.value | Add | #Number | to modify the carry capacity"></i></span>
 </div>

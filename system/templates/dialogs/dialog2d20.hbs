@@ -1,48 +1,48 @@
 <div class="ac2d20-dialog">
-    <div class="flexrow ">
-        {{#ifCond attribute '>' 0}}
-        <div class="resource flexrow flex-group-left">
-            <p class="title-label">{{localize "AC2D20.TEMPLATES.Attr"}}</p>
-            <input type="number" name="attribute" value="{{attribute}}">
-        </div>
-        {{/ifCond}}
+	<div class="flexrow ">
+		{{#ifCond attribute '>' 0}}
+		<div class="resource flexrow flex-group-left">
+			<p class="title-label">{{localize "AC2D20.TEMPLATES.Attr"}}</p>
+			<input type="number" name="attribute" value="{{attribute}}">
+		</div>
+		{{/ifCond}}
 
-        {{#ifCond attribute '==' -1}}
-        <div class="resource flexrow flex-group-left">
+		{{#ifCond attribute '==' -1}}
+		<div class="resource flexrow flex-group-left">
 
-            <select class="select-attribute">
-                {{#select prefAttribute}}
-                <option value="agi">{{localize (concat 'AC2D20.Ability.agi')}}-{{actor.attributes.agi.value}}</option>
-                <option value="bra">{{localize (concat 'AC2D20.Ability.bra')}}-{{actor.attributes.bra.value}}</option>
-                <option value="coo">{{localize (concat 'AC2D20.Ability.coo')}}-{{actor.attributes.coo.value}}</option>
-                <option value="ins">{{localize (concat 'AC2D20.Ability.ins')}}-{{actor.attributes.ins.value}}</option>
-                <option value="rea">{{localize (concat 'AC2D20.Ability.rea')}}-{{actor.attributes.rea.value}}</option>
-                <option value="wil">{{localize (concat 'AC2D20.Ability.wil')}}-{{actor.attributes.wil.value}}</option>
-                {{/select}}
-            </select>
+			<select class="select-attribute">
+				{{#select prefAttribute}}
+				<option value="agi">{{localize (concat 'AC2D20.Ability.agi')}}-{{actor.attributes.agi.value}}</option>
+				<option value="bra">{{localize (concat 'AC2D20.Ability.bra')}}-{{actor.attributes.bra.value}}</option>
+				<option value="coo">{{localize (concat 'AC2D20.Ability.coo')}}-{{actor.attributes.coo.value}}</option>
+				<option value="ins">{{localize (concat 'AC2D20.Ability.ins')}}-{{actor.attributes.ins.value}}</option>
+				<option value="rea">{{localize (concat 'AC2D20.Ability.rea')}}-{{actor.attributes.rea.value}}</option>
+				<option value="wil">{{localize (concat 'AC2D20.Ability.wil')}}-{{actor.attributes.wil.value}}</option>
+				{{/select}}
+			</select>
 
-        </div>
-        {{/ifCond}}
+		</div>
+		{{/ifCond}}
 
-        <div class="resource flexrow flex-group-left">
-            <p class="title-label">{{localize "AC2D20.TEMPLATES.Skill"}}</p>
-            <input type="number" name="skill" value="{{skill}}">
-        </div>
-        <div class="resource flexrow flex-group-left">
-            <p class="title-label">{{localize "AC2D20.TEMPLATES.Focus"}}</p>
-            <input type="checkbox" name="focus" {{#ifCond focus '==' true}}checked{{/ifCond}}>
-        </div>
-        <div class="resource flexrow flex-group-left">
-            <p class="title-label">{{localize "AC2D20.TEMPLATES.Compl"}}</p>
-            <input type="number" name="complication" value="{{complication}}">
-        </div>
-    </div>
+		<div class="resource flexrow flex-group-left">
+			<p class="title-label">{{localize "AC2D20.TEMPLATES.Skill"}}</p>
+			<input type="number" name="skill" value="{{skill}}">
+		</div>
+		<div class="resource flexrow flex-group-left">
+			<p class="title-label">{{localize "AC2D20.TEMPLATES.Focus"}}</p>
+			<input type="checkbox" name="focus" {{#ifCond focus '==' true}}checked{{/ifCond}}>
+		</div>
+		<div class="resource flexrow flex-group-left">
+			<p class="title-label">{{localize "AC2D20.TEMPLATES.Compl"}}</p>
+			<input type="number" name="complication" value="{{complication}}">
+		</div>
+	</div>
 
-    <ul class="flexrow">
-        <li><a class="dice-icon d20" data-index="1">1</a></li>
-        <li><a class="dice-icon d20" data-index="2">2</a></li>
-        <li><a class="dice-icon d20" data-index="3">3</a></li>
-        <li><a class="dice-icon d20" data-index="4">4</a></li>
-        <li><a class="dice-icon d20" data-index="5">5</a></li>
-    </ul>
+	<ul class="flexrow">
+		<li><a class="dice-icon d20" data-index="1">1</a></li>
+		<li><a class="dice-icon d20" data-index="2">2</a></li>
+		<li><a class="dice-icon d20" data-index="3">3</a></li>
+		<li><a class="dice-icon d20" data-index="4">4</a></li>
+		<li><a class="dice-icon d20" data-index="5">5</a></li>
+	</ul>
 </div>

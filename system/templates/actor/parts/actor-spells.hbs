@@ -1,72 +1,72 @@
 <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-    <div class="section-title">
-        <h3>{{localize "AC2D20.TEMPLATES.Spells"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-        <span class="right-slope olive"></span>
-    </div>
-    <div class="section-title">
-        <h3>{{localize "AC2D20.Spellcasting.SpellcastingType"}}</h3>
-        {{#select system.spellcastingType}}
-        <select name="system.spellcastingType">
-            <option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
-            <option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
-            <option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
-        </select>
-        {{/select}}
-        <span class="right-slope olive"></span>
-    </div>
-    <div class="section-title" style="border: 1px solid #759549;">
-        <h3>{{localize "AC2D20.TEMPLATES.Power"}}</h3>
-        <span class="right-slope olive"></span>
-        <input type="number" name="system.power.value" value="{{system.power.value}}" class="borderless num-short-3" style="height: 22px;">
-    </div>
+	<div class="section-title">
+		<h3>{{localize "AC2D20.TEMPLATES.Spells"}}<span class="item-create clickable" data-type="spell">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+		<span class="right-slope olive"></span>
+	</div>
+	<div class="section-title">
+		<h3>{{localize "AC2D20.Spellcasting.SpellcastingType"}}</h3>
+		{{#select system.spellcastingType}}
+		<select name="system.spellcastingType">
+			<option value="traditional">{{localize "AC2D20.Spellcasting.traditional"}}</option>
+			<option value="researcher">{{localize "AC2D20.Spellcasting.researcher"}}</option>
+			<option value="dabbler">{{localize "AC2D20.Spellcasting.dabbler"}}</option>
+		</select>
+		{{/select}}
+		<span class="right-slope olive"></span>
+	</div>
+	<div class="section-title" style="border: 1px solid #759549;">
+		<h3>{{localize "AC2D20.TEMPLATES.Power"}}</h3>
+		<span class="right-slope olive"></span>
+		<input type="number" name="system.power.value" value="{{system.power.value}}" class="borderless num-short-3" style="height: 22px;">
+	</div>
 </div>
 <div class="ac-grid">
-    <div class="item">
-        <div class="row">
-            <div class="cell f4 green" style="background-color: #494e31;">{{localize "AC2D20.UI.Name"}}</div>
-            <div class="cell f3 align-center">{{localize "AC2D20.TEMPLATES.skill_focus"}}</div>
-            <!-- <div class="cell f2">Focus</div> -->
-            <div class="cell f1 align-center">{{localize "AC2D20.TEMPLATES.Diff"}}</div>
-            <div class="cell f3 align-center">{{localize "AC2D20.TEMPLATES.Cost"}}</div>
-            <div class="cell f1 align-center">{{localize "AC2D20.TEMPLATES.Dur"}}</div>
-            <!-- <div class="cell f1 align-center"></div> -->
-        </div>
-    </div>
-    {{#each spells as |item key|}}
-    <div class="item spell editable-item" data-item-id="{{item._id}}">
-        <div class="row">
-            <div class="cell f4 green cell-expander align-left align-center cell-name">
+	<div class="item">
+		<div class="row">
+			<div class="cell f4 green" style="background-color: #494e31;">{{localize "AC2D20.UI.Name"}}</div>
+			<div class="cell f3 align-center">{{localize "AC2D20.TEMPLATES.skill_focus"}}</div>
+			<!-- <div class="cell f2">Focus</div> -->
+			<div class="cell f1 align-center">{{localize "AC2D20.TEMPLATES.Diff"}}</div>
+			<div class="cell f3 align-center">{{localize "AC2D20.TEMPLATES.Cost"}}</div>
+			<div class="cell f1 align-center">{{localize "AC2D20.TEMPLATES.Dur"}}</div>
+			<!-- <div class="cell f1 align-center"></div> -->
+		</div>
+	</div>
+	{{#each spells as |item key|}}
+	<div class="item spell editable-item" data-item-id="{{item._id}}">
+		<div class="row">
+			<div class="cell f4 green cell-expander align-left align-center cell-name">
 				<img src="{{item.img}}" />
 				{{item.name}}
 			</div>
-            <div class="cell f3 roll-spell skill-name clickable align-center">
+			<div class="cell f3 roll-spell skill-name clickable align-center">
 				<i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}}
 				{{#if item.system.focus}}
 					({{item.system.focus}})
 				{{/if}}
 			</div>
-            <div class="cell f1 align-center">{{item.system.difficulty}}</div>
-            <div class="cell f3 roll-spell-cost clickable align-center">
+			<div class="cell f1 align-center">{{item.system.difficulty}}</div>
+			<div class="cell f3 roll-spell-cost clickable align-center">
 				{{item.system.cost}}<span class="cth-ico-cth"></span>
 				{{#if item.system.costEffects}}
 					{{item.system.costEffects}}
 				{{/if}}
 			</div>
-            <div class="cell f1 align-center">{{item.system.duration}}</div>
-        </div>
+			<div class="cell f1 align-center">{{item.system.duration}}</div>
+		</div>
 
-        {{#if (gt item.system.ritualStress.max 0)}}
-        <div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
-            <span>
-                <strong>{{localize "AC2D20.TEMPLATES.ritual_stress"}}: </strong>
-                <input type="number" class="ritual-stress item-value-changer num-short-2 num-small" data-field="ritualStress.value" value="{{system.ritualStress.value}}" min="0"> / {{item.system.ritualStress.max}} &nbsp; &nbsp;
-                <strong>{{localize "AC2D20.TEMPLATES.ritual_steps"}}: </strong>
-                <input type="number" class="ritual-steps item-value-changer num-short-2 num-small" data-field="ritualSteps.value" value="{{system.ritualSteps.value}}" min="0"> / {{item.system.ritualSteps.max}} &nbsp; &nbsp;
-                <strong>{{localize "AC2D20.RESISTANCE.resistance"}}: </strong>{{item.system.ritualResistance}}
-            </span>
-        </div>
-        {{/if}}
+		{{#if (gt item.system.ritualStress.max 0)}}
+		<div class="row" style="border-top: 1px dashed #759549; padding: 0.3rem; font-size: 0.688rem;">
+			<span>
+				<strong>{{localize "AC2D20.TEMPLATES.ritual_stress"}}: </strong>
+				<input type="number" class="ritual-stress item-value-changer num-short-2 num-small" data-field="ritualStress.value" value="{{system.ritualStress.value}}" min="0"> / {{item.system.ritualStress.max}} &nbsp; &nbsp;
+				<strong>{{localize "AC2D20.TEMPLATES.ritual_steps"}}: </strong>
+				<input type="number" class="ritual-steps item-value-changer num-short-2 num-small" data-field="ritualSteps.value" value="{{system.ritualSteps.value}}" min="0"> / {{item.system.ritualSteps.max}} &nbsp; &nbsp;
+				<strong>{{localize "AC2D20.RESISTANCE.resistance"}}: </strong>{{item.system.ritualResistance}}
+			</span>
+		</div>
+		{{/if}}
 
-    </div>
-    {{/each}}
+	</div>
+	{{/each}}
 </div>

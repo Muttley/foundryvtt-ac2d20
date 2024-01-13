@@ -1,136 +1,136 @@
 <div class="attribute-grid" style="margin-bottom: 10px;">
-  <div class='attribute-cell olive'>{{localize "AC2D20.TEMPLATES.Attribute"}}</div>
-  {{#each system.attributes as |attribute key|}}
-  <div class="attribute-cell green">
-    <label class="resource-label align-left roll-attribute clickable" data-label="{{attribute.label}}" data-attr="{{key}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
-  </div>
-  {{/each}}
+	<div class='attribute-cell olive'>{{localize "AC2D20.TEMPLATES.Attribute"}}</div>
+	{{#each system.attributes as |attribute key|}}
+	<div class="attribute-cell green">
+		<label class="resource-label align-left roll-attribute clickable" data-label="{{attribute.label}}" data-attr="{{key}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
+	</div>
+	{{/each}}
 
-  <div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.rating"}}</strong></div>
-  {{#each system.attributes as |attribute key|}}
-  <div class="attribute-cell">
-    <input type="number" class="borderless" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
-  </div>
-  {{/each}}
+	<div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.rating"}}</strong></div>
+	{{#each system.attributes as |attribute key|}}
+	<div class="attribute-cell">
+		<input type="number" class="borderless" name="system.attributes.{{key}}.value" value="{{attribute.value}}" data-dtype="Number" min="0" />
+	</div>
+	{{/each}}
 
-  <div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.bonus"}}</strong></div>
-  {{#each system.attributes as |attribute key|}}
-  <div class="attribute-cell">
-    <input type="number" class="borderless" name="system.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
-  </div>
-  {{/each}}
+	<div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.bonus"}}</strong></div>
+	{{#each system.attributes as |attribute key|}}
+	<div class="attribute-cell">
+		<input type="number" class="borderless" name="system.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
+	</div>
+	{{/each}}
 </div>
 
 <div class="stress-derived-box">
-  <div class="flexrow">
-    <div class="derived-box">
-      <h3 style="padding-right: 25px;">{{localize "AC2D20.STRESS.stress"}}</h3>
-      <!-- <h3 class='minmax'>min</h3> -->
-      <input class="num-short-2" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
-      <h3 class='minmax'>/</h3>
-      <input class="num-short-2" type="number" min="0" name="system.stress.max" value="{{system.stress.max}}">
-    </div>
-  </div>
-  <div class="derived-box">
-    <input class="num-short-2" type="number" min="0" name="system.fatigue" value="{{system.fatigue}}">
-    <div class="section-title">
-      <h3>{{localize "AC2D20.RESISTANCE.fatigue"}}</h3>
-      <span class="right-slope olive"></span>
-    </div>
-  </div>
-  <div class="derived-box">
-    <input class="num-short-2" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
-    <div class="section-title">
-      <h3>{{localize "AC2D20.RESISTANCE.courage"}}</h3>
-      <span class="right-slope olive"></span>
-    </div>
-  </div>
-  <div class="derived-box">
-    <input class="num-short-2" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
-    <div class="section-title">
-      <h3>{{localize "AC2D20.RESISTANCE.armor"}}</h3>
-      <span class="right-slope olive"></span>
-    </div>
-  </div>
-  <div class="derived-box">
-    <input class="num-short-2" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
-    <div class="section-title">
-      <h3>{{localize "AC2D20.TEMPLATES.fortune"}}</h3>
-      <span class="right-slope olive"></span>
-    </div>
-  </div>
+	<div class="flexrow">
+		<div class="derived-box">
+			<h3 style="padding-right: 25px;">{{localize "AC2D20.STRESS.stress"}}</h3>
+			<!-- <h3 class='minmax'>min</h3> -->
+			<input class="num-short-2" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
+			<h3 class='minmax'>/</h3>
+			<input class="num-short-2" type="number" min="0" name="system.stress.max" value="{{system.stress.max}}">
+		</div>
+	</div>
+	<div class="derived-box">
+		<input class="num-short-2" type="number" min="0" name="system.fatigue" value="{{system.fatigue}}">
+		<div class="section-title">
+			<h3>{{localize "AC2D20.RESISTANCE.fatigue"}}</h3>
+			<span class="right-slope olive"></span>
+		</div>
+	</div>
+	<div class="derived-box">
+		<input class="num-short-2" type="number" min="0" name="system.courageResistance.value" value="{{system.courageResistance.value}}">
+		<div class="section-title">
+			<h3>{{localize "AC2D20.RESISTANCE.courage"}}</h3>
+			<span class="right-slope olive"></span>
+		</div>
+	</div>
+	<div class="derived-box">
+		<input class="num-short-2" type="number" min="0" name="system.armorResistance.value" value="{{system.armorResistance.value}}">
+		<div class="section-title">
+			<h3>{{localize "AC2D20.RESISTANCE.armor"}}</h3>
+			<span class="right-slope olive"></span>
+		</div>
+	</div>
+	<div class="derived-box">
+		<input class="num-short-2" type="number" min="0" name="system.fortune.value" value="{{system.fortune.value}}">
+		<div class="section-title">
+			<h3>{{localize "AC2D20.TEMPLATES.fortune"}}</h3>
+			<span class="right-slope olive"></span>
+		</div>
+	</div>
 </div>
 
 
 
 <div class="grid">
-  <div style="display: flex; flex-direction: column;">
-    <div class="section-title">
-        <h3 class="green">{{localize "AC2D20.TEMPLATES.Personal_Truth_Scars"}}</h3>
-        <span class="right-slope olive"></span>
-    </div>
-    <div class="textbox">
-        <textarea name="system.truthsText">{{system.truthsText}}</textarea>
-    </div>
-  </div>
-  <div style="display: flex; flex-direction: column;">
-    <div class="section-title">
-        <h3 class="green">{{localize "AC2D20.TEMPLATES.INJURIES"}}</h3>
-        <span class="right-slope olive"></span>
-    </div>
-    <div class="injuries-grid">
-      <div class="injury-cell injury" data-injury="injury0">
-        {{#if (hasInjury system.injuries.injury0.text)}}
-        <div class="controls">
-          <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury0.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury0.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury0.injuryType true)}}checked{{/if}}>
-          <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury0.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury0.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury0.treated true)}}checked{{/if}}>
-        </div>
-        <hr style="margin: 1px 0;" />
-        {{/if}}
-        <textarea class="injury-text">{{system.injuries.injury0.text}}</textarea>
-      </div>
-      <div class="injury-cell injury" data-injury="injury1">
-        {{#if (hasInjury system.injuries.injury1.text)}}
-        <div class="controls">
-          <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury1.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury1.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury1.injuryType true)}}checked{{/if}}>
-          <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury1.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury1.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury1.treated true)}}checked{{/if}}>
-        </div>
-        <hr style="margin: 1px 0;" />
-        {{/if}}
-        <textarea class="injury-text">{{system.injuries.injury1.text}}</textarea>
-      </div>
-      <div class="injury-cell injury" data-injury="injury2">
-        {{#if (hasInjury system.injuries.injury2.text)}}
-        <div class="controls">
-          <input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury2.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury2.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury2.injuryType true)}}checked{{/if}}>
-          <input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury2.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury2.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury2.treated true)}}checked{{/if}}>
-        </div>
-        <hr style="margin: 1px 0;" />
-        {{/if}}
-        <textarea class="injury-text">{{system.injuries.injury2.text}}</textarea>
-      </div>
-    </div>
-  </div>
+	<div style="display: flex; flex-direction: column;">
+		<div class="section-title">
+				<h3 class="green">{{localize "AC2D20.TEMPLATES.Personal_Truth_Scars"}}</h3>
+				<span class="right-slope olive"></span>
+		</div>
+		<div class="textbox">
+				<textarea name="system.truthsText">{{system.truthsText}}</textarea>
+		</div>
+	</div>
+	<div style="display: flex; flex-direction: column;">
+		<div class="section-title">
+				<h3 class="green">{{localize "AC2D20.TEMPLATES.INJURIES"}}</h3>
+				<span class="right-slope olive"></span>
+		</div>
+		<div class="injuries-grid">
+			<div class="injury-cell injury" data-injury="injury0">
+				{{#if (hasInjury system.injuries.injury0.text)}}
+				<div class="controls">
+					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury0.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury0.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury0.injuryType true)}}checked{{/if}}>
+					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury0.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury0.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury0.treated true)}}checked{{/if}}>
+				</div>
+				<hr style="margin: 1px 0;" />
+				{{/if}}
+				<textarea class="injury-text">{{system.injuries.injury0.text}}</textarea>
+			</div>
+			<div class="injury-cell injury" data-injury="injury1">
+				{{#if (hasInjury system.injuries.injury1.text)}}
+				<div class="controls">
+					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury1.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury1.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury1.injuryType true)}}checked{{/if}}>
+					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury1.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury1.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury1.treated true)}}checked{{/if}}>
+				</div>
+				<hr style="margin: 1px 0;" />
+				{{/if}}
+				<textarea class="injury-text">{{system.injuries.injury1.text}}</textarea>
+			</div>
+			<div class="injury-cell injury" data-injury="injury2">
+				{{#if (hasInjury system.injuries.injury2.text)}}
+				<div class="controls">
+					<input type="checkbox" class="injury-type" title="{{#if (eq system.injuries.injury2.injuryType true)}}Mental{{/if}}{{#if (ne system.injuries.injury2.injuryType true)}}Physical{{/if}}" {{#if (eq system.injuries.injury2.injuryType true)}}checked{{/if}}>
+					<input type="checkbox" class="treated" title="{{#if (eq system.injuries.injury2.treated true)}}Treated{{/if}}{{#if (ne system.injuries.injury2.treated true)}}Not Treated{{/if}}" {{#if (eq system.injuries.injury2.treated true)}}checked{{/if}}>
+				</div>
+				<hr style="margin: 1px 0;" />
+				{{/if}}
+				<textarea class="injury-text">{{system.injuries.injury2.text}}</textarea>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="section-title">
-  <h3>{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
-  <span class="right-slope olive"></span>
+	<h3>{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
+	<span class="right-slope olive"></span>
 </div>
 <div class="skills">
-  {{#each skills as |item id|}}
-  <div class="item skill editable-item" data-item-id="{{item._id}}">
-    <label class="skill-name clickable roll-skill">
-      {{item.name}}
-    </label>
-    <div class="skill-value">
-      <input type="number" class="skill-value-input num-short-2 borderless" name="system.value" value="{{system.value}}">
-    </div>
-    <div class="skill-focuses">
-      {{#each item.system.focuses}}
-      <span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}}</span>,&nbsp;
-      {{/each}}
-    </div>
-  </div>
-  {{/each}}
+	{{#each skills as |item id|}}
+	<div class="item skill editable-item" data-item-id="{{item._id}}">
+		<label class="skill-name clickable roll-skill">
+			{{item.name}}
+		</label>
+		<div class="skill-value">
+			<input type="number" class="skill-value-input num-short-2 borderless" name="system.value" value="{{system.value}}">
+		</div>
+		<div class="skill-focuses">
+			{{#each item.system.focuses}}
+			<span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}}</span>,&nbsp;
+			{{/each}}
+		</div>
+	</div>
+	{{/each}}
 </div>

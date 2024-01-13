@@ -1,25 +1,25 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs" data-group="primary">
-        {{!-- Default tab is specified in actor-sheet.mjs --}}
-        <img src="systems/ac2d20/assets/main-menu-slope.webp">
-        <div class="buttons">
-            <a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
-        </div>
-    </nav>
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs" data-group="primary">
+		{{!-- Default tab is specified in actor-sheet.mjs --}}
+		<img src="systems/ac2d20/assets/main-menu-slope.webp">
+		<div class="buttons">
+			<a class="item" data-tab="attributes">{{localize "AC2D20.TEMPLATES.Attributes"}}</a>
+		</div>
+	</nav>
 
-    {{> "systems/ac2d20/templates/item/parts/item-header.hbs"}}
+	{{> item/parts/item-header }}
 
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
-        {{!-- Attributes Tab --}}
-        <div class="tab flex-tab attributes" data-group="primary" data-tab="attributes">
-            <div class="section-title">
-                <h3>{{localize "AC2D20.TEMPLATES.Description"}}</h3>
-                <span class="right-slope olive"></span>
-            </div>
-            {{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
-        </div>
-    </section>
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+		{{!-- Attributes Tab --}}
+		<div class="tab flex-tab attributes" data-group="primary" data-tab="attributes">
+			<div class="section-title">
+				<h3>{{localize "AC2D20.TEMPLATES.Description"}}</h3>
+				<span class="right-slope olive"></span>
+			</div>
+			{{editor descriptionHTML target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+		</div>
+	</section>
 </form>

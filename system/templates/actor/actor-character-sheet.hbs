@@ -1,64 +1,64 @@
 <form class="{{cssClass}} {{actor.type}} flexcol theme-wrapper" autocomplete="off">
 
 
-  {{!-- Sheet Tab Navigation --}}
-  <nav class="sheet-tabs" data-group="primary">
-    {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <img src="systems/ac2d20/assets/main-menu-slope.webp">
-    <div class="buttons">
-      <a class="item" data-tab="abilities">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
-      <a class="item" data-tab="talents">{{localize "AC2D20.TEMPLATES.Talents"}}</a>
-      <a class="item" data-tab="inventory">{{localize "AC2D20.TEMPLATES.Gear"}}</a>
-      <a class="item" data-tab="spells">{{localize "AC2D20.TEMPLATES.Spells"}}</a>
-      <a class="item" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
-      <a class="item" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
-    </div>
-  </nav>
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs" data-group="primary">
+		{{!-- Default tab is specified in actor-sheet.mjs --}}
+		<img src="systems/ac2d20/assets/main-menu-slope.webp">
+		<div class="buttons">
+			<a class="item" data-tab="abilities">{{localize "AC2D20.TEMPLATES.Abilities"}}</a>
+			<a class="item" data-tab="talents">{{localize "AC2D20.TEMPLATES.Talents"}}</a>
+			<a class="item" data-tab="inventory">{{localize "AC2D20.TEMPLATES.Gear"}}</a>
+			<a class="item" data-tab="spells">{{localize "AC2D20.TEMPLATES.Spells"}}</a>
+			<a class="item" data-tab="data">{{localize "AC2D20.TEMPLATES.Data"}}</a>
+			<a class="item" data-tab="effects">{{localize "AC2D20.TEMPLATES.Effects"}}</a>
+		</div>
+	</nav>
 
-  {{!-- Sheet Header --}}
-  {{> "systems/ac2d20/templates/actor/parts/actor-header.hbs"}}
+	{{!-- Sheet Header --}}
+	{{> actor/parts/actor-header }}
 
-  {{!-- Sheet Body --}}
-  <section class="sheet-body">
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
 
-    {{!-- Owned skills Tab --}}
-    <div class="tab" data-group="primary" data-tab="abilities">{{> "systems/ac2d20/templates/actor/parts/actor-abilities.hbs"}}</div>
+		{{!-- Owned skills Tab --}}
+		<div class="tab" data-group="primary" data-tab="abilities">{{> actor/parts/actor-abilities }}</div>
 
-    {{!-- Talents Tab --}}
-    <div class="tab" data-group="primary" data-tab="talents">
-      {{> "systems/ac2d20/templates/actor/parts/actor-talents.hbs" itemsEnrichedDescriptions=itemsEnrichedDescriptions}}
-    </div>
+		{{!-- Talents Tab --}}
+		<div class="tab" data-group="primary" data-tab="talents">
+			{{> actor/parts/actor-talents itemsEnrichedDescriptions=itemsEnrichedDescriptions}}
+		</div>
 
-    {{!-- Spells Tab --}}
-    <div class="tab" data-group="primary" data-tab="spells">
-      {{> "systems/ac2d20/templates/actor/parts/actor-spells.hbs"}}
-    </div>
+		{{!-- Spells Tab --}}
+		<div class="tab" data-group="primary" data-tab="spells">
+			{{> actor/parts/actor-spells }}
+		</div>
 
-    {{!-- Inventory Tab --}}
-    <div class="tab" data-group="primary" data-tab="inventory">
-      {{> "systems/ac2d20/templates/actor/parts/actor-encumbrance.hbs"}}
-      {{> "systems/ac2d20/templates/actor/parts/actor-weapons.hbs"}}
-      {{> "systems/ac2d20/templates/actor/parts/actor-armor.hbs"}}
-      <div class="flexrow">
-        <div style="margin-right: 15px;">
-          {{> "systems/ac2d20/templates/actor/parts/actor-skillkit.hbs"}}
-        </div>
-        <div>
-          {{> "systems/ac2d20/templates/actor/parts/actor-equipment.hbs"}}
-        </div>
-      </div>
-    </div>
+		{{!-- Inventory Tab --}}
+		<div class="tab" data-group="primary" data-tab="inventory">
+			{{> actor/parts/actor-encumbrance }}
+			{{> actor/parts/actor-weapons }}
+			{{> actor/parts/actor-armor }}
+			<div class="flexrow">
+				<div style="margin-right: 15px;">
+					{{> actor/parts/actor-skillkit }}
+				</div>
+				<div>
+					{{> actor/parts/actor-equipment }}
+				</div>
+			</div>
+		</div>
 
-    {{!-- Biography Tab --}}
-    <div class="tab data" data-group="primary" data-tab="data">
-      {{editor biographyHTML target="system.biography" rollData=rollData button=true owner=owner
-      editable=editable}}
-    </div>
+		{{!-- Biography Tab --}}
+		<div class="tab data" data-group="primary" data-tab="data">
+			{{editor biographyHTML target="system.biography" rollData=rollData button=true owner=owner
+			editable=editable}}
+		</div>
 
-    {{!-- Active Effects Tab --}}
-    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
-      {{> "systems/ac2d20/templates/actor/parts/actor-effects.hbs"}}
-    </div>
+		{{!-- Active Effects Tab --}}
+		<div class="tab effects flexcol" data-group="primary" data-tab="effects">
+			{{> actor/parts/actor-effects }}
+		</div>
 
-  </section>
+	</section>
 </form>

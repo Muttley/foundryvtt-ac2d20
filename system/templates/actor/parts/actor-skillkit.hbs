@@ -1,30 +1,30 @@
 <div class="section-title">
-    <h3>{{localize "TYPES.Item.skillkit"}}<span class="item-create clickable" data-type="skillkit" data-weight="1">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
-    <span class="right-slope olive"></span>
+	<h3>{{localize "TYPES.Item.skillkit"}}<span class="item-create clickable" data-type="skillkit" data-weight="1">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+	<span class="right-slope olive"></span>
 </div>
 
 <div class="ac-grid">
-    <div class="item">
-        <div class="row">
-            <div class="cell f2 green align-left align-center" style="background-color: #494e31;"><strong>Name</strong></div>
-            <div class="cell f2 align-center"><strong>{{localize "AC2D20.TEMPLATES.skill_focus"}}</strong></div>
-            <div class="cell f2 align-center"><strong>{{localize "AC2D20.TEMPLATES.Resources"}}</strong></div>
-            <!-- <div class="cell f1 align-center"></div> -->
-        </div>
-    </div>
-    {{#each skillkits as |item key|}}
-    <div class="item skillkit editable-item" data-item-id="{{item._id}}">
-        <div class="row">
-            <div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}</div>
-            <div class="cell f2 align-center">{{item.system.skill}}</div>
-            <div class="cell f2 align-center">
-                <input type="number" class="resources-quantity num-short-3" style="height: 1.1rem;" name="system.resources" value="{{item.system.resources}}">
-            </div>
-            <!-- <div class="cell f1 controls align-center" style="display: flex; justify-content: space-between; border-right: none; ">
-                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-            </div> -->
-        </div>
-    </div>
-    {{/each}}
+	<div class="item">
+		<div class="row">
+			<div class="cell f2 green align-left align-center" style="background-color: #494e31;"><strong>Name</strong></div>
+			<div class="cell f2 align-center"><strong>{{localize "AC2D20.TEMPLATES.skill_focus"}}</strong></div>
+			<div class="cell f2 align-center"><strong>{{localize "AC2D20.TEMPLATES.Resources"}}</strong></div>
+			<!-- <div class="cell f1 align-center"></div> -->
+		</div>
+	</div>
+	{{#each skillkits as |item key|}}
+	<div class="item skillkit editable-item" data-item-id="{{item._id}}">
+		<div class="row">
+			<div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}</div>
+			<div class="cell f2 align-center">{{item.system.skill}}</div>
+			<div class="cell f2 align-center">
+				<input type="number" class="resources-quantity num-short-3" style="height: 1.1rem;" name="system.resources" value="{{item.system.resources}}">
+			</div>
+			<!-- <div class="cell f1 controls align-center" style="display: flex; justify-content: space-between; border-right: none; ">
+				<a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+				<a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+			</div> -->
+		</div>
+	</div>
+	{{/each}}
 </div>
