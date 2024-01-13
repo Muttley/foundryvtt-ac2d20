@@ -3,7 +3,7 @@
 ## Enhancement
 - [#20] Implement schema migration tools
 - [#22] Open new item automatically when using the Create Item buttons on a character sheet
-- [#23] Display release notes automatically at first run on a new world or update
+- [#23] Display release notes automatically at first on update or for a new world
 
 ## Bugfix
 - [#14] Some localization fixes (lozanoje)
