@@ -96,6 +96,10 @@ AC2D20.FOCUS.Toxicology: Toxicología
 AC2D20.FOCUS.Tracking: Rastrear
 AC2D20.FOCUS.Urban Stealth: Sigilo Urbano
 AC2D20.FOCUS.Watercraft: Vehículos Acuáticos
+AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
+AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.completed_schema: Completed applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.OTHER: Otro
 AC2D20.RANGE.close: Corto
 AC2D20.RANGE.extreme: Extremo
@@ -110,12 +114,18 @@ AC2D20.SETTINGS.compendiumHint: Cuando se crea un nuevo personaje incluirá las 
 AC2D20.SETTINGS.compendiumName: Compendio de habilidades
 AC2D20.SETTINGS.ctHint: Si se activa, el asistente de combate reducirá la reserva de momentum cuando empiece un nuevo asalto, o cuando el combate finalice.
 AC2D20.SETTINGS.ctName: Asistente de combate actualiza el momentum
+AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features
+AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
 AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descripciones de cualidades y efectos de daño que aparecen al pasar el ratón.
 AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
 AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
 AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
 AC2D20.SETTINGS.showmomentumHint: Muestra la ventana del momentum del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
 AC2D20.SETTINGS.showmomentumName: Mostrar momentum del GM a los jugadores
+AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.systemVersion.label: System Version
+AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
 AC2D20.SKILL.ACADEMIA: Académicas
 AC2D20.SKILL.ATHLETICS: Atletismo
 AC2D20.SKILL.ENGINEERING: Ingeniería
