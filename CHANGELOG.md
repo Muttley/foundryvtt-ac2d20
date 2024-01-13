@@ -3,9 +3,11 @@
 ## Enhancement
 - [#20] Implement schema migration tools
 - [#22] Open new item automatically when using the Create Item buttons on a character sheet
+- [#23] Display release notes automatically at first run on a new world or update
 
 ## Bugfix
 - [#14] Some localization fixes (lozanoje)
+- [#15] Cannot open spell sheet when changing language
 - [#16] Enable the prosemirror editor for item descriptions (lozanoje)
 - [#17] Text enricher for Cthulhu symbol not displaying the correct character
 

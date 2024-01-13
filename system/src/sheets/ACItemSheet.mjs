@@ -22,6 +22,12 @@ export default class ACItemSheet extends ItemSheet {
 		return `${path}/item-${this.item.type}-sheet.hbs`;
 	}
 
+	/** @inheritdoc */
+	get title() {
+		const type = game.i18n.localize(`TYPES.Item.${this.item.type}`);
+		return `[${type}] ${this.item.name}`;
+	}
+
 	/* -------------------------------------------- */
 
 	/** @override */

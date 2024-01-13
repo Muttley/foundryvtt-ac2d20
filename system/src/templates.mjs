@@ -4,7 +4,7 @@
  * @return {Promise}
  */
 export const preloadHandlebarsTemplates = async function() {
-	return loadTemplates([
+	const partials = [
 		"systems/ac2d20/templates/actor/parts/actor-header.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-abilities.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-armor.hbs",
@@ -22,5 +22,13 @@ export const preloadHandlebarsTemplates = async function() {
 		"systems/ac2d20/templates/actor/parts/vehicle-header.hbs",
 		"systems/ac2d20/templates/item/parts/item-effects.hbs",
 		"systems/ac2d20/templates/item/parts/item-header.hbs",
-	]);
+	];
+
+	const paths = {};
+	for (const path of partials) {
+		const [key] = path.split("/").slice(3).join("/").split(".");
+		paths[key] = path;
+	}
+
+	return loadTemplates(paths);
 };

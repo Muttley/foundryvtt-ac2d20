@@ -84,7 +84,7 @@ export const registerHandlebarsHelpers = function() {
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
 		if (key === "") return [];
 		const _skill = CONFIG.AC2D20.SKILLS.filter(s => s.key === key);
-		return _skill[0].focuses;
+		return _skill[0]?.focuses ?? [];
 	});
 
 	Handlebars.registerHelper("getWeaponEffects", function(effect) {

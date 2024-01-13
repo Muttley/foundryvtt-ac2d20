@@ -23,6 +23,12 @@ export default class ACActorSheet extends ActorSheet {
 		return `systems/ac2d20/templates/actor/actor-${this.actor.type}-sheet.hbs`;
 	}
 
+	/** @inheritdoc */
+	get title() {
+		const type = game.i18n.localize(`TYPES.Actor.${this.actor.type}`);
+		return `[${type}] ${this.actor.name}`;
+	}
+
 	/* -------------------------------------------- */
 
 	/** @override */
