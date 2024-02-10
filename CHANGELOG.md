@@ -1,3 +1,13 @@
+# v11.3.0
+
+## Enhancement
+- [#28] Added onhover description for vehicle qualities as in the weapon sheet
+
+## Chore
+- [#32] Merged additional Spanish translations.
+
+*Many thanks to **lozanoje** for contributing code and translations included in this build*
+
 # v11.2.0
 
 ## Enhancement

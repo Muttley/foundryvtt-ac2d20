@@ -57,7 +57,7 @@ async function prepareTooltips() {
 		let qEnriched = await TextEditor.enrichHTML(content.qualities[key], {async: true});
 		content.qualities[key] = qEnriched.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 	}
-	
+
 	for await (const key of Object.keys(content.vehiclesqualities)) {
 		let qEnriched = await TextEditor.enrichHTML(content.vehiclesqualities[key], {async: true});
 		content.vehiclesqualities[key] = qEnriched.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
