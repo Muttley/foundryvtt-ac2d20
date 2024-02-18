@@ -6,7 +6,7 @@ export function registerSettings() {
 	//  MOMENTUM TRACKER
 	// ------------------
 	//
-	game.settings.register("ac2d20", "partyMomentum", {
+	game.settings.register(SYSTEM_ID, "partyMomentum", {
 		name: "Party Momentum",
 		scope: "world",
 		config: false,
@@ -14,7 +14,7 @@ export function registerSettings() {
 		type: Number,
 	});
 
-	game.settings.register("ac2d20", "gmMomentum", {
+	game.settings.register(SYSTEM_ID, "gmMomentum", {
 		name: "GM Momentum",
 		scope: "world",
 		config: false,
@@ -22,7 +22,7 @@ export function registerSettings() {
 		type: Number,
 	});
 
-	game.settings.register("ac2d20", "maxMomentum", {
+	game.settings.register(SYSTEM_ID, "maxMomentum", {
 		name: "Max Momentum",
 		scope: "world",
 		config: false,
@@ -34,7 +34,7 @@ export function registerSettings() {
 	//  STANDARD SETTINGS
 	// -------------------
 	//
-	game.settings.register("ac2d20", "gmMomentumShowToPlayers", {
+	game.settings.register(SYSTEM_ID, "gmMomentumShowToPlayers", {
 		name: game.i18n.localize("AC2D20.SETTINGS.showmomentumName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.showmomentumHint"),
 		scope: "world",
@@ -43,7 +43,7 @@ export function registerSettings() {
 		type: Boolean,
 	});
 
-	game.settings.register("ac2d20", "maxAppShowToPlayers", {
+	game.settings.register(SYSTEM_ID, "maxAppShowToPlayers", {
 		name: game.i18n.localize("AC2D20.SETTINGS.maxappName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.maxappHint"),
 		scope: "world",
@@ -52,7 +52,7 @@ export function registerSettings() {
 		type: Boolean,
 	});
 
-	game.settings.register("ac2d20", "compendium-skills", {
+	game.settings.register(SYSTEM_ID, "compendium-skills", {
 		name: game.i18n.localize("AC2D20.SETTINGS.compendiumName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.compendiumHint"),
 		scope: "world",
@@ -61,7 +61,7 @@ export function registerSettings() {
 		type: String,
 	});
 
-	game.settings.register("ac2d20", "hoversJsonLocation", {
+	game.settings.register(SYSTEM_ID, "hoversJsonLocation", {
 		name: game.i18n.localize("AC2D20.SETTINGS.hoverName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.hoverHint"),
 		scope: "world",
@@ -73,7 +73,7 @@ export function registerSettings() {
 		onChange: debounceReload,
 	});
 
-	game.settings.register("ac2d20", "combatTrackerMomentumUpdate", {
+	game.settings.register(SYSTEM_ID, "combatTrackerMomentumUpdate", {
 		name: game.i18n.localize("AC2D20.SETTINGS.ctName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.ctHint"),
 		scope: "world",
@@ -87,7 +87,7 @@ export function registerSettings() {
 	//  DEBUG SETTINGS
 	// ----------------
 	//
-	game.settings.register("ac2d20", "debugEnabled", {
+	game.settings.register(SYSTEM_ID, "debugEnabled", {
 		name: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.label"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.hint"),
 		scope: "world",
@@ -97,20 +97,20 @@ export function registerSettings() {
 		requiresReload: true,
 	});
 
-	game.settings.register("ac2d20", "worldSchemaVersion", {
+	game.settings.register(SYSTEM_ID, "worldSchemaVersion", {
 		name: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.label"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.hint"),
 		scope: "world",
-		config: game.settings.get("ac2d20", "debugEnabled"),
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
 		default: -1,
 		type: Number,
 	});
 
-	game.settings.register("ac2d20", "systemVersion", {
+	game.settings.register(SYSTEM_ID, "systemVersion", {
 		name: game.i18n.localize("AC2D20.SETTINGS.systemVersion.label"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.systemVersion.hint"),
 		scope: "world",
-		config: game.settings.get("ac2d20", "debugEnabled"),
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
 		default: "",
 		type: String,
 	});

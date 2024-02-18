@@ -1,4 +1,4 @@
-import ACMigrationRunner from "../migrations/ACMigrationRunner";
+import ACMigrationRunner from "../migrations/ACMigrationRunner.mjs";
 
 export const readyHook = {
 	attach: () => {
