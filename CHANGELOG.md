@@ -2,6 +2,7 @@
 
 ## Enhancement
 - [#28] Added onhover description for vehicle qualities as in the weapon sheet
+- [#38] Add support for French language translations
 
 ## Chore
 - [#32] Merged additional Spanish translations.

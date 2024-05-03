@@ -77,6 +77,12 @@
 			"name": "Español",
 			"path": "i18n/es.json",
 			"flags": {}
+		},
+		{
+			"lang": "fr",
+			"name": "Français",
+			"path": "i18n/fr.json",
+			"flags": {}
 		}
 	],
 	"socket": true,
