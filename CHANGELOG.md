@@ -1,3 +1,17 @@
+# v11.3.0
+
+## Enhancement
+- [#28] Added onhover description for vehicle qualities as in the weapon sheet
+- [#38] Add support for French language translations
+
+## Chore
+- [#32] Merged additional Spanish translations.
+- [#37] Merge French translation updates from Crowdin
+
+*Many thanks to **lozanoje** for contributing code and translations included in this build*
+
+*Many thanks to **Dniektr** for contributing French language translations for this build.  The French language i18n file now has 100% coverage*
+
 # v11.2.0
 
 ## Enhancement

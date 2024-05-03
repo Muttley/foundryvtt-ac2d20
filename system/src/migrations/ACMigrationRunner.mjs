@@ -1,3 +1,4 @@
+import { SYSTEM_ID } from "../config.mjs";
 import * as migrations from "./updates/_module.mjs";
 
 export default class ACMigrationRunner {
@@ -28,7 +29,7 @@ export default class ACMigrationRunner {
 	}
 
 	get currentVersion() {
-		return game.settings.get("ac2d20", "worldSchemaVersion");
+		return game.settings.get(SYSTEM_ID, "worldSchemaVersion");
 	}
 
 
@@ -237,21 +238,15 @@ export default class ACMigrationRunner {
 
 		await this.buildMigrations();
 
-		// Unless you actually set the value, the default is not stored in the
-		// db which causes issues with old schema updates being run unecessarily
-		// on brand new worlds.  So here we set the schemaVersion to the current
-		// system value if it has not already been set by a previous data
-		// migration.
+		// If this is a brand new world then we don't need to do any migrations.
 		//
-		const currentVersion = this.currentVersion;
-		if (currentVersion < 0) {
+		if (game.world.playtime === 0) {
 			// Should be a brand new world
 			await game.settings.set(
-				"ac2d20", "worldSchemaVersion",
-				Number(game.system.flags.schemaVersion)
+				SYSTEM_ID, "worldSchemaVersion",
+				this.latestVersion
 			);
 		}
-
 
 		if (!this.needsMigration()) return;
 
@@ -266,7 +261,7 @@ export default class ACMigrationRunner {
 
 				await this.migrateWorld();
 
-				await game.settings.set("ac2d20", "worldSchemaVersion", migration.version);
+				await game.settings.set(SYSTEM_ID, "worldSchemaVersion", migration.version);
 			}
 		}
 

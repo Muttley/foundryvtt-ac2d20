@@ -6,12 +6,12 @@ import * as sheets from "../sheets/_module.mjs";
 
 import { preloadHandlebarsTemplates } from "../templates.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
-import { registerSettings } from "../settings.js";
+import { registerSettings } from "../settings.mjs";
 import { registerTextEditorEnrichers } from "../enrichers.mjs";
 
-import Dialog2d20 from "../roller/Dialog2d20.js";
-import DialogD6 from "../roller/DialogD6.js";
-import DieACChallenge from "../roller/DieACChallenge.js";
+import Dialog2d20 from "../roller/Dialog2d20.mjs";
+import DialogD6 from "../roller/DialogD6.mjs";
+import DieACChallenge from "../roller/DieACChallenge.mjs";
 import Roller2D20 from "../roller/Roller2D20.mjs";
 
 import ACUtils from "../utils/ACUtils.mjs";

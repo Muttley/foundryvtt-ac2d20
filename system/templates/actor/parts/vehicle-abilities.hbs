@@ -86,7 +86,7 @@
 		<div class="items-list" style="border: 1px solid #759549;">
 			{{#each system.qualities as |item key|}}
 			<div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
-				<label>
+				<label data-tooltip="{{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.vehiclesqualities.' key)}}}" data-tooltip-direction="RIGHT">
 					<input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.VEHICLES.QUALITIES.' key)}}
 				</label>
 

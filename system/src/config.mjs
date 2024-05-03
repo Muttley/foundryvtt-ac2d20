@@ -22,7 +22,7 @@ AC2D20.abilityAbbreviations = {
 };
 
 AC2D20.JOURNAL_UUIDS = {
-	releaseNotes: "Compendium.ac2d20.system-documentation.JournalEntry.Q2jykbXOXgzNpcSR.JournalEntryPage.g6JENp97aKkuNFcs",
+	releaseNotes: "Compendium.ac2d20.system-documentation.JournalEntry.Q2jykbXOXgzNpcSR",
 };
 
 AC2D20.Size = ["Trivial", "Minor", "Major"];

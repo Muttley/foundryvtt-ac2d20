@@ -28,5 +28,14 @@
         "reliable": "pg.100",
         "subtle": "pg.100",
         "unreliable": "pg.100"
+    },
+    "vehiclesqualities": {
+        "cargo": "pg.124",
+        "cumbersome": "pg.124",
+        "enclosed": "pg.124",
+        "exposed": "pg.124",
+        "highPerformance": "pg.124",
+        "singleSeat": "pg.124",
+        "tough": "pg.124"
     }
 }

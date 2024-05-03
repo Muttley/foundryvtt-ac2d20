@@ -1,4 +1,4 @@
-import ACMigrationRunner from "../migrations/ACMigrationRunner";
+import ACMigrationRunner from "../migrations/ACMigrationRunner.mjs";
 
 export const readyHook = {
 	attach: () => {
@@ -46,6 +46,7 @@ async function prepareTooltips() {
 
 	CONFIG.AC2D20.WEAPONS.effects = content.effects;
 	CONFIG.AC2D20.WEAPONS.qualities = content.qualities;
+	CONFIG.AC2D20.WEAPONS.vehiclesqualities = content.vehiclesqualities;
 
 	for await (const key of Object.keys(content.effects)) {
 		let qEnriched = await TextEditor.enrichHTML(content.effects[key], {async: true});
@@ -55,5 +56,10 @@ async function prepareTooltips() {
 	for await (const key of Object.keys(content.qualities)) {
 		let qEnriched = await TextEditor.enrichHTML(content.qualities[key], {async: true});
 		content.qualities[key] = qEnriched.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
+	}
+
+	for await (const key of Object.keys(content.vehiclesqualities)) {
+		let qEnriched = await TextEditor.enrichHTML(content.vehiclesqualities[key], {async: true});
+		content.vehiclesqualities[key] = qEnriched.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&#039;");
 	}
 }
