@@ -120,6 +120,8 @@ AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qua
 AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
 AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
 AC2D20.SETTINGS.maxappName: Players Can Setup Max App
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
 AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)

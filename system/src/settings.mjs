@@ -82,7 +82,6 @@ export function registerSettings() {
 		type: Boolean,
 	});
 
-
 	// ----------------
 	//  DEBUG SETTINGS
 	// ----------------
@@ -114,4 +113,15 @@ export function registerSettings() {
 		default: "",
 		type: String,
 	});
+
+	game.settings.register(SYSTEM_ID, "migrateSystemCompendiums", {
+		name: game.i18n.localize("AC2D20.SETTINGS.migrateSystemCompendiums.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.migrateSystemCompendiums.label"),
+		scope: "world",
+		type: Boolean,
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
+		default: false,
+		requiresReload: true,
+	});
+
 }
