@@ -1,355 +1,355 @@
-"AC2D20.VEHICLES.QUALITIES.singleSeat:": Single Seat
-AC2D20.Ability.agi: Agility
-AC2D20.Ability.bra: Brawn
-AC2D20.Ability.coo: Coordination
-AC2D20.Ability.ins: Insight
-AC2D20.Ability.rea: Reason
-AC2D20.Ability.wil: Will
+"AC2D20.VEHICLES.QUALITIES.singleSeat:": Assento Único
+AC2D20.Ability.agi: Agilidade
+AC2D20.Ability.bra: Músculo
+AC2D20.Ability.coo: Coordenação
+AC2D20.Ability.ins: Intuição
+AC2D20.Ability.rea: Razão
+AC2D20.Ability.wil: Vontade
 AC2D20.AbilityAbbr.agi: agi
-AC2D20.AbilityAbbr.bra: bra
+AC2D20.AbilityAbbr.bra: mús
 AC2D20.AbilityAbbr.coo: coo
-AC2D20.AbilityAbbr.ins: ins
-AC2D20.AbilityAbbr.rea: rea
-AC2D20.AbilityAbbr.wil: wil
-AC2D20.ARMOR.qualities.heavy: Heavy
-AC2D20.ARMOR.qualities.shield: Shield
-AC2D20.ARMOR.qualities.uncomfortable: Uncomfortable
-AC2D20.Combat.CombatantsTurnDone: Turn Completed
-AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
-AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
-AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
-AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
-AC2D20.EffectCreate: Create Effect
-AC2D20.EffectDelete: Delete Effect
-AC2D20.EffectEdit: Edit Effect
-AC2D20.EFFECTS.Inactive: Inactive Effects
-AC2D20.EFFECTS.Passive: Passive Effects
-AC2D20.EFFECTS.Temporary: Temporary Effects
-AC2D20.EffectToggle: Toggle Effect
-AC2D20.equipped: Equipped
-AC2D20.FOCUS.Air Force: Air Force
-AC2D20.FOCUS.Aircraft: Aircraft
-AC2D20.FOCUS.Animal Handling: Animal Handling
-AC2D20.FOCUS.Architecture: Architecture
-AC2D20.FOCUS.Army: Army
-AC2D20.FOCUS.Art: Art
-AC2D20.FOCUS.Camouflage: Camouflage
-AC2D20.FOCUS.Cars: Cars
-AC2D20.FOCUS.Charm: Charm
-AC2D20.FOCUS.Climbing: Climbing
+AC2D20.AbilityAbbr.ins: int
+AC2D20.AbilityAbbr.rea: raz
+AC2D20.AbilityAbbr.wil: von
+AC2D20.ARMOR.qualities.heavy: Pesado
+AC2D20.ARMOR.qualities.shield: Escudo
+AC2D20.ARMOR.qualities.uncomfortable: Desconfortável
+AC2D20.Combat.CombatantsTurnDone: Turno Concluído
+AC2D20.Combat.CombatantsTurnNotDone: Turno Não Concluído
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no Final do Combate
+AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no Início da Rodada
+AC2D20.Combat.ToggleCombatantsTurnDone: Alternar Turno Concluído
+AC2D20.EffectCreate: Criar Efeito
+AC2D20.EffectDelete: Deletar Efeito
+AC2D20.EffectEdit: Editar Efeito
+AC2D20.EFFECTS.Inactive: Efeitos Inativos
+AC2D20.EFFECTS.Passive: Efeitos Passivos
+AC2D20.EFFECTS.Temporary: Efeitos Temporários
+AC2D20.EffectToggle: Alternar Efeito
+AC2D20.equipped: Equipado
+AC2D20.FOCUS.Air Force: Força Aérea
+AC2D20.FOCUS.Aircraft: Aeronave
+AC2D20.FOCUS.Animal Handling: Manejo de Animais
+AC2D20.FOCUS.Architecture: Arquitetura
+AC2D20.FOCUS.Army: Exército
+AC2D20.FOCUS.Art: Arte
+AC2D20.FOCUS.Camouflage: Camuflagem
+AC2D20.FOCUS.Cars: Carros
+AC2D20.FOCUS.Charm: Encantar
+AC2D20.FOCUS.Climbing: Escalada
 AC2D20.FOCUS.Close Quarters: Close Quarters
-AC2D20.FOCUS.Combat Engineering: Combat Engineering
-AC2D20.FOCUS.Covert Operations: Covert Operations
-AC2D20.FOCUS.Cryptography: Cryptography
-AC2D20.FOCUS.Deceive: Deceive
-AC2D20.FOCUS.Discipline: Discipline
-AC2D20.FOCUS.Disguise: Disguise
-AC2D20.FOCUS.Electronics: Electronics
-AC2D20.FOCUS.Exotic: Exotic
-AC2D20.FOCUS.Explosives: Explosives
-AC2D20.FOCUS.Finance: Finance
-AC2D20.FOCUS.First Aid: First Aid
-AC2D20.FOCUS.Foraging: Foraging
+AC2D20.FOCUS.Combat Engineering: Engenharia de Combate
+AC2D20.FOCUS.Covert Operations: Operações Secretas
+AC2D20.FOCUS.Cryptography: Criptografia
+AC2D20.FOCUS.Deceive: Enganar
+AC2D20.FOCUS.Discipline: Disciplina
+AC2D20.FOCUS.Disguise: Desfarce
+AC2D20.FOCUS.Electronics: Eletrônicos
+AC2D20.FOCUS.Exotic: Exótico
+AC2D20.FOCUS.Explosives: Explosivos
+AC2D20.FOCUS.Finance: Finaça
+AC2D20.FOCUS.First Aid: Primeiros Socorros
+AC2D20.FOCUS.Foraging: Forrageio
 AC2D20.FOCUS.Fortitude: Fortitude
-AC2D20.FOCUS.Hand-to-Hand: Hand-to-Hand
-AC2D20.FOCUS.Handguns: Handguns
-AC2D20.FOCUS.Hearing: Hearing
-AC2D20.FOCUS.Heavy Vehicles: Heavy Vehicles
-AC2D20.FOCUS.Heavy Weapons: Heavy Weapons
-AC2D20.FOCUS.History: History
-AC2D20.FOCUS.Hunting: Hunting
-AC2D20.FOCUS.Immunity: Immunity
-AC2D20.FOCUS.Infectious Diseases: Infectious Diseases
-AC2D20.FOCUS.Innuendo: Innuendo
-AC2D20.FOCUS.Instincts: Instincts
-AC2D20.FOCUS.Intimidation: Intimidation
-AC2D20.FOCUS.Invocation: Invocation
-AC2D20.FOCUS.Leadership: Leadership
-AC2D20.FOCUS.Lifting: Lifting
-AC2D20.FOCUS.Linguistics: Linguistics
-AC2D20.FOCUS.Mechanical Engineering: Mechanical Engineering
-AC2D20.FOCUS.Melee Weapons: Melee Weapons
-AC2D20.FOCUS.Motorcycles: Motorcycles
-AC2D20.FOCUS.Mysticism: Mysticism
-AC2D20.FOCUS.Navy: Navy
-AC2D20.FOCUS.Negotiation: Negotiation
-AC2D20.FOCUS.Occultism: Occultism
-AC2D20.FOCUS.Orienteering: Orienteering
-AC2D20.FOCUS.Pharmacology: Pharmacology
-AC2D20.FOCUS.Physical Training: Physical Training
-AC2D20.FOCUS.Psychiatry: Psychiatry
-AC2D20.FOCUS.Rhetoric: Rhetoric
+AC2D20.FOCUS.Hand-to-Hand: Corpo-a-Corpo
+AC2D20.FOCUS.Handguns: Pistolas
+AC2D20.FOCUS.Hearing: Audição
+AC2D20.FOCUS.Heavy Vehicles: Veículos Pesados
+AC2D20.FOCUS.Heavy Weapons: Armas Pesadas
+AC2D20.FOCUS.History: História
+AC2D20.FOCUS.Hunting: Caça
+AC2D20.FOCUS.Immunity: Imunidade
+AC2D20.FOCUS.Infectious Diseases: Doenças Infecciosas
+AC2D20.FOCUS.Innuendo: Insinuar
+AC2D20.FOCUS.Instincts: Instintos
+AC2D20.FOCUS.Intimidation: Intimidação
+AC2D20.FOCUS.Invocation: Invocação
+AC2D20.FOCUS.Leadership: Liderança
+AC2D20.FOCUS.Lifting: Erguer Peso
+AC2D20.FOCUS.Linguistics: Linguística
+AC2D20.FOCUS.Mechanical Engineering: Engenharia Mecânica
+AC2D20.FOCUS.Melee Weapons: Armas Brancas
+AC2D20.FOCUS.Motorcycles: Motocicletas
+AC2D20.FOCUS.Mysticism: Misticismo
+AC2D20.FOCUS.Navy: Marinha
+AC2D20.FOCUS.Negotiation: Negociação
+AC2D20.FOCUS.Occultism: Ocultismo
+AC2D20.FOCUS.Orienteering: Orientação
+AC2D20.FOCUS.Pharmacology: Farmacologia
+AC2D20.FOCUS.Physical Training: Treinamento Físico
+AC2D20.FOCUS.Psychiatry: Psiquiatria
+AC2D20.FOCUS.Rhetoric: Retórica
 AC2D20.FOCUS.Rifles: Rifles
-AC2D20.FOCUS.Running: Running
-AC2D20.FOCUS.Rural Stealth: Rural Stealth
-AC2D20.FOCUS.Science: Science
-AC2D20.FOCUS.Sight: Sight
-AC2D20.FOCUS.Smell and Taste: Smell and Taste
-AC2D20.FOCUS.Surgery: Surgery
-AC2D20.FOCUS.Swimming: Swimming
-AC2D20.FOCUS.Tanks: Tanks
-AC2D20.FOCUS.Technical Projects: Technical Projects
-AC2D20.FOCUS.Threat Awareness: Threat Awareness
-AC2D20.FOCUS.Throwing: Throwing
-AC2D20.FOCUS.Toxicology: Toxicology
-AC2D20.FOCUS.Tracking: Tracking
-AC2D20.FOCUS.Urban Stealth: Urban Stealth
-AC2D20.FOCUS.Watercraft: Watercraft
-AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
-AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
-AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
-AC2D20.MIGRATION.completed_schema: Completed applying updates for Achtung! Cthulhu 2d20 schema v{version}
-AC2D20.OTHER: Other
-AC2D20.RANGE.close: Close
-AC2D20.RANGE.extreme: Extreme
-AC2D20.RANGE.long: Long
-AC2D20.RANGE.medium: Medium
-AC2D20.RANGE.reach: Reach
-AC2D20.RESISTANCE.armor: Armor
-AC2D20.RESISTANCE.courage: Courage
-AC2D20.RESISTANCE.fatigue: Fatigue
-AC2D20.RESISTANCE.resistance: Resistance
-AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
-AC2D20.SETTINGS.compendiumName: Skills Compendium
-AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
-AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
-AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features
-AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
-AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
-AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
-AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
-AC2D20.SETTINGS.maxappName: Players Can Setup Max App
-AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
-AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
+AC2D20.FOCUS.Running: Correr
+AC2D20.FOCUS.Rural Stealth: Furtividade Rural
+AC2D20.FOCUS.Science: Ciência
+AC2D20.FOCUS.Sight: Visão
+AC2D20.FOCUS.Smell and Taste: Cheiro e Gosto
+AC2D20.FOCUS.Surgery: Cirurgia
+AC2D20.FOCUS.Swimming: Natação
+AC2D20.FOCUS.Tanks: Tanques
+AC2D20.FOCUS.Technical Projects: Projetos Técnicos
+AC2D20.FOCUS.Threat Awareness: Sexto Sentido
+AC2D20.FOCUS.Throwing: Arremesso
+AC2D20.FOCUS.Toxicology: Toxicologia
+AC2D20.FOCUS.Tracking: Rastreio
+AC2D20.FOCUS.Urban Stealth: Furtividade Urbana
+AC2D20.FOCUS.Watercraft: Embarcações
+AC2D20.MIGRATION.begin_migration: Executando atualizações de dados para Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.begin_schema: Aplicando atualizações para Achtung! Cthulhu 2d20 schema v{version}
+AC2D20.MIGRATION.completed_migration: Atualizações de dados concluídas para Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.completed_schema: Atualizações para Achtung! Cthulhu 2d20 schema v{version} concluídas
+AC2D20.OTHER: Outros
+AC2D20.RANGE.close: Curto
+AC2D20.RANGE.extreme: Extremo
+AC2D20.RANGE.long: Longo
+AC2D20.RANGE.medium: Médio
+AC2D20.RANGE.reach: Toque
+AC2D20.RESISTANCE.armor: Armadura
+AC2D20.RESISTANCE.courage: Coragem
+AC2D20.RESISTANCE.fatigue: Fadiga
+AC2D20.RESISTANCE.resistance: Resistência
+AC2D20.SETTINGS.compendiumHint: Cada vez que um novo personagem é criado, ele incluirá este conjunto de habilidades.
+AC2D20.SETTINGS.compendiumName: Compêndio de Habilidades
+AC2D20.SETTINGS.ctHint: Se ativado, o Registro de Combate diminuirá os Pontos de Ímpeto quando uma nova Rodada de Combate começar ou quando o Combate terminar.
+AC2D20.SETTINGS.ctName: Registro de Combate Atualiza Ímpeto?
+AC2D20.SETTINGS.debugEnabled.hint: Habilite ou Desabilite recursos adicionais de debug
+AC2D20.SETTINGS.debugEnabled.label: Habilite/Desabilite debug
+AC2D20.SETTINGS.hoverHint: Localização do arquivo json que contém o texto das qualidades e efeitos de dano.
+AC2D20.SETTINGS.hoverName: Pairar Mouse Sobre Arquivo JSON
+AC2D20.SETTINGS.maxappHint: Permite que os jogadores configurem o app máximo do grupo. Requer atualização do lado dos jogadores.
+AC2D20.SETTINGS.maxappName: Os Jogadores Podem Configurar o app Máximo
+AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização do lado dos jogadores.
+AC2D20.SETTINGS.showmomentumName: Mostrar Ímpeto do Mestre aos Jogadores
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.systemVersion.label: System Version
+AC2D20.SETTINGS.systemVersion.label: Versão do Sistema
 AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
 AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
 AC2D20.SKILL.ACADEMIA: Academia
-AC2D20.SKILL.ATHLETICS: Athletics
-AC2D20.SKILL.ENGINEERING: Engineering
-AC2D20.SKILL.FIGHTING: Fighting
-AC2D20.SKILL.MEDICINE: Medicine
-AC2D20.SKILL.OBSERVATION: Observation
-AC2D20.SKILL.PERSUASION: Persuasion
-AC2D20.SKILL.RESILIENCE: Resilience
-AC2D20.SKILL.STEALTH: Stealth
-AC2D20.SKILL.SURVIVAL: Survival
-AC2D20.SKILL.TACTICS: Tactics
-AC2D20.SKILL.VEHICLES: Vehicles
-AC2D20.SPELL.SpellTypes.ins: Traditional
-AC2D20.SPELL.SpellTypes.rea: Researcher
-AC2D20.SPELL.SpellTypes.wil: Dabbler
-AC2D20.Spellcasting.dabbler: dabbler
-AC2D20.Spellcasting.researcher: researcher
-AC2D20.Spellcasting.SpellcastingType: Spellcasting Type
-AC2D20.Spellcasting.traditional: traditional
-AC2D20.STRESS.current: Current Stress
-AC2D20.STRESS.max: Max Stress
-AC2D20.STRESS.stress: Stress
-AC2D20.TEMPLATES.Abilities: Abilities
-AC2D20.TEMPLATES.AddFocus: Add Focus
-AC2D20.TEMPLATES.Ammo: Ammo
-AC2D20.TEMPLATES.Archetype: Archetype
-AC2D20.TEMPLATES.Attacks: ATTACKS
-AC2D20.TEMPLATES.Attr: Attr.
-AC2D20.TEMPLATES.Attribute: Attribute
-AC2D20.TEMPLATES.Attributes: Attributes
-AC2D20.TEMPLATES.Background: Background
-AC2D20.TEMPLATES.bonus: Bonus
-AC2D20.TEMPLATES.Characteristic: Characteristic
+AC2D20.SKILL.ATHLETICS: Atletismo
+AC2D20.SKILL.ENGINEERING: Engenharia
+AC2D20.SKILL.FIGHTING: Combate
+AC2D20.SKILL.MEDICINE: Medicina
+AC2D20.SKILL.OBSERVATION: Observação
+AC2D20.SKILL.PERSUASION: Persuasão
+AC2D20.SKILL.RESILIENCE: Resiliência
+AC2D20.SKILL.STEALTH: Furtividade
+AC2D20.SKILL.SURVIVAL: Sobrevivência
+AC2D20.SKILL.TACTICS: Táticas
+AC2D20.SKILL.VEHICLES: Veículos
+AC2D20.SPELL.SpellTypes.ins: Tradicional
+AC2D20.SPELL.SpellTypes.rea: Pesquisador
+AC2D20.SPELL.SpellTypes.wil: Amador
+AC2D20.Spellcasting.dabbler: amador
+AC2D20.Spellcasting.researcher: pesquisador
+AC2D20.Spellcasting.SpellcastingType: Tipo de Conjuração
+AC2D20.Spellcasting.traditional: tradicional
+AC2D20.STRESS.current: Estresse Atual
+AC2D20.STRESS.max: Estresse Máximo
+AC2D20.STRESS.stress: Estresse
+AC2D20.TEMPLATES.Abilities: Habilidades
+AC2D20.TEMPLATES.AddFocus: Adicionar Foco
+AC2D20.TEMPLATES.Ammo: Munição
+AC2D20.TEMPLATES.Archetype: Arquétipo
+AC2D20.TEMPLATES.Attacks: ATAQUES
+AC2D20.TEMPLATES.Attr: Atrib.
+AC2D20.TEMPLATES.Attribute: Atributo
+AC2D20.TEMPLATES.Attributes: Atributos
+AC2D20.TEMPLATES.Background: Antecedente
+AC2D20.TEMPLATES.bonus: Bônus
+AC2D20.TEMPLATES.Characteristic: Característica
 AC2D20.TEMPLATES.Compl: Compl.
-AC2D20.TEMPLATES.Complications: Complications
-AC2D20.TEMPLATES.Conditions: Conditions
-AC2D20.TEMPLATES.Cost: Cost
-AC2D20.TEMPLATES.CostEffects: Cost Effects
-AC2D20.TEMPLATES.Create_Ammo: Create Ammo
-AC2D20.TEMPLATES.Create_Special_Rule: Create Special Rule
-AC2D20.TEMPLATES.Create_Weapon: Create Weapon
-AC2D20.TEMPLATES.current: current
-AC2D20.TEMPLATES.DAMAGE_EFFECTS: DAMAGE EFFECTS
-AC2D20.TEMPLATES.DAMAGE_TYPE: DAMAGE TYPE
-AC2D20.TEMPLATES.DAMAGE: DAMAGE
-AC2D20.TEMPLATES.Data: Data
-AC2D20.TEMPLATES.Default_Attribute: Default Attribute
-AC2D20.TEMPLATES.DEFENSE: DEFENSE
-AC2D20.TEMPLATES.Delete_Item: Delete Item
-AC2D20.TEMPLATES.Delete: Delete
-AC2D20.TEMPLATES.DERIVED: DERIVED
-AC2D20.TEMPLATES.Description: Description
-AC2D20.TEMPLATES.Diff: Diff
-AC2D20.TEMPLATES.Difficulty: Difficulty
+AC2D20.TEMPLATES.Complications: Complicações
+AC2D20.TEMPLATES.Conditions: Condições
+AC2D20.TEMPLATES.Cost: Custo
+AC2D20.TEMPLATES.CostEffects: Efeitos de Custo
+AC2D20.TEMPLATES.Create_Ammo: Criar Munição
+AC2D20.TEMPLATES.Create_Special_Rule: Criar Regra Especial
+AC2D20.TEMPLATES.Create_Weapon: Criar Arma
+AC2D20.TEMPLATES.current: atual
+AC2D20.TEMPLATES.DAMAGE_EFFECTS: EFEITOS DE DANO
+AC2D20.TEMPLATES.DAMAGE_TYPE: TIPO DE DANO
+AC2D20.TEMPLATES.DAMAGE: DANO
+AC2D20.TEMPLATES.Data: Dados
+AC2D20.TEMPLATES.Default_Attribute: Atributo Padrão
+AC2D20.TEMPLATES.DEFENSE: DEFESA
+AC2D20.TEMPLATES.Delete_Item: Deletar Item
+AC2D20.TEMPLATES.Delete: Deletar
+AC2D20.TEMPLATES.DERIVED: DERIVADO
+AC2D20.TEMPLATES.Description: Descrição
+AC2D20.TEMPLATES.Diff: Dific
+AC2D20.TEMPLATES.Difficulty: Dificuldade
 AC2D20.TEMPLATES.Dur: Dur
-AC2D20.TEMPLATES.Duration: Duration
-AC2D20.TEMPLATES.Edit_Item: Edit Item
-AC2D20.TEMPLATES.Effect: Effect
-AC2D20.TEMPLATES.Effects: Effects
-AC2D20.TEMPLATES.Encumbered: ENCUMBERED
-AC2D20.TEMPLATES.Encumbrance_Level: Encumbrance Level
-AC2D20.TEMPLATES.Encumbrance: Encumbrance
+AC2D20.TEMPLATES.Duration: Duração
+AC2D20.TEMPLATES.Edit_Item: Editar Item
+AC2D20.TEMPLATES.Effect: Efeito
+AC2D20.TEMPLATES.Effects: Efeitos
+AC2D20.TEMPLATES.Encumbered: SOBRECARREGADO
+AC2D20.TEMPLATES.Encumbrance_Level: Nível de Sobrecarga
+AC2D20.TEMPLATES.Encumbrance: Sobrecarga
 AC2D20.TEMPLATES.ENG: ENG
-AC2D20.TEMPLATES.equipped: equipped
-AC2D20.TEMPLATES.FAVORITE_WEAPONS: FAVORITE WEAPONS
-AC2D20.TEMPLATES.FIRE_RATE: FIRE RATE
-AC2D20.TEMPLATES.Focus: Focus
-AC2D20.TEMPLATES.fortune: Fortune
-AC2D20.TEMPLATES.Gear: Gear
-AC2D20.TEMPLATES.GENERAL: GENERAL
-AC2D20.TEMPLATES.GM_MOMENTUM: GM Threat
-AC2D20.TEMPLATES.Healthy: Healthy
-AC2D20.TEMPLATES.HP_Healed: HP Healed
-AC2D20.TEMPLATES.INITIATIVE: INITIATIVE
-AC2D20.TEMPLATES.INJURIES: Injuries
-AC2D20.TEMPLATES.Issue: Issue
-AC2D20.TEMPLATES.Keywords: Keywords
+AC2D20.TEMPLATES.equipped: equipado
+AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
+AC2D20.TEMPLATES.FIRE_RATE: CADÊNCIA DE TIRO
+AC2D20.TEMPLATES.Focus: Foco
+AC2D20.TEMPLATES.fortune: Fortuna
+AC2D20.TEMPLATES.Gear: Equipamento
+AC2D20.TEMPLATES.GENERAL: GERAL
+AC2D20.TEMPLATES.GM_MOMENTUM: Ameaça do Mestre
+AC2D20.TEMPLATES.Healthy: Saudável
+AC2D20.TEMPLATES.HP_Healed: PV Curado
+AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
+AC2D20.TEMPLATES.INJURIES: FERIMENTOS
+AC2D20.TEMPLATES.Issue: Publicação
+AC2D20.TEMPLATES.Keywords: Palavras-Chave
 AC2D20.TEMPLATES.lbs: lbs
-AC2D20.TEMPLATES.Learned: Learned
-AC2D20.TEMPLATES.Luck: Luck
-AC2D20.TEMPLATES.majoritems: Major Items
-AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Max Momentum
-AC2D20.TEMPLATES.max: max
-AC2D20.TEMPLATES.MAX: MAX
-AC2D20.TEMPLATES.MELEE_BONUS: MELEE BONUS
-AC2D20.TEMPLATES.MELEE_DAMAGE: MELEE DAMAGE
-AC2D20.TEMPLATES.minoritems: Minor Items
-AC2D20.TEMPLATES.Mod_Type: Mod Type
-AC2D20.TEMPLATES.MODULES: MODULES
-AC2D20.TEMPLATES.Name_Prefix: Name Prefix
-AC2D20.TEMPLATES.Name: Name
-AC2D20.TEMPLATES.Nationality: Nationality
-AC2D20.TEMPLATES.PARTY_MOMENTUM: Party Momentum
-AC2D20.TEMPLATES.Personal_Truth_Scars: Personal Truths & Scars
-AC2D20.TEMPLATES.PHYS: PHYS
-AC2D20.TEMPLATES.Points: Points
-AC2D20.TEMPLATES.POISON: POISON
-AC2D20.TEMPLATES.Power: Power
-AC2D20.TEMPLATES.Qualities: Qualities
-AC2D20.TEMPLATES.RANGE: Range
-AC2D20.TEMPLATES.Rank: Rank
-AC2D20.TEMPLATES.Ranks_current_maximum: Ranks [current/maximum]
-AC2D20.TEMPLATES.rating: Rating
-AC2D20.TEMPLATES.Re_roll: Re-roll
-AC2D20.TEMPLATES.Requirements: Requirements
-AC2D20.TEMPLATES.Resistance: Resistance
-AC2D20.TEMPLATES.Resistances: Resistances
-AC2D20.TEMPLATES.RESISTANCES: RESISTANCES
-AC2D20.TEMPLATES.Resources: Resources
-AC2D20.TEMPLATES.Restriction: Restriction
-AC2D20.TEMPLATES.ritual_requirements: Requirements
-AC2D20.TEMPLATES.ritual_resistance: Resistance
-AC2D20.TEMPLATES.ritual_steps: Ritual Steps
-AC2D20.TEMPLATES.ritual_stress: Ritual Stress
+AC2D20.TEMPLATES.Learned: Aprendido
+AC2D20.TEMPLATES.Luck: Sorte
+AC2D20.TEMPLATES.majoritems: Itens Principais 
+AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Ímpeto Máximo
+AC2D20.TEMPLATES.max: máx
+AC2D20.TEMPLATES.MAX: MÁX
+AC2D20.TEMPLATES.MELEE_BONUS: BÔNUS CORPO-A-CORPO
+AC2D20.TEMPLATES.MELEE_DAMAGE: DANO CORPO-A-CORPO
+AC2D20.TEMPLATES.minoritems: Itens Secundários
+AC2D20.TEMPLATES.Mod_Type: Tipo de Modificaçao
+AC2D20.TEMPLATES.MODULES: Módulos
+AC2D20.TEMPLATES.Name_Prefix: Prefixo do Nome
+AC2D20.TEMPLATES.Name: Nome
+AC2D20.TEMPLATES.Nationality: Nacionalidade
+AC2D20.TEMPLATES.PARTY_MOMENTUM: Ímpeto do Grupo
+AC2D20.TEMPLATES.Personal_Truth_Scars: Verdades e Cicatrizes Pessoais
+AC2D20.TEMPLATES.PHYS: FÍS
+AC2D20.TEMPLATES.Points: Pontos
+AC2D20.TEMPLATES.POISON: VENENO
+AC2D20.TEMPLATES.Power: Poder
+AC2D20.TEMPLATES.Qualities: Qualidades
+AC2D20.TEMPLATES.RANGE: Alcance
+AC2D20.TEMPLATES.Rank: Ranque
+AC2D20.TEMPLATES.Ranks_current_maximum: Ranques [atual/máximo]
+AC2D20.TEMPLATES.rating: Classificação
+AC2D20.TEMPLATES.Re_roll: Re-rolar
+AC2D20.TEMPLATES.Requirements: Requerimento
+AC2D20.TEMPLATES.Resistance: Resistência
+AC2D20.TEMPLATES.Resistances: Resistências
+AC2D20.TEMPLATES.RESISTANCES: RESISTÊNCIAS
+AC2D20.TEMPLATES.Resources: Recursos
+AC2D20.TEMPLATES.Restriction: Restrição
+AC2D20.TEMPLATES.ritual_requirements: Requerimentos
+AC2D20.TEMPLATES.ritual_resistance: Resistência
+AC2D20.TEMPLATES.ritual_steps: Passos do Ritual
+AC2D20.TEMPLATES.ritual_stress: Estresse do Ritual
 AC2D20.TEMPLATES.Ritual: Ritual
-AC2D20.TEMPLATES.Roll_Formula: Roll Formula
-AC2D20.TEMPLATES.Salvo: Salvo
-AC2D20.TEMPLATES.scale: Scale
-AC2D20.TEMPLATES.Size: Size
-AC2D20.TEMPLATES.SizeLevels.Major: Major
-AC2D20.TEMPLATES.SizeLevels.Minor: Minor
+AC2D20.TEMPLATES.Roll_Formula: Rolar Fórmula
+AC2D20.TEMPLATES.Salvo: Rajada
+AC2D20.TEMPLATES.scale: Escala
+AC2D20.TEMPLATES.Size: Tamanho
+AC2D20.TEMPLATES.SizeLevels.Major: Principal
+AC2D20.TEMPLATES.SizeLevels.Minor: Secundário
 AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
-AC2D20.TEMPLATES.Skill_Focus: Skill Focus
-AC2D20.TEMPLATES.skill_focus: Skill/Focus
-AC2D20.TEMPLATES.Skill_Value: Skill Value
-AC2D20.TEMPLATES.Skill: Skill
-AC2D20.TEMPLATES.SkillFocus: Skill Focus
-AC2D20.TEMPLATES.Skills: Skills
-AC2D20.TEMPLATES.Source: Source
-AC2D20.TEMPLATES.SpecialRule: SpecialRule
-AC2D20.TEMPLATES.SpecialRules: Special Rules
-AC2D20.TEMPLATES.speed: Speed
-AC2D20.TEMPLATES.Spells_Rituals: Spells And Rituals
-AC2D20.TEMPLATES.Spells: Spells
+AC2D20.TEMPLATES.Skill_Focus: Foco da Habilidade
+AC2D20.TEMPLATES.skill_focus: Habilidade/Foco
+AC2D20.TEMPLATES.Skill_Value: Valor da Habilidade
+AC2D20.TEMPLATES.Skill: Habilidade
+AC2D20.TEMPLATES.SkillFocus: Foco da Habilidade
+AC2D20.TEMPLATES.Skills: Habilidades
+AC2D20.TEMPLATES.Source: Fonte
+AC2D20.TEMPLATES.SpecialRule: RegraEspecial
+AC2D20.TEMPLATES.SpecialRules: Regras Especiais
+AC2D20.TEMPLATES.speed: Velocidade
+AC2D20.TEMPLATES.Spells_Rituals: Feitiços e Tiruais
+AC2D20.TEMPLATES.Spells: Feitiços
 AC2D20.TEMPLATES.Status: Status
-AC2D20.TEMPLATES.Successes: Successes
-AC2D20.TEMPLATES.Talents: Talents
-AC2D20.TEMPLATES.TN: TN
+AC2D20.TEMPLATES.Successes: Sucessos
+AC2D20.TEMPLATES.Talents: Talentos
+AC2D20.TEMPLATES.TN: NA
 AC2D20.TEMPLATES.Total: Total
-AC2D20.TEMPLATES.Truths: Truths
-AC2D20.TEMPLATES.Use_Agility: Use Agility
-AC2D20.TEMPLATES.Use_Brawn: Use Brawn
-AC2D20.TEMPLATES.Use_Coordination: Use Coordination
-AC2D20.TEMPLATES.Use_Insight: Use Insight
-AC2D20.TEMPLATES.Use_Reason: Use Reason
-AC2D20.TEMPLATES.Use_Will: Use Will
-AC2D20.TEMPLATES.Weapon_Qualities: WEAPON QUALITIES
-AC2D20.TEMPLATES.Weapon_Type: Weapon Type
-AC2D20.TEMPLATES.Weapons: Weapons
-AC2D20.UI.Add: Add
-AC2D20.UI.CarryWeight: Carry Weight
-AC2D20.UI.Cost: Cost
-AC2D20.UI.Damage: Damage
-AC2D20.UI.favorite: Favorite
-AC2D20.UI.INVENTORY: Inventory
-AC2D20.UI.Name: Name
-AC2D20.UI.ORIGIN: ORIGIN
-AC2D20.UI.OTHER: Other
-AC2D20.UI.Quantity: Quantity
-AC2D20.UI.Rarity: Rarity
-AC2D20.UI.SPECIAL_RULE: Special Rule
-AC2D20.UI.stashed: Stashed
-AC2D20.UI.Type: Type
-AC2D20.UI.UNSORTED: Unsorted
-AC2D20.UI.Weight: Weight
-AC2D20.VEHICLES.QUALITIES.cargo: Cargo
-AC2D20.VEHICLES.QUALITIES.cumbersome: Cumbersome
-AC2D20.VEHICLES.QUALITIES.enclosed: Enclosed
-AC2D20.VEHICLES.QUALITIES.exposed: Exposed
-AC2D20.VEHICLES.QUALITIES.highPerformance: High Performance
-AC2D20.VEHICLES.QUALITIES.singleSeat: Single Seat
-AC2D20.VEHICLES.QUALITIES.tough: Tough
-AC2D20.WEAPONS.damageEffect.area: Area
-AC2D20.WEAPONS.damageEffect.backlash: Backlash
-AC2D20.WEAPONS.damageEffect.drain: Drain
-AC2D20.WEAPONS.damageEffect.intense: Intense
-AC2D20.WEAPONS.damageEffect.persistent: Persistent
-AC2D20.WEAPONS.damageEffect.piercing: Piercing
-AC2D20.WEAPONS.damageEffect.snare: Snare
-AC2D20.WEAPONS.damageEffect.stun: Stun
-AC2D20.WEAPONS.damageEffect.vicious: Vicious
-AC2D20.WEAPONS.damageType.energy: Energy
-AC2D20.WEAPONS.damageType.physical: Physical
-AC2D20.WEAPONS.damageType.poison: Poison
-AC2D20.WEAPONS.damageType.radiation: Radiation
-AC2D20.WEAPONS.qualities: Qualities
-AC2D20.WEAPONS.type: Weapon Type
-AC2D20.WEAPONS.weaponQuality.accurate: Accurate
-AC2D20.WEAPONS.weaponQuality.bane: Bane
-AC2D20.WEAPONS.weaponQuality.closeQuarters: Close Quarters
-AC2D20.WEAPONS.weaponQuality.cumbersome: Cumbersome
-AC2D20.WEAPONS.weaponQuality.debilitating: Debilitating
-AC2D20.WEAPONS.weaponQuality.escalation: Escalation
-AC2D20.WEAPONS.weaponQuality.giant-killer: Giant-Killer
-AC2D20.WEAPONS.weaponQuality.heavy: Heavy
-AC2D20.WEAPONS.weaponQuality.hidden: Hidden
+AC2D20.TEMPLATES.Truths: Verdades
+AC2D20.TEMPLATES.Use_Agility: Usar Agilidade
+AC2D20.TEMPLATES.Use_Brawn: Usar Músculo
+AC2D20.TEMPLATES.Use_Coordination: Usar Coordenação
+AC2D20.TEMPLATES.Use_Insight: Usar Intuição
+AC2D20.TEMPLATES.Use_Reason: Usar Razão
+AC2D20.TEMPLATES.Use_Will: Usar Vontade
+AC2D20.TEMPLATES.Weapon_Qualities: QUALIDADES DA ARMA
+AC2D20.TEMPLATES.Weapon_Type: Tipo de Arma
+AC2D20.TEMPLATES.Weapons: Armas
+AC2D20.UI.Add: Adic
+AC2D20.UI.CarryWeight: Peso
+AC2D20.UI.Cost: Custo
+AC2D20.UI.Damage: Dano
+AC2D20.UI.favorite: Favorito
+AC2D20.UI.INVENTORY: Inventário
+AC2D20.UI.Name: Nome
+AC2D20.UI.ORIGIN: ORIGEM
+AC2D20.UI.OTHER: Outro
+AC2D20.UI.Quantity: Quantidade
+AC2D20.UI.Rarity: Raridade
+AC2D20.UI.SPECIAL_RULE: Regra Especial
+AC2D20.UI.stashed: Guardado
+AC2D20.UI.Type: Tipo
+AC2D20.UI.UNSORTED: Não Listado
+AC2D20.UI.Weight: Peso
+AC2D20.VEHICLES.QUALITIES.cargo: Carga
+AC2D20.VEHICLES.QUALITIES.cumbersome: Desajeitado
+AC2D20.VEHICLES.QUALITIES.enclosed: Fechado
+AC2D20.VEHICLES.QUALITIES.exposed: Exposto
+AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Performance
+AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
+AC2D20.VEHICLES.QUALITIES.tough: Resistente
+AC2D20.WEAPONS.damageEffect.area: Área
+AC2D20.WEAPONS.damageEffect.backlash: Retaliar
+AC2D20.WEAPONS.damageEffect.drain: Drenar
+AC2D20.WEAPONS.damageEffect.intense: Intenso
+AC2D20.WEAPONS.damageEffect.persistent: Persistente
+AC2D20.WEAPONS.damageEffect.piercing: Perfurar
+AC2D20.WEAPONS.damageEffect.snare: Capturar
+AC2D20.WEAPONS.damageEffect.stun: Atordoar
+AC2D20.WEAPONS.damageEffect.vicious: Cruel
+AC2D20.WEAPONS.damageType.energy: Energia
+AC2D20.WEAPONS.damageType.physical: Físico
+AC2D20.WEAPONS.damageType.poison: Veneno
+AC2D20.WEAPONS.damageType.radiation: Radiação
+AC2D20.WEAPONS.qualities: Qualidades
+AC2D20.WEAPONS.type: Tipo de Arma
+AC2D20.WEAPONS.weaponQuality.accurate: Preciso
+AC2D20.WEAPONS.weaponQuality.bane: Banir
+AC2D20.WEAPONS.weaponQuality.closeQuarters: Curto Alcance
+AC2D20.WEAPONS.weaponQuality.cumbersome: Desajeitado
+AC2D20.WEAPONS.weaponQuality.debilitating: Debilitante
+AC2D20.WEAPONS.weaponQuality.escalation: Agravante
+AC2D20.WEAPONS.weaponQuality.giant-killer: Mata-Gigantes
+AC2D20.WEAPONS.weaponQuality.heavy: Pesado
+AC2D20.WEAPONS.weaponQuality.hidden: Oculto
 AC2D20.WEAPONS.weaponQuality.hunger: Hunger
-AC2D20.WEAPONS.weaponQuality.inaccurate: Inaccurate
-AC2D20.WEAPONS.weaponQuality.indirect: Indirect
-AC2D20.WEAPONS.weaponQuality.munition: Munition
-AC2D20.WEAPONS.weaponQuality.parrying: Parrying
-AC2D20.WEAPONS.weaponQuality.reliable: Reliable
-AC2D20.WEAPONS.weaponQuality.subtle: Subtle
-AC2D20.WEAPONS.weaponQuality.unreliable: Unreliable
-AC2D20.WEAPONS.weaponTypes.agi: Melee
-AC2D20.WEAPONS.weaponTypes.coo: Ranged
-AC2D20.WEAPONS.weaponTypes.Melee: Melee
+AC2D20.WEAPONS.weaponQuality.inaccurate: Impreciso
+AC2D20.WEAPONS.weaponQuality.indirect: Indireto
+AC2D20.WEAPONS.weaponQuality.munition: Munição
+AC2D20.WEAPONS.weaponQuality.parrying: Aparo
+AC2D20.WEAPONS.weaponQuality.reliable: Confiável
+AC2D20.WEAPONS.weaponQuality.subtle: Sutil
+AC2D20.WEAPONS.weaponQuality.unreliable: Duvidoso
+AC2D20.WEAPONS.weaponTypes.agi: Corpo-a-Corpo
+AC2D20.WEAPONS.weaponTypes.coo: Alcance
+AC2D20.WEAPONS.weaponTypes.Melee: Corpo-a-Corpo
 AC2D20.WEAPONS.weaponTypes.Mental: Mental
-AC2D20.WEAPONS.weaponTypes.Ranged: Ranged
+AC2D20.WEAPONS.weaponTypes.Ranged: Alcance
 AC2D20.WEAPONS.weaponTypes.wil: Mental
-ACTOR.NpcType.Lieutenant: Lieutenant
-ACTOR.NpcType.Nemesis: Nemesis
-ACTOR.NpcType.Trooper: Trooper
-ACTOR.Vehicle.Cover: Cover
-ACTOR.Vehicle.Impact: Impact
-ACTOR.Vehicle.Passengers: Passengers
-TYPES.Actor.character: Character
-TYPES.Actor.npc: NPC
-TYPES.Actor.vehicle: Vehicle
-TYPES.Item.armor: Armor
-TYPES.Item.equipment: Equipment
-TYPES.Item.skill: Skill
-TYPES.Item.skillkit: Skill Kit
-TYPES.Item.special_rule: Special Rule
-TYPES.Item.spell: Spell
-TYPES.Item.talent: Talent
-TYPES.Item.weapon: Weapon
+ACTOR.NpcType.Lieutenant: Tenente
+ACTOR.NpcType.Nemesis: Nêmesis
+ACTOR.NpcType.Trooper: Soldado
+ACTOR.Vehicle.Cover: Cobertura
+ACTOR.Vehicle.Impact: Impacto
+ACTOR.Vehicle.Passengers: Passageiros
+TYPES.Actor.character: Personagem
+TYPES.Actor.npc: NPJ
+TYPES.Actor.vehicle: Veículo
+TYPES.Item.armor: Armadura
+TYPES.Item.equipment: Equipamento
+TYPES.Item.skill: Perícia
+TYPES.Item.skillkit: Kit de Perícia
+TYPES.Item.special_rule: Regra Especial
+TYPES.Item.spell: Feitiço
+TYPES.Item.talent: Talento
+TYPES.Item.weapon: Arma
