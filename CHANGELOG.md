@@ -1,5 +1,8 @@
 # v11.4.0
 
+## Bugfix
+- [#1] compendium-skills setting needs to re-run some of the setup in Ready hook when changed
+
 ## Chore
 - [#21] Fix "singleSeat:" vehicle template field name
 - [#41] Ensure the system has no compatibility issues in Foundry V12 Development Releases

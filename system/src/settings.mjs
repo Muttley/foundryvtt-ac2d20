@@ -59,6 +59,7 @@ export function registerSettings() {
 		config: true,
 		default: "ac2d20.skills",
 		type: String,
+		requiresReload: true,
 	});
 
 	game.settings.register(SYSTEM_ID, "hoversJsonLocation", {
