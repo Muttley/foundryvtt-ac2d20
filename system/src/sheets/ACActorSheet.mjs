@@ -9,11 +9,11 @@ export default class ACActorSheet extends ActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["ac2d20", "sheet", "actor"],
 			template: "systems/ac2d20/templates/actor/actor-sheet.hbs",
 			width: 720,
-			height: 780,
+			height: 880,
 			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }],
 		});
 	}
@@ -185,6 +185,7 @@ export default class ACActorSheet extends ActorSheet {
 			i.img = i.img || DEFAULT_TOKEN;
 			// Append to gear.
 			if (i.type === "skill") {
+				i.localizedName = ac2d20.utils.getLocalizedSkillName(i.name);
 				skills.push(i);
 			}
 			else if (i.type === "talent") {
@@ -345,18 +346,12 @@ export default class ACActorSheet extends ActorSheet {
 			if (!skillName) return;
 
 			const skill = this.actor.items.getName(skillName);
-			let skillRank = 0;
-			try {
-				skillRank = skill.system.value;
-			}
-			catch(err) { }
+			const skillRank = skill?.system?.value ?? 0;
+
 			let isFocus = false;
-			try {
-				for (const [, value] of Object.entries(skill.system.focuses)) {
-					if (value.title === focusName && value.isfocus) isFocus = true;
-				}
+			for (const [, value] of Object.entries(skill?.system?.focuses ?? {})) {
+				if (value.title === focusName && value.isfocus) isFocus = true;
 			}
-			catch(err) { }
 
 			const attrValue = -1;
 			let prefAttribute = "ins";

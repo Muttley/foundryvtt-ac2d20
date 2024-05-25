@@ -3,6 +3,12 @@ export const registerHandlebarsHelpers = function() {
 	/* -------------------------------------------- */
 	/*  GENERAL HELPERS                             */
 	/* -------------------------------------------- */
+	Handlebars.registerHelper("activeEffectIcon", effect => {
+		return ac2d20.utils.foundryMinVersion(12)
+			? effect.img
+			: effect.icon;
+	});
+
 	Handlebars.registerHelper("concat", function() {
 		let outStr = "";
 		for (let arg in arguments) {
@@ -83,8 +89,12 @@ export const registerHandlebarsHelpers = function() {
 
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
 		if (key === "") return [];
-		const _skill = CONFIG.AC2D20.SKILLS.filter(s => s.key === key);
-		return _skill[0]?.focuses ?? [];
+		const skill = CONFIG.AC2D20.SKILLS.find(s => s.key === key);
+		const focuses = {};
+		for (const focus of skill.focuses) {
+			focuses[focus] = ac2d20.utils.getLocalizedFocusName(focus);
+		}
+		return focuses;
 	});
 
 	Handlebars.registerHelper("getWeaponEffects", function(effect) {
@@ -140,6 +150,34 @@ export const registerHandlebarsHelpers = function() {
 	Handlebars.registerHelper("hasInjury", function(txt) {
 		if (txt.length > 0) return true;
 		else return false;
+	});
+
+	Handlebars.registerHelper("listSkillFocuses", function(skill) {
+		const elements = [];
+
+		for (const focus of skill?.system?.focuses ?? []) {
+			const resultHtml = document.createElement("span");
+
+			resultHtml.classList.add("skill-focus", "clickable", "roll-focus");
+			if (focus.isfocus) resultHtml.classList.add("focused");
+
+			resultHtml.dataset.itemId = skill._id;
+
+			resultHtml.innerHTML = ac2d20.utils.getLocalizedFocusName(focus.title);
+
+			elements.push(resultHtml.outerHTML);
+		}
+
+		let listString = "";
+
+		if (elements.length > 0) {
+			listString = elements.join(",&nbsp;&nbsp;");
+		}
+		else {
+			listString = "&mdash;";
+		}
+
+		return listString;
 	});
 
 	Handlebars.registerHelper("getAttributeBonus", function(actor, weaponType) {
@@ -205,5 +243,12 @@ export const registerHandlebarsHelpers = function() {
 
 	Handlebars.registerHelper("getTooltipFromConfigKey", function(key) {
 		return key.split(".").reduce((o, i) => o[i], CONFIG);
+	});
+
+	Handlebars.registerHelper("select", function(selected, options) {
+		const escapedValue = RegExp.escape(Handlebars.escapeExpression(selected));
+		const rgx = new RegExp(` value=["']${escapedValue}["']`);
+		const html = options.fn(this);
+		return html.replace(rgx, "$& selected");
 	});
 };

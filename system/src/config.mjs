@@ -21,6 +21,12 @@ AC2D20.abilityAbbreviations = {
 	wil: "AC2D20.AbilityWilAbr",
 };
 
+AC2D20.DEFAULT_TOKENS = {
+	character: "systems/ac2d20/assets/doc-icons/character.svg",
+	npc: "systems/ac2d20/assets/doc-icons/npc.svg",
+	vehicle: "systems/ac2d20/assets/doc-icons/vehicle.svg",
+};
+
 AC2D20.JOURNAL_UUIDS = {
 	releaseNotes: "Compendium.ac2d20.system-documentation.JournalEntry.Q2jykbXOXgzNpcSR",
 };
@@ -57,4 +63,21 @@ AC2D20.spellcastingTypes = {
 	dabbler: "dabbler",
 };
 
+export async function buildSkillTranslations() {
+	CONFIG.AC2D20.SKILL_NAMES = {};
 
+	const skills = await ac2d20.utils.getSkillsCompendium().getDocuments();
+
+	for (const skill of skills) {
+		// Get the localized name of a skill, if there is no
+		// localization then it is likely a custom skill, in which
+		// case we will just use it's original name
+		//
+		const nameKey = `AC2D20.SKILL.${skill.name.toUpperCase()}`;
+		let localizedName = game.i18n.localize(nameKey);
+
+		if (localizedName === nameKey) localizedName = skill.name;
+
+		CONFIG.AC2D20.SKILL_NAMES[nameKey] = localizedName;
+	}
+}

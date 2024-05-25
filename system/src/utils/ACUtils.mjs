@@ -1,5 +1,37 @@
 export default class ACUtils {
 
+	static foundryMinVersion(version) {
+		const majorVersion = parseInt(game.version.split(".")[0]);
+		return majorVersion >= version;
+	}
+
+	static getLocalizedFocusName(name) {
+		const i18nKey = `AC2D20.FOCUS.${name}`;
+		return this.getLocalizedStringIfAvailable(i18nKey, name);
+	}
+
+	static getLocalizedSkillName(name) {
+		const i18nKey = `AC2D20.SKILL.${name.toUpperCase()}`;
+		return this.getLocalizedStringIfAvailable(i18nKey, name);
+	}
+
+	static getLocalizedStringIfAvailable(i18nKey, originalString) {
+		let localized = game.i18n.localize(i18nKey);
+
+		// No localized version, so we return the original
+		if (localized === i18nKey) return originalString;
+
+		return localized;
+	}
+
+	static getMessageStyles() {
+		const messageStyles = this.foundryMinVersion(12)
+			? CONST.CHAT_MESSAGE_STYLES
+			: CONST.CHAT_MESSAGE_TYPES;
+
+		return messageStyles;
+	}
+
 	// If this is a new release, show the release notes to the GM the first time
 	// they login
 	static async showNewReleaseNotes() {

@@ -8,7 +8,7 @@ export default class ACItemSheet extends ItemSheet {
 
 	/** @override */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["ac2d20", "sheet", "item"],
 			width: 520,
 			height: 560,

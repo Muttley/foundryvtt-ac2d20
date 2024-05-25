@@ -116,28 +116,42 @@ export default class ACActor extends Actor {
 
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
-		// set icon based on actor type
-		if (data.img === undefined) {
-			let ico = `systems/ac2d20/assets/doc-icons/${this.type}.svg`;
-			this.updateSource({ img: ico });
-		}
-		// Setup Tokens
+
+		// Set some Token defaults
+		//
+		const prototypeToken = {
+			actorLink: false,
+			disposition: CONST.TOKEN_DISPOSITIONS.HOSTILE,
+			name: data.name, // Set token name to actor name
+			sight: {
+				enabled: true,
+			},
+			texture: foundry.utils.duplicate(this.prototypeToken.texture),
+		};
+
 		if (this.type === "character") {
-			this.prototypeToken.updateSource({
-				actorLink: true,
-				sight: {
-					enabled: true,
-				},
-				disposition: 1,
-			});
+			prototypeToken.actorLink = true;
+			prototypeToken.disposition = CONST.TOKEN_DISPOSITIONS.FRIENDLY;
 		}
-		if (this.type === "npc") {
-			this.prototypeToken.updateSource({ sight: { enabled: true }, disposition: -1 });
-		}
+
 		if (this.type === "vehicle") {
-			this.prototypeToken.updateSource({ sight: { enabled: true }, disposition: 0 });
+			prototypeToken.disposition = CONST.TOKEN_DISPOSITIONS.NEUTRAL;
 		}
-		// Add Skills to Characters
+
+		const update = {prototypeToken};
+		if (!data.img) {
+			const image = CONFIG.AC2D20.DEFAULT_TOKENS[data.type] ?? undefined;
+
+			if (image) {
+				update.img = image;
+				update.prototypeToken.texture = {
+					src: image,
+				};
+			}
+		}
+
+		// Add default Skills to Characters if necessary
+		//
 		if (this.type === "character") {
 			// If the Actor data already contains skill items then this is an
 			// Actor being duplicated and we don't want to touch their
@@ -147,22 +161,23 @@ export default class ACActor extends Actor {
 				&& data.items.filter(i => i.type === "skill").length > 0;
 
 			if (!alreadyHasSkills) {
-				let skillsCompendium = game.settings.get("ac2d20", "compendium-skills");
+				let skillsCompendium = game.settings.get(
+					"ac2d20", "compendium-skills"
+				);
 
 				if (!skillsCompendium) skillsCompendium = "ac2d20.skills";
 
-				let packSkills =
-					await game.packs.get(skillsCompendium).getDocuments();
+				const packSkills = game.packs.get(skillsCompendium).getDocuments();
 
-				const items = this.items.map(i => i.toObject());
+				update.items = this.items.map(i => i.toObject());
 
 				packSkills.forEach(s => {
-					items.push(s.toObject());
+					update.items.push(s.toObject());
 				});
-
-				this.updateSource({ items });
 			}
 		}
+
+		await this.updateSource(update);
 	}
 
 	getRollShortcuts() {

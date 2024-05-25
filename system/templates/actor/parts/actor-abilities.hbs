@@ -1,9 +1,19 @@
 <div class="attribute-grid" style="margin-bottom: 10px;">
-	<div class='attribute-cell olive'>{{localize "AC2D20.TEMPLATES.Attribute"}}</div>
-	{{#each system.attributes as |attribute key|}}
-	<div class="attribute-cell green">
-		<label class="resource-label align-left roll-attribute clickable" data-label="{{attribute.label}}" data-attr="{{key}}"><strong>{{localize (concat 'AC2D20.Ability.' key)}}</strong></label>
+	<div class='attribute-cell olive'>
+		{{localize "AC2D20.TEMPLATES.Attribute"}}
 	</div>
+	{{#each system.attributes as |attribute key|}}
+		<div class="attribute-cell green">
+			<label
+				class="resource-label align-left roll-attribute clickable"
+				data-attr="{{key}}"
+				data-label="{{attribute.label}}"
+			>
+				<strong>
+					{{localize (concat 'AC2D20.Ability.' key)}}
+				</strong>
+			</label>
+		</div>
 	{{/each}}
 
 	<div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.rating"}}</strong></div>
@@ -114,23 +124,28 @@
 </div>
 
 <div class="section-title">
-	<h3>{{localize "AC2D20.TEMPLATES.Skills"}}</h3>
+	<h3>
+		{{localize "AC2D20.TEMPLATES.Skills"}}
+	</h3>
 	<span class="right-slope olive"></span>
 </div>
 <div class="skills">
 	{{#each skills as |item id|}}
-	<div class="item skill editable-item" data-item-id="{{item._id}}">
-		<label class="skill-name clickable roll-skill">
-			{{item.name}}
-		</label>
-		<div class="skill-value">
-			<input type="number" class="skill-value-input num-short-2 borderless" name="system.value" value="{{system.value}}">
+		<div class="item skill editable-item" data-item-id="{{item._id}}">
+			<label class="skill-name clickable roll-skill">
+				{{item.localizedName}}
+			</label>
+			<div class="skill-value">
+				<input
+					class="skill-value-input num-short-2 borderless"
+					name="system.value"
+					type="number"
+					value="{{system.value}}"
+				>
+			</div>
+			<div class="skill-focuses">
+				{{{listSkillFocuses item}}}
+			</div>
 		</div>
-		<div class="skill-focuses">
-			{{#each item.system.focuses}}
-			<span class="skill-focus clickable roll-focus {{#if (eq this.isfocus true)}}focused{{/if}}" data-item-id="{{item._id}}">{{this.title}}</span>,&nbsp;
-			{{/each}}
-		</div>
-	</div>
 	{{/each}}
 </div>

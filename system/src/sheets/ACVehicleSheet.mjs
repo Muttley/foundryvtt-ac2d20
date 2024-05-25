@@ -8,8 +8,8 @@ export default class ACVehicleSheet extends ACActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
-			classes: ["ac2d20", "sheet", "actor"],
+		return foundry.utils.mergeObject(super.defaultOptions, {
+			classes: ["ac2d20", "sheet", "vehicle"],
 			template: "systems/ac2d20/templates/actor/vehicle-sheet.hbs",
 			width: 550,
 			height: 550,

@@ -11,7 +11,7 @@ export default class MomentumTracker extends Application {
 
 	// override
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			title: "AP Tracker",
 			template: "systems/ac2d20/templates/ap/momentum-tracker.hbs",
 			classes: ["ac2d20", "momentum-tracker"],
