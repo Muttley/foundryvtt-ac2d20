@@ -1,4 +1,3 @@
-"AC2D20.VEHICLES.QUALITIES.singleSeat:": Assento Único
 AC2D20.Ability.agi: Agilidade
 AC2D20.Ability.bra: Músculo
 AC2D20.Ability.coo: Coordenação
@@ -120,6 +119,8 @@ AC2D20.SETTINGS.hoverHint: Localização do arquivo json que contém o texto das
 AC2D20.SETTINGS.hoverName: Pairar Mouse Sobre Arquivo JSON
 AC2D20.SETTINGS.maxappHint: Permite que os jogadores configurem o app máximo do grupo. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.maxappName: Os Jogadores Podem Configurar o app Máximo
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.showmomentumName: Mostrar Ímpeto do Mestre aos Jogadores
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)

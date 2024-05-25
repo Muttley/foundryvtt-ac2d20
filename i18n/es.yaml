@@ -1,4 +1,3 @@
-"AC2D20.VEHICLES.QUALITIES.singleSeat:": Asiento único
 AC2D20.Ability.agi: Agilidad
 AC2D20.Ability.bra: Músculo
 AC2D20.Ability.coo: Coordinación
@@ -120,6 +119,8 @@ AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descr
 AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
 AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
 AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Muestra la ventana del momentum del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
 AC2D20.SETTINGS.showmomentumName: Mostrar momentum del GM a los jugadores
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
