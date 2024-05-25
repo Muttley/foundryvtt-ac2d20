@@ -1,6 +1,14 @@
 # v11.4.0
 
+## Chore
+- [#41] Ensure the system has no compatibility issues in Foundry V12 Development Releases
+- [#42] globalThis.mergeObject which must now be accessed via foundry.utils.mergeObject *(Foundry v12 compatibility)*
+- [#43] The {{select}} handlebars helper is deprecated *(Foundry v12 compatibility)*
+- [#44] ActiveEffect._getSourceName is deprecated *(Foundry v12 compatibility)*
+- [#45] ActiveEffect#icon has been migrated to ActiveEffect#img *(Foundry v12 compatibility)*
+- [#48] Add contributed Portuguese, Brazilian translation
 
+*Many thanks to **Leo Tusi** for providing **Portuguese, Brazilian** translation data.*
 
 ---
 
