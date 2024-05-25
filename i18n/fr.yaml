@@ -120,6 +120,8 @@ AC2D20.SETTINGS.hoverHint: Emplacement du fichier json contenant le texte pour l
 AC2D20.SETTINGS.hoverName: Survol de la souris du fichier JSON
 AC2D20.SETTINGS.maxappHint: Permet aux joueurs de configurer le max de PA du groupe. Nécessite d'être actualisé du côté des joueurs.
 AC2D20.SETTINGS.maxappName: Les joueurs peuvent configurer le max de PA
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Affiche la fenêtre GM de Momentum pour tout le monde. Nécessite une actualisation du côté des joueurs.
 AC2D20.SETTINGS.showmomentumName: Afficher le Momentum du GM à tous les joueurs
 AC2D20.SETTINGS.systemVersion.hint: Enregistre le numéro de version système actuel d'Achtung! Cthulhu 2d20 (ne modifiez pas ce numéro à moins que vous ne sachiez ce que vous faîtes)
