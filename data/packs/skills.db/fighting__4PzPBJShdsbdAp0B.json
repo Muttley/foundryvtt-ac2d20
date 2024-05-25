@@ -1,7 +1,12 @@
 {
 	"_id": "4PzPBJShdsbdAp0B",
 	"_key": "!items!4PzPBJShdsbdAp0B",
-	"data": {
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Fighting",
+	"system": {
 		"defaultAttribute": "agi",
 		"description": "",
 		"favorite": false,
@@ -41,15 +46,6 @@
 		],
 		"summary": "",
 		"value": 0
-	},
-	"effects": [
-	],
-	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
-	"name": "Fighting",
-	"permission": {
-		"dCBvoTjpxVSNlg1z": 3,
-		"default": 0
 	},
 	"type": "skill"
 }

@@ -1,7 +1,12 @@
 {
 	"_id": "rZWxjcBHfVxOvtRV",
 	"_key": "!items!rZWxjcBHfVxOvtRV",
-	"data": {
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Medicine",
+	"system": {
 		"defaultAttribute": "agi",
 		"description": "",
 		"favorite": false,
@@ -33,15 +38,6 @@
 		],
 		"summary": "",
 		"value": 0
-	},
-	"effects": [
-	],
-	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
-	"name": "Medicine",
-	"permission": {
-		"dCBvoTjpxVSNlg1z": 3,
-		"default": 0
 	},
 	"type": "skill"
 }

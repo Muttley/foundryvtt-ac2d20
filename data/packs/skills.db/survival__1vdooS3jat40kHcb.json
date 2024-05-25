@@ -1,7 +1,12 @@
 {
 	"_id": "1vdooS3jat40kHcb",
 	"_key": "!items!1vdooS3jat40kHcb",
-	"data": {
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Survival",
+	"system": {
 		"defaultAttribute": "agi",
 		"description": "",
 		"favorite": false,
@@ -33,15 +38,6 @@
 		],
 		"summary": "",
 		"value": 0
-	},
-	"effects": [
-	],
-	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
-	"name": "Survival",
-	"permission": {
-		"dCBvoTjpxVSNlg1z": 3,
-		"default": 0
 	},
 	"type": "skill"
 }
