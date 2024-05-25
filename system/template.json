@@ -156,32 +156,25 @@
 			},
 			"qualities": {
 				"cargo": {
-					"description": "",
 					"rank": 1,
 					"value": false
 				},
 				"cumbersome": {
-					"description": "",
 					"value": false
 				},
 				"enclosed": {
-					"description": "",
 					"value": false
 				},
 				"exposed": {
-					"description": "",
 					"value": false
 				},
 				"highPerformance": {
-					"description": "",
 					"value": false
 				},
-				"singleSeat:": {
-					"description": "",
+				"singleSeat": {
 					"value": false
 				},
 				"tough": {
-					"description": "",
 					"rank": 1,
 					"value": false
 				}

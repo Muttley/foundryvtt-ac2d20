@@ -1,6 +1,7 @@
 # v11.4.0
 
 ## Chore
+- [#21] Fix "singleSeat:" vehicle template field name
 - [#41] Ensure the system has no compatibility issues in Foundry V12 Development Releases
 - [#42] globalThis.mergeObject which must now be accessed via foundry.utils.mergeObject *(Foundry v12 compatibility)*
 - [#43] The {{select}} handlebars helper is deprecated *(Foundry v12 compatibility)*
