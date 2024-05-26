@@ -6,6 +6,7 @@
 
 ## Bugfix
 - [#1] compendium-skills setting needs to re-run some of the setup in Ready hook when changed
+- [#51] Skill and Focus names not translated on character sheet
 
 ## Chore
 - [#21] Fix "singleSeat:" vehicle template field name
