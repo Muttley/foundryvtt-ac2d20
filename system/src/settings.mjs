@@ -1,6 +1,5 @@
-const debounceReload = debounce(() => window.location.reload(), 100);
-
-export function registerSettings() {
+export default async function() {
+	console.log(`${SYSTEM_NAME} | Registering game settings`);
 
 	// ------------------
 	//  MOMENTUM TRACKER
@@ -55,10 +54,10 @@ export function registerSettings() {
 	game.settings.register(SYSTEM_ID, "compendium-skills", {
 		name: game.i18n.localize("AC2D20.SETTINGS.compendiumName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.compendiumHint"),
+		type: String,
+		default: "ac2d20.skills",
 		scope: "world",
 		config: true,
-		default: "ac2d20.skills",
-		type: String,
 		requiresReload: true,
 	});
 
@@ -71,7 +70,7 @@ export function registerSettings() {
 		type: String,
 		filePicker: true,
 		restricted: true,
-		onChange: debounceReload,
+		requiresReload: true,
 	});
 
 	game.settings.register(SYSTEM_ID, "combatTrackerMomentumUpdate", {

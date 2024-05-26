@@ -6,8 +6,8 @@ import * as sheets from "../sheets/_module.mjs";
 
 import { preloadHandlebarsTemplates } from "../templates.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
-import { registerSettings } from "../settings.mjs";
 import { registerTextEditorEnrichers } from "../enrichers.mjs";
+import registerSettings from "../settings.mjs";
 
 import Dialog2d20 from "../roller/Dialog2d20.mjs";
 import DialogD6 from "../roller/DialogD6.mjs";

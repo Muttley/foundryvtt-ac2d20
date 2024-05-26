@@ -27,6 +27,8 @@ AC2D20.DEFAULT_TOKENS = {
 	vehicle: "systems/ac2d20/assets/doc-icons/vehicle.svg",
 };
 
+AC2D20.ITEM_COMPENDIUMS = {};
+
 AC2D20.JOURNAL_UUIDS = {
 	releaseNotes: "Compendium.ac2d20.system-documentation.JournalEntry.Q2jykbXOXgzNpcSR",
 };

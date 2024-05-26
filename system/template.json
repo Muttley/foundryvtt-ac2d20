@@ -66,7 +66,13 @@
 						"text": ""
 					}
 				],
-				"truthsText": ""
+				"truthsText": "",
+				"xp": {
+					"log": [],
+					"min": 0,
+					"spent": 0,
+					"value": 0
+				}
 			},
 			"derived": {
 				"armorResistance": {
@@ -124,6 +130,7 @@
 			"archetype": "",
 			"background": "",
 			"characteristic": "",
+			"languages": "",
 			"nationality": "",
 			"rank": "",
 			"spellcastingType": "traditional",

@@ -1,5 +1,9 @@
 # v11.4.0
 
+## Enhancement
+- [#33] Add languages field to character sheet
+- [#35] Add XP field to character sheet
+
 ## Bugfix
 - [#1] compendium-skills setting needs to re-run some of the setup in Ready hook when changed
 

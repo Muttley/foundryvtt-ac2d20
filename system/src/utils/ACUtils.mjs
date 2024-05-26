@@ -5,6 +5,22 @@ export default class ACUtils {
 		return majorVersion >= version;
 	}
 
+	static async getAvailableItemCompendiumSelectData() {
+		const compendiumChoices = {};
+
+		game.packs.filter(
+			pack => pack.metadata.type === "Item"
+		).sort(
+			(a, b) => a.metadata.label.localeCompare(b.metadata.label)
+		).forEach(
+			pack => {
+				compendiumChoices[pack.metadata.id] = pack.metadata.label;
+			}
+		);
+
+		return compendiumChoices;
+	}
+
 	static getLocalizedFocusName(name) {
 		const i18nKey = `AC2D20.FOCUS.${name}`;
 		return this.getLocalizedStringIfAvailable(i18nKey, name);
