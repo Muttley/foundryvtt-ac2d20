@@ -17,7 +17,7 @@ export default class Roller2D20 {
 		let formula = `${dicenum}d20`;
 		let roll = new Roll(formula);
 
-		await roll.evaluate({ async: true });
+		await roll.evaluate();
 
 		await Roller2D20.parseD20Roll({
 			rollname: rollname,
@@ -88,7 +88,7 @@ export default class Roller2D20 {
 		let numOfDice = rerollIndexes.length;
 		let formula = `${numOfDice}d20`;
 		let _roll = new Roll(formula);
-		await _roll.evaluate({ async: true });
+		await _roll.evaluate();
 		await Roller2D20.parseD20Roll({
 			rollname: `${rollname} re-roll`,
 			roll: _roll,
@@ -159,7 +159,7 @@ export default class Roller2D20 {
 	static async rollD6({ rollname = "Roll D6", dicenum = 2, itemId = null, actorId = null } = {}) {
 		let formula = `${dicenum}ds`;
 		let roll = new Roll(formula);
-		await roll.evaluate({ async: true });
+		await roll.evaluate();
 		await Roller2D20.parseD6Roll({
 			rollname: rollname,
 			roll: roll,
@@ -218,7 +218,7 @@ export default class Roller2D20 {
 		let numOfDice = rerollIndexes.length;
 		let formula = `${numOfDice}ds`;
 		let _roll = new Roll(formula);
-		await _roll.evaluate({ async: true });
+		await _roll.evaluate();
 		await Roller2D20.parseD6Roll({
 			rollname: `${rollname} [re-roll]`,
 			roll: _roll,
@@ -232,7 +232,7 @@ export default class Roller2D20 {
 	static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
 		let formula = `${dicenum}ds`;
 		let _roll = new Roll(formula);
-		await _roll.evaluate({ async: true });
+		await _roll.evaluate();
 		let newRollName = `${ac2d20Roll.rollname} [+ ${dicenum} DC]`;
 		let oldDiceRolled = ac2d20Roll.dicesRolled;
 		await Roller2D20.parseD6Roll({
