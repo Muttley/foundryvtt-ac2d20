@@ -150,7 +150,9 @@ AC2D20.STRESS.current: Estrés actual
 AC2D20.STRESS.max: Estrés Máximo
 AC2D20.STRESS.stress: Estrés
 AC2D20.TEMPLATES.Abilities: Habilidades
+AC2D20.TEMPLATES.ADD: ADD
 AC2D20.TEMPLATES.AddFocus: Añadir Especialidad
+AC2D20.TEMPLATES.AddTruth: Add Truth
 AC2D20.TEMPLATES.Ammo: Munición
 AC2D20.TEMPLATES.Archetype: Arquetipo
 AC2D20.TEMPLATES.Attacks: ATAQUES
@@ -184,6 +186,7 @@ AC2D20.TEMPLATES.Difficulty: Dificultad
 AC2D20.TEMPLATES.Dur: Dur
 AC2D20.TEMPLATES.Duration: Duración
 AC2D20.TEMPLATES.Edit_Item: Editar Objeto
+AC2D20.TEMPLATES.EditTruth: Edit Truth
 AC2D20.TEMPLATES.Effect: Efecto
 AC2D20.TEMPLATES.Effects: Efectos
 AC2D20.TEMPLATES.Encumbered: SOBRECARGADO
@@ -246,6 +249,7 @@ AC2D20.TEMPLATES.ritual_stress: Estrés Ritual
 AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Fórmula de Tirada
 AC2D20.TEMPLATES.Salvo: Salva
+AC2D20.TEMPLATES.SAVE: SAVE
 AC2D20.TEMPLATES.scale: Escala
 AC2D20.TEMPLATES.Size: Tamaño
 AC2D20.TEMPLATES.SizeLevels.Major: Mayor
@@ -301,6 +305,7 @@ AC2D20.VEHICLES.QUALITIES.exposed: Expuesto
 AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Eficacia
 AC2D20.VEHICLES.QUALITIES.singleSeat: Asiento único
 AC2D20.VEHICLES.QUALITIES.tough: Duro
+AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash: Retroceso
 AC2D20.WEAPONS.damageEffect.drain: Drenar
