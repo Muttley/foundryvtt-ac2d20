@@ -6,6 +6,9 @@
 - [#33] Add languages field to character sheet
 - [#35] Add XP field to character sheet
 - [#52] Create a better method and data structure for managing truths on character sheets
+
+	* Each truth is now an individual entry that can be edited or deleted.  Most existing free text truths should be migrated safely, but there's the odd chance you may need to fix things up manually if you had any newline characters in the middle of a Truth.
+
 - [#54] Auto-calculate max Stress value
 
 	* Also modifes the max stress by fatigue. If the max value is being affected by fatigue then the value is coloured red to indicate this
@@ -23,6 +26,7 @@
 	* You can still expand the item to have it displayed on the sheet if needed
 
 - [#60] Enable toggling skill focus on/off with Ctrl+LeftMouse on character sheet
+- [#62] Add system/login page background image courtesy of Modiphius
 
 ## Bugfix
 - [#1] compendium-skills setting needs to re-run some of the setup in Ready hook when changed
@@ -40,6 +44,8 @@
 - [#56] The async option for Roll#evaluate has been removed *(Foundry v12 compatibility)*
 
 *Many thanks to **Leo Tusi** for providing **Portuguese, Brazilian** translation data.*
+
+*Many thanks to **Modiphius** for allowing us to use on of their excellent **Achtung! Cthulhu** wallpaper images.*
 
 ---
 
