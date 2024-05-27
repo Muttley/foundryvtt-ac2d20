@@ -361,3 +361,7 @@ TYPES.Item.special_rule: Regla especial
 TYPES.Item.spell: Conjuro
 TYPES.Item.talent: Talento
 TYPES.Item.weapon: Arma
+AC2D20.INJURIES.physical: Física
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.treated: Tratada
+AC2D20.INJURIES.nottreated: Sin tratar
