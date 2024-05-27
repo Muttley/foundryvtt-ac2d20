@@ -5,6 +5,7 @@ export default class ACUtils {
 		return majorVersion >= version;
 	}
 
+
 	static async getAvailableItemCompendiumSelectData() {
 		const compendiumChoices = {};
 
@@ -21,15 +22,18 @@ export default class ACUtils {
 		return compendiumChoices;
 	}
 
+
 	static getLocalizedFocusName(name) {
 		const i18nKey = `AC2D20.FOCUS.${name}`;
 		return this.getLocalizedStringIfAvailable(i18nKey, name);
 	}
 
+
 	static getLocalizedSkillName(name) {
 		const i18nKey = `AC2D20.SKILL.${name.toUpperCase()}`;
 		return this.getLocalizedStringIfAvailable(i18nKey, name);
 	}
+
 
 	static getLocalizedStringIfAvailable(i18nKey, originalString) {
 		let localized = game.i18n.localize(i18nKey);
@@ -40,6 +44,7 @@ export default class ACUtils {
 		return localized;
 	}
 
+
 	static getMessageStyles() {
 		const messageStyles = this.foundryMinVersion(12)
 			? CONST.CHAT_MESSAGE_STYLES
@@ -48,8 +53,10 @@ export default class ACUtils {
 		return messageStyles;
 	}
 
-	// If this is a new release, show the release notes to the GM the first time
-	// they login
+
+	// If this is a new release or a new world, show the release notes to the
+	// GM the first time they login
+	//
 	static async showNewReleaseNotes() {
 		if (game.user.isGM) {
 			const savedVersion = game.settings.get("ac2d20", "systemVersion");

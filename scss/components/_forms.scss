@@ -229,6 +229,11 @@ nav {
 		line-height: 1.2rem;
 		height: 30px;
 		font-family: 'Germania One';
+
+		&:disabled {
+			border: 1px solid var(--color-border-light-tertiary);
+			border-radius: 3px;
+		}
 	}
 
 	h3 {
@@ -256,8 +261,7 @@ nav {
 			justify-content: space-between;
 
 			input[type="checkbox"] {
-				-webkit-appearance: none;
-				-moz-appearance: none;
+				appearance: none;
 				filter: none;
 				box-sizing: borer-box;
 				width: 20px;
@@ -359,7 +363,7 @@ nav {
 			flex-direction: row;
 			flex-wrap: wrap;
 			flex: 5;
-			padding: 5px;
+			padding: 3px;
 			color: rgb(150, 150, 150);
 
 			.skill-focus {
@@ -369,8 +373,8 @@ nav {
 					color: beige;
 					background-color: $c-green-light;
 					border-radius: 3px;
-					padding: 0 2px;
-					margin: 0 1px;
+					padding: 2px 4px;
+					margin: 1px;
 				}
 			}
 		}
@@ -380,8 +384,6 @@ nav {
 		border-bottom: none;
 	}
 }
-
-
 
 
 .ac-grid {

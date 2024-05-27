@@ -29,44 +29,10 @@
 						"text": "",
 						"treated": false
 					},
-					"list": [
-						{
-							"injuryType": false,
-							"text": "",
-							"treated": false
-						},
-						{
-							"injuryType": false,
-							"text": "",
-							"treated": false
-						},
-						{
-							"injuryType": false,
-							"text": "",
-							"treated": false
-						}
-					],
 					"treated": 0,
 					"value": 0
 				},
-				"truths": [
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					}
-				],
-				"truthsText": "",
+				"truths": [],
 				"xp": {
 					"log": [],
 					"min": 0,
@@ -94,6 +60,7 @@
 				},
 				"stress": {
 					"max": 0,
+					"mod": 0,
 					"value": 0
 				}
 			},

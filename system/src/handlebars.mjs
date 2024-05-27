@@ -152,16 +152,28 @@ export const registerHandlebarsHelpers = function() {
 		else return false;
 	});
 
-	Handlebars.registerHelper("listSkillFocuses", function(skill) {
+	Handlebars.registerHelper("listSkillFocuses", function(skill, onlyFocused = false) {
 		const elements = [];
 
-		for (const focus of skill?.system?.focuses ?? []) {
+		const focuses = foundry.utils.duplicate(skill?.system?.focuses ?? [])
+			.sort((a, b) => {
+				const aTitle = ac2d20.utils.getLocalizedFocusName(a.title);
+				const bTitle = ac2d20.utils.getLocalizedFocusName(b.title);
+
+				return aTitle.localeCompare(bTitle);
+			});
+
+		for (const focus of focuses) {
+			if (onlyFocused && !focus.isfocus) continue;
+
 			const resultHtml = document.createElement("span");
 
 			resultHtml.classList.add("skill-focus", "clickable", "roll-focus");
 			if (focus.isfocus) resultHtml.classList.add("focused");
 
 			resultHtml.dataset.itemId = skill._id;
+			resultHtml.dataset.isFocused = focus.isfocus;
+			resultHtml.dataset.focusName = focus.title;
 
 			resultHtml.innerHTML = ac2d20.utils.getLocalizedFocusName(focus.title);
 
@@ -172,9 +184,6 @@ export const registerHandlebarsHelpers = function() {
 
 		if (elements.length > 0) {
 			listString = elements.join(",&nbsp;&nbsp;");
-		}
-		else {
-			listString = "&mdash;";
 		}
 
 		return listString;

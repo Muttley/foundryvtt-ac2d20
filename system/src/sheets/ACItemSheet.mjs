@@ -61,6 +61,12 @@ export default class ACItemSheet extends ItemSheet {
 			context.rollData = actor.getRollData();
 		}
 
+		if (item.type === "skill") {
+			context.system.focuses = context.system.focuses.sort(
+				(a, b) => a.title.localeCompare(b.title)
+			);
+		}
+
 		// Add the actor's data to context.data for easier access, as well as flags.
 		// context.data = itemData.data;
 		// context.flags = itemData.flags;

@@ -45,11 +45,19 @@
 	</div>
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
-			<h3>{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
+			<h3 class="blue">
+				{{localize "AC2D20.TEMPLATES.Truths"}}
+				<span class="truth-create clickable">&nbsp;&nbsp;&nbsp;&nbsp; +</span>
+			</h3>
 			<span class="right-slope olive"></span>
 		</div>
-		<div class="textbox" class="flexcol">
-			<textarea name="system.truthsText">{{system.truthsText}}</textarea>
+
+		<div class="textbox vehicle-truths">
+			{{#each system.truths}}
+				<p class="truth-edit" data-truth-index="{{@index}}">
+					{{this}}
+				</p>
+			{{/each}}
 		</div>
 	</div>
 </div>

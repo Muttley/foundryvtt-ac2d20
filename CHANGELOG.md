@@ -1,11 +1,32 @@
 # v11.4.0
 
 ## Enhancement
+- [#19] Turn skills compendium config setting into a selector of available Item compendiums
+- [#31] Automatic update of char sheet
 - [#33] Add languages field to character sheet
 - [#35] Add XP field to character sheet
+- [#52] Create a better method and data structure for managing truths on character sheets
+- [#54] Auto-calculate max Stress value
+
+	* Also modifes the max stress by fatigue. If the max value is being affected by fatigue then the value is coloured red to indicate this
+	* The max value can be adjusted by active effects using the `system.stress.mod` key if necessary
+
+- [#55] Auto-calculate Attribute bonuses
+- [#57] Update flat injuries values for standard character so they can be utilised by macros or modules
+
+	* Number of untreated injuries: `system.injuries.value`
+	* Number of treated injuries: `system.injuries.treated`
+
+- [#58] On character sheet, sort skill focuses alphabetically by i18n name
+- [#59] Save screen real estate on character Talents tab by moving talent description to hover tooltip
+
+	* You can still expand the item to have it displayed on the sheet if needed
+
+- [#60] Enable toggling skill focus on/off with Ctrl+LeftMouse on character sheet
 
 ## Bugfix
 - [#1] compendium-skills setting needs to re-run some of the setup in Ready hook when changed
+- [#34] Skill complication range calculation on a NPC Sheet
 - [#51] Skill and Focus names not translated on character sheet
 
 ## Chore
@@ -16,6 +37,7 @@
 - [#44] ActiveEffect._getSourceName is deprecated *(Foundry v12 compatibility)*
 - [#45] ActiveEffect#icon has been migrated to ActiveEffect#img *(Foundry v12 compatibility)*
 - [#48] Add contributed Portuguese, Brazilian translation
+- [#56] The async option for Roll#evaluate has been removed *(Foundry v12 compatibility)*
 
 *Many thanks to **Leo Tusi** for providing **Portuguese, Brazilian** translation data.*
 

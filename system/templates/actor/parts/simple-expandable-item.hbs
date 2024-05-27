@@ -5,7 +5,7 @@
 			{{#if (eq item.type 'talent')}}<h3>{{item.system.keywords}}</h3>{{/if}}
 		</div>
 		<div class="item-controls">
-			{{#ifCond item.system.stashed '!=' null}}
+			{{#ifCond item.system.stashed '!==' null}}
 			<a class="item-control item-stash {{#unless item.system.stashed}}item-unstashed{{/unless}}" title='{{localize "AC2D20.UI.stashed"}}'>
 				<i class="fas fa-briefcase"></i>
 			</a>

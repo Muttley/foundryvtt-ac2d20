@@ -6,18 +6,25 @@
  */
 export default class ACActor extends Actor {
 
-	/** @override */
-	prepareData() {
-		super.prepareData();
+	_calculateAttributeBonuses() {
+		for (const attribute of Object.keys(this.system.attributes)) {
+			const value = this.system.attributes[attribute].value;
+
+			let bonus = 0;
+
+			if (value === 9) bonus = 1;
+			if (value >=10 && value <= 11) bonus = 2;
+			if (value >=12 && value <= 13) bonus = 3;
+			if (value >=14 && value <= 15) bonus = 4;
+			if (value >=16) bonus = 5;
+
+			this.system.attributes[attribute].bonus = bonus;
+		}
 	}
 
-	/** @override */
-	prepareBaseData() {
-		// Data modifications in this step occur before processing embedded
-		// documents or derived data.
 
-		// Carry capacity
-		const brawn = this.system.attributes.bra.value;
+	_calculateCarryCapacity() {
+		const brawn = this.system.attributes?.bra?.value ?? 0;
 
 		let carryCapacity = 6;
 
@@ -37,52 +44,67 @@ export default class ACActor extends Actor {
 		this.system.carryCapacity.value = carryCapacity;
 	}
 
-	/**
-     * @override
-     * Augment the basic actor data with additional dynamic data. Typically,
-     * you'll want to handle most of your calculated/derived data in this step.
-     * Data calculated in this step should generally not exist in template.json
-     * (such as ability modifiers rather than ability scores) and should be
-     * available both inside and outside of character sheets (such as if an actor
-     * is queried and has a roll executed directly from it).
-     */
-	prepareDerivedData() {
-		// Make separate methods for each Actor type (character, npc, etc.) to keep
-		// things organized.
-		this._prepareCharacterData(this);
-		this._prepareNpcData(this);
-	}
 
 	/**
-     * Prepare Character type specific data
-     */
-	_prepareCharacterData(actorData) {
-		// if (this.type !== "character") return;
+	 * Update the character's count of treated and untreated injuries
+	 */
+	_calculateCharacterInjuryValues() {
+		const injuries = [
+			this.system.injuries.injury0,
+			this.system.injuries.injury1,
+			this.system.injuries.injury2,
+		];
+
+		let treated = 0;
+		let untreated = 0;
+
+		for (const injury of injuries) {
+			if (injury.text !== "" && !injury.treated) untreated++;
+			if (injury.text !== "" && injury.treated) treated++;
+		}
+
+		this.system.injuries.value = untreated;
+		this.system.injuries.treated = treated;
 	}
 
-	/**
-     * Prepare NPC type specific data.
-     */
-	_prepareNpcData(actorData) {
-		// if (this.type !== "npc") return;
+
+	_calculateMaxStress() {
+		const brawn = this.system.attributes?.bra?.value ?? 0;
+		const will = this.system.attributes?.will?.value ?? 0;
+
+		const fatigue = this.system.fatigue ?? 0;
+
+		const mod = this.system.stress?.mod ?? 0;
+
+		const resilienceSkill = this.items.find(
+			i => i.type === "skill" && i.name === "Resilience"
+		);
+
+		if (!resilienceSkill) {
+			return ac2d20.logger.error(
+				`Unable to locate 'Resilience' skill on character ${this.name}`
+			);
+		}
+
+		const resilience = resilienceSkill.system.value;
+
+		const resiliancePlusBrawn = Math.max(0, resilience + brawn + mod - fatigue);
+		const resiliancePlusWill = Math.max(0, resilience + will + mod - fatigue);
+
+		this.system.stress.max = Math.max(resiliancePlusBrawn, resiliancePlusWill);
+
+		if (this.system.stress.value > this.system.stress.max) {
+			this.system.stress.value = this.system.stress.max;
+		}
 	}
 
-	/**
-     * Override getRollData() that's supplied to rolls.
-     */
-	getRollData() {
-		const data = super.getRollData();
-		// Prepare character roll data.
-		this._getCharacterRollData(data);
-		this._getNpcRollData(data);
-		return data;
-	}
 
 	/**
      * Prepare character roll data.
      */
 	_getCharacterRollData(data) {
 		if (this.type !== "character") return;
+
 		// Copy the ability scores to the top level, so that rolls can use
 		// formulas like `@bra.value + 4`.
 		if (data.attributes) {
@@ -92,27 +114,12 @@ export default class ACActor extends Actor {
 		}
 	}
 
-	getComplicationFromInjuries() {
-		const injuries = [
-			this.system.injuries.injury0,
-			this.system.injuries.injury1,
-			this.system.injuries.injury2,
-		];
-
-		let inj = injuries.filter(_i => {
-			return (_i.text !== "" && !_i.treated);
-		});
-
-		return inj.length;
-	}
 
 	/**
      * Prepare NPC roll data.
      */
-	_getNpcRollData(data) {
-		// if (this.type !== "npc") return;
-		// Process additional NPC data here.
-	}
+	_getNpcRollData(data) {}
+
 
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
@@ -167,7 +174,7 @@ export default class ACActor extends Actor {
 
 				if (!skillsCompendium) skillsCompendium = "ac2d20.skills";
 
-				const packSkills = game.packs.get(skillsCompendium).getDocuments();
+				const packSkills = await game.packs.get(skillsCompendium).getDocuments();
 
 				update.items = this.items.map(i => i.toObject());
 
@@ -180,14 +187,65 @@ export default class ACActor extends Actor {
 		await this.updateSource(update);
 	}
 
-	getRollShortcuts() {
-		let out = {};
-		// Attributes
-		for (const name of ["bra", "agi", "coo", "rea", "ins", "wil"]) {
-			out[name.substring(0, 3)] = this.system.attributes[name].value;
-		}
-		// Power
-		out.pow = this.system.power.value;
-		return out;
+
+	/**
+     * Prepare Character type specific data
+     */
+	_prepareCharacterData(actorData) {
+		if (this.type !== "character") return;
+
+		this._calculateAttributeBonuses();
+		this._calculateCharacterInjuryValues();
+		this._calculateMaxStress();
 	}
+
+
+	/**
+     * Prepare NPC type specific data.
+     */
+	_prepareNpcData(actorData) {
+		// if (this.type !== "npc") return;
+	}
+
+
+	/**
+     * Override getRollData() that's supplied to rolls.
+     */
+	getRollData() {
+		const data = super.getRollData();
+		// Prepare character roll data.
+		this._getCharacterRollData(data);
+		this._getNpcRollData(data);
+		return data;
+	}
+
+
+	/** @override */
+	prepareBaseData() {
+		// Data modifications in this step occur before processing embedded
+		// documents or derived data.
+		this._calculateCarryCapacity();
+	}
+
+
+	/** @override */
+	prepareData() {
+		super.prepareData();
+	}
+
+
+	/**
+     * @override
+     * Augment the basic actor data with additional dynamic data. Typically,
+     * you'll want to handle most of your calculated/derived data in this step.
+     * Data calculated in this step should generally not exist in template.json
+     * (such as ability modifiers rather than ability scores) and should be
+     * available both inside and outside of character sheets (such as if an actor
+     * is queried and has a roll executed directly from it).
+     */
+	prepareDerivedData() {
+		this._prepareCharacterData(this);
+		this._prepareNpcData(this);
+	}
+
 }

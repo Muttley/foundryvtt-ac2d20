@@ -26,7 +26,16 @@
 	<div class='attribute-cell green'><strong>{{localize "AC2D20.TEMPLATES.bonus"}}</strong></div>
 	{{#each system.attributes as |attribute key|}}
 	<div class="attribute-cell">
-		<input type="number" class="borderless" name="system.attributes.{{key}}.bonus" value="{{attribute.bonus}}" data-dtype="Number" min="0" />
+		<input
+			type="number"
+				class="borderless"
+				data-dtype="Number"
+				data-tooltip="{{localize "AC2D20.Warnings.DerivedValue"}}"
+				min="0"
+				name="system.attributes.{{key}}.bonus"
+				value="{{attribute.bonus}}"
+				disabled
+			/>
 	</div>
 	{{/each}}
 </div>
@@ -34,11 +43,31 @@
 <div class="stress-derived-box">
 	<div class="flexrow">
 		<div class="derived-box">
-			<h3 style="padding-right: 25px;">{{localize "AC2D20.STRESS.stress"}}</h3>
-			<!-- <h3 class='minmax'>min</h3> -->
-			<input class="num-short-2" type="number" min="0" name="system.stress.value" value="{{system.stress.value}}">
+			<h3 style="padding-right: 25px;">
+				{{localize "AC2D20.STRESS.stress"}}
+			</h3>
+			<input
+				class="num-short-2"
+				type="number"
+				min="0"
+				name="system.stress.value"
+				value="{{system.stress.value}}"
+			>
+
 			<h3 class='minmax'>/</h3>
-			<input class="num-short-2" type="number" min="0" name="system.stress.max" value="{{system.stress.max}}">
+
+			<input
+				class="num-short-2"
+				data-tooltip="{{localize "AC2D20.Warnings.DerivedValue"}}"
+				min="0"
+				name="system.stress.max"
+				type="number"
+				value="{{system.stress.max}}"
+				{{#ifCond system.fatigue ">" 0}}
+					style="color: red;"
+				{{/ifCond}}
+				disabled
+			>
 		</div>
 	</div>
 	<div class="derived-box">
@@ -76,11 +105,18 @@
 <div class="grid">
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
-				<h3 class="green">{{localize "AC2D20.TEMPLATES.Personal_Truth_Scars"}}</h3>
+				<h3 class="green">
+					{{localize "AC2D20.TEMPLATES.Personal_Truth_Scars"}}
+					<span class="truth-create clickable">&nbsp;&nbsp;&nbsp;&nbsp; +</span>
+				</h3>
 				<span class="right-slope olive"></span>
 		</div>
-		<div class="textbox">
-				<textarea name="system.truthsText">{{system.truthsText}}</textarea>
+		<div class="textbox character-truths">
+			{{#each system.truths}}
+				<p class="truth-edit" data-truth-index="{{@index}}">
+					{{this}}
+				</p>
+			{{/each}}
 		</div>
 	</div>
 	<div style="display: flex; flex-direction: column;">
@@ -131,8 +167,14 @@
 </div>
 <div class="skills">
 	{{#each skills as |item id|}}
-		<div class="item skill editable-item" data-item-id="{{item._id}}">
-			<label class="skill-name clickable roll-skill">
+		<div
+			class="item skill editable-item"
+			data-item-id="{{item._id}}"
+		>
+			<label
+				class="skill-name clickable roll-skill"
+				data-item-id="{{item._id}}"
+			>
 				{{item.localizedName}}
 			</label>
 			<div class="skill-value">
@@ -144,7 +186,7 @@
 				>
 			</div>
 			<div class="skill-focuses">
-				{{{listSkillFocuses item}}}
+				{{{listSkillFocuses item false}}}
 			</div>
 		</div>
 	{{/each}}

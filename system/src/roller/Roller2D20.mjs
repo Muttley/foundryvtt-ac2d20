@@ -1,174 +1,266 @@
 export default class Roller2D20 {
-	dicesRolled = [];
+	diceRolled = [];
 
-	successTreshold = 0;
+	complicationThreshold = 20;
 
-	critTreshold = 0;
-
-	complicationTreshold = 20;
+	critThreshold = 0;
 
 	successes = 0;
 
-	static async rollD20({ rollname = "Roll xD20", dicenum = 2, attribute = 0, skill = 0, focus = false, difficulty = 1, complication = 20, actorId = null, itemId = null } = {}) {
-		// let dicesRolled = [];
-		let successTreshold = parseInt(attribute) + parseInt(skill);
-		let critTreshold = focus ? parseInt(skill) : 1;
-		let complicationTreshold = parseInt(complication);
-		let formula = `${dicenum}d20`;
-		let roll = new Roll(formula);
+	successThreshold = 0;
+
+	static getRollModeSettings() {
+		const rollMode = game.settings.get("core", "rollMode");
+
+		let blind = false;
+		let whisper = null;
+
+		switch (rollMode) {
+			case "blindroll": {
+				blind = true;
+			}
+			case "gmroll": {
+				const gmList = game.users.filter(user => user.isGM);
+				const gmIDList = [];
+				gmList.forEach(gm => gmIDList.push(gm.id));
+				whisper = gmIDList;
+				break;
+			}
+			case "roll": {
+				const userList = game.users.filter(user => user.active);
+				const userIDList = [];
+				userList.forEach(user => userIDList.push(user.id));
+				whisper = userIDList;
+				break;
+			}
+			case "selfroll": {
+				whisper = [game.user.id];
+				break;
+			}
+			default: {
+				break;
+			}
+		}
+		return { whisper, blind };
+	}
+
+
+	static async rollD20({
+		actorId = null,
+		attribute = 0,
+		complication = 20,
+		dicenum = 2,
+		difficulty = 1,
+		focus = false,
+		itemId = null,
+		rollName = "Roll xD20",
+		skill = 0,
+	} = {}) {
+		const successThreshold = parseInt(attribute) + parseInt(skill);
+		const critThreshold = focus ? parseInt(skill) : 1;
+		const complicationThreshold = parseInt(complication);
+
+		const formula = `${dicenum}d20`;
+		const roll = new Roll(formula);
 
 		await roll.evaluate();
 
 		await Roller2D20.parseD20Roll({
-			rollname: rollname,
-			roll: roll,
-			successTreshold: successTreshold,
-			critTreshold: critTreshold,
-			complicationTreshold: complicationTreshold,
-			actorId: actorId,
-			itemId: itemId,
+			actorId,
+			complicationThreshold,
+			critThreshold,
+			itemId,
+			roll,
+			rollName,
+			successThreshold,
 		});
 	}
 
-	static async parseD20Roll({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [], actorId = null, itemId = null }) {
-		let i = 0;
-		roll.dice.forEach(d => {
-			d.results.forEach(r => {
-				let diceSuccess = 0;
-				let diceComplication = 0;
-				if (r.result <= successTreshold) {
-					diceSuccess++;
-				}
-				if (r.result <= critTreshold) {
-					diceSuccess++;
-				}
-				if (r.result >= complicationTreshold) {
-					diceComplication = 1;
-				}
-				// if there are no rollIndexes sent then it is a new roll.
-				// Otherwise it's a re-roll and we should replace dices at given
+
+	static async parseD20Roll({
+		actorId = null,
+		complicationThreshold = 20,
+		critThreshold = 1,
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll xD20",
+		successThreshold = 0,
+	}) {
+		let rerollIndex = 0;
+
+		roll.dice.forEach(dice => {
+			dice.results.forEach(roll => {
+				let success = 0;
+				let complication = 0;
+
+				if (roll.result <= successThreshold) success++;
+				if (roll.result <= critThreshold) success++;
+				if (roll.result >= complicationThreshold) complication = 1;
+
+				// If there are no rollIndexes sent then it is a new roll.
+				// Otherwise it's a re-roll and we should replace dice at given
 				// indexes
 				if (!rerollIndexes.length) {
-					dicesRolled.push({
-						success: diceSuccess,
+					diceRolled.push({
+						complication,
 						reroll: false,
-						result: r.result,
-						complication: diceComplication,
+						result: roll.result,
+						success,
 					});
 				}
 				else {
-					dicesRolled[rerollIndexes[i]] = {
-						success: diceSuccess,
+					diceRolled[rerollIndexes[rerollIndex]] = {
+						complication,
 						reroll: true,
-						result: r.result,
-						complication: diceComplication,
+						result: roll.result,
+						success,
 					};
-					i++;
+
+					rerollIndex++;
 				}
 			});
 		});
+
 		await Roller2D20.sendToChat({
-			rollname: rollname,
-			roll: roll,
-			successTreshold: successTreshold,
-			critTreshold: critTreshold,
-			complicationTreshold: complicationTreshold,
-			dicesRolled: dicesRolled,
-			rerollIndexes: rerollIndexes,
-			actorId: actorId,
-			itemId: itemId,
+			actorId,
+			complicationThreshold,
+			critThreshold,
+			diceRolled,
+			itemId,
+			rerollIndexes,
+			roll,
+			rollName,
+			successThreshold,
 		});
 	}
 
-	static async rerollD20({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [] } = {}) {
+
+	static async rerollD20({
+		complicationThreshold = 20,
+		critThreshold = 1,
+		diceRolled = [],
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll xD20",
+		successThreshold = 0,
+	} = {}) {
 		if (!rerollIndexes.length) {
-			ui.notifications.notify("Select Dice you want to Reroll");
-			return;
+			return ui.notifications.notify("Select the dice you wish to reroll");
 		}
+
 		let numOfDice = rerollIndexes.length;
 		let formula = `${numOfDice}d20`;
+
 		let _roll = new Roll(formula);
 		await _roll.evaluate();
+
 		await Roller2D20.parseD20Roll({
-			rollname: `${rollname} re-roll`,
+			rollName: `${rollName} [re-roll]`,
 			roll: _roll,
-			successTreshold: successTreshold,
-			critTreshold: critTreshold,
-			complicationTreshold: complicationTreshold,
-			dicesRolled: dicesRolled,
+			successThreshold: successThreshold,
+			critThreshold: critThreshold,
+			complicationThreshold: complicationThreshold,
+			diceRolled: diceRolled,
 			rerollIndexes: rerollIndexes,
 		});
 	}
 
-	static async sendToChat({ rollname = "Roll xD20", roll = null, successTreshold = 0, critTreshold = 1, complicationTreshold = 20, dicesRolled = [], rerollIndexes = [], actorId = null, itemId = null } = {}) {
-		let successesNum = Roller2D20.getNumOfSuccesses(dicesRolled);
-		let complicationsNum = Roller2D20.getNumOfComplications(dicesRolled);
-		let rollData = {
-			rollname: rollname,
-			successes: successesNum,
-			complications: complicationsNum,
-			results: dicesRolled,
-			successTreshold: successTreshold,
-			actorId: actorId,
-			itemId: itemId,
+
+	static async sendToChat({
+		actorId = null,
+		complicationThreshold = 20,
+		critThreshold = 1,
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll xD20",
+		successThreshold = 0,
+	} = {}) {
+		const successes = Roller2D20.getSuccessCount(diceRolled);
+		const complications = Roller2D20.getComplicationCount(diceRolled);
+
+		const rollData = {
+			actorId,
+			complications,
+			itemId,
+			results: diceRolled,
+			rollName,
+			successes,
+			successThreshold: successThreshold,
 		};
-		const html = await renderTemplate("systems/ac2d20/templates/chat/roll2d20.hbs", rollData);
-		let ac2d20Roll = {};
-		ac2d20Roll.rollname = rollname;
-		ac2d20Roll.dicesRolled = dicesRolled;
-		ac2d20Roll.successTreshold = successTreshold;
-		ac2d20Roll.critTreshold = critTreshold;
-		ac2d20Roll.complicationTreshold = complicationTreshold;
-		ac2d20Roll.rerollIndexes = rerollIndexes;
-		ac2d20Roll.diceFace = "d20";
-		let speaker = {actor: actorId};
+
+		const html = await renderTemplate(
+			"systems/ac2d20/templates/chat/roll2d20.hbs",
+			rollData
+		);
+
+		const ac2d20Roll = {
+			complicationThreshold,
+			critThreshold,
+			diceFace: "d20",
+			diceRolled,
+			rerollIndexes,
+			rollName,
+			successThreshold,
+		};
+
+		const speaker = {actor: actorId};
+
+		const { whisper, blind } = this.getRollModeSettings();
+
 		let chatData = {
-			user: game.user.id,
-			speaker: speaker,
-			rollMode: game.settings.get("core", "rollMode"),
+			blind,
 			content: html,
 			flags: { ac2d20roll: ac2d20Roll },
-			type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-			roll: roll,
+			roll,
+			rollMode: game.settings.get("core", "rollMode"),
+			speaker,
+			user: game.user.id,
+			whisper,
 		};
-		if (["gmroll", "blindroll"].includes(chatData.rollMode)) {
-			chatData.whisper = ChatMessage.getWhisperRecipients("GM");
-		}
-		else if (chatData.rollMode === "selfroll") {
-			chatData.whisper = [game.user];
-		}
+
 		await ChatMessage.create(chatData);
 	}
 
-	static getNumOfSuccesses(results) {
-		let s = 0;
-		results.forEach(d => {
-			s += d.success;
+
+	static getSuccessCount(results) {
+		let successes = 0;
+
+		results.forEach(roll => {
+			successes += roll.success;
 		});
-		return s;
+
+		return successes;
 	}
 
-	static getNumOfComplications(results) {
-		let r = 0;
-		results.forEach(d => {
-			r += d.complication;
+
+	static getComplicationCount(results) {
+		let complications = 0;
+
+		results.forEach(roll => {
+			complications += roll.complication;
 		});
-		return r;
+
+		return complications;
 	}
 
-	static async rollD6({ rollname = "Roll D6", dicenum = 2, itemId = null, actorId = null } = {}) {
+
+	static async rollD6({ rollName = "Roll D6", dicenum = 2, itemId = null, actorId = null } = {}) {
 		let formula = `${dicenum}ds`;
 		let roll = new Roll(formula);
 		await roll.evaluate();
 		await Roller2D20.parseD6Roll({
-			rollname: rollname,
+			rollName: rollName,
 			roll: roll,
 			itemId: itemId,
 			actorId: actorId,
 		});
 	}
 
-	static async parseD6Roll({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], addDice = [], itemId = null, actorId = null } = {}) {
+	static async parseD6Roll({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], addDice = [], itemId = null, actorId = null } = {}) {
 		let diceResults = [
 			{ result: 1, effect: 0 },
 			{ result: 2, effect: 0 },
@@ -187,30 +279,30 @@ export default class Roller2D20 {
 				// Otherwise it's a re-roll and we should replace dices at given
 				// indexes
 				if (!rerollIndexes.length) {
-					dicesRolled.push(diceResult);
+					diceRolled.push(diceResult);
 				}
 				else {
-					dicesRolled[rerollIndexes[i]] = diceResult;
+					diceRolled[rerollIndexes[i]] = diceResult;
 					i++;
 				}
 			});
 		});
 
 		if (addDice.length) {
-			dicesRolled = addDice.concat(dicesRolled);
+			diceRolled = addDice.concat(diceRolled);
 		}
 
 		await Roller2D20.sendD6ToChat({
-			rollname: rollname,
+			rollName: rollName,
 			roll: roll,
-			dicesRolled: dicesRolled,
+			diceRolled: diceRolled,
 			rerollIndexes: rerollIndexes,
 			itemId: itemId,
 			actorId: actorId,
 		});
 	}
 
-	static async rerollD6({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
+	static async rerollD6({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
 		if (!rerollIndexes.length) {
 			ui.notifications.notify("Select Dice you want to Reroll");
 			return;
@@ -220,34 +312,34 @@ export default class Roller2D20 {
 		let _roll = new Roll(formula);
 		await _roll.evaluate();
 		await Roller2D20.parseD6Roll({
-			rollname: `${rollname} [re-roll]`,
+			rollName: `${rollName} [re-roll]`,
 			roll: _roll,
-			dicesRolled: dicesRolled,
+			diceRolled: diceRolled,
 			rerollIndexes: rerollIndexes,
 			itemId: itemId,
 			actorId: actorId,
 		});
 	}
 
-	static async addD6({ rollname = "Roll D6", dicenum = 2, ac2d20Roll = null, dicesRolled = [], itemId = null, actorId = null } = {}) {
+	static async addD6({ rollName = "Roll D6", dicenum = 2, ac2d20Roll = null, diceRolled = [], itemId = null, actorId = null } = {}) {
 		let formula = `${dicenum}ds`;
 		let _roll = new Roll(formula);
 		await _roll.evaluate();
-		let newRollName = `${ac2d20Roll.rollname} [+ ${dicenum} DC]`;
-		let oldDiceRolled = ac2d20Roll.dicesRolled;
+		let newRollName = `${ac2d20Roll.rollName} [+ ${dicenum} DC]`;
+		let oldDiceRolled = ac2d20Roll.diceRolled;
 		await Roller2D20.parseD6Roll({
-			rollname: newRollName,
+			rollName: newRollName,
 			roll: _roll,
-			dicesRolled: dicesRolled,
+			diceRolled: diceRolled,
 			addDice: oldDiceRolled,
 			itemId: itemId,
 			actorId: actorId,
 		});
 	}
 
-	static async sendD6ToChat({ rollname = "Roll D6", roll = null, dicesRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
-		let damage = dicesRolled.reduce((a, b) => ({ result: a.result + b.result })).result;
-		let effects = dicesRolled.reduce((a, b) => ({ effect: a.effect + b.effect })).effect;
+	static async sendD6ToChat({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
+		let damage = diceRolled.reduce((a, b) => ({ result: a.result + b.result })).result;
+		let effects = diceRolled.reduce((a, b) => ({ effect: a.effect + b.effect })).effect;
 		// let weaponDamageTypesList = [];
 		// let weaponDamageEffectsList = [];
 		// let weaponQualityList = [];
@@ -288,17 +380,17 @@ export default class Roller2D20 {
 		}
 
 		let rollData = {
-			rollname: rollname,
+			rollName: rollName,
 			damage: damage,
 			effects: effects,
-			results: dicesRolled,
+			results: diceRolled,
 			itemEffects: itemEffects,
 			itemQualities: itemQualities,
 		};
 		const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.hbs", rollData);
 		let ac2d20Roll = {};
-		ac2d20Roll.rollname = rollname;
-		ac2d20Roll.dicesRolled = dicesRolled;
+		ac2d20Roll.rollName = rollName;
+		ac2d20Roll.diceRolled = diceRolled;
 		ac2d20Roll.damage = damage;
 		ac2d20Roll.effects = effects;
 		ac2d20Roll.rerollIndexes = rerollIndexes;

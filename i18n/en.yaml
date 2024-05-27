@@ -150,7 +150,9 @@ AC2D20.STRESS.current: Current Stress
 AC2D20.STRESS.max: Max Stress
 AC2D20.STRESS.stress: Stress
 AC2D20.TEMPLATES.Abilities: Abilities
+AC2D20.TEMPLATES.ADD: ADD
 AC2D20.TEMPLATES.AddFocus: Add Focus
+AC2D20.TEMPLATES.AddTruth: Add Truth
 AC2D20.TEMPLATES.Ammo: Ammo
 AC2D20.TEMPLATES.Archetype: Archetype
 AC2D20.TEMPLATES.Attacks: ATTACKS
@@ -184,6 +186,7 @@ AC2D20.TEMPLATES.Difficulty: Difficulty
 AC2D20.TEMPLATES.Dur: Dur
 AC2D20.TEMPLATES.Duration: Duration
 AC2D20.TEMPLATES.Edit_Item: Edit Item
+AC2D20.TEMPLATES.EditTruth: Edit Truth
 AC2D20.TEMPLATES.Effect: Effect
 AC2D20.TEMPLATES.Effects: Effects
 AC2D20.TEMPLATES.Encumbered: ENCUMBERED
@@ -246,6 +249,7 @@ AC2D20.TEMPLATES.ritual_stress: Ritual Stress
 AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Roll Formula
 AC2D20.TEMPLATES.Salvo: Salvo
+AC2D20.TEMPLATES.SAVE: SAVE
 AC2D20.TEMPLATES.scale: Scale
 AC2D20.TEMPLATES.Size: Size
 AC2D20.TEMPLATES.SizeLevels.Major: Major
@@ -301,6 +305,7 @@ AC2D20.VEHICLES.QUALITIES.exposed: Exposed
 AC2D20.VEHICLES.QUALITIES.highPerformance: High Performance
 AC2D20.VEHICLES.QUALITIES.singleSeat: Single Seat
 AC2D20.VEHICLES.QUALITIES.tough: Tough
+AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
 AC2D20.WEAPONS.damageEffect.area: Area
 AC2D20.WEAPONS.damageEffect.backlash: Backlash
 AC2D20.WEAPONS.damageEffect.drain: Drain

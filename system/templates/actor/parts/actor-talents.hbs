@@ -1,17 +1,30 @@
 <div>
 	<div class="section-title">
-		<h3>{{localize "AC2D20.TEMPLATES.Talents"}}<span class="item-create clickable" data-type="talent">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+		<h3>
+			{{localize "AC2D20.TEMPLATES.Talents"}}
+			<span class="item-create clickable" data-type="talent">
+				&nbsp;&nbsp;&nbsp;&nbsp; +
+			</span>
+		</h3>
 		<span class="right-slope olive"></span>
 	</div>
 	<div class="ac-grid">
 		{{#each talents as |item key|}}
-		<div class="item talent editable-item" data-item-id="{{item._id}}">
-			<div class="row cell-expander">
-				<div class="cell cell-name f2 align-left align-center green"><img src="{{item.img}}" />{{item.name}}</div>
-				<div class="cell f2 align-center">{{item.system.keywords}}</div>
-				<div class="cell f5 column">{{{lookup ../itemsEnrichedDescriptions item._id }}}</div>
+			<div class="item talent editable-item" data-item-id="{{item._id}}">
+				<div class="row cell-expander">
+					<div
+						class="cell cell-name f2 align-left align-center green"
+						data-tooltip="{{{lookup ../itemsEnrichedDescriptions item._id }}}"
+						data-tooltip-direction="LEFT"
+					>
+						<img src="{{item.img}}" />
+							{{item.name}}
+						</div>
+					<div class="cell f3 align-center">
+						{{item.system.keywords}}
+					</div>
+				</div>
 			</div>
-		</div>
 		{{/each}}
 	</div>
 </div>
