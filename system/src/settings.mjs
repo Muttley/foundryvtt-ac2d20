@@ -1,6 +1,49 @@
-const debounceReload = debounce(() => window.location.reload(), 100);
+export async function registerDebugSettings() {
+	// ----------------
+	//  DEBUG SETTINGS
+	// ----------------
+	//
+	game.settings.register(SYSTEM_ID, "debugEnabled", {
+		name: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.hint"),
+		scope: "world",
+		type: Boolean,
+		config: true,
+		default: false,
+		requiresReload: true,
+	});
 
-export function registerSettings() {
+	game.settings.register(SYSTEM_ID, "worldSchemaVersion", {
+		name: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.hint"),
+		scope: "world",
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
+		default: -1,
+		type: Number,
+	});
+
+	game.settings.register(SYSTEM_ID, "systemVersion", {
+		name: game.i18n.localize("AC2D20.SETTINGS.systemVersion.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.systemVersion.hint"),
+		scope: "world",
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
+		default: "",
+		type: String,
+	});
+
+	game.settings.register(SYSTEM_ID, "migrateSystemCompendiums", {
+		name: game.i18n.localize("AC2D20.SETTINGS.migrateSystemCompendiums.label"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.migrateSystemCompendiums.label"),
+		scope: "world",
+		type: Boolean,
+		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
+		default: false,
+		requiresReload: true,
+	});
+}
+
+export default async function registerSettings() {
+	console.log(`${SYSTEM_NAME} | Registering game settings`);
 
 	// ------------------
 	//  MOMENTUM TRACKER
@@ -52,13 +95,17 @@ export function registerSettings() {
 		type: Boolean,
 	});
 
+	const itemCompendiums = await ac2d20.utils.getAvailableItemCompendiumSelectData();
+
 	game.settings.register(SYSTEM_ID, "compendium-skills", {
 		name: game.i18n.localize("AC2D20.SETTINGS.compendiumName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.compendiumHint"),
+		choices: itemCompendiums,
+		type: String,
+		default: "ac2d20.skills",
 		scope: "world",
 		config: true,
-		default: "ac2d20.skills",
-		type: String,
+		requiresReload: true,
 	});
 
 	game.settings.register(SYSTEM_ID, "hoversJsonLocation", {
@@ -70,7 +117,7 @@ export function registerSettings() {
 		type: String,
 		filePicker: true,
 		restricted: true,
-		onChange: debounceReload,
+		requiresReload: true,
 	});
 
 	game.settings.register(SYSTEM_ID, "combatTrackerMomentumUpdate", {
@@ -80,38 +127,5 @@ export function registerSettings() {
 		config: true,
 		default: true,
 		type: Boolean,
-	});
-
-
-	// ----------------
-	//  DEBUG SETTINGS
-	// ----------------
-	//
-	game.settings.register(SYSTEM_ID, "debugEnabled", {
-		name: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.debugEnabled.hint"),
-		scope: "world",
-		type: Boolean,
-		config: true,
-		default: false,
-		requiresReload: true,
-	});
-
-	game.settings.register(SYSTEM_ID, "worldSchemaVersion", {
-		name: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.worldSchemaVersion.hint"),
-		scope: "world",
-		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
-		default: -1,
-		type: Number,
-	});
-
-	game.settings.register(SYSTEM_ID, "systemVersion", {
-		name: game.i18n.localize("AC2D20.SETTINGS.systemVersion.label"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.systemVersion.hint"),
-		scope: "world",
-		config: game.settings.get(SYSTEM_ID, "debugEnabled"),
-		default: "",
-		type: String,
 	});
 }

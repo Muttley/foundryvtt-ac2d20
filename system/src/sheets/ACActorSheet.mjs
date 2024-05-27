@@ -9,12 +9,16 @@ export default class ACActorSheet extends ActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
-		return mergeObject(super.defaultOptions, {
+		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["ac2d20", "sheet", "actor"],
 			template: "systems/ac2d20/templates/actor/actor-sheet.hbs",
 			width: 720,
-			height: 780,
-			tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "abilities" }],
+			height: 880,
+			tabs: [{
+				contentSelector: ".sheet-body",
+				initial: "abilities",
+				navSelector: ".sheet-tabs",
+			}],
 		});
 	}
 
@@ -42,15 +46,7 @@ export default class ACActorSheet extends ActorSheet {
 		const actorData = this.actor.toObject(false);
 
 		// Sort all items alphabetically for display on the character sheet
-		actorData.items.sort((a, b) => {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-			return 0;
-		});
+		actorData.items.sort((a, b) => a.name.localeCompare(b.name));
 
 		const context = {
 			actor: actorData,
@@ -68,10 +64,6 @@ export default class ACActorSheet extends ActorSheet {
 			isVehicle: this.actor.type === "vehicle",
 			rollData: this.actor.getRollData.bind(this.actor),
 		};
-
-		// Add the actor's data to context.data for easier access, as well as flags.
-		// context.data = actorData.data;
-		// context.flags = actorData.flags;
 
 		context.biographyHTML = await TextEditor.enrichHTML(context.system.biography, {
 			secrets: this.actor.isOwner,
@@ -130,6 +122,7 @@ export default class ACActorSheet extends ActorSheet {
 	async _prepareCharacterData(context) {
 		let isEncumbered = false;
 		let physicalItems = context.items.filter(i => i.system.hasOwnProperty("weight"));
+
 		let encumberingItems = physicalItems.filter(i => {
 			if (i.type !== "armor") {
 				return true;
@@ -141,6 +134,7 @@ export default class ACActorSheet extends ActorSheet {
 				return false;
 			}
 		});
+
 		context.minorItemsTotal = encumberingItems.filter(
 			i => parseInt(i.system.weight) === 1
 		).length;
@@ -185,6 +179,7 @@ export default class ACActorSheet extends ActorSheet {
 			i.img = i.img || DEFAULT_TOKEN;
 			// Append to gear.
 			if (i.type === "skill") {
+				i.localizedName = ac2d20.utils.getLocalizedSkillName(i.name);
 				skills.push(i);
 			}
 			else if (i.type === "talent") {
@@ -210,35 +205,15 @@ export default class ACActorSheet extends ActorSheet {
 			}
 		}
 
-		// Assign and return
-		skills.sort(function(a, b) {
-			let nameA = a.name.toUpperCase();
-			let nameB = b.name.toUpperCase();
-			return (nameA < nameB) ? -1 : (nameA > nameB) ? 1 : 0;
-		});
-		context.skills = skills;
-		context.talents = talents;
-		context.spells = spells;
+		context.skills = skills.sort((a, b) => a.localizedName.localeCompare(b.localizedName));
+
 		context.armor = armor;
-		context.skillkits = skillkits;
 		context.equipment = equipment;
-		context.weapons = weapons;
+		context.skillkits = skillkits;
 		context.specialRules = specialRules;
-
-
-		// WRAP INVENTORY DEPENDING ON THE CHARACTER TYPE:
-		// for example put apparel in inventory for all except the character actor.
-
-		// NPC and Creature Inventory = all physical items that are not weapons
-		// if (this.actor.type == 'npc' || this.actor.type == 'creature') {
-		//     context.inventory = context.items.filter(i => {
-		//         return (i.type !== 'weapon' && i.data.weight != null)
-		//     });
-		// }
-		// if (this.actor.type == 'character') {
-		//     context.inventory = [...robotApparel, ...robot_mods];
-		// }
-
+		context.spells = spells;
+		context.talents = talents;
+		context.weapons = weapons;
 	}
 
 	/* -------------------------------------------- */
@@ -272,10 +247,8 @@ export default class ACActorSheet extends ActorSheet {
 			event.preventDefault();
 			let attr = $(event.currentTarget).data("attr");
 			let attribute = this.actor.system.attributes[attr];
-			let complication = 20;
-			if (this.actor.type === "character") complication -= this.actor.getComplicationFromInjuries();
 
-			if (this.actor.type === "npc" || this.actor.type === "vehicle") complication -= this.actor.system.injuries.value;
+			const complication = 20 - this.actor.system.injuries.value;
 
 			const attrName = game.i18n.localize(`AC2D20.Ability.${attr}`);
 			game.ac2d20.Dialog2d20.createDialog({ rollName: `Roll ${attrName}`, diceNum: 2, attribute: attribute.value, skill: 0, focus: false, complication: complication });
@@ -283,82 +256,86 @@ export default class ACActorSheet extends ActorSheet {
 
 		// * SKILLS LISTENERS [clic, right-click, value change, focus ]
 		// Click Skill Item
-		html.find(".roll-skill.clickable, .roll-focus.clickable").click(ev => {
-			const li = $(ev.currentTarget).parents(".item");
-			const item = this.actor.items.get(li.data("itemId"));
-			let isFocused = $(ev.currentTarget).hasClass("focused");
+		html.find(".roll-skill.clickable").click(ev => {
+			const itemId = ev.currentTarget.dataset.itemId;
+			const item = this.actor.items.get(itemId);
 
-			this._onRollSkill(
-				item.name,
-				item.system.value,
-				this.actor.system.attributes[item.system.defaultAttribute].value,
-				isFocused
-			);
+			this._onRollSkill({skillItem: item});
 		});
+
+		html.find(".roll-focus.clickable").click(async event => {
+			const dataset = event.currentTarget.dataset;
+
+			const itemId = dataset.itemId;
+			const focusName = dataset.focusName;
+
+			const skillItem = this.actor.items.get(itemId);
+
+			if (event.ctrlKey) {
+				const focuses = foundry.utils.duplicate(skillItem.system.focuses);
+
+				for (const focus of focuses) {
+					if (focus.title === focusName) {
+						focus.isfocus = !focus.isfocus;
+						break;
+					}
+				}
+
+				await skillItem.update({"system.focuses": focuses});
+			}
+			else {
+				this._onRollSkill({
+					skillItem,
+					focusName,
+				});
+			}
+		});
+
 		// Change Skill Rank value
 		html.find(".skill-value-input").change(async ev => {
 			let newRank = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { value: newRank } };
+			let updatedItem = { _id: item.id, system: { value: newRank } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
+
 		// Toggle Focus value
-		html.find(".skill .item-skill-focus").click(async ev => {
-			const li = $(ev.currentTarget).parents(".item");
-			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { focus: !item.system.focus } };
-			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
-		});
+		// html.find(".skill .item-skill-focus").click(async ev => {
+		// 	const li = $(ev.currentTarget).parents(".item");
+		// 	const item = this.actor.items.get(li.data("itemId"));
+		// 	let updatedItem = { _id: item.id, system: { focus: !item.system.focus } };
+		// 	await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
+		// });
 		// * END SKILLS
 
-		// * TRUTHS
-		html.find(".truth-text").change(async ev => {
-			let updates = [];
-			$(".truth-cell").each((i, el) => {
-				let _txt = this._clearTextAreaText($(el).find(".truth-text").val());
-				let truth = {
-					text: _txt,
-				};
-				updates.push(truth);
-			});
-			await this.actor.update({ "system.truths": updates });
-		});
-		// * END TRUTHS
 
 		// * SPELLS GRID
 		html.find(".cell-expander").click(event => {
 			this._onItemSummary(event);
 		});
 
+
 		html.find(".roll-spell.clickable").click(event => {
 			event.preventDefault();
 			const li = $(event.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let complication = 20 - parseInt(item.system.difficulty - 1);
-			if (item.actor.type === "character") complication -= item.actor.getComplicationFromInjuries();
 
-			if (item.actor.type === "npc") complication -= item.actor.system.injuries.value;
+			let complication = 20 - parseInt(item.system.difficulty - 1);
+			complication -= this.actor.system.injuries.value;
 
 			const skillName = item.system.skill;
 			const focusName = item.system.focus;
 			if (!skillName) return;
 
 			const skill = this.actor.items.getName(skillName);
-			let skillRank = 0;
-			try {
-				skillRank = skill.system.value;
-			}
-			catch(err) { }
-			let isFocus = false;
-			try {
-				for (const [, value] of Object.entries(skill.system.focuses)) {
-					if (value.title === focusName && value.isfocus) isFocus = true;
-				}
-			}
-			catch(err) { }
+			const skillRank = skill?.system?.value ?? 0;
 
-			const attrValue = -1;
+			let isFocus = false;
+			for (const [, value] of Object.entries(skill?.system?.focuses ?? {})) {
+				if (value.title === focusName && value.isfocus) isFocus = true;
+			}
+
 			let prefAttribute = "ins";
 			if (this.actor.system.spellcastingType === "researcher") {
 				prefAttribute = "rea";
@@ -367,10 +344,10 @@ export default class ACActorSheet extends ActorSheet {
 				prefAttribute = "wil";
 			}
 
-			game.ac2d20.Dialog2d20.createDialog({
+			ac2d20.Dialog2d20.createDialog({
 				rollName: item.name,
 				diceNum: 2,
-				attribute: attrValue,
+				attribute: -1,
 				skill: skillRank,
 				focus: isFocus,
 				complication: complication,
@@ -406,25 +383,18 @@ export default class ACActorSheet extends ActorSheet {
 			event.preventDefault();
 			const li = $(event.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let complication = 20;
+
+			let complication = 20 - this.actor.system.injuries.value;
+
 			// if unrelliable increase complication
 			for (const [k, v] of Object.entries(item.system.qualities)) {
 				if (v.value && k === "unreliable") complication -= 1;
 			}
 
-			if (item.actor.type === "character") {
-				complication -= item.actor.getComplicationFromInjuries();
-			}
-
-			if (item.actor.type === "npc" || item.actor.type === "vehicle") {
-				complication -= item.actor.system.injuries.value;
-			}
-
 			const focusName = item.system.focus;
-			// if (!focusName)
-			// return;
 
 			const skill = this.actor.items.getName(item.system.skill);
+
 			let skillRank = 0;
 			try {
 				skillRank = skill.system.value;
@@ -432,6 +402,7 @@ export default class ACActorSheet extends ActorSheet {
 			catch(err) {
 				console.log(err);
 			}
+
 			let isFocus = false;
 			try {
 				for (const [, value] of Object.entries(skill.system.focuses)) {
@@ -518,6 +489,34 @@ export default class ACActorSheet extends ActorSheet {
 		// * Add Inventory Item
 		html.find(".item-create").click(this._onItemCreate.bind(this));
 
+		// TRUTHS
+		html.find(".truth-create").click(this._onTruthCreate.bind(this));
+		// html.find(".truth-edit").contextmenu(this._onTruthDelete.bind(this));
+		// html.find(".truth-edit").click(this._onTruthEdit.bind(this));
+
+		/* -------------------------------------------- */
+		/* ADD RIGHT CLICK CONTENT MENU
+        /* -------------------------------------------- */
+		const truthsMenuItems = [
+			{
+				icon: '<i class="fas fa-edit"></i>',
+				name: "",
+				callback: t => {
+					this._onTruthEdit(t.data());
+				},
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "",
+				callback: t => {
+					this._onTruthDelete(t.data());
+				},
+			},
+		];
+
+		new ContextMenu(html, ".truth-edit", truthsMenuItems);
+
+
 		// * Delete Inventory Item
 		html.find(".item-delete").click(async ev => {
 			const li = $(ev.currentTarget).parents(".item");
@@ -537,7 +536,7 @@ export default class ACActorSheet extends ActorSheet {
 		html.find(".item-toggle").click(async ev => {
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("item-id"));
-			await this.actor.updateEmbeddedDocuments("Item", [this._toggleEquipped(li.data("item-id"), item)]);
+			await item.update({"system.equipped": !item.system.equipped});
 		});
 
 		// * Toggle Favorite Inventory Item
@@ -651,7 +650,7 @@ export default class ACActorSheet extends ActorSheet {
 		// Get the type of item to create.
 		const type = header.dataset.type;
 		// Grab any data associated with this control.
-		const data = duplicate(header.dataset);
+		const data = foundry.utils.duplicate(header.dataset);
 		// Initialize a default name.
 		const name = `New ${type.capitalize()}`;
 		// Prepare the item object.
@@ -673,26 +672,39 @@ export default class ACActorSheet extends ActorSheet {
 		// li.slideUp(200, () => this.render(false));
 	}
 
-	_onRightClickSkill(itemId, attribute) {
-		const item = this.actor.items.get(itemId);
-		this._onRollSkill(
-			item.name,
-			item.system.value,
-			this.actor.system.attributes[attribute].value,
-			item.system.focus
-		);
-	}
 
-	_onRollSkill(skillName, rank, attribute, focus) {
-		let complication = 20 - this.actor.getComplicationFromInjuries();
-		game.ac2d20.Dialog2d20.createDialog({
-			rollName: skillName,
-			diceNum: 2,
-			attribute: -1,
-			skill: rank,
-			focus: focus,
-			complication: complication,
+	_onRollSkill({skillItem = null, focusName = ""}) {
+		let localizedFocusName = focusName;
+		let isFocus = false;
+		if (focusName !== "") {
+			localizedFocusName = ac2d20.utils.getLocalizedFocusName(focusName);
+
+			for (const skillFocus of skillItem.system.focuses) {
+				if (skillFocus.title === focusName) {
+					isFocus = skillFocus.isfocus;
+					break;
+				}
+			}
+		}
+
+		const complication = 20 - this.actor.system.injuries.value;
+
+		const localizedSkillName =
+			ac2d20.utils.getLocalizedSkillName(skillItem.name);
+
+		const rollName = focusName !== ""
+			? `${localizedFocusName} (${localizedSkillName})`
+			: ac2d20.utils.getLocalizedSkillName(skillItem.name);
+
+		ac2d20.Dialog2d20.createDialog({
 			actor: this.actor.system,
+			attribute: -1,
+			prefAttribute: skillItem.system.defaultAttribute,
+			complication,
+			diceNum: 2,
+			focus: isFocus,
+			rollName,
+			skill: skillItem.system.value,
 		});
 	}
 
@@ -721,22 +733,38 @@ export default class ACActorSheet extends ActorSheet {
 	}
 
 
+	async _onTruthCreate(event) {
+		event.preventDefault();
+		const actorId = this.actor._id;
+
+		ac2d20.dialogs.DialogEditTruth.createDialog({actorId});
+	}
+
+	async _onTruthDelete(data) {
+		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
+		currentTruths.splice(data.truthIndex, 1);
+
+		this.actor.update({"system.truths": currentTruths});
+	}
+
+	async _onTruthEdit(data) {
+		const actorId = this.actor._id;
+
+		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
+
+		const index = data.truthIndex;
+		const truth = currentTruths[index];
+
+		ac2d20.dialogs.DialogEditTruth.createDialog({actorId, index, truth});
+	}
+
+
 	// Toggle Stashed Item
 	_toggleStashed(id, item) {
 		return {
 			_id: id,
 			data: {
 				stashed: !item.system.stashed,
-			},
-		};
-	}
-
-	// Toggle Equipment
-	_toggleEquipped(id, item) {
-		return {
-			_id: id,
-			data: {
-				equipped: !item.system.equipped,
 			},
 		};
 	}

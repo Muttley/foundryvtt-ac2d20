@@ -7,18 +7,21 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 
 const SRC_LINT_PATHS = ["./system/ac2d20.mjs", "./system/src/"];
 
+const BUILD_SRC_PATH = "./system/ac2d20.mjs";
+const BUILD_DST_PATH = "./system/ac2d20-compiled.mjs";
+
 // Compile javascript source files into a single output file.
 //
 async function compileJavascript() {
 	const bundle = await rollup({
-		input: "./system/ac2d20.mjs",
+		input: BUILD_SRC_PATH,
 		plugins: [nodeResolve()],
 	});
 	await bundle.write({
-		file: "./system/ac2d20-compiled.mjs",
+		file: BUILD_DST_PATH,
 		format: "es",
 		sourcemap: true,
-		sourcemapFile: "./system/ac2d20.mjs",
+		sourcemapFile: BUILD_SRC_PATH,
 	});
 }
 export const compile = compileJavascript;

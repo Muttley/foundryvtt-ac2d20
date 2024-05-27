@@ -1,7 +1,12 @@
 {
 	"_id": "zPRWHJ2mW15fVtnU",
 	"_key": "!items!zPRWHJ2mW15fVtnU",
-	"data": {
+	"effects": [
+	],
+	"folder": null,
+	"img": "systems/ac2d20/assets/skills.svg",
+	"name": "Tactics",
+	"system": {
 		"defaultAttribute": "agi",
 		"description": "",
 		"favorite": false,
@@ -33,15 +38,6 @@
 		],
 		"summary": "",
 		"value": 0
-	},
-	"effects": [
-	],
-	"folder": null,
-	"img": "systems/ac2d20/assets/skills.svg",
-	"name": "Tactics",
-	"permission": {
-		"dCBvoTjpxVSNlg1z": 3,
-		"default": 0
 	},
 	"type": "skill"
 }

@@ -6,10 +6,6 @@
 	"folder": null,
 	"img": "systems/ac2d20/assets/d20-cross.webp",
 	"name": "AC 2d20 Dice",
-	"permission": {
-		"default": 0,
-		"zSo9baAk8tjHoDE4": 3
-	},
 	"scope": "global",
 	"type": "script"
 }

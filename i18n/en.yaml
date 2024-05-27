@@ -1,4 +1,3 @@
-"AC2D20.VEHICLES.QUALITIES.singleSeat:": Single Seat
 AC2D20.Ability.agi: Agility
 AC2D20.Ability.bra: Brawn
 AC2D20.Ability.coo: Coordination
@@ -120,6 +119,8 @@ AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qua
 AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
 AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
 AC2D20.SETTINGS.maxappName: Players Can Setup Max App
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
 AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
@@ -149,7 +150,9 @@ AC2D20.STRESS.current: Current Stress
 AC2D20.STRESS.max: Max Stress
 AC2D20.STRESS.stress: Stress
 AC2D20.TEMPLATES.Abilities: Abilities
+AC2D20.TEMPLATES.ADD: ADD
 AC2D20.TEMPLATES.AddFocus: Add Focus
+AC2D20.TEMPLATES.AddTruth: Add Truth
 AC2D20.TEMPLATES.Ammo: Ammo
 AC2D20.TEMPLATES.Archetype: Archetype
 AC2D20.TEMPLATES.Attacks: ATTACKS
@@ -183,6 +186,7 @@ AC2D20.TEMPLATES.Difficulty: Difficulty
 AC2D20.TEMPLATES.Dur: Dur
 AC2D20.TEMPLATES.Duration: Duration
 AC2D20.TEMPLATES.Edit_Item: Edit Item
+AC2D20.TEMPLATES.EditTruth: Edit Truth
 AC2D20.TEMPLATES.Effect: Effect
 AC2D20.TEMPLATES.Effects: Effects
 AC2D20.TEMPLATES.Encumbered: ENCUMBERED
@@ -190,6 +194,7 @@ AC2D20.TEMPLATES.Encumbrance_Level: Encumbrance Level
 AC2D20.TEMPLATES.Encumbrance: Encumbrance
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: equipped
+AC2D20.TEMPLATES.Experience: Experience
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: FAVORITE WEAPONS
 AC2D20.TEMPLATES.FIRE_RATE: FIRE RATE
 AC2D20.TEMPLATES.Focus: Focus
@@ -203,6 +208,7 @@ AC2D20.TEMPLATES.INITIATIVE: INITIATIVE
 AC2D20.TEMPLATES.INJURIES: Injuries
 AC2D20.TEMPLATES.Issue: Issue
 AC2D20.TEMPLATES.Keywords: Keywords
+AC2D20.TEMPLATES.Languages: Languages
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Learned
 AC2D20.TEMPLATES.Luck: Luck
@@ -243,6 +249,7 @@ AC2D20.TEMPLATES.ritual_stress: Ritual Stress
 AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Roll Formula
 AC2D20.TEMPLATES.Salvo: Salvo
+AC2D20.TEMPLATES.SAVE: SAVE
 AC2D20.TEMPLATES.scale: Scale
 AC2D20.TEMPLATES.Size: Size
 AC2D20.TEMPLATES.SizeLevels.Major: Major
@@ -298,6 +305,7 @@ AC2D20.VEHICLES.QUALITIES.exposed: Exposed
 AC2D20.VEHICLES.QUALITIES.highPerformance: High Performance
 AC2D20.VEHICLES.QUALITIES.singleSeat: Single Seat
 AC2D20.VEHICLES.QUALITIES.tough: Tough
+AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
 AC2D20.WEAPONS.damageEffect.area: Area
 AC2D20.WEAPONS.damageEffect.backlash: Backlash
 AC2D20.WEAPONS.damageEffect.drain: Drain

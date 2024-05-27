@@ -1,16 +1,94 @@
 <header class="sheet-header {{actor.type}}-header">
-	<img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
-	<img class="paperclip" src="systems/ac2d20/assets/paperclip-60.png" data-edit="img" height="60" />
+	<img
+		class="profile-img"
+		data-edit="img"
+		height="120"
+		src="{{actor.img}}"
+		title="{{actor.name}}"
+		width="120"
+	/>
+	<img
+		class="paperclip"
+		data-edit="img"
+		height="60"
+		src="systems/ac2d20/assets/paperclip-60.png"
+	/>
 	<div class="flexcol" style="height: 100%;">
-		<div class="flexrow" style="padding: 10px 5px 0px 5px;">
-			<h1 class="sheet-name" style="align-self: flex-end; margin: 0 5px;"><input class="underline" name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'AC2D20.TEMPLATES.Name'}}" /></h1>
-			<input placeholder="{{localize 'AC2D20.TEMPLATES.Nationality'}}" type="text" class="underline" name="system.nationality" value="{{system.nationality}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
-			<input placeholder="{{localize 'AC2D20.TEMPLATES.Rank'}}" type="text" class="underline" name="system.rank" value="{{system.rank}}" data-dtype="String" style="align-self: flex-end; margin: 0 5px;" />
+		<div class="flexrow" style="padding: 20px 5px 5px 5px;">
+			<h1 class="sheet-name" style="align-self: flex-end; margin: 0 5px;">
+				<input
+					class="underline"
+					data-dtype="String"
+					name="name"
+					placeholder="{{localize 'AC2D20.TEMPLATES.Name'}}"
+					type="text"
+					value="{{actor.name}}"
+				/>
+			</h1>
+			<input
+				class="underline"
+				data-dtype="String"
+				name="system.nationality"
+				placeholder="{{localize 'AC2D20.TEMPLATES.Nationality'}}"
+				style="align-self: flex-end; margin: 0 5px;"
+				type="text"
+				value="{{system.nationality}}"
+			/>
+			<input
+				class="underline"
+				data-dtype="String"
+				name="system.rank"
+				placeholder="{{localize 'AC2D20.TEMPLATES.Rank'}}"
+				style="align-self: flex-end; margin: 0 5px;"
+				type="text"
+				value="{{system.rank}}"
+			/>
 		</div>
 		<div class="flexrow" style="padding: 0 5px;">
-			<input placeholder="{{localize 'AC2D20.TEMPLATES.Archetype'}}" type="text" class="underline" name="system.archetype" value="{{system.archetype}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
-			<input placeholder="{{localize 'AC2D20.TEMPLATES.Background'}}" type="text" class="underline" name="system.background" value="{{system.background}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
-			<input placeholder="{{localize 'AC2D20.TEMPLATES.Characteristic'}}" type="text" class="underline" name="system.characteristic" value="{{system.characteristic}}" data-dtype="String" style="align-self: flex-end;margin: 0 5px;" />
+			<input
+				class="underline"
+				data-dtype="String"
+				name="system.archetype"
+				placeholder="{{localize 'AC2D20.TEMPLATES.Archetype'}}"
+				style="align-self: flex-end; margin: 0 5px;"
+				type="text"
+				value="{{system.archetype}}"
+			/>
+			<input
+				class="underline"
+				data-dtype="String"
+				name="system.background"
+				placeholder="{{localize 'AC2D20.TEMPLATES.Background'}}"
+				style="align-self: flex-end; margin: 0 5px;"
+				type="text"
+				value="{{system.background}}"
+			/>
+			<input
+				class="underline"
+				data-dtype="String"
+				name="system.characteristic"
+				placeholder="{{localize 'AC2D20.TEMPLATES.Characteristic'}}"
+				style="align-self: flex-end; margin: 0 5px;"
+				type="text"
+				value="{{system.characteristic}}"
+			/>
+		</div>
+		<div class="flexrow" style="padding: 0 5px;">
+			<input
+				class="underline"
+				data-dtype="String"
+				name="system.languages"
+				placeholder="{{localize 'AC2D20.TEMPLATES.Languages'}}"
+				style="flex: 3; align-self: flex-end;margin: 0 5px;"
+				type="text"
+				value="{{system.languages}}"
+			/>
+			<div class="derived-box" style="padding-top: 4px;">
+				<div class="section-title">
+					<h3>{{localize "AC2D20.TEMPLATES.Experience"}}</h3>
+				</div>
+				<input class="num-short-3" type="number" min="0" name="system.xp.value" value="{{system.xp.value}}">
+			</div>
 		</div>
 	</div>
 </header>

@@ -43,11 +43,18 @@
 	</div>
 	<div style="display: flex; flex-direction: column;">
 		<div class="section-title">
-			<h3 class="blue">{{localize "AC2D20.TEMPLATES.Truths"}}</h3>
+			<h3 class="blue">
+				{{localize "AC2D20.TEMPLATES.Truths"}}
+				<span class="truth-create clickable">&nbsp;&nbsp;&nbsp;&nbsp; +</span>
+			</h3>
 			<span class="right-slope blue"></span>
 		</div>
-		<div class="textbox">
-			<textarea name="system.truthsText">{{system.truthsText}}</textarea>
+		<div class="textbox npc-truths">
+			{{#each system.truths}}
+				<p class="truth-edit" data-truth-index="{{@index}}">
+					{{this}}
+				</p>
+			{{/each}}
 		</div>
 	</div>
 </div>
@@ -63,17 +70,26 @@
 				{{#each skills as |item key|}}
 				<li class="item editable-item" data-item-id="{{item._id}}">
 					<span class="main-row">
-						<label class="item-name clickable roll-skill">{{item.name}}&nbsp;{{item.system.value}}</label>
-						<!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
-							<a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
-							<a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-						</div> -->
+						<label
+							class="item-name clickable roll-skill"
+							data-item-id="{{item._id}}"
+						>
+							{{item.name}}&nbsp;{{item.system.value}}
+						</label>
 					</span>
-					<label class="skill-focuses" for="">{{#each item.system.focuses}}
-						{{#if (eq this.isfocus true)}}
-						<span class="skill-focus roll-focus focused clickable" data-item-id="{{item._id}}">{{this.title}}&nbsp;</span>
-						{{/if}}
-						{{/each}}
+					<label class="skill-focuses" for="">
+						{{{listSkillFocuses item true}}}
+						{{!-- {{#each item.system.focuses}}
+							{{#if (eq this.isfocus true)}}
+								<span
+									class="skill-focus roll-focus focused clickable"
+									data-item-id="{{item._id}}"
+									data-focus-name="{{this.title}}"
+								>
+									{{this.title}}&nbsp;
+								</span>
+							{{/if}}
+						{{/each}} --}}
 					</label>
 				</li>
 				{{/each}}

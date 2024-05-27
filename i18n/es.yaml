@@ -1,4 +1,3 @@
-"AC2D20.VEHICLES.QUALITIES.singleSeat:": Asiento único
 AC2D20.Ability.agi: Agilidad
 AC2D20.Ability.bra: Músculo
 AC2D20.Ability.coo: Coordinación
@@ -120,6 +119,8 @@ AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descr
 AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
 AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
 AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Muestra la ventana del momentum del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
 AC2D20.SETTINGS.showmomentumName: Mostrar momentum del GM a los jugadores
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
@@ -149,7 +150,9 @@ AC2D20.STRESS.current: Estrés actual
 AC2D20.STRESS.max: Estrés Máximo
 AC2D20.STRESS.stress: Estrés
 AC2D20.TEMPLATES.Abilities: Habilidades
+AC2D20.TEMPLATES.ADD: ADD
 AC2D20.TEMPLATES.AddFocus: Añadir Especialidad
+AC2D20.TEMPLATES.AddTruth: Add Truth
 AC2D20.TEMPLATES.Ammo: Munición
 AC2D20.TEMPLATES.Archetype: Arquetipo
 AC2D20.TEMPLATES.Attacks: ATAQUES
@@ -183,6 +186,7 @@ AC2D20.TEMPLATES.Difficulty: Dificultad
 AC2D20.TEMPLATES.Dur: Dur
 AC2D20.TEMPLATES.Duration: Duración
 AC2D20.TEMPLATES.Edit_Item: Editar Objeto
+AC2D20.TEMPLATES.EditTruth: Edit Truth
 AC2D20.TEMPLATES.Effect: Efecto
 AC2D20.TEMPLATES.Effects: Efectos
 AC2D20.TEMPLATES.Encumbered: SOBRECARGADO
@@ -190,6 +194,7 @@ AC2D20.TEMPLATES.Encumbrance_Level: Nivel de Carga
 AC2D20.TEMPLATES.Encumbrance: Carga
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: Equipado
+AC2D20.TEMPLATES.Experience: Experience
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
 AC2D20.TEMPLATES.FIRE_RATE: CADENCIA DE FUEG
 AC2D20.TEMPLATES.Focus: Especialización
@@ -203,6 +208,7 @@ AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
 AC2D20.TEMPLATES.INJURIES: Heridas
 AC2D20.TEMPLATES.Issue: Problema
 AC2D20.TEMPLATES.Keywords: Palabras Clave
+AC2D20.TEMPLATES.Languages: Languages
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendida
 AC2D20.TEMPLATES.Luck: Suerte
@@ -243,6 +249,7 @@ AC2D20.TEMPLATES.ritual_stress: Estrés Ritual
 AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Fórmula de Tirada
 AC2D20.TEMPLATES.Salvo: Salva
+AC2D20.TEMPLATES.SAVE: SAVE
 AC2D20.TEMPLATES.scale: Escala
 AC2D20.TEMPLATES.Size: Tamaño
 AC2D20.TEMPLATES.SizeLevels.Major: Mayor
@@ -298,6 +305,7 @@ AC2D20.VEHICLES.QUALITIES.exposed: Expuesto
 AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Eficacia
 AC2D20.VEHICLES.QUALITIES.singleSeat: Asiento único
 AC2D20.VEHICLES.QUALITIES.tough: Duro
+AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash: Retroceso
 AC2D20.WEAPONS.damageEffect.drain: Drenar

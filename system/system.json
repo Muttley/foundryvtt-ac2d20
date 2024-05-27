@@ -2,10 +2,10 @@
 	"id": "ac2d20",
 	"title": "Achtung! Cthulhu 2d20",
 	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
-	"version": "11.3.0",
+	"version": "11.4.0",
 	"compatibility": {
 		"minimum": "11",
-		"verified": "11"
+		"verified": "12"
 	},
 	"authors": [
 		{
@@ -83,13 +83,18 @@
 			"name": "Français",
 			"path": "i18n/fr.json",
 			"flags": {}
+		},
+		{
+			"lang": "pt-BR",
+			"name": "Português (Brasil)",
+			"path": "i18n/pt_BR.json",
+			"flags": {}
 		}
 	],
 	"socket": true,
-	"gridDistance": 1,
-	"gridUnits": "m",
 	"url": "https://github.com/Muttley/foundryvtt-ac2d20",
 	"manifest": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/system.json",
 	"download": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/ac2d20.zip",
+	"background": "systems/ac2d20/assets/artwork/AchtungCthulhu_WallPaper2023_1920x1080_TheVillageofStSulac.jpg",
 	"initiative": null
 }

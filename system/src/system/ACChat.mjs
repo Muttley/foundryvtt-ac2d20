@@ -35,47 +35,47 @@ export class ACChat {
 	static async onRenderChatMessage(message, html, data) {
 		ac2d20.logger.debug("Running renderChatMessage hook");
 
-		let rrlBtn = html.find(".reroll-button");
-		if (rrlBtn.length > 0) {
-			rrlBtn[0].setAttribute("data-messageId", message.id);
-			rrlBtn.click(el => {
-			// let selectedDiceForReroll = $(el.currentTarget).parent().find('.dice-selected');
-				let selectedDiceForReroll = html.find(".dice-selected");
-				let rerollIndex = [];
-				for (let d of selectedDiceForReroll) {
-					rerollIndex.push($(d).data("index"));
+		const rerollButton = html.find(".reroll-button");
+
+		if (rerollButton.length > 0) {
+			rerollButton[0].setAttribute("data-messageId", message.id);
+
+			rerollButton.click(el => {
+				const selectedDiceForReroll = html.find(".dice-selected");
+
+				const rerollIndex = [];
+				for (const die of selectedDiceForReroll) {
+					rerollIndex.push($(die).data("index"));
 				}
-				if (!rerollIndex.length) {
-					ui.notifications.notify("Select Dice you want to Reroll");
-				}
-				else {
-					let ac2d20Roll = message.flags.ac2d20roll;
-					if (ac2d20Roll.diceFace === "d20") {
-						ac2d20.Roller2D20.rerollD20({
-							rollname: ac2d20Roll.rollname,
-							rerollIndexes: rerollIndex,
-							successTreshold: ac2d20Roll.successTreshold,
-							critTreshold: ac2d20Roll.critTreshold,
-							complicationTreshold: ac2d20Roll.complicationTreshold,
-							dicesRolled: ac2d20Roll.dicesRolled,
-						});
-					}
-					else if (ac2d20Roll.diceFace === "d6") {
+
+				const rollData = message.flags.ac2d20roll;
+
+				switch (rollData.diceFace) {
+					case "d6":
 						ac2d20.Roller2D20.rerollD6({
-							rollname: ac2d20Roll.rollname,
+							rollName: rollData.rollName,
 							rerollIndexes: rerollIndex,
-							dicesRolled: ac2d20Roll.dicesRolled,
+							diceRolled: rollData.diceRolled,
 							itemId: message.flags.itemId,
 							actorId: message.flags.actorId,
 						});
-					}
-					else {
-						ui.notifications.notify("No dice face reckognized");
-					}
-
+						break;
+					case "d20":
+						ac2d20.Roller2D20.rerollD20({
+							rollName: rollData.rollName,
+							rerollIndexes: rerollIndex,
+							successThreshold: rollData.successThreshold,
+							critThreshold: rollData.critThreshold,
+							complicationThreshold: rollData.complicationThreshold,
+							diceRolled: rollData.diceRolled,
+						});
+						break;
+					default:
+						ui.notifications.error(`Unrecognised dice face "${rollData.diceFace}`);
 				}
 			});
 		}
+
 
 		html.find(".dice-icon").click(el => {
 			if ($(el.currentTarget).hasClass("dice-selected")) {
@@ -86,22 +86,25 @@ export class ACChat {
 			}
 		});
 
-		let addBtn = html.find(".add-button");
-		if (addBtn.length > 0) {
-			addBtn[0].setAttribute("data-messageId", message.id);
-			addBtn.click(ev => {
-				let ac2d20Roll = message.flags.ac2d20roll;
-				let itemId = message.flags.itemId;
-				let actorId = message.flags.actorId;
+
+		const addButton = html.find(".add-button");
+		if (addButton.length > 0) {
+			addButton[0].setAttribute("data-messageId", message.id);
+
+			addButton.click(ev => {
+				const ac2d20Roll = message.flags.ac2d20roll;
+				const actorId = message.flags.actorId;
+				const itemId = message.flags.itemId;
+
 				game.ac2d20.DialogD6.createDialog({
-					rollname: ac2d20Roll.rollname,
-					diceNum: 1,
 					ac2d20Roll: ac2d20Roll,
-					itemId: itemId,
-					actorId: actorId,
+					actorId,
+					diceNum: 1,
+					itemId,
+					rollName: ac2d20Roll.rollName,
 				});
 			});
 		}
-
 	}
+
 }

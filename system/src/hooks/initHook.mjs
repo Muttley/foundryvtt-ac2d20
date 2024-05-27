@@ -3,10 +3,11 @@ import { AC2D20, SYSTEM_ID, SYSTEM_NAME } from "../config.mjs";
 import * as apps from "../apps/_module.mjs";
 import * as documents from "../documents/_module.mjs";
 import * as sheets from "../sheets/_module.mjs";
+import * as dialogs from "../dialogs/_module.mjs";
 
 import { preloadHandlebarsTemplates } from "../templates.mjs";
+import { registerDebugSettings } from "../settings.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
-import { registerSettings } from "../settings.mjs";
 import { registerTextEditorEnrichers } from "../enrichers.mjs";
 
 import Dialog2d20 from "../roller/Dialog2d20.mjs";
@@ -31,6 +32,7 @@ export async function initHook() {
 	// Add utility classes to the global game object so that they're more easily
 	// accessible in global contexts.
 	globalThis.ac2d20 = game.ac2d20 = {
+		dialogs,
 		Dialog2d20,
 		DialogD6,
 		logger: Logger,
@@ -48,8 +50,7 @@ export async function initHook() {
 		decimals: 0,
 	};
 
-	// Register custom system settings
-	registerSettings();
+	registerDebugSettings();
 
 	registerDocumentClasses();
 	registerDocumentSheets();

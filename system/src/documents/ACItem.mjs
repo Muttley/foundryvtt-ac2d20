@@ -4,11 +4,6 @@
  */
 export default class ACItem extends Item {
 
-	/** @override */
-	prepareData() {
-		super.prepareData();
-	}
-
 	async _preCreate(data, options, user) {
 		await super._preCreate(data, options, user);
 		if (data.img === undefined) {
@@ -16,6 +11,24 @@ export default class ACItem extends Item {
 			this.updateSource({ img: ico });
 		}
 	}
+
+
+	async addFocus() {
+		let focuses = this.system.focuses;
+		const focus = { title: "", isfocus: false, description: "" };
+		focuses = [...focuses, focus];
+		let updatedItem = { "_id": this.id, "system.focuses": focuses  };
+		await this.update(updatedItem);
+	}
+
+
+	async deleteFocus(_index) {
+		let focuses = this.system.focuses;
+		focuses.splice(_index, 1);
+		let updatedItem = { "_id": this.id, "system.focuses": focuses };
+		await this.update(updatedItem);
+	}
+
 
 	/**
      * Prepare a data object which is passed to any Roll formulas which are
@@ -31,26 +44,12 @@ export default class ACItem extends Item {
 		return rollData;
 	}
 
-	// FOCUS
-	async addFocus() {
-		let focuses = this.system.focuses;
-		const focus = { title: "", isfocus: false, description: "" };
-		focuses = [...focuses, focus];
-		let updatedItem = { "_id": this.id, "system.focuses": focuses  };
-		await this.update(updatedItem);
+
+	/** @override */
+	prepareData() {
+		super.prepareData();
 	}
 
-	async deleteFocus(_index) {
-		let focuses = this.system.focuses;
-		focuses.splice(_index, 1);
-		let updatedItem = { "_id": this.id, "system.focuses": focuses };
-		await this.update(updatedItem);
-	}
-
-	async updateFocuses(_focuses) {
-		let updatedItem = { "_id": this.id, "system.focuses": _focuses };
-		await this.update(updatedItem);
-	}
 
 	/**
      * Handle clickable rolls.
@@ -88,8 +87,9 @@ export default class ACItem extends Item {
 		}
 	}
 
+
 	async sendToChat() {
-		const itemData = duplicate(this.system);
+		const itemData = foundry.utils.duplicate(this.system);
 		itemData._id = this._id;
 		itemData.img = this.img;
 		itemData.name = this.name;
@@ -117,4 +117,11 @@ export default class ACItem extends Item {
 		}
 		ChatMessage.create(chatData);
 	}
+
+
+	async updateFocuses(_focuses) {
+		let updatedItem = { "_id": this.id, "system.focuses": _focuses };
+		await this.update(updatedItem);
+	}
+
 }

@@ -12,7 +12,7 @@ export class ACUpdateBase {
 	//
 	async updateItem(itemData, actorData) {}
 
-	// And updates required to system settings can be performed here.
+	// Any updates required to system settings can be performed here.
 	//
 	async updateSettings() {}
 

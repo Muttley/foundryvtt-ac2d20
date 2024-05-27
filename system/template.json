@@ -29,44 +29,16 @@
 						"text": "",
 						"treated": false
 					},
-					"list": [
-						{
-							"injuryType": false,
-							"text": "",
-							"treated": false
-						},
-						{
-							"injuryType": false,
-							"text": "",
-							"treated": false
-						},
-						{
-							"injuryType": false,
-							"text": "",
-							"treated": false
-						}
-					],
 					"treated": 0,
 					"value": 0
 				},
-				"truths": [
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					},
-					{
-						"text": ""
-					}
-				],
-				"truthsText": ""
+				"truths": [],
+				"xp": {
+					"log": [],
+					"min": 0,
+					"spent": 0,
+					"value": 0
+				}
 			},
 			"derived": {
 				"armorResistance": {
@@ -88,6 +60,7 @@
 				},
 				"stress": {
 					"max": 0,
+					"mod": 0,
 					"value": 0
 				}
 			},
@@ -124,6 +97,7 @@
 			"archetype": "",
 			"background": "",
 			"characteristic": "",
+			"languages": "",
 			"nationality": "",
 			"rank": "",
 			"spellcastingType": "traditional",
@@ -156,32 +130,25 @@
 			},
 			"qualities": {
 				"cargo": {
-					"description": "",
 					"rank": 1,
 					"value": false
 				},
 				"cumbersome": {
-					"description": "",
 					"value": false
 				},
 				"enclosed": {
-					"description": "",
 					"value": false
 				},
 				"exposed": {
-					"description": "",
 					"value": false
 				},
 				"highPerformance": {
-					"description": "",
 					"value": false
 				},
-				"singleSeat:": {
-					"description": "",
+				"singleSeat": {
 					"value": false
 				},
 				"tough": {
-					"description": "",
 					"rank": 1,
 					"value": false
 				}

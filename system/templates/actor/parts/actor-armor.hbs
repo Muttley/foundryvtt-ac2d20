@@ -15,9 +15,13 @@
 	{{#each armor as |item key|}}
 	<div class="item armor editable-item" data-item-id="{{item._id}}">
 		<div class="row">
-			<div class="cell f2 green align-left align-center cell-expander cell-name"><img src="{{item.img}}" />{{item.name}}&nbsp;<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
-					<i class="fas fa-tshirt"></i>
-				</a></div>
+			<div class="cell f2 green align-left align-center cell-expander cell-name">
+				<img src="{{item.img}}" />
+				{{item.name}}
+				<a class="item-control item-toggle {{#unless item.system.equipped}}item-unequipped{{/unless}}" title='{{localize "AC2D20.TEMPLATES.equipped"}}'>
+					&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-tshirt"></i>
+				</a>
+			</div>
 			<div class="cell f1 align-center">{{item.system.resistance}}</div>
 			<div class="cell f3 align-center">
 				{{#each (getArmorQualities item.system.qualities)}}

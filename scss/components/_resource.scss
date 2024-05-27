@@ -14,10 +14,12 @@ input[type="number"] {
 		}
 	}
 
+
 	&.borderless {
 		border: none;
 	}
 }
+
 
 .toggle-label {
 	input[type="checkbox"] {
@@ -78,6 +80,7 @@ select {
 }
 
 .num-short-3 {
+	min-width: 3rem;
 	max-width: 3rem;
 	text-align: center;
 }
@@ -100,6 +103,19 @@ select {
 	height: 100%;
 	padding: 0.3rem;
 	border: 1px solid grey;
+	overflow-y: scroll;
+	overflow-x: none;
+	resize: none;
+
+	p {
+		margin: 0;
+		padding: 0;
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.05);
+		}
+	}
+
 
 	textarea {
 		resize: none;
@@ -110,4 +126,16 @@ select {
 		white-space: normal;
 		height: 100%;
 	}
+}
+
+.character-truths {
+	height: 104px;
+}
+
+.npc-truths {
+	height: 168px;
+}
+
+.vehicle-truths {
+	height: 72px;
 }

@@ -1,6 +1,10 @@
+import registerSettings from "../settings.mjs";
+
 export const setupHook = {
 	attach: () => {
 		Hooks.once("setup", () => {
+			registerSettings();
+
 			// Go through the CONFIG object and attempt to localize any Strings
 			// up front
 			for (const obj in CONFIG.AC2D20) {

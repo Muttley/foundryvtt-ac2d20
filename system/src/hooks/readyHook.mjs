@@ -27,10 +27,11 @@ async function prepareSkills() {
 	let _skills = [];
 
 	packSkills.forEach(s => {
+
 		_skills.push({
 			focuses: s.system.focuses.map(f => f.title),
 			key: s.name,
-			label: s.name.toUpperCase(),
+			label: game.i18n.localize(`AC2D20.SKILL.${s.name.toUpperCase()}`),
 		});
 	});
 

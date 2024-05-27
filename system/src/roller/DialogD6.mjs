@@ -42,7 +42,7 @@ export default class DialogD6 extends Dialog {
 						let diceNum = html.find(".d-number")[0].value;
 						if (!ac2d20Roll) {
 							game.ac2d20.Roller2D20.rollD6({
-								rollname: rollName,
+								rollName,
 								dicenum: parseInt(diceNum),
 								itemId: itemId,
 								actorId: actorId,
@@ -50,7 +50,7 @@ export default class DialogD6 extends Dialog {
 						}
 						else {
 							game.ac2d20.Roller2D20.addD6({
-								rollname: rollName,
+								rollName,
 								dicenum: parseInt(diceNum),
 								ac2d20Roll: ac2d20Roll,
 								itemId: itemId,
@@ -61,7 +61,7 @@ export default class DialogD6 extends Dialog {
 				},
 			},
 			default: "roll",
-			close: () => { },
+			close: () => {},
 		});
 		d.render(true);
 	}
