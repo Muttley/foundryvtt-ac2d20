@@ -47,7 +47,7 @@ AC2D20.FOCUS.Disguise: Desfarce
 AC2D20.FOCUS.Electronics: Eletrônicos
 AC2D20.FOCUS.Exotic: Exótico
 AC2D20.FOCUS.Explosives: Explosivos
-AC2D20.FOCUS.Finance: Finaça
+AC2D20.FOCUS.Finance: Finanças
 AC2D20.FOCUS.First Aid: Primeiros Socorros
 AC2D20.FOCUS.Foraging: Forrageio
 AC2D20.FOCUS.Fortitude: Fortitude
@@ -119,11 +119,11 @@ AC2D20.SETTINGS.hoverHint: Localização do arquivo json que contém o texto das
 AC2D20.SETTINGS.hoverName: Pairar Mouse Sobre Arquivo JSON
 AC2D20.SETTINGS.maxappHint: Permite que os jogadores configurem o app máximo do grupo. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.maxappName: Os Jogadores Podem Configurar o app Máximo
-AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Executar a migração de dados nos compêndios embutidos no sistema (não modifique isso a menos que saiba o que está fazendo)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar Compêndios do Sistema
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.showmomentumName: Mostrar Ímpeto do Mestre aos Jogadores
-AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.systemVersion.hint: Grava o número da versão atual do schema para os dados do sistema Acthung! Cthulhu 2d20. (não modifique isso a não ser que você saiba o que está fazendo)
 AC2D20.SETTINGS.systemVersion.label: Versão do Sistema
 AC2D20.SETTINGS.worldSchemaVersion.hint: Grava a versão atual do schema para os dados do sistema Acthung! Cthulhu 2d20. (não modifique isso a não ser que você saiba o que está fazendo)
 AC2D20.SETTINGS.worldSchemaVersion.label: Versão do Schema
@@ -305,7 +305,7 @@ AC2D20.VEHICLES.QUALITIES.exposed: Exposto
 AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Performance
 AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough: Resistente
-AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
+AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar
