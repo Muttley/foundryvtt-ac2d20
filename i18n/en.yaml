@@ -95,6 +95,10 @@ AC2D20.FOCUS.Toxicology: Toxicology
 AC2D20.FOCUS.Tracking: Tracking
 AC2D20.FOCUS.Urban Stealth: Urban Stealth
 AC2D20.FOCUS.Watercraft: Watercraft
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.nottreated: Not treated
+AC2D20.INJURIES.physical: Physical
+AC2D20.INJURIES.treated: Treated
 AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
@@ -361,7 +365,3 @@ TYPES.Item.special_rule: Special Rule
 TYPES.Item.spell: Spell
 TYPES.Item.talent: Talent
 TYPES.Item.weapon: Weapon
-AC2D20.INJURIES.physical: Physical
-AC2D20.INJURIES.mental: Mental
-AC2D20.INJURIES.treated: Treated
-AC2D20.INJURIES.nottreated: Not treated

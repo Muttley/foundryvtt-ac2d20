@@ -1,3 +1,12 @@
+# v11.5.0
+
+## Bugfix
+- [#65] Fix un-localized strings in Actor abilities template
+
+*Many thanks to **lozanoje** for contributing code and translations included in this build*
+
+---
+
 # v11.4.0
 
 ## Enhancement
