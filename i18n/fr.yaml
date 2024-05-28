@@ -20,18 +20,18 @@ AC2D20.Combat.CombatHasNotStarted: Le combat n'a pas commencé
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Réserve de Momentum Réduite au Début du Nouveau Tour
 AC2D20.Combat.ToggleCombatantsTurnDone: Activer/Désactiver le tour terminé
 AC2D20.EffectCreate: Créer un effet
-AC2D20.EffectDelete: Supprimer un effet
-AC2D20.EffectEdit: Editer un effet
+AC2D20.EffectDelete: Retirer un effet
+AC2D20.EffectEdit: Éditer un effet
 AC2D20.EFFECTS.Inactive: Effets désactivés
 AC2D20.EFFECTS.Passive: Effets passifs
 AC2D20.EFFECTS.Temporary: Effets temporaires
 AC2D20.EffectToggle: Basculer l'effet
 AC2D20.equipped: Équipé
-AC2D20.FOCUS.Air Force: Air Force
+AC2D20.FOCUS.Air Force: Armée de l'air
 AC2D20.FOCUS.Aircraft: Avion
 AC2D20.FOCUS.Animal Handling: Dressage
 AC2D20.FOCUS.Architecture: Architecture
-AC2D20.FOCUS.Army: Armée
+AC2D20.FOCUS.Army: Armée de terre
 AC2D20.FOCUS.Art: Art
 AC2D20.FOCUS.Camouflage: Camouflage
 AC2D20.FOCUS.Cars: Véhicules
@@ -52,23 +52,23 @@ AC2D20.FOCUS.First Aid: Premiers secours
 AC2D20.FOCUS.Foraging: Cueillette
 AC2D20.FOCUS.Fortitude: Vigueur
 AC2D20.FOCUS.Hand-to-Hand: Main à main
-AC2D20.FOCUS.Handguns: Armes de poing
+AC2D20.FOCUS.Handguns: Arme de poing
 AC2D20.FOCUS.Hearing: Ouïe
 AC2D20.FOCUS.Heavy Vehicles: Véhicules lourds
-AC2D20.FOCUS.Heavy Weapons: Armes lourdes
+AC2D20.FOCUS.Heavy Weapons: Arme lourde
 AC2D20.FOCUS.History: Histoire
 AC2D20.FOCUS.Hunting: Chasse
 AC2D20.FOCUS.Immunity: Immunité
 AC2D20.FOCUS.Infectious Diseases: Maladies Infectieuses
 AC2D20.FOCUS.Innuendo: Allusion
-AC2D20.FOCUS.Instincts: Intuition
+AC2D20.FOCUS.Instincts: Instinct
 AC2D20.FOCUS.Intimidation: Intimidation
 AC2D20.FOCUS.Invocation: Invocation
 AC2D20.FOCUS.Leadership: Commandement
 AC2D20.FOCUS.Lifting: Soulever
 AC2D20.FOCUS.Linguistics: Linguistique
-AC2D20.FOCUS.Mechanical Engineering: Ingénierie mécanique
-AC2D20.FOCUS.Melee Weapons: Armes de mêlée
+AC2D20.FOCUS.Mechanical Engineering: Génie mécanique
+AC2D20.FOCUS.Melee Weapons: Arme de mêlée
 AC2D20.FOCUS.Motorcycles: Motos
 AC2D20.FOCUS.Mysticism: Mysticisme
 AC2D20.FOCUS.Navy: Marine
@@ -108,7 +108,7 @@ AC2D20.RANGE.close: Courte
 AC2D20.RANGE.extreme: Extrême
 AC2D20.RANGE.long: Longue
 AC2D20.RANGE.medium: Moyenne
-AC2D20.RANGE.reach: Portée
+AC2D20.RANGE.reach: Au contact
 AC2D20.RESISTANCE.armor: Armure
 AC2D20.RESISTANCE.courage: Courage
 AC2D20.RESISTANCE.fatigue: Fatigue
@@ -131,7 +131,7 @@ AC2D20.SETTINGS.systemVersion.hint: Enregistre le numéro de version système ac
 AC2D20.SETTINGS.systemVersion.label: Version du système
 AC2D20.SETTINGS.worldSchemaVersion.hint: Enregistre la version actuelle du schéma pour Achtung! Cthulhu 2d20 données système. (ne modifiez pas cela à moins que vous ne sachiez ce que vous faîtes)
 AC2D20.SETTINGS.worldSchemaVersion.label: Version du schéma
-AC2D20.SKILL.ACADEMIA: Domaine universitaire
+AC2D20.SKILL.ACADEMIA: Érudition
 AC2D20.SKILL.ATHLETICS: Athlétisme
 AC2D20.SKILL.ENGINEERING: Ingénierie
 AC2D20.SKILL.FIGHTING: Combat
@@ -155,7 +155,7 @@ AC2D20.STRESS.max: Stress maximum
 AC2D20.STRESS.stress: Stress
 AC2D20.TEMPLATES.Abilities: Capacités
 AC2D20.TEMPLATES.ADD: ADD
-AC2D20.TEMPLATES.AddFocus: Ajouter Focus
+AC2D20.TEMPLATES.AddFocus: Ajouter une Expertise
 AC2D20.TEMPLATES.AddTruth: Add Truth
 AC2D20.TEMPLATES.Ammo: Munitions
 AC2D20.TEMPLATES.Archetype: Archétype
@@ -201,7 +201,7 @@ AC2D20.TEMPLATES.equipped: équipé
 AC2D20.TEMPLATES.Experience: Experience
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMES FAVORITES
 AC2D20.TEMPLATES.FIRE_RATE: CADENCE DE TIR
-AC2D20.TEMPLATES.Focus: Concentration
+AC2D20.TEMPLATES.Focus: Expertise
 AC2D20.TEMPLATES.fortune: Chance
 AC2D20.TEMPLATES.Gear: Équipement
 AC2D20.TEMPLATES.GENERAL: GÉNÉRAL
@@ -238,7 +238,7 @@ AC2D20.TEMPLATES.Qualities: Qualités
 AC2D20.TEMPLATES.RANGE: Portée
 AC2D20.TEMPLATES.Rank: Rang
 AC2D20.TEMPLATES.Ranks_current_maximum: Rangs [actuel/maximum]
-AC2D20.TEMPLATES.rating: Note
+AC2D20.TEMPLATES.rating: Score
 AC2D20.TEMPLATES.Re_roll: Relancer
 AC2D20.TEMPLATES.Requirements: Prérequis
 AC2D20.TEMPLATES.Resistance: Résistance
@@ -259,11 +259,11 @@ AC2D20.TEMPLATES.Size: Taille
 AC2D20.TEMPLATES.SizeLevels.Major: Majeur
 AC2D20.TEMPLATES.SizeLevels.Minor: Mineur
 AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
-AC2D20.TEMPLATES.Skill_Focus: Spécialisation de compétence
-AC2D20.TEMPLATES.skill_focus: Compétence/Spécialisation
+AC2D20.TEMPLATES.Skill_Focus: Expertise de compétence
+AC2D20.TEMPLATES.skill_focus: Compétence/Expertise
 AC2D20.TEMPLATES.Skill_Value: Valeur de compétence
 AC2D20.TEMPLATES.Skill: Compétence
-AC2D20.TEMPLATES.SkillFocus: Spécialisation de compétence
+AC2D20.TEMPLATES.SkillFocus: Expertise de compétence
 AC2D20.TEMPLATES.Skills: Compétences
 AC2D20.TEMPLATES.Source: Source
 AC2D20.TEMPLATES.SpecialRule: Règle spéciale
