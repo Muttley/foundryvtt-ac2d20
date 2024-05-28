@@ -96,9 +96,9 @@ AC2D20.FOCUS.Tracking: Rastrear
 AC2D20.FOCUS.Urban Stealth: Sigilo Urbano
 AC2D20.FOCUS.Watercraft: Vehículos Acuáticos
 AC2D20.INJURIES.mental: Mental
-AC2D20.INJURIES.nottreated: Not treated
-AC2D20.INJURIES.physical: Physical
-AC2D20.INJURIES.treated: Treated
+AC2D20.INJURIES.nottreated: Sin tratar
+AC2D20.INJURIES.physical: Física
+AC2D20.INJURIES.treated: Tratada
 AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
