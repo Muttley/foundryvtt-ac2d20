@@ -361,3 +361,7 @@ TYPES.Item.special_rule: Special Rule
 TYPES.Item.spell: Spell
 TYPES.Item.talent: Talent
 TYPES.Item.weapon: Weapon
+AC2D20.INJURIES.physical: Physical
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.treated: Treated
+AC2D20.INJURIES.nottreated: Not treated
