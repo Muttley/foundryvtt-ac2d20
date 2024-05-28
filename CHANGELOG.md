@@ -3,6 +3,9 @@
 ## Bugfix
 - [#65] Fix un-localized strings in Actor abilities template
 
+## Chores
+- [#67] Merge Portuguese/Brazilian translation updates from Crowdin
+
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 
 ---
