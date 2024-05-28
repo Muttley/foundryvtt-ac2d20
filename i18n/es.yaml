@@ -111,6 +111,8 @@ AC2D20.RESISTANCE.fatigue: Fatiga
 AC2D20.RESISTANCE.resistance: Resistencia
 AC2D20.SETTINGS.compendiumHint: Cuando se crea un nuevo personaje incluirá las habilidades contenidas en este compendio.
 AC2D20.SETTINGS.compendiumName: Compendio de habilidades
+AC2D20.SETTINGS.resilienceHint: Nombre de la habilidad Fortaleza tal y como aparece en el compendio de habilidades, se usa para calcular automáticamente el estrés.
+AC2D20.SETTINGS.resilienceName: Habilidad Fortaleza
 AC2D20.SETTINGS.ctHint: Si se activa, el asistente de combate reducirá la reserva de momentum cuando empiece un nuevo asalto, o cuando el combate finalice.
 AC2D20.SETTINGS.ctName: Asistente de combate actualiza el momentum
 AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features

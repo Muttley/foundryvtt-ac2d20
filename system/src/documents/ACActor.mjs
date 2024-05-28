@@ -75,7 +75,7 @@ export default class ACActor extends Actor {
 		const fatigue = this.system.fatigue ?? 0;
 
 		const mod = this.system.stress?.mod ?? 0;
-		const resilienceSkillName = game.i18n.localize("AC2D20.SKILL.RESILIENCE");
+		const resilienceSkillName = game.settings.get("ac2d20", "resilience-skill");
 
 		const resilienceSkill = this.items.find(
 			i => i.type === "skill" && i.name === resilienceSkillName

@@ -111,6 +111,8 @@ AC2D20.RESISTANCE.fatigue: Fatigue
 AC2D20.RESISTANCE.resistance: Resistance
 AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
 AC2D20.SETTINGS.compendiumName: Skills Compendium
+AC2D20.SETTINGS.resilienceHint: Name of the Resilience skill in your skill compendium, used for autocalculate stress.
+AC2D20.SETTINGS.resilienceName: Resilience skill
 AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
 AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
 AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features

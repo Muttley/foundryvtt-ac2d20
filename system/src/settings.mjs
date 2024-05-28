@@ -108,6 +108,16 @@ export default async function registerSettings() {
 		requiresReload: true,
 	});
 
+	game.settings.register(SYSTEM_ID, "resilience-skill", {
+		name: game.i18n.localize("AC2D20.SETTINGS.resilienceName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.resilienceHint"),
+		type: String,
+		default: "Resilience",
+		scope: "world",
+		config: true,
+		requiresReload: true,
+	});
+
 	game.settings.register(SYSTEM_ID, "hoversJsonLocation", {
 		name: game.i18n.localize("AC2D20.SETTINGS.hoverName"),
 		hint: game.i18n.localize("AC2D20.SETTINGS.hoverHint"),
