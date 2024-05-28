@@ -95,6 +95,10 @@ AC2D20.FOCUS.Toxicology: Toxicologia
 AC2D20.FOCUS.Tracking: Rastreio
 AC2D20.FOCUS.Urban Stealth: Furtividade Urbana
 AC2D20.FOCUS.Watercraft: Embarcações
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.nottreated: Not treated
+AC2D20.INJURIES.physical: Physical
+AC2D20.INJURIES.treated: Treated
 AC2D20.MIGRATION.begin_migration: Executando atualizações de dados para Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Aplicando atualizações para Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Atualizações de dados concluídas para Achtung! Cthulhu 2d20
