@@ -75,14 +75,15 @@ export default class ACActor extends Actor {
 		const fatigue = this.system.fatigue ?? 0;
 
 		const mod = this.system.stress?.mod ?? 0;
+		const resilienceSkillName = game.i18n.localize("AC2D20.SKILL.RESILIENCE");
 
 		const resilienceSkill = this.items.find(
-			i => i.type === "skill" && i.name === "Resilience"
+			i => i.type === "skill" && i.name === resilienceSkillName
 		);
 
 		if (!resilienceSkill) {
 			return ac2d20.logger.error(
-				`Unable to locate 'Resilience' skill on character ${this.name}`
+				`Unable to locate '${resilienceSkillName}' skill on character ${this.name}`
 			);
 		}
 
