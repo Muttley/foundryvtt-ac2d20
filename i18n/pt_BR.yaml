@@ -37,7 +37,7 @@ AC2D20.FOCUS.Camouflage: Camuflagem
 AC2D20.FOCUS.Cars: Carros
 AC2D20.FOCUS.Charm: Encantar
 AC2D20.FOCUS.Climbing: Escalada
-AC2D20.FOCUS.Close Quarters: Close Quarters
+AC2D20.FOCUS.Close Quarters: Curto Alcance
 AC2D20.FOCUS.Combat Engineering: Engenharia de Combate
 AC2D20.FOCUS.Covert Operations: Operações Secretas
 AC2D20.FOCUS.Cryptography: Criptografia
@@ -47,7 +47,7 @@ AC2D20.FOCUS.Disguise: Desfarce
 AC2D20.FOCUS.Electronics: Eletrônicos
 AC2D20.FOCUS.Exotic: Exótico
 AC2D20.FOCUS.Explosives: Explosivos
-AC2D20.FOCUS.Finance: Finaça
+AC2D20.FOCUS.Finance: Finanças
 AC2D20.FOCUS.First Aid: Primeiros Socorros
 AC2D20.FOCUS.Foraging: Forrageio
 AC2D20.FOCUS.Fortitude: Fortitude
@@ -95,6 +95,10 @@ AC2D20.FOCUS.Toxicology: Toxicologia
 AC2D20.FOCUS.Tracking: Rastreio
 AC2D20.FOCUS.Urban Stealth: Furtividade Urbana
 AC2D20.FOCUS.Watercraft: Embarcações
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.nottreated: Not treated
+AC2D20.INJURIES.physical: Physical
+AC2D20.INJURIES.treated: Treated
 AC2D20.MIGRATION.begin_migration: Executando atualizações de dados para Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Aplicando atualizações para Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Atualizações de dados concluídas para Achtung! Cthulhu 2d20
@@ -119,14 +123,14 @@ AC2D20.SETTINGS.hoverHint: Localização do arquivo json que contém o texto das
 AC2D20.SETTINGS.hoverName: Pairar Mouse Sobre Arquivo JSON
 AC2D20.SETTINGS.maxappHint: Permite que os jogadores configurem o app máximo do grupo. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.maxappName: Os Jogadores Podem Configurar o app Máximo
-AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Executar a migração de dados nos compêndios embutidos no sistema (não modifique isso a menos que saiba o que está fazendo)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar Compêndios do Sistema
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.showmomentumName: Mostrar Ímpeto do Mestre aos Jogadores
-AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.systemVersion.hint: Grava o número da versão atual do schema para os dados do sistema Acthung! Cthulhu 2d20. (não modifique isso a não ser que você saiba o que está fazendo)
 AC2D20.SETTINGS.systemVersion.label: Versão do Sistema
-AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
+AC2D20.SETTINGS.worldSchemaVersion.hint: Grava a versão atual do schema para os dados do sistema Acthung! Cthulhu 2d20. (não modifique isso a não ser que você saiba o que está fazendo)
+AC2D20.SETTINGS.worldSchemaVersion.label: Versão do Schema
 AC2D20.SKILL.ACADEMIA: Academia
 AC2D20.SKILL.ATHLETICS: Atletismo
 AC2D20.SKILL.ENGINEERING: Engenharia
@@ -150,9 +154,9 @@ AC2D20.STRESS.current: Estresse Atual
 AC2D20.STRESS.max: Estresse Máximo
 AC2D20.STRESS.stress: Estresse
 AC2D20.TEMPLATES.Abilities: Habilidades
-AC2D20.TEMPLATES.ADD: ADD
+AC2D20.TEMPLATES.ADD: ADICIONAR
 AC2D20.TEMPLATES.AddFocus: Adicionar Foco
-AC2D20.TEMPLATES.AddTruth: Add Truth
+AC2D20.TEMPLATES.AddTruth: Adicionar Verdade
 AC2D20.TEMPLATES.Ammo: Munição
 AC2D20.TEMPLATES.Archetype: Arquétipo
 AC2D20.TEMPLATES.Attacks: ATAQUES
@@ -186,7 +190,7 @@ AC2D20.TEMPLATES.Difficulty: Dificuldade
 AC2D20.TEMPLATES.Dur: Dur
 AC2D20.TEMPLATES.Duration: Duração
 AC2D20.TEMPLATES.Edit_Item: Editar Item
-AC2D20.TEMPLATES.EditTruth: Edit Truth
+AC2D20.TEMPLATES.EditTruth: Editar Verdade
 AC2D20.TEMPLATES.Effect: Efeito
 AC2D20.TEMPLATES.Effects: Efeitos
 AC2D20.TEMPLATES.Encumbered: SOBRECARREGADO
@@ -194,7 +198,7 @@ AC2D20.TEMPLATES.Encumbrance_Level: Nível de Sobrecarga
 AC2D20.TEMPLATES.Encumbrance: Sobrecarga
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: equipado
-AC2D20.TEMPLATES.Experience: Experience
+AC2D20.TEMPLATES.Experience: Experiência
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
 AC2D20.TEMPLATES.FIRE_RATE: CADÊNCIA DE TIRO
 AC2D20.TEMPLATES.Focus: Foco
@@ -208,7 +212,7 @@ AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
 AC2D20.TEMPLATES.INJURIES: FERIMENTOS
 AC2D20.TEMPLATES.Issue: Publicação
 AC2D20.TEMPLATES.Keywords: Palavras-Chave
-AC2D20.TEMPLATES.Languages: Languages
+AC2D20.TEMPLATES.Languages: Idiomas
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendido
 AC2D20.TEMPLATES.Luck: Sorte
@@ -249,7 +253,7 @@ AC2D20.TEMPLATES.ritual_stress: Estresse do Ritual
 AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Rolar Fórmula
 AC2D20.TEMPLATES.Salvo: Rajada
-AC2D20.TEMPLATES.SAVE: SAVE
+AC2D20.TEMPLATES.SAVE: SALVAR
 AC2D20.TEMPLATES.scale: Escala
 AC2D20.TEMPLATES.Size: Tamanho
 AC2D20.TEMPLATES.SizeLevels.Major: Principal
@@ -305,7 +309,7 @@ AC2D20.VEHICLES.QUALITIES.exposed: Exposto
 AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Performance
 AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough: Resistente
-AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
+AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar
@@ -330,7 +334,7 @@ AC2D20.WEAPONS.weaponQuality.escalation: Agravante
 AC2D20.WEAPONS.weaponQuality.giant-killer: Mata-Gigantes
 AC2D20.WEAPONS.weaponQuality.heavy: Pesado
 AC2D20.WEAPONS.weaponQuality.hidden: Oculto
-AC2D20.WEAPONS.weaponQuality.hunger: Hunger
+AC2D20.WEAPONS.weaponQuality.hunger: Fome
 AC2D20.WEAPONS.weaponQuality.inaccurate: Impreciso
 AC2D20.WEAPONS.weaponQuality.indirect: Indireto
 AC2D20.WEAPONS.weaponQuality.munition: Munição
