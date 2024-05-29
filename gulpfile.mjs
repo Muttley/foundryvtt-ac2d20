@@ -3,7 +3,8 @@ import gulp from "gulp";
 import * as css from "./utils/css.mjs";
 import * as javascript from "./utils/javascript.mjs";
 import * as lang from "./utils/lang.mjs";
-import * as notes from "./utils/notes.mjs";
+// import * as notes from "./utils/notes.mjs";
+import * as docs from "./utils/docs.mjs";
 import * as packs from "./utils/packs.mjs";
 
 export default gulp.series(
@@ -26,7 +27,7 @@ export const build = gulp.parallel(
 	lang.compile,
 	javascript.lint,
 	javascript.compile,
-	notes.compile,
+	docs.compile,
 	packs.compile
 );
 
@@ -38,6 +39,6 @@ export const clean = gulp.parallel(
 
 export const compileCss = gulp.series(css.compile);
 export const compileLang = gulp.series(lang.compile);
-export const compileNotes = gulp.series(notes.compile);
+export const compileDocs = gulp.series(docs.compile);
 export const compilePacks = gulp.series(packs.compile);
 export const lintJs = gulp.series(javascript.lint);

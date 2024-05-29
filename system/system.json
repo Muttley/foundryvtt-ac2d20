@@ -26,10 +26,10 @@
 	],
 	"packs": [
 		{
-			"name": "system-documentation",
+			"name": "system_documentation",
 			"label": "System Documentation",
 			"system": "ac2d20",
-			"path": "packs/system-documentation",
+			"path": "packs/system_documentation",
 			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
@@ -61,7 +61,7 @@
 			"packs": [
 				"macros",
 				"skills",
-				"system-documentation"
+				"system_documentation"
 			]
 		}
 	],
