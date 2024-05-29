@@ -406,11 +406,11 @@ AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough: Resistente
 AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
 AC2D20.WEAPONS.damageEffect.area: Área
-AC2D20.WEAPONS.damageEffect.backlash_x: Backlash
+AC2D20.WEAPONS.damageEffect.backlash_x: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar
 AC2D20.WEAPONS.damageEffect.intense: Intenso
-AC2D20.WEAPONS.damageEffect.persistent_x: Persistent
-AC2D20.WEAPONS.damageEffect.piercing_x: Piercing
+AC2D20.WEAPONS.damageEffect.persistent_x: Persistente
+AC2D20.WEAPONS.damageEffect.piercing_x: Perfurar
 AC2D20.WEAPONS.damageEffect.snare: Capturar
 AC2D20.WEAPONS.damageEffect.stun: Atordoar
 AC2D20.WEAPONS.damageEffect.vicious: Cruel
