@@ -8,6 +8,7 @@
 				class="resource-label align-left roll-attribute clickable"
 				data-attr="{{key}}"
 				data-label="{{attribute.label}}"
+				data-tooltip="{{localize (concat 'AC2D20.Tooltips.Attribute.' key)}}"
 			>
 				<strong>
 					{{localize (concat 'AC2D20.Ability.' key)}}
@@ -174,6 +175,7 @@
 			<label
 				class="skill-name clickable roll-skill"
 				data-item-id="{{item._id}}"
+				data-tooltip="{{localize (concat 'AC2D20.Tooltips.Skill.' (slugify item.name))}}"
 			>
 				{{item.localizedName}}
 			</label>

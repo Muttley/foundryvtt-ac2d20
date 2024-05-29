@@ -166,14 +166,16 @@ export const registerHandlebarsHelpers = function() {
 		for (const focus of focuses) {
 			if (onlyFocused && !focus.isfocus) continue;
 
+			const tooltip = game.i18n.localize(`AC2D20.Tooltips.Focus.${focus.title.slugify()}`);
 			const resultHtml = document.createElement("span");
 
 			resultHtml.classList.add("skill-focus", "clickable", "roll-focus");
 			if (focus.isfocus) resultHtml.classList.add("focused");
 
-			resultHtml.dataset.itemId = skill._id;
-			resultHtml.dataset.isFocused = focus.isfocus;
 			resultHtml.dataset.focusName = focus.title;
+			resultHtml.dataset.isFocused = focus.isfocus;
+			resultHtml.dataset.itemId = skill._id;
+			resultHtml.dataset.tooltip = tooltip;
 
 			resultHtml.innerHTML = ac2d20.utils.getLocalizedFocusName(focus.title);
 
@@ -260,4 +262,11 @@ export const registerHandlebarsHelpers = function() {
 		const html = options.fn(this);
 		return html.replace(rgx, "$& selected");
 	});
+
+	Handlebars.registerHelper("slugify", function(value) {
+		return typeof value === "string"
+			? value.slugify()
+			: value;
+	});
+
 };
