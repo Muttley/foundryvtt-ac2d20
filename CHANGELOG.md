@@ -2,6 +2,7 @@
 
 ## Bugfix
 - [#65] Fix un-localized strings in Actor abilities template
+- [#71] Skill localization not working on NPCs
 - [#73] Typo in max stress calculation meant Will+Resilience not used when it should
 
 ## Chores
