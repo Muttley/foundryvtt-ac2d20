@@ -70,7 +70,7 @@ export default class ACActor extends Actor {
 
 	_calculateMaxStress() {
 		const brawn = this.system.attributes?.bra?.value ?? 0;
-		const will = this.system.attributes?.will?.value ?? 0;
+		const will = this.system.attributes?.wil?.value ?? 0;
 
 		const fatigue = this.system.fatigue ?? 0;
 

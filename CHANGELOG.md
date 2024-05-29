@@ -2,6 +2,7 @@
 
 ## Bugfix
 - [#65] Fix un-localized strings in Actor abilities template
+- [#73] Typo in max stress calculation meant Will+Resilience not used when it should
 
 ## Chores
 - [#67] Merge Portuguese/Brazilian translation updates from Crowdin
