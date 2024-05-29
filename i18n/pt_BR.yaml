@@ -216,7 +216,7 @@ AC2D20.TEMPLATES.Languages: Idiomas
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendido
 AC2D20.TEMPLATES.Luck: Sorte
-AC2D20.TEMPLATES.majoritems: Itens Principais 
+AC2D20.TEMPLATES.majoritems: Itens Principais
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Ímpeto Máximo
 AC2D20.TEMPLATES.max: máx
 AC2D20.TEMPLATES.MAX: MÁX
@@ -397,11 +397,11 @@ AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough: Resistente
 AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
 AC2D20.WEAPONS.damageEffect.area: Área
-AC2D20.WEAPONS.damageEffect.backlash: Retaliar
+AC2D20.WEAPONS.damageEffect.backlash_x: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar
 AC2D20.WEAPONS.damageEffect.intense: Intenso
-AC2D20.WEAPONS.damageEffect.persistent: Persistente
-AC2D20.WEAPONS.damageEffect.piercing: Perfurar
+AC2D20.WEAPONS.damageEffect.persistent_x: Persistente
+AC2D20.WEAPONS.damageEffect.piercing_x: Perfurar
 AC2D20.WEAPONS.damageEffect.snare: Capturar
 AC2D20.WEAPONS.damageEffect.stun: Atordoar
 AC2D20.WEAPONS.damageEffect.vicious: Cruel

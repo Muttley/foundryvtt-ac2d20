@@ -397,11 +397,11 @@ AC2D20.VEHICLES.QUALITIES.singleSeat: Siège unique
 AC2D20.VEHICLES.QUALITIES.tough: Difficile
 AC2D20.Warnings.DerivedValue: Ceci est une valeur calculée qui ne peut être modifiée.
 AC2D20.WEAPONS.damageEffect.area: Étendue
-AC2D20.WEAPONS.damageEffect.backlash: Contrecoup
+AC2D20.WEAPONS.damageEffect.backlash_x: Contrecoup
 AC2D20.WEAPONS.damageEffect.drain: Épuisant
 AC2D20.WEAPONS.damageEffect.intense: Aggravant
-AC2D20.WEAPONS.damageEffect.persistent: Persistant
-AC2D20.WEAPONS.damageEffect.piercing: Perforant
+AC2D20.WEAPONS.damageEffect.persistent_x: Persistant
+AC2D20.WEAPONS.damageEffect.piercing_x: Perforant
 AC2D20.WEAPONS.damageEffect.snare: Entrave
 AC2D20.WEAPONS.damageEffect.stun: Étourdissant
 AC2D20.WEAPONS.damageEffect.vicious: Vicieux
