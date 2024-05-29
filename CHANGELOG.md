@@ -1,5 +1,8 @@
 # v11.5.0
 
+## Ehancement
+- [#74] Add styling to the journals
+
 ## Bugfix
 - [#65] Fix un-localized strings in Actor abilities template
 - [#71] Skill localization not working on NPCs
