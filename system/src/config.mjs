@@ -35,6 +35,18 @@ AC2D20.JOURNAL_UUIDS = {
 
 AC2D20.Size = ["Trivial", "Minor", "Major"];
 
+AC2D20.DAMAGE_EFFECTS = {
+	area: "AC2D20.WEAPONS.damageEffect.area",
+	backlash_x: "AC2D20.WEAPONS.damageEffect.backlash_x",
+	drain: "AC2D20.WEAPONS.damageEffect.drain",
+	intense: "AC2D20.WEAPONS.damageEffect.intense",
+	persistent_x: "AC2D20.WEAPONS.damageEffect.persistent_x",
+	piercing_x: "AC2D20.WEAPONS.damageEffect.piercing_x",
+	snare: "AC2D20.WEAPONS.damageEffect.snare",
+	stun: "AC2D20.WEAPONS.damageEffect.stun",
+	vicious: "AC2D20.WEAPONS.damageEffect.vicious",
+};
+
 AC2D20.WEAPONS = {
 	range: {
 		reach: "AC2D20.RANGE.reach",
@@ -81,5 +93,29 @@ export async function buildSkillTranslations() {
 		if (localizedName === nameKey) localizedName = skill.name;
 
 		CONFIG.AC2D20.SKILL_NAMES[nameKey] = localizedName;
+	}
+}
+
+export async function generateEnrichedTooltips() {
+	// CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS = {};
+	// CONFIG.AC2D20.WEAPON_QUALITY_HAS_RANK = {};
+	// for (const key in CONFIG.AC2D20.WEAPON_QUALITIES) {
+	// 	CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key] = await TextEditor.enrichHTML(
+	// 		game.i18n.localize(
+	// 			`AC2D20.TOOLTIPS.WeaponQuality.${key}`
+	// 		)
+	// 	);
+	// 	CONFIG.AC2D20.WEAPON_QUALITY_HAS_RANK[key] = key.endsWith("_x");
+	// }
+
+	CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK = {};
+	CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS = [];
+	for (const key in CONFIG.AC2D20.DAMAGE_EFFECTS) {
+		CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS[key] = await TextEditor.enrichHTML(
+			game.i18n.localize(
+				`AC2D20.Tooltips.DamageEffect.${key}`
+			)
+		);
+		CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK[key] = key.endsWith("_x");
 	}
 }

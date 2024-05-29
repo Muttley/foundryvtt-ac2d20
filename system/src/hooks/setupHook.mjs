@@ -1,3 +1,4 @@
+import { generateEnrichedTooltips } from "../config.mjs";
 import registerSettings from "../settings.mjs";
 
 export const setupHook = {
@@ -20,6 +21,8 @@ export const setupHook = {
 					}
 				}
 			}
+
+			generateEnrichedTooltips();
 		});
 	},
 };

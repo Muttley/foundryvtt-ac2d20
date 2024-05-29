@@ -64,6 +64,42 @@ export const registerHandlebarsHelpers = function() {
 		}
 	});
 
+	Handlebars.registerHelper("listDamageEffects", function(effects) {
+		const elements = [];
+
+		for (const key in effects) {
+			if (!CONFIG.AC2D20.DAMAGE_EFFECTS.hasOwnProperty(key)) continue;
+
+			const effect = effects[key];
+
+			if (!effect.value) continue;
+
+			let effectName = CONFIG.AC2D20.DAMAGE_EFFECTS[key];
+			if (effect.rank > 0) effectName += ` ${effect.rank}`;
+
+			const tooltip = CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS[key];
+
+			const resultHtml = document.createElement("span");
+			resultHtml.classList.add("effect", "hover");
+			resultHtml.dataset.key = key;
+			resultHtml.dataset.tooltip = tooltip;
+			resultHtml.innerHTML = effectName;
+
+			elements.push(resultHtml.outerHTML);
+		}
+
+		let listString = "";
+
+		if (elements.length > 0) {
+			listString = elements.join(",&nbsp;");
+		}
+		else {
+			listString = "&mdash;";
+		}
+
+		return listString;
+	});
+
 	Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
 		lvalue = parseFloat(lvalue);
 		rvalue = parseFloat(rvalue);

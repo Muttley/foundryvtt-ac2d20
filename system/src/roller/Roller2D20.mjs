@@ -214,7 +214,7 @@ export default class Roller2D20 {
 		let chatData = {
 			blind,
 			content: html,
-			flags: { ac2d20roll: ac2d20Roll },
+			flags: { ac2d20Roll },
 			roll,
 			rollMode: game.settings.get("core", "rollMode"),
 			speaker,
@@ -337,19 +337,28 @@ export default class Roller2D20 {
 		});
 	}
 
-	static async sendD6ToChat({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
-		let damage = diceRolled.reduce((a, b) => ({ result: a.result + b.result })).result;
-		let effects = diceRolled.reduce((a, b) => ({ effect: a.effect + b.effect })).effect;
-		// let weaponDamageTypesList = [];
-		// let weaponDamageEffectsList = [];
-		// let weaponQualityList = [];
+	static async sendD6ToChat({
+		actorId = null,
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll D6",
+	} = {}) {
+		let damage = diceRolled.reduce(
+			(a, b) => ({ result: a.result + b.result })
+		).result;
 
-		let itemEffects = [];
+		let effects = diceRolled.reduce(
+			(a, b) => ({ effect: a.effect + b.effect })
+		).effect;
+
 		let itemQualities = [];
 
+		let actor;
+		let item;
 		if (itemId && actorId) {
 			let actor = game.actors.get(actorId);
-			let item = null;
 			if (actor) {
 				item = actor.items.get(itemId);
 			}
@@ -358,16 +367,6 @@ export default class Roller2D20 {
 					itemEffects = item.system.costEffects;
 				}
 				else if (item.type === "weapon") {
-					for (let de in item.system.effect) {
-						if (item.system.effect[de].value) {
-							let rank = item.system.effect[de].rank ?? "";
-							let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-							let efectLabel = `<span data-tooltip="${Handlebars.helpers.getTooltipFromConfigKey(`AC2D20.WEAPONS.effects.${de}`)}">${damageEffectLabel}${rank}</span>`;
-							itemEffects.push(efectLabel);
-						}
-					}
-					itemEffects = itemEffects.join(", ");
-
 					for (let qu in item.system.qualities) {
 						if (item.system.qualities[qu].value) {
 							let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
@@ -380,36 +379,43 @@ export default class Roller2D20 {
 		}
 
 		let rollData = {
-			rollName: rollName,
-			damage: damage,
-			effects: effects,
+			damage,
+			effects,
+			item,
+			itemQualities,
 			results: diceRolled,
-			itemEffects: itemEffects,
-			itemQualities: itemQualities,
+			rollName,
 		};
-		const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.hbs", rollData);
-		let ac2d20Roll = {};
-		ac2d20Roll.rollName = rollName;
-		ac2d20Roll.diceRolled = diceRolled;
-		ac2d20Roll.damage = damage;
-		ac2d20Roll.effects = effects;
-		ac2d20Roll.rerollIndexes = rerollIndexes;
-		ac2d20Roll.diceFace = "d6";
 
-		let chatData = {
-			user: game.user.id,
-			rollMode: game.settings.get("core", "rollMode"),
-			content: html,
-			flags: { ac2d20roll: ac2d20Roll, itemId: itemId, actorId: actorId },
-			type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-			roll: roll,
+		const html = await renderTemplate(
+			"systems/ac2d20/templates/chat/rollD6.hbs",
+			rollData
+		);
+
+		const ac2d20Roll = {
+			damage,
+			diceFace: "d6",
+			diceRolled,
+			effects,
+			rerollIndexes,
+			rollName,
 		};
-		if (["gmroll", "blindroll"].includes(chatData.rollMode)) {
-			chatData.whisper = ChatMessage.getWhisperRecipients("GM");
-		}
-		else if (chatData.rollMode === "selfroll") {
-			chatData.whisper = [game.user];
-		}
+
+		const speaker = {actor: actorId};
+
+		const { whisper, blind } = this.getRollModeSettings();
+
+		const chatData = {
+			blind,
+			content: html,
+			flags: { ac2d20Roll, itemId, actorId },
+			roll,
+			rollMode: game.settings.get("core", "rollMode"),
+			speaker,
+			user: game.user.id,
+			whisper,
+		};
+
 		await ChatMessage.create(chatData);
 
 	}

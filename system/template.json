@@ -293,51 +293,39 @@
 			"ammo": 0,
 			"effect": {
 				"area": {
-					"description": "",
-					"label": "Area",
+					"rank": 0,
 					"value": false
 				},
-				"backlash": {
-					"description": "",
-					"label": "Backlash",
+				"backlash_x": {
 					"rank": 1,
 					"value": false
 				},
 				"drain": {
-					"description": "",
-					"label": "Drain",
+					"rank": 0,
 					"value": false
 				},
 				"intense": {
-					"description": "",
-					"label": "Intense",
+					"rank": 0,
 					"value": false
 				},
-				"persistent": {
-					"description": "",
-					"label": "Persistent",
+				"persistent_x": {
 					"rank": 1,
 					"value": false
 				},
-				"piercing": {
-					"description": "",
-					"label": "Piercing",
+				"piercing_x": {
 					"rank": 1,
 					"value": false
 				},
 				"snare": {
-					"description": "",
-					"label": "Snare",
+					"rank": 0,
 					"value": false
 				},
 				"stun": {
-					"description": "",
-					"label": "Stun",
+					"rank": 0,
 					"value": false
 				},
 				"vicious": {
-					"description": "",
-					"label": "Vicious",
+					"rank": 0,
 					"value": false
 				}
 			},

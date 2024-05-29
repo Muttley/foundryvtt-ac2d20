@@ -67,6 +67,23 @@ export default class ACItemSheet extends ItemSheet {
 			);
 		}
 
+		if (item.type === "weapon") {
+			const damageEffects = [];
+			for (const key in CONFIG.AC2D20.DAMAGE_EFFECTS) {
+				damageEffects.push({
+					active: item.system?.effect[key].value ?? false,
+					hasRank: CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK[key],
+					rank: item.system?.effect[key].rank,
+					key,
+					label: CONFIG.AC2D20.DAMAGE_EFFECTS[key],
+				});
+			}
+
+			context.damageEffects = damageEffects.sort(
+				(a, b) => a.label.localeCompare(b.label)
+			);
+		}
+
 		// Add the actor's data to context.data for easier access, as well as flags.
 		// context.data = itemData.data;
 		// context.flags = itemData.flags;
