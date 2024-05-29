@@ -292,6 +292,15 @@ AC2D20.Tooltips.Attribute.coo: Coordination is a measure of your fine motor skil
 AC2D20.Tooltips.Attribute.ins: Insight is your perception, instincts, and your ability to comprehend the world around you. Insightful characters are observant, shrewd, ‘street smart’, and wise.
 AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
 AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
+AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
+AC2D20.Tooltips.DamageEffect.backlash_x: Each effect inflicts X stress to the attacker. Injuries may be physical or mental, at the GM’s discretion.
+AC2D20.Tooltips.DamageEffect.drain: The attacker suffers 1 Fatigue for each effect rolled.
+AC2D20.Tooltips.DamageEffect.intense: If the attack inflicts an injury, and an effect is rolled, the attack inflicts an additional injury.
+AC2D20.Tooltips.DamageEffect.persistent_x: The attack or hazard has a lingering effect. If one or more effects are rolled, the target suffers X@x stress at the start of the affected character’s turn, for rounds equal to the number of effects rolled.
+AC2D20.Tooltips.DamageEffect.piercing_x: The attack ignores X resistance for each effect rolled.
+AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
+AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
+AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
 AC2D20.Tooltips.Focus.air-force: Air Force — covers training in fighter and bomber tactics, such as dogfighting, formation flying and navigation, as well as aerial military strategy.
 AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
 AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
@@ -397,11 +406,11 @@ AC2D20.VEHICLES.QUALITIES.singleSeat: Siège unique
 AC2D20.VEHICLES.QUALITIES.tough: Difficile
 AC2D20.Warnings.DerivedValue: Ceci est une valeur calculée qui ne peut être modifiée.
 AC2D20.WEAPONS.damageEffect.area: Étendue
-AC2D20.WEAPONS.damageEffect.backlash: Contrecoup
+AC2D20.WEAPONS.damageEffect.backlash_x: Backlash
 AC2D20.WEAPONS.damageEffect.drain: Épuisant
 AC2D20.WEAPONS.damageEffect.intense: Aggravant
-AC2D20.WEAPONS.damageEffect.persistent: Persistant
-AC2D20.WEAPONS.damageEffect.piercing: Perforant
+AC2D20.WEAPONS.damageEffect.persistent_x: Persistent
+AC2D20.WEAPONS.damageEffect.piercing_x: Piercing
 AC2D20.WEAPONS.damageEffect.snare: Entrave
 AC2D20.WEAPONS.damageEffect.stun: Étourdissant
 AC2D20.WEAPONS.damageEffect.vicious: Vicieux
