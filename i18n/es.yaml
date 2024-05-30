@@ -381,6 +381,23 @@ AC2D20.Tooltips.Skill.stealth: <b>Sigilo</b><br>Representa la capacidad del pers
 AC2D20.Tooltips.Skill.survival: <b>Supervivencia</b><br>Expresa la capacidad del personaje para sobrevivir en condiciones inhóspitas, lo que incluye temperaturas y climas extremos, plantas y animales peligrosos, además de saber cómo encontrar suficiente comida y agua, y hacer una hoguera o construir un refugio. También abarca la capacidad de rastrear animales (y enemigos), así como de entrenar animales y comunicarse con ellos.
 AC2D20.Tooltips.Skill.tactics: <b>Tácticas</b><br>Esta habilidad se ocupa de la capacidad de tu personaje para percibir y evaluar una situación de combate y diseñar un plan adecuado. No solo abarca la estrategia y las tácticas militares, sino también la dinámica y el liderazgo del equipo, o la organización de un grupo de científicos o ingenieros.
 AC2D20.Tooltips.Skill.vehicles: <b>Vehículos</b><br>Abarca el manejo y mantenimiento de vehículos de todo tipo. Un personaje experto en vehículos sabe cómo funcionan, cómo pueden fallar y cómo mantenerlos y repararlos, además de manejarlos. Se superpone con Ingeniería al respecto a los vehículos. Se utiliza en lugar de Atletismo para evitar o superar los obstáculos del terreno a los mandos de un vehículo.
+AC2D20.Tooltips.WeaponQuality.accurate: If you take the <em>Aim</em> minor action before attacking with this weapon, the weapon gains the Intense effect for that attack.
+AC2D20.Tooltips.WeaponQuality.bane: The weapon is especially effective against Mythos creatures and ignores the effects of the Invulnerable special rule against such creatures. In addition, Mythos creatures with the Tough X special rule may not spend Threat to ignore wounds caused by a weapon with the Bane quality
+AC2D20.Tooltips.WeaponQuality.close_quarters: The weapon is compact and easy to wield in tight confines and in the press of melee. The weapon suffers no penalty when used to make a ranged attack while an enemy is within Reach.
+AC2D20.Tooltips.WeaponQuality.cumbersome: The weapon is heavy and awkward to bring to bear against small targets like infantry. When making an attack with this weapon, increase the difficulty of the attack by +1, if the target is human-sized or smaller.
+AC2D20.Tooltips.WeaponQuality.debilitating: The difficulty of any skill test to treat the physical injuries of this weapon is increased by +1.
+AC2D20.Tooltips.WeaponQuality.escalation: Entering a scene with the weapon generates 1 Threat.
+AC2D20.Tooltips.WeaponQuality.giant_killer: The weapon’s destructive power is wasted on small or soft targets, but the bigger the target, the more of the weapon’s lethality is unleashed. When rolling damage for a weapon with this quality, add +X@s to the weapon’s damage where X is the target’s Scale. A weapon may not gain more additional dice from this quality than its base damage — a weapon with a base damage of 6@s cannot gain more than +6@s from it.
+AC2D20.Tooltips.WeaponQuality.heavy: Attacks with this weapon increase in difficulty by +2 unless the weapon has been set up (braced against the ground or solid object, or mounted on a bipod or tripod). Setting up a heavy weapon requires the Prepare minor action.
+AC2D20.Tooltips.WeaponQuality.hidden: When the weapon is hidden it cannot be detected by those simply looking at the character, and any skill test to search for the weapon increases in difficulty by 1.
+AC2D20.Tooltips.WeaponQuality.hunger: "Whenever the weapon is used to inflict one or more injuries, the wielder may gain one of the following bonuses: recover 5 stress, heal a single Injury, or gain +1@s power for the remainder of the scene (this bonus to power may only be gained once per scene)."
+AC2D20.Tooltips.WeaponQuality.inaccurate: You cannot benefit from the Aim minor action with this weapon.
+AC2D20.Tooltips.WeaponQuality.indirect: The weapon is not designed for direct fire, instead dropping its payload upon enemies over great distances. Attacks with the weapon increase in difficulty by +1, but do not require line of sight.
+AC2D20.Tooltips.WeaponQuality.munition: The ammunition for this weapon is especially bulky—when you make an attack using a Munition weapon you must use 1 ammo. The weapon cannot be used to make salvo attacks.
+AC2D20.Tooltips.WeaponQuality.parrying: When the weapon’s wielder makes an opposed test in defence of a melee attack, they may reroll a single d20 on their test. This does not stack if the character has multiple Parrying weapons.
+AC2D20.Tooltips.WeaponQuality.reliable: You may ignore the first complication rolled using this weapon in an action scene.
+AC2D20.Tooltips.WeaponQuality.subtle: Attacks with this weapon are difficult to hear, requiring a difficulty 2 <strong>Insight + Observation</strong> test to notice. The GM may adjust this difficulty based on distance and ambient noise.
+AC2D20.Tooltips.WeaponQuality.unreliable: Attacks with this weapon increase the test’s complication range by 1.
 AC2D20.UI.Add: Añadir
 AC2D20.UI.CarryWeight: Peso acarreado
 AC2D20.UI.Cost: Coste
@@ -422,11 +439,11 @@ AC2D20.WEAPONS.qualities: Cualidades
 AC2D20.WEAPONS.type: Tipo de arma
 AC2D20.WEAPONS.weaponQuality.accurate: Precisa
 AC2D20.WEAPONS.weaponQuality.bane: Azote
-AC2D20.WEAPONS.weaponQuality.closeQuarters: Bocajarro
+AC2D20.WEAPONS.weaponQuality.close_quarters: Bocajarro
 AC2D20.WEAPONS.weaponQuality.cumbersome: Aparatosa
 AC2D20.WEAPONS.weaponQuality.debilitating: Dañina
 AC2D20.WEAPONS.weaponQuality.escalation: Amenazante
-AC2D20.WEAPONS.weaponQuality.giant-killer: Matagigantes
+AC2D20.WEAPONS.weaponQuality.giant_killer: Matagigantes
 AC2D20.WEAPONS.weaponQuality.heavy: Pesada
 AC2D20.WEAPONS.weaponQuality.hidden: Oculta
 AC2D20.WEAPONS.weaponQuality.hunger: Voraz
