@@ -13,6 +13,7 @@
 - [#67] Merge Portuguese/Brazilian translation updates from Crowdin
 - [#72] Merge French and Portuguese/Brazilian translation updates from Crowdin
 - [#78] Merge Spanish and Portuguese/Brazilian translation updates from Crowdin
+- [#79] Merge Portuguese/Brazilian translation updates from Crowdin
 
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 
