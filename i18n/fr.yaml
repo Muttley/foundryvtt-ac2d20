@@ -19,6 +19,7 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Réserve de Momentum réduite à
 AC2D20.Combat.CombatHasNotStarted: Le combat n'a pas commencé
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Réserve de Momentum Réduite au Début du Nouveau Tour
 AC2D20.Combat.ToggleCombatantsTurnDone: Activer/Désactiver le tour terminé
+AC2D20.Dialog.NumberOfDice: Number of Dice
 AC2D20.EffectCreate: Créer un effet
 AC2D20.EffectDelete: Retirer un effet
 AC2D20.EffectEdit: Éditer un effet
@@ -422,6 +423,7 @@ AC2D20.VEHICLES.QUALITIES.highPerformance: Haute performance
 AC2D20.VEHICLES.QUALITIES.singleSeat: Siège unique
 AC2D20.VEHICLES.QUALITIES.tough: Difficile
 AC2D20.Warnings.DerivedValue: Ceci est une valeur calculée qui ne peut être modifiée.
+AC2D20.Warnings.OnEditOwnedItemActiveEffects: Managing Active Effects within an Owned Item is not currently supported.
 AC2D20.WEAPONS.damageEffect.area: Étendue
 AC2D20.WEAPONS.damageEffect.backlash_x: Contrecoup
 AC2D20.WEAPONS.damageEffect.drain: Épuisant

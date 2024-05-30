@@ -19,6 +19,7 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no
 AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no Início da Rodada
 AC2D20.Combat.ToggleCombatantsTurnDone: Alternar Turno Concluído
+AC2D20.Dialog.NumberOfDice: Number of Dice
 AC2D20.EffectCreate: Criar Efeito
 AC2D20.EffectDelete: Deletar Efeito
 AC2D20.EffectEdit: Editar Efeito
@@ -216,7 +217,7 @@ AC2D20.TEMPLATES.Languages: Idiomas
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendido
 AC2D20.TEMPLATES.Luck: Sorte
-AC2D20.TEMPLATES.majoritems: Itens Principais 
+AC2D20.TEMPLATES.majoritems: Itens Principais
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Ímpeto Máximo
 AC2D20.TEMPLATES.max: máx
 AC2D20.TEMPLATES.MAX: MÁX
@@ -422,6 +423,7 @@ AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Performance
 AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough: Resistente
 AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
+AC2D20.Warnings.OnEditOwnedItemActiveEffects: Managing Active Effects within an Owned Item is not currently supported.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash_x: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar

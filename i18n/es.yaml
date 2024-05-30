@@ -19,6 +19,7 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva de inercia reducida al f
 AC2D20.Combat.CombatHasNotStarted: Combate no iniciado
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva de inercia reducida al inicio de un nuevo asalto
 AC2D20.Combat.ToggleCombatantsTurnDone: Conmutar turno finalizado
+AC2D20.Dialog.NumberOfDice: Number of Dice
 AC2D20.EffectCreate: Crear efecto
 AC2D20.EffectDelete: Borrar efecto
 AC2D20.EffectEdit: Editar efecto
@@ -422,6 +423,7 @@ AC2D20.VEHICLES.QUALITIES.highPerformance: Alto rendimiento
 AC2D20.VEHICLES.QUALITIES.singleSeat: Monoplaza
 AC2D20.VEHICLES.QUALITIES.tough: Resistente
 AC2D20.Warnings.DerivedValue: Este campo se calcula automáticamente y no puede ser editado.
+AC2D20.Warnings.OnEditOwnedItemActiveEffects: Managing Active Effects within an Owned Item is not currently supported.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash_x: Retroceso
 AC2D20.WEAPONS.damageEffect.drain: Drenaje
