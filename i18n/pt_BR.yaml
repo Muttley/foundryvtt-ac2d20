@@ -286,18 +286,18 @@ AC2D20.TEMPLATES.Use_Will: Usar Vontade
 AC2D20.TEMPLATES.Weapon_Qualities: QUALIDADES DA ARMA
 AC2D20.TEMPLATES.Weapon_Type: Tipo de Arma
 AC2D20.TEMPLATES.Weapons: Armas
-AC2D20.Tooltips.Attribute.agi: Agility is a mixture of speed, balance, and muscle memory, and is responsible for a character’s movement and dexterity. An agile character is quick, moving with certainty and precision.
-AC2D20.Tooltips.Attribute.bra: Brawn is the character’s physical fitness and endurance. A brawny character is strong and hardy.
-AC2D20.Tooltips.Attribute.coo: Coordination is a measure of your fine motor skills, accuracy, and sense of timing. Coordinated characters are good shots, good drivers and pilots, and excel at sleight of hand and other delicate, precise tasks.
+AC2D20.Tooltips.Attribute.agi: Agilidade é uma mistura de velocidade, equilíbrio e memória muscular, e é responsável pelo movimento e destreza de um personagem. Um personagem ágil é rápido se move com certeza e precisão.
+AC2D20.Tooltips.Attribute.bra: Músculo é o indicador da capacidade física e resistência do personagem. Um personagem musculoso é forte e resistente.
+AC2D20.Tooltips.Attribute.coo: Coordenação é a medida das suas habilidades motoras, da precisão e do senso de oportunidade. Personagens coordenados são bons de tiro, bons motoristas e pilotos, e excedem em prestidigitação e outras tarefas precisas e delicadas.
 AC2D20.Tooltips.Attribute.ins: Insight is your perception, instincts, and your ability to comprehend the world around you. Insightful characters are observant, shrewd, ‘street smart’, and wise.
 AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
 AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
 AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
-AC2D20.Tooltips.DamageEffect.backlash_x: Each effect inflicts X stress to the attacker. Injuries may be physical or mental, at the GM’s discretion.
-AC2D20.Tooltips.DamageEffect.drain: The attacker suffers 1 Fatigue for each effect rolled.
+AC2D20.Tooltips.DamageEffect.backlash_x: Cada Efeito inflige X estresse ao atacante. Feridas podem ser físicas ou mentais, a critério do Mestre.
+AC2D20.Tooltips.DamageEffect.drain: O atacante sofre 1 de Fadiga por cada Efeito rolado.
 AC2D20.Tooltips.DamageEffect.intense: If the attack inflicts an injury, and an effect is rolled, the attack inflicts an additional injury.
 AC2D20.Tooltips.DamageEffect.persistent_x: The attack or hazard has a lingering effect. If one or more effects are rolled, the target suffers X@x stress at the start of the affected character’s turn, for rounds equal to the number of effects rolled.
-AC2D20.Tooltips.DamageEffect.piercing_x: The attack ignores X resistance for each effect rolled.
+AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X resistência para cada Efeito rolado.
 AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
 AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
 AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
