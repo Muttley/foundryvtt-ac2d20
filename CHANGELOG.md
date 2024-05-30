@@ -7,10 +7,12 @@
 - [#65] Fix un-localized strings in Actor abilities template
 - [#71] Skill localization not working on NPCs
 - [#73] Typo in max stress calculation meant Will+Resilience not used when it should
+- [#75] Error in char sheet talent listing text enrichments used in description
 
 ### Chores
 - [#67] Merge Portuguese/Brazilian translation updates from Crowdin
 - [#72] Merge French and Portuguese/Brazilian translation updates from Crowdin
+- [#78] Merge Spanish and Portuguese/Brazilian translation updates from Crowdin
 
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 
