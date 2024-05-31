@@ -100,6 +100,41 @@ export const registerHandlebarsHelpers = function() {
 		return listString;
 	});
 
+	Handlebars.registerHelper("listWeaponQualities", function(qualities) {
+		const elements = [];
+
+		for (const key in qualities) {
+			if (!CONFIG.AC2D20.WEAPON_QUALITIES.hasOwnProperty(key)) continue;
+
+			const effect = qualities[key];
+
+			if (!effect.value) continue;
+
+			let qualityName = CONFIG.AC2D20.WEAPON_QUALITIES[key];
+
+			const tooltip = CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key];
+
+			const resultHtml = document.createElement("span");
+			resultHtml.classList.add("quality", "hover");
+			resultHtml.dataset.key = key;
+			resultHtml.dataset.tooltip = tooltip;
+			resultHtml.innerHTML = qualityName;
+
+			elements.push(resultHtml.outerHTML);
+		}
+
+		let listString = "";
+
+		if (elements.length > 0) {
+			listString = elements.join(",&nbsp;");
+		}
+		else {
+			listString = "&mdash;";
+		}
+
+		return listString;
+	});
+
 	Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
 		lvalue = parseFloat(lvalue);
 		rvalue = parseFloat(rvalue);
@@ -125,11 +160,15 @@ export const registerHandlebarsHelpers = function() {
 
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
 		if (key === "") return [];
+
 		const skill = CONFIG.AC2D20.SKILLS.find(s => s.key === key);
+
 		const focuses = {};
+
 		for (const focus of skill.focuses) {
 			focuses[focus] = ac2d20.utils.getLocalizedFocusName(focus);
 		}
+
 		return focuses;
 	});
 

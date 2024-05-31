@@ -10,10 +10,11 @@
 - [#75] Error in char sheet talent listing text enrichments used in description
 
 ### Chores
-- [#67] Merge Portuguese/Brazilian translation updates from Crowdin
-- [#72] Merge French and Portuguese/Brazilian translation updates from Crowdin
-- [#78] Merge Spanish and Portuguese/Brazilian translation updates from Crowdin
-- [#79] Merge Portuguese/Brazilian translation updates from Crowdin
+- [#67] Merge new Portuguese/Brazilian translation updates from Crowdin
+- [#72] Merge new French and Portuguese/Brazilian translation updates from Crowdin
+- [#78] Merge new Spanish and Portuguese/Brazilian translation updates from Crowdin
+- [#79] Merge new Portuguese/Brazilian translation updates from Crowdin
+- [#87] Unable to alter max momentum setting if you reduce it to zero
 
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 

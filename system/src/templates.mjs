@@ -5,12 +5,13 @@
  */
 export const preloadHandlebarsTemplates = async function() {
 	const partials = [
-		"systems/ac2d20/templates/actor/parts/actor-header.hbs",
+		"systems/ac2d20/templates/actor/_shared-partials/weapon-details-hint.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-abilities.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-armor.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-effects.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-encumbrance.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-equipment.hbs",
+		"systems/ac2d20/templates/actor/parts/actor-header.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-skillkit.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-spells.hbs",
 		"systems/ac2d20/templates/actor/parts/actor-talents.hbs",

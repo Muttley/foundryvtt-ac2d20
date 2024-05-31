@@ -12,19 +12,21 @@
 	{{#if isPhysical}}
 	<hr>
 	<div class="flexrow" style="font-size: 0.75rem;">
-		<p><strong>{{localize "AC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel weight))}}</p>
+		<p><strong>{{localize "AC2D20.TEMPLATES.Size"}}:</strong> {{localize (concat 'AC2D20.TEMPLATES.SizeLevels.'
+			(getSizeLabel weight))}}</p>
 		<p><strong>{{localize "AC2D20.TEMPLATES.Restriction"}}:</strong> {{restriction}}</p>
 	</div>
 	{{/if}}
 	<hr>
 	{{#if isWeapon}}
-	<p><strong>{{localize "AC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'AC2D20.WEAPONS.weaponTypes.' weaponType)}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Weapon_Type"}}:</strong> {{localize (concat 'AC2D20.WEAPONS.weaponTypes.'
+		weaponType)}}</p>
 	<p><strong>{{localize "AC2D20.TEMPLATES.Focus"}}:</strong> {{skill}} ({{focus}})</p>
 	<p><strong>{{localize "AC2D20.STRESS.stress"}}:</strong> {{stress}}</p>
 	<p><strong>{{localize "AC2D20.TEMPLATES.RANGE"}}:</strong> {{localize (concat 'AC2D20.RANGE.' range)}}</p>
 	<p><strong>{{localize "AC2D20.TEMPLATES.Salvo"}}:</strong> {{salvo}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{getWeaponQualities qualities}}}</p>
-	<p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{{getWeaponEffects effect}}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Qualities"}}:</strong> {{{listWeaponQualities qualities}}}</p>
+	<p><strong>{{localize "AC2D20.TEMPLATES.Effects"}}:</strong> {{{listDamageEffects effect}}}</p>
 	{{/if}}
 
 	{{#if isSkillkit}}
@@ -46,35 +48,35 @@
 	{{/if}}
 
 	{{#if isSpell}}
-		<p>
-			<strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong>
-			{{skill}}
-			{{#if focus}}
-				({{focus}})
-			{{/if}}
-		</p>
-		<p>
-			<strong>{{localize "AC2D20.TEMPLATES.Difficulty"}}:</strong>
-			{{difficulty}}
-		</p>
-		<p>
-			<strong>{{localize "AC2D20.TEMPLATES.Cost"}}:</strong>
-			{{cost}}<span class="cth-ico-cth"></span>
-			{{#if costEffects}}
-				({{costEffects}})
-			{{/if}}
-		</p>
-		<p>
-			<strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong>
-			{{duration}}
-		</p>
+	<p>
+		<strong>{{localize "AC2D20.TEMPLATES.Skill"}}:</strong>
+		{{skill}}
+		{{#if focus}}
+		({{focus}})
+		{{/if}}
+	</p>
+	<p>
+		<strong>{{localize "AC2D20.TEMPLATES.Difficulty"}}:</strong>
+		{{difficulty}}
+	</p>
+	<p>
+		<strong>{{localize "AC2D20.TEMPLATES.Cost"}}:</strong>
+		{{cost}}<span class="cth-ico-cth"></span>
+		{{#if costEffects}}
+		({{costEffects}})
+		{{/if}}
+	</p>
+	<p>
+		<strong>{{localize "AC2D20.TEMPLATES.Duration"}}:</strong>
+		{{duration}}
+	</p>
 	{{/if}}
 
 	{{#if isSkill}}
 	<p>Focuses</p>
 	<ol>
 		{{#each focuses as |focus id|}}
-		<p {{#if focus.isfocus}}style="text-decoration:underline"{{/if}}>{{focus.title}}</p>
+		<p {{#if focus.isfocus}}style="text-decoration:underline" {{/if}}>{{focus.title}}</p>
 		{{/each}}
 	</ol>
 	{{/if}}

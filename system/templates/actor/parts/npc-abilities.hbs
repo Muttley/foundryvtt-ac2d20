@@ -79,17 +79,6 @@
 					</span>
 					<label class="skill-focuses" for="">
 						{{{listSkillFocuses item true}}}
-						{{!-- {{#each item.system.focuses}}
-							{{#if (eq this.isfocus true)}}
-								<span
-									class="skill-focus roll-focus focused clickable"
-									data-item-id="{{item._id}}"
-									data-focus-name="{{this.title}}"
-								>
-									{{this.title}}&nbsp;
-								</span>
-							{{/if}}
-						{{/each}} --}}
 					</label>
 				</li>
 				{{/each}}
@@ -119,34 +108,41 @@
 	<div>
 		<div style="margin-bottom: 2rem;">
 			<div class="section-title">
-				<h3 class="blue">{{localize "AC2D20.TEMPLATES.Weapons"}}<span class="item-create clickable" data-type="weapon" data-weight="3">&nbsp;&nbsp;&nbsp;&nbsp; +</span></h3>
+				<h3 class="blue">
+					{{localize "AC2D20.TEMPLATES.Weapons"}}
+					<span
+						class="item-create clickable"
+						data-type="weapon"
+						data-weight="3"
+					>
+						&nbsp;&nbsp;&nbsp;&nbsp; +
+					</span>
+				</h3>
 				<span class="right-slope blue"></span>
 			</div>
 			<ul class="items-list-npc">
-				{{#each weapons as |item key|}}
-				<li class="item editable-item" data-item-id="{{item._id}}">
-					<span class="main-row">
-						<label class="item-name clickable roll-weapon">{{item.name}}</label>
-						<label class="item-name clickable roll-stress">{{system.stress}}<span class="cth-ico-cth"></span></label>
-						<!-- <div class="controls" style="display: flex; justify-content: space-between; border-right: none; ">
-							<a class="item-control item-edit blue" title="Edit Item"><i class="fas fa-edit"></i></a>
-							<a class="item-control item-delete blue" title="Delete Item"><i class="fas fa-trash"></i></a>
-						</div> -->
-					</span>
-					<div class="skill-focuses" for="">
-						<span class="skill-focus focus-name" data-item-id="{{item._id}}"><strong>{{system.focus}}</strong>,</span>
-						<span>{{localize "AC2D20.TEMPLATES.RANGE"}}: <strong>{{localize (concat 'AC2D20.RANGE.' system.range)}}</strong>,&nbsp;</span>
-						<span>{{localize "AC2D20.TEMPLATES.Salvo"}}: <strong>{{system.salvo}}</strong>&nbsp;</span>
-					</div>
-					<div class="qualities" style="font-size: 0.688rem;">
-						<span>{{localize "AC2D20.WEAPONS.qualities"}}: </span>
-						{{#each system.qualities as |qu quid|}}
-						{{#if (eq qu.value true)}}
-						<span class="wpn-quality" data-item-id="{{item._id}}" style="font-size: 0.688rem;" data-tooltip="{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' quid)}}" data-tooltip-direction="LEFT"><strong>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' quid)}}</strong>, </span>
-						{{/if}}
-						{{/each}}
-					</div>
-				</li>
+				{{#each weapons}}
+					<li class="item editable-item" data-item-id="{{this._id}}">
+						<span class="main-row">
+							<label class="item-name clickable roll-weapon">
+								{{this.name}}
+							</label>
+							<label class="item-name clickable roll-stress">
+								{{this.system.stress}}
+								<span class="cth-ico-cth"></span>
+							</label>
+						</span>
+						<div class="skill-focuses">
+							<span class="skill-focus focus-name" data-item-id="{{this._id}}">
+								<strong>
+									{{this.system.focus}}
+								</strong>
+								|&nbsp;
+							</span>
+							{{> actor/_shared-partials/weapon-details-hint
+								weapon=this
+							}}
+					</li>
 				{{/each}}
 			</ul>
 		</div>

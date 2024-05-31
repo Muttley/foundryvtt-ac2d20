@@ -47,6 +47,36 @@ AC2D20.DAMAGE_EFFECTS = {
 	vicious: "AC2D20.WEAPONS.damageEffect.vicious",
 };
 
+AC2D20.VEHICLE_QUALITIES = {
+	cargo_x: "AC2D20.VEHICLES.QUALITIES.cargo_x",
+	cumbersome: "AC2D20.VEHICLES.QUALITIES.cumbersome",
+	enclosed: "AC2D20.VEHICLES.QUALITIES.enclosed",
+	exposed: "AC2D20.VEHICLES.QUALITIES.exposed",
+	high_performance: "AC2D20.VEHICLES.QUALITIES.high_performance",
+	single_seat: "AC2D20.VEHICLES.QUALITIES.single_seat",
+	tough_x: "AC2D20.VEHICLES.QUALITIES.tough_x",
+};
+
+AC2D20.WEAPON_QUALITIES = {
+	accurate: "AC2D20.WEAPONS.weaponQuality.accurate",
+	bane: "AC2D20.WEAPONS.weaponQuality.bane",
+	close_quarters: "AC2D20.WEAPONS.weaponQuality.close_quarters",
+	cumbersome: "AC2D20.WEAPONS.weaponQuality.cumbersome",
+	debilitating: "AC2D20.WEAPONS.weaponQuality.debilitating",
+	escalation: "AC2D20.WEAPONS.weaponQuality.escalation",
+	giant_killer: "AC2D20.WEAPONS.weaponQuality.giant_killer",
+	heavy: "AC2D20.WEAPONS.weaponQuality.heavy",
+	hidden: "AC2D20.WEAPONS.weaponQuality.hidden",
+	hunger: "AC2D20.WEAPONS.weaponQuality.hunger",
+	inaccurate: "AC2D20.WEAPONS.weaponQuality.inaccurate",
+	indirect: "AC2D20.WEAPONS.weaponQuality.indirect",
+	munition: "AC2D20.WEAPONS.weaponQuality.munition",
+	parrying: "AC2D20.WEAPONS.weaponQuality.parrying",
+	reliable: "AC2D20.WEAPONS.weaponQuality.reliable",
+	subtle: "AC2D20.WEAPONS.weaponQuality.subtle",
+	unreliable: "AC2D20.WEAPONS.weaponQuality.unreliable",
+};
+
 AC2D20.WEAPONS = {
 	range: {
 		reach: "AC2D20.RANGE.reach",
@@ -77,37 +107,8 @@ AC2D20.spellcastingTypes = {
 	dabbler: "dabbler",
 };
 
-export async function buildSkillTranslations() {
-	CONFIG.AC2D20.SKILL_NAMES = {};
-
-	const skills = await ac2d20.utils.getSkillsCompendium().getDocuments();
-
-	for (const skill of skills) {
-		// Get the localized name of a skill, if there is no
-		// localization then it is likely a custom skill, in which
-		// case we will just use it's original name
-		//
-		const nameKey = `AC2D20.SKILL.${skill.name.toUpperCase()}`;
-		let localizedName = game.i18n.localize(nameKey);
-
-		if (localizedName === nameKey) localizedName = skill.name;
-
-		CONFIG.AC2D20.SKILL_NAMES[nameKey] = localizedName;
-	}
-}
-
 export async function generateEnrichedTooltips() {
-	// CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS = {};
-	// CONFIG.AC2D20.WEAPON_QUALITY_HAS_RANK = {};
-	// for (const key in CONFIG.AC2D20.WEAPON_QUALITIES) {
-	// 	CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key] = await TextEditor.enrichHTML(
-	// 		game.i18n.localize(
-	// 			`AC2D20.TOOLTIPS.WeaponQuality.${key}`
-	// 		)
-	// 	);
-	// 	CONFIG.AC2D20.WEAPON_QUALITY_HAS_RANK[key] = key.endsWith("_x");
-	// }
-
+	// Damage Effects
 	CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK = {};
 	CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS = [];
 	for (const key in CONFIG.AC2D20.DAMAGE_EFFECTS) {
@@ -118,4 +119,45 @@ export async function generateEnrichedTooltips() {
 		);
 		CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK[key] = key.endsWith("_x");
 	}
+
+	// Vehicle Qualities
+	CONFIG.AC2D20.VEHICLE_QUALITY_HAS_RANK = {};
+	CONFIG.AC2D20.VEHICLE_QUALITY_TOOLTIPS = [];
+	for (const key in CONFIG.AC2D20.VEHICLE_QUALITIES) {
+		CONFIG.AC2D20.VEHICLE_QUALITY_TOOLTIPS[key] = await TextEditor.enrichHTML(
+			game.i18n.localize(
+				`AC2D20.Tooltips.VehicleQuality.${key}`
+			)
+		);
+		CONFIG.AC2D20.VEHICLE_QUALITY_HAS_RANK[key] = key.endsWith("_x");
+	}
+
+	// Weapon Qualities
+	CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS = {};
+	for (const key in CONFIG.AC2D20.WEAPON_QUALITIES) {
+		CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key] = await TextEditor.enrichHTML(
+			game.i18n.localize(
+				`AC2D20.Tooltips.WeaponQuality.${key}`
+			)
+		);
+	}
+}
+
+export async function prepareSkills() {
+	const skillPackName = game.settings.get("ac2d20", "compendium-skills");
+
+	let packSkills = await game.packs.get(skillPackName).getDocuments();
+
+	let _skills = [];
+
+	packSkills.forEach(s => {
+
+		_skills.push({
+			focuses: s.system.focuses.map(f => f.title),
+			key: s.name,
+			label: game.i18n.localize(`AC2D20.SKILL.${s.name.toUpperCase()}`),
+		});
+	});
+
+	CONFIG.AC2D20.SKILLS = _skills.sort((a, b) => a.key.localeCompare(b.key));
 }

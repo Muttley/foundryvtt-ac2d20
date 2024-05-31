@@ -41,8 +41,8 @@
 					<select name="system.focus">
 						{{#select system.focus}}
 							<option value="">&nbsp;</option>
-							{{#each (getSkillFocusList system.skill) as |foc key|}}
-								<option value="{{key}}">{{foc}}</option>
+							{{#each (getSkillFocusList system.skill) as |focusName key|}}
+								<option value="{{key}}">{{focusName}}</option>
 							{{/each}}
 						{{/select}}
 					</select>

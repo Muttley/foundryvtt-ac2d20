@@ -248,19 +248,34 @@ export default class Roller2D20 {
 	}
 
 
-	static async rollD6({ rollName = "Roll D6", dicenum = 2, itemId = null, actorId = null } = {}) {
-		let formula = `${dicenum}ds`;
-		let roll = new Roll(formula);
+	static async rollD6({
+		actorId = null,
+		diceNum = 2,
+		itemId = null,
+		rollName = "Roll D6",
+	} = {}) {
+		const formula = `${diceNum}ds`;
+		const roll = new Roll(formula);
+
 		await roll.evaluate();
+
 		await Roller2D20.parseD6Roll({
-			rollName: rollName,
-			roll: roll,
-			itemId: itemId,
 			actorId: actorId,
+			itemId: itemId,
+			roll: roll,
+			rollName: rollName,
 		});
 	}
 
-	static async parseD6Roll({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], addDice = [], itemId = null, actorId = null } = {}) {
+	static async parseD6Roll({
+		actorId = null,
+		addDice = [],
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll D6",
+	} = {}) {
 		let diceResults = [
 			{ result: 1, effect: 0 },
 			{ result: 2, effect: 0 },
@@ -302,7 +317,15 @@ export default class Roller2D20 {
 		});
 	}
 
-	static async rerollD6({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
+	static async rerollD6({
+		actorId = null,
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll D6",
+	} = {}) {
+
 		if (!rerollIndexes.length) {
 			ui.notifications.notify("Select Dice you want to Reroll");
 			return;
@@ -310,7 +333,9 @@ export default class Roller2D20 {
 		let numOfDice = rerollIndexes.length;
 		let formula = `${numOfDice}ds`;
 		let _roll = new Roll(formula);
+
 		await _roll.evaluate();
+
 		await Roller2D20.parseD6Roll({
 			rollName: `${rollName} [re-roll]`,
 			roll: _roll,
@@ -321,7 +346,14 @@ export default class Roller2D20 {
 		});
 	}
 
-	static async addD6({ rollName = "Roll D6", dicenum = 2, ac2d20Roll = null, diceRolled = [], itemId = null, actorId = null } = {}) {
+	static async addD6({
+		ac2d20Roll = null,
+		actorId = null,
+		dicenum = 2,
+		diceRolled = [],
+		itemId = null,
+		rollName = "Roll D6",
+	} = {}) {
 		let formula = `${dicenum}ds`;
 		let _roll = new Roll(formula);
 		await _roll.evaluate();
@@ -353,36 +385,19 @@ export default class Roller2D20 {
 			(a, b) => ({ effect: a.effect + b.effect })
 		).effect;
 
-		let itemQualities = [];
-
-		let actor;
 		let item;
 		if (itemId && actorId) {
-			let actor = game.actors.get(actorId);
-			if (actor) {
-				item = actor.items.get(itemId);
-			}
-			if (item) {
-				if (item.type === "spell") {
-					itemEffects = item.system.costEffects;
-				}
-				else if (item.type === "weapon") {
-					for (let qu in item.system.qualities) {
-						if (item.system.qualities[qu].value) {
-							let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
-							itemQualities.push(quLabel);
-						}
-					}
-				}
-			}
+			item = game.actors.get(actorId)?.items.get(itemId) ?? null;
 
+			if (item && item.type === "spell") {
+				itemEffects = item.system.costEffects;
+			}
 		}
 
 		let rollData = {
 			damage,
 			effects,
 			item,
-			itemQualities,
 			results: diceRolled,
 			rollName,
 		};

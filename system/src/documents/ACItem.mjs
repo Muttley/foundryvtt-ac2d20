@@ -118,10 +118,4 @@ export default class ACItem extends Item {
 		ChatMessage.create(chatData);
 	}
 
-
-	async updateFocuses(_focuses) {
-		let updatedItem = { "_id": this.id, "system.focuses": _focuses };
-		await this.update(updatedItem);
-	}
-
 }

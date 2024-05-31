@@ -18,7 +18,7 @@ export default class Update_240529_1 extends ACUpdateBase {
 			const value = itemData.system.effect[key].value;
 
 			let rank =  itemData.system.effect[key].rank;
-			rank = rank >= 0 ? rank : 0;
+			rank = rank && rank >= 0 ? rank : 0;
 
 			if (rename_effects.includes(key)) {
 				updateData[`system.effect.-=${key}`] = null;

@@ -3,8 +3,6 @@ import { ACUpdateBase } from "../ACUpdateBase.mjs";
 export default class Update_240526_1 extends ACUpdateBase {
 	static version = 240526.1;
 
-	// Update the actor to the latest schema version.
-	//
 	async updateActor(actorData) {
 		if (actorData.type !== "vehicle") return;
 

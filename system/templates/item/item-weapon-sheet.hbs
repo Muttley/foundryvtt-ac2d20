@@ -51,8 +51,9 @@
 				<label class="resource-label"><strong>{{localize "AC2D20.TEMPLATES.Focus"}}</strong></label>
 				<select name="system.focus">
 					{{#select system.focus}}
-						{{#each (getSkillFocusList system.skill) as |foc key|}}
-							<option value="{{foc}}">{{foc}}</option>
+						<option value="">&nbsp;</option>
+						{{#each (getSkillFocusList system.skill) as |focusName key|}}
+							<option value="{{key}}">{{focusName}}</option>
 						{{/each}}
 					{{/select}}
 				</select>
@@ -91,12 +92,27 @@
 						<span class="right-slope olive"></span>
 					</div>
 					<div class="items-list" style="border: 1px solid #759549;">
-						{{#each system.qualities as |item key|}}
-						<div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
-							<label data-tooltip="{{{getTooltipFromConfigKey (concat 'AC2D20.WEAPONS.qualities.' key)}}}" data-tooltip-direction="RIGHT">
-								<input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.WEAPONS.weaponQuality.' key)}}
-							</label>
-						</div>
+						{{#each weaponQualities}}
+							<div
+								{{#if this.active}}
+									class="flexrow toggle-label active"
+								{{else}}
+									class="flexrow toggle-label"
+								{{/if}}
+								data-tooltip="{{fromConfig "WEAPON_QUALITY_TOOLTIPS" this.key}}"
+								data-tooltip-direction="RIGHT"
+							>
+								<label style="align-self: center;">
+									<input
+										type="checkbox"
+										name="system.qualities.{{key}}.value"
+										{{#if this.active}}
+											checked
+										{{/if}}
+									>
+									{{this.label}}
+								</label>
+							</div>
 						{{/each}}
 					</div>
 				</div>
