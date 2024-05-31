@@ -17,6 +17,7 @@
 - [#79] Merge new Portuguese/Brazilian translation updates from Crowdin
 - [#87] Unable to alter max momentum setting if you reduce it to zero
 - [#88] Retire the Skills Compendium world setting now that it is no longer required
+- [#89] Retire the hoversJsonLocation setting now it is no longer needed
 
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 

@@ -144,9 +144,7 @@ export async function generateEnrichedTooltips() {
 }
 
 export async function prepareSkills() {
-	const skillPackName = game.settings.get("ac2d20", "compendium-skills");
-
-	let packSkills = await game.packs.get(skillPackName).getDocuments();
+	let packSkills = await game.packs.get("ac2d20.skills").getDocuments();
 
 	let _skills = [];
 
