@@ -95,18 +95,18 @@ export default async function registerSettings() {
 		type: Boolean,
 	});
 
-	const itemCompendiums = await ac2d20.utils.getAvailableItemCompendiumSelectData();
+	// const itemCompendiums = await ac2d20.utils.getAvailableItemCompendiumSelectData();
 
-	game.settings.register(SYSTEM_ID, "compendium-skills", {
-		name: game.i18n.localize("AC2D20.SETTINGS.compendiumName"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.compendiumHint"),
-		choices: itemCompendiums,
-		type: String,
-		default: "ac2d20.skills",
-		scope: "world",
-		config: true,
-		requiresReload: true,
-	});
+	// game.settings.register(SYSTEM_ID, "compendium-skills", {
+	// 	name: game.i18n.localize("AC2D20.SETTINGS.compendiumName"),
+	// 	hint: game.i18n.localize("AC2D20.SETTINGS.compendiumHint"),
+	// 	choices: itemCompendiums,
+	// 	type: String,
+	// 	default: "ac2d20.skills",
+	// 	scope: "world",
+	// 	config: true,
+	// 	requiresReload: true,
+	// });
 
 	game.settings.register(SYSTEM_ID, "hoversJsonLocation", {
 		name: game.i18n.localize("AC2D20.SETTINGS.hoverName"),

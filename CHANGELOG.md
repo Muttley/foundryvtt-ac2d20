@@ -5,6 +5,7 @@
 
 ### Bugfix
 - [#65] Fix un-localized strings in Actor abilities template
+- [#66] Hardcoded skills in autocalc MaxStress
 - [#71] Skill localization not working on NPCs
 - [#73] Typo in max stress calculation meant Will+Resilience not used when it should
 - [#75] Error in char sheet talent listing text enrichments used in description
@@ -15,6 +16,7 @@
 - [#78] Merge new Spanish and Portuguese/Brazilian translation updates from Crowdin
 - [#79] Merge new Portuguese/Brazilian translation updates from Crowdin
 - [#87] Unable to alter max momentum setting if you reduce it to zero
+- [#88] Retire the Skills Compendium world setting now that it is no longer required
 
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 
