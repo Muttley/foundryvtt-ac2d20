@@ -423,13 +423,13 @@ AC2D20.UI.stashed: Stashed
 AC2D20.UI.Type: Type
 AC2D20.UI.UNSORTED: Unsorted
 AC2D20.UI.Weight: Weight
-AC2D20.VEHICLES.QUALITIES.cargo: Cargo
+AC2D20.VEHICLES.QUALITIES.cargo_x: Cargo
 AC2D20.VEHICLES.QUALITIES.cumbersome: Cumbersome
 AC2D20.VEHICLES.QUALITIES.enclosed: Enclosed
 AC2D20.VEHICLES.QUALITIES.exposed: Exposed
-AC2D20.VEHICLES.QUALITIES.highPerformance: High Performance
-AC2D20.VEHICLES.QUALITIES.singleSeat: Single Seat
-AC2D20.VEHICLES.QUALITIES.tough: Tough
+AC2D20.VEHICLES.QUALITIES.high_performance: High Performance
+AC2D20.VEHICLES.QUALITIES.single_seat: Single Seat
+AC2D20.VEHICLES.QUALITIES.tough_x: Tough
 AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
 AC2D20.Warnings.OnEditOwnedItemActiveEffects: Managing Active Effects within an Owned Item is not currently supported.
 AC2D20.WEAPONS.damageEffect.area: Area
