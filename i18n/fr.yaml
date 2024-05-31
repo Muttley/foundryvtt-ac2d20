@@ -19,7 +19,7 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Réserve de Momentum réduite à
 AC2D20.Combat.CombatHasNotStarted: Le combat n'a pas commencé
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Réserve de Momentum Réduite au Début du Nouveau Tour
 AC2D20.Combat.ToggleCombatantsTurnDone: Activer/Désactiver le tour terminé
-AC2D20.Dialog.NumberOfDice: Number of Dice
+AC2D20.Dialog.NumberOfDice: Nombre de Dés
 AC2D20.EffectCreate: Créer un effet
 AC2D20.EffectDelete: Retirer un effet
 AC2D20.EffectEdit: Éditer un effet
@@ -287,12 +287,12 @@ AC2D20.TEMPLATES.Use_Will: Utiliser la Volonté
 AC2D20.TEMPLATES.Weapon_Qualities: QUALITÉS D'ARME
 AC2D20.TEMPLATES.Weapon_Type: Type d'Arme
 AC2D20.TEMPLATES.Weapons: Armes
-AC2D20.Tooltips.Attribute.agi: Agility is a mixture of speed, balance, and muscle memory, and is responsible for a character’s movement and dexterity. An agile character is quick, moving with certainty and precision.
-AC2D20.Tooltips.Attribute.bra: Brawn is the character’s physical fitness and endurance. A brawny character is strong and hardy.
-AC2D20.Tooltips.Attribute.coo: Coordination is a measure of your fine motor skills, accuracy, and sense of timing. Coordinated characters are good shots, good drivers and pilots, and excel at sleight of hand and other delicate, precise tasks.
-AC2D20.Tooltips.Attribute.ins: Insight is your perception, instincts, and your ability to comprehend the world around you. Insightful characters are observant, shrewd, ‘street smart’, and wise.
-AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
-AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
+AC2D20.Tooltips.Attribute.agi: L’agilité est un mélange de vitesse, d’équilibre et de mémoire musculaire, et est responsable du mouvement et de la dextérité d’un personnage. Un personnage agile est rapide, se déplaçant avec certitude et précision.
+AC2D20.Tooltips.Attribute.bra: La force correspond à la condition physique et l'endurance du personnage. Un personnage fort est robuste.
+AC2D20.Tooltips.Attribute.coo: La coordination est une mesure de vos habiletés motrices, de votre exactitude et de votre sens du timing. Les personnages coordonnés sont de bons tireurs, de bons conducteurs et de bons pilotes, et excellent aux tours de passe-passe et d'autres tâches délicates et précises.
+AC2D20.Tooltips.Attribute.ins: La perception correspond à vos instincts et votre capacité à comprendre le monde qui vous entoure. Les personnages perspicaces sont observateurs, habiles et sages.
+AC2D20.Tooltips.Attribute.rea: Le raisonnement est la capacité d'appliquer la logique, l'intelligence et les faits appris à une situation. Les personnages qui ont de hautes compétences de raisonnement ont tendance à être lucides, rationnels ou contemplatifs, et poussés par un besoin d'apprendre ou de comprendre.
+AC2D20.Tooltips.Attribute.wil: La Volonté est votre sens de soi, votre force mentale et votre sens de l'autodiscipline; les personnages pleins d'esprit tendent à être unis, têtus, et ont des personnalités fortes.
 AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
 AC2D20.Tooltips.DamageEffect.backlash_x: Each effect inflicts X stress to the attacker. Injuries may be physical or mental, at the GM’s discretion.
 AC2D20.Tooltips.DamageEffect.drain: The attacker suffers 1 Fatigue for each effect rolled.
