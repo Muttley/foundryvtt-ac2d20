@@ -28,6 +28,7 @@ AC2D20.EFFECTS.Passive: Efeitos Passivos
 AC2D20.EFFECTS.Temporary: Efeitos Temporários
 AC2D20.EffectToggle: Alternar Efeito
 AC2D20.equipped: Equipado
+AC2D20.Error.NumberOfDiceMustBeNonZero: The number of dice entered must be an integer value greater than zero.
 AC2D20.FOCUS.Air Force: Força Aérea
 AC2D20.FOCUS.Aircraft: Aeronave
 AC2D20.FOCUS.Animal Handling: Manejo de Animais
@@ -382,6 +383,13 @@ AC2D20.Tooltips.Skill.stealth: This skill encompasses your character’s ability
 AC2D20.Tooltips.Skill.survival: This skill expresses your character’s ability to survive inhospitable conditions, including extremes of temperature and weather, dangerous plants and animals — as well as finding sufficient food and water, and creating a fire and a shelter. It also covers the ability to track animals (and enemies), as well as communicating with and training animals.
 AC2D20.Tooltips.Skill.tactics: This skill deals with your character’s ability to perceive and evaluate a combat situation and devise an appropriate plan. This not only covers military strategy and tactics, but also team dynamics and leadership, or organising a group of scientists or engineers.
 AC2D20.Tooltips.Skill.vehicles: This skill covers the operation and maintenance of vehicles of all kinds. A character skilled in Vehicles is knowledgeable about how they function, what makes them fail, and how to maintain and repair them, as well as how to operate them. This overlaps with Engineering with regards to vehicles specifically, and a character driving a vehicle uses Vehicles instead of Athletics to avoid or overcome obstacles such as terrain features.
+AC2D20.Tooltips.VehicleQuality.cargo_x: The vehicle may carry up to X additional Major items.
+AC2D20.Tooltips.VehicleQuality.cumbersome: The vehicle is bulky and unresponsive, and increases difficulty tests to move by +1.
+AC2D20.Tooltips.VehicleQuality.enclosed: The vehicle is completely enclosed, protecting crew and passengers within. Crew and passengers cannot be targeted by attacks from outside the vehicle, but also cannot use their own weaponry.
+AC2D20.Tooltips.VehicleQuality.exposed: The passenger and crew of an exposed vehicle can be targeted by attacks from outside the vehicle and may attack with their own weapons.
+AC2D20.Tooltips.VehicleQuality.high_performance: The vehicle is powerful and finely-tuned. The pilot may spend 2 Momentum after a successful skill test to push the vehicle to move 1 additional zone. Any test to repair the vehicle increases in difficulty by +1, due to its finely-tuned nature.
+AC2D20.Tooltips.VehicleQuality.single_seat: A single-seat vehicle is designed to be operated by a single pilot also assuming the role of a gunner without the normal penalty.
+AC2D20.Tooltips.VehicleQuality.tough_x: The vehicle can take more punishment than most. The number of injuries the vehicle can withstand before being defeated is increased by X. You can also generate 3 Threat to ignore an injury being inflicted on the vehicle (NPC vehicles spend 3 Threat instead).
 AC2D20.Tooltips.WeaponQuality.accurate: If you take the <em>Aim</em> minor action before attacking with this weapon, the weapon gains the Intense effect for that attack.
 AC2D20.Tooltips.WeaponQuality.bane: The weapon is especially effective against Mythos creatures and ignores the effects of the Invulnerable special rule against such creatures. In addition, Mythos creatures with the Tough X special rule may not spend Threat to ignore wounds caused by a weapon with the Bane quality
 AC2D20.Tooltips.WeaponQuality.close_quarters: The weapon is compact and easy to wield in tight confines and in the press of melee. The weapon suffers no penalty when used to make a ranged attack while an enemy is within Reach.
