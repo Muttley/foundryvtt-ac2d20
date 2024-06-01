@@ -18,6 +18,8 @@
 - [#87] Unable to alter max momentum setting if you reduce it to zero
 - [#88] Retire the Skills Compendium world setting now that it is no longer required
 - [#89] Retire the hoversJsonLocation setting now it is no longer needed
+- [#90] Merge new French translation updates from Crowdin
+- [#91] Rolling a one on a skill test should always count as a critical, regardless of skill/focus values
 
 *Many thanks to **lozanoje** for contributing code and translations included in this build*
 

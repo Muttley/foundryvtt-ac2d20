@@ -14,12 +14,30 @@
 
 				<select class="select-attribute">
 					{{#select prefAttribute}}
-					<option value="agi">{{localize 'AC2D20.Ability.agi'}}-{{actor.attributes.agi.value}}</option>
-					<option value="bra">{{localize 'AC2D20.Ability.bra'}}-{{actor.attributes.bra.value}}</option>
-					<option value="coo">{{localize 'AC2D20.Ability.coo'}}-{{actor.attributes.coo.value}}</option>
-					<option value="ins">{{localize 'AC2D20.Ability.ins'}}-{{actor.attributes.ins.value}}</option>
-					<option value="rea">{{localize 'AC2D20.Ability.rea'}}-{{actor.attributes.rea.value}}</option>
-					<option value="wil">{{localize 'AC2D20.Ability.wil'}}-{{actor.attributes.wil.value}}</option>
+						<option value="agi">
+							{{localize 'AC2D20.Ability.agi'}}
+							({{actor.attributes.agi.value}})
+						</option>
+						<option value="bra">
+							{{localize 'AC2D20.Ability.bra'}}
+							({{actor.attributes.bra.value}})
+						</option>
+						<option value="coo">
+							{{localize 'AC2D20.Ability.coo'}}
+							({{actor.attributes.coo.value}})
+						</option>
+						<option value="ins">
+							{{localize 'AC2D20.Ability.ins'}}
+							({{actor.attributes.ins.value}})
+						</option>
+						<option value="rea">
+							{{localize 'AC2D20.Ability.rea'}}
+							({{actor.attributes.rea.value}})
+						</option>
+						<option value="wil">
+							{{localize 'AC2D20.Ability.wil'}}
+							({{actor.attributes.wil.value}})
+						</option>
 					{{/select}}
 				</select>
 

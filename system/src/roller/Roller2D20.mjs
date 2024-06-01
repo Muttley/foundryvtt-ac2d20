@@ -57,7 +57,9 @@ export default class Roller2D20 {
 		skill = 0,
 	} = {}) {
 		const successThreshold = parseInt(attribute) + parseInt(skill);
-		const critThreshold = focus ? parseInt(skill) : 1;
+
+		const critThreshold = focus && parseInt(skill) > 0 ? parseInt(skill) : 1;
+
 		const complicationThreshold = parseInt(complication);
 
 		const formula = `${dicenum}d20`;
