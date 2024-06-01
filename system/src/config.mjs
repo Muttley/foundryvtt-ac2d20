@@ -30,7 +30,7 @@ AC2D20.DEFAULT_TOKENS = {
 AC2D20.ITEM_COMPENDIUMS = {};
 
 AC2D20.JOURNAL_UUIDS = {
-	releaseNotes: "Compendium.ac2d20.system-documentation.JournalEntry.Q2jykbXOXgzNpcSR",
+	releaseNotes: "Compendium.ac2d20.system_documentation.JournalEntry.Q2jykbXOXgzNpcSR",
 };
 
 AC2D20.Size = ["Trivial", "Minor", "Major"];
