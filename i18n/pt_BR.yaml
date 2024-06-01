@@ -19,6 +19,7 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no
 AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no Início da Rodada
 AC2D20.Combat.ToggleCombatantsTurnDone: Alternar Turno Concluído
+AC2D20.Dialog.NumberOfDice: Number of Dice
 AC2D20.EffectCreate: Criar Efeito
 AC2D20.EffectDelete: Deletar Efeito
 AC2D20.EffectEdit: Editar Efeito
@@ -27,6 +28,7 @@ AC2D20.EFFECTS.Passive: Efeitos Passivos
 AC2D20.EFFECTS.Temporary: Efeitos Temporários
 AC2D20.EffectToggle: Alternar Efeito
 AC2D20.equipped: Equipado
+AC2D20.Error.NumberOfDiceMustBeNonZero: The number of dice entered must be an integer value greater than zero.
 AC2D20.FOCUS.Air Force: Força Aérea
 AC2D20.FOCUS.Aircraft: Aeronave
 AC2D20.FOCUS.Animal Handling: Manejo de Animais
@@ -37,7 +39,7 @@ AC2D20.FOCUS.Camouflage: Camuflagem
 AC2D20.FOCUS.Cars: Carros
 AC2D20.FOCUS.Charm: Encantar
 AC2D20.FOCUS.Climbing: Escalada
-AC2D20.FOCUS.Close Quarters: Close Quarters
+AC2D20.FOCUS.Close Quarters: Curto Alcance
 AC2D20.FOCUS.Combat Engineering: Engenharia de Combate
 AC2D20.FOCUS.Covert Operations: Operações Secretas
 AC2D20.FOCUS.Cryptography: Criptografia
@@ -47,7 +49,7 @@ AC2D20.FOCUS.Disguise: Desfarce
 AC2D20.FOCUS.Electronics: Eletrônicos
 AC2D20.FOCUS.Exotic: Exótico
 AC2D20.FOCUS.Explosives: Explosivos
-AC2D20.FOCUS.Finance: Finaça
+AC2D20.FOCUS.Finance: Finanças
 AC2D20.FOCUS.First Aid: Primeiros Socorros
 AC2D20.FOCUS.Foraging: Forrageio
 AC2D20.FOCUS.Fortitude: Fortitude
@@ -95,6 +97,10 @@ AC2D20.FOCUS.Toxicology: Toxicologia
 AC2D20.FOCUS.Tracking: Rastreio
 AC2D20.FOCUS.Urban Stealth: Furtividade Urbana
 AC2D20.FOCUS.Watercraft: Embarcações
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.nottreated: Não tratado
+AC2D20.INJURIES.physical: Físico
+AC2D20.INJURIES.treated: Tratado
 AC2D20.MIGRATION.begin_migration: Executando atualizações de dados para Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Aplicando atualizações para Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Atualizações de dados concluídas para Achtung! Cthulhu 2d20
@@ -119,14 +125,14 @@ AC2D20.SETTINGS.hoverHint: Localização do arquivo json que contém o texto das
 AC2D20.SETTINGS.hoverName: Pairar Mouse Sobre Arquivo JSON
 AC2D20.SETTINGS.maxappHint: Permite que os jogadores configurem o app máximo do grupo. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.maxappName: Os Jogadores Podem Configurar o app Máximo
-AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Executar a migração de dados nos compêndios embutidos no sistema (não modifique isso a menos que saiba o que está fazendo)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar Compêndios do Sistema
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização do lado dos jogadores.
 AC2D20.SETTINGS.showmomentumName: Mostrar Ímpeto do Mestre aos Jogadores
-AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.systemVersion.hint: Grava o número da versão atual do schema para os dados do sistema Acthung! Cthulhu 2d20. (não modifique isso a não ser que você saiba o que está fazendo)
 AC2D20.SETTINGS.systemVersion.label: Versão do Sistema
-AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
+AC2D20.SETTINGS.worldSchemaVersion.hint: Grava a versão atual do schema para os dados do sistema Acthung! Cthulhu 2d20. (não modifique isso a não ser que você saiba o que está fazendo)
+AC2D20.SETTINGS.worldSchemaVersion.label: Versão do Schema
 AC2D20.SKILL.ACADEMIA: Academia
 AC2D20.SKILL.ATHLETICS: Atletismo
 AC2D20.SKILL.ENGINEERING: Engenharia
@@ -150,9 +156,9 @@ AC2D20.STRESS.current: Estresse Atual
 AC2D20.STRESS.max: Estresse Máximo
 AC2D20.STRESS.stress: Estresse
 AC2D20.TEMPLATES.Abilities: Habilidades
-AC2D20.TEMPLATES.ADD: ADD
+AC2D20.TEMPLATES.ADD: ADICIONAR
 AC2D20.TEMPLATES.AddFocus: Adicionar Foco
-AC2D20.TEMPLATES.AddTruth: Add Truth
+AC2D20.TEMPLATES.AddTruth: Adicionar Verdade
 AC2D20.TEMPLATES.Ammo: Munição
 AC2D20.TEMPLATES.Archetype: Arquétipo
 AC2D20.TEMPLATES.Attacks: ATAQUES
@@ -186,7 +192,7 @@ AC2D20.TEMPLATES.Difficulty: Dificuldade
 AC2D20.TEMPLATES.Dur: Dur
 AC2D20.TEMPLATES.Duration: Duração
 AC2D20.TEMPLATES.Edit_Item: Editar Item
-AC2D20.TEMPLATES.EditTruth: Edit Truth
+AC2D20.TEMPLATES.EditTruth: Editar Verdade
 AC2D20.TEMPLATES.Effect: Efeito
 AC2D20.TEMPLATES.Effects: Efeitos
 AC2D20.TEMPLATES.Encumbered: SOBRECARREGADO
@@ -194,7 +200,7 @@ AC2D20.TEMPLATES.Encumbrance_Level: Nível de Sobrecarga
 AC2D20.TEMPLATES.Encumbrance: Sobrecarga
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: equipado
-AC2D20.TEMPLATES.Experience: Experience
+AC2D20.TEMPLATES.Experience: Experiência
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
 AC2D20.TEMPLATES.FIRE_RATE: CADÊNCIA DE TIRO
 AC2D20.TEMPLATES.Focus: Foco
@@ -208,11 +214,11 @@ AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
 AC2D20.TEMPLATES.INJURIES: FERIMENTOS
 AC2D20.TEMPLATES.Issue: Publicação
 AC2D20.TEMPLATES.Keywords: Palavras-Chave
-AC2D20.TEMPLATES.Languages: Languages
+AC2D20.TEMPLATES.Languages: Idiomas
 AC2D20.TEMPLATES.lbs: lbs
 AC2D20.TEMPLATES.Learned: Aprendido
 AC2D20.TEMPLATES.Luck: Sorte
-AC2D20.TEMPLATES.majoritems: Itens Principais 
+AC2D20.TEMPLATES.majoritems: Itens Principais
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Ímpeto Máximo
 AC2D20.TEMPLATES.max: máx
 AC2D20.TEMPLATES.MAX: MÁX
@@ -249,7 +255,7 @@ AC2D20.TEMPLATES.ritual_stress: Estresse do Ritual
 AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Rolar Fórmula
 AC2D20.TEMPLATES.Salvo: Rajada
-AC2D20.TEMPLATES.SAVE: SAVE
+AC2D20.TEMPLATES.SAVE: SALVAR
 AC2D20.TEMPLATES.scale: Escala
 AC2D20.TEMPLATES.Size: Tamanho
 AC2D20.TEMPLATES.SizeLevels.Major: Principal
@@ -282,6 +288,125 @@ AC2D20.TEMPLATES.Use_Will: Usar Vontade
 AC2D20.TEMPLATES.Weapon_Qualities: QUALIDADES DA ARMA
 AC2D20.TEMPLATES.Weapon_Type: Tipo de Arma
 AC2D20.TEMPLATES.Weapons: Armas
+AC2D20.Tooltips.Attribute.agi: Agilidade é uma mistura de velocidade, equilíbrio e memória muscular, e é responsável pelo movimento e destreza de um personagem. Um personagem ágil é rápido se move com certeza e precisão.
+AC2D20.Tooltips.Attribute.bra: Músculo é o indicador da capacidade física e resistência do personagem. Um personagem musculoso é forte e resistente.
+AC2D20.Tooltips.Attribute.coo: Coordenação é a medida das suas habilidades motoras, da precisão e do senso de oportunidade. Personagens coordenados são bons de tiro, bons motoristas e pilotos, e excedem em prestidigitação e outras tarefas precisas e delicadas.
+AC2D20.Tooltips.Attribute.ins: Insight is your perception, instincts, and your ability to comprehend the world around you. Insightful characters are observant, shrewd, ‘street smart’, and wise.
+AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
+AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
+AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
+AC2D20.Tooltips.DamageEffect.backlash_x: Cada Efeito inflige X estresse ao atacante. Feridas podem ser físicas ou mentais, a critério do Mestre.
+AC2D20.Tooltips.DamageEffect.drain: O atacante sofre 1 de Fadiga por cada Efeito rolado.
+AC2D20.Tooltips.DamageEffect.intense: If the attack inflicts an injury, and an effect is rolled, the attack inflicts an additional injury.
+AC2D20.Tooltips.DamageEffect.persistent_x: The attack or hazard has a lingering effect. If one or more effects are rolled, the target suffers X@x stress at the start of the affected character’s turn, for rounds equal to the number of effects rolled.
+AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X resistência para cada Efeito rolado.
+AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
+AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
+AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
+AC2D20.Tooltips.Focus.air-force: Air Force — covers training in fighter and bomber tactics, such as dogfighting, formation flying and navigation, as well as aerial military strategy.
+AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
+AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
+AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
+AC2D20.Tooltips.Focus.army: Army — covers familiarity with military strategy and tactics for infantry, as well as mechanized ground warfare.
+AC2D20.Tooltips.Focus.art: Art — covers knowledge of individual pieces of art, the study of different artistic techniques and schools of thought, the history of art within different cultures, and its influences upon those cultures.
+AC2D20.Tooltips.Focus.camouflage: Camouflage — covers the use of materials to cover a person, object, or location, hiding it from sight.
+AC2D20.Tooltips.Focus.cars: Cars — covers the operation of civilian and military four-wheeled motor vehicles, up to and including small trucks.
+AC2D20.Tooltips.Focus.charm: Charm — methods of manipulating others through natural charisma and magnetism.
+AC2D20.Tooltips.Focus.climbing: Climbing — covers scaling sheer surfaces such as walls or cliffs as well as mountaineering.
+AC2D20.Tooltips.Focus.close-quarters: Close Quarters — covers the use of shotguns and sub-machine guns, and similar weapons designed for use at Close range or within tight confines like trenches or buildings.
+AC2D20.Tooltips.Focus.combat-engineering: Combat Engineering — covers work done to support or hinder troop movements, including the construction and demolition of roads, trenches, fortifications, and other military infrastructure.
+AC2D20.Tooltips.Focus.covert-operations: Covert Operations — covers organising a team to operate quietly and efficiently behind enemy lines.
+AC2D20.Tooltips.Focus.cryptography: Cryptography — covers knowledge of codes and ciphers, both how to create them and how to break them.
+AC2D20.Tooltips.Focus.deceive: Deceive — methods of manipulating others to believe something that is untrue.
+AC2D20.Tooltips.Focus.discipline: Discipline — represents the character’s durability and self-control, and their ability to resist and recover from confusion and fear or supernatural effects that afflict the mind.
+AC2D20.Tooltips.Focus.disguise: Disguise — covers the use of make-up, clothing, props, and appropriate body language to assume the guise of another person.
+AC2D20.Tooltips.Focus.electronics: Electronics — covers an understanding of how electronic devices work, how they are assembled, what can go wrong with them, and how to construct, modify, and repair them. Electronics known as “radio electronics” is a relatively new development in World War II, with technologies like radar, sonar, communications and even the first tentative steps into computing, developing significantly as the war progresses.
+AC2D20.Tooltips.Focus.exotic: Exotic — covers weird or experimental weaponry and the ability to figure out how an unfamiliar weapon should be operated without risk.
+AC2D20.Tooltips.Focus.explosives: Explosives — covers an understanding of explosive substances and the purposes they are most suited for, as well as a knowledge of how to employ them effectively, including how to create and defuse bombs and mines.
+AC2D20.Tooltips.Focus.finance: Finance — covers knowledge of trade and banking, both contemporary and historically, and of the influence of money on politics and culture.
+AC2D20.Tooltips.Focus.first-aid: First Aid — covers emergency medical attention to stabilise a patient and keep them alive until they can receive proper medical care.
+AC2D20.Tooltips.Focus.foraging: Foraging — covers the skill of gathering food from the local environment, being able to identify edible flora, and safely recognising natural toxins.
+AC2D20.Tooltips.Focus.fortitude: Fortitude — represents the hardiness and endurance of the body, and its ability to resist and recover from Fatigue, pain, and injury.
+AC2D20.Tooltips.Focus.hand-to-hand: Hand-to-Hand — covers unarmed combat by striking and grabbing opponents, and may represent training in a martial art like boxing or judo.
+AC2D20.Tooltips.Focus.handguns: Handguns — covers the use of sidearms, revolvers, and semi-automatic and machine pistols.
+AC2D20.Tooltips.Focus.hearing: Hearing — covers auditory perception, distinguishing between different sounds, and the ability to discern information from them (such as being able to pick up a faint accent in someone’s voice). This focus is a great asset for radio operators, code breakers and communication specialists.
+AC2D20.Tooltips.Focus.heavy-vehicles: Heavy Vehicles — covers the operation of heavy-duty civilian and military vehicles, including heavy trucks, half-tracks, and similar vehicles.
+AC2D20.Tooltips.Focus.heavy-weapons: Heavy Weapons — covers the use of machine guns, flamethrowers, anti-tank weapons, and mortars, as well as vehicle-mounted weapons.
+AC2D20.Tooltips.Focus.history: History — covers a knowledge of historical events, and the forces and individuals that drove those events, as well as different historical perspectives.
+AC2D20.Tooltips.Focus.hunting: Hunting — covers the ability to stalk, catch, and kill animal prey, and the knowledge of preparing game.
+AC2D20.Tooltips.Focus.immunity: Immunity — represents a character’s natural ability to resist diseases or toxins, and their ability to recover from those effects.
+AC2D20.Tooltips.Focus.infectious-diseases: Infectious Diseases — covers an understanding of diseases, their causes, the way they spread, their symptoms, and the ways that they can be treated.
+AC2D20.Tooltips.Focus.innuendo: Innuendo — the art of conveying meaning indirectly.
+AC2D20.Tooltips.Focus.instincts: Instincts — covers the “sixth sense” or “gut feelings” made from observations, and other extra-sensory perceptions that you may not be able to describe the source of. Instincts are unlikely to provide detailed information, but a hunch or general feeling about a situation.
+AC2D20.Tooltips.Focus.intimidation: Intimidation — inspiring fear, doubt, or hesitation or leveraging a person’s weaknesses against them.
+AC2D20.Tooltips.Focus.invocation: Invocation — unusual and esoteric methods of communicating with paranormal entities which is not usually open to the average person.
+AC2D20.Tooltips.Focus.leadership: Leadership — covers the command and leading of others, giving clear orders, and maintaining morale.
+AC2D20.Tooltips.Focus.lifting: Lifting — covers lifting and moving heavy objects with the conditioning necessary to make such efforts more effective.
+AC2D20.Tooltips.Focus.linguistics: Linguistics — covers the study of languages in their current form, as well as historical and dead languages, and the ways that language changes over time.
+AC2D20.Tooltips.Focus.mechanical-engineering: Mechanical Engineering — covers an understanding of mechanical devices, how they operate, how they can fail, and how to construct and repair them. This focus can be applied to all fighting vehicles like tanks, planes, boats and other support craft.
+AC2D20.Tooltips.Focus.melee-weapons: Melee Weapons — covers fighting with a melee weapon, such as a knife or bayonet.
+AC2D20.Tooltips.Focus.motorcycles: Motorcycles — covers the operation of civilian and military two- and three-wheeled motor vehicles
+AC2D20.Tooltips.Focus.mysticism: Mysticism — covers knowledge of the rites and practices performed by ancient spiritual leaders (and their modern descendants) to commune with their gods and spirits, and how they can be combatted or withstood.
+AC2D20.Tooltips.Focus.navy: Navy — covers naval strategy and tactics, from shallow to deep water, and single boat actions to major fleet engagements.
+AC2D20.Tooltips.Focus.negotiation: Negotiation — reaching agreement through conversation, possibly involving trade or payment.
+AC2D20.Tooltips.Focus.occultism: Occultism — covers the study of supernatural and occult phenomena, practices, creatures, and traditions.
+AC2D20.Tooltips.Focus.orienteering: Orienteering — covers the skill of navigating over distance, maintaining a direction, planning a route, and the physical demands of hiking.
+AC2D20.Tooltips.Focus.pharmacology: Pharmacology — covers an understanding of medication, both its uses in treatment, and its side effects.
+AC2D20.Tooltips.Focus.physical-training: Physical Training — covers how to train oneself and others.
+AC2D20.Tooltips.Focus.psychiatry: Psychiatry — covers the study and treatment of mental illness.
+AC2D20.Tooltips.Focus.rhetoric: Rhetoric — using language in public speaking or a formal debate, to inform, persuade, motivate or convince others.
+AC2D20.Tooltips.Focus.rifles: Rifles — covers the use of rifles, carbines, and other firearms for use at Medium and longer ranges.
+AC2D20.Tooltips.Focus.running: Running — covers short-distance sprinting and long-distance endurance running.
+AC2D20.Tooltips.Focus.rural-stealth: Rural Stealth — covers techniques for moving silently and remaining unseen in rural environments.
+AC2D20.Tooltips.Focus.science: Science — covers the scientific method and the various disciplines associated with science, from mathematics, to physics, chemistry, and biology, it also includes more detailed and specific fields of study within these branches.
+AC2D20.Tooltips.Focus.sight: Sight — covers visual perception, providing greater sensitivity when visibility is poor, an ability to reliably pick out details at a distance, and a greater ability to spot small variations or brief movement. Spotters, navigators and bombardiers are particularly well suited to utilising this focus.
+AC2D20.Tooltips.Focus.smell-and-taste: Smell and Taste — covers the ability to detect and discern information from scents and tastes; this is not a commonplace focus for humans, as humans don’t have especially sensitive senses of smell, though it is valuable focus for poisoners, doctors or sommeliers.
+AC2D20.Tooltips.Focus.surgery: Surgery — covers surgical, instrumental, and operative medical procedures which require cutting into a patient, extraction of tissue or foreign objects, or manually closing wounds.
+AC2D20.Tooltips.Focus.swimming: Swimming — covers swimming unaided and diving with a breathing apparatus.
+AC2D20.Tooltips.Focus.tanks: Tanks — covers the operation of tanks of all sizes.
+AC2D20.Tooltips.Focus.technical-projects: Technical Projects — covers an understanding of how to divide work and manage team members on a large scientific, engineering, or academic project.
+AC2D20.Tooltips.Focus.threat-awareness: Threat Awareness — covers readiness and detecting danger and the ability to avoid attacks or ambushes.
+AC2D20.Tooltips.Focus.throwing: Throwing — covers throwing objects from Olympicstyle shot putt, javelin, and hammer-throw, to the use of grenades and knives.
+AC2D20.Tooltips.Focus.toxicology: Toxicology — covers the study of toxic substances (poison, venom, and other foreign substances) and their effect upon the body, as well as the means to neutralise or expel them.
+AC2D20.Tooltips.Focus.tracking: Tracking — covers the practice of identifying the tracks of a specific animal, person, or group, and following them. It also covers the ability to determine information about them, such as direction, how many there were, their physical state, speed, and other characteristics.
+AC2D20.Tooltips.Focus.urban-stealth: Urban Stealth — covers techniques for moving silently and remaining unseen in urban environments.
+AC2D20.Tooltips.Focus.watercraft: Watercraft — covers the operation of civilian and military boats, submarines, and ships.
+AC2D20.Tooltips.Skill.academia: This skill covers your character’s education and accumulated knowledge, as well as their ability to research unfamiliar subjects. Academia is most useful when trying to study new information or recall facts about a subject.
+AC2D20.Tooltips.Skill.athletics: This skill covers your character’s physical conditioning, and athletic ability. Athletics also covers a character’s attempts to move with haste.
+AC2D20.Tooltips.Skill.engineering: "This skill encompasses your character’s technical and mechanical expertise, with an emphasis on practical applications: designing, building, and repairing devices, machines, and structures, as well as operating complex or untested equipment, and determining how to disable or destroy unfamiliar machines. There’s a degree of overlap between Engineering and Vehicles, but Engineering focuses on the mechanics of a vehicle."
+AC2D20.Tooltips.Skill.fighting: This skill covers your character’s ability to fight and defend themselves against attacks, a combination of learned techniques, physical conditioning, and instinct. It is used to make attacks, judge threatening situations, and covers a practical understanding of weaponry and combat styles.
+AC2D20.Tooltips.Skill.medicine: This skill covers the treatment of physical and mental injuries, and the diagnosis and cure of poisons and diseases. It can also be used to perform autopsies to determine the cause of a person’s death.
+AC2D20.Tooltips.Skill.observation: This skill covers your character’s awareness and ability to discern information from their surroundings. It describes how observant and astute they are, how quickly they pick out important details and make use of them, as well as their ability to ignore distractions. Observation overlaps with many other skills, and often runs parallel to Academia, as both are about gaining information, albeit in different ways.
+AC2D20.Tooltips.Skill.persuasion: This skill encompasses your character’s ability to influence others, through a mixture of speech and body language. It also allows you to spot when others are attempting to use these techniques—it often takes a liar to spot a liar.
+AC2D20.Tooltips.Skill.resilience: This skill encompasses your character’s ability to resist and recover from physical and mental debilities — from injury, pain, and Fatigue and mental distress. This also includes withstanding the effects of poisons, diseases, and magical effects. You may use Resilience to try and resist effects before they happen, or to recover from lasting effects already succumbed to. While Medicine overlaps with Resilience in a few ways, Resilience is more concerned with an individual’s inherent toughness.
+AC2D20.Tooltips.Skill.stealth: This skill encompasses your character’s ability to pass undetected, from moving quietly, to using darkness, cover and concealment to remain unseen. It also covers your ability to use disguises, hide in plain sight, or use camouflage to conceal yourself and others.
+AC2D20.Tooltips.Skill.survival: This skill expresses your character’s ability to survive inhospitable conditions, including extremes of temperature and weather, dangerous plants and animals — as well as finding sufficient food and water, and creating a fire and a shelter. It also covers the ability to track animals (and enemies), as well as communicating with and training animals.
+AC2D20.Tooltips.Skill.tactics: This skill deals with your character’s ability to perceive and evaluate a combat situation and devise an appropriate plan. This not only covers military strategy and tactics, but also team dynamics and leadership, or organising a group of scientists or engineers.
+AC2D20.Tooltips.Skill.vehicles: This skill covers the operation and maintenance of vehicles of all kinds. A character skilled in Vehicles is knowledgeable about how they function, what makes them fail, and how to maintain and repair them, as well as how to operate them. This overlaps with Engineering with regards to vehicles specifically, and a character driving a vehicle uses Vehicles instead of Athletics to avoid or overcome obstacles such as terrain features.
+AC2D20.Tooltips.VehicleQuality.cargo_x: The vehicle may carry up to X additional Major items.
+AC2D20.Tooltips.VehicleQuality.cumbersome: The vehicle is bulky and unresponsive, and increases difficulty tests to move by +1.
+AC2D20.Tooltips.VehicleQuality.enclosed: The vehicle is completely enclosed, protecting crew and passengers within. Crew and passengers cannot be targeted by attacks from outside the vehicle, but also cannot use their own weaponry.
+AC2D20.Tooltips.VehicleQuality.exposed: The passenger and crew of an exposed vehicle can be targeted by attacks from outside the vehicle and may attack with their own weapons.
+AC2D20.Tooltips.VehicleQuality.high_performance: The vehicle is powerful and finely-tuned. The pilot may spend 2 Momentum after a successful skill test to push the vehicle to move 1 additional zone. Any test to repair the vehicle increases in difficulty by +1, due to its finely-tuned nature.
+AC2D20.Tooltips.VehicleQuality.single_seat: A single-seat vehicle is designed to be operated by a single pilot also assuming the role of a gunner without the normal penalty.
+AC2D20.Tooltips.VehicleQuality.tough_x: The vehicle can take more punishment than most. The number of injuries the vehicle can withstand before being defeated is increased by X. You can also generate 3 Threat to ignore an injury being inflicted on the vehicle (NPC vehicles spend 3 Threat instead).
+AC2D20.Tooltips.WeaponQuality.accurate: If you take the <em>Aim</em> minor action before attacking with this weapon, the weapon gains the Intense effect for that attack.
+AC2D20.Tooltips.WeaponQuality.bane: The weapon is especially effective against Mythos creatures and ignores the effects of the Invulnerable special rule against such creatures. In addition, Mythos creatures with the Tough X special rule may not spend Threat to ignore wounds caused by a weapon with the Bane quality
+AC2D20.Tooltips.WeaponQuality.close_quarters: The weapon is compact and easy to wield in tight confines and in the press of melee. The weapon suffers no penalty when used to make a ranged attack while an enemy is within Reach.
+AC2D20.Tooltips.WeaponQuality.cumbersome: The weapon is heavy and awkward to bring to bear against small targets like infantry. When making an attack with this weapon, increase the difficulty of the attack by +1, if the target is human-sized or smaller.
+AC2D20.Tooltips.WeaponQuality.debilitating: The difficulty of any skill test to treat the physical injuries of this weapon is increased by +1.
+AC2D20.Tooltips.WeaponQuality.escalation: Entering a scene with the weapon generates 1 Threat.
+AC2D20.Tooltips.WeaponQuality.giant_killer: The weapon’s destructive power is wasted on small or soft targets, but the bigger the target, the more of the weapon’s lethality is unleashed. When rolling damage for a weapon with this quality, add +X@s to the weapon’s damage where X is the target’s Scale. A weapon may not gain more additional dice from this quality than its base damage — a weapon with a base damage of 6@s cannot gain more than +6@s from it.
+AC2D20.Tooltips.WeaponQuality.heavy: Attacks with this weapon increase in difficulty by +2 unless the weapon has been set up (braced against the ground or solid object, or mounted on a bipod or tripod). Setting up a heavy weapon requires the Prepare minor action.
+AC2D20.Tooltips.WeaponQuality.hidden: When the weapon is hidden it cannot be detected by those simply looking at the character, and any skill test to search for the weapon increases in difficulty by 1.
+AC2D20.Tooltips.WeaponQuality.hunger: "Whenever the weapon is used to inflict one or more injuries, the wielder may gain one of the following bonuses: recover 5 stress, heal a single Injury, or gain +1@s power for the remainder of the scene (this bonus to power may only be gained once per scene)."
+AC2D20.Tooltips.WeaponQuality.inaccurate: You cannot benefit from the Aim minor action with this weapon.
+AC2D20.Tooltips.WeaponQuality.indirect: The weapon is not designed for direct fire, instead dropping its payload upon enemies over great distances. Attacks with the weapon increase in difficulty by +1, but do not require line of sight.
+AC2D20.Tooltips.WeaponQuality.munition: The ammunition for this weapon is especially bulky—when you make an attack using a Munition weapon you must use 1 ammo. The weapon cannot be used to make salvo attacks.
+AC2D20.Tooltips.WeaponQuality.parrying: When the weapon’s wielder makes an opposed test in defence of a melee attack, they may reroll a single d20 on their test. This does not stack if the character has multiple Parrying weapons.
+AC2D20.Tooltips.WeaponQuality.reliable: You may ignore the first complication rolled using this weapon in an action scene.
+AC2D20.Tooltips.WeaponQuality.subtle: Attacks with this weapon are difficult to hear, requiring a difficulty 2 <strong>Insight + Observation</strong> test to notice. The GM may adjust this difficulty based on distance and ambient noise.
+AC2D20.Tooltips.WeaponQuality.unreliable: Attacks with this weapon increase the test’s complication range by 1.
 AC2D20.UI.Add: Adic
 AC2D20.UI.CarryWeight: Peso
 AC2D20.UI.Cost: Custo
@@ -298,20 +423,21 @@ AC2D20.UI.stashed: Guardado
 AC2D20.UI.Type: Tipo
 AC2D20.UI.UNSORTED: Não Listado
 AC2D20.UI.Weight: Peso
-AC2D20.VEHICLES.QUALITIES.cargo: Carga
+AC2D20.VEHICLES.QUALITIES.cargo_x: Carga
 AC2D20.VEHICLES.QUALITIES.cumbersome: Desajeitado
 AC2D20.VEHICLES.QUALITIES.enclosed: Fechado
 AC2D20.VEHICLES.QUALITIES.exposed: Exposto
-AC2D20.VEHICLES.QUALITIES.highPerformance: Alta Performance
-AC2D20.VEHICLES.QUALITIES.singleSeat: Assento Único
-AC2D20.VEHICLES.QUALITIES.tough: Resistente
-AC2D20.Warnings.DerivedValue: This is an auto-calculated value that cannot be edited.
+AC2D20.VEHICLES.QUALITIES.high_performance: Alta Performance
+AC2D20.VEHICLES.QUALITIES.single_seat: Assento Único
+AC2D20.VEHICLES.QUALITIES.tough_x: Resistente
+AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
+AC2D20.Warnings.OnEditOwnedItemActiveEffects: Managing Active Effects within an Owned Item is not currently supported.
 AC2D20.WEAPONS.damageEffect.area: Área
-AC2D20.WEAPONS.damageEffect.backlash: Retaliar
+AC2D20.WEAPONS.damageEffect.backlash_x: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar
 AC2D20.WEAPONS.damageEffect.intense: Intenso
-AC2D20.WEAPONS.damageEffect.persistent: Persistente
-AC2D20.WEAPONS.damageEffect.piercing: Perfurar
+AC2D20.WEAPONS.damageEffect.persistent_x: Persistente
+AC2D20.WEAPONS.damageEffect.piercing_x: Perfurar
 AC2D20.WEAPONS.damageEffect.snare: Capturar
 AC2D20.WEAPONS.damageEffect.stun: Atordoar
 AC2D20.WEAPONS.damageEffect.vicious: Cruel
@@ -323,14 +449,14 @@ AC2D20.WEAPONS.qualities: Qualidades
 AC2D20.WEAPONS.type: Tipo de Arma
 AC2D20.WEAPONS.weaponQuality.accurate: Preciso
 AC2D20.WEAPONS.weaponQuality.bane: Banir
-AC2D20.WEAPONS.weaponQuality.closeQuarters: Curto Alcance
+AC2D20.WEAPONS.weaponQuality.close_quarters: Curto Alcance
 AC2D20.WEAPONS.weaponQuality.cumbersome: Desajeitado
 AC2D20.WEAPONS.weaponQuality.debilitating: Debilitante
 AC2D20.WEAPONS.weaponQuality.escalation: Agravante
-AC2D20.WEAPONS.weaponQuality.giant-killer: Mata-Gigantes
+AC2D20.WEAPONS.weaponQuality.giant_killer: Mata-Gigantes
 AC2D20.WEAPONS.weaponQuality.heavy: Pesado
 AC2D20.WEAPONS.weaponQuality.hidden: Oculto
-AC2D20.WEAPONS.weaponQuality.hunger: Hunger
+AC2D20.WEAPONS.weaponQuality.hunger: Fome
 AC2D20.WEAPONS.weaponQuality.inaccurate: Impreciso
 AC2D20.WEAPONS.weaponQuality.indirect: Indireto
 AC2D20.WEAPONS.weaponQuality.munition: Munição

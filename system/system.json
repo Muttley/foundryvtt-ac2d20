@@ -2,7 +2,7 @@
 	"id": "ac2d20",
 	"title": "Achtung! Cthulhu 2d20",
 	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
-	"version": "11.4.0",
+	"version": "11.5.0",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "12"
@@ -26,10 +26,10 @@
 	],
 	"packs": [
 		{
-			"name": "system-documentation",
+			"name": "system_documentation",
 			"label": "System Documentation",
 			"system": "ac2d20",
-			"path": "packs/system-documentation",
+			"path": "packs/system_documentation",
 			"type": "JournalEntry",
 			"private": false,
 			"flags": {}
@@ -61,7 +61,7 @@
 			"packs": [
 				"macros",
 				"skills",
-				"system-documentation"
+				"system_documentation"
 			]
 		}
 	],

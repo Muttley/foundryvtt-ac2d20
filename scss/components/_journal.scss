@@ -1,0 +1,219 @@
+.system-ac2d20 .sheet.journal-entry .journal-entry-content {
+	background: url(../assets/paper.webp);
+	background-size: cover;
+};
+
+.system-ac2d20 .journal-sheet .journal-header input[type="text"] {
+	background: none;
+	border: none;
+	border-radius: 0;
+}
+
+.system-ac2d20 .journal-sheet .journal-header .title {
+	font-family: $font-germania;
+	font-weight: bold;
+	color: black;
+	font-size: 3em;
+}
+
+.system-ac2d20 .sheet.journal-entry .journal-entry-page
+{
+	font-family: $font-charis;
+	font-weight: 400;
+
+	a.content-link {
+		font-family: $font-germania;
+	}
+
+	aside {
+		margin: 8px;
+
+		border: 2px solid rgb(69, 85, 58, 0.8);
+		font-family: $font-primary;
+
+		.aside-title {
+			font-family: $font-germania;
+			margin: 0;
+			padding: 0.2em;
+			color: rgb(232, 225, 207);
+			background-color: rgba(69, 85, 58, 0.8);
+			font-size: 2em;
+			margin-bottom: 0em;
+		}
+
+		p {
+			margin: 8px;
+		}
+	}
+
+	blockquote {
+		border: none;
+		padding: 8px;
+		margin: 16px;
+		position: relative;
+
+		p {
+			font-size: 1.15em;
+			font-weight: bold;
+			font-style: italic;
+		}
+	}
+
+	blockquote::before,
+	blockquote::after {
+		position: absolute;
+		opacity: 0.1;
+		font-size: 10rem;
+		width: 4rem;
+		height: 4rem;
+	}
+
+	blockquote::before {
+		content: '“';
+		left: -1.25rem;
+		top: -4rem;
+	}
+
+	blockquote::after {
+		content: '”';
+		right: 1.25rem;
+		bottom: 4rem;
+	}
+
+	h1, h2, h3, h4, h5 {
+		font-family: $font-charis;
+		font-weight: bold;
+		color: rgb(69, 85, 58);
+		border: none;
+		margin: 0 0 0.5rem;
+		padding: 0;
+	}
+
+	h1 {
+		font-family: $font-germania;
+		font-size: 4em;
+		font-weight: bold;
+		color: black;
+		text-align: center;
+	}
+
+	h2 {
+		font-family: $font-germania;
+		font-variant: small-caps;
+		font-size: 2.5em;
+		border-bottom: 2px solid rgb(69, 85, 58);
+	}
+
+	h3 {
+		font-size: 1.6em;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		font-size: 1.4em;
+	}
+
+	h5 {
+		font-size: 1.2em;
+	}
+
+	img {
+		box-shadow: 0px 1px 5px black;
+		border: 5px solid $c-white;
+		background-color: $c-light;
+	}
+
+	ol,
+	ul {
+		margin: 0.5em;
+	}
+
+	ol,
+	ul ol {
+		list-style-type: decimal;
+	}
+
+	ol ol {
+		list-style-type: lower-alpha;
+	}
+
+	ul {
+		li::marker {
+			font-family: "cthulhu-icons";
+			font-weight: bold;
+
+			color: rgb(69, 85, 58);
+
+			margin-right: 1ch;
+
+			content: $cth-ico-cth-cross;
+		}
+
+		p {
+			margin: 0;
+			margin-left: 1ch;
+		}
+	}
+
+	p {
+		font-style: normal;
+		font-size: 1.1em;
+	}
+
+	table {
+		font-family: $font-primary;
+		font-size: 1em;
+		border: none;
+		margin-bottom: 1em;
+		margin-top: 1em;
+
+		caption {
+			font-family: $font-germania;
+			padding-top: 0.2em;
+			color: rgb(232, 225, 207);
+			background-color: rgba(69, 85, 58, 0.8);
+			text-align: center;
+			font-size: 2em;
+			margin-bottom: 0em;
+		}
+
+		tbody {
+			tr:nth-child(even) {
+				background-color: rgba(111, 140, 84, 0.15);
+			}
+
+			tr:nth-child(odd) {
+				background-color: rgba(111, 140, 84, 0.35);
+			}
+
+			tr:first-child {
+				background: black;
+				text-align: center;
+				text-transform: uppercase;
+				color: rgb(232, 225, 207);
+				font-weight: bold;
+				font-size: 1.1em;
+			}
+		}
+
+		td {
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+	}
+
+	section {
+		.reveal {
+			float: right;
+		}
+
+		.secret {
+			font-family: $font-charis;
+			background: rgba(125, 28, 28, 0.15);
+		}
+
+		.revealed {
+			background: rgba(28, 125, 34, 0.15);
+		}
+	}
+}

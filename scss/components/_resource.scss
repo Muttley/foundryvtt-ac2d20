@@ -22,6 +22,7 @@ input[type="number"] {
 
 
 .toggle-label {
+
 	input[type="checkbox"] {
 		display: none;
 	}
@@ -34,10 +35,20 @@ input[type="number"] {
 
 	padding: 3px;
 
+	&:hover {
+		background: rgba(0, 0, 0, 0.1);
+	}
+
 	&.active {
 		color: $c-light;
 		background-color: $c-green-light;
+
+		&:hover {
+			color: $c-white;
+			background-color: $c-green-olive;
+		}
 	}
+
 }
 
 

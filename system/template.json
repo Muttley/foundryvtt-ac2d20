@@ -129,26 +129,31 @@
 				"value": "1"
 			},
 			"qualities": {
-				"cargo": {
+				"cargo_x": {
 					"rank": 1,
 					"value": false
 				},
 				"cumbersome": {
+					"rank": 0,
 					"value": false
 				},
 				"enclosed": {
+					"rank": 0,
 					"value": false
 				},
 				"exposed": {
+					"rank": 0,
 					"value": false
 				},
-				"highPerformance": {
+				"high_performance": {
+					"rank": 0,
 					"value": false
 				},
-				"singleSeat": {
+				"single_seat": {
+					"rank": 0,
 					"value": false
 				},
-				"tough": {
+				"tough_x": {
 					"rank": 1,
 					"value": false
 				}
@@ -293,51 +298,39 @@
 			"ammo": 0,
 			"effect": {
 				"area": {
-					"description": "",
-					"label": "Area",
+					"rank": 0,
 					"value": false
 				},
-				"backlash": {
-					"description": "",
-					"label": "Backlash",
+				"backlash_x": {
 					"rank": 1,
 					"value": false
 				},
 				"drain": {
-					"description": "",
-					"label": "Drain",
+					"rank": 0,
 					"value": false
 				},
 				"intense": {
-					"description": "",
-					"label": "Intense",
+					"rank": 0,
 					"value": false
 				},
-				"persistent": {
-					"description": "",
-					"label": "Persistent",
+				"persistent_x": {
 					"rank": 1,
 					"value": false
 				},
-				"piercing": {
-					"description": "",
-					"label": "Piercing",
+				"piercing_x": {
 					"rank": 1,
 					"value": false
 				},
 				"snare": {
-					"description": "",
-					"label": "Snare",
+					"rank": 0,
 					"value": false
 				},
 				"stun": {
-					"description": "",
-					"label": "Stun",
+					"rank": 0,
 					"value": false
 				},
 				"vicious": {
-					"description": "",
-					"label": "Vicious",
+					"rank": 0,
 					"value": false
 				}
 			},
@@ -345,88 +338,54 @@
 			"melee": false,
 			"qualities": {
 				"accurate": {
-					"description": "",
-					"label": "Accurate",
 					"value": false
 				},
 				"bane": {
-					"description": "",
-					"label": "Bane",
 					"value": false
 				},
-				"closeQuarters": {
-					"description": "",
-					"label": "Close Quarters",
+				"close_quarters": {
 					"value": false
 				},
 				"cumbersome": {
-					"description": "",
-					"label": "Cumbersome",
 					"value": false
 				},
 				"debilitating": {
-					"description": "",
-					"label": "Debilitating",
 					"value": false
 				},
 				"escalation": {
-					"description": "",
-					"label": "Escalation",
 					"value": false
 				},
-				"giant-killer": {
-					"description": "",
-					"label": "Giant-Killer",
+				"giant_killer": {
 					"value": false
 				},
 				"heavy": {
-					"description": "",
-					"label": "Heavy",
 					"value": false
 				},
 				"hidden": {
-					"description": "",
-					"label": "Hidden",
 					"value": false
 				},
 				"hunger": {
-					"description": "",
-					"label": "Hunger",
 					"value": false
 				},
 				"inaccurate": {
-					"description": "",
-					"label": "Inaccurate",
 					"value": false
 				},
 				"indirect": {
-					"description": "",
-					"label": "Indirect",
 					"value": false
 				},
 				"munition": {
-					"description": "",
-					"label": "Munition",
 					"value": false
 				},
 				"parrying": {
-					"description": "",
-					"label": "Parrying",
 					"value": false
 				},
 				"reliable": {
-					"description": "",
-					"label": "Reliable",
 					"value": false
 				},
 				"subtle": {
-					"description": "",
-					"label": "Subtle",
 					"value": false
 				},
 				"unreliable": {
-					"description": "",
-					"label": "Unreliable",
 					"value": false
 				}
 			},

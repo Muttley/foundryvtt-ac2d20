@@ -85,25 +85,25 @@ export default class Dialog2d20 extends Dialog {
 		rollName = "Roll D20",
 		skill = 0,
 	} = {}) {
-		let dialogData = {};
-		dialogData.rollName = rollName;
-		dialogData.diceNum = diceNum;
-		dialogData.attribute = attribute;
-		dialogData.skill = skill;
-		dialogData.focus = focus;
-		dialogData.complication = complication;
-		dialogData.attributes = ["agi", "bra", "coo", "ins", "rea", "wil"];
-		dialogData.actor = actor;
-		dialogData.prefAttribute = prefAttribute;
-		dialogData.actorId = actorId;
-		dialogData.itemId = itemId;
+		const dialogData = {
+			actor,
+			actorId,
+			attribute,
+			complication,
+			diceNum,
+			focus,
+			itemId,
+			prefAttribute,
+			rollName,
+			skill,
+		};
 
 		const html = await renderTemplate(
 			"systems/ac2d20/templates/dialogs/dialog2d20.hbs",
 			dialogData
 		);
 
-		let d = new Dialog2d20(
+		const dialog = new Dialog2d20(
 			rollName,
 			diceNum,
 			attribute,
@@ -125,6 +125,6 @@ export default class Dialog2d20 extends Dialog {
 				},
 			}
 		);
-		d.render(true);
+		dialog.render(true);
 	}
 }

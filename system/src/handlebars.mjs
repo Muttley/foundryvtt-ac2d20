@@ -64,6 +64,77 @@ export const registerHandlebarsHelpers = function() {
 		}
 	});
 
+	Handlebars.registerHelper("listDamageEffects", function(effects) {
+		const elements = [];
+
+		for (const key in effects) {
+			if (!CONFIG.AC2D20.DAMAGE_EFFECTS.hasOwnProperty(key)) continue;
+
+			const effect = effects[key];
+
+			if (!effect.value) continue;
+
+			let effectName = CONFIG.AC2D20.DAMAGE_EFFECTS[key];
+			if (effect.rank > 0) effectName += ` ${effect.rank}`;
+
+			const tooltip = CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS[key];
+
+			const resultHtml = document.createElement("span");
+			resultHtml.classList.add("effect", "hover");
+			resultHtml.dataset.key = key;
+			resultHtml.dataset.tooltip = tooltip;
+			resultHtml.innerHTML = effectName;
+
+			elements.push(resultHtml.outerHTML);
+		}
+
+		let listString = "";
+
+		if (elements.length > 0) {
+			listString = elements.join(",&nbsp;");
+		}
+		else {
+			listString = "&mdash;";
+		}
+
+		return listString;
+	});
+
+	Handlebars.registerHelper("listWeaponQualities", function(qualities) {
+		const elements = [];
+
+		for (const key in qualities) {
+			if (!CONFIG.AC2D20.WEAPON_QUALITIES.hasOwnProperty(key)) continue;
+
+			const effect = qualities[key];
+
+			if (!effect.value) continue;
+
+			let qualityName = CONFIG.AC2D20.WEAPON_QUALITIES[key];
+
+			const tooltip = CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key];
+
+			const resultHtml = document.createElement("span");
+			resultHtml.classList.add("quality", "hover");
+			resultHtml.dataset.key = key;
+			resultHtml.dataset.tooltip = tooltip;
+			resultHtml.innerHTML = qualityName;
+
+			elements.push(resultHtml.outerHTML);
+		}
+
+		let listString = "";
+
+		if (elements.length > 0) {
+			listString = elements.join(",&nbsp;");
+		}
+		else {
+			listString = "&mdash;";
+		}
+
+		return listString;
+	});
+
 	Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
 		lvalue = parseFloat(lvalue);
 		rvalue = parseFloat(rvalue);
@@ -89,11 +160,15 @@ export const registerHandlebarsHelpers = function() {
 
 	Handlebars.registerHelper("getSkillFocusList", function(key) {
 		if (key === "") return [];
+
 		const skill = CONFIG.AC2D20.SKILLS.find(s => s.key === key);
+
 		const focuses = {};
+
 		for (const focus of skill.focuses) {
 			focuses[focus] = ac2d20.utils.getLocalizedFocusName(focus);
 		}
+
 		return focuses;
 	});
 
@@ -166,14 +241,16 @@ export const registerHandlebarsHelpers = function() {
 		for (const focus of focuses) {
 			if (onlyFocused && !focus.isfocus) continue;
 
+			const tooltip = game.i18n.localize(`AC2D20.Tooltips.Focus.${focus.title.slugify()}`);
 			const resultHtml = document.createElement("span");
 
 			resultHtml.classList.add("skill-focus", "clickable", "roll-focus");
 			if (focus.isfocus) resultHtml.classList.add("focused");
 
-			resultHtml.dataset.itemId = skill._id;
-			resultHtml.dataset.isFocused = focus.isfocus;
 			resultHtml.dataset.focusName = focus.title;
+			resultHtml.dataset.isFocused = focus.isfocus;
+			resultHtml.dataset.itemId = skill._id;
+			resultHtml.dataset.tooltip = tooltip;
 
 			resultHtml.innerHTML = ac2d20.utils.getLocalizedFocusName(focus.title);
 
@@ -260,4 +337,11 @@ export const registerHandlebarsHelpers = function() {
 		const html = options.fn(this);
 		return html.replace(rgx, "$& selected");
 	});
+
+	Handlebars.registerHelper("slugify", function(value) {
+		return typeof value === "string"
+			? value.slugify()
+			: value;
+	});
+
 };

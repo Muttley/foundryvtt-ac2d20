@@ -57,7 +57,9 @@ export default class Roller2D20 {
 		skill = 0,
 	} = {}) {
 		const successThreshold = parseInt(attribute) + parseInt(skill);
-		const critThreshold = focus ? parseInt(skill) : 1;
+
+		const critThreshold = focus && parseInt(skill) > 0 ? parseInt(skill) : 1;
+
 		const complicationThreshold = parseInt(complication);
 
 		const formula = `${dicenum}d20`;
@@ -214,7 +216,7 @@ export default class Roller2D20 {
 		let chatData = {
 			blind,
 			content: html,
-			flags: { ac2d20roll: ac2d20Roll },
+			flags: { ac2d20Roll },
 			roll,
 			rollMode: game.settings.get("core", "rollMode"),
 			speaker,
@@ -248,19 +250,34 @@ export default class Roller2D20 {
 	}
 
 
-	static async rollD6({ rollName = "Roll D6", dicenum = 2, itemId = null, actorId = null } = {}) {
-		let formula = `${dicenum}ds`;
-		let roll = new Roll(formula);
+	static async rollD6({
+		actorId = null,
+		diceNum = 2,
+		itemId = null,
+		rollName = "Roll D6",
+	} = {}) {
+		const formula = `${diceNum}ds`;
+		const roll = new Roll(formula);
+
 		await roll.evaluate();
+
 		await Roller2D20.parseD6Roll({
-			rollName: rollName,
-			roll: roll,
-			itemId: itemId,
 			actorId: actorId,
+			itemId: itemId,
+			roll: roll,
+			rollName: rollName,
 		});
 	}
 
-	static async parseD6Roll({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], addDice = [], itemId = null, actorId = null } = {}) {
+	static async parseD6Roll({
+		actorId = null,
+		addDice = [],
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll D6",
+	} = {}) {
 		let diceResults = [
 			{ result: 1, effect: 0 },
 			{ result: 2, effect: 0 },
@@ -302,7 +319,15 @@ export default class Roller2D20 {
 		});
 	}
 
-	static async rerollD6({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
+	static async rerollD6({
+		actorId = null,
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll D6",
+	} = {}) {
+
 		if (!rerollIndexes.length) {
 			ui.notifications.notify("Select Dice you want to Reroll");
 			return;
@@ -310,7 +335,9 @@ export default class Roller2D20 {
 		let numOfDice = rerollIndexes.length;
 		let formula = `${numOfDice}ds`;
 		let _roll = new Roll(formula);
+
 		await _roll.evaluate();
+
 		await Roller2D20.parseD6Roll({
 			rollName: `${rollName} [re-roll]`,
 			roll: _roll,
@@ -321,7 +348,14 @@ export default class Roller2D20 {
 		});
 	}
 
-	static async addD6({ rollName = "Roll D6", dicenum = 2, ac2d20Roll = null, diceRolled = [], itemId = null, actorId = null } = {}) {
+	static async addD6({
+		ac2d20Roll = null,
+		actorId = null,
+		dicenum = 2,
+		diceRolled = [],
+		itemId = null,
+		rollName = "Roll D6",
+	} = {}) {
 		let formula = `${dicenum}ds`;
 		let _roll = new Roll(formula);
 		await _roll.evaluate();
@@ -337,79 +371,68 @@ export default class Roller2D20 {
 		});
 	}
 
-	static async sendD6ToChat({ rollName = "Roll D6", roll = null, diceRolled = [], rerollIndexes = [], itemId = null, actorId = null } = {}) {
-		let damage = diceRolled.reduce((a, b) => ({ result: a.result + b.result })).result;
-		let effects = diceRolled.reduce((a, b) => ({ effect: a.effect + b.effect })).effect;
-		// let weaponDamageTypesList = [];
-		// let weaponDamageEffectsList = [];
-		// let weaponQualityList = [];
+	static async sendD6ToChat({
+		actorId = null,
+		diceRolled = [],
+		itemId = null,
+		rerollIndexes = [],
+		roll = null,
+		rollName = "Roll D6",
+	} = {}) {
+		let damage = diceRolled.reduce(
+			(a, b) => ({ result: a.result + b.result })
+		).result;
 
-		let itemEffects = [];
-		let itemQualities = [];
+		let effects = diceRolled.reduce(
+			(a, b) => ({ effect: a.effect + b.effect })
+		).effect;
 
+		let item;
 		if (itemId && actorId) {
-			let actor = game.actors.get(actorId);
-			let item = null;
-			if (actor) {
-				item = actor.items.get(itemId);
-			}
-			if (item) {
-				if (item.type === "spell") {
-					itemEffects = item.system.costEffects;
-				}
-				else if (item.type === "weapon") {
-					for (let de in item.system.effect) {
-						if (item.system.effect[de].value) {
-							let rank = item.system.effect[de].rank ?? "";
-							let damageEffectLabel = game.i18n.localize(`AC2D20.WEAPONS.damageEffect.${de}`);
-							let efectLabel = `<span data-tooltip="${Handlebars.helpers.getTooltipFromConfigKey(`AC2D20.WEAPONS.effects.${de}`)}">${damageEffectLabel}${rank}</span>`;
-							itemEffects.push(efectLabel);
-						}
-					}
-					itemEffects = itemEffects.join(", ");
+			item = game.actors.get(actorId)?.items.get(itemId) ?? null;
 
-					for (let qu in item.system.qualities) {
-						if (item.system.qualities[qu].value) {
-							let quLabel = game.i18n.localize(`AC2D20.WEAPONS.qualities.${qu}`);
-							itemQualities.push(quLabel);
-						}
-					}
-				}
+			if (item && item.type === "spell") {
+				itemEffects = item.system.costEffects;
 			}
-
 		}
 
 		let rollData = {
-			rollName: rollName,
-			damage: damage,
-			effects: effects,
+			damage,
+			effects,
+			item,
 			results: diceRolled,
-			itemEffects: itemEffects,
-			itemQualities: itemQualities,
+			rollName,
 		};
-		const html = await renderTemplate("systems/ac2d20/templates/chat/rollD6.hbs", rollData);
-		let ac2d20Roll = {};
-		ac2d20Roll.rollName = rollName;
-		ac2d20Roll.diceRolled = diceRolled;
-		ac2d20Roll.damage = damage;
-		ac2d20Roll.effects = effects;
-		ac2d20Roll.rerollIndexes = rerollIndexes;
-		ac2d20Roll.diceFace = "d6";
 
-		let chatData = {
-			user: game.user.id,
-			rollMode: game.settings.get("core", "rollMode"),
-			content: html,
-			flags: { ac2d20roll: ac2d20Roll, itemId: itemId, actorId: actorId },
-			type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-			roll: roll,
+		const html = await renderTemplate(
+			"systems/ac2d20/templates/chat/rollD6.hbs",
+			rollData
+		);
+
+		const ac2d20Roll = {
+			damage,
+			diceFace: "d6",
+			diceRolled,
+			effects,
+			rerollIndexes,
+			rollName,
 		};
-		if (["gmroll", "blindroll"].includes(chatData.rollMode)) {
-			chatData.whisper = ChatMessage.getWhisperRecipients("GM");
-		}
-		else if (chatData.rollMode === "selfroll") {
-			chatData.whisper = [game.user];
-		}
+
+		const speaker = {actor: actorId};
+
+		const { whisper, blind } = this.getRollModeSettings();
+
+		const chatData = {
+			blind,
+			content: html,
+			flags: { ac2d20Roll, itemId, actorId },
+			roll,
+			rollMode: game.settings.get("core", "rollMode"),
+			speaker,
+			user: game.user.id,
+			whisper,
+		};
+
 		await ChatMessage.create(chatData);
 
 	}

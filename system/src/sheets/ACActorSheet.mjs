@@ -71,21 +71,16 @@ export default class ACActorSheet extends ActorSheet {
 			async: true,
 		});
 
+		this._prepareItems(context);
+
 		// Prepare character data and items.
 		if (actorData.type === "character") {
-			this._prepareItems(context);
 			this._prepareCharacterData(context);
-		}
-
-		// Prepare NPC data and items.
-		if (actorData.type === "npc") {
-			this._prepareItems(context);
 		}
 
 		// Prepare Creature data and items.
 		if (actorData.type === "vehicle") {
-			this._prepareItems(context);
-
+			context.vehicleQualities = this._getVehicleQualities();
 		}
 
 		// Add roll data for TinyMCE editors.
@@ -110,6 +105,23 @@ export default class ACActorSheet extends ActorSheet {
 		context.AC2D20 = CONFIG.AC2D20;
 
 		return context;
+	}
+
+	_getVehicleQualities() {
+		const vehicleQualities = [];
+		for (const key in CONFIG.AC2D20.VEHICLE_QUALITIES) {
+			vehicleQualities.push({
+				active: this.actor.system?.qualities[key].value ?? false,
+				hasRank: CONFIG.AC2D20.VEHICLE_QUALITY_HAS_RANK[key],
+				rank: this.actor.system?.qualities[key].rank,
+				key,
+				label: CONFIG.AC2D20.VEHICLE_QUALITIES[key],
+			});
+		}
+
+		return vehicleQualities.sort(
+			(a, b) => a.label.localeCompare(b.label)
+		);
 	}
 
 	/**
@@ -359,11 +371,20 @@ export default class ACActorSheet extends ActorSheet {
 
 		html.find(".roll-spell-cost.clickable").click(event => {
 			event.preventDefault();
+
 			const li = $(event.currentTarget).parents(".item");
 			const itemId = li.data("itemId");
+
 			const item = this.actor.items.get(li.data("itemId"));
 			const cost = parseInt(item.system.cost);
-			game.ac2d20.DialogD6.createDialog({ rollName: `${item.name} - Cost`, diceNum: cost, ac2d20Roll: null, itemId: itemId, actorId: this.actor._id });
+
+			game.ac2d20.DialogD6.createDialog({
+				ac2d20Roll: null,
+				actorId: this.actor._id,
+				diceNum: cost,
+				itemId: itemId,
+				rollName: `${item.name} - Cost`,
+			});
 		});
 
 		html.find(".item-value-changer").change(async event => {
@@ -393,40 +414,34 @@ export default class ACActorSheet extends ActorSheet {
 
 			const focusName = item.system.focus;
 
-			const skill = this.actor.items.getName(item.system.skill);
+			const skillItem = this.actor.items.getName(item.system.skill);
 
-			let skillRank = 0;
-			try {
-				skillRank = skill.system.value;
-			}
-			catch(err) {
-				console.log(err);
-			}
+			const skill = skillItem && skillItem.system?.value
+				? skillItem.system.value
+				: 0;
 
-			let isFocus = false;
-			try {
-				for (const [, value] of Object.entries(skill.system.focuses)) {
-					if (value.title === focusName && value.isfocus) isFocus = true;
-				}
-			}
-			catch(err) {
-				console.log(err);
-			}
+			const skillFocuses = skillItem?.system?.focuses ?? [];
 
-			const attrValue = item.actor.type === "vehicle" ? 6 : -1;
+			const focus = skillFocuses.find(
+				focus => focus.title === focusName
+			)?.isfocus ?? false;
+
+			const attribute = item.actor.type === "vehicle" ? 6 : -1;
+
 			// weaponType is actualy attribute abrevation
 			const prefAttribute = item.system.weaponType;
+
 			game.ac2d20.Dialog2d20.createDialog({
-				rollName: item.name,
-				diceNum: 2,
-				attribute: attrValue,
-				skill: skillRank,
-				focus: isFocus,
-				complication: complication,
 				actor: this.actor.system,
-				prefAttribute: prefAttribute,
 				actorId: this.actor._id,
+				attribute,
+				complication,
+				diceNum: 2,
+				focus,
 				itemId: item._id,
+				prefAttribute,
+				rollName: item.name,
+				skill,
 			});
 
 		});
@@ -489,14 +504,10 @@ export default class ACActorSheet extends ActorSheet {
 		// * Add Inventory Item
 		html.find(".item-create").click(this._onItemCreate.bind(this));
 
+
 		// TRUTHS
 		html.find(".truth-create").click(this._onTruthCreate.bind(this));
-		// html.find(".truth-edit").contextmenu(this._onTruthDelete.bind(this));
-		// html.find(".truth-edit").click(this._onTruthEdit.bind(this));
 
-		/* -------------------------------------------- */
-		/* ADD RIGHT CLICK CONTENT MENU
-        /* -------------------------------------------- */
 		const truthsMenuItems = [
 			{
 				icon: '<i class="fas fa-edit"></i>',
@@ -673,15 +684,16 @@ export default class ACActorSheet extends ActorSheet {
 	}
 
 
-	_onRollSkill({skillItem = null, focusName = ""}) {
+	_onRollSkill({focusName = "", skillItem = null}) {
 		let localizedFocusName = focusName;
-		let isFocus = false;
+		let focus = false;
+
 		if (focusName !== "") {
 			localizedFocusName = ac2d20.utils.getLocalizedFocusName(focusName);
 
 			for (const skillFocus of skillItem.system.focuses) {
 				if (skillFocus.title === focusName) {
-					isFocus = skillFocus.isfocus;
+					focus = skillFocus.isfocus;
 					break;
 				}
 			}
@@ -694,15 +706,15 @@ export default class ACActorSheet extends ActorSheet {
 
 		const rollName = focusName !== ""
 			? `${localizedFocusName} (${localizedSkillName})`
-			: ac2d20.utils.getLocalizedSkillName(skillItem.name);
+			: localizedSkillName;
 
 		ac2d20.Dialog2d20.createDialog({
 			actor: this.actor.system,
 			attribute: -1,
-			prefAttribute: skillItem.system.defaultAttribute,
 			complication,
 			diceNum: 2,
-			focus: isFocus,
+			focus,
+			prefAttribute: skillItem.system.defaultAttribute,
 			rollName,
 			skill: skillItem.system.value,
 		});

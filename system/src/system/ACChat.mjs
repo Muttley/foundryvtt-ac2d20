@@ -48,7 +48,7 @@ export class ACChat {
 					rerollIndex.push($(die).data("index"));
 				}
 
-				const rollData = message.flags.ac2d20roll;
+				const rollData = message.flags.ac2d20Roll;
 
 				switch (rollData.diceFace) {
 					case "d6":
@@ -92,12 +92,12 @@ export class ACChat {
 			addButton[0].setAttribute("data-messageId", message.id);
 
 			addButton.click(ev => {
-				const ac2d20Roll = message.flags.ac2d20roll;
+				const ac2d20Roll = message.flags.ac2d20Roll;
 				const actorId = message.flags.actorId;
 				const itemId = message.flags.itemId;
 
 				game.ac2d20.DialogD6.createDialog({
-					ac2d20Roll: ac2d20Roll,
+					ac2d20Roll,
 					actorId,
 					diceNum: 1,
 					itemId,

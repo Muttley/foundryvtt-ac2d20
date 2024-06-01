@@ -1,0 +1,25 @@
+<span>
+	<strong>
+		{{localize "AC2D20.WEAPONS.qualities"}}:
+	</strong>
+	{{{listWeaponQualities weapon.system.qualities}}}
+	|&nbsp;
+	<strong>
+		{{localize "AC2D20.TEMPLATES.Effects"}}:
+	</strong>
+	{{{listDamageEffects weapon.system.effect}}}
+	|&nbsp;
+	<strong>
+		{{localize "AC2D20.TEMPLATES.Salvo"}}:
+	</strong>
+	{{#if weapon.system.salvo}}
+		{{weapon.system.salvo}}
+	{{else}}
+		&mdash;
+	{{/if}}
+	|&nbsp;
+	<strong>
+		{{localize "AC2D20.TEMPLATES.Size"}}:
+	</strong>
+	{{localize (concat 'AC2D20.TEMPLATES.SizeLevels.' (getSizeLabel weapon.system.weight))}}
+</span>

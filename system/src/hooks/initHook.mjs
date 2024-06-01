@@ -6,7 +6,7 @@ import * as sheets from "../sheets/_module.mjs";
 import * as dialogs from "../dialogs/_module.mjs";
 
 import { preloadHandlebarsTemplates } from "../templates.mjs";
-import { registerDebugSettings } from "../settings.mjs";
+import registerSettings from "../settings.mjs";
 import { registerHandlebarsHelpers } from "../handlebars.mjs";
 import { registerTextEditorEnrichers } from "../enrichers.mjs";
 
@@ -50,8 +50,6 @@ export async function initHook() {
 		decimals: 0,
 	};
 
-	registerDebugSettings();
-
 	registerDocumentClasses();
 	registerDocumentSheets();
 
@@ -59,6 +57,8 @@ export async function initHook() {
 
 	// Combat tracker stuff
 	CONFIG.ui.combat = apps.CombatTracker2d20;
+
+	registerSettings();
 
 	// Register text enrichers.
 	registerHandlebarsHelpers();

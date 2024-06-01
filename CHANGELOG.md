@@ -1,6 +1,33 @@
-# v11.4.0
+## v11.5.0
 
-## Enhancement
+### Ehancement
+- [#74] Add styling to the journals
+
+### Bugfix
+- [#65] Fix un-localized strings in Actor abilities template
+- [#66] Hardcoded skills in autocalc MaxStress
+- [#71] Skill localization not working on NPCs
+- [#73] Typo in max stress calculation meant Will+Resilience not used when it should
+- [#75] Error in char sheet talent listing text enrichments used in description
+
+### Chores
+- [#67] Merge new Portuguese/Brazilian translation updates from Crowdin
+- [#72] Merge new French and Portuguese/Brazilian translation updates from Crowdin
+- [#78] Merge new Spanish and Portuguese/Brazilian translation updates from Crowdin
+- [#79] Merge new Portuguese/Brazilian translation updates from Crowdin
+- [#87] Unable to alter max momentum setting if you reduce it to zero
+- [#88] Retire the Skills Compendium world setting now that it is no longer required
+- [#89] Retire the hoversJsonLocation setting now it is no longer needed
+- [#90] Merge new French translation updates from Crowdin
+- [#91] Rolling a one on a skill test should always count as a critical, regardless of skill/focus values
+
+*Many thanks to **lozanoje** for contributing code and translations included in this build*
+
+---
+
+## v11.4.0
+
+### Enhancement
 - [#19] Turn skills compendium config setting into a selector of available Item compendiums
 - [#31] Automatic update of char sheet
 - [#33] Add languages field to character sheet
@@ -28,12 +55,12 @@
 - [#60] Enable toggling skill focus on/off with Ctrl+LeftMouse on character sheet
 - [#62] Add system/login page background image courtesy of Modiphius
 
-## Bugfix
+### Bugfix
 - [#1] compendium-skills setting needs to re-run some of the setup in Ready hook when changed
 - [#34] Skill complication range calculation on a NPC Sheet
 - [#51] Skill and Focus names not translated on character sheet
 
-## Chore
+### Chore
 - [#21] Fix "singleSeat:" vehicle template field name
 - [#41] Ensure the system has no compatibility issues in Foundry V12 Development Releases
 - [#42] globalThis.mergeObject which must now be accessed via foundry.utils.mergeObject *(Foundry v12 compatibility)*
@@ -49,13 +76,13 @@
 
 ---
 
-# v11.3.0
+## v11.3.0
 
-## Enhancement
+### Enhancement
 - [#28] Added onhover description for vehicle qualities as in the weapon sheet
 - [#38] Add support for French language translations
 
-## Chore
+### Chore
 - [#32] Merged additional Spanish translations.
 - [#37] Merge French translation updates from Crowdin
 
@@ -65,14 +92,14 @@
 
 ---
 
-# v11.2.0
+## v11.2.0
 
-## Enhancement
+### Enhancement
 - [#20] Implement schema migration tools
 - [#22] Open new item automatically when using the Create Item buttons on a character sheet
 - [#23] Display release notes automatically at first on update or for a new world
 
-## Bugfix
+### Bugfix
 - [#14] Some localization fixes (lozanoje)
 - [#15] Cannot open spell sheet when changing language
 - [#16] Enable the prosemirror editor for item descriptions (lozanoje)
@@ -82,9 +109,9 @@
 
 ---
 
-# v11.1.2
+## v11.1.2
 
-## Bugfix
+### Bugfix
 - [#8] Weapon sizes not correctly displayed on Gear tab of character sheet
 - [#9] Gear category labels for Skill Kits and Equipment not translated
 - [#10] Spellcasting type always shows as Traditional when posted to chat
@@ -92,24 +119,24 @@
 
 ---
 
-# v11.1.1
+## v11.1.1
 
-## Bugfix
+### Bugfix
 - [#3] Actor skills being overwritten when an Actor is duplicated
 
-## Chore
+### Chore
 - Translation updates are now all handled via Crowdin to simplify the process of contributing translations.  See here for more details: https://github.com/Muttley/foundryvtt-ac2d20/wiki/Other-ways-to-contribute#translation
 
 ---
 
-# v11.1.0
+## v11.1.0
 
 - System migrated to new home and build process
 - Compendiums now contained within a top-level system folder
 
 ---
 
-# v11.0.2
+## v11.0.2
 
 - Initiative-Tracker Overhaul, brought to you by Muttley.
 (If you had Lancer mod for tracking initiative you can disable it since the system now handles initiative tracking)
@@ -118,88 +145,88 @@ Many thanks to Muttley for sharing his initiative tracker modifications and spen
 
 ---
 
-# v11.0.1
+## v11.0.1
 
 - Item Sheets now look in the skill compendium when creating list of skills and focuses in dropdowns.
 You can set what compendium to use for skills in AC2d20 settings
 
 ---
 
-# v11.0.0
+## v11.0.0
 
 - Foundry V11 compatible
 
 ---
 
-# v10.0.10
+## v10.0.10
 
 - Necessary changes to TextEnricher to support full async methods
 - Fixed Item to Chat button
 
 ---
 
-# v10.0.9
+## v10.0.9
 
 - Added option in the settings to point to your json file that contains custom **descriptions** for weapon's effects/qualities. (It is a way to override those descriptions like 'pg.99' .etc)
 
 ---
 
-# v10.0.8
+## v10.0.8
 
 - Added delete button to skills
 
 ---
 
-# v10.0.7
+## v10.0.7
 
 - Added text enrichers for AC2D20 special symbols like the small cthulhu head or the cross.
 Write the **Cthulhu Head Icon(symbol)** in texts by typing **@s** ot **@stress** or **@c** or **@challenge**
 Write the **The Cross symbol** in texts by typing **@x** or **@xross**
 ---
 
-# v10.0.6
+## v10.0.6
 
 - Fixed custom skill compendium usage
 
 ---
 
-# v10.0.5
+## v10.0.5
 
 - Added carry capacity autocalculation
 
 ---
 
-# v10.0.4
+## v10.0.4
 
 - Spellcasting types are now defined by Actor and not the spells. Traditional, Researcher and Dabbler are now set on the Character/NPC sheet under the "Spells" tab.
 
 ---
 
-# v10.0.3
+## v10.0.3
 
 - Fixed item qualities display in chat messages
 ---
 
-# v10.0.2
+## v10.0.2
 
 - Small changes to roller so it works with Maestro Module item tracks
 
 ---
 
-# v10.0.1
+## v10.0.1
 
 - Added Spanish translation (Thanks to Viajero Salvaje)
 
 ---
 
-# v10.0.0
+## v10.0.0
 
 - System is compatible with Foundry v10
 - Added Fatigue value to the character sheet
 
 ---
 
-# v1.0.5
+## v1.0.5
 
 Fixed bug with Personal Truths and Injuries on the Actor sheet.
 Due to the nature of the bug data model is changed and no migration is provided
@@ -220,7 +247,7 @@ console.log(act.data.data.injuries.list)
 ```
 ---
 
-# v1.0.4
+## v1.0.4
 
 - Setting added: "Show GM Momentum To Player"
 - Setting added: "Players Can Setup Party's Max App"
@@ -228,7 +255,7 @@ console.log(act.data.data.injuries.list)
 
 ---
 
-# v1.0.3
+## v1.0.3
 
 - Bumped version to v9
 - Changed the power on the spell tab so it only has a single numerical field
@@ -236,12 +263,12 @@ console.log(act.data.data.injuries.list)
 
 ---
 
-# v1.0.2
+## v1.0.2
 
 - Added Ritual fields for Spells.
 
 ---
 
-# v1.0.1
+## v1.0.1
 
 - Added two new weapon qualities found in GM guide. Bane and Hunger.

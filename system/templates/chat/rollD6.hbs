@@ -1,23 +1,34 @@
 <div class="ac2d20-chat-message">
 	<div class="content">
-		<h2>{{rollName}}</h2>
+		<h2>
+			{{rollName}}
+		</h2>
 		<div class="damage-plaq flexrow">
-			<p class="flex-2" style="margin: 0;">{{localize "AC2D20.UI.Damage"}}: {{damage}} | {{localize "AC2D20.TEMPLATES.Effects"}}: {{effects}}</p>
-			<!-- <div style="text-align: end;">
-				{{#each weaponDamageTypesList as |damageType|}}
-				<i class="fo-{{damageType}}" title="{{localize (concat 'AC2D20.RESISTANCE.' damageType)}}"></i>
-				{{/each}}
-			</div> -->
+			<p class="flex-2" style="margin: 0;">
+				{{localize "AC2D20.UI.Damage"}}:
+				{{damage}}
+				|
+				{{localize "AC2D20.TEMPLATES.Effects"}}:
+				{{effects}}
+			</p>
 		</div>
-		<p class="font-size-11">{{#if (gt itemEffects.length 0)}}Effects: {{/if}}{{{itemEffects}}}</p>
+		{{#if item}}
+			<p class="font-size-11">
+				Effects: {{{listDamageEffects item.system.effect}}}
+			</p>
+		{{/if}}
 		<div class="dices-result" style="display: flex; flex-wrap: wrap;">
 			{{#each results as |dice|}}
-			<span class="dice-icon d6 face-{{dice.face}}{{#if reroll}} reroll{{/if}}{{#ifCond effect '==' 1}} effect{{/ifCond}}" data-index="{{@index}}">&nbsp;</span>
+				<span class="dice-icon d6 face-{{dice.face}}{{#if reroll}} reroll{{/if}}{{#ifCond effect '==' 1}} effect{{/ifCond}}" data-index="{{@index}}">&nbsp;</span>
 			{{/each}}
 		</div>
 		<div class="flexrow">
-			<button class="reroll-button">{{localize "AC2D20.TEMPLATES.Re_roll"}} <span class="fo-pip-boy fo-blue"></span></button>
-			<button class="add-button">{{localize "AC2D20.UI.Add"}} <span class="fo-pip-boy fo-blue"></span></button>
+			<button class="reroll-button">
+				{{localize "AC2D20.TEMPLATES.Re_roll"}}
+			</button>
+			<button class="add-button">
+				{{localize "AC2D20.UI.Add"}}
+			</button>
 		</div>
 	</div>
 </div>

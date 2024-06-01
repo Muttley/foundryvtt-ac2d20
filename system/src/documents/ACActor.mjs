@@ -70,7 +70,7 @@ export default class ACActor extends Actor {
 
 	_calculateMaxStress() {
 		const brawn = this.system.attributes?.bra?.value ?? 0;
-		const will = this.system.attributes?.will?.value ?? 0;
+		const will = this.system.attributes?.wil?.value ?? 0;
 
 		const fatigue = this.system.fatigue ?? 0;
 
@@ -168,13 +168,14 @@ export default class ACActor extends Actor {
 				&& data.items.filter(i => i.type === "skill").length > 0;
 
 			if (!alreadyHasSkills) {
-				let skillsCompendium = game.settings.get(
-					"ac2d20", "compendium-skills"
-				);
+				// let skillsCompendium = game.settings.get(
+				// 	"ac2d20", "compendium-skills"
+				// );
 
-				if (!skillsCompendium) skillsCompendium = "ac2d20.skills";
+				// if (!skillsCompendium) skillsCompendium = "ac2d20.skills";
 
-				const packSkills = await game.packs.get(skillsCompendium).getDocuments();
+				const packSkills =
+					await game.packs.get("ac2d20.skills").getDocuments();
 
 				update.items = this.items.map(i => i.toObject());
 
