@@ -28,7 +28,7 @@ AC2D20.EFFECTS.Passive: Effets passifs
 AC2D20.EFFECTS.Temporary: Effets temporaires
 AC2D20.EffectToggle: Basculer l'effet
 AC2D20.equipped: Équipé
-AC2D20.Error.NumberOfDiceMustBeNonZero: The number of dice entered must be an integer value greater than zero.
+AC2D20.Error.NumberOfDiceMustBeNonZero: Le nombre de dés saisis doit être un nombre entier supérieur à zéro.
 AC2D20.FOCUS.Air Force: Armée de l'air
 AC2D20.FOCUS.Aircraft: Avion
 AC2D20.FOCUS.Animal Handling: Dressage
@@ -294,16 +294,16 @@ AC2D20.Tooltips.Attribute.coo: La coordination est une mesure de vos habiletés 
 AC2D20.Tooltips.Attribute.ins: La perception correspond à vos instincts et votre capacité à comprendre le monde qui vous entoure. Les personnages perspicaces sont observateurs, habiles et sages.
 AC2D20.Tooltips.Attribute.rea: Le raisonnement est la capacité d'appliquer la logique, l'intelligence et les faits appris à une situation. Les personnages qui ont de hautes compétences de raisonnement ont tendance à être lucides, rationnels ou contemplatifs, et poussés par un besoin d'apprendre ou de comprendre.
 AC2D20.Tooltips.Attribute.wil: La Volonté est votre sens de soi, votre force mentale et votre sens de l'autodiscipline; les personnages pleins d'esprit tendent à être unis, têtus, et ont des personnalités fortes.
-AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
-AC2D20.Tooltips.DamageEffect.backlash_x: Each effect inflicts X stress to the attacker. Injuries may be physical or mental, at the GM’s discretion.
-AC2D20.Tooltips.DamageEffect.drain: The attacker suffers 1 Fatigue for each effect rolled.
-AC2D20.Tooltips.DamageEffect.intense: If the attack inflicts an injury, and an effect is rolled, the attack inflicts an additional injury.
-AC2D20.Tooltips.DamageEffect.persistent_x: The attack or hazard has a lingering effect. If one or more effects are rolled, the target suffers X@x stress at the start of the affected character’s turn, for rounds equal to the number of effects rolled.
-AC2D20.Tooltips.DamageEffect.piercing_x: The attack ignores X resistance for each effect rolled.
-AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
-AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
-AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
-AC2D20.Tooltips.Focus.air-force: Air Force — covers training in fighter and bomber tactics, such as dogfighting, formation flying and navigation, as well as aerial military strategy.
+AC2D20.Tooltips.DamageEffect.area: L'attaque ou le danger touche une cible supplémentaire à portée de la cible initiale pour chaque effet lancé. Les cibles secondaires subissent les effets complets de l’attaque.
+AC2D20.Tooltips.DamageEffect.backlash_x: 'Chaque effet inflige X stress à l''attaquant : les blessures peuvent être physiques ou mentales, à la discrétion du GM.'
+AC2D20.Tooltips.DamageEffect.drain: L'attaquant subit 1 Fatigue pour chaque effet lancé.
+AC2D20.Tooltips.DamageEffect.intense: Si l'attaque inflige une blessure et qu'un effet est lancé, l'attaque inflige une blessure supplémentaire.
+AC2D20.Tooltips.DamageEffect.persistent_x: L'attaque ou le danger a un effet persistant. Si un ou plusieurs effets sont lancés, la cible subit X@x stress au début du tour du personnage affecté, pendant un nombre de round égal au nombre d'effets lancés.
+AC2D20.Tooltips.DamageEffect.piercing_x: L'attaque ignore X résistance pour chaque effet lancé.
+AC2D20.Tooltips.DamageEffect.snare: L'attaque ou le danger peut enchevêtrer et lier la cible. La cible ne peut entreprendre aucune action autre que d'essayer de se libérer. Nécessite un test de compétence ayant une difficulté égale au nombre d'effets roulés pour se libérer.
+AC2D20.Tooltips.DamageEffect.stun: L'attaque ou le danger empêche temporairement la cible d'agir. Si un certain nombre d'effets sont lancés qui sont égaux ou supérieurs à la capacité de résilience de la cible, la cible ne peut entreprendre aucune action lors de son prochain tour.
+AC2D20.Tooltips.DamageEffect.vicious: L'attaque ou le danger est particulièrement puissant. Ajoutez +1 au stress total infligé pour chaque effet lancé.
+AC2D20.Tooltips.Focus.air-force: Force aérienne — englobe l’entraînement aux tactiques de combat et de bombardement, telles que les combats de chiens, la formation de vol et la navigation, ainsi que la stratégie militaire aérienne.
 AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
 AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
 AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
