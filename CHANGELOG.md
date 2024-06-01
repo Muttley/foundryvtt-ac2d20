@@ -1,3 +1,10 @@
+## v11.5.1
+
+### Bugfix
+- [#93] Release notes not showing on new version
+
+---
+
 ## v11.5.0
 
 ### Ehancement
