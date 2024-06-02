@@ -1,3 +1,15 @@
+## v11.5.2
+
+### Bugfix
+- [#97] Some missing Focus and Skill localization on Character sheet
+
+### Chores
+- [#96] Merge new Portuguese/Brazilian translation updates from Crowdin
+
+*Many thanks to **lozanoje** for contributing code included in this build*
+
+---
+
 ## v11.5.1
 
 ### Bugfix
