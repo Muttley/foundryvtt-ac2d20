@@ -40,9 +40,12 @@
 				{{item.name}}
 			</div>
 			<div class="cell f3 roll-spell skill-name clickable align-center">
-				<i class="fas fa-dice-d20"></i>&nbsp;{{item.system.skill}}
+				<i class="fas fa-dice-d20"></i>&nbsp;
+				{{#if item.system.skill}}
+					{{localize (concat 'AC2D20.SKILL.' (toUpperCase item.system.skill))}}
+				{{/if}}
 				{{#if item.system.focus}}
-					({{item.system.focus}})
+					({{localize (concat 'AC2D20.FOCUS.' item.system.focus)}})
 				{{/if}}
 			</div>
 			<div class="cell f1 align-center">{{item.system.difficulty}}</div>
