@@ -19,7 +19,7 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no
 AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Pontos de Ímpeto Diminuídos no Início da Rodada
 AC2D20.Combat.ToggleCombatantsTurnDone: Alternar Turno Concluído
-AC2D20.Dialog.NumberOfDice: Number of Dice
+AC2D20.Dialog.NumberOfDice: Número de Dados
 AC2D20.EffectCreate: Criar Efeito
 AC2D20.EffectDelete: Deletar Efeito
 AC2D20.EffectEdit: Editar Efeito
@@ -28,7 +28,7 @@ AC2D20.EFFECTS.Passive: Efeitos Passivos
 AC2D20.EFFECTS.Temporary: Efeitos Temporários
 AC2D20.EffectToggle: Alternar Efeito
 AC2D20.equipped: Equipado
-AC2D20.Error.NumberOfDiceMustBeNonZero: The number of dice entered must be an integer value greater than zero.
+AC2D20.Error.NumberOfDiceMustBeNonZero: O número de dados inserido deve ser um valor inteiro maior que zero.
 AC2D20.FOCUS.Air Force: Força Aérea
 AC2D20.FOCUS.Aircraft: Aeronave
 AC2D20.FOCUS.Animal Handling: Manejo de Animais
@@ -291,7 +291,7 @@ AC2D20.TEMPLATES.Weapons: Armas
 AC2D20.Tooltips.Attribute.agi: Agilidade é uma mistura de velocidade, equilíbrio e memória muscular, e é responsável pelo movimento e destreza de um personagem. Um personagem ágil é rápido se move com certeza e precisão.
 AC2D20.Tooltips.Attribute.bra: Músculo é o indicador da capacidade física e resistência do personagem. Um personagem musculoso é forte e resistente.
 AC2D20.Tooltips.Attribute.coo: Coordenação é a medida das suas habilidades motoras, da precisão e do senso de oportunidade. Personagens coordenados são bons de tiro, bons motoristas e pilotos, e excedem em prestidigitação e outras tarefas precisas e delicadas.
-AC2D20.Tooltips.Attribute.ins: Insight is your perception, instincts, and your ability to comprehend the world around you. Insightful characters are observant, shrewd, ‘street smart’, and wise.
+AC2D20.Tooltips.Attribute.ins: Intuição é a sua percepção, instintos e a sua habilidade de entender o mundo ao seu redor. Personagens intuitivos são observadores, espertos, sagazes e sábios.
 AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
 AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
 AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
