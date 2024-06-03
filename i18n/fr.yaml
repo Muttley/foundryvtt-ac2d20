@@ -40,7 +40,7 @@ AC2D20.FOCUS.Cars: Véhicules
 AC2D20.FOCUS.Charm: Charme
 AC2D20.FOCUS.Climbing: Escalade
 AC2D20.FOCUS.Close Quarters: Combat rapproché
-AC2D20.FOCUS.Combat Engineering: Ingénierie de combat
+AC2D20.FOCUS.Combat Engineering: Génie de combat
 AC2D20.FOCUS.Covert Operations: Opérations Secrètes
 AC2D20.FOCUS.Cryptography: Cryptographie
 AC2D20.FOCUS.Deceive: Tromper
@@ -304,22 +304,22 @@ AC2D20.Tooltips.DamageEffect.snare: L'attaque ou le danger peut enchevêtrer et 
 AC2D20.Tooltips.DamageEffect.stun: L'attaque ou le danger empêche temporairement la cible d'agir. Si un certain nombre d'effets sont lancés qui sont égaux ou supérieurs à la capacité de résilience de la cible, la cible ne peut entreprendre aucune action lors de son prochain tour.
 AC2D20.Tooltips.DamageEffect.vicious: L'attaque ou le danger est particulièrement puissant. Ajoutez +1 au stress total infligé pour chaque effet lancé.
 AC2D20.Tooltips.Focus.air-force: Force aérienne — englobe l’entraînement aux tactiques de combat et de bombardement, telles que les combats de chiens, la formation de vol et la navigation, ainsi que la stratégie militaire aérienne.
-AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
-AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
-AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
-AC2D20.Tooltips.Focus.army: Army — covers familiarity with military strategy and tactics for infantry, as well as mechanized ground warfare.
-AC2D20.Tooltips.Focus.art: Art — covers knowledge of individual pieces of art, the study of different artistic techniques and schools of thought, the history of art within different cultures, and its influences upon those cultures.
-AC2D20.Tooltips.Focus.camouflage: Camouflage — covers the use of materials to cover a person, object, or location, hiding it from sight.
-AC2D20.Tooltips.Focus.cars: Cars — covers the operation of civilian and military four-wheeled motor vehicles, up to and including small trucks.
-AC2D20.Tooltips.Focus.charm: Charm — methods of manipulating others through natural charisma and magnetism.
-AC2D20.Tooltips.Focus.climbing: Climbing — covers scaling sheer surfaces such as walls or cliffs as well as mountaineering.
-AC2D20.Tooltips.Focus.close-quarters: Close Quarters — covers the use of shotguns and sub-machine guns, and similar weapons designed for use at Close range or within tight confines like trenches or buildings.
-AC2D20.Tooltips.Focus.combat-engineering: Combat Engineering — covers work done to support or hinder troop movements, including the construction and demolition of roads, trenches, fortifications, and other military infrastructure.
-AC2D20.Tooltips.Focus.covert-operations: Covert Operations — covers organising a team to operate quietly and efficiently behind enemy lines.
-AC2D20.Tooltips.Focus.cryptography: Cryptography — covers knowledge of codes and ciphers, both how to create them and how to break them.
-AC2D20.Tooltips.Focus.deceive: Deceive — methods of manipulating others to believe something that is untrue.
-AC2D20.Tooltips.Focus.discipline: Discipline — represents the character’s durability and self-control, and their ability to resist and recover from confusion and fear or supernatural effects that afflict the mind.
-AC2D20.Tooltips.Focus.disguise: Disguise — covers the use of make-up, clothing, props, and appropriate body language to assume the guise of another person.
+AC2D20.Tooltips.Focus.aircraft: Avions — couvre l’exploitation d’avions civils et militaires, à la fois à moteur unique et multimoteurs. Vers la fin du conflit, il englobe également les avions et la technologie les plus récents.
+AC2D20.Tooltips.Focus.animal-handling: Dressage — couvre les connaissances sur différents animaux, comment ils se comportent, comment agir autour d'eux, ainsi que comment les former et les commander.
+AC2D20.Tooltips.Focus.architecture: Architecture — permet de comprendre comment les bâtiments sont conçus et construits, leur structure interne et externe et comment leur masse est soutenue et distribuée.
+AC2D20.Tooltips.Focus.army: Armée de terre — couvre la familiarité avec la stratégie militaire et les tactiques pour l'infanterie, ainsi que la guerre au sol mécanisée.
+AC2D20.Tooltips.Focus.art: Art — couvre la connaissance des œuvres d'art individuelles, l'étude des différentes techniques artistiques et des écoles de pensée, l'histoire de l'art au sein de différentes cultures, et ses influences sur ces cultures.
+AC2D20.Tooltips.Focus.camouflage: Camouflage — couvre l'utilisation de matériaux pour camoufler une personne, un objet ou un lieu, en le cachant de la vue.
+AC2D20.Tooltips.Focus.cars: Voitures — s'applique à l'exploitation de véhicules à quatre roues civils et militaires, jusqu'à des petits camions.
+AC2D20.Tooltips.Focus.charm: Charme — méthodes de manipulation des autres par le charisme naturel et le magnétisme.
+AC2D20.Tooltips.Focus.climbing: Escalade — couvre l'escalade des surfaces comme les murs ou les falaises ainsi que l'alpinisme.
+AC2D20.Tooltips.Focus.close-quarters: Combat rapproché — couvre l'utilisation des fusils à pompe et des mitrailleuses, et des armes similaires conçues pour être utilisées au combat rapproché ou dans des lieux exigus comme des tranchées ou des bâtiments.
+AC2D20.Tooltips.Focus.combat-engineering: Génie de combat — couvre le travail accompli pour soutenir ou empêcher les mouvements de troupes, y compris la construction et la démolition de routes, de tranchées, de fortifications et d’autres infrastructures militaires.
+AC2D20.Tooltips.Focus.covert-operations: Opérations Secrètes — consiste à organiser une équipe pour opérer tranquillement et efficacement derrière les lignes ennemies.
+AC2D20.Tooltips.Focus.cryptography: Cryptographie — couvre la connaissance des codes et des chiffres, à la fois comment les créer et comment les briser.
+AC2D20.Tooltips.Focus.deceive: Tromper — des méthodes pour manipuler les autres pour croire quelque chose qui est faux.
+AC2D20.Tooltips.Focus.discipline: Discipline — représente la rigueur d'esprit et le contrôle de soi du personnage, et sa capacité à résister et à se remettre de la confusion et de la peur ou des effets surnaturels qui affectent l'esprit.
+AC2D20.Tooltips.Focus.disguise: Déguisement — couvre l’utilisation du maquillage, des vêtements, des accessoires et du langage corporel approprié pour prendre l’apparence d’une autre personne.
 AC2D20.Tooltips.Focus.electronics: Electronics — covers an understanding of how electronic devices work, how they are assembled, what can go wrong with them, and how to construct, modify, and repair them. Electronics known as “radio electronics” is a relatively new development in World War II, with technologies like radar, sonar, communications and even the first tentative steps into computing, developing significantly as the war progresses.
 AC2D20.Tooltips.Focus.exotic: Exotic — covers weird or experimental weaponry and the ability to figure out how an unfamiliar weapon should be operated without risk.
 AC2D20.Tooltips.Focus.explosives: Explosives — covers an understanding of explosive substances and the purposes they are most suited for, as well as a knowledge of how to employ them effectively, including how to create and defuse bombs and mines.
