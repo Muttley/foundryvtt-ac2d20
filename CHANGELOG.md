@@ -1,3 +1,13 @@
+## v11.5.3
+
+### Bugfix
+- [#101] Dice So Nice not rolling the dice when using Skills, etc
+
+### Chores
+- [#100] Merge new French translation updates from Crowdin
+
+---
+
 ## v11.5.2
 
 ### Bugfix

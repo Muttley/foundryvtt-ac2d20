@@ -2,7 +2,7 @@
 	"id": "ac2d20",
 	"title": "Achtung! Cthulhu 2d20",
 	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
-	"version": "11.5.2",
+	"version": "11.5.3",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "12"
@@ -12,10 +12,11 @@
 			"name": "Paul Maskelyne",
 			"discord": "Muttley#3296",
 			"email": "mu77ley@gmail.com",
-			"mastodon": "@muttley@dice.camp"
+			"flags": {}
 		},
 		{
-			"name": "HappySteve"
+			"name": "HappySteve",
+			"flags": {}
 		}
 	],
 	"esmodules": [
@@ -31,8 +32,11 @@
 			"system": "ac2d20",
 			"path": "packs/system_documentation",
 			"type": "JournalEntry",
-			"private": false,
-			"flags": {}
+			"flags": {},
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			}
 		},
 		{
 			"name": "macros",
@@ -40,8 +44,11 @@
 			"system": "ac2d20",
 			"path": "packs/macros",
 			"type": "Macro",
-			"private": false,
-			"flags": {}
+			"flags": {},
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			}
 		},
 		{
 			"name": "skills",
@@ -49,8 +56,11 @@
 			"system": "ac2d20",
 			"path": "packs/skills",
 			"type": "Item",
-			"private": false,
-			"flags": {}
+			"flags": {},
+			"ownership": {
+				"PLAYER": "OBSERVER",
+				"ASSISTANT": "OWNER"
+			}
 		}
 	],
 	"packFolders": [
@@ -62,7 +72,8 @@
 				"macros",
 				"skills",
 				"system_documentation"
-			]
+			],
+			"folders": []
 		}
 	],
 	"languages": [
@@ -95,6 +106,5 @@
 	"url": "https://github.com/Muttley/foundryvtt-ac2d20",
 	"manifest": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/system.json",
 	"download": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/ac2d20.zip",
-	"background": "systems/ac2d20/assets/artwork/AchtungCthulhu_WallPaper2023_1920x1080_TheVillageofStSulac.jpg",
-	"initiative": null
+	"background": "systems/ac2d20/assets/artwork/AchtungCthulhu_WallPaper2023_1920x1080_TheVillageofStSulac.jpg"
 }
