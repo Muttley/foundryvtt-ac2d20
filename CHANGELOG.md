@@ -1,3 +1,23 @@
+## v11.6.0
+
+### Enhancement
+- [#104] Added Experimental weapon quality
+
+### Bugfix
+- [#103] Ensure custom Dice So Nice theme dice values are readable
+
+---
+
+## v11.5.3
+
+### Bugfix
+- [#101] Dice So Nice not rolling the dice when using Skills, etc
+
+### Chores
+- [#100] Merge new French translation updates from Crowdin
+
+---
+
 ## v11.5.2
 
 ### Bugfix
