@@ -396,6 +396,7 @@ AC2D20.Tooltips.WeaponQuality.close_quarters: L'arme est compacte et facile à m
 AC2D20.Tooltips.WeaponQuality.cumbersome: L'arme est lourde et maladroite à porter contre de petites cibles comme l'infanterie. Lors d'une attaque avec cette arme, augmente la difficulté de l'attaque de +1, si la cible est de taille humaine ou plus petite.
 AC2D20.Tooltips.WeaponQuality.debilitating: La difficulté de n'importe quel test de compétence pour traiter les blessures physiques de cette arme est augmentée de +1.
 AC2D20.Tooltips.WeaponQuality.escalation: Entrer dans une scène avec l'arme génère 1 Menace.
+AC2D20.Tooltips.WeaponQuality.experimental: Tests with this item increase their complication range by 2. In addition, for every 2 Momentum generated on a test with this item, you also generate 1 Threat.
 AC2D20.Tooltips.WeaponQuality.giant_killer: La puissance destructrice de l’arme est gaspillée sur des cibles faibles ou molles, mais plus la cible est grande, plus la létalité de l’arme est grande. Lorsque vous lancez des dégâts pour une arme de cette qualité, ajoutez +X@s aux dégâts de l'arme, où X est la taille de la cible. Une arme ne peut pas obtenir plus de dés supplémentaires de cette qualité que ses dégâts de base, une arme dont les dégâts de base sont de 6@s ne peut pas gagner plus de +6@s à partir de cette qualité.
 AC2D20.Tooltips.WeaponQuality.heavy: Les attaques avec cette arme augmentent la difficulté de +2 à moins que l'arme n'ait été mise en place (bloquée contre le sol ou l'objet solide, ou monté sur un trépied). La mise en place d'une arme lourde nécessite la préparation d'une action mineure.
 AC2D20.Tooltips.WeaponQuality.hidden: Quand l'arme est cachée, elle ne peut pas être détectée par ceux qui regardent simplement le personnage, et n'importe quel test de compétence pour rechercher l'arme augmente de 1 en difficulté.
@@ -453,6 +454,7 @@ AC2D20.WEAPONS.weaponQuality.close_quarters: Combat rapproché
 AC2D20.WEAPONS.weaponQuality.cumbersome: Encombrant
 AC2D20.WEAPONS.weaponQuality.debilitating: Invalidant
 AC2D20.WEAPONS.weaponQuality.escalation: Intensification
+AC2D20.WEAPONS.weaponQuality.experimental: Experimental
 AC2D20.WEAPONS.weaponQuality.giant_killer: Tueur de géants
 AC2D20.WEAPONS.weaponQuality.heavy: Lourd
 AC2D20.WEAPONS.weaponQuality.hidden: Caché
