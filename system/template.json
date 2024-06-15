@@ -355,6 +355,9 @@
 				"escalation": {
 					"value": false
 				},
+				"experimental": {
+					"value": false
+				},
 				"giant_killer": {
 					"value": false
 				},

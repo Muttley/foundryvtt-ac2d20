@@ -9,10 +9,11 @@ export function diceSoNiceReadyHook(dice3d) {
 			name: "ac2d20",
 			description: "Achtung Cthulhu 2d20",
 			category: "Colors",
-			foreground: "#000000",
+			foreground: "#c3ae5c",
 			background: "#000000",
 			outline: "#000000",
 			texture: "none",
+			font: "Germania One",
 		}
 	);
 

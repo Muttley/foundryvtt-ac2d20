@@ -1,3 +1,13 @@
+## v11.6.0
+
+### Enhancement
+- [#104] Added Experimental weapon quality
+
+### Bugfix
+- [#103] Ensure custom Dice So Nice theme dice values are readable
+
+---
+
 ## v11.5.3
 
 ### Bugfix

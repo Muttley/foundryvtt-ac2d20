@@ -396,6 +396,7 @@ AC2D20.Tooltips.WeaponQuality.close_quarters: The weapon is compact and easy to 
 AC2D20.Tooltips.WeaponQuality.cumbersome: The weapon is heavy and awkward to bring to bear against small targets like infantry. When making an attack with this weapon, increase the difficulty of the attack by +1, if the target is human-sized or smaller.
 AC2D20.Tooltips.WeaponQuality.debilitating: The difficulty of any skill test to treat the physical injuries of this weapon is increased by +1.
 AC2D20.Tooltips.WeaponQuality.escalation: Entering a scene with the weapon generates 1 Threat.
+AC2D20.Tooltips.WeaponQuality.experimental: Tests with this item increase their complication range by 2. In addition, for every 2 Momentum generated on a test with this item, you also generate 1 Threat.
 AC2D20.Tooltips.WeaponQuality.giant_killer: The weapon’s destructive power is wasted on small or soft targets, but the bigger the target, the more of the weapon’s lethality is unleashed. When rolling damage for a weapon with this quality, add +X@s to the weapon’s damage where X is the target’s Scale. A weapon may not gain more additional dice from this quality than its base damage — a weapon with a base damage of 6@s cannot gain more than +6@s from it.
 AC2D20.Tooltips.WeaponQuality.heavy: Attacks with this weapon increase in difficulty by +2 unless the weapon has been set up (braced against the ground or solid object, or mounted on a bipod or tripod). Setting up a heavy weapon requires the Prepare minor action.
 AC2D20.Tooltips.WeaponQuality.hidden: When the weapon is hidden it cannot be detected by those simply looking at the character, and any skill test to search for the weapon increases in difficulty by 1.
@@ -453,6 +454,7 @@ AC2D20.WEAPONS.weaponQuality.close_quarters: Close Quarters
 AC2D20.WEAPONS.weaponQuality.cumbersome: Cumbersome
 AC2D20.WEAPONS.weaponQuality.debilitating: Debilitating
 AC2D20.WEAPONS.weaponQuality.escalation: Escalation
+AC2D20.WEAPONS.weaponQuality.experimental: Experimental
 AC2D20.WEAPONS.weaponQuality.giant_killer: Giant-Killer
 AC2D20.WEAPONS.weaponQuality.heavy: Heavy
 AC2D20.WEAPONS.weaponQuality.hidden: Hidden

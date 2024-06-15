@@ -64,6 +64,7 @@ AC2D20.WEAPON_QUALITIES = {
 	cumbersome: "AC2D20.WEAPONS.weaponQuality.cumbersome",
 	debilitating: "AC2D20.WEAPONS.weaponQuality.debilitating",
 	escalation: "AC2D20.WEAPONS.weaponQuality.escalation",
+	experimental: "AC2D20.WEAPONS.weaponQuality.experimental",
 	giant_killer: "AC2D20.WEAPONS.weaponQuality.giant_killer",
 	heavy: "AC2D20.WEAPONS.weaponQuality.heavy",
 	hidden: "AC2D20.WEAPONS.weaponQuality.hidden",
