@@ -96,6 +96,12 @@
 			"flags": {}
 		},
 		{
+			"lang": "pl",
+			"name": "Polski",
+			"path": "i18n/pl.json",
+			"flags": {}
+		},
+		{
 			"lang": "pt-BR",
 			"name": "Português (Brasil)",
 			"path": "i18n/pt_BR.json",
