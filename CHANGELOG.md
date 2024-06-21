@@ -1,3 +1,10 @@
+## v11.6.1
+
+### Bugfix
+- [#110] Adding Truth to NPC or Vehicle record in a Compendium Throws error
+
+---
+
 ## v11.6.0
 
 ### Enhancement

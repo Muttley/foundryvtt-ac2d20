@@ -5,9 +5,9 @@ export default class DialogEditTruth extends Dialog {
 	}
 
 
-	static async createDialog({actorId, index = -1, truth = ""}) {
+	static async createDialog({actorUuid, index = -1, truth = ""}) {
 		let dialogData = {
-			actorId,
+			actorUuid,
 			truth,
 			index,
 		};
@@ -32,8 +32,8 @@ export default class DialogEditTruth extends Dialog {
 				edit: {
 					icon: '<i class="fas fa-floppy-disk"></i>',
 					label,
-					callback: html => {
-						const actorId = html.find(".actorId").val() ?? "";
+					callback: async html => {
+						const actorUuid = html.find(".actorUuid").val() ?? "";
 						const index = parseInt(html.find(".index").val()) ?? -1;
 
 						let truth = html.find(".truth").val();
@@ -43,8 +43,11 @@ export default class DialogEditTruth extends Dialog {
 
 						if (truth === "") return; // do nothing
 
-						const actor = game.actors.get(actorId);
-						const currentTruths = foundry.utils.duplicate(actor.system.truths) ?? [];
+						const actor = await fromUuid(actorUuid);
+
+						const currentTruths = foundry.utils.duplicate(
+							actor.system.truths
+						) ?? [];
 
 						if (index < 0) {
 							// Append new truth
