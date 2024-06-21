@@ -19,12 +19,12 @@ AC2D20.Combat.CombatEndMomentumPoolDecremented: Pula impetu zmniejszona na konie
 AC2D20.Combat.CombatHasNotStarted: Walka się nie rozpoczęła
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: Pula impetu została zmniejszona w momencie rozpoczęcia nowej tury
 AC2D20.Combat.ToggleCombatantsTurnDone: Zakończ turę
-AC2D20.Dialog.NumberOfDice: Ilość kości 
+AC2D20.Dialog.NumberOfDice: Ilość kości
 AC2D20.EffectCreate: Utwórz Efekt
 AC2D20.EffectDelete: Usuń Efekt
 AC2D20.EffectEdit: Edycja Efektu
 AC2D20.EFFECTS.Inactive: Efekt Nieaktywny
-AC2D20.EFFECTS.Passive: Efekty Pasywne 
+AC2D20.EFFECTS.Passive: Efekty Pasywne
 AC2D20.EFFECTS.Temporary: Efekty Tymczasowe
 AC2D20.EffectToggle: Przełącz efekt
 AC2D20.equipped: Wyposażony
@@ -117,7 +117,7 @@ AC2D20.RESISTANCE.fatigue: Zmęczenie
 AC2D20.RESISTANCE.resistance: Ochrona
 AC2D20.SETTINGS.compendiumHint: Za każdym razem gdy zostanie utworzona nowa postać, będzie posiadać ten zestaw umiejętności.
 AC2D20.SETTINGS.compendiumName: Kompendium Umiejętności
-AC2D20.SETTINGS.ctHint: Jeżeli opcja śledzenia walki jest uruchomiona to pula impetu będzie zmniejszena na początku tury walki oraz kiedy walka się zakończy. 
+AC2D20.SETTINGS.ctHint: Jeżeli opcja śledzenia walki jest uruchomiona to pula impetu będzie zmniejszena na początku tury walki oraz kiedy walka się zakończy.
 AC2D20.SETTINGS.ctName: Czy śledzenie walki ma aktualizować pule impetu?
 AC2D20.SETTINGS.debugEnabled.hint: Włącz lub wyłacz dodatkowe funkcje debugowania
 AC2D20.SETTINGS.debugEnabled.label: Aktywne/Nieaktywne debugowanie
@@ -200,7 +200,7 @@ AC2D20.TEMPLATES.Encumbrance_Level: Poziom przeciążenia
 AC2D20.TEMPLATES.Encumbrance: Udźwig
 AC2D20.TEMPLATES.ENG: PL
 AC2D20.TEMPLATES.equipped: Wyposażony
-AC2D20.TEMPLATES.Experience: Doświadczenie 
+AC2D20.TEMPLATES.Experience: Doświadczenie
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: Ulubione bronie
 AC2D20.TEMPLATES.FIRE_RATE: Szybkostrzelność
 AC2D20.TEMPLATES.Focus: Biegłość
@@ -373,7 +373,7 @@ AC2D20.Tooltips.Focus.urban-stealth: Krycie się w mieście — obejmuje różne
 AC2D20.Tooltips.Focus.watercraft: Jednostki pływające — obejmuje obsługę cywilnych i wojskowych łodzi, okrętów podwodnych, a także statków oraz okrętów nawodnych.
 AC2D20.Tooltips.Skill.academia: Ta umiejętność obejmuje wykształcenie bohatera oraz zdobytą przez niego wiedzę, a także zdolność do zgłębiania nieznanych zagadnień. Wykształcenie jest przydatne, aby przyswajać nowe informacje lub przypomnieć sobie fakty na dany temat.
 AC2D20.Tooltips.Skill.athletics: Atletyka określa kondycję fizyczną bohatera i jego zdolności wyczynowe. Odpowiada również za szybkie poruszanie się.
-AC2D20.Tooltips.Skill.engineering: To wiedza twojego bohatera z zakresu techniki i mechaniki oraz umiejętność zastosowania jej w praktyce. Obejmuje Projektowanie, konstruowanie i naprawę urządzeń,maszyn i różnych struktur, obsługę skomplikowanego nie przetestowanego wyposażenia oraz umiejętność wyłączenia lub zniszczenia nieznanych maszyn. Inżynieria i Pojazdy do pewnego stopnia się pokrywają, lecz ta pierwsza skupia się bardziej na mechanice pojazdu.
+AC2D20.Tooltips.Skill.engineering: "To wiedza twojego bohatera z zakresu techniki i mechaniki oraz umiejętność zastosowania jej w praktyce. Obejmuje Projektowanie, konstruowanie i naprawę urządzeń,maszyn i różnych struktur, obsługę skomplikowanego nie przetestowanego wyposażenia oraz umiejętność wyłączenia lub zniszczenia nieznanych maszyn. Inżynieria i Pojazdy do pewnego stopnia się pokrywają, lecz ta pierwsza skupia się bardziej na mechanice pojazdu."
 AC2D20.Tooltips.Skill.fighting: Umiejętność ta odzwierciedla zdolność bohatera do podejmowania walki oraz obrony przed atakami. To połączenie wyuczonych technik, uwarunkowania oraz instynktu. Używa się jej do wykonywania ataków, a także do oceny zagrożeń. Obejmuje Praktyczną wiedzę na temat uzbrojenia i stylów walki.
 AC2D20.Tooltips.Skill.medicine: Ta umiejętność obejmuje leczenie urazów fizycznych i psychicznych, wiedzę z zakresu trucizn i sposobów ich neutralizowania oraz metody zwalczania chorób. Używa się jej również podczas przeprowadzania sekcji zwłok i ustalania przyczyn śmierci.
 AC2D20.Tooltips.Skill.observation: Ta umiejętność odzwierciedla czujność twojego bohatera oraz zdolność do pozyskiwania informacji z otoczenia. Jest Wyznacznikiem zmysłu obserwacji i uważności oraz wpływa na szybkość, z jaką postać potrafi zauważyć i wykorzystać istotne szczegóły. Pomaga również w ignorowaniu czynników rozpraszających uwagę.Obserwacja pokrywa się często z innymi umiejętnościami,zwłaszcza z Wykształceniem, ponieważ obie służą do pozyskiwania informacji, aczkolwiek różnią się metodą.
@@ -396,10 +396,11 @@ AC2D20.Tooltips.WeaponQuality.close_quarters: Broń ma niewielkie rozmiary i nad
 AC2D20.Tooltips.WeaponQuality.cumbersome: Broń jest ciężka i niewygodna w użyciu przeciwko niewielkim celom, takim jak żołnierze piechoty. Jeśli atakowany tą bronią cel jest wielkości człowieka lub mniejszy, zwiększ trudność ataku o +1.
 AC2D20.Tooltips.WeaponQuality.debilitating: Trudność każdego testu umiejętności na leczenie urazu fizycznego spowodowanego atakiem tą bronią zwiększa się o +1.
 AC2D20.Tooltips.WeaponQuality.escalation: Gdy w scenie pojawia się ktoś trzymający tę broń, pula Zagrożenia zwiększa się o 1 punkt.
+AC2D20.Tooltips.WeaponQuality.experimental: Tests with this item increase their complication range by 2. In addition, for every 2 Momentum generated on a test with this item, you also generate 1 Threat.
 AC2D20.Tooltips.WeaponQuality.giant_killer: Niszczycielski potencjał tej broni marnuje się przeciwko niewielkim lub słabym celom,lecz im są one większe, tym bardziej śmiercionośna się staje. Wykonując rzut na obrażenia zadawane przez broń z tą cechą, uwzględnij współczynnik +X@s , gdzie X Oznacza Rozmiar celu. Te dodatkowe obrażenia nie mogą przekroczyć podstawowych obrażeń broni – na przykład,jeśli bazowo wynoszą one 6@s , to nie da się uzyskać wyższej premii niż +6@s .
 AC2D20.Tooltips.WeaponQuality.heavy: Jeśli broń ta nie została rozstawiona (ustawiona na ziemi lub oparta o solidną powierzchnię albo zamontowana na dwójnogu lub trójnogu), trudność ataków zwiększa się o +2. Rozstawienie ciężkiej broni wymaga akcji pomniejszej przygotowanie.
 AC2D20.Tooltips.WeaponQuality.hidden: Gdy broń jest ukryta, nie da się jej zauważyć,jedynie patrząc na bohatera. Trudność każdego testu na przeszukanie celem jej znalezienia wzrasta o +1.
-AC2D20.Tooltips.WeaponQuality.hunger: Jeśli użycie broni wywoła 1 lub więcej urazów,atakująca postać na resztę sceny zdobywa jedną z następujących korzyści - leczy 5 punktów stresu; leczy uraz; zyskuje +1@s mocy (z premii do mocy można skorzystać tylko raz na scenę).
+AC2D20.Tooltips.WeaponQuality.hunger: "Jeśli użycie broni wywoła 1 lub więcej urazów,atakująca postać na resztę sceny zdobywa jedną z następujących korzyści - leczy 5 punktów stresu; leczy uraz; zyskuje +1@s mocy (z premii do mocy można skorzystać tylko raz na scenę)."
 AC2D20.Tooltips.WeaponQuality.inaccurate: W przypadku użycia tej broni nie obowiązują korzyści wynikające z akcji pomniejszej celowanie.
 AC2D20.Tooltips.WeaponQuality.indirect: Broń nie jest przeznaczona do prowadzenia bezpośredniego ognia i służy raczej do wystrzeliwania ładunków na ogromną odległość. Trudność ataków przy użyciu tej broni zwiększa się o +1, lecz nie musisz widzieć celu.
 AC2D20.Tooltips.WeaponQuality.munition: Amunicja do tej broni jest wyjątkowo duża. Gdy atakujesz bronią z tą cechą, musisz zużyć 1 jednostkę amunicji i nie możesz zaatakować serią.
@@ -453,6 +454,7 @@ AC2D20.WEAPONS.weaponQuality.close_quarters: Zwarcie
 AC2D20.WEAPONS.weaponQuality.cumbersome: Nieporęczna
 AC2D20.WEAPONS.weaponQuality.debilitating: Wyniszczająca
 AC2D20.WEAPONS.weaponQuality.escalation: Eskalująca
+AC2D20.WEAPONS.weaponQuality.experimental: Experimental
 AC2D20.WEAPONS.weaponQuality.giant_killer: Zabójca olbrzymów
 AC2D20.WEAPONS.weaponQuality.heavy: Ciężka
 AC2D20.WEAPONS.weaponQuality.hidden: Ukryta
