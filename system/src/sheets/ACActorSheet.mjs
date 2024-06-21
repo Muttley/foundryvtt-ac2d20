@@ -747,9 +747,9 @@ export default class ACActorSheet extends ActorSheet {
 
 	async _onTruthCreate(event) {
 		event.preventDefault();
-		const actorId = this.actor._id;
+		const actorUuid = this.actor.uuid;
 
-		ac2d20.dialogs.DialogEditTruth.createDialog({actorId});
+		ac2d20.dialogs.DialogEditTruth.createDialog({actorUuid});
 	}
 
 	async _onTruthDelete(data) {
