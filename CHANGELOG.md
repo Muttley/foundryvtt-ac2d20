@@ -1,3 +1,18 @@
+## v11.6.1
+
+### Enhancement
+- [#109] Add support for the Polish language
+
+### Bugfix
+- [#110] Adding Truth to NPC or Vehicle record in a Compendium Throws error
+
+### Chores
+- [#108] Merge new French and Polish translation updates from Crowdin
+
+*Many thanks to **Kazek360** for contributing the Polish language translations*
+
+---
+
 ## v11.6.0
 
 ### Enhancement
