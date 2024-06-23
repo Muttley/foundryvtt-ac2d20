@@ -14,7 +14,11 @@
 		</div>
 		{{#if item}}
 			<p class="font-size-11">
-				Effects: {{{listDamageEffects item.system.effect}}}
+				{{#ifCond item.type "===" "spell"}}
+					{{localize "AC2D20.TEMPLATES.Effects"}}: {{itemEffects}}
+				{{else}}
+					{{localize "AC2D20.TEMPLATES.Effects"}}: {{{listDamageEffects item.system.effect}}}
+				{{/ifCond}}
 			</p>
 		{{/if}}
 		<div class="dices-result" style="display: flex; flex-wrap: wrap;">
