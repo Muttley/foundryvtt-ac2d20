@@ -342,6 +342,7 @@ export default class Roller2D20 {
 		).effect;
 
 		let item;
+		let itemEffects;
 		if (itemId && actorId) {
 			item = game.actors.get(actorId)?.items.get(itemId) ?? null;
 
@@ -351,6 +352,7 @@ export default class Roller2D20 {
 		}
 
 		let rollData = {
+			itemEffects,
 			damage,
 			effects,
 			item,

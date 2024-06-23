@@ -1,9 +1,19 @@
+## v11.6.2
+
+### Bugfix
+- [#114] Spell cost roll not displaying result in chat
+
+### Chores
+- [#113] Merge new Polish translation updates from Crowdin
+
+---
+
 ## v11.6.1
 
 ### Enhancement
 - [#109] Add support for the Polish language
 
-### Bugfix
+### Bugfixq
 - [#110] Adding Truth to NPC or Vehicle record in a Compendium Throws error
 
 ### Chores

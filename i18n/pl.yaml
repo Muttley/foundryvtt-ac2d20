@@ -79,7 +79,7 @@ AC2D20.FOCUS.Occultism: Okultyzm
 AC2D20.FOCUS.Orienteering: Orientacja w terenie
 AC2D20.FOCUS.Pharmacology: Farmakologia
 AC2D20.FOCUS.Physical Training: Trening fizyczny
-AC2D20.FOCUS.Psychiatry: Psychiatry
+AC2D20.FOCUS.Psychiatry: Psychiatria
 AC2D20.FOCUS.Rhetoric: Retoryka
 AC2D20.FOCUS.Rifles: Karabiny
 AC2D20.FOCUS.Running: Bieganie
@@ -122,7 +122,7 @@ AC2D20.SETTINGS.ctName: Czy śledzenie walki ma aktualizować pule impetu?
 AC2D20.SETTINGS.debugEnabled.hint: Włącz lub wyłacz dodatkowe funkcje debugowania
 AC2D20.SETTINGS.debugEnabled.label: Aktywne/Nieaktywne debugowanie
 AC2D20.SETTINGS.hoverHint: Lokalizacja plików jsnon zawierających informacje o cechach i efektach obrażeń.
-AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
+AC2D20.SETTINGS.hoverName: Plik JSON kursora myszy
 AC2D20.SETTINGS.maxappHint: Opcja pozwala graczom na ustawienie Maksymalnego APP drużyny. Zastosowanie zmian wymaga odświeżenia strony po stronie graczy
 AC2D20.SETTINGS.maxappName: Gracze mogą ustawić maksymalne APP
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Wykonanie migracji danych systemowych w compendiach (nie modyfikuj tej opcji chyba że wiesz co robisz)
@@ -166,7 +166,7 @@ AC2D20.TEMPLATES.Attr: Atr.
 AC2D20.TEMPLATES.Attribute: Atrybut
 AC2D20.TEMPLATES.Attributes: Atrybuty
 AC2D20.TEMPLATES.Background: Przeszłość
-AC2D20.TEMPLATES.bonus: Bonus
+AC2D20.TEMPLATES.bonus: Premia
 AC2D20.TEMPLATES.Characteristic: Cecha Wyróżniająca
 AC2D20.TEMPLATES.Compl: Komp.
 AC2D20.TEMPLATES.Complications: Komplikacje
@@ -185,7 +185,7 @@ AC2D20.TEMPLATES.Default_Attribute: Domyślny atrybut
 AC2D20.TEMPLATES.DEFENSE: Ochrona
 AC2D20.TEMPLATES.Delete_Item: Usuń przedmiot
 AC2D20.TEMPLATES.Delete: Usuń
-AC2D20.TEMPLATES.DERIVED: DERIVED
+AC2D20.TEMPLATES.DERIVED: POCHODNE
 AC2D20.TEMPLATES.Description: Opis
 AC2D20.TEMPLATES.Diff: Trud.
 AC2D20.TEMPLATES.Difficulty: Trudność
@@ -215,7 +215,7 @@ AC2D20.TEMPLATES.INJURIES: Urazy
 AC2D20.TEMPLATES.Issue: problem
 AC2D20.TEMPLATES.Keywords: Słowo klucz
 AC2D20.TEMPLATES.Languages: Języki
-AC2D20.TEMPLATES.lbs: lbs
+AC2D20.TEMPLATES.lbs: funtów
 AC2D20.TEMPLATES.Learned: Wyuczone
 AC2D20.TEMPLATES.Luck: Szczęście
 AC2D20.TEMPLATES.majoritems: Duże przedmioty
@@ -232,7 +232,7 @@ AC2D20.TEMPLATES.Name: Nazwa
 AC2D20.TEMPLATES.Nationality: Narodowość
 AC2D20.TEMPLATES.PARTY_MOMENTUM: Impet zespołu
 AC2D20.TEMPLATES.Personal_Truth_Scars: Fakty I Blizny
-AC2D20.TEMPLATES.PHYS: PHYS
+AC2D20.TEMPLATES.PHYS: FIZYCZNE
 AC2D20.TEMPLATES.Points: Punkty
 AC2D20.TEMPLATES.POISON: Trucizna
 AC2D20.TEMPLATES.Power: Moc
@@ -276,7 +276,7 @@ AC2D20.TEMPLATES.Spells: Zaklęcia
 AC2D20.TEMPLATES.Status: Status
 AC2D20.TEMPLATES.Successes: Sukces
 AC2D20.TEMPLATES.Talents: Talenty
-AC2D20.TEMPLATES.TN: TN
+AC2D20.TEMPLATES.TN: CEL
 AC2D20.TEMPLATES.Total: Suma
 AC2D20.TEMPLATES.Truths: Prawdy
 AC2D20.TEMPLATES.Use_Agility: Użyj zręczności
@@ -396,7 +396,7 @@ AC2D20.Tooltips.WeaponQuality.close_quarters: Broń ma niewielkie rozmiary i nad
 AC2D20.Tooltips.WeaponQuality.cumbersome: Broń jest ciężka i niewygodna w użyciu przeciwko niewielkim celom, takim jak żołnierze piechoty. Jeśli atakowany tą bronią cel jest wielkości człowieka lub mniejszy, zwiększ trudność ataku o +1.
 AC2D20.Tooltips.WeaponQuality.debilitating: Trudność każdego testu umiejętności na leczenie urazu fizycznego spowodowanego atakiem tą bronią zwiększa się o +1.
 AC2D20.Tooltips.WeaponQuality.escalation: Gdy w scenie pojawia się ktoś trzymający tę broń, pula Zagrożenia zwiększa się o 1 punkt.
-AC2D20.Tooltips.WeaponQuality.experimental: Tests with this item increase their complication range by 2. In addition, for every 2 Momentum generated on a test with this item, you also generate 1 Threat.
+AC2D20.Tooltips.WeaponQuality.experimental: Testy z tym elementem zwiększają ich zakres komplikacji o 2. Co więcej, na każde 2 punkty Impetu wygenerowane podczas testu z tym przedmiotem, generujesz również 1 zagrożenie.
 AC2D20.Tooltips.WeaponQuality.giant_killer: Niszczycielski potencjał tej broni marnuje się przeciwko niewielkim lub słabym celom,lecz im są one większe, tym bardziej śmiercionośna się staje. Wykonując rzut na obrażenia zadawane przez broń z tą cechą, uwzględnij współczynnik +X@s , gdzie X Oznacza Rozmiar celu. Te dodatkowe obrażenia nie mogą przekroczyć podstawowych obrażeń broni – na przykład,jeśli bazowo wynoszą one 6@s , to nie da się uzyskać wyższej premii niż +6@s .
 AC2D20.Tooltips.WeaponQuality.heavy: Jeśli broń ta nie została rozstawiona (ustawiona na ziemi lub oparta o solidną powierzchnię albo zamontowana na dwójnogu lub trójnogu), trudność ataków zwiększa się o +2. Rozstawienie ciężkiej broni wymaga akcji pomniejszej przygotowanie.
 AC2D20.Tooltips.WeaponQuality.hidden: Gdy broń jest ukryta, nie da się jej zauważyć,jedynie patrząc na bohatera. Trudność każdego testu na przeszukanie celem jej znalezienia wzrasta o +1.
@@ -454,7 +454,7 @@ AC2D20.WEAPONS.weaponQuality.close_quarters: Zwarcie
 AC2D20.WEAPONS.weaponQuality.cumbersome: Nieporęczna
 AC2D20.WEAPONS.weaponQuality.debilitating: Wyniszczająca
 AC2D20.WEAPONS.weaponQuality.escalation: Eskalująca
-AC2D20.WEAPONS.weaponQuality.experimental: Experimental
+AC2D20.WEAPONS.weaponQuality.experimental: Eksperymentalna
 AC2D20.WEAPONS.weaponQuality.giant_killer: Zabójca olbrzymów
 AC2D20.WEAPONS.weaponQuality.heavy: Ciężka
 AC2D20.WEAPONS.weaponQuality.hidden: Ukryta
@@ -479,7 +479,7 @@ ACTOR.Vehicle.Cover: Osłona
 ACTOR.Vehicle.Impact: Uderzenie
 ACTOR.Vehicle.Passengers: Pasażerowie
 TYPES.Actor.character: Postać gracza
-TYPES.Actor.npc: NPC
+TYPES.Actor.npc: BN
 TYPES.Actor.vehicle: Pojazd
 TYPES.Item.armor: Pancerz
 TYPES.Item.equipment: Dobytek
