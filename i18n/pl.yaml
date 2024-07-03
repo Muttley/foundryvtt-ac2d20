@@ -254,13 +254,13 @@ AC2D20.TEMPLATES.ritual_steps: Tor postępu rytuału
 AC2D20.TEMPLATES.ritual_stress: Stres rytuału
 AC2D20.TEMPLATES.Ritual: Rytuał
 AC2D20.TEMPLATES.Roll_Formula: Formuła rzutu
-AC2D20.TEMPLATES.Salvo: Salwa
+AC2D20.TEMPLATES.Salvo: Seria
 AC2D20.TEMPLATES.SAVE: ZAPISZ
 AC2D20.TEMPLATES.scale: Skala
 AC2D20.TEMPLATES.Size: Wielkość
-AC2D20.TEMPLATES.SizeLevels.Major: Znaczący
+AC2D20.TEMPLATES.SizeLevels.Major: Duży
 AC2D20.TEMPLATES.SizeLevels.Minor: Mały
-AC2D20.TEMPLATES.SizeLevels.Trivial: Trywialny
+AC2D20.TEMPLATES.SizeLevels.Trivial: Drobny
 AC2D20.TEMPLATES.Skill_Focus: Fokus
 AC2D20.TEMPLATES.skill_focus: Umiejętność/Fokus
 AC2D20.TEMPLATES.Skill_Value: Poziom umiejętności
@@ -436,7 +436,7 @@ AC2D20.Warnings.OnEditOwnedItemActiveEffects: Zarządzanie aktywnymi efektami po
 AC2D20.WEAPONS.damageEffect.area: Obszarowe
 AC2D20.WEAPONS.damageEffect.backlash_x: Reperkusje
 AC2D20.WEAPONS.damageEffect.drain: Wyczerpanie
-AC2D20.WEAPONS.damageEffect.intense: Uporczywe
+AC2D20.WEAPONS.damageEffect.intense: Dotkliwe
 AC2D20.WEAPONS.damageEffect.persistent_x: Uporczywe
 AC2D20.WEAPONS.damageEffect.piercing_x: Przebicie
 AC2D20.WEAPONS.damageEffect.snare: Unieruchomienie
