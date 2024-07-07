@@ -2,7 +2,7 @@
 	"id": "ac2d20",
 	"title": "Achtung! Cthulhu 2d20",
 	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
-	"version": "11.6.2",
+	"version": "11.6.3",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "12"
@@ -78,6 +78,12 @@
 	],
 	"languages": [
 		{
+			"lang": "ca",
+			"name": "Català",
+			"path": "i18n/ca.json",
+			"flags": {}
+		},
+		{
 			"lang": "en",
 			"name": "English",
 			"path": "i18n/en.json",
@@ -87,12 +93,6 @@
 			"lang": "es",
 			"name": "Español",
 			"path": "i18n/es.json",
-			"flags": {}
-		},
-		{
-			"lang": "ca",
-			"name": "Català",
-			"path": "i18n/ca.json",
 			"flags": {}
 		},
 		{
