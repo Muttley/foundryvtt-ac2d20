@@ -1,0 +1,491 @@
+AC2D20.Ability.agi: Agilitat
+AC2D20.Ability.bra: Força
+AC2D20.Ability.coo: Coordinació
+AC2D20.Ability.ins: Perspicàcia
+AC2D20.Ability.rea: Raó
+AC2D20.Ability.wil: Voluntat
+AC2D20.AbilityAbbr.agi: agi
+AC2D20.AbilityAbbr.bra: for
+AC2D20.AbilityAbbr.coo: coo
+AC2D20.AbilityAbbr.ins: pers
+AC2D20.AbilityAbbr.rea: rao
+AC2D20.AbilityAbbr.wil: vol
+AC2D20.ARMOR.qualities.heavy: Pesada
+AC2D20.ARMOR.qualities.shield: Escut
+AC2D20.ARMOR.qualities.uncomfortable: Incòmode
+AC2D20.Combat.CombatantsTurnDone: Torn acabadat
+AC2D20.Combat.CombatantsTurnNotDone: Torn no acabat
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva d'inèrcia reduïda al final del combat
+AC2D20.Combat.CombatHasNotStarted: Combat no iniciat
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva d'inèrcia reduïda a l'inici d'un nou assalt
+AC2D20.Combat.ToggleCombatantsTurnDone: Conmutar torn finalitzat
+AC2D20.Dialog.NumberOfDice: Nombre de daus
+AC2D20.EffectCreate: Crear efecte
+AC2D20.EffectDelete: Esborrar efecte
+AC2D20.EffectEdit: Editar efecte
+AC2D20.EFFECTS.Inactive: Efectes inactius
+AC2D20.EFFECTS.Passive: Efectes passius
+AC2D20.EFFECTS.Temporary: Efectes temporals
+AC2D20.EffectToggle: Conmutar efecte
+AC2D20.equipped: Equipat
+AC2D20.Error.NumberOfDiceMustBeNonZero: El nombre de daus introduït ha de ser un valor enter superior a zero.
+AC2D20.FOCUS.Air Force: Aèries
+AC2D20.FOCUS.Aircraft: Avions
+AC2D20.FOCUS.Animal Handling: Cures d'animals
+AC2D20.FOCUS.Architecture: Arquitectura
+AC2D20.FOCUS.Army: Terrestres
+AC2D20.FOCUS.Art: Art
+AC2D20.FOCUS.Camouflage: Camuflatge
+AC2D20.FOCUS.Cars: Cotxes
+AC2D20.FOCUS.Charm: Encant
+AC2D20.FOCUS.Climbing: Escalar
+AC2D20.FOCUS.Close Quarters: Combat en espais confinats
+AC2D20.FOCUS.Combat Engineering: Enginyeria de combat
+AC2D20.FOCUS.Covert Operations: Operacions encobertes
+AC2D20.FOCUS.Cryptography: Criptografia
+AC2D20.FOCUS.Deceive: Engany
+AC2D20.FOCUS.Discipline: Disciplina
+AC2D20.FOCUS.Disguise: Disfressa
+AC2D20.FOCUS.Electronics: Electrònica
+AC2D20.FOCUS.Exotic: Exòtiques
+AC2D20.FOCUS.Explosives: Explosius
+AC2D20.FOCUS.Finance: Finances
+AC2D20.FOCUS.First Aid: Primers auxilis
+AC2D20.FOCUS.Foraging: Recol·lecció
+AC2D20.FOCUS.Fortitude: Resistència
+AC2D20.FOCUS.Hand-to-Hand: Cos a cos
+AC2D20.FOCUS.Handguns: Pistoles
+AC2D20.FOCUS.Hearing: Oïda
+AC2D20.FOCUS.Heavy Vehicles: Vehicles pesants
+AC2D20.FOCUS.Heavy Weapons: Armes pesants
+AC2D20.FOCUS.History: Història
+AC2D20.FOCUS.Hunting: Caça
+AC2D20.FOCUS.Immunity: Immunitat
+AC2D20.FOCUS.Infectious Diseases: Malalties infeccioses
+AC2D20.FOCUS.Innuendo: Insinuació
+AC2D20.FOCUS.Instincts: Instint
+AC2D20.FOCUS.Intimidation: Intimidació
+AC2D20.FOCUS.Invocation: Invocació
+AC2D20.FOCUS.Leadership: Lideratge
+AC2D20.FOCUS.Lifting: Aixecar
+AC2D20.FOCUS.Linguistics: Lingüística
+AC2D20.FOCUS.Mechanical Engineering: Enginyeria mecànica
+AC2D20.FOCUS.Melee Weapons: Armes C/C
+AC2D20.FOCUS.Motorcycles: Motocicletes
+AC2D20.FOCUS.Mysticism: Misticisme
+AC2D20.FOCUS.Navy: Navals
+AC2D20.FOCUS.Negotiation: Negociació
+AC2D20.FOCUS.Occultism: Esoterisme
+AC2D20.FOCUS.Orienteering: Orientació
+AC2D20.FOCUS.Pharmacology: Farmacologia
+AC2D20.FOCUS.Physical Training: Entrenament físic
+AC2D20.FOCUS.Psychiatry: Psiquiatria
+AC2D20.FOCUS.Rhetoric: Retòrica
+AC2D20.FOCUS.Rifles: Rifles
+AC2D20.FOCUS.Running: Córrer
+AC2D20.FOCUS.Rural Stealth: Furtivitat rural
+AC2D20.FOCUS.Science: Ciència
+AC2D20.FOCUS.Sight: Vista
+AC2D20.FOCUS.Smell and Taste: Gust i olfacte
+AC2D20.FOCUS.Surgery: Cirurgia
+AC2D20.FOCUS.Swimming: Nedar
+AC2D20.FOCUS.Tanks: Tancs
+AC2D20.FOCUS.Technical Projects: Projectes tècnics
+AC2D20.FOCUS.Threat Awareness: Detecció d'amenaces
+AC2D20.FOCUS.Throwing: Llençar
+AC2D20.FOCUS.Toxicology: Toxicologia
+AC2D20.FOCUS.Tracking: Rastres
+AC2D20.FOCUS.Urban Stealth: Furtivitat urbana
+AC2D20.FOCUS.Watercraft: Embarcacions
+AC2D20.INJURIES.mental: Mental
+AC2D20.INJURIES.nottreated: Sense tractar
+AC2D20.INJURIES.physical: Física
+AC2D20.INJURIES.treated: Tractada
+AC2D20.MIGRATION.begin_migration: Realitzant millora de dades per Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.begin_schema: Aplicant actualitzacions per esquema v{version} d'Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.completed_migration: Completa millora de dades per Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.completed_schema: Completes les actualitzacions de l'esquema v{version} d'Achtung! Cthulhu 2d20
+AC2D20.OTHER: Altres
+AC2D20.RANGE.close: Proper
+AC2D20.RANGE.extreme: Màxim
+AC2D20.RANGE.long: Llunyà
+AC2D20.RANGE.medium: Mitjà
+AC2D20.RANGE.reach: Contacte
+AC2D20.RESISTANCE.armor: Blindatge
+AC2D20.RESISTANCE.courage: Coratge
+AC2D20.RESISTANCE.fatigue: Fatiga
+AC2D20.RESISTANCE.resistance: Resistència
+AC2D20.SETTINGS.compendiumHint: Quan es crea un nou personatge inclourà les habilitats contingudes en aquest compendi.
+AC2D20.SETTINGS.compendiumName: Compendi d'habilitats
+AC2D20.SETTINGS.ctHint: Si s'activa, l'assistent de combat reduirà la reserva d'inèrcia quan comenci un nou assalt, o quan el combat finalitzi.
+AC2D20.SETTINGS.ctName: Assistent de combat actualitza la inèrcia
+AC2D20.SETTINGS.debugEnabled.hint: Habilitar característiques addicionals de depuració
+AC2D20.SETTINGS.debugEnabled.label: Habilitar/deshabilitar depuració
+AC2D20.SETTINGS.hoverHint: Localització del fitxer JSON que conté les descripcions de qualitats i efectes de dany que apareixen en passar el ratolí per sobre dels objectes.
+AC2D20.SETTINGS.hoverName: Fitxer JSON de descripcions
+AC2D20.SETTINGS.maxappHint: Permet que els jugadors ajustin el màx PA del grup. Necessita que els jugadors recarreguin el programa.
+AC2D20.SETTINGS.maxappName: Jugadors poden ajustar Màx PA
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Realitza la migració de dades en aquesta versió dels compendis del sistema (no toqui això si no sap què està fent)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar compendis del sistema
+AC2D20.SETTINGS.showmomentumHint: Mostra la finestra de l'amenaça del GM a tots els jugadors. Necessita que els jugadors recarreguin el programa.
+AC2D20.SETTINGS.showmomentumName: Mostrar amenaça del GM als jugadors
+AC2D20.SETTINGS.systemVersion.hint: Registra la versió actual del sistema Achtung! Cthulhu 2d20 (no tocar a menys que sàpiga què està fent)
+AC2D20.SETTINGS.systemVersion.label: Versió del sistema
+AC2D20.SETTINGS.worldSchemaVersion.hint: Registra la versió actual de l'esquema de dades del sistema Achtung! Cthulhu 2d20 (no tocar a menys que sàpiga què està fent)
+AC2D20.SETTINGS.worldSchemaVersion.label: Versió de l'esquema de dades
+AC2D20.SKILL.ACADEMIA: Acadèmia
+AC2D20.SKILL.ATHLETICS: Atletisme
+AC2D20.SKILL.ENGINEERING: Enginyeria
+AC2D20.SKILL.FIGHTING: Combat
+AC2D20.SKILL.MEDICINE: Medicina
+AC2D20.SKILL.OBSERVATION: Observació
+AC2D20.SKILL.PERSUASION: Persuasió
+AC2D20.SKILL.RESILIENCE: Fortalesa
+AC2D20.SKILL.STEALTH: Sigil
+AC2D20.SKILL.SURVIVAL: Supervivència
+AC2D20.SKILL.TACTICS: Tàctiques
+AC2D20.SKILL.VEHICLES: Vehicles
+AC2D20.SPELL.SpellTypes.ins: Practicant
+AC2D20.SPELL.SpellTypes.rea: Estudiós
+AC2D20.SPELL.SpellTypes.wil: Aficionat
+AC2D20.Spellcasting.dabbler: Aficionat
+AC2D20.Spellcasting.researcher: Estudiós
+AC2D20.Spellcasting.SpellcastingType: Tipus d'encanteri
+AC2D20.Spellcasting.traditional: Practicant
+AC2D20.STRESS.current: Estrès actual
+AC2D20.STRESS.max: Estrès màxim
+AC2D20.STRESS.stress: Estrès
+AC2D20.TEMPLATES.Abilities: Habilitats
+AC2D20.TEMPLATES.ADD: AFEGIR
+AC2D20.TEMPLATES.AddFocus: Afegir especialitat
+AC2D20.TEMPLATES.AddTruth: Afegir Veritat
+AC2D20.TEMPLATES.Ammo: Munició
+AC2D20.TEMPLATES.Archetype: Arquetip
+AC2D20.TEMPLATES.Attacks: ATACS
+AC2D20.TEMPLATES.Attr: Atri.
+AC2D20.TEMPLATES.Attribute: Atribut
+AC2D20.TEMPLATES.Attributes: Atributs
+AC2D20.TEMPLATES.Background: Antecedents
+AC2D20.TEMPLATES.bonus: Dany extra
+AC2D20.TEMPLATES.Characteristic: Peculiaritat
+AC2D20.TEMPLATES.Compl: Compl.
+AC2D20.TEMPLATES.Complications: Complicacions
+AC2D20.TEMPLATES.Conditions: Condicions
+AC2D20.TEMPLATES.Cost: Cost
+AC2D20.TEMPLATES.CostEffects: Efectes del cost
+AC2D20.TEMPLATES.Create_Ammo: Crear munició
+AC2D20.TEMPLATES.Create_Special_Rule: Crear regla especial
+AC2D20.TEMPLATES.Create_Weapon: Crear arma
+AC2D20.TEMPLATES.current: actual
+AC2D20.TEMPLATES.DAMAGE_EFFECTS: EFECTES DE DANY
+AC2D20.TEMPLATES.DAMAGE_TYPE: TIPUS DE DANY
+AC2D20.TEMPLATES.DAMAGE: DANY
+AC2D20.TEMPLATES.Data: Dades
+AC2D20.TEMPLATES.Default_Attribute: Atribut per defecte
+AC2D20.TEMPLATES.DEFENSE: DEFENSA
+AC2D20.TEMPLATES.Delete_Item: Esborrar objecte
+AC2D20.TEMPLATES.Delete: Esborrar
+AC2D20.TEMPLATES.DERIVED: DERIVAT
+AC2D20.TEMPLATES.Description: Descripció
+AC2D20.TEMPLATES.Diff: Dif
+AC2D20.TEMPLATES.Difficulty: Dificultat
+AC2D20.TEMPLATES.Dur: Dur
+AC2D20.TEMPLATES.Duration: Durada
+AC2D20.TEMPLATES.Edit_Item: Editar objecte
+AC2D20.TEMPLATES.EditTruth: Editar Veritat
+AC2D20.TEMPLATES.Effect: Efecte
+AC2D20.TEMPLATES.Effects: Efectes
+AC2D20.TEMPLATES.Encumbered: SOBRECARREGAT
+AC2D20.TEMPLATES.Encumbrance_Level: Nivell de càrrega
+AC2D20.TEMPLATES.Encumbrance: Càrrega
+AC2D20.TEMPLATES.ENG: ENG
+AC2D20.TEMPLATES.equipped: Equipat
+AC2D20.TEMPLATES.Experience: Experiència
+AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMES PREFERIDES
+AC2D20.TEMPLATES.FIRE_RATE: CADÈNCIA DE FOC
+AC2D20.TEMPLATES.Focus: Especialitat
+AC2D20.TEMPLATES.fortune: Fortuna
+AC2D20.TEMPLATES.Gear: Equip
+AC2D20.TEMPLATES.GENERAL: GENERAL
+AC2D20.TEMPLATES.GM_MOMENTUM: Amenaça del DJ
+AC2D20.TEMPLATES.Healthy: Saludable
+AC2D20.TEMPLATES.HP_Healed: PV curats
+AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
+AC2D20.TEMPLATES.INJURIES: Ferides
+AC2D20.TEMPLATES.Issue: Problema
+AC2D20.TEMPLATES.Keywords: Paraules clau
+AC2D20.TEMPLATES.Languages: Idiomes
+AC2D20.TEMPLATES.lbs: lbs
+AC2D20.TEMPLATES.Learned: Apresa
+AC2D20.TEMPLATES.Luck: Sort
+AC2D20.TEMPLATES.majoritems: Objectes grans
+AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Inèrcia màxima
+AC2D20.TEMPLATES.max: màx
+AC2D20.TEMPLATES.MAX: MÀX
+AC2D20.TEMPLATES.MELEE_BONUS: BONUS CC
+AC2D20.TEMPLATES.MELEE_DAMAGE: DANY CC
+AC2D20.TEMPLATES.minoritems: Objectes petits
+AC2D20.TEMPLATES.Mod_Type: Tipus de modificació
+AC2D20.TEMPLATES.MODULES: MÒDULS
+AC2D20.TEMPLATES.Name_Prefix: Prefix del nom
+AC2D20.TEMPLATES.Name: Nom
+AC2D20.TEMPLATES.Nationality: Nacionalitat
+AC2D20.TEMPLATES.PARTY_MOMENTUM: Inèrcia del grup
+AC2D20.TEMPLATES.Personal_Truth_Scars: Veritats personals i cicatrius
+AC2D20.TEMPLATES.PHYS: FIS
+AC2D20.TEMPLATES.Points: Punts
+AC2D20.TEMPLATES.POISON: VERÍ
+AC2D20.TEMPLATES.Power: Poder
+AC2D20.TEMPLATES.Qualities: Qualitats
+AC2D20.TEMPLATES.RANGE: Abast
+AC2D20.TEMPLATES.Rank: Rang
+AC2D20.TEMPLATES.Ranks_current_maximum: Rangs [actual/màxim]
+AC2D20.TEMPLATES.rating: Puntuació
+AC2D20.TEMPLATES.Re_roll: Tornar a tirar
+AC2D20.TEMPLATES.Requirements: Requisits
+AC2D20.TEMPLATES.Resistance: Blindatge
+AC2D20.TEMPLATES.Resistances: Resistències
+AC2D20.TEMPLATES.RESISTANCES: RESISTÈNCIES
+AC2D20.TEMPLATES.Resources: Recursos
+AC2D20.TEMPLATES.Restriction: Restricció
+AC2D20.TEMPLATES.ritual_requirements: Requisits
+AC2D20.TEMPLATES.ritual_resistance: Resistència
+AC2D20.TEMPLATES.ritual_steps: Passos
+AC2D20.TEMPLATES.ritual_stress: Estrès del ritual
+AC2D20.TEMPLATES.Ritual: Ritual
+AC2D20.TEMPLATES.Roll_Formula: Fórmula de tirada
+AC2D20.TEMPLATES.Salvo: Descàrrega
+AC2D20.TEMPLATES.SAVE: DESAR
+AC2D20.TEMPLATES.scale: Escala
+AC2D20.TEMPLATES.Size: Mida
+AC2D20.TEMPLATES.SizeLevels.Major: Gran
+AC2D20.TEMPLATES.SizeLevels.Minor: Petit
+AC2D20.TEMPLATES.SizeLevels.Trivial: Insignificant
+AC2D20.TEMPLATES.Skill_Focus: Especialitat de l'habilitat
+AC2D20.TEMPLATES.skill_focus: Habilitat/especialitat
+AC2D20.TEMPLATES.Skill_Value: Valor de l'habilitat
+AC2D20.TEMPLATES.Skill: Habilitat
+AC2D20.TEMPLATES.SkillFocus: Especialitat de l'habilitat
+AC2D20.TEMPLATES.Skills: Habilitats
+AC2D20.TEMPLATES.Source: Origen
+AC2D20.TEMPLATES.SpecialRule: Regla especial
+AC2D20.TEMPLATES.SpecialRules: Regles especials
+AC2D20.TEMPLATES.speed: Velocitat
+AC2D20.TEMPLATES.Spells_Rituals: Encanteris y rituals
+AC2D20.TEMPLATES.Spells: Encanteris
+AC2D20.TEMPLATES.Status: Estat
+AC2D20.TEMPLATES.Successes: Èxits
+AC2D20.TEMPLATES.Talents: Talents
+AC2D20.TEMPLATES.TN: TN
+AC2D20.TEMPLATES.Total: Total
+AC2D20.TEMPLATES.Truths: Veritats
+AC2D20.TEMPLATES.Use_Agility: Usar Agilitat
+AC2D20.TEMPLATES.Use_Brawn: Usar Múscul
+AC2D20.TEMPLATES.Use_Coordination: Usar Coordinació
+AC2D20.TEMPLATES.Use_Insight: Usar Perspicàcia
+AC2D20.TEMPLATES.Use_Reason: Usar Raó
+AC2D20.TEMPLATES.Use_Will: Usar Voluntat
+AC2D20.TEMPLATES.Weapon_Qualities: QUALITATS DE L'ARMA
+AC2D20.TEMPLATES.Weapon_Type: Tipus d'arma
+AC2D20.TEMPLATES.Weapons: Armes
+AC2D20.Tooltips.Attribute.agi: <b>Agilitat</b><br>És una barreja de velocitat, equilibri i memòria muscular. És responsable del moviment i la destresa del personatge. Un personatge àgil és ràpid i es mou amb seguretat i precisió.<br><i class='fa-solid fa-helmet-un'></i> L'Agilitat s'utilitza per desplaçar-se per terreny complicat i moure's ràpidament o en silenci.
+AC2D20.Tooltips.Attribute.bra: <b>Força</b><br>Representa la forma física i la resistència del personatge. Un personatge fort és robust i resistent.<br><i class='fa-solid fa-helmet-un'></i> S'utilitza per atacar cos a cos.<br><i class='fa-solid fa-helmet-un'></i> Ajuda a determinar l'estrès màxim d'un personatge.<br><i class='fa-solid fa-helmet-un'></i> Afegeix més daus de desafiament ( ) al dany cos a cos.<br><i class='fa-solid fa-helmet-un'></i> Ofereix resistència, amb forma de Blindatge, al teu personatge.
+AC2D20.Tooltips.Attribute.coo: <b>Coordinació</b><br>Mesura les teves capacitats motrius, la precisió i el sentit del pas del temps. Els personatges coordinats tenen bona punteria, són excel·lents conductors i pilots, i destaquen en jocs de mans i altres tasques que requereixen delicadesa o precisió.<br><i class='fa-solid fa-helmet-un'></i> S'utilitza per atacar a distància.
+AC2D20.Tooltips.Attribute.ins: <b>Perspicàcia</b><br>Representa la teva intuïció, instint i capacitat de percebre el món que et rodeja. Els personatges perspicaços són observadors, astuts, savis i tenen "carrer".<br><i class='fa-solid fa-helmet-un'></i> Afegeix més daus de desafiament ( ) al dany a distància.<br><i class='fa-solid fa-helmet-un'></i> Alguns practicants de magia utilitzen Perspicàcia per conjurar encanteris.
+AC2D20.Tooltips.Attribute.rea: <b>Raó</b><br>És la capacitat d'aplicar la lògica, l'intel·lecte i els coneixements apresos a una situació. Els personatges racionals solen ser lluïts, lògics o contemplatius, i els sol impulsar la necessitat d'aprendre o comprendre alguna cosa.<br><i class='fa-solid fa-helmet-un'></i> Alguns practicants de magia utilitzen Raó per conjurar encanteris.
+AC2D20.Tooltips.Attribute.wil: <b>Voluntat</b><br>Mesura la teva personalitat, autodisciplina i fortalesa mental. Els personatges amb molta voluntat solen ser decidits, tossuts, i tenen una personalitat enèrgica.<br><i class='fa-solid fa-helmet-un'></i> Alguns practicants de magia utilitzen Voluntat per conjurar encanteris.<br><i class='fa-solid fa-helmet-un'></i> Afegeix més daus de desafiament ( ) al dany dels atacs mentals i encanteris.<br><i class='fa-solid fa-helmet-un'></i> Ajuda a determinar l'estrès màxim d'un personatge.<br><i class='fa-solid fa-helmet-un'></i> Ofereix resistència, amb forma de Coratge, al teu personatge.
+AC2D20.Tooltips.DamageEffect.area: L'atac afecta un objectiu addicional dins de l'abast Proper de l'objectiu inicial per cada efecte tirat. Els objectius secundaris pateixen els efectes complets de l'atac.
+AC2D20.Tooltips.DamageEffect.backlash_x: Cada efecte infligeix X estrès a l'atacant. Les ferides poden ser físiques o mentals, a discreció del Mestre del Joc.
+AC2D20.Tooltips.DamageEffect.drain: L'atacant pateix 1 Fatiga per cada efecte tirat.
+AC2D20.Tooltips.DamageEffect.intense: Si l'atac infligeix una ferida, i es tira un efecte, l'atac infligeix una ferida addicional.
+AC2D20.Tooltips.DamageEffect.persistent_x: L'atac o peril·la té un efecte persistent. Si es tiren un o més efectes, l'objectiu pateix X@x estrès al començament del torn del personatge afectat, durant rondes iguals al nombre d'efectes tirats.
+AC2D20.Tooltips.DamageEffect.piercing_x: L'atac ignora la resistència X per cada efecte tirat.
+AC2D20.Tooltips.DamageEffect.snare: L'atac o peril·la pot enredar i lligar l'objectiu. L'objectiu no pot realitzar cap acció més enllà de tractar d'alliberar-se. Requereix una prova de competència amb una dificultat igual al nombre d'efectes tirats per alliberar-se.
+AC2D20.Tooltips.DamageEffect.stun: L'atac o peril·la deixa l'objectiu momentàniament incapaç de actuar. Si es tiren un nombre d'efectes igual o superior a la capacitat de Resistència de l'objectiu, aquest no pot realitzar cap acció al seu proper torn.
+AC2D20.Tooltips.DamageEffect.vicious: L'atac o peril·la és especialment potent. Afegeix +1 a l'estrès total infligit per cada efecte tirat.
+AC2D20.Tooltips.Focus.air-force: <b>Aèries</b><br>Conreu de coneixements sobre tàctiques de caça i bombarders, com tècniques de combat aeri, vol en formació i pilotatge, així com estratègia militar aèria.
+AC2D20.Tooltips.Focus.aircraft: <b>Avions</b><br>Pilotatge de vehicles aeris militars o civils, tant d'un sol motor com de diversos (i aeronaus propulsades per hélix). A la fi del conflicte, també inclou la nova tecnologia de motors a reacció i les aeronaus que la utilitzen.
+AC2D20.Tooltips.Focus.animal-handling: <b>Cura animal</b><br>Suposa el coneixement sobre una àmplia varietat d'animals diferents, el seu comportament i costums, com actuar en la seva presència, així com com entrenar-los i donar-los ordres.
+AC2D20.Tooltips.Focus.architecture: <b>Arquitectura</b><br>El coneixement sobre com es dissenyen i construeixen els edificis, la seva estructura interna i externa i com es sosté i distribueix la seva massa.
+AC2D20.Tooltips.Focus.army: <b>Terrestres</b><br>Inclou la familiaritat amb les estratègies militars i les tàctiques d'infanteria, a més del combat terrestre mecanitzat.
+AC2D20.Tooltips.Focus.art: <b>Art</b><br>Conreu del coneixement d'obres d'art específiques, l'estudi de diferents tècniques artístiques i escoles de pensament, així com la història de l'art dins de diferents cultures i la influència que ha exercit en elles.
+AC2D20.Tooltips.Focus.camouflage: <b>Camuflatge</b><br>L'ús de materials per ocultar una persona, objecte o ubicació, així com per amagar-los de la vista dels altres.
+AC2D20.Tooltips.Focus.cars: <b>Cotxes</b><br>Inclou la conducció de vehicles motoritzats de quatre rodes o més, tant civils com militars. In
+AC2D20.Tooltips.Focus.charm: <b>Encant</b><br>Mètodes per manipular altres a través del carisma natural i el magnetisme.
+AC2D20.Tooltips.Focus.climbing: <b>Escalada</b><br>Cobreix l'escalada de superfícies escarpades com parets o penya-segats, a més de tècniques d'alpinisme.
+AC2D20.Tooltips.Focus.close-quarters: <b>Combat confinat</b><br>Ús d'escopetes, subfusells i altres armes similars dissenyades per al combat a curta distància o en espais limitats com trinxeres o l'interior d'edificis.
+AC2D20.Tooltips.Focus.combat-engineering: <b>Ingenieria de combat</b><br>Obres realitzades per facilitar o obstaculitzar els moviments de les tropes, incloent la construcció i demolició de camins, trinxeres, fortificacions i altres infraestructures militars.
+AC2D20.Tooltips.Focus.covert-operations: <b>Operacions encobertes</b><br>Inclou la capacitat d'organitzar un equip per operar ocult i eficaçment darrere de les línies enemigues.
+AC2D20.Tooltips.Focus.cryptography: <b>Criptografia</b><br>Inclou el coneixement de codis i missatges en clau, així com la capacitat de crear-los o desxifrar-los.
+AC2D20.Tooltips.Focus.deceive: <b>Engany</b><br>Mètodes per manipular altres persones perquè creguin en alguna cosa que no és certa.
+AC2D20.Tooltips.Focus.discipline: <b>Disciplina</b><br>Representa la resistència d'un personatge i el seu autocontrol, així com la capacitat de resistir i recuperar-se de la confusió, la por o els efectes sobrenaturals que afecten la ment.
+AC2D20.Tooltips.Focus.disguise: <b>Disfressa</b><br>Inclou l'ús de maquillatge, roba, objectes i un llenguatge corporal adequat per fingir la identitat d'una altra persona.
+AC2D20.Tooltips.Focus.electronics: <b>Electrònica</b><br>La comprensió de com funcionen els dispositius electrònics, com s'assemblen, què pot fallar, com es construeixen, com es modifiquen i com es reparen. La ingenieria electrònica, coneguda ara mateix com "enginyeria de ràdio", és un avanç relativament nou en la Segona Guerra Mundial, amb tecnologies com radars, sonars, telecomunicacions i fins i tot els primers passos de la informàtica, i es desenvolupa considerablement a mesura que avança la guerra.
+AC2D20.Tooltips.Focus.exotic: <b>Exòtiques</b><br>Inclou armes experimentals o estranyes, així com la capacitat de descobrir com s'utilitza un arma desconeguda sense perill.
+AC2D20.Tooltips.Focus.explosives: <b>Explosius</b><br>Inclou el coneixement de les diferents substàncies explosives i els seus punts forts, a més de com emprar-les de manera eficaç. També inclou com crear i desactivar bombes i mines.
+AC2D20.Tooltips.Focus.finance: <b>Finances</b><br>Inclou el coneixement del mercat i dels bancs, tant contemporanis com històrics, així com la influència de la diners en la política i la cultura.
+AC2D20.Tooltips.Focus.first-aid: <b>Primers auxilis</b><br>Inclou l'atenció mèdica d'emergència per estabilitzar un pacient i mantenir-lo amb vida fins que pugui rebre atenció mèdica en condicions.
+AC2D20.Tooltips.Focus.foraging: <b>Recol·lecció</b><br>Inclou la habilitat d'obtenir aliments dels voltants, així com identificar la flora comestible i reconèixer amb certesa les toxines naturals.
+AC2D20.Tooltips.Focus.fortitude: <b>Resistència</b><br>Representa la resistència i enteresa del cos, així com la capacitat de resistir i recuperar-se de la fatiga, el dolor i les ferides.
+AC2D20.Tooltips.Focus.hand-to-hand: <b>Desarmat</b><br>Inclou el combat sense armes; des de colpejar amb els punys fins a agafar els oponents. També pot representar l'entrenament en arts marcials com el boxeig o el judo.
+AC2D20.Tooltips.Focus.handguns: <b>Revòlvers</b><br>Ús d'armes de foc lleugeres com revòlvers i pistoles, tant normals com pistoles ametralladores.
+AC2D20.Tooltips.Focus.hearing: <b>Oïda</b><br>Cobreix la percepció auditiva, la capacitat de distingir entre diferents sons i obtenir informació a partir d'ells (com detectar un accent subtil en la veu d'algú). Suposa una gran avantatge per als operadors de ràdio, els descodificadors de codis i els especialistes en comunicacions.
+AC2D20.Tooltips.Focus.heavy-vehicles: <b>Vehicles pesats</b><br>Maneig de vehicles blindats, tant civils com militars, que inclouen camions pesats, semi-rodes i altres vehicles similars.
+AC2D20.Tooltips.Focus.heavy-weapons: <b>Armes pesants</b><br>Permet l'ús de metralladores, llançallumes, armes antitanque i morters, així com armes muntades en vehicles.
+AC2D20.Tooltips.Focus.history: <b>Historia</b><br>Inclou el coneixement dels esdeveniments històrics, així com de les forces i individus que van impulsar aquests esdeveniments i les diferents perspectives històriques.
+AC2D20.Tooltips.Focus.hunting: <b>Caça</b><br>Inclou l'habilitat de perseguir, atrapar i matar una presa animal, així com saber fer els preparatius previs per aprofitar-ne la carn, la pell, etc.
+AC2D20.Tooltips.Focus.immunity: <b>Imunitat</b><br>Representa la capacitat natural del personatge per resistir les malalties o toxines, així com la seva capacitat per recuperar-se dels seus efectes.
+AC2D20.Tooltips.Focus.infectious-diseases: <b>Malalties infeccioses</b><br>Inclou la comprensió de les malalties, les seves causes, la forma com es transmeten, la seva simptomatologia i les formes en què es poden tractar.
+AC2D20.Tooltips.Focus.innuendo: <b>Insinuació</b><br>L'art d'expressar un significat de manera indirecta.
+AC2D20.Tooltips.Focus.instincts: <b>Instints</b><br>Abarca el «seixè sentit» o els «presentiments» que sorgeixen a partir d'observacions i altres percepcions extrasensorials, el origen de les quals potser no puguis descriure. És poc probable que aquests instints proporcionin informació detallada més enllà d'una coratjada o un sentiment general sobre una situació.
+AC2D20.Tooltips.Focus.intimidation: <b>Intimidació</b><br>La capacitat de generar por, dubtes o vacil·lacions, així com aprofitar les debilitats d'una altra persona per utilitzar-les en contra seva.
+AC2D20.Tooltips.Focus.invocation: <b>Invocació</b><br>Mètodes poc habituals i esotèrics de comunicar-se amb entitats paranormals que no solen estar disposades a tractar amb una persona normal.
+AC2D20.Tooltips.Focus.leadership: <b>Lideratge</b><br>Abarca la capacitat de liderar altres i donar ordres clares, així com de mantenir alta la moral de la tropa.
+AC2D20.Tooltips.Focus.lifting: <b>Llevantar</b><br>L'alcada i el desplaçament d'objectes pesants, amb el condicionament necessari perquè l'esforç sigui molt més eficaç.
+AC2D20.Tooltips.Focus.linguistics: <b>Lingüística</b><br>Abarca l'estudi dels idiomes actuals, però també de llengües mortes o històriques, així com de les formes en què un idioma ha evolucionat al llarg del temps.
+AC2D20.Tooltips.Focus.mechanical-engineering: <b>Mecànica</b><br>Abarca una comprensió bàsica dels dispositius mecànics, com funcionen, com poden fallar i com construir-los i reparar-los. Aquesta especialitat es pot aplicar a tots els vehicles de combat com ara tancs, avions, vaixells i altres embarcacions de suport.
+AC2D20.Tooltips.Focus.melee-weapons: <b>Armes C/C</b><br>Abarca la lluita amb una arma cos a cos, com un ganivet o una baioneta.
+AC2D20.Tooltips.Focus.motorcycles: <b>Motocicletes</b><br>El maneig de vehicles motoritzats de dues i tres rodes, tant civils com militars.
+AC2D20.Tooltips.Focus.mysticism: <b>Misticisme</b><br>Abarca el coneixement dels rituals i pràctiques realitzades pels antics líders espirituals (i els seus descendents moderns) per comunicar-se amb els seus déus i esperits, i com poden ser combatuts o resistits.
+AC2D20.Tooltips.Focus.navy: <b>Navals</b><br>Estratègies i tàctiques aquàtiques en tot tipus d'entorns, així com els tipus d'accions militars que pot dur a terme un sol vaixell o les formacions de tota una flota.
+AC2D20.Tooltips.Focus.negotiation: <b>Negociació</b><br>Arribar a un acord mitjançant la conversa; possiblement mitjançant un intercanvi o pagament.
+AC2D20.Tooltips.Focus.occultism: <b>Esoterisme</b><br>Abarca l'estudi de fenòmens paranormals i sobrenaturals, així com de les pràctiques, criatures i tradicions arcanes.
+AC2D20.Tooltips.Focus.orienteering: <b>Orientació</b><br>La capacitat d'orientar-se, mantenir una direcció i planificar una ruta, així com les exigències físiques de l'excursionisme.
+AC2D20.Tooltips.Focus.pharmacology: <b>Farmacologia</b><br>Abarca el coneixement sobre els medicaments, tant per utilitzar-los com a tractament com sobre els seus efectes secundaris.
+AC2D20.Tooltips.Focus.physical-training: <b>Entrenament físic</b><br>Abarca com entrenar-se i com entrenar altres.
+AC2D20.Tooltips.Focus.psychiatry: <b>Psiquiatria</b><br>Abarca l'estudi i el tractament de les malalties mentals.
+AC2D20.Tooltips.Focus.rhetoric: <b>Retòrica</b><br>Utilitzar la paraula en parlar en públic o en un debat formal per informar, persuadir, motivar o convèncer altres.
+AC2D20.Tooltips.Focus.rifles: <b>Rifles</b><br>Abarca l'ús de rifles, carabines i altres armes de foc que es poden utilitzar a distàncies mitjanes i llargues.
+AC2D20.Tooltips.Focus.running: <b>Córrer</b><br>Des de desplaçar-se ràpidament distàncies curtes a resistir curses de llarga distància.
+AC2D20.Tooltips.Focus.rural-stealth: <b>Rural</b><br>Les tècniques utilitzades per desplaçar-se en silenci i passar desapercebut en entorns rurals.
+AC2D20.Tooltips.Focus.science: <b>Ciència</b><br>Abarca el mètode científic i diverses disciplines associades a la ciència, des de matemàtiques a física, química i biologia. També inclou camps més detallats i específics de l'estudi d'aquestes branques.
+AC2D20.Tooltips.Focus.sight: <b>Vista</b><br>Abarca la percepció visual. Permet discernir detalls quan la visibilitat és deficient, notar detalls a distància de manera fiable i una major capacitat per detectar petites variacions o moviments lleus. Els observadors, navegants i responsables del bombardeig utilitzen més aquest enfocament.
+AC2D20.Tooltips.Focus.smell-and-taste: <b>Gust i olfacte</b><br>La capacitat de detectar i discernir informació a partir d'olors i sabors. No és una especialitat comuna entre els humans, ja que no tenen un sentit de l'olfacte especialment sensible, però continua sent una especialitat valuosa per enverinadors, metges o sommeliers.
+AC2D20.Tooltips.Focus.surgery: <b>Cirurgia</b><br>Abarca els procediments mèdics quirúrgics que exigeixen obrir a un pacient i extreure teixit o objectes estranys del seu interior o tancar ferides manualment.
+AC2D20.Tooltips.Focus.swimming: <b>Nedar</b><br>Abarca des de la natació no assistida fins al busseig amb una bombona d'oxigen.
+AC2D20.Tooltips.Focus.tanks: <b>Tancs</b><br>Abarca el maneig de tancs de tot tipus.
+AC2D20.Tooltips.Focus.technical-projects: <b>Projectes tècnics</b><br>La comprensió de com es divideix el treball i com es gestiona als membres de l'equip en un projecte científic, d'enginyeria o acadèmic.
+AC2D20.Tooltips.Focus.threat-awareness: <b>Detecció d'amenaces</b><br>Indica l'estat d'alerta i la capacitat per detectar perills o evitar atacs i emboscades.
+AC2D20.Tooltips.Focus.throwing: <b>Llançament</b><br>Abarca el llançament d'objectes, des de llançament de pes, jabalina i llançament de martell a l'estil olímpic, fins a llançar granades i ganivets.
+AC2D20.Tooltips.Focus.toxicology: <b>Toxicologia</b><br>Abarca l'estudi de substàncies tòxiques (verí i altres substàncies estranyes), així com el seu efecte en l'organisme i la forma de neutralitzar-les o expulsar-les.
+AC2D20.Tooltips.Focus.tracking: <b>Rastreig</b><br>Cobreix la pràctica d'identificar les empremtes d'un animal, persona o grup específic i seguir-les. També indica la capacitat d'extreure informació sobre ells, com la direcció en què van, quantitat, estat físic, velocitat, etc.
+AC2D20.Tooltips.Focus.urban-stealth: <b>Estel·latge urbà</b><br>Abarca tècniques per desplaçar-se en silenci i passar desapercebut en entorns urbans, que són diferents als rurals.
+AC2D20.Tooltips.Focus.watercraft: <b>Embarcacions</b><br>Pilotar vaixells militars o civils, amb motor i vela, incloent submarins.
+AC2D20.Tooltips.Skill.academia: <b>Acadèmicisme</b><br>Aquesta habilitat abarca l'educació i els coneixements acumulats del teu personatge, així com la seva capacitat per investigar temes desconeguts. La formació acadèmica és més útil quan s'ha d'estudiar nova informació o recordar fets sobre un tema.
+AC2D20.Tooltips.Skill.athletics: <b>Atletisme</b><br>Aquesta habilitat cobreix la condició i capacitats físiques del personatge. L'atletisme també abarca els intents de desplaçar-se amb rapidesa.
+AC2D20.Tooltips.Skill.engineering: "<b>Enginyeria</b><br>Aquesta habilitat abasta l'experiència tècnica i mecànica del personatge, amb un èmfasi específic en les aplicacions pràctiques: dissenyar, construir i reparar aparells, màquines i estructures, així com manejar equips complexos o experimentals i determinar la millor forma de desactivar o destruir màquines desconegudes. Hi ha una certa superposició entre Enginyeria i Vehicles, però Enginyeria es centra més en els aspectes mecànics del vehicle."
+AC2D20.Tooltips.Skill.fighting: <b>Combat</b><br>Aquesta habilitat determina la capacitat del personatge per lluitar i defensar-se dels atacs. També és una combinació de tècniques apreses, així com del seu condicionament físic i instint. S'utilitza en combat i per jutjar la perillositat d'una situació. També inclou un enteniment pràctic de l'armament i dels estils de combat.
+AC2D20.Tooltips.Skill.medicine: <b>Medicina</b><br>Representa el tractament de ferides físiques i mentals, així com el diagnòstic i la cura de verins i malalties. També es pot utilitzar per realitzar autòpsies i determinar la causa de la mort d'una persona.
+AC2D20.Tooltips.Skill.observation: <b>Observació</b><br>Aquesta habilitat abasta la percepció i la capacitat del teu personatge per extreure informació de l'entorn. Descriu com d'observador i astut és, la rapidesa amb què determina i dedueix detalls importants, així com la capacitat per ignorar les distraccions. <br>Observació es superposa amb moltes altres habilitats i, sovint, és paral·lela a Academicisme, ja que ambdues consisteixen en obtenir informació, tot i de maneres diferents.
+AC2D20.Tooltips.Skill.persuasion: '<b>Persuasió</b><br>Aquesta habilitat determina la capacitat del personatge per influir en els altres, amb una barreja de llenguatge verbal i corporal. També et permet detectar quan altres intenten usar aquestes tècniques: com diu el refrany, res com un mentider per detectar un altre mentider.'
+AC2D20.Tooltips.Skill.resilience: '<b>Fortalesa</b><br>Aquesta habilitat representa la capacitat del personatge per resistir i recuperar-se dels efectes debilitants físics i mentals: les ferides, el dolor, la fatiga o l'angoixa mental. També serveix per resistir els efectes de verins, malalties i de la màgia. Pots utilitzar Fortalesa per resistir-te als efectes abans que succeeixin, o per recuperar-te dels seus efectes duradors un cop hagis sucumbit al problema. Tot i que Medicina es superposa amb Fortalesa en alguns aspectes, aquesta última representa millor la resistència inherent d'un individu.<br><i>Fortalesa s'utilitza per calcular l'estrès màxim d'un personatge, juntament amb la puntuació més alta de Força o Voluntat.</i>'
+AC2D20.Tooltips.Skill.stealth: <b>Sigil</b><br>Representa la capacitat del personatge per passar desapercebut. Des de moure's en silenci fins a usar la foscor, la cobertura i els amagatalls existents per romandre ocult. També serveix per disfressar-se, amagar-se a plena vista o usar camuflatge per ocultar no només un mateix, sinó a altres.
+AC2D20.Tooltips.Skill.survival: <b>Supervivència</b><br>Expressa la capacitat del personatge per sobreviure en condicions inhòspites, la qual cosa inclou temperatures i climes extrems, plantes i animals perillosos, a més de saber com trobar suficient menjar i aigua, i fer una foguera o construir un refugi. També abasta la capacitat de rastrejar animals (i enemics), així com de entrenar animals i comunicar-se amb ells.
+AC2D20.Tooltips.Skill.tactics: <b>Tàctiques</b><br>Aquesta habilitat es ocupa de la capacitat del teu personatge per percebre i avaluar una situació de combat i dissenyar un pla adequat. No només abasta l'estratègia i les tàctiques militars, sinó també la dinàmica i el lideratge de l'equip, o l'organització d'un grup de científics o enginyers.
+AC2D20.Tooltips.Skill.vehicles: <b>Vehicles</b><br>Abarca el maneig i manteniment de vehicles de tot tipus. Un personatge expert en vehicles sap com funcionen, com poden fallar i com mantenir-los i reparar-los, a més de manejar-los. Es superposa amb Enginyeria respecte als vehicles. S'utilitza en lloc d'Atletisme per evitar o superar els obstacles del terreny al volant d'un vehicle.
+AC2D20.Tooltips.VehicleQuality.cargo_x: El vehicle pot transportar fins a X elements importants.
+AC2D20.Tooltips.VehicleQuality.cumbersome: El vehicle és voluminós i poc reactiu, augmentant en +1 la dificultat dels tests per moure's.
+AC2D20.Tooltips.VehicleQuality.enclosed: El vehicle està completament tancat, protegint l'equip i els passatgers a l'interior. Ni l'equip ni els passatgers poden ser objecte d'atacs des de fora del vehicle, però tampoc poden usar les seves pròpies armes.
+AC2D20.Tooltips.VehicleQuality.exposed: Els passatgers i l'equip d'un vehicle exposat poden ser objecte d'atacs des de fora del vehicle i poden atacar amb les seves pròpies armes.
+AC2D20.Tooltips.VehicleQuality.high_performance: El vehicle és potent i ben ajustat. El pilot pot gastar 2 Momentum després d'un test d'habilitat reeixit per impulsar el vehicle per moure's 1 zona addicional. Qualsevol test per reparar el vehicle augmenta en +1 la dificultat, degut a la seva naturalesa ben ajustada.
+AC2D20.Tooltips.VehicleQuality.single_seat: Un vehicle de seient únic està dissenyat per ser operat per un sol pilot que assumeix també el rol de tirador sense la penalització habitual.
+AC2D20.Tooltips.VehicleQuality.tough_x: El vehicle pot resistir més castigs que la majoria. El nombre de lesions que el vehicle pot suportar abans de ser derrotat s'incrementa en X. Pots generar també 3 Amenaces per ignorar una lesió infligida al vehicle (els vehicles d'NPC gasten 3 Amenaces enlloc).
+AC2D20.Tooltips.WeaponQuality.accurate: Si realitzes l'acció menor <em>Aim</em> abans d'atacar amb aquesta arma, l'arma guanya l'efecte Intens per a aquest atac.
+AC2D20.Tooltips.WeaponQuality.bane: L'arma és especialment efectiva contra criatures del Mite i ignora els efectes de la regla especial Invulnerable contra aquestes criatures. A més, les criatures del Mite amb la regla especial Tough X no poden gastar Amenaces per ignorar ferides causades per un arma amb la qualitat Bane.
+AC2D20.Tooltips.WeaponQuality.close_quarters: L'arma és compacta i fàcil de manejar en espais reduïts i en la pressa del combat en melee. L'arma no pateix cap penalització quan s'utilitza per fer un atac a distància mentre un enemic estigui a l'abast.
+AC2D20.Tooltips.WeaponQuality.cumbersome: L'arma és pesada i difícil de maniobrar contra objectius petits com la infanteria. En fer un atac amb aquesta arma, augmenta en +1 la dificultat de l'atac si el blanc és de mida humana o més petit.
+AC2D20.Tooltips.WeaponQuality.debilitating: La dificultat de qualsevol test d'habilitat per tractar les ferides físiques d'aquesta arma s'incrementa en +1.
+AC2D20.Tooltips.WeaponQuality.escalation: Entrar en escena amb l'arma genera 1 Amenaces.
+AC2D20.Tooltips.WeaponQuality.experimental: Els tests amb aquest objecte incrementen la seva gamma de complicacions en 2. A més, per cada 2 Momentum generat en un test amb aquest objecte, també generes 1 Amenaces.
+AC2D20.Tooltips.WeaponQuality.giant_killer: El poder destructiu de l'arma es desaprofita contra objectius petits o tous, però com més gran sigui l'objectiu, més letalitat de l'arma s'allibera. En tirar els danys per un arma amb aquesta qualitat, afegeix +X@s als danys de l'arma on X és l'escala de l'objectiu. Un arma no pot guanyar més daus addicionals d'aquesta qualitat que els seus danys bàsics — un arma amb un dany bàsic de 6@s no pot guanyar més de +6@s.
+AC2D20.Tooltips.WeaponQuality.heavy: Els atacs amb aquesta arma augmenten en dificultat en +2 llevat que l'arma hagi estat preparada (recolzada contra el terra o un objecte sòlid, o muntada en un trípode o bipode). Preparar un arma pesada requereix l'acció menor Prepare.
+AC2D20.Tooltips.WeaponQuality.hidden: Quan l'arma està amagada, no pot ser detectada per aquells que simplement mirin el personatge, i qualsevol test d'habilitat per buscar l'arma incrementa en +1 la dificultat.
+AC2D20.Tooltips.WeaponQuality.hunger: "Quan l'arma s'utilitza per infligir una o més ferides, el manejador pot guanyar un dels següents avantatges: recuperar 5 estrès, guarir una ferida, o guanyar +1@s de poder pel que resta de l'escena (aquest bonifici de poder només es pot aconseguir una vegada per escena)."
+AC2D20.Tooltips.WeaponQuality.inaccurate: No pots beneficiar-te de l'acció menor Aim amb aquesta arma.
+AC2D20.Tooltips.WeaponQuality.indirect: L'arma no està dissenyada per al tir directe, sinó per deixar caure la seva càrrega sobre enemics a grans distàncies. Els atacs amb l'arma incrementen la dificultat en +1, però no requereixen línia de visió.
+AC2D20.Tooltips.WeaponQuality.munition: La munició per a aquesta arma és especialment voluminosa —quan fas un atac utilitzant una arma de Munició, has d'utilitzar 1 munició. L'arma no es pot utilitzar per fer atacs de salva.
+AC2D20.Tooltips.WeaponQuality.parrying: Quan el portador de l'arma fa una prova oposada en defensa d'un atac en melee, pot tirar de nou un d20 en la seva prova. Això no s'acumula si el personatge té armes de Parrying múltiples.
+AC2D20.Tooltips.WeaponQuality.reliable: Pots ignorar la primera complicació tirada utilitzant aquesta arma en una escena d'acció.
+AC2D20.Tooltips.WeaponQuality.subtle: Els atacs amb aquesta arma són difícils d'escoltar, requereixen una prova de dificultat 2 d'<strong>Insight + Observació</strong> per ser notats. El GM pot ajustar aquesta dificultat en funció de la distància i el soroll ambiental.
+AC2D20.Tooltips.WeaponQuality.unreliable: Els atacs amb aquesta arma incrementen la gamma de complicacions de la prova en 1.
+AC2D20.UI.Add: Afegir
+AC2D20.UI.CarryWeight: Pes carregat
+AC2D20.UI.Cost: Cost
+AC2D20.UI.Damage: Dany
+AC2D20.UI.favorite: Preferit
+AC2D20.UI.INVENTORY: Inventari
+AC2D20.UI.Name: Nom
+AC2D20.UI.ORIGIN: ORIGEN
+AC2D20.UI.OTHER: Altres
+AC2D20.UI.Quantity: Quantitat
+AC2D20.UI.Rarity: Raresa
+AC2D20.UI.SPECIAL_RULE: Regla especial
+AC2D20.UI.stashed: Reservat
+AC2D20.UI.Type: Tipus
+AC2D20.UI.UNSORTED: No ordenat
+AC2D20.UI.Weight: Pes
+AC2D20.VEHICLES.QUALITIES.cargo_x: Càrrega
+AC2D20.VEHICLES.QUALITIES.cumbersome: Torp
+AC2D20.VEHICLES.QUALITIES.enclosed: Tancat
+AC2D20.VEHICLES.QUALITIES.exposed: Exposat
+AC2D20.VEHICLES.QUALITIES.high_performance: Alt rendiment
+AC2D20.VEHICLES.QUALITIES.single_seat: Monoplaça
+AC2D20.VEHICLES.QUALITIES.tough_x: Resistència
+AC2D20.Warnings.DerivedValue: Aquest camp es calcula automàticament i no es pot editar.
+AC2D20.Warnings.OnEditOwnedItemActiveEffects: Actualment no es dóna suport a la gestió d'efectes actius dins d'un objecte propietat.
+AC2D20.WEAPONS.damageEffect.area: Àrea
+AC2D20.WEAPONS.damageEffect.backlash_x: Rerefons
+AC2D20.WEAPONS.damageEffect.drain: Drenatge
+AC2D20.WEAPONS.damageEffect.intense: Intens
+AC2D20.WEAPONS.damageEffect.persistent_x: Persistent
+AC2D20.WEAPONS.damageEffect.piercing_x: Perforant
+AC2D20.WEAPONS.damageEffect.snare: Captura
+AC2D20.WEAPONS.damageEffect.stun: Atordidor
+AC2D20.WEAPONS.damageEffect.vicious: Cruel
+AC2D20.WEAPONS.damageType.energy: Energia
+AC2D20.WEAPONS.damageType.physical: Físic
+AC2D20.WEAPONS.damageType.poison: Verí
+AC2D20.WEAPONS.damageType.radiation: Radiació
+AC2D20.WEAPONS.qualities: Qualitats
+AC2D20.WEAPONS.type: Tipus d'arma
+AC2D20.WEAPONS.weaponQuality.accurate: Precís
+AC2D20.WEAPONS.weaponQuality.bane: Flagell
+AC2D20.WEAPONS.weaponQuality.close_quarters: Curta distància
+AC2D20.WEAPONS.weaponQuality.cumbersome: Aparatos
+AC2D20.WEAPONS.weaponQuality.debilitating: Danyós
+AC2D20.WEAPONS.weaponQuality.escalation: Amenaçador
+AC2D20.WEAPONS.weaponQuality.experimental: Experimental
+AC2D20.WEAPONS.weaponQuality.giant_killer: Matagegants
+AC2D20.WEAPONS.weaponQuality.heavy: Pesat
+AC2D20.WEAPONS.weaponQuality.hidden: Ocult
+AC2D20.WEAPONS.weaponQuality.hunger: Voraç
+AC2D20.WEAPONS.weaponQuality.inaccurate: Imprecís
+AC2D20.WEAPONS.weaponQuality.indirect: Indirecte
+AC2D20.WEAPONS.weaponQuality.munition: Munició
+AC2D20.WEAPONS.weaponQuality.parrying: Parada
+AC2D20.WEAPONS.weaponQuality.reliable: Fiable
+AC2D20.WEAPONS.weaponQuality.subtle: Subtil
+AC2D20.WEAPONS.weaponQuality.unreliable: Defectuós
+AC2D20.WEAPONS.weaponTypes.agi: Cos a cos
+AC2D20.WEAPONS.weaponTypes.coo: Distància
+AC2D20.WEAPONS.weaponTypes.Melee: Cos a cos
+AC2D20.WEAPONS.weaponTypes.Mental: Mental
+AC2D20.WEAPONS.weaponTypes.Ranged: Distància
+AC2D20.WEAPONS.weaponTypes.wil: Mental
+ACTOR.NpcType.Lieutenant: PNJ Major
+ACTOR.NpcType.Nemesis: Nèmesi
+ACTOR.NpcType.Trooper: PNJ Menor
+ACTOR.Vehicle.Cover: Cobertura
+ACTOR.Vehicle.Impact: Impacte
+ACTOR.Vehicle.Passengers: Passatgers
+TYPES.Actor.character: Personatge
+TYPES.Actor.npc: PNJ
+TYPES.Actor.vehicle: Vehicle
+TYPES.Item.armor: Armadura
+TYPES.Item.equipment: Equipament
+TYPES.Item.skill: Habilitat
+TYPES.Item.skillkit: Kit d'habilitat
+TYPES.Item.special_rule: Regla especial
+TYPES.Item.spell: Encanteri
+TYPES.Item.talent: Talent
+TYPES.Item.weapon: Arma

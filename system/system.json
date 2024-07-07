@@ -90,6 +90,12 @@
 			"flags": {}
 		},
 		{
+			"lang": "ca",
+			"name": "Català",
+			"path": "i18n/ca.json",
+			"flags": {}
+		},
+		{
 			"lang": "fr",
 			"name": "Français",
 			"path": "i18n/fr.json",
