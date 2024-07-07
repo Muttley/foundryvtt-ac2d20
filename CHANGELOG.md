@@ -1,3 +1,19 @@
+## v11.6.3
+
+### Enhancement
+- [#120] Add support for the Catalan language
+
+### Bugfix
+- [#118] GM Threat "-" button not working
+- [#122] Issue adding combatants to combat tracker
+
+### Chores
+- [#119] Merge new Polish translation updates from Crowdin
+
+*Many thanks to **trombonecat** for contributing the Catalan language translations*
+
+---
+
 ## v11.6.2
 
 ### Bugfix
