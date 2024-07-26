@@ -292,8 +292,8 @@ AC2D20.Tooltips.Attribute.agi: Agilidade é uma mistura de velocidade, equilíbr
 AC2D20.Tooltips.Attribute.bra: Músculo é o indicador da capacidade física e resistência do personagem. Um personagem musculoso é forte e resistente.
 AC2D20.Tooltips.Attribute.coo: Coordenação é a medida das suas habilidades motoras, da precisão e do senso de oportunidade. Personagens coordenados são bons de tiro, bons motoristas e pilotos, e excedem em prestidigitação e outras tarefas precisas e delicadas.
 AC2D20.Tooltips.Attribute.ins: Intuição é a sua percepção, instintos e a sua habilidade de entender o mundo ao seu redor. Personagens intuitivos são observadores, espertos, sagazes e sábios.
-AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
-AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
+AC2D20.Tooltips.Attribute.rea: Razão é a capacidade de aplicar a lógica, intelecto e fatos aprendidos a uma situação. Personagens com habilidades de alto raciocínio tendem a ser lúcidos, racionais ou contemplativos, e guiados por uma necessidade de aprender ou entender.
+AC2D20.Tooltips.Attribute.wil: Vontade é o seu senso de identidade, força mental, e senso de auto-disciplina. Personagens com força de vontade tendem a ser determinados, teimosos e de personalidade forte.
 AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
 AC2D20.Tooltips.DamageEffect.backlash_x: Cada Efeito inflige X estresse ao atacante. Feridas podem ser físicas ou mentais, a critério do Mestre.
 AC2D20.Tooltips.DamageEffect.drain: O atacante sofre 1 de Fadiga por cada Efeito rolado.
