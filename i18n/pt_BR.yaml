@@ -294,10 +294,10 @@ AC2D20.Tooltips.Attribute.coo: Coordenação é a medida das suas habilidades mo
 AC2D20.Tooltips.Attribute.ins: Intuição é a sua percepção, instintos e a sua habilidade de entender o mundo ao seu redor. Personagens intuitivos são observadores, espertos, sagazes e sábios.
 AC2D20.Tooltips.Attribute.rea: Razão é a capacidade de aplicar a lógica, intelecto e fatos aprendidos a uma situação. Personagens com habilidades de alto raciocínio tendem a ser lúcidos, racionais ou contemplativos, e guiados por uma necessidade de aprender ou entender.
 AC2D20.Tooltips.Attribute.wil: Vontade é o seu senso de identidade, força mental, e senso de auto-disciplina. Personagens com força de vontade tendem a ser determinados, teimosos e de personalidade forte.
-AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
+AC2D20.Tooltips.DamageEffect.area: O ataque ou perigo atinge um alvo adicional a alcance Próximo do alvo inicial para cada efeito rolado. Alvos secundários sofrem todos os efeitos do ataque.
 AC2D20.Tooltips.DamageEffect.backlash_x: Cada Efeito inflige X estresse ao atacante. Feridas podem ser físicas ou mentais, a critério do Mestre.
 AC2D20.Tooltips.DamageEffect.drain: O atacante sofre 1 de Fadiga por cada Efeito rolado.
-AC2D20.Tooltips.DamageEffect.intense: If the attack inflicts an injury, and an effect is rolled, the attack inflicts an additional injury.
+AC2D20.Tooltips.DamageEffect.intense: Se o ataque causar um ferimento, e um efeito for rolado, o ataque inflige um ferimento adicional.
 AC2D20.Tooltips.DamageEffect.persistent_x: The attack or hazard has a lingering effect. If one or more effects are rolled, the target suffers X@x stress at the start of the affected character’s turn, for rounds equal to the number of effects rolled.
 AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X resistência para cada Efeito rolado.
 AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
