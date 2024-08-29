@@ -390,6 +390,9 @@
 				},
 				"unreliable": {
 					"value": false
+				},
+				"venomous": {
+					"value": false
 				}
 			},
 			"range": "close",
