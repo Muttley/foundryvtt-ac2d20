@@ -133,7 +133,7 @@ AC2D20.SETTINGS.systemVersion.hint: Aktualna wersja Achtung! Cthulhu 2d20 (nie m
 AC2D20.SETTINGS.systemVersion.label: Wersja systemu
 AC2D20.SETTINGS.worldSchemaVersion.hint: Aktualna wersja schematu dla Achtung! Cthulhu 2d20 (nie modyfikuj chyba że wiesz co robisz)
 AC2D20.SETTINGS.worldSchemaVersion.label: Wersja schematu
-AC2D20.SKILL.ACADEMIA: Wykształcenie
+AC2D20.SKILL.ACADEMIA: Wiedza Akademicka
 AC2D20.SKILL.ATHLETICS: Atletyka
 AC2D20.SKILL.ENGINEERING: Inżynieria
 AC2D20.SKILL.FIGHTING: Walka
@@ -278,7 +278,7 @@ AC2D20.TEMPLATES.Successes: Sukces
 AC2D20.TEMPLATES.Talents: Talenty
 AC2D20.TEMPLATES.TN: CEL
 AC2D20.TEMPLATES.Total: Suma
-AC2D20.TEMPLATES.Truths: Prawdy
+AC2D20.TEMPLATES.Truths: Fakty
 AC2D20.TEMPLATES.Use_Agility: Użyj zręczności
 AC2D20.TEMPLATES.Use_Brawn: Użyj krzepy
 AC2D20.TEMPLATES.Use_Coordination: Użyj koordynacji
