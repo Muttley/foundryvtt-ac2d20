@@ -32,7 +32,7 @@ AC2D20.Error.NumberOfDiceMustBeNonZero: Ilość kości musi być większa od zer
 AC2D20.FOCUS.Air Force: Siły powietrzne
 AC2D20.FOCUS.Aircraft: Jednostki latające
 AC2D20.FOCUS.Animal Handling: Oswajanie zwierząt
-AC2D20.FOCUS.Architecture: Architekture
+AC2D20.FOCUS.Architecture: Architektura
 AC2D20.FOCUS.Army: Siły lądowe
 AC2D20.FOCUS.Art: Sztuka
 AC2D20.FOCUS.Camouflage: Kamuflaż
@@ -133,7 +133,7 @@ AC2D20.SETTINGS.systemVersion.hint: Aktualna wersja Achtung! Cthulhu 2d20 (nie m
 AC2D20.SETTINGS.systemVersion.label: Wersja systemu
 AC2D20.SETTINGS.worldSchemaVersion.hint: Aktualna wersja schematu dla Achtung! Cthulhu 2d20 (nie modyfikuj chyba że wiesz co robisz)
 AC2D20.SETTINGS.worldSchemaVersion.label: Wersja schematu
-AC2D20.SKILL.ACADEMIA: Wiedza Akademicka
+AC2D20.SKILL.ACADEMIA: Wykształcenie
 AC2D20.SKILL.ATHLETICS: Atletyka
 AC2D20.SKILL.ENGINEERING: Inżynieria
 AC2D20.SKILL.FIGHTING: Walka
