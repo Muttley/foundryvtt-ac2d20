@@ -32,7 +32,7 @@ AC2D20.Error.NumberOfDiceMustBeNonZero: Ilość kości musi być większa od zer
 AC2D20.FOCUS.Air Force: Siły powietrzne
 AC2D20.FOCUS.Aircraft: Jednostki latające
 AC2D20.FOCUS.Animal Handling: Oswajanie zwierząt
-AC2D20.FOCUS.Architecture: Architekture
+AC2D20.FOCUS.Architecture: Architektura
 AC2D20.FOCUS.Army: Siły lądowe
 AC2D20.FOCUS.Art: Sztuka
 AC2D20.FOCUS.Camouflage: Kamuflaż
@@ -278,7 +278,7 @@ AC2D20.TEMPLATES.Successes: Sukces
 AC2D20.TEMPLATES.Talents: Talenty
 AC2D20.TEMPLATES.TN: CEL
 AC2D20.TEMPLATES.Total: Suma
-AC2D20.TEMPLATES.Truths: Prawdy
+AC2D20.TEMPLATES.Truths: Fakty
 AC2D20.TEMPLATES.Use_Agility: Użyj zręczności
 AC2D20.TEMPLATES.Use_Brawn: Użyj krzepy
 AC2D20.TEMPLATES.Use_Coordination: Użyj koordynacji
