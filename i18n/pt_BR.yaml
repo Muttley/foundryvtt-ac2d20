@@ -303,7 +303,7 @@ AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X resistência para cad
 AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
 AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
 AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
-AC2D20.Tooltips.Focus.air-force: Air Force — covers training in fighter and bomber tactics, such as dogfighting, formation flying and navigation, as well as aerial military strategy.
+AC2D20.Tooltips.Focus.air-force: Força Aérea — abrange treinamento de táticas em caças e bombardeiros, como combate aéreo, voo em formação e navegação, bem como estratégia militar aérea.
 AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
 AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
 AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
