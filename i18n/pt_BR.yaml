@@ -91,7 +91,7 @@ AC2D20.FOCUS.Surgery: Cirurgia
 AC2D20.FOCUS.Swimming: Natação
 AC2D20.FOCUS.Tanks: Tanques
 AC2D20.FOCUS.Technical Projects: Projetos Técnicos
-AC2D20.FOCUS.Threat Awareness: Sexto Sentido
+AC2D20.FOCUS.Threat Awareness: Detecção de Ameaça
 AC2D20.FOCUS.Throwing: Arremesso
 AC2D20.FOCUS.Toxicology: Toxicologia
 AC2D20.FOCUS.Tracking: Rastreio
@@ -306,19 +306,19 @@ AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent.
 AC2D20.Tooltips.Focus.air-force: Força Aérea — abrange treinamento de táticas em caças e bombardeiros, como combate aéreo, voo em formação e navegação, bem como estratégia militar aérea.
 AC2D20.Tooltips.Focus.aircraft: Aeronaves — abrange a operação de aeronaves civis e militares movidos a hélice, tanto monomotores quanto multimotores. Perto do fim do conflito, também abrange aviões com motor a jato e novas tecnologias.
 AC2D20.Tooltips.Focus.animal-handling: Manejo de Animais — abrange conhecimento sobre uma variedade de animais diferentes, como eles se comportam e como agir perto deles, além de como treiná-los e comandá-los.
-AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
+AC2D20.Tooltips.Focus.architecture: Arquitetura — abrange a compreensão de como os edifícios são projetados e construídos, sua estrutura interna e externa e como sua massa é suportada e distribuída.
 AC2D20.Tooltips.Focus.army: Exército — abrange a familiaridade com a estratégia militar e as táticas para a infantaria, assim como guerra terrestre mecanizada.
-AC2D20.Tooltips.Focus.art: Art — covers knowledge of individual pieces of art, the study of different artistic techniques and schools of thought, the history of art within different cultures, and its influences upon those cultures.
+AC2D20.Tooltips.Focus.art: Arte — abrange o conhecimento de peças de arte individuais, o estudo de diferentes técnicas artísticas e escolas de pensamento, a história da arte em diferentes culturas e suas influências sobre essas culturas.
 AC2D20.Tooltips.Focus.camouflage: Camuflagem — abrange o uso de materiais para cobrir uma pessoa, objeto ou local, escondendo-o da vista.
 AC2D20.Tooltips.Focus.cars: Automóveis — abrange a operação de veículos motorizados civis e militares de quatro rodas e pequenos caminhões.
 AC2D20.Tooltips.Focus.charm: Charme — métodos de manipulação de outros através do carisma e magnetismo natural.
 AC2D20.Tooltips.Focus.climbing: Escalada — abrange a escalada de superfícies íngremes, como paredes ou penhascos, bem como alpinismo.
-AC2D20.Tooltips.Focus.close-quarters: Close Quarters — covers the use of shotguns and sub-machine guns, and similar weapons designed for use at Close range or within tight confines like trenches or buildings.
-AC2D20.Tooltips.Focus.combat-engineering: Combat Engineering — covers work done to support or hinder troop movements, including the construction and demolition of roads, trenches, fortifications, and other military infrastructure.
+AC2D20.Tooltips.Focus.close-quarters: Combate Próximo — abrange o uso de espingardas, submetralhadoras e armas similares projetadas para uso a curta distância ou em espaços confinados, como trincheiras ou prédios.
+AC2D20.Tooltips.Focus.combat-engineering: Engenharia de Combate — abrange trabalhos realizados para apoiar ou dificultar movimentos de tropas, incluindo a construção e demolição de estradas, trincheiras, fortificações e outras infraestruturas militares.
 AC2D20.Tooltips.Focus.covert-operations: Operações Secretas — abrange a organização de uma equipe para operar silenciosa e eficientemente atrás das linhas inimigas.
 AC2D20.Tooltips.Focus.cryptography: Criptografia — abrange o conhecimento de códigos e cifras, tanto como criá-los quanto como quebrá-los.
 AC2D20.Tooltips.Focus.deceive: Enganar — métodos de manipulação de outros para acreditar em algo que é falso.
-AC2D20.Tooltips.Focus.discipline: Discipline — represents the character’s durability and self-control, and their ability to resist and recover from confusion and fear or supernatural effects that afflict the mind.
+AC2D20.Tooltips.Focus.discipline: Disciplina — representa a durabilidade e o autocontrole do personagem, e sua capacidade de resistir e se recuperar da confusão e do medo ou de efeitos sobrenaturais que afligem a mente.
 AC2D20.Tooltips.Focus.disguise: Disfarce — abrange o uso de maquiagem, roupas, adereços e linguagem corporal apropriada para assumir o aspecto de outra pessoa.
 AC2D20.Tooltips.Focus.electronics: Eletrônicos — cobre a compreensão de como dispositivos eletrônicos funcionam, como são montados, o que pode dar errado com eles e como construir, modificar e repará-los. Dispositivos conhecidos como "rádios eletrônicos" são um desenvolvimento relativamente novo na Segunda Guerra Mundial, com tecnologias como radar, sonar, comunicações e até mesmo os primeiros passos tímidos na computação, desenvolvendo significativamente à medida que a guerra avança.
 AC2D20.Tooltips.Focus.exotic: Exótico — abrange armamento estranho ou experimental e a capacidade de descobrir como uma arma desconhecida deve ser operada sem riscos.
@@ -350,7 +350,7 @@ AC2D20.Tooltips.Focus.mysticism: Misticismo — abrange o conhecimento dos ritos
 AC2D20.Tooltips.Focus.navy: Marinha — abrange estratégia e táticas navais, de águas rasas a profundas, e ações de barcos individuais até grandes combates de frotas.
 AC2D20.Tooltips.Focus.negotiation: Negociação — chegar a um acordo por meio de conversa, possivelmente envolvendo comércio ou pagamento.
 AC2D20.Tooltips.Focus.occultism: Ocultismo — abrange o estudo de fenômenos, práticas, criaturas e tradições sobrenaturais e ocultos.
-AC2D20.Tooltips.Focus.orienteering: Orienteering — covers the skill of navigating over distance, maintaining a direction, planning a route, and the physical demands of hiking.
+AC2D20.Tooltips.Focus.orienteering: Orientação — abrange a habilidade de navegar por distâncias, manter uma direção, planejar uma rota e as exigências físicas de uma caminhada.
 AC2D20.Tooltips.Focus.pharmacology: Pharmacology — covers an understanding of medication, both its uses in treatment, and its side effects.
 AC2D20.Tooltips.Focus.physical-training: Physical Training — covers how to train oneself and others.
 AC2D20.Tooltips.Focus.psychiatry: Psychiatry — covers the study and treatment of mental illness.
