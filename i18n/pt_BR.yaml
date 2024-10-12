@@ -304,8 +304,8 @@ AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind t
 AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
 AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
 AC2D20.Tooltips.Focus.air-force: Força Aérea — abrange treinamento de táticas em caças e bombardeiros, como combate aéreo, voo em formação e navegação, bem como estratégia militar aérea.
-AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
-AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
+AC2D20.Tooltips.Focus.aircraft: Aeronaves — abrange a operação de aeronaves civis e militares movidos a hélice, tanto monomotores quanto multimotores. Perto do fim do conflito, também abrange aviões com motor a jato e novas tecnologias.
+AC2D20.Tooltips.Focus.animal-handling: Manejo de Animais — abrange conhecimento sobre uma variedade de animais diferentes, como eles se comportam e como agir perto deles, além de como treiná-los e comandá-los.
 AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
 AC2D20.Tooltips.Focus.army: Exército — abrange a familiaridade com a estratégia militar e as táticas para a infantaria, assim como guerra terrestre mecanizada.
 AC2D20.Tooltips.Focus.art: Art — covers knowledge of individual pieces of art, the study of different artistic techniques and schools of thought, the history of art within different cultures, and its influences upon those cultures.
@@ -345,11 +345,11 @@ AC2D20.Tooltips.Focus.lifting: Lifting — covers lifting and moving heavy objec
 AC2D20.Tooltips.Focus.linguistics: Linguistics — covers the study of languages in their current form, as well as historical and dead languages, and the ways that language changes over time.
 AC2D20.Tooltips.Focus.mechanical-engineering: Mechanical Engineering — covers an understanding of mechanical devices, how they operate, how they can fail, and how to construct and repair them. This focus can be applied to all fighting vehicles like tanks, planes, boats and other support craft.
 AC2D20.Tooltips.Focus.melee-weapons: Melee Weapons — covers fighting with a melee weapon, such as a knife or bayonet.
-AC2D20.Tooltips.Focus.motorcycles: Motorcycles — covers the operation of civilian and military two- and three-wheeled motor vehicles
-AC2D20.Tooltips.Focus.mysticism: Mysticism — covers knowledge of the rites and practices performed by ancient spiritual leaders (and their modern descendants) to commune with their gods and spirits, and how they can be combatted or withstood.
+AC2D20.Tooltips.Focus.motorcycles: Motocicletas — abrange a operação de veículos motorizados civis e militares de duas e três rodas
+AC2D20.Tooltips.Focus.mysticism: Misticismo — abrange o conhecimento dos ritos e práticas realizados por antigos líderes espirituais (e seus descendentes modernos) para comungar com seus deuses e espíritos, e como eles podem ser combatidos ou resistidos.
 AC2D20.Tooltips.Focus.navy: Marinha — abrange estratégia e táticas navais, de águas rasas a profundas, e ações de barcos individuais até grandes combates de frotas.
 AC2D20.Tooltips.Focus.negotiation: Negociação — chegar a um acordo por meio de conversa, possivelmente envolvendo comércio ou pagamento.
-AC2D20.Tooltips.Focus.occultism: Occultism — covers the study of supernatural and occult phenomena, practices, creatures, and traditions.
+AC2D20.Tooltips.Focus.occultism: Ocultismo — abrange o estudo de fenômenos, práticas, criaturas e tradições sobrenaturais e ocultos.
 AC2D20.Tooltips.Focus.orienteering: Orienteering — covers the skill of navigating over distance, maintaining a direction, planning a route, and the physical demands of hiking.
 AC2D20.Tooltips.Focus.pharmacology: Pharmacology — covers an understanding of medication, both its uses in treatment, and its side effects.
 AC2D20.Tooltips.Focus.physical-training: Physical Training — covers how to train oneself and others.
