@@ -300,9 +300,9 @@ AC2D20.Tooltips.DamageEffect.drain: O atacante sofre 1 de Fadiga por cada Efeito
 AC2D20.Tooltips.DamageEffect.intense: Se o ataque causar um ferimento, e um efeito for rolado, o ataque inflige um ferimento adicional.
 AC2D20.Tooltips.DamageEffect.persistent_x: O ataque ou perigo tem um efeito persistente. Se um ou mais efeitos forem rolados, o alvo sofre X@x estresse no início do turno do personagem afetado, por um número de rodadas igual ao número de efeitos rolados.
 AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X resistência para cada Efeito rolado.
-AC2D20.Tooltips.DamageEffect.snare: The attack or hazard can entangle and bind the target. The target cannot take any actions other than to try and break free. It requires a skill test with a difficulty equal to the number of effects rolled to break free.
-AC2D20.Tooltips.DamageEffect.stun: The attack or hazard leaves the target momentarily unable to act. If a number of effects are rolled that equals or exceeds the target’s Resilience skill, the target may not take any actions in their next turn.
-AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent. Add +1 to the total stress inflicted for each effect rolled.
+AC2D20.Tooltips.DamageEffect.snare: O ataque ou perigo pode enredar e prender o alvo. O alvo não pode realizar nenhuma ação além de tentar se libertar. Isso requer um teste de habilidade com uma dificuldade igual ao número de efeitos rolados para se libertar.
+AC2D20.Tooltips.DamageEffect.stun: O ataque ou perigo deixa o alvo momentaneamente incapaz de agir. Se um número de efeitos for rolado que seja igual ou exceda a habilidade de Resiliência do alvo, o alvo não poderá realizar nenhuma ação em seu próximo turno.
+AC2D20.Tooltips.DamageEffect.vicious: O ataque ou perigo é especialmente potente. Adicione +1 ao estresse total infligido para cada efeito rolado.
 AC2D20.Tooltips.Focus.air-force: Força Aérea — abrange treinamento de táticas em caças e bombardeiros, como combate aéreo, voo em formação e navegação, bem como estratégia militar aérea.
 AC2D20.Tooltips.Focus.aircraft: Aeronaves — abrange a operação de aeronaves civis e militares movidos a hélice, tanto monomotores quanto multimotores. Perto do fim do conflito, também abrange aviões com motor a jato e novas tecnologias.
 AC2D20.Tooltips.Focus.animal-handling: Manejo de Animais — abrange conhecimento sobre uma variedade de animais diferentes, como eles se comportam e como agir perto deles, além de como treiná-los e comandá-los.
@@ -325,7 +325,7 @@ AC2D20.Tooltips.Focus.exotic: Exótico — abrange armamento estranho ou experim
 AC2D20.Tooltips.Focus.explosives: Explosivos — cobre um entendimento de substâncias explosivas e os propósitos para os quais são mais adequados, além do conhecimento de como empregá-las eficazmente, incluindo a forma de criar e desativar bombas e minas.
 AC2D20.Tooltips.Focus.finance: Finanças — abrange o conhecimento do comércio e bancos, tanto contemporâneo como historicamente, e da influência do dinheiro na política e na cultura.
 AC2D20.Tooltips.Focus.first-aid: Primeiros Socorros — abrange atenção médica de emergência para estabilizar um doente e mantê-lo vivo até poder receber cuidados médicos adequados.
-AC2D20.Tooltips.Focus.foraging: Foraging — covers the skill of gathering food from the local environment, being able to identify edible flora, and safely recognising natural toxins.
+AC2D20.Tooltips.Focus.foraging: Forrageio — abrange a habilidade de coletar alimentos do ambiente, ser capaz de identificar a flora comestível e reconhecer com segurança toxinas naturais.
 AC2D20.Tooltips.Focus.fortitude: Fortitude — representa a robustez e a resistência do corpo, e sua capacidade de resistir e se recuperar de fadiga, dor e lesões.
 AC2D20.Tooltips.Focus.hand-to-hand: Hand-to-Hand — covers unarmed combat by striking and grabbing opponents, and may represent training in a martial art like boxing or judo.
 AC2D20.Tooltips.Focus.handguns: Pistolas — abrange o uso de armas curtas, revólveres e pistolas semiautomáticas e automáticas.
@@ -479,7 +479,7 @@ ACTOR.Vehicle.Cover: Cobertura
 ACTOR.Vehicle.Impact: Impacto
 ACTOR.Vehicle.Passengers: Passageiros
 TYPES.Actor.character: Personagem
-TYPES.Actor.npc: NPJ
+TYPES.Actor.npc: PNJ
 TYPES.Actor.vehicle: Veículo
 TYPES.Item.armor: Armadura
 TYPES.Item.equipment: Equipamento
