@@ -198,7 +198,7 @@ AC2D20.TEMPLATES.Effects: Efeitos
 AC2D20.TEMPLATES.Encumbered: SOBRECARREGADO
 AC2D20.TEMPLATES.Encumbrance_Level: Nível de Sobrecarga
 AC2D20.TEMPLATES.Encumbrance: Sobrecarga
-AC2D20.TEMPLATES.ENG: ENG
+AC2D20.TEMPLATES.ENG: PT-BR
 AC2D20.TEMPLATES.equipped: equipado
 AC2D20.TEMPLATES.Experience: Experiência
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
@@ -406,8 +406,8 @@ AC2D20.Tooltips.WeaponQuality.indirect: A arma não é projetada para fogo diret
 AC2D20.Tooltips.WeaponQuality.munition: A munição para esta arma é especialmente volumosa — quando você faz um ataque usando uma arma de Munição, você deve usar 1 munição. A arma não pode ser usada para fazer ataques de rajada.
 AC2D20.Tooltips.WeaponQuality.parrying: Quando o portador da arma faz um teste oposto em defesa de um ataque corpo a corpo, ele pode rolar novamente um único d20 em seu teste. Isso não acumula se o personagem tiver várias armas de Aparo.
 AC2D20.Tooltips.WeaponQuality.reliable: Você pode ignorar a primeira complicação obtida ao usar esta arma em uma cena de ação.
-AC2D20.Tooltips.WeaponQuality.subtle: Attacks with this weapon are difficult to hear, requiring a difficulty 2 <strong>Insight + Observation</strong> test to notice. The GM may adjust this difficulty based on distance and ambient noise.
-AC2D20.Tooltips.WeaponQuality.unreliable: Attacks with this weapon increase the test’s complication range by 1.
+AC2D20.Tooltips.WeaponQuality.subtle: Ataques com esta arma são difíceis de ouvir, exigindo um teste de dificuldade 2 <strong>Intuição + Observação</strong> para serem notados. O Mestre pode ajustar esta dificuldade com base na distância e no ruído ambiente.
+AC2D20.Tooltips.WeaponQuality.unreliable: Ataques com esta arma aumentam o alcance de complicação do teste em 1.
 AC2D20.UI.Add: Adic
 AC2D20.UI.CarryWeight: Peso
 AC2D20.UI.Cost: Custo
@@ -432,7 +432,7 @@ AC2D20.VEHICLES.QUALITIES.high_performance: Alta Performance
 AC2D20.VEHICLES.QUALITIES.single_seat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough_x: Resistente
 AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
-AC2D20.Warnings.OnEditOwnedItemActiveEffects: Managing Active Effects within an Owned Item is not currently supported.
+AC2D20.Warnings.OnEditOwnedItemActiveEffects: O gerenciamento de Efeitos Ativos em um item Possuído não é suportado no momento.
 AC2D20.WEAPONS.damageEffect.area: Área
 AC2D20.WEAPONS.damageEffect.backlash_x: Retaliar
 AC2D20.WEAPONS.damageEffect.drain: Drenar
