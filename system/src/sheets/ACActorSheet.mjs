@@ -760,14 +760,14 @@ export default class ACActorSheet extends ActorSheet {
 	}
 
 	async _onTruthEdit(data) {
-		const actorId = this.actor._id;
+		const actorUuid = this.actor.uuid;
 
 		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
 
 		const index = data.truthIndex;
 		const truth = currentTruths[index];
 
-		ac2d20.dialogs.DialogEditTruth.createDialog({actorId, index, truth});
+		ac2d20.dialogs.DialogEditTruth.createDialog({actorUuid, index, truth});
 	}
 
 

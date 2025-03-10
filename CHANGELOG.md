@@ -1,3 +1,10 @@
+## v11.6.4
+
+### Bugfix
+- [#127] Truths on Actor sheets edits cannot be saved
+
+---
+
 ## v11.6.3
 
 ### Enhancement
