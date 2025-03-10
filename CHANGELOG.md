@@ -3,6 +3,9 @@
 ### Bugfix
 - [#127] Truths on Actor sheets edits cannot be saved
 
+### Chores
+- [#138] Accessing the global "Die" which is now namespaced under foundry.dice.terms.Die
+
 ---
 
 ## v11.6.3

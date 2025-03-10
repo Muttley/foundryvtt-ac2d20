@@ -1,4 +1,4 @@
-export default class DieACChallenge extends Die {
+export default class DieACChallenge extends foundry.dice.terms.Die {
 	constructor(termData) {
 		termData.faces = 6;
 		super(termData);
