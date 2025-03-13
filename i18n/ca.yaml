@@ -408,6 +408,7 @@ AC2D20.Tooltips.WeaponQuality.parrying: Quan el portador de l'arma fa una prova 
 AC2D20.Tooltips.WeaponQuality.reliable: Pots ignorar la primera complicació tirada utilitzant aquesta arma en una escena d'acció.
 AC2D20.Tooltips.WeaponQuality.subtle: Els atacs amb aquesta arma són difícils d'escoltar, requereixen una prova de dificultat 2 d'<strong>Insight + Observació</strong> per ser notats. El GM pot ajustar aquesta dificultat en funció de la distància i el soroll ambiental.
 AC2D20.Tooltips.WeaponQuality.unreliable: Els atacs amb aquesta arma incrementen la gamma de complicacions de la prova en 1.
+AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
 AC2D20.UI.Add: Afegir
 AC2D20.UI.CarryWeight: Pes carregat
 AC2D20.UI.Cost: Cost
@@ -466,6 +467,7 @@ AC2D20.WEAPONS.weaponQuality.parrying: Parada
 AC2D20.WEAPONS.weaponQuality.reliable: Fiable
 AC2D20.WEAPONS.weaponQuality.subtle: Subtil
 AC2D20.WEAPONS.weaponQuality.unreliable: Defectuós
+AC2D20.WEAPONS.weaponQuality.venomous: Venomous
 AC2D20.WEAPONS.weaponTypes.agi: Cos a cos
 AC2D20.WEAPONS.weaponTypes.coo: Distància
 AC2D20.WEAPONS.weaponTypes.Melee: Cos a cos
