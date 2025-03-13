@@ -408,6 +408,7 @@ AC2D20.Tooltips.WeaponQuality.parrying: Quando o portador da arma faz um teste o
 AC2D20.Tooltips.WeaponQuality.reliable: Você pode ignorar a primeira complicação obtida ao usar esta arma em uma cena de ação.
 AC2D20.Tooltips.WeaponQuality.subtle: Ataques com esta arma são difíceis de ouvir, exigindo um teste de dificuldade 2 <strong>Intuição + Observação</strong> para serem notados. O Mestre pode ajustar esta dificuldade com base na distância e no ruído ambiente.
 AC2D20.Tooltips.WeaponQuality.unreliable: Ataques com esta arma aumentam o alcance de complicação do teste em 1.
+AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
 AC2D20.UI.Add: Adic
 AC2D20.UI.CarryWeight: Peso
 AC2D20.UI.Cost: Custo
@@ -466,6 +467,7 @@ AC2D20.WEAPONS.weaponQuality.parrying: Aparo
 AC2D20.WEAPONS.weaponQuality.reliable: Confiável
 AC2D20.WEAPONS.weaponQuality.subtle: Sutil
 AC2D20.WEAPONS.weaponQuality.unreliable: Duvidoso
+AC2D20.WEAPONS.weaponQuality.venomous: Venomous
 AC2D20.WEAPONS.weaponTypes.agi: Corpo-a-Corpo
 AC2D20.WEAPONS.weaponTypes.coo: Alcance
 AC2D20.WEAPONS.weaponTypes.Melee: Corpo-a-Corpo
