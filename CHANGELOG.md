@@ -6,6 +6,7 @@
 
 ### Chores
 - [#138] Accessing the global "Die" which is now namespaced under foundry.dice.terms.Die
+- [#139] Fix deprecation warnings with latest SASS
 
 ---
 
