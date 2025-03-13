@@ -408,6 +408,7 @@ AC2D20.Tooltips.WeaponQuality.parrying: Gdy osoba trzymająca broń podejmuje pr
 AC2D20.Tooltips.WeaponQuality.reliable: Używając tej broni, możesz zanegować pierwszą komplikację otrzymaną podczas sceny akcji.
 AC2D20.Tooltips.WeaponQuality.subtle: Trudno usłyszeć ataki wykonywane tą bronią,a zauważenie ich wymaga testu <strong> Wnikliwości + Obserwacji </strpmg> trudności 2. MG może ją zmodyfikować, uwzględniając dystans i odgłosy otoczenia.
 AC2D20.Tooltips.WeaponQuality.unreliable: Ataki tą bronią zwiększają o +1 zakres komplikacji testu.
+AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
 AC2D20.UI.Add: Dodaj
 AC2D20.UI.CarryWeight: Udźwig
 AC2D20.UI.Cost: Koszt
@@ -466,6 +467,7 @@ AC2D20.WEAPONS.weaponQuality.parrying: Parująca
 AC2D20.WEAPONS.weaponQuality.reliable: Niezawodna
 AC2D20.WEAPONS.weaponQuality.subtle: Dyskretna
 AC2D20.WEAPONS.weaponQuality.unreliable: Zawodna
+AC2D20.WEAPONS.weaponQuality.venomous: Venomous
 AC2D20.WEAPONS.weaponTypes.agi: Zwarcie
 AC2D20.WEAPONS.weaponTypes.coo: Dystansowa
 AC2D20.WEAPONS.weaponTypes.Melee: Zwarcie
