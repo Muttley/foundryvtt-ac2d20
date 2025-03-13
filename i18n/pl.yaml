@@ -405,9 +405,11 @@ AC2D20.Tooltips.WeaponQuality.inaccurate: W przypadku użycia tej broni nie obow
 AC2D20.Tooltips.WeaponQuality.indirect: Broń nie jest przeznaczona do prowadzenia bezpośredniego ognia i służy raczej do wystrzeliwania ładunków na ogromną odległość. Trudność ataków przy użyciu tej broni zwiększa się o +1, lecz nie musisz widzieć celu.
 AC2D20.Tooltips.WeaponQuality.munition: Amunicja do tej broni jest wyjątkowo duża. Gdy atakujesz bronią z tą cechą, musisz zużyć 1 jednostkę amunicji i nie możesz zaatakować serią.
 AC2D20.Tooltips.WeaponQuality.parrying: Gdy osoba trzymająca broń podejmuje próbę sił na obronę przed atakiem wręcz, może przerzucić 1k20.Nie można łączyć korzyści wynikających z tej cechy, jeśli bohater używa kilku parujących broni.
+AC2D20.Tooltips.WeaponQuality.precise: Attacks with this weapon use Coordination rather than any other attribute when generating additional @s.
 AC2D20.Tooltips.WeaponQuality.reliable: Używając tej broni, możesz zanegować pierwszą komplikację otrzymaną podczas sceny akcji.
 AC2D20.Tooltips.WeaponQuality.subtle: Trudno usłyszeć ataki wykonywane tą bronią,a zauważenie ich wymaga testu <strong> Wnikliwości + Obserwacji </strpmg> trudności 2. MG może ją zmodyfikować, uwzględniając dystans i odgłosy otoczenia.
 AC2D20.Tooltips.WeaponQuality.unreliable: Ataki tą bronią zwiększają o +1 zakres komplikacji testu.
+AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
 AC2D20.UI.Add: Dodaj
 AC2D20.UI.CarryWeight: Udźwig
 AC2D20.UI.Cost: Koszt
@@ -463,9 +465,11 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Niecelna
 AC2D20.WEAPONS.weaponQuality.indirect: Pośrednia
 AC2D20.WEAPONS.weaponQuality.munition: Ciężka amunicja
 AC2D20.WEAPONS.weaponQuality.parrying: Parująca
+AC2D20.WEAPONS.weaponQuality.precise: Precise
 AC2D20.WEAPONS.weaponQuality.reliable: Niezawodna
 AC2D20.WEAPONS.weaponQuality.subtle: Dyskretna
 AC2D20.WEAPONS.weaponQuality.unreliable: Zawodna
+AC2D20.WEAPONS.weaponQuality.venomous: Venomous
 AC2D20.WEAPONS.weaponTypes.agi: Zwarcie
 AC2D20.WEAPONS.weaponTypes.coo: Dystansowa
 AC2D20.WEAPONS.weaponTypes.Melee: Zwarcie
