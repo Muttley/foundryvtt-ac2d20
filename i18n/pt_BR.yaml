@@ -405,6 +405,7 @@ AC2D20.Tooltips.WeaponQuality.inaccurate: Você não pode se beneficiar da açã
 AC2D20.Tooltips.WeaponQuality.indirect: A arma não é projetada para fogo direto, em vez disso, joga sua carga sobre inimigos a grandes distâncias. Ataques com a arma aumentam a dificuldade em +1, mas não requerem linha de visão.
 AC2D20.Tooltips.WeaponQuality.munition: A munição para esta arma é especialmente volumosa — quando você faz um ataque usando uma arma de Munição, você deve usar 1 munição. A arma não pode ser usada para fazer ataques de rajada.
 AC2D20.Tooltips.WeaponQuality.parrying: Quando o portador da arma faz um teste oposto em defesa de um ataque corpo a corpo, ele pode rolar novamente um único d20 em seu teste. Isso não acumula se o personagem tiver várias armas de Aparo.
+AC2D20.Tooltips.WeaponQuality.precise: Attacks with this weapon use Coordination rather than any other attribute when generating additional @s.
 AC2D20.Tooltips.WeaponQuality.reliable: Você pode ignorar a primeira complicação obtida ao usar esta arma em uma cena de ação.
 AC2D20.Tooltips.WeaponQuality.subtle: Ataques com esta arma são difíceis de ouvir, exigindo um teste de dificuldade 2 <strong>Intuição + Observação</strong> para serem notados. O Mestre pode ajustar esta dificuldade com base na distância e no ruído ambiente.
 AC2D20.Tooltips.WeaponQuality.unreliable: Ataques com esta arma aumentam o alcance de complicação do teste em 1.
@@ -464,6 +465,7 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Impreciso
 AC2D20.WEAPONS.weaponQuality.indirect: Indireto
 AC2D20.WEAPONS.weaponQuality.munition: Munição
 AC2D20.WEAPONS.weaponQuality.parrying: Aparo
+AC2D20.WEAPONS.weaponQuality.precise: Precise
 AC2D20.WEAPONS.weaponQuality.reliable: Confiável
 AC2D20.WEAPONS.weaponQuality.subtle: Sutil
 AC2D20.WEAPONS.weaponQuality.unreliable: Duvidoso
