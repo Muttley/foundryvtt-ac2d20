@@ -382,6 +382,9 @@
 				"parrying": {
 					"value": false
 				},
+				"precise": {
+					"value": false
+				},
 				"reliable": {
 					"value": false
 				},

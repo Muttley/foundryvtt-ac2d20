@@ -2,11 +2,16 @@
 
 ### Bugfix
 - [#127] Truths on Actor sheets edits cannot be saved
+- [#132] Added Venomous weapon quality
 - [#136] The number of ammunition and items in the gear section of the character sheet cannot be edited
+- [#137] Added Precise weapon quality
 
 ### Chores
+- [#133] Merge new Polish and Portuguese/Brazilian translation updates from Crowdin
 - [#138] Accessing the global "Die" which is now namespaced under foundry.dice.terms.Die
-- [#139] Fix deprecation warnings with latest SASS
+- [#139] Fix deprecation warnings with latest SASS module version
+
+*Many thanks to **lozanoje** for their contributions to this release*
 
 ---
 
