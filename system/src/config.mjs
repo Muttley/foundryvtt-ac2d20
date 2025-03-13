@@ -76,6 +76,7 @@ AC2D20.WEAPON_QUALITIES = {
 	reliable: "AC2D20.WEAPONS.weaponQuality.reliable",
 	subtle: "AC2D20.WEAPONS.weaponQuality.subtle",
 	unreliable: "AC2D20.WEAPONS.weaponQuality.unreliable",
+	venomous: "AC2D20.WEAPONS.weaponQuality.venomous",
 };
 
 AC2D20.WEAPONS = {
