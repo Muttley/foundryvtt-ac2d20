@@ -2,6 +2,7 @@
 
 ### Bugfix
 - [#127] Truths on Actor sheets edits cannot be saved
+- [#136] The number of ammunition and items in the gear section of the character sheet cannot be edited
 
 ### Chores
 - [#138] Accessing the global "Die" which is now namespaced under foundry.dice.terms.Die

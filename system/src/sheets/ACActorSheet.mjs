@@ -14,6 +14,7 @@ export default class ACActorSheet extends ActorSheet {
 			template: "systems/ac2d20/templates/actor/actor-sheet.hbs",
 			width: 720,
 			height: 880,
+			dragDrop: [{dragSelector: ".item", dropSelector: null}],
 			tabs: [{
 				contentSelector: ".sheet-body",
 				initial: "abilities",
@@ -395,7 +396,7 @@ export default class ACActorSheet extends ActorSheet {
 			const item = this.actor.items.get(li.data("itemId"));
 			let data = {};
 			data[keyToChange] = newValue;
-			let updatedItem = { _id: item.id, data: data };
+			let updatedItem = { _id: item.id, system: data };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -470,7 +471,7 @@ export default class ACActorSheet extends ActorSheet {
 			let newQuantity = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { ammo: newQuantity } };
+			let updatedItem = { _id: item.id, system: { ammo: newQuantity } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -479,7 +480,7 @@ export default class ACActorSheet extends ActorSheet {
 			let newQuantity = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { resources: newQuantity } };
+			let updatedItem = { _id: item.id, system: { resources: newQuantity } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -488,7 +489,7 @@ export default class ACActorSheet extends ActorSheet {
 			let newQuantity = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { quantity: newQuantity } };
+			let updatedItem = { _id: item.id, system: { quantity: newQuantity } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
