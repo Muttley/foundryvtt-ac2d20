@@ -201,6 +201,7 @@ AC2D20.TEMPLATES.Encumbrance: Udźwig
 AC2D20.TEMPLATES.ENG: PL
 AC2D20.TEMPLATES.equipped: Wyposażony
 AC2D20.TEMPLATES.Experience: Doświadczenie
+AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: Ulubione bronie
 AC2D20.TEMPLATES.FIRE_RATE: Szybkostrzelność
 AC2D20.TEMPLATES.Focus: Biegłość
@@ -278,6 +279,7 @@ AC2D20.TEMPLATES.Successes: Sukces
 AC2D20.TEMPLATES.Talents: Talenty
 AC2D20.TEMPLATES.TN: CEL
 AC2D20.TEMPLATES.Total: Suma
+AC2D20.TEMPLATES.TotalExperienceEarned: Total Experience Earned
 AC2D20.TEMPLATES.Truths: Fakty
 AC2D20.TEMPLATES.Use_Agility: Użyj zręczności
 AC2D20.TEMPLATES.Use_Brawn: Użyj krzepy
