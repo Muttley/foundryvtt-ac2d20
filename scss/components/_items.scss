@@ -30,7 +30,8 @@
 /* ----------------------------------------- */
 // Child lists
 .item-list {
-	.item {
+	.item,
+	.skill {
 		margin: 0;
 
 		.effect-name {
@@ -63,7 +64,8 @@
 		padding: 0;
 	}
 
-	.item {
+	.item,
+	.skill {
 		padding: 0.313rem;
 
 		.main-row {
@@ -84,11 +86,13 @@
 		}
 	}
 
-	.item:nth-child(odd) {
+	.item:nth-child(odd),
+	.skill:nth-child(odd) {
 		background: color.adjust(colors.$c-light, $lightness: 0%)
 	}
 
-	.item:nth-child(even) {
+	.item:nth-child(even),
+	.skill:nth-child(even) {
 		background: color.adjust(colors.$c-light, $lightness: 5%)
 	}
 

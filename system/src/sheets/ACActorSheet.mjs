@@ -125,6 +125,55 @@ export default class ACActorSheet extends ActorSheet {
 		);
 	}
 
+	async _onDropItem(event, data) {
+		if ( !this.actor.isOwner ) return false;
+
+		const droppedItem = data?.uuid ? await fromUuid(data.uuid) : null;
+		const type = droppedItem.type;
+
+		// Don't do anything if this actor cannot own the dropped item
+		//
+		switch (this.actor.type) {
+			case "character": {
+				if (type === "special_rule") return;
+				break;
+			}
+			case "npc": {
+				if ([
+					"armor",
+					"equipment",
+					"skillkit",
+					"talent",
+					"weapon",
+				].includes(type)) return;
+				break;
+			}
+			case "vehicle": {
+				if ([
+					"armor",
+					"equipment",
+					"skill",
+					"skillkit",
+					"special_rule",
+					"spell",
+					"talent",
+					"weapon",
+				].includes(type)) return;
+				break;
+			}
+		}
+
+		const item = await Item.implementation.fromDropData(data);
+		const itemData = item.toObject();
+
+		if (item.parent !== null) {
+			if (item.parent.isOwner) item.delete();
+		}
+
+		return this._onDropItemCreate(itemData);
+	}
+
+
 	/**
      * Organize and classify Items for Character sheets.
      *

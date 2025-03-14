@@ -1,6 +1,7 @@
 ## v11.6.4
 
 ### Enhancement
+- [#126] Allow items on Actor sheets to be dragged/dropped
 - [#128] Add extra number field to Experience to track total XP earned
 
 ### Bugfix
