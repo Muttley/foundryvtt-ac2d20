@@ -55,7 +55,12 @@
 				</div>
 				<div class="cell f3 roll-weapon clickable focus-name align-center">
 					<i class="fas fa-dice-d20"></i>
-					&nbsp;{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+					&nbsp;
+					{{#if this.system.focus}}
+						{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+					{{else}}
+						&mdash;
+					{{/if}}
 				</div>
 				<div class="cell f2 align-center">
 					{{localize (concat 'AC2D20.RANGE.' this.system.range)}}

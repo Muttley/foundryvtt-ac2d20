@@ -134,9 +134,13 @@
 						</span>
 						<div class="skill-focuses">
 							<span class="skill-focus focus-name" data-item-id="{{this._id}}">
-								<strong>
-									{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
-								</strong>
+								{{#if this.system.focus}}
+									<strong>
+										{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+									</strong>
+								{{else}}
+									&mdash;
+								{{/if}}
 								|&nbsp;
 							</span>
 							{{> actor/_shared-partials/weapon-details-hint

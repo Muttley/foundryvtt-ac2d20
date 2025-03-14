@@ -114,6 +114,18 @@
 			"flags": {}
 		}
 	],
+	"flags": {
+		"hotReload": {
+			"extensions": [
+				"css", "hbs", "json"
+			],
+			"paths": [
+				"css",
+				"i18n",
+				"templates"
+			]
+		}
+	},
 	"socket": true,
 	"url": "https://github.com/Muttley/foundryvtt-ac2d20",
 	"manifest": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/system.json",
