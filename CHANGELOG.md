@@ -1,5 +1,8 @@
 ## v11.6.4
 
+### Enhancement
+- [#128] Add extra number field to Experience to track total XP earned
+
 ### Bugfix
 - [#127] Truths on Actor sheets edits cannot be saved
 - [#132] Added Venomous weapon quality

@@ -37,6 +37,7 @@
 					"log": [],
 					"min": 0,
 					"spent": 0,
+					"total": 0,
 					"value": 0
 				}
 			},
