@@ -14,6 +14,7 @@ export default class ACActorSheet extends ActorSheet {
 			template: "systems/ac2d20/templates/actor/actor-sheet.hbs",
 			width: 720,
 			height: 880,
+			dragDrop: [{dragSelector: ".item", dropSelector: null}],
 			tabs: [{
 				contentSelector: ".sheet-body",
 				initial: "abilities",
@@ -123,6 +124,55 @@ export default class ACActorSheet extends ActorSheet {
 			(a, b) => a.label.localeCompare(b.label)
 		);
 	}
+
+	async _onDropItem(event, data) {
+		if ( !this.actor.isOwner ) return false;
+
+		const droppedItem = data?.uuid ? await fromUuid(data.uuid) : null;
+		const type = droppedItem.type;
+
+		// Don't do anything if this actor cannot own the dropped item
+		//
+		switch (this.actor.type) {
+			case "character": {
+				if (type === "special_rule") return;
+				break;
+			}
+			case "npc": {
+				if ([
+					"armor",
+					"equipment",
+					"skillkit",
+					"talent",
+					"weapon",
+				].includes(type)) return;
+				break;
+			}
+			case "vehicle": {
+				if ([
+					"armor",
+					"equipment",
+					"skill",
+					"skillkit",
+					"special_rule",
+					"spell",
+					"talent",
+					"weapon",
+				].includes(type)) return;
+				break;
+			}
+		}
+
+		const item = await Item.implementation.fromDropData(data);
+		const itemData = item.toObject();
+
+		if (item.parent !== null) {
+			if (item.parent.isOwner) item.delete();
+		}
+
+		return this._onDropItemCreate(itemData);
+	}
+
 
 	/**
      * Organize and classify Items for Character sheets.
@@ -395,7 +445,7 @@ export default class ACActorSheet extends ActorSheet {
 			const item = this.actor.items.get(li.data("itemId"));
 			let data = {};
 			data[keyToChange] = newValue;
-			let updatedItem = { _id: item.id, data: data };
+			let updatedItem = { _id: item.id, system: data };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -470,7 +520,7 @@ export default class ACActorSheet extends ActorSheet {
 			let newQuantity = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { ammo: newQuantity } };
+			let updatedItem = { _id: item.id, system: { ammo: newQuantity } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -479,7 +529,7 @@ export default class ACActorSheet extends ActorSheet {
 			let newQuantity = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { resources: newQuantity } };
+			let updatedItem = { _id: item.id, system: { resources: newQuantity } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -488,7 +538,7 @@ export default class ACActorSheet extends ActorSheet {
 			let newQuantity = parseInt($(ev.currentTarget).val());
 			const li = $(ev.currentTarget).parents(".item");
 			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, data: { quantity: newQuantity } };
+			let updatedItem = { _id: item.id, system: { quantity: newQuantity } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
@@ -760,14 +810,14 @@ export default class ACActorSheet extends ActorSheet {
 	}
 
 	async _onTruthEdit(data) {
-		const actorId = this.actor._id;
+		const actorUuid = this.actor.uuid;
 
 		const currentTruths = foundry.utils.duplicate(this.actor.system.truths);
 
 		const index = data.truthIndex;
 		const truth = currentTruths[index];
 
-		ac2d20.dialogs.DialogEditTruth.createDialog({actorId, index, truth});
+		ac2d20.dialogs.DialogEditTruth.createDialog({actorUuid, index, truth});
 	}
 
 

@@ -1,3 +1,25 @@
+## v11.6.4
+
+### Enhancement
+- [#126] Allow items on Actor sheets to be dragged/dropped
+- [#128] Add extra number field to Experience to track total XP earned
+
+### Bugfix
+- [#125] Don't display partial i18n string key on Actor sheets when no focus has been set on a weapon
+- [#127] Truths on Actor sheets edits cannot be saved
+- [#132] Added Venomous weapon quality
+- [#136] The number of ammunition and items in the gear section of the character sheet cannot be edited
+- [#137] Added Precise weapon quality
+
+### Chores
+- [#133] Merge new Polish and Portuguese/Brazilian translation updates from Crowdin
+- [#138] Accessing the global "Die" which is now namespaced under foundry.dice.terms.Die
+- [#139] Fix deprecation warnings with latest SASS module version
+
+*Many thanks to **lozanoje** for their contributions to this release*
+
+---
+
 ## v11.6.3
 
 ### Enhancement

@@ -201,6 +201,7 @@ AC2D20.TEMPLATES.Encumbrance: Encumbrance
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: equipped
 AC2D20.TEMPLATES.Experience: Experience
+AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: FAVORITE WEAPONS
 AC2D20.TEMPLATES.FIRE_RATE: FIRE RATE
 AC2D20.TEMPLATES.Focus: Focus
@@ -278,6 +279,7 @@ AC2D20.TEMPLATES.Successes: Successes
 AC2D20.TEMPLATES.Talents: Talents
 AC2D20.TEMPLATES.TN: TN
 AC2D20.TEMPLATES.Total: Total
+AC2D20.TEMPLATES.TotalExperienceEarned: Total Experience Earned
 AC2D20.TEMPLATES.Truths: Truths
 AC2D20.TEMPLATES.Use_Agility: Use Agility
 AC2D20.TEMPLATES.Use_Brawn: Use Brawn
@@ -405,9 +407,11 @@ AC2D20.Tooltips.WeaponQuality.inaccurate: You cannot benefit from the Aim minor 
 AC2D20.Tooltips.WeaponQuality.indirect: The weapon is not designed for direct fire, instead dropping its payload upon enemies over great distances. Attacks with the weapon increase in difficulty by +1, but do not require line of sight.
 AC2D20.Tooltips.WeaponQuality.munition: The ammunition for this weapon is especially bulky—when you make an attack using a Munition weapon you must use 1 ammo. The weapon cannot be used to make salvo attacks.
 AC2D20.Tooltips.WeaponQuality.parrying: When the weapon’s wielder makes an opposed test in defence of a melee attack, they may reroll a single d20 on their test. This does not stack if the character has multiple Parrying weapons.
+AC2D20.Tooltips.WeaponQuality.precise: Attacks with this weapon use Coordination rather than any other attribute when generating additional @s.
 AC2D20.Tooltips.WeaponQuality.reliable: You may ignore the first complication rolled using this weapon in an action scene.
 AC2D20.Tooltips.WeaponQuality.subtle: Attacks with this weapon are difficult to hear, requiring a difficulty 2 <strong>Insight + Observation</strong> test to notice. The GM may adjust this difficulty based on distance and ambient noise.
 AC2D20.Tooltips.WeaponQuality.unreliable: Attacks with this weapon increase the test’s complication range by 1.
+AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
 AC2D20.UI.Add: Add
 AC2D20.UI.CarryWeight: Carry Weight
 AC2D20.UI.Cost: Cost
@@ -463,9 +467,11 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Inaccurate
 AC2D20.WEAPONS.weaponQuality.indirect: Indirect
 AC2D20.WEAPONS.weaponQuality.munition: Munition
 AC2D20.WEAPONS.weaponQuality.parrying: Parrying
+AC2D20.WEAPONS.weaponQuality.precise: Precise
 AC2D20.WEAPONS.weaponQuality.reliable: Reliable
 AC2D20.WEAPONS.weaponQuality.subtle: Subtle
 AC2D20.WEAPONS.weaponQuality.unreliable: Unreliable
+AC2D20.WEAPONS.weaponQuality.venomous: Venomous
 AC2D20.WEAPONS.weaponTypes.agi: Melee
 AC2D20.WEAPONS.weaponTypes.coo: Ranged
 AC2D20.WEAPONS.weaponTypes.Melee: Melee

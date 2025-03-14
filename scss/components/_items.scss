@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../utils/colors";
+
 // Section Header
 .items-header {
 	height: 28px;
@@ -5,7 +8,7 @@
 	padding: 0;
 	align-items: center;
 	background: rgba(0, 0, 0, 0.05);
-	border: $c-green-light;
+	border: colors.$c-green-light;
 	font-weight: bold;
 
 	> * {
@@ -27,7 +30,8 @@
 /* ----------------------------------------- */
 // Child lists
 .item-list {
-	.item {
+	.item,
+	.skill {
 		margin: 0;
 
 		.effect-name {
@@ -60,7 +64,8 @@
 		padding: 0;
 	}
 
-	.item {
+	.item,
+	.skill {
 		padding: 0.313rem;
 
 		.main-row {
@@ -81,12 +86,14 @@
 		}
 	}
 
-	.item:nth-child(odd) {
-		background: lighten($c-light, 0%)
+	.item:nth-child(odd),
+	.skill:nth-child(odd) {
+		background: color.adjust(colors.$c-light, $lightness: 0%)
 	}
 
-	.item:nth-child(even) {
-		background: lighten($c-light, 5%)
+	.item:nth-child(even),
+	.skill:nth-child(even) {
+		background: color.adjust(colors.$c-light, $lightness: 5%)
 	}
 
 
@@ -115,10 +122,10 @@
 }
 
 .item-control {
-	color: $c-green-olive;
+	color: colors.$c-green-olive;
 
 	&.blue {
-		color: $c-blue-dark;
+		color: colors.$c-blue-dark;
 	}
 
 	margin-right: 3px;

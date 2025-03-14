@@ -2,7 +2,7 @@
 	"id": "ac2d20",
 	"title": "Achtung! Cthulhu 2d20",
 	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
-	"version": "11.6.3",
+	"version": "11.6.4",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "12"
@@ -114,6 +114,18 @@
 			"flags": {}
 		}
 	],
+	"flags": {
+		"hotReload": {
+			"extensions": [
+				"css", "hbs", "json"
+			],
+			"paths": [
+				"css",
+				"i18n",
+				"templates"
+			]
+		}
+	},
 	"socket": true,
 	"url": "https://github.com/Muttley/foundryvtt-ac2d20",
 	"manifest": "https://github.com/Muttley/foundryvtt-ac2d20/releases/latest/download/system.json",

@@ -1,3 +1,6 @@
+@use "../global/typography" as *;
+@use "../utils/colors";
+
 .window-app {
 	font-family: $font-primary;
 
@@ -10,12 +13,12 @@
 button {
 	font-family: $font-germania;
 	font-size: 16px;
-	color: $c-green-olive;
-	background-color: $c-beige;
+	color: colors.$c-green-olive;
+	background-color: colors.$c-beige;
 
 	&:hover {
 		//text-shadow: 0 0 10px $c-green-light;
-		box-shadow: 0 0 5px $c-green-light;
+		box-shadow: 0 0 5px colors.$c-green-light;
 		cursor: pointer;
 	}
 }
@@ -41,12 +44,12 @@ input[type="number"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
 input[type="time"]:focus {
-	box-shadow: 0 0 5px $c-green-light;
+	box-shadow: 0 0 5px colors.$c-green-light;
 }
 
 a {
 	&:hover {
-		text-shadow: 0 0 10px $c-green-olive;
+		text-shadow: 0 0 10px colors.$c-green-olive;
 		cursor: pointer;
 	}
 }
@@ -56,7 +59,7 @@ a {
 	&:hover,
 	&:focus {
 		color: #000;
-		text-shadow: 0 0 10px $c-green-light;
+		text-shadow: 0 0 10px colors.$c-green-light;
 		cursor: pointer;
 	}
 }
@@ -76,19 +79,19 @@ a {
 	.resource {
 		margin: 0 2px 5px;
 		padding: 0 5px 0 0;
-		background-color: $c-green-light;
+		background-color: colors.$c-green-light;
 
 		//border: 1px solid $c-green-light ;
 		.title-label {
 			padding: 5px;
 			font-family: $font-germania;
 			font-size: 1rem;
-			color: $c-white;
+			color: colors.$c-white;
 		}
 
 		input[type="number"] {
 			text-align: center;
-			background-color: $c-beige;
+			background-color: colors.$c-beige;
 		}
 	}
 
@@ -111,13 +114,13 @@ a {
 				background-repeat: no-repeat;
 				background-size: 32px 32px;
 				font-size: 16px;
-				color: $c-light;
+				color: colors.$c-light;
 				font-weight: bold;
 				text-align: center;
 				background-image: url(../assets/chat/d20-green-light.svg);
 
 				&.marked {
-					color: $c-light;
+					color: colors.$c-light;
 					background-image: url(../assets/chat/d20-olive.svg);
 				}
 			}
@@ -148,7 +151,7 @@ a {
 		.success-plaq {
 			margin: 0 0 5px 0;
 			font-family: $font-germania;
-			color: $c-green-olive;
+			color: colors.$c-green-olive;
 			//padding: 10px;
 			font-size: 16px;
 
@@ -165,7 +168,7 @@ a {
 		.complication-plaq {
 			margin: 0 0 5px 0;
 			font-family: $font-germania;
-			color: $c-red-dark;
+			color: colors.$c-red-dark;
 			//padding: 14px 10px 10px 10px;
 			//font-size: 12px;
 			//background-image: url(../assets/chat/red-placq.webp);

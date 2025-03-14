@@ -122,7 +122,8 @@ export default class Combat2d20 extends Combat {
 			return 0;
 		});
 
-		if ( this.turn !== null) this.turn = Math.clamped(this.turn, 0, turns.length - 1);
+		if (this.turn !== null) this.turn =
+			Math.clamped(this.turn, 0, turns.length - 1);
 
 		// Update state tracking
 		let c = turns[this.turn];
@@ -134,7 +135,7 @@ export default class Combat2d20 extends Combat {
 		};
 
 		// One-time initialization of the previous state
-		if ( !this.previous ) this.previous = this.current;
+		if (!this.previous) this.previous = this.current;
 
 		// Return the array of prepared turns
 		return this.turns = turns;

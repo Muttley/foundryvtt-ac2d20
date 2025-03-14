@@ -73,9 +73,11 @@ AC2D20.WEAPON_QUALITIES = {
 	indirect: "AC2D20.WEAPONS.weaponQuality.indirect",
 	munition: "AC2D20.WEAPONS.weaponQuality.munition",
 	parrying: "AC2D20.WEAPONS.weaponQuality.parrying",
+	precise: "AC2D20.WEAPONS.weaponQuality.precise",
 	reliable: "AC2D20.WEAPONS.weaponQuality.reliable",
 	subtle: "AC2D20.WEAPONS.weaponQuality.subtle",
 	unreliable: "AC2D20.WEAPONS.weaponQuality.unreliable",
+	venomous: "AC2D20.WEAPONS.weaponQuality.venomous",
 };
 
 AC2D20.WEAPONS = {

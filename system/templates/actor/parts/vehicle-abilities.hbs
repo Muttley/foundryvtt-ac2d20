@@ -1,4 +1,4 @@
-<div class="grid grid-3col">
+<div class="grid-3-columns">
 	<div>
 		<div class="label-number-box">
 			<label>{{localize 'AC2D20.TEMPLATES.scale'}}</label>
@@ -63,7 +63,7 @@
 </div>
 
 
-<div class="grid grid-3col">
+<div class="grid-3-columns">
 	<div>
 		<span class="flexrow" style="align-items: center; padding: 0.313rem; border: 1px solid #759549;">
 			<label for="">{{localize "ACTOR.Vehicle.Passengers"}}: </label>
@@ -85,7 +85,7 @@
 </div>
 
 
-<div class="grid" style="gap: 1.25rem; margin-bottom: 1.25rem;">
+<div class="grid-2-columns">
 	<div>
 		<div class="section-title">
 			<h3 class="">{{localize "AC2D20.WEAPONS.qualities"}}</h3>
@@ -154,9 +154,13 @@
 					</span>
 					<div class="skill-focuses">
 						<span class="skill-focus focus-name" data-item-id="{{this._id}}">
-							<strong>
-								{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
-							</strong>
+							{{#if this.system.focus}}
+								<strong>
+									{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+								</strong>
+							{{else}}
+								&mdash;
+							{{/if}}
 							|&nbsp;
 						</span>
 						{{> actor/_shared-partials/weapon-details-hint

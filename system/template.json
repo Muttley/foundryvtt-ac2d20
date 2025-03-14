@@ -37,6 +37,7 @@
 					"log": [],
 					"min": 0,
 					"spent": 0,
+					"total": 0,
 					"value": 0
 				}
 			},
@@ -382,6 +383,9 @@
 				"parrying": {
 					"value": false
 				},
+				"precise": {
+					"value": false
+				},
 				"reliable": {
 					"value": false
 				},
@@ -389,6 +393,9 @@
 					"value": false
 				},
 				"unreliable": {
+					"value": false
+				},
+				"venomous": {
 					"value": false
 				}
 			},

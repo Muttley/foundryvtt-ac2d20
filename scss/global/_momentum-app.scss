@@ -1,3 +1,6 @@
+@use "../global/typography" as *;
+@use "../utils/colors";
+
 .ac2d20.momentum-tracker {
 	position: absolute;
 	display: block;
@@ -21,15 +24,15 @@
 
 		//color: white;
 		&.gm {
-			background-color: $c-green-olive;
+			background-color: colors.$c-green-olive;
 		}
 
 		&.party {
-			background-color: $c-green-light;
+			background-color: colors.$c-green-light;
 		}
 
 		&.maxMomentum-box {
-			background-color: $c-green-olive;
+			background-color: colors.$c-green-olive;
 		}
 
 		.toggle-maxAp {

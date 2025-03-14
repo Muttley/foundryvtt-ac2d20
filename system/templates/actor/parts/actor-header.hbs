@@ -87,7 +87,23 @@
 				<div class="section-title">
 					<h3>{{localize "AC2D20.TEMPLATES.Experience"}}</h3>
 				</div>
-				<input class="num-short-3" type="number" min="0" name="system.xp.value" value="{{system.xp.value}}">
+				<input
+					class="num-short-3"
+					data-tooltip="{{localize "AC2D20.TEMPLATES.ExperienceAvailable"}}"
+					min="0"
+					name="system.xp.value"
+					type="number"
+					value="{{system.xp.value}}"
+				>
+				<h3 class="minmax">/</h3>
+				<input
+					class="num-short-3"
+					data-tooltip="{{localize "AC2D20.TEMPLATES.TotalExperienceEarned"}}"
+					min="0"
+					name="system.xp.total"
+					type="number"
+					value="{{system.xp.total}}"
+				>
 			</div>
 		</div>
 	</div>

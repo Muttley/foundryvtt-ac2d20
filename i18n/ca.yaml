@@ -201,6 +201,7 @@ AC2D20.TEMPLATES.Encumbrance: Càrrega
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: Equipat
 AC2D20.TEMPLATES.Experience: Experiència
+AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMES PREFERIDES
 AC2D20.TEMPLATES.FIRE_RATE: CADÈNCIA DE FOC
 AC2D20.TEMPLATES.Focus: Especialitat
@@ -278,6 +279,7 @@ AC2D20.TEMPLATES.Successes: Èxits
 AC2D20.TEMPLATES.Talents: Talents
 AC2D20.TEMPLATES.TN: TN
 AC2D20.TEMPLATES.Total: Total
+AC2D20.TEMPLATES.TotalExperienceEarned: Total Experience Earned
 AC2D20.TEMPLATES.Truths: Veritats
 AC2D20.TEMPLATES.Use_Agility: Usar Agilitat
 AC2D20.TEMPLATES.Use_Brawn: Usar Múscul
@@ -405,9 +407,11 @@ AC2D20.Tooltips.WeaponQuality.inaccurate: No pots beneficiar-te de l'acció meno
 AC2D20.Tooltips.WeaponQuality.indirect: L'arma no està dissenyada per al tir directe, sinó per deixar caure la seva càrrega sobre enemics a grans distàncies. Els atacs amb l'arma incrementen la dificultat en +1, però no requereixen línia de visió.
 AC2D20.Tooltips.WeaponQuality.munition: La munició per a aquesta arma és especialment voluminosa —quan fas un atac utilitzant una arma de Munició, has d'utilitzar 1 munició. L'arma no es pot utilitzar per fer atacs de salva.
 AC2D20.Tooltips.WeaponQuality.parrying: Quan el portador de l'arma fa una prova oposada en defensa d'un atac en melee, pot tirar de nou un d20 en la seva prova. Això no s'acumula si el personatge té armes de Parrying múltiples.
+AC2D20.Tooltips.WeaponQuality.precise: Attacks with this weapon use Coordination rather than any other attribute when generating additional @s.
 AC2D20.Tooltips.WeaponQuality.reliable: Pots ignorar la primera complicació tirada utilitzant aquesta arma en una escena d'acció.
 AC2D20.Tooltips.WeaponQuality.subtle: Els atacs amb aquesta arma són difícils d'escoltar, requereixen una prova de dificultat 2 d'<strong>Insight + Observació</strong> per ser notats. El GM pot ajustar aquesta dificultat en funció de la distància i el soroll ambiental.
 AC2D20.Tooltips.WeaponQuality.unreliable: Els atacs amb aquesta arma incrementen la gamma de complicacions de la prova en 1.
+AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
 AC2D20.UI.Add: Afegir
 AC2D20.UI.CarryWeight: Pes carregat
 AC2D20.UI.Cost: Cost
@@ -463,9 +467,11 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Imprecís
 AC2D20.WEAPONS.weaponQuality.indirect: Indirecte
 AC2D20.WEAPONS.weaponQuality.munition: Munició
 AC2D20.WEAPONS.weaponQuality.parrying: Parada
+AC2D20.WEAPONS.weaponQuality.precise: Precise
 AC2D20.WEAPONS.weaponQuality.reliable: Fiable
 AC2D20.WEAPONS.weaponQuality.subtle: Subtil
 AC2D20.WEAPONS.weaponQuality.unreliable: Defectuós
+AC2D20.WEAPONS.weaponQuality.venomous: Venomous
 AC2D20.WEAPONS.weaponTypes.agi: Cos a cos
 AC2D20.WEAPONS.weaponTypes.coo: Distància
 AC2D20.WEAPONS.weaponTypes.Melee: Cos a cos

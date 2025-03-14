@@ -23,6 +23,9 @@ jobs:
     - name: Install Dependencies
       run: npm ci
 
+    - name: Build Generated Docs
+      run: npm run docs
+
     - name: Build
       run: |
         npm run build
@@ -41,6 +44,7 @@ jobs:
         allowUpdates: false
         artifacts: './system/system.json, ./ac2d20.zip'
         draft: false
+        makeLatest: false
         name: release-${{ env.systemVersion }}
         prerelease: true
         tag: release-${{ env.systemVersion }}

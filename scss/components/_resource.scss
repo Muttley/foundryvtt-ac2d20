@@ -1,13 +1,16 @@
+@use "sass:color";
+@use "../utils/colors";
+
 input[type="text"],
 input[type="number"] {
-	background-color: $c-light;
-	color: $c-dark;
+	background-color: colors.$c-light;
+	color: colors.$c-dark;
 
 	&.underline {
 		background-color: unset;
 		border: unset;
-		border-bottom: 1px solid $c-dark;
-		color: $c-dark;
+		border-bottom: 1px solid colors.$c-dark;
+		color: colors.$c-dark;
 
 		&::placeholder {
 			color: #999;
@@ -40,12 +43,12 @@ input[type="number"] {
 	}
 
 	&.active {
-		color: $c-light;
-		background-color: $c-green-light;
+		color: colors.$c-light;
+		background-color: colors.$c-green-light;
 
 		&:hover {
-			color: $c-white;
-			background-color: $c-green-olive;
+			color: colors.$c-white;
+			background-color: colors.$c-green-olive;
 		}
 	}
 
@@ -58,8 +61,8 @@ input[type="number"] {
 
 	&.green-field {
 		padding: 5px;
-		background-color: $c-green-olive;
-		color: $c-light;
+		background-color: colors.$c-green-olive;
+		color: colors.$c-light;
 	}
 }
 
@@ -68,8 +71,8 @@ input[type="number"] {
 }
 
 select {
-	color: $c-dark;
-	background-color: darken($c-light, 10%);
+	color: colors.$c-dark;
+	background-color: color.adjust(colors.$c-light, $lightness: -10%);
 }
 
 .upperC {

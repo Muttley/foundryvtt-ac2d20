@@ -1,4 +1,4 @@
-<div class="grid grid-3col">
+<div class="grid-3-columns">
 	<div>
 		{{#each system.attributes as |attribute key|}}
 		<div class="label-number-box blue">
@@ -59,7 +59,7 @@
 	</div>
 </div>
 
-<div class="grid" style="gap: 1.25rem; margin-bottom: 1.25rem;">
+<div class="grid-2-columns">
 	<div>
 		<div style="margin-bottom: 2rem;">
 			<div class="section-title">
@@ -68,7 +68,7 @@
 			</div>
 			<ul class="items-list-npc">
 				{{#each skills as |item key|}}
-				<li class="item editable-item" data-item-id="{{item._id}}">
+				<li class="skill editable-item" data-item-id="{{item._id}}">
 					<span class="main-row">
 						<label
 							class="item-name clickable roll-skill"
@@ -134,9 +134,13 @@
 						</span>
 						<div class="skill-focuses">
 							<span class="skill-focus focus-name" data-item-id="{{this._id}}">
-								<strong>
-									{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
-								</strong>
+								{{#if this.system.focus}}
+									<strong>
+										{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+									</strong>
+								{{else}}
+									&mdash;
+								{{/if}}
 								|&nbsp;
 							</span>
 							{{> actor/_shared-partials/weapon-details-hint
