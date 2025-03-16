@@ -144,7 +144,6 @@ export default class ACActorSheet extends ActorSheet {
 					"equipment",
 					"skillkit",
 					"talent",
-					"weapon",
 				].includes(type)) return;
 				break;
 			}
@@ -157,7 +156,6 @@ export default class ACActorSheet extends ActorSheet {
 					"special_rule",
 					"spell",
 					"talent",
-					"weapon",
 				].includes(type)) return;
 				break;
 			}

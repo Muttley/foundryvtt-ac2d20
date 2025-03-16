@@ -1,3 +1,10 @@
+## v11.6.5
+
+### Bugfix
+- [#144] Can't drag and drop weapons to NPCs and Vehicles
+
+---
+
 ## v11.6.4
 
 ### Enhancement
