@@ -1,3 +1,10 @@
+## v11.7.0
+
+### Chores
+- [#147] Merge new Portuguese/Brazilian translation updates from Crowdin
+
+---
+
 ## v11.6.5
 
 ### Bugfix
