@@ -49,7 +49,7 @@ AC2D20.FOCUS.Disguise: Disguise
 AC2D20.FOCUS.Electronics: Electronics
 AC2D20.FOCUS.Exotic: Armi Insolite
 AC2D20.FOCUS.Explosives: Explosives
-AC2D20.FOCUS.Finance: Finance
+AC2D20.FOCUS.Finance: Finanza
 AC2D20.FOCUS.First Aid: First Aid
 AC2D20.FOCUS.Foraging: Foraging
 AC2D20.FOCUS.Fortitude: Fortitude
@@ -101,7 +101,7 @@ AC2D20.INJURIES.mental: Mental
 AC2D20.INJURIES.nottreated: Not treated
 AC2D20.INJURIES.physical: Fisico
 AC2D20.INJURIES.treated: Treated
-AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
+AC2D20.MIGRATION.begin_migration: Aggiornamento dati per Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.completed_schema: Completed applying updates for Achtung! Cthulhu 2d20 schema v{version}
@@ -207,7 +207,7 @@ AC2D20.TEMPLATES.FIRE_RATE: FIRE RATE
 AC2D20.TEMPLATES.Focus: Focus
 AC2D20.TEMPLATES.fortune: Fortune
 AC2D20.TEMPLATES.Gear: Gear
-AC2D20.TEMPLATES.GENERAL: GENERAL
+AC2D20.TEMPLATES.GENERAL: GENERALE
 AC2D20.TEMPLATES.GM_MOMENTUM: GM Threat
 AC2D20.TEMPLATES.Healthy: Healthy
 AC2D20.TEMPLATES.HP_Healed: HP Healed
@@ -259,7 +259,7 @@ AC2D20.TEMPLATES.Salvo: Salvo
 AC2D20.TEMPLATES.SAVE: SAVE
 AC2D20.TEMPLATES.scale: Scala
 AC2D20.TEMPLATES.Size: Size
-AC2D20.TEMPLATES.SizeLevels.Major: Major
+AC2D20.TEMPLATES.SizeLevels.Major: Maggiore
 AC2D20.TEMPLATES.SizeLevels.Minor: Minor
 AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
 AC2D20.TEMPLATES.Skill_Focus: Skill Focus
