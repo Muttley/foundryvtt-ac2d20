@@ -155,7 +155,7 @@ AC2D20.Spellcasting.traditional: traditional
 AC2D20.STRESS.current: Current Stress
 AC2D20.STRESS.max: Max Stress
 AC2D20.STRESS.stress:
-AC2D20.TEMPLATES.Abilities: Abilities
+AC2D20.TEMPLATES.Abilities: Abilità
 AC2D20.TEMPLATES.ADD: ADD
 AC2D20.TEMPLATES.AddFocus: Add Focus
 AC2D20.TEMPLATES.AddTruth: Add Truth
@@ -198,7 +198,7 @@ AC2D20.TEMPLATES.Effects: Effects
 AC2D20.TEMPLATES.Encumbered: ENCUMBERED
 AC2D20.TEMPLATES.Encumbrance_Level: Encumbrance Level
 AC2D20.TEMPLATES.Encumbrance: Encumbrance
-AC2D20.TEMPLATES.ENG: ENG
+AC2D20.TEMPLATES.ENG: ITA
 AC2D20.TEMPLATES.equipped: equipped
 AC2D20.TEMPLATES.Experience: Experience
 AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
@@ -257,7 +257,7 @@ AC2D20.TEMPLATES.Ritual: Ritual
 AC2D20.TEMPLATES.Roll_Formula: Roll Formula
 AC2D20.TEMPLATES.Salvo: Salvo
 AC2D20.TEMPLATES.SAVE: SAVE
-AC2D20.TEMPLATES.scale: Scale
+AC2D20.TEMPLATES.scale: Scala
 AC2D20.TEMPLATES.Size: Size
 AC2D20.TEMPLATES.SizeLevels.Major: Major
 AC2D20.TEMPLATES.SizeLevels.Minor: Minor
@@ -293,10 +293,10 @@ AC2D20.TEMPLATES.Weapons: Weapons
 AC2D20.Tooltips.Attribute.agi: Agility is a mixture of speed, balance, and muscle memory, and is responsible for a character’s movement and dexterity. An agile character is quick, moving with certainty and precision.
 AC2D20.Tooltips.Attribute.bra: Brawn is the character’s physical fitness and endurance. A brawny character is strong and hardy.
 AC2D20.Tooltips.Attribute.coo: Coordination is a measure of your fine motor skills, accuracy, and sense of timing. Coordinated characters are good shots, good drivers and pilots, and excel at sleight of hand and other delicate, precise tasks.
-AC2D20.Tooltips.Attribute.ins: Insight is your perception, instincts, and your ability to comprehend the world around you. Insightful characters are observant, shrewd, ‘street smart’, and wise.
-AC2D20.Tooltips.Attribute.rea: Reason is the ability to apply logic, intellect, and learned facts to a situation. Characters who have high reasoning skills tend to be lucid, rational or contemplative, and driven by a need to learn or understand.
+AC2D20.Tooltips.Attribute.ins: La Consapevolezza è la tua percezione, istinto, e la tua capacità di comprendere il mondo che ti circonda. I personaggi intuitivi sono osservatori scrupolosi, “gente di strada” e saggi.
+AC2D20.Tooltips.Attribute.rea: L'Intelletto è la capacità di applicare la logica, ragione e i fatti appresi a una situazione. I personaggi che hanno elevate abilità di ragionamento tendono ad essere lucidi, razionali o contemplativi, e spinti dalla necessità di imparare e capire.
 AC2D20.Tooltips.Attribute.wil: Will is your sense of self, mental strength, and sense of self-discipline. Wilful characters tend to be single-minded, stubborn, and have forceful personalities.
-AC2D20.Tooltips.DamageEffect.area: The attack or hazard hits one additional target within Close range of the initial target for every effect rolled. Secondary targets suffer the attack’s full effects.
+AC2D20.Tooltips.DamageEffect.area:
 AC2D20.Tooltips.DamageEffect.backlash_x: Each effect inflicts X stress to the attacker. Injuries may be physical or mental, at the GM’s discretion.
 AC2D20.Tooltips.DamageEffect.drain: The attacker suffers 1 Fatigue for each effect rolled.
 AC2D20.Tooltips.DamageEffect.intense: If the attack inflicts an injury, and an effect is rolled, the attack inflicts an additional injury.
@@ -308,11 +308,11 @@ AC2D20.Tooltips.DamageEffect.vicious: The attack or hazard is especially potent.
 AC2D20.Tooltips.Focus.air-force: Air Force — covers training in fighter and bomber tactics, such as dogfighting, formation flying and navigation, as well as aerial military strategy.
 AC2D20.Tooltips.Focus.aircraft: Aircraft — covers the operation of civilian and military aircraft, both single-engine and multi-engine, propeller-driven planes. Towards the end of the conflict, it also encompasses newer jet engine planes and technology.
 AC2D20.Tooltips.Focus.animal-handling: Animal Handling — covers knowledge about a range of different animals, how they behave, how to act around them, as well as how to train and command them.
-AC2D20.Tooltips.Focus.architecture: Architecture — covers an understanding of how buildings are designed and constructed, their internal and external structure and how their mass is supported and distributed.
+AC2D20.Tooltips.Focus.architecture: Architettura — comprende la comprensione di come gli edifici sono progettati e costruiti, la loro struttura interna ed esterna e come la loro massa è supportata e distribuita.
 AC2D20.Tooltips.Focus.army: Army — covers familiarity with military strategy and tactics for infantry, as well as mechanized ground warfare.
 AC2D20.Tooltips.Focus.art: Art — covers knowledge of individual pieces of art, the study of different artistic techniques and schools of thought, the history of art within different cultures, and its influences upon those cultures.
 AC2D20.Tooltips.Focus.camouflage: Camouflage — covers the use of materials to cover a person, object, or location, hiding it from sight.
-AC2D20.Tooltips.Focus.cars: Cars — covers the operation of civilian and military four-wheeled motor vehicles, up to and including small trucks.
+AC2D20.Tooltips.Focus.cars: Automobili — copre il funzionamento di autoveicoli civili e militari a quattro ruote, piccoli autocarri inclusi.
 AC2D20.Tooltips.Focus.charm: Charm — methods of manipulating others through natural charisma and magnetism.
 AC2D20.Tooltips.Focus.climbing: Climbing — covers scaling sheer surfaces such as walls or cliffs as well as mountaineering.
 AC2D20.Tooltips.Focus.close-quarters: Close Quarters — covers the use of shotguns and sub-machine guns, and similar weapons designed for use at Close range or within tight confines like trenches or buildings.
