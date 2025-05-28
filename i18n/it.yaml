@@ -1,4 +1,4 @@
-AC2D20.Ability.agi: Agility
+AC2D20.Ability.agi: Agilità
 AC2D20.Ability.bra: Brawn
 AC2D20.Ability.coo: Coordination
 AC2D20.Ability.ins: Insight
@@ -353,13 +353,13 @@ AC2D20.Tooltips.Focus.navy: Navy — covers naval strategy and tactics, from sha
 AC2D20.Tooltips.Focus.negotiation: Negotiation — reaching agreement through conversation, possibly involving trade or payment.
 AC2D20.Tooltips.Focus.occultism: Occultism — covers the study of supernatural and occult phenomena, practices, creatures, and traditions.
 AC2D20.Tooltips.Focus.orienteering: Orienteering — covers the skill of navigating over distance, maintaining a direction, planning a route, and the physical demands of hiking.
-AC2D20.Tooltips.Focus.pharmacology: Pharmacology — covers an understanding of medication, both its uses in treatment, and its side effects.
+AC2D20.Tooltips.Focus.pharmacology: Farmacologia — riguarda la comprensione del farmaco, sia i suoi usi nel trattamento, e i suoi effetti collaterali.
 AC2D20.Tooltips.Focus.physical-training: Physical Training — covers how to train oneself and others.
 AC2D20.Tooltips.Focus.psychiatry: Psychiatry — covers the study and treatment of mental illness.
 AC2D20.Tooltips.Focus.rhetoric: Rhetoric — using language in public speaking or a formal debate, to inform, persuade, motivate or convince others.
 AC2D20.Tooltips.Focus.rifles: Rifles — covers the use of rifles, carbines, and other firearms for use at Medium and longer ranges.
 AC2D20.Tooltips.Focus.running: Running — covers short-distance sprinting and long-distance endurance running.
-AC2D20.Tooltips.Focus.rural-stealth: Rural Stealth — covers techniques for moving silently and remaining unseen in rural environments.
+AC2D20.Tooltips.Focus.rural-stealth: Furtività Rurale — riguarda le tecniche per muoversi silenziosamente e rimanere invisibili negli ambienti rurali.
 AC2D20.Tooltips.Focus.science: Science — covers the scientific method and the various disciplines associated with science, from mathematics, to physics, chemistry, and biology, it also includes more detailed and specific fields of study within these branches.
 AC2D20.Tooltips.Focus.sight: Sight — covers visual perception, providing greater sensitivity when visibility is poor, an ability to reliably pick out details at a distance, and a greater ability to spot small variations or brief movement. Spotters, navigators and bombardiers are particularly well suited to utilising this focus.
 AC2D20.Tooltips.Focus.smell-and-taste: Smell and Taste — covers the ability to detect and discern information from scents and tastes; this is not a commonplace focus for humans, as humans don’t have especially sensitive senses of smell, though it is valuable focus for poisoners, doctors or sommeliers.
@@ -369,12 +369,12 @@ AC2D20.Tooltips.Focus.tanks: Tanks — covers the operation of tanks of all size
 AC2D20.Tooltips.Focus.technical-projects: Technical Projects — covers an understanding of how to divide work and manage team members on a large scientific, engineering, or academic project.
 AC2D20.Tooltips.Focus.threat-awareness: Threat Awareness — covers readiness and detecting danger and the ability to avoid attacks or ambushes.
 AC2D20.Tooltips.Focus.throwing: Throwing — covers throwing objects from Olympicstyle shot putt, javelin, and hammer-throw, to the use of grenades and knives.
-AC2D20.Tooltips.Focus.toxicology: Toxicology — covers the study of toxic substances (poison, venom, and other foreign substances) and their effect upon the body, as well as the means to neutralise or expel them.
+AC2D20.Tooltips.Focus.toxicology:
 AC2D20.Tooltips.Focus.tracking: Tracking — covers the practice of identifying the tracks of a specific animal, person, or group, and following them. It also covers the ability to determine information about them, such as direction, how many there were, their physical state, speed, and other characteristics.
 AC2D20.Tooltips.Focus.urban-stealth: Urban Stealth — covers techniques for moving silently and remaining unseen in urban environments.
-AC2D20.Tooltips.Focus.watercraft: Watercraft — covers the operation of civilian and military boats, submarines, and ships.
-AC2D20.Tooltips.Skill.academia: This skill covers your character’s education and accumulated knowledge, as well as their ability to research unfamiliar subjects. Academia is most useful when trying to study new information or recall facts about a subject.
-AC2D20.Tooltips.Skill.athletics: This skill covers your character’s physical conditioning, and athletic ability. Athletics also covers a character’s attempts to move with haste.
+AC2D20.Tooltips.Focus.watercraft: Imbarcazioni — riguarda le imbarcazioni civili e militari, i sottomarini e le navi.
+AC2D20.Tooltips.Skill.academia: Questa abilità riguarda l'educazione del tuo personaggio e la conoscenza accumulata, così come la capacità di ricercare argomenti non familiari. Accademia è utile quando si cerca di studiare nuove informazioni o di ricordare fatti su un argomento.
+AC2D20.Tooltips.Skill.athletics: Questa abilità riguarda il condizionamento fisico del tuo personaggio e l'abilità atletica. Atletica riguarda anche i tentativi di un personaggio di muoversi in velocità.
 AC2D20.Tooltips.Skill.engineering: "This skill encompasses your character’s technical and mechanical expertise, with an emphasis on practical applications: designing, building, and repairing devices, machines, and structures, as well as operating complex or untested equipment, and determining how to disable or destroy unfamiliar machines. There’s a degree of overlap between Engineering and Vehicles, but Engineering focuses on the mechanics of a vehicle."
 AC2D20.Tooltips.Skill.fighting: This skill covers your character’s ability to fight and defend themselves against attacks, a combination of learned techniques, physical conditioning, and instinct. It is used to make attacks, judge threatening situations, and covers a practical understanding of weaponry and combat styles.
 AC2D20.Tooltips.Skill.medicine: This skill covers the treatment of physical and mental injuries, and the diagnosis and cure of poisons and diseases. It can also be used to perform autopsies to determine the cause of a person’s death.
@@ -425,7 +425,7 @@ AC2D20.UI.Quantity: Quantity
 AC2D20.UI.Rarity: Rarity
 AC2D20.UI.SPECIAL_RULE: Special Rule
 AC2D20.UI.stashed: Riposto
-AC2D20.UI.Type: Type
+AC2D20.UI.Type: Tipo
 AC2D20.UI.UNSORTED: Unsorted
 AC2D20.UI.Weight: Weight
 AC2D20.VEHICLES.QUALITIES.cargo_x: Cargo
