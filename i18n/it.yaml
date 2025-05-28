@@ -30,7 +30,7 @@ AC2D20.EffectToggle: Toggle Effect
 AC2D20.equipped: Equipped
 AC2D20.Error.NumberOfDiceMustBeNonZero: The number of dice entered must be an integer value greater than zero.
 AC2D20.FOCUS.Air Force: Air Force
-AC2D20.FOCUS.Aircraft: Aircraft
+AC2D20.FOCUS.Aircraft: Velivoli
 AC2D20.FOCUS.Animal Handling: Animal Handling
 AC2D20.FOCUS.Architecture: Architecture
 AC2D20.FOCUS.Army: Army
@@ -47,7 +47,7 @@ AC2D20.FOCUS.Deceive: Deceive
 AC2D20.FOCUS.Discipline: Discipline
 AC2D20.FOCUS.Disguise: Disguise
 AC2D20.FOCUS.Electronics: Electronics
-AC2D20.FOCUS.Exotic: Exotic
+AC2D20.FOCUS.Exotic: Armi Insolite
 AC2D20.FOCUS.Explosives: Explosives
 AC2D20.FOCUS.Finance: Finance
 AC2D20.FOCUS.First Aid: First Aid
@@ -99,7 +99,7 @@ AC2D20.FOCUS.Urban Stealth: Urban Stealth
 AC2D20.FOCUS.Watercraft: Watercraft
 AC2D20.INJURIES.mental: Mental
 AC2D20.INJURIES.nottreated: Not treated
-AC2D20.INJURIES.physical: Physical
+AC2D20.INJURIES.physical: Fisico
 AC2D20.INJURIES.treated: Treated
 AC2D20.MIGRATION.begin_migration: Performing data upgrades for Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
@@ -124,14 +124,14 @@ AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
 AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
 AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
 AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
-AC2D20.SETTINGS.maxappName: Players Can Setup Max App
+AC2D20.SETTINGS.maxappName:
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
 AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
 AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
 AC2D20.SETTINGS.systemVersion.label: System Version
-AC2D20.SETTINGS.worldSchemaVersion.hint: Records the current schema version for the Achtung! Cthulhu 2d20 system data. (don't modify this unless you know what you are doing)
+AC2D20.SETTINGS.worldSchemaVersion.hint: Registra la versione attuale dello schema per i dati di sistema Achtung! Cthulhu 2d20 (non modificare questo a meno che tu non sappia cosa stai facendo)
 AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
 AC2D20.SKILL.ACADEMIA: Academia
 AC2D20.SKILL.ATHLETICS: Athletics
@@ -147,14 +147,14 @@ AC2D20.SKILL.TACTICS: Tactics
 AC2D20.SKILL.VEHICLES: Vehicles
 AC2D20.SPELL.SpellTypes.ins: Traditional
 AC2D20.SPELL.SpellTypes.rea: Researcher
-AC2D20.SPELL.SpellTypes.wil: Dabbler
+AC2D20.SPELL.SpellTypes.wil:
 AC2D20.Spellcasting.dabbler: dabbler
 AC2D20.Spellcasting.researcher: researcher
 AC2D20.Spellcasting.SpellcastingType: Spellcasting Type
 AC2D20.Spellcasting.traditional: traditional
 AC2D20.STRESS.current: Current Stress
 AC2D20.STRESS.max: Max Stress
-AC2D20.STRESS.stress: Stress
+AC2D20.STRESS.stress:
 AC2D20.TEMPLATES.Abilities: Abilities
 AC2D20.TEMPLATES.ADD: ADD
 AC2D20.TEMPLATES.AddFocus: Add Focus
