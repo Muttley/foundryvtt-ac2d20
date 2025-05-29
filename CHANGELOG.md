@@ -1,7 +1,13 @@
-## v11.7.0
+## v11.6.6
+
+### Enhancements
+- [#154] Add Italian as a supported i18n language
 
 ### Chores
 - [#147] Merge new Portuguese/Brazilian translation updates from Crowdin
+- [#156] Merge new Italian translation updates from Crowdin
+
+*Many thanks to **Vacco** for providing **Italian** translation data.*
 
 ---
 
