@@ -1,57 +1,57 @@
 AC2D20.Ability.agi: Agilità
-AC2D20.Ability.bra: Brawn
-AC2D20.Ability.coo: Coordination
-AC2D20.Ability.ins: Insight
-AC2D20.Ability.rea: Reason
-AC2D20.Ability.wil: Will
+AC2D20.Ability.bra: Vigore
+AC2D20.Ability.coo: Coordinazione
+AC2D20.Ability.ins: Consapevolezza
+AC2D20.Ability.rea: Intelletto
+AC2D20.Ability.wil: Volontà
 AC2D20.AbilityAbbr.agi: agi
-AC2D20.AbilityAbbr.bra: bra
+AC2D20.AbilityAbbr.bra: vig
 AC2D20.AbilityAbbr.coo: coo
-AC2D20.AbilityAbbr.ins: ins
-AC2D20.AbilityAbbr.rea: rea
-AC2D20.AbilityAbbr.wil: wil
-AC2D20.ARMOR.qualities.heavy: Heavy
-AC2D20.ARMOR.qualities.shield: Shield
-AC2D20.ARMOR.qualities.uncomfortable: Uncomfortable
-AC2D20.Combat.CombatantsTurnDone: Turn Completed
-AC2D20.Combat.CombatantsTurnNotDone: Turn Not Completed
-AC2D20.Combat.CombatEndMomentumPoolDecremented: Momentum Pool Decremented at End of Combat
-AC2D20.Combat.CombatHasNotStarted: Combat Has Not Started
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: Momentum Pool Decremented at Start of New Round
-AC2D20.Combat.ToggleCombatantsTurnDone: Toggle Turn Completed
-AC2D20.Dialog.NumberOfDice: Number of Dice
-AC2D20.EffectCreate: Create Effect
-AC2D20.EffectDelete: Delete Effect
-AC2D20.EffectEdit: Edit Effect
-AC2D20.EFFECTS.Inactive: Inactive Effects
-AC2D20.EFFECTS.Passive: Passive Effects
-AC2D20.EFFECTS.Temporary: Temporary Effects
-AC2D20.EffectToggle: Toggle Effect
-AC2D20.equipped: Equipped
-AC2D20.Error.NumberOfDiceMustBeNonZero: The number of dice entered must be an integer value greater than zero.
-AC2D20.FOCUS.Air Force: Air Force
+AC2D20.AbilityAbbr.ins: con
+AC2D20.AbilityAbbr.rea: int
+AC2D20.AbilityAbbr.wil: vol
+AC2D20.ARMOR.qualities.heavy: Pesante
+AC2D20.ARMOR.qualities.shield: Scudo
+AC2D20.ARMOR.qualities.uncomfortable: Scomoda
+AC2D20.Combat.CombatantsTurnDone: Turno Completato
+AC2D20.Combat.CombatantsTurnNotDone: Turno non Completato
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Decremento Momentum a Fine Combattimento
+AC2D20.Combat.CombatHasNotStarted: Combattimento non Iniziato
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Decremento Momentum a Inizio Nuovo Round
+AC2D20.Combat.ToggleCombatantsTurnDone: Seleziona Turno Completato
+AC2D20.Dialog.NumberOfDice: Numero Dadi
+AC2D20.EffectCreate: Crea Effetto
+AC2D20.EffectDelete: Cancella Effetto
+AC2D20.EffectEdit: Modifica Effetto
+AC2D20.EFFECTS.Inactive: Effetti Inattivi
+AC2D20.EFFECTS.Passive: Effetti Passivi
+AC2D20.EFFECTS.Temporary: Effetti Temporanei
+AC2D20.EffectToggle: Seleziona Effetto
+AC2D20.equipped: Equipaggiato
+AC2D20.Error.NumberOfDiceMustBeNonZero: Il Numero di Dadi Inseriti deve Essere un Valore Maggiore di Zero
+AC2D20.FOCUS.Air Force: Aeronautica
 AC2D20.FOCUS.Aircraft: Velivoli
-AC2D20.FOCUS.Animal Handling: Animal Handling
-AC2D20.FOCUS.Architecture: Architecture
-AC2D20.FOCUS.Army: Army
-AC2D20.FOCUS.Art: Art
-AC2D20.FOCUS.Camouflage: Camouflage
-AC2D20.FOCUS.Cars: Cars
-AC2D20.FOCUS.Charm: Charm
-AC2D20.FOCUS.Climbing: Climbing
-AC2D20.FOCUS.Close Quarters: Close Quarters
-AC2D20.FOCUS.Combat Engineering: Combat Engineering
-AC2D20.FOCUS.Covert Operations: Covert Operations
-AC2D20.FOCUS.Cryptography: Cryptography
-AC2D20.FOCUS.Deceive: Deceive
-AC2D20.FOCUS.Discipline: Discipline
-AC2D20.FOCUS.Disguise: Disguise
-AC2D20.FOCUS.Electronics: Electronics
+AC2D20.FOCUS.Animal Handling: Affinità animale
+AC2D20.FOCUS.Architecture: Architettura
+AC2D20.FOCUS.Army: Esercito
+AC2D20.FOCUS.Art: Arte
+AC2D20.FOCUS.Camouflage: Mimetismo
+AC2D20.FOCUS.Cars: Automobili
+AC2D20.FOCUS.Charm: Fascino
+AC2D20.FOCUS.Climbing: Arrampicata
+AC2D20.FOCUS.Close Quarters: Combattimento Ravvicinato
+AC2D20.FOCUS.Combat Engineering: Ingegneria Bellica
+AC2D20.FOCUS.Covert Operations: Operazioni Segrete
+AC2D20.FOCUS.Cryptography: Crittografia
+AC2D20.FOCUS.Deceive: Inganni
+AC2D20.FOCUS.Discipline: Disciplina
+AC2D20.FOCUS.Disguise: Travestimenti
+AC2D20.FOCUS.Electronics: Elettronica
 AC2D20.FOCUS.Exotic: Armi Insolite
-AC2D20.FOCUS.Explosives: Explosives
+AC2D20.FOCUS.Explosives: Esplosivi
 AC2D20.FOCUS.Finance: Finanza
-AC2D20.FOCUS.First Aid: First Aid
-AC2D20.FOCUS.Foraging: Foraging
+AC2D20.FOCUS.First Aid: Pronto Soccorso
+AC2D20.FOCUS.Foraging: Raccolta
 AC2D20.FOCUS.Fortitude: Fortitude
 AC2D20.FOCUS.Hand-to-Hand: Hand-to-Hand
 AC2D20.FOCUS.Handguns: Handguns
@@ -104,62 +104,62 @@ AC2D20.INJURIES.treated: Treated
 AC2D20.MIGRATION.begin_migration: Aggiornamento dati per Achtung! Cthulhu 2d20
 AC2D20.MIGRATION.begin_schema: Applying updates for Achtung! Cthulhu 2d20 schema v{version}
 AC2D20.MIGRATION.completed_migration: Completed data updgrades for Achtung! Cthulhu 2d20
-AC2D20.MIGRATION.completed_schema: Completed applying updates for Achtung! Cthulhu 2d20 schema v{version}
-AC2D20.OTHER: Other
-AC2D20.RANGE.close: Close
-AC2D20.RANGE.extreme: Extreme
-AC2D20.RANGE.long: Long
-AC2D20.RANGE.medium: Medium
-AC2D20.RANGE.reach: Reach
-AC2D20.RESISTANCE.armor: Armor
-AC2D20.RESISTANCE.courage: Courage
-AC2D20.RESISTANCE.fatigue: Fatigue
-AC2D20.RESISTANCE.resistance: Resistance
-AC2D20.SETTINGS.compendiumHint: Each time a new character is created it will include this set of skills.
-AC2D20.SETTINGS.compendiumName: Skills Compendium
-AC2D20.SETTINGS.ctHint: If enabled the Combat Tracker will decrement the Momentum Pool when a new Combat Round starts, or when Combat ends.
-AC2D20.SETTINGS.ctName: Combat Tracker Updates Momentum?
-AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features
-AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
-AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
-AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
-AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
-AC2D20.SETTINGS.maxappName:
-AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
-AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
-AC2D20.SETTINGS.showmomentumName: Show GM Momentum To Players
-AC2D20.SETTINGS.systemVersion.hint: Records the current Achtung! Cthulhu 2d20 system version number (don't modify this unless you know what you are doing)
-AC2D20.SETTINGS.systemVersion.label: System Version
+AC2D20.MIGRATION.completed_schema: Completati gli aggiornamenti per Achtung! Cthulhu 2d20 schema v{version}
+AC2D20.OTHER: Altro
+AC2D20.RANGE.close: Breve
+AC2D20.RANGE.extreme: Estrema
+AC2D20.RANGE.long: Lunga
+AC2D20.RANGE.medium: Media
+AC2D20.RANGE.reach: A Portata
+AC2D20.RESISTANCE.armor: Armatura
+AC2D20.RESISTANCE.courage: Coraggio
+AC2D20.RESISTANCE.fatigue: Affaticamento
+AC2D20.RESISTANCE.resistance: Resistenza
+AC2D20.SETTINGS.compendiumHint: Ogni volta che viene creato un nuovo personaggio includerà questa serie di abilità.
+AC2D20.SETTINGS.compendiumName: Compendio Abilità
+AC2D20.SETTINGS.ctHint: Se abilitata, il Tracker di Combattimento decrementerà il Pool di Momentum quando inizia un nuovo Round di Combattimento o quando termina la Battaglia.
+AC2D20.SETTINGS.ctName: Tracker di Combattimento aggiorna il Momentum?
+AC2D20.SETTINGS.debugEnabled.hint: Abilita o disabilita funzioni di debug aggiuntive
+AC2D20.SETTINGS.debugEnabled.label: Attiva/Disattiva Debug
+AC2D20.SETTINGS.hoverHint: Posizione del file json contenente il testo per qualità e effetti di danno.
+AC2D20.SETTINGS.hoverName: Mouse Hover file JSON
+AC2D20.SETTINGS.maxappHint: Consente ai giocatori di configurare la MAX AP del Party. Richiede aggiornamento sul lato giocatore.
+AC2D20.SETTINGS.maxappName: I Giocatori Possono Impostare Max App
+AC2D20.SETTINGS.migrateSystemCompendiums.hint: Esegui la migrazione dei dati sui compendi di sistema integrati (non modificare questo a meno che tu non sappia cosa stai facendo)
+AC2D20.SETTINGS.migrateSystemCompendiums.label: Migra Compendi Di Sistema
+AC2D20.SETTINGS.showmomentumHint: Mostra la finestra del Momentum GM a tutti. Richiede aggiornamento sul lato dei giocatori.
+AC2D20.SETTINGS.showmomentumName: Mostra Momentum GM Ai Giocatori
+AC2D20.SETTINGS.systemVersion.hint: Registra l'attuale Achtung! Cthulhu 2d20 numero di versione di sistema (non modificare questo a meno che tu non sappia cosa stai facendo)
+AC2D20.SETTINGS.systemVersion.label: 'Versione di sistema:'
 AC2D20.SETTINGS.worldSchemaVersion.hint: Registra la versione attuale dello schema per i dati di sistema Achtung! Cthulhu 2d20 (non modificare questo a meno che tu non sappia cosa stai facendo)
-AC2D20.SETTINGS.worldSchemaVersion.label: Schema Version
-AC2D20.SKILL.ACADEMIA: Academia
-AC2D20.SKILL.ATHLETICS: Athletics
-AC2D20.SKILL.ENGINEERING: Engineering
-AC2D20.SKILL.FIGHTING: Fighting
-AC2D20.SKILL.MEDICINE: Medicine
-AC2D20.SKILL.OBSERVATION: Observation
-AC2D20.SKILL.PERSUASION: Persuasion
-AC2D20.SKILL.RESILIENCE: Resilience
-AC2D20.SKILL.STEALTH: Stealth
-AC2D20.SKILL.SURVIVAL: Survival
-AC2D20.SKILL.TACTICS: Tactics
-AC2D20.SKILL.VEHICLES: Vehicles
-AC2D20.SPELL.SpellTypes.ins: Traditional
-AC2D20.SPELL.SpellTypes.rea: Researcher
-AC2D20.SPELL.SpellTypes.wil:
-AC2D20.Spellcasting.dabbler: dabbler
-AC2D20.Spellcasting.researcher: researcher
-AC2D20.Spellcasting.SpellcastingType: Spellcasting Type
-AC2D20.Spellcasting.traditional: traditional
-AC2D20.STRESS.current: Current Stress
+AC2D20.SETTINGS.worldSchemaVersion.label: Versione Schema
+AC2D20.SKILL.ACADEMIA: Accademia
+AC2D20.SKILL.ATHLETICS: Atletica
+AC2D20.SKILL.ENGINEERING: Ingegneria
+AC2D20.SKILL.FIGHTING: Scontro
+AC2D20.SKILL.MEDICINE: Medicina
+AC2D20.SKILL.OBSERVATION: Attenzione
+AC2D20.SKILL.PERSUASION: Persuasione
+AC2D20.SKILL.RESILIENCE: Determinazione
+AC2D20.SKILL.STEALTH: Furtività
+AC2D20.SKILL.SURVIVAL: Sopravvivenza
+AC2D20.SKILL.TACTICS: Tattica
+AC2D20.SKILL.VEHICLES: Veicoli
+AC2D20.SPELL.SpellTypes.ins: Tradizionalista
+AC2D20.SPELL.SpellTypes.rea: Ricercatore
+AC2D20.SPELL.SpellTypes.wil: Dilettante
+AC2D20.Spellcasting.dabbler: dilettante
+AC2D20.Spellcasting.researcher: ricercatore
+AC2D20.Spellcasting.SpellcastingType: Tipo di Incantatore
+AC2D20.Spellcasting.traditional: tradizionalista
+AC2D20.STRESS.current: Stress
 AC2D20.STRESS.max: Max Stress
-AC2D20.STRESS.stress:
+AC2D20.STRESS.stress: Stress
 AC2D20.TEMPLATES.Abilities: Abilità
-AC2D20.TEMPLATES.ADD: ADD
-AC2D20.TEMPLATES.AddFocus: Add Focus
-AC2D20.TEMPLATES.AddTruth: Add Truth
-AC2D20.TEMPLATES.Ammo: Ammo
+AC2D20.TEMPLATES.ADD: AGGIUNGI
+AC2D20.TEMPLATES.AddFocus: Aggiungi Focus
+AC2D20.TEMPLATES.AddTruth: Aggiungi Verità
+AC2D20.TEMPLATES.Ammo: Munizioni
 AC2D20.TEMPLATES.Archetype: Archetype
 AC2D20.TEMPLATES.Attacks: ATTACKS
 AC2D20.TEMPLATES.Attr: Attr.
@@ -212,58 +212,58 @@ AC2D20.TEMPLATES.GM_MOMENTUM: GM Threat
 AC2D20.TEMPLATES.Healthy: Healthy
 AC2D20.TEMPLATES.HP_Healed: HP Healed
 AC2D20.TEMPLATES.INITIATIVE: INITIATIVE
-AC2D20.TEMPLATES.INJURIES: Injuries
-AC2D20.TEMPLATES.Issue: Issue
-AC2D20.TEMPLATES.Keywords: Keywords
-AC2D20.TEMPLATES.Languages: Languages
+AC2D20.TEMPLATES.INJURIES: Traumi
+AC2D20.TEMPLATES.Issue: Rilascio
+AC2D20.TEMPLATES.Keywords: Parole chiave
+AC2D20.TEMPLATES.Languages: Lingue
 AC2D20.TEMPLATES.lbs: lbs
-AC2D20.TEMPLATES.Learned: Learned
-AC2D20.TEMPLATES.Luck: Luck
-AC2D20.TEMPLATES.majoritems: Major Items
+AC2D20.TEMPLATES.Learned: Appreso
+AC2D20.TEMPLATES.Luck: Fortuna
+AC2D20.TEMPLATES.majoritems: Oggetti Maggiori
 AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM: Max Momentum
 AC2D20.TEMPLATES.max: max
 AC2D20.TEMPLATES.MAX: MAX
-AC2D20.TEMPLATES.MELEE_BONUS: MELEE BONUS
-AC2D20.TEMPLATES.MELEE_DAMAGE: MELEE DAMAGE
-AC2D20.TEMPLATES.minoritems: Minor Items
+AC2D20.TEMPLATES.MELEE_BONUS: BONUS MISCHIA
+AC2D20.TEMPLATES.MELEE_DAMAGE: DANNI DA MISCHIA
+AC2D20.TEMPLATES.minoritems: Oggetti Minori
 AC2D20.TEMPLATES.Mod_Type: Mod Type
-AC2D20.TEMPLATES.MODULES: MODULES
-AC2D20.TEMPLATES.Name_Prefix: Name Prefix
-AC2D20.TEMPLATES.Name: Name
-AC2D20.TEMPLATES.Nationality: Nationality
-AC2D20.TEMPLATES.PARTY_MOMENTUM: Party Momentum
-AC2D20.TEMPLATES.Personal_Truth_Scars: Personal Truths & Scars
-AC2D20.TEMPLATES.PHYS: PHYS
-AC2D20.TEMPLATES.Points: Points
-AC2D20.TEMPLATES.POISON: POISON
-AC2D20.TEMPLATES.Power: Power
-AC2D20.TEMPLATES.Qualities: Qualities
-AC2D20.TEMPLATES.RANGE: Range
-AC2D20.TEMPLATES.Rank: Rank
-AC2D20.TEMPLATES.Ranks_current_maximum: Ranks [current/maximum]
-AC2D20.TEMPLATES.rating: Rating
-AC2D20.TEMPLATES.Re_roll: Re-roll
-AC2D20.TEMPLATES.Requirements: Requirements
-AC2D20.TEMPLATES.Resistance: Resistance
-AC2D20.TEMPLATES.Resistances: Resistances
-AC2D20.TEMPLATES.RESISTANCES: RESISTANCES
-AC2D20.TEMPLATES.Resources: Resources
-AC2D20.TEMPLATES.Restriction: Restriction
-AC2D20.TEMPLATES.ritual_requirements: Requirements
-AC2D20.TEMPLATES.ritual_resistance: Resistance
-AC2D20.TEMPLATES.ritual_steps: Ritual Steps
-AC2D20.TEMPLATES.ritual_stress: Ritual Stress
-AC2D20.TEMPLATES.Ritual: Ritual
-AC2D20.TEMPLATES.Roll_Formula: Roll Formula
-AC2D20.TEMPLATES.Salvo: Salvo
-AC2D20.TEMPLATES.SAVE: SAVE
+AC2D20.TEMPLATES.MODULES: MODULI
+AC2D20.TEMPLATES.Name_Prefix: Prefisso
+AC2D20.TEMPLATES.Name: Nome
+AC2D20.TEMPLATES.Nationality: Nazionalità
+AC2D20.TEMPLATES.PARTY_MOMENTUM: Momentum Party
+AC2D20.TEMPLATES.Personal_Truth_Scars: Verità Personali e Cicatrici
+AC2D20.TEMPLATES.PHYS: FISI
+AC2D20.TEMPLATES.Points: Punti
+AC2D20.TEMPLATES.POISON: VELENO
+AC2D20.TEMPLATES.Power: Potere
+AC2D20.TEMPLATES.Qualities: Qualità
+AC2D20.TEMPLATES.RANGE: Portata
+AC2D20.TEMPLATES.Rank: Rango
+AC2D20.TEMPLATES.Ranks_current_maximum: Rango [corrente/massimo]
+AC2D20.TEMPLATES.rating: Valutazione
+AC2D20.TEMPLATES.Re_roll: Ritira
+AC2D20.TEMPLATES.Requirements: Requisiti
+AC2D20.TEMPLATES.Resistance: Resistenza
+AC2D20.TEMPLATES.Resistances: Resistenze
+AC2D20.TEMPLATES.RESISTANCES: RESISTENZE
+AC2D20.TEMPLATES.Resources: Risorse
+AC2D20.TEMPLATES.Restriction: Restrizioni
+AC2D20.TEMPLATES.ritual_requirements: Requisiti
+AC2D20.TEMPLATES.ritual_resistance: Resistenza
+AC2D20.TEMPLATES.ritual_steps: Passi Rituali
+AC2D20.TEMPLATES.ritual_stress: Stress Rituale
+AC2D20.TEMPLATES.Ritual: Rituale
+AC2D20.TEMPLATES.Roll_Formula: Formula di Tiro
+AC2D20.TEMPLATES.Salvo: Raffica
+AC2D20.TEMPLATES.SAVE: SALVA
 AC2D20.TEMPLATES.scale: Scala
-AC2D20.TEMPLATES.Size: Size
+AC2D20.TEMPLATES.Size: Taglia
 AC2D20.TEMPLATES.SizeLevels.Major: Maggiore
-AC2D20.TEMPLATES.SizeLevels.Minor: Minor
-AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
-AC2D20.TEMPLATES.Skill_Focus: Skill Focus
-AC2D20.TEMPLATES.skill_focus: Skill/Focus
+AC2D20.TEMPLATES.SizeLevels.Minor: Minore
+AC2D20.TEMPLATES.SizeLevels.Trivial: Ordinari
+AC2D20.TEMPLATES.Skill_Focus: Focus Abilità
+AC2D20.TEMPLATES.skill_focus: Abilità/Focus
 AC2D20.TEMPLATES.Skill_Value: Skill Value
 AC2D20.TEMPLATES.Skill: Skill
 AC2D20.TEMPLATES.SkillFocus: Skill Focus
@@ -321,69 +321,69 @@ AC2D20.Tooltips.Focus.covert-operations: Operazioni Segrete — riguarda l'organ
 AC2D20.Tooltips.Focus.cryptography: Crittografia — copre la conoscenza di codici e cifrari, sia come crearli che come decifrarli.
 AC2D20.Tooltips.Focus.deceive: Deceive — methods of manipulating others to believe something that is untrue.
 AC2D20.Tooltips.Focus.discipline: Discipline — represents the character’s durability and self-control, and their ability to resist and recover from confusion and fear or supernatural effects that afflict the mind.
-AC2D20.Tooltips.Focus.disguise: Disguise — covers the use of make-up, clothing, props, and appropriate body language to assume the guise of another person.
+AC2D20.Tooltips.Focus.disguise: Travestimenti — riguarda l'uso di trucco, abbigliamento, oggetti e linguaggio del corpo appropriato per assumere le vesti di un'altra persona.
 AC2D20.Tooltips.Focus.electronics:
-AC2D20.Tooltips.Focus.exotic: Exotic — covers weird or experimental weaponry and the ability to figure out how an unfamiliar weapon should be operated without risk.
-AC2D20.Tooltips.Focus.explosives: Explosives — covers an understanding of explosive substances and the purposes they are most suited for, as well as a knowledge of how to employ them effectively, including how to create and defuse bombs and mines.
-AC2D20.Tooltips.Focus.finance: Finance — covers knowledge of trade and banking, both contemporary and historically, and of the influence of money on politics and culture.
-AC2D20.Tooltips.Focus.first-aid: First Aid — covers emergency medical attention to stabilise a patient and keep them alive until they can receive proper medical care.
-AC2D20.Tooltips.Focus.foraging: Foraging — covers the skill of gathering food from the local environment, being able to identify edible flora, and safely recognising natural toxins.
-AC2D20.Tooltips.Focus.fortitude: Fortitude — represents the hardiness and endurance of the body, and its ability to resist and recover from Fatigue, pain, and injury.
-AC2D20.Tooltips.Focus.hand-to-hand: Hand-to-Hand — covers unarmed combat by striking and grabbing opponents, and may represent training in a martial art like boxing or judo.
-AC2D20.Tooltips.Focus.handguns: Handguns — covers the use of sidearms, revolvers, and semi-automatic and machine pistols.
+AC2D20.Tooltips.Focus.exotic: Armi Insolite — riguarda le armi strane o sperimentali e la capacità di capire come un'arma sconosciuta dovrebbe essere azionata senza rischi.
+AC2D20.Tooltips.Focus.explosives: Esplosivi — riguarda la comprensione delle sostanze esplosive e gli scopi per cui sono più adatti, nonché una conoscenza di come utilizzarli in modo efficace, tra cui come creare e disinnescare bombe e mine.
+AC2D20.Tooltips.Focus.finance: Finanza — riguarda la conoscenza del commercio e delle banche, sia contemporanea che storica, e dell'influenza del denaro sulla politica e la cultura.
+AC2D20.Tooltips.Focus.first-aid: Pronto soccorso — riguarda l'assistenza medica di emergenza per stabilizzare un paziente e tenerlo in vita fino a quando non può ricevere cure mediche adeguate.
+AC2D20.Tooltips.Focus.foraging: Raccolta — riguarda la capacità di raccogliere cibo dall'ambiente locale, essere in grado di identificare la flora commestibile e riconoscere in modo sicuro le tossine naturali.
+AC2D20.Tooltips.Focus.fortitude: Tempra — rappresenta la prestanza e la resistenza del corpo, e la sua capacità di resistere e recuperare da affaticamento, dolore e lesioni.
+AC2D20.Tooltips.Focus.hand-to-hand: Corpo a Corpo — riguarda il combattimento disarmato, colpire e afferrare gli avversari, e può rappresentare l'addestramento in un'arte marziale come pugilato o judo.
+AC2D20.Tooltips.Focus.handguns: Pistole — copre l'uso di armi da fianco, revolver e pistole semiautomatiche e automatiche.
 AC2D20.Tooltips.Focus.hearing:
-AC2D20.Tooltips.Focus.heavy-vehicles: Heavy Vehicles — covers the operation of heavy-duty civilian and military vehicles, including heavy trucks, half-tracks, and similar vehicles.
+AC2D20.Tooltips.Focus.heavy-vehicles: Veicoli pesanti — riguarda il funzionamento di veicoli pesanti civili e militari, compresi autocarri pesanti, semicingolati e veicoli analoghi.
 AC2D20.Tooltips.Focus.heavy-weapons:
-AC2D20.Tooltips.Focus.history: History — covers a knowledge of historical events, and the forces and individuals that drove those events, as well as different historical perspectives.
-AC2D20.Tooltips.Focus.hunting: Hunting — covers the ability to stalk, catch, and kill animal prey, and the knowledge of preparing game.
-AC2D20.Tooltips.Focus.immunity: Immunity — represents a character’s natural ability to resist diseases or toxins, and their ability to recover from those effects.
-AC2D20.Tooltips.Focus.infectious-diseases: Infectious Diseases — covers an understanding of diseases, their causes, the way they spread, their symptoms, and the ways that they can be treated.
-AC2D20.Tooltips.Focus.innuendo: Innuendo — the art of conveying meaning indirectly.
-AC2D20.Tooltips.Focus.instincts: Instincts — covers the “sixth sense” or “gut feelings” made from observations, and other extra-sensory perceptions that you may not be able to describe the source of. Instincts are unlikely to provide detailed information, but a hunch or general feeling about a situation.
+AC2D20.Tooltips.Focus.history: Storia — riguarda la conoscenza degli eventi storici, le forze e gli individui che hanno guidato tali eventi, così come le diverse prospettive storiche.
+AC2D20.Tooltips.Focus.hunting: Caccia — riguarda la capacità di inseguire, prendere e uccidere prede animali, e la conoscenza della preparazione per l'attività.
+AC2D20.Tooltips.Focus.immunity: Immunità — rappresenta la naturale capacità di un personaggio di resistere a malattie o tossine, e la loro capacità di riprendersi da tali effetti.
+AC2D20.Tooltips.Focus.infectious-diseases: Malattie infettive — riguarda una comprensione delle malattie, delle loro cause, del modo in cui si diffondono, dei loro sintomi e dei modi in cui possono essere trattate.
+AC2D20.Tooltips.Focus.innuendo: Allusioni — l'arte di trasmettere il significato indirettamente.
+AC2D20.Tooltips.Focus.instincts: Istinto — riguarda il “sesto senso” o “sensazioni viscerali” derivati da osservazioni, e altre percezioni extra-sensoriali di cui non si è in grado di descriverne la fonte. È improbabile che gli istinti forniscano informazioni dettagliate, più che altro impressioni o una sensazione generale su una situazione.
 AC2D20.Tooltips.Focus.intimidation:
-AC2D20.Tooltips.Focus.invocation: Invocation — unusual and esoteric methods of communicating with paranormal entities which is not usually open to the average person.
-AC2D20.Tooltips.Focus.leadership: Leadership — covers the command and leading of others, giving clear orders, and maintaining morale.
-AC2D20.Tooltips.Focus.lifting: Lifting — covers lifting and moving heavy objects with the conditioning necessary to make such efforts more effective.
-AC2D20.Tooltips.Focus.linguistics: Linguistics — covers the study of languages in their current form, as well as historical and dead languages, and the ways that language changes over time.
-AC2D20.Tooltips.Focus.mechanical-engineering: Mechanical Engineering — covers an understanding of mechanical devices, how they operate, how they can fail, and how to construct and repair them. This focus can be applied to all fighting vehicles like tanks, planes, boats and other support craft.
-AC2D20.Tooltips.Focus.melee-weapons: Melee Weapons — covers fighting with a melee weapon, such as a knife or bayonet.
+AC2D20.Tooltips.Focus.invocation: Invocazione — metodi insoliti ed esoterici di comunicare con entità paranormali che di solito non sono disponibili alla persona media.
+AC2D20.Tooltips.Focus.leadership: Comando — riguarda il comando e la guida degli altri, dando ordini chiari e mantenendo il morale.
+AC2D20.Tooltips.Focus.lifting: Sollevamento Pesi — riguarda il sollevamento e lo spostamento di oggetti pesanti compreso il condizionamento necessario per rendere tali sforzi più efficaci.
+AC2D20.Tooltips.Focus.linguistics: Lingue — riguarda lo studio delle lingue nella loro forma attuale, così come le lingue storiche e morte, e il modo in cui la lingua cambia nel tempo.
+AC2D20.Tooltips.Focus.mechanical-engineering: Ingegneria meccanica — riguarda la comprensione dei dispositivi meccanici, come funzionano, come possono fallire, e come costruirli e ripararli. Questo focus può essere applicato a tutti i veicoli da combattimento come carri armati, aerei, barche e altre imbarcazioni di supporto.
+AC2D20.Tooltips.Focus.melee-weapons: Armi da mischia — riguarda la lotta con un'arma da mischia, come un coltello o una baionetta.
 AC2D20.Tooltips.Focus.motorcycles:
-AC2D20.Tooltips.Focus.mysticism: Mysticism — covers knowledge of the rites and practices performed by ancient spiritual leaders (and their modern descendants) to commune with their gods and spirits, and how they can be combatted or withstood.
-AC2D20.Tooltips.Focus.navy: Navy — covers naval strategy and tactics, from shallow to deep water, and single boat actions to major fleet engagements.
-AC2D20.Tooltips.Focus.negotiation: Negotiation — reaching agreement through conversation, possibly involving trade or payment.
-AC2D20.Tooltips.Focus.occultism: Occultism — covers the study of supernatural and occult phenomena, practices, creatures, and traditions.
-AC2D20.Tooltips.Focus.orienteering: Orienteering — covers the skill of navigating over distance, maintaining a direction, planning a route, and the physical demands of hiking.
+AC2D20.Tooltips.Focus.mysticism: Misticismo — riguarda la conoscenza dei riti e delle pratiche eseguite da antichi leader spirituali (e i loro moderni discendenti) per comunicare con i loro dei e spiriti, e come possono essere combattuti o supportati.
+AC2D20.Tooltips.Focus.navy: Marina — riguarda la strategia e la tattica navale, dalle acque basse alle acque profonde, e le azioni di singola barca ai principali impegni della flotta.
+AC2D20.Tooltips.Focus.negotiation: Negoziazione — raggiungere un accordo mediante conversazione, eventualmente implicando scambi o pagamenti.
+AC2D20.Tooltips.Focus.occultism: Occultismo — riguarda lo studio di fenomeni soprannaturali e occulti, pratiche, creature e tradizioni.
+AC2D20.Tooltips.Focus.orienteering: Orientamento — riguarda l'abilità di orientarsi su distanza, mantenendo una direzione, pianificare un percorso e le esigenze fisiche di escursionismo.
 AC2D20.Tooltips.Focus.pharmacology: Farmacologia — riguarda la comprensione del farmaco, sia i suoi usi nel trattamento, e i suoi effetti collaterali.
-AC2D20.Tooltips.Focus.physical-training: Physical Training — covers how to train oneself and others.
-AC2D20.Tooltips.Focus.psychiatry: Psychiatry — covers the study and treatment of mental illness.
-AC2D20.Tooltips.Focus.rhetoric: Rhetoric — using language in public speaking or a formal debate, to inform, persuade, motivate or convince others.
-AC2D20.Tooltips.Focus.rifles: Rifles — covers the use of rifles, carbines, and other firearms for use at Medium and longer ranges.
-AC2D20.Tooltips.Focus.running: Running — covers short-distance sprinting and long-distance endurance running.
+AC2D20.Tooltips.Focus.physical-training: Addestramento Fisico — riguarda come allenare sè stessi e gli altri.
+AC2D20.Tooltips.Focus.psychiatry: Psichiatria — riguarda lo studio e il trattamento di malattie mentali.
+AC2D20.Tooltips.Focus.rhetoric: Retorica — usando la comunicazione in pubblico o in un dibattito formale, per informare, convincere, motivare o convincere gli altri.
+AC2D20.Tooltips.Focus.rifles: Fucili — riguarda l'uso di fucili, carabine e altre armi da fuoco per l'uso a medio e lungo raggio.
+AC2D20.Tooltips.Focus.running: Corsa — riguarda la corsa a breve distanza e corsa a lunga distanza.
 AC2D20.Tooltips.Focus.rural-stealth: Furtività Rurale — riguarda le tecniche per muoversi silenziosamente e rimanere invisibili negli ambienti rurali.
-AC2D20.Tooltips.Focus.science: Science — covers the scientific method and the various disciplines associated with science, from mathematics, to physics, chemistry, and biology, it also includes more detailed and specific fields of study within these branches.
-AC2D20.Tooltips.Focus.sight: Sight — covers visual perception, providing greater sensitivity when visibility is poor, an ability to reliably pick out details at a distance, and a greater ability to spot small variations or brief movement. Spotters, navigators and bombardiers are particularly well suited to utilising this focus.
-AC2D20.Tooltips.Focus.smell-and-taste: Smell and Taste — covers the ability to detect and discern information from scents and tastes; this is not a commonplace focus for humans, as humans don’t have especially sensitive senses of smell, though it is valuable focus for poisoners, doctors or sommeliers.
-AC2D20.Tooltips.Focus.surgery: Surgery — covers surgical, instrumental, and operative medical procedures which require cutting into a patient, extraction of tissue or foreign objects, or manually closing wounds.
-AC2D20.Tooltips.Focus.swimming: Swimming — covers swimming unaided and diving with a breathing apparatus.
-AC2D20.Tooltips.Focus.tanks: Tanks — covers the operation of tanks of all sizes.
-AC2D20.Tooltips.Focus.technical-projects: Technical Projects — covers an understanding of how to divide work and manage team members on a large scientific, engineering, or academic project.
-AC2D20.Tooltips.Focus.threat-awareness: Threat Awareness — covers readiness and detecting danger and the ability to avoid attacks or ambushes.
-AC2D20.Tooltips.Focus.throwing: Throwing — covers throwing objects from Olympicstyle shot putt, javelin, and hammer-throw, to the use of grenades and knives.
+AC2D20.Tooltips.Focus.science: Scienza — riguarda il metodo scientifico e le varie discipline associate alla scienza, dalla matematica, alla fisica, alla chimica e alla biologia, comprende anche campi di studio più dettagliati e specifici all'interno di questi rami.
+AC2D20.Tooltips.Focus.sight: Vista — riguarda la percezione visiva, fornendo una maggiore sensibilità quando la visibilità è scarsa, una capacità di scegliere in modo affidabile i dettagli a distanza, e una maggiore capacità di individuare piccole variazioni o brevi movimenti. Vedette, navigatori e bombardieri sono particolarmente adatti per utilizzare questo focus.
+AC2D20.Tooltips.Focus.smell-and-taste: Olfatto e Gusto — riguarda la capacità di rilevare e discernere le informazioni dai profumi e dai gusti; questo non è un focus comune per gli esseri umani, in quanto gli esseri umani non hanno sensi particolarmente sensibili di olfatto, anche se è un focus prezioso per avvelenatori, medici o sommelier.
+AC2D20.Tooltips.Focus.surgery: Chirurgia — riguarda procedure mediche chirurgiche, strumentali e operative che richiedono il taglio in un paziente, l'estrazione di tessuti o oggetti estranei, o la chiusura manuale di ferite.
+AC2D20.Tooltips.Focus.swimming: Nuoto — riguarda nuotare senza aiuto e immersioni con un apparato respiratorio.
+AC2D20.Tooltips.Focus.tanks: Carri Armati — copre il funzionamento di carri armati di tutte le dimensioni.
+AC2D20.Tooltips.Focus.technical-projects: Progetti Tecnici — riguarda la comprensione di come dividere il lavoro e gestire i membri del team su un grande progetto scientifico, ingegneristico o accademico.
+AC2D20.Tooltips.Focus.threat-awareness: Senso del Pericolo — riguarda la prontezza e l'individuazione del pericolo e la capacità di evitare attacchi o agguati.
+AC2D20.Tooltips.Focus.throwing: Lancio — riguarda gli oggetti lanciati dai pesi, giavellotti e martelli, fino l'uso di granate e coltelli.
 AC2D20.Tooltips.Focus.toxicology:
-AC2D20.Tooltips.Focus.tracking: Tracking — covers the practice of identifying the tracks of a specific animal, person, or group, and following them. It also covers the ability to determine information about them, such as direction, how many there were, their physical state, speed, and other characteristics.
-AC2D20.Tooltips.Focus.urban-stealth: Urban Stealth — covers techniques for moving silently and remaining unseen in urban environments.
+AC2D20.Tooltips.Focus.tracking: Seguire Tracce — riguarda la pratica di identificare le tracce di uno specifico animale, persona o gruppo, e seguirle. Riguarda anche la capacità di determinare le informazioni su di loro, come la direzione, il numero, il loro stato fisico, la velocità e altre caratteristiche.
+AC2D20.Tooltips.Focus.urban-stealth: Furtività Urbana — riguarda le tecniche per muoversi silenziosamente e rimanere invisibili negli ambienti urbani.
 AC2D20.Tooltips.Focus.watercraft: Imbarcazioni — riguarda le imbarcazioni civili e militari, i sottomarini e le navi.
 AC2D20.Tooltips.Skill.academia: Questa abilità riguarda l'educazione del tuo personaggio e la conoscenza accumulata, così come la capacità di ricercare argomenti non familiari. Accademia è utile quando si cerca di studiare nuove informazioni o di ricordare fatti su un argomento.
 AC2D20.Tooltips.Skill.athletics: Questa abilità riguarda il condizionamento fisico del tuo personaggio e l'abilità atletica. Atletica riguarda anche i tentativi di un personaggio di muoversi in velocità.
-AC2D20.Tooltips.Skill.engineering: "This skill encompasses your character’s technical and mechanical expertise, with an emphasis on practical applications: designing, building, and repairing devices, machines, and structures, as well as operating complex or untested equipment, and determining how to disable or destroy unfamiliar machines. There’s a degree of overlap between Engineering and Vehicles, but Engineering focuses on the mechanics of a vehicle."
-AC2D20.Tooltips.Skill.fighting: This skill covers your character’s ability to fight and defend themselves against attacks, a combination of learned techniques, physical conditioning, and instinct. It is used to make attacks, judge threatening situations, and covers a practical understanding of weaponry and combat styles.
-AC2D20.Tooltips.Skill.medicine: This skill covers the treatment of physical and mental injuries, and the diagnosis and cure of poisons and diseases. It can also be used to perform autopsies to determine the cause of a person’s death.
-AC2D20.Tooltips.Skill.observation: This skill covers your character’s awareness and ability to discern information from their surroundings. It describes how observant and astute they are, how quickly they pick out important details and make use of them, as well as their ability to ignore distractions. Observation overlaps with many other skills, and often runs parallel to Academia, as both are about gaining information, albeit in different ways.
-AC2D20.Tooltips.Skill.persuasion: This skill encompasses your character’s ability to influence others, through a mixture of speech and body language. It also allows you to spot when others are attempting to use these techniques—it often takes a liar to spot a liar.
-AC2D20.Tooltips.Skill.resilience: This skill encompasses your character’s ability to resist and recover from physical and mental debilities — from injury, pain, and Fatigue and mental distress. This also includes withstanding the effects of poisons, diseases, and magical effects. You may use Resilience to try and resist effects before they happen, or to recover from lasting effects already succumbed to. While Medicine overlaps with Resilience in a few ways, Resilience is more concerned with an individual’s inherent toughness.
+AC2D20.Tooltips.Skill.engineering: "Questa abilità comprende le competenze tecniche e meccaniche del vostro personaggio, con particolare attenzione alle applicazioni pratiche: progettazione, costruzione e riparazione di dispositivi, le macchine, le strutture e l'uso di apparecchiature complesse o non testate, e la determinazione di come disattivare o distruggere le macchine sconosciute. C’è una certa sovrapposizione tra Ingegneria e Veicoli, ma Ingegneria si concentra sulla meccanica di un veicolo."
+AC2D20.Tooltips.Skill.fighting: Questa abilità copre la capacità del tuo personaggio di combattere e difendersi dagli attacchi, una combinazione di tecniche apprese, condizionamento fisico e istinto. Viene utilizzato per fare attacchi, giudicare situazioni minacciose, e copre una comprensione pratica delle armi e degli stili di combattimento.
+AC2D20.Tooltips.Skill.medicine: Questa abilità copre il trattamento di lesioni fisiche e mentali, e la diagnosi e la cura di veleni e malattie. Può anche essere usato per eseguire autopsie per determinare la causa della morte di una persona.
+AC2D20.Tooltips.Skill.observation: Questa abilità copre la consapevolezza e la capacità del tuo personaggio di discernere le informazioni dall'ambiente circostante. Descrive quanto siano attenti e astuti, quanto velocemente scelgono i dettagli importanti e ne fanno uso, così come la loro capacità di ignorare le distrazioni. L'osservazione si sovrappone a molte altre competenze, e spesso si affianca all'Accademia, in quanto si tratta di ottenere informazioni, anche se in modi diversi.
+AC2D20.Tooltips.Skill.persuasion: Questa abilità comprende la capacità del tuo personaggio di influenzare gli altri, attraverso una miscela di linguaggio e linguaggio del corpo. Ti permette anche di individuare quando altri stanno tentando di usare queste tecniche, spesso ci vuole un bugiardo per individuare un bugiardo.
+AC2D20.Tooltips.Skill.resilience: Questa abilità comprende la capacità del tuo personaggio di resistere e di riprendersi dalle debilità, fisiche e mentali, dalle lesioni, dal dolore e dalla stanchezza e dalla sofferenza mentale. Questo include anche nonostante gli effetti di veleni, malattie e effetti magici. Si può usare Determinazione per cercare di resistere agli effetti prima che si verifichino, o per recuperare da effetti duraturi già ceduti. Mentre la medicina si sovrappone con la Determinazione in pochi modi, la Determinazione riguarda più la tenacia intrinseca di un individuo.
 AC2D20.Tooltips.Skill.stealth: Questa abilità racchiude la capacità del tuo personaggio di passare inosservata, dal movimento silenzioso, all'utilizzo delle tenebre, alla copertura e all'occultamento per rimanere invisibile. Riguarda anche la tua capacità di usare travestimenti, nascondersi in piena vista o usare mimetizzazione per nascondere te stesso e gli altri.
 AC2D20.Tooltips.Skill.survival: Questa abilità esprime la capacità del vostro personaggio di sopravvivere a condizioni inospitali, tra cui estremi di temperatura e meteo, piante e animali pericolosi — così come trovare cibo e acqua sufficienti, e la creazione di un fuoco e un rifugio. Riguarda anche la capacità di rintracciare gli animali (e i nemici), nonché di comunicare e addestrare gli animali.
-AC2D20.Tooltips.Skill.tactics: This skill deals with your character’s ability to perceive and evaluate a combat situation and devise an appropriate plan. This not only covers military strategy and tactics, but also team dynamics and leadership, or organising a group of scientists or engineers.
+AC2D20.Tooltips.Skill.tactics: Questa abilità si occupa della capacità del tuo personaggio di percepire e valutare una situazione di combattimento e di elaborare un piano appropriato. Questo non riguarda solo la strategia e la tattica militare, ma anche le dinamiche e la leadership di gruppo, o l'organizzazione di un gruppo di scienziati o ingegneri.
 AC2D20.Tooltips.Skill.vehicles: This skill covers the operation and maintenance of vehicles of all kinds. A character skilled in Vehicles is knowledgeable about how they function, what makes them fail, and how to maintain and repair them, as well as how to operate them. This overlaps with Engineering with regards to vehicles specifically, and a character driving a vehicle uses Vehicles instead of Athletics to avoid or overcome obstacles such as terrain features.
 AC2D20.Tooltips.VehicleQuality.cargo_x: The vehicle may carry up to X additional Major items.
 AC2D20.Tooltips.VehicleQuality.cumbersome: The vehicle is bulky and unresponsive, and increases difficulty tests to move by +1.
@@ -444,54 +444,54 @@ AC2D20.WEAPONS.damageEffect.intense: Intense
 AC2D20.WEAPONS.damageEffect.persistent_x: Persistent
 AC2D20.WEAPONS.damageEffect.piercing_x: Piercing
 AC2D20.WEAPONS.damageEffect.snare: Snare
-AC2D20.WEAPONS.damageEffect.stun: Stun
-AC2D20.WEAPONS.damageEffect.vicious: Vicious
-AC2D20.WEAPONS.damageType.energy: Energy
-AC2D20.WEAPONS.damageType.physical: Physical
-AC2D20.WEAPONS.damageType.poison: Poison
-AC2D20.WEAPONS.damageType.radiation: Radiation
-AC2D20.WEAPONS.qualities: Qualities
-AC2D20.WEAPONS.type: Weapon Type
-AC2D20.WEAPONS.weaponQuality.accurate: Accurate
-AC2D20.WEAPONS.weaponQuality.bane: Bane
-AC2D20.WEAPONS.weaponQuality.close_quarters: Close Quarters
-AC2D20.WEAPONS.weaponQuality.cumbersome: Cumbersome
-AC2D20.WEAPONS.weaponQuality.debilitating: Debilitating
+AC2D20.WEAPONS.damageEffect.stun: Stordente
+AC2D20.WEAPONS.damageEffect.vicious: Brutale
+AC2D20.WEAPONS.damageType.energy: Energia
+AC2D20.WEAPONS.damageType.physical: Fisico
+AC2D20.WEAPONS.damageType.poison: Veleno
+AC2D20.WEAPONS.damageType.radiation: Radiazioni
+AC2D20.WEAPONS.qualities: Qualità
+AC2D20.WEAPONS.type: Tipo Arma
+AC2D20.WEAPONS.weaponQuality.accurate: Precisa
+AC2D20.WEAPONS.weaponQuality.bane: Anatema
+AC2D20.WEAPONS.weaponQuality.close_quarters: Combattimento Ravvicinato
+AC2D20.WEAPONS.weaponQuality.cumbersome: Ingombrante
+AC2D20.WEAPONS.weaponQuality.debilitating: Debilitante
 AC2D20.WEAPONS.weaponQuality.escalation: Escalation
-AC2D20.WEAPONS.weaponQuality.experimental: Experimental
-AC2D20.WEAPONS.weaponQuality.giant_killer: Giant-Killer
-AC2D20.WEAPONS.weaponQuality.heavy: Heavy
-AC2D20.WEAPONS.weaponQuality.hidden: Hidden
-AC2D20.WEAPONS.weaponQuality.hunger: Hunger
-AC2D20.WEAPONS.weaponQuality.inaccurate: Inaccurate
-AC2D20.WEAPONS.weaponQuality.indirect: Indirect
-AC2D20.WEAPONS.weaponQuality.munition: Munition
-AC2D20.WEAPONS.weaponQuality.parrying: Parrying
-AC2D20.WEAPONS.weaponQuality.precise: Precise
-AC2D20.WEAPONS.weaponQuality.reliable: Reliable
-AC2D20.WEAPONS.weaponQuality.subtle: Subtle
-AC2D20.WEAPONS.weaponQuality.unreliable: Unreliable
-AC2D20.WEAPONS.weaponQuality.venomous: Venomous
-AC2D20.WEAPONS.weaponTypes.agi: Melee
-AC2D20.WEAPONS.weaponTypes.coo: Ranged
-AC2D20.WEAPONS.weaponTypes.Melee: Melee
+AC2D20.WEAPONS.weaponQuality.experimental: Sperimentale
+AC2D20.WEAPONS.weaponQuality.giant_killer: Sterminagiganti
+AC2D20.WEAPONS.weaponQuality.heavy: Pesante
+AC2D20.WEAPONS.weaponQuality.hidden: Discreta
+AC2D20.WEAPONS.weaponQuality.hunger: Fame
+AC2D20.WEAPONS.weaponQuality.inaccurate: Imprecisa
+AC2D20.WEAPONS.weaponQuality.indirect: Indiretta
+AC2D20.WEAPONS.weaponQuality.munition: Dispendiosa
+AC2D20.WEAPONS.weaponQuality.parrying: Parata
+AC2D20.WEAPONS.weaponQuality.precise: Precisa
+AC2D20.WEAPONS.weaponQuality.reliable: Affidabile
+AC2D20.WEAPONS.weaponQuality.subtle: Silenziosa
+AC2D20.WEAPONS.weaponQuality.unreliable: Inaffidabile
+AC2D20.WEAPONS.weaponQuality.venomous: Velenosa
+AC2D20.WEAPONS.weaponTypes.agi: Mischia
+AC2D20.WEAPONS.weaponTypes.coo: Distanza
+AC2D20.WEAPONS.weaponTypes.Melee: Mischia
 AC2D20.WEAPONS.weaponTypes.Mental: Mentale
 AC2D20.WEAPONS.weaponTypes.Ranged: Distanza
-AC2D20.WEAPONS.weaponTypes.wil: Mental
-ACTOR.NpcType.Lieutenant: Lieutenant
-ACTOR.NpcType.Nemesis: Nemesis
-ACTOR.NpcType.Trooper: Trooper
-ACTOR.Vehicle.Cover: Cover
-ACTOR.Vehicle.Impact: Impact
-ACTOR.Vehicle.Passengers: Passengers
-TYPES.Actor.character: Character
-TYPES.Actor.npc: NPC
-TYPES.Actor.vehicle: Vehicle
-TYPES.Item.armor: Armor
-TYPES.Item.equipment: Equipment
-TYPES.Item.skill: Skill
-TYPES.Item.skillkit: Skill Kit
-TYPES.Item.special_rule: Special Rule
-TYPES.Item.spell: Spell
-TYPES.Item.talent: Talent
-TYPES.Item.weapon: Weapon
+AC2D20.WEAPONS.weaponTypes.wil: Mentale
+ACTOR.NpcType.Lieutenant: Tenente
+ACTOR.NpcType.Nemesis: Nemesi
+ACTOR.NpcType.Trooper: Soldato
+ACTOR.Vehicle.Cover: Copertura
+ACTOR.Vehicle.Impact: Impatto
+ACTOR.Vehicle.Passengers: Passeggeri
+TYPES.Actor.character: Personaggio
+TYPES.Actor.npc: PNG
+TYPES.Actor.vehicle: Veicolo
+TYPES.Item.armor: Armatura
+TYPES.Item.equipment: Equipaggiamento
+TYPES.Item.skill: Abilità
+TYPES.Item.skillkit: Kit Di Abilità
+TYPES.Item.special_rule: Regola speciale
+TYPES.Item.spell: Incantesimo
+TYPES.Item.talent: Talento
+TYPES.Item.weapon: Arma
