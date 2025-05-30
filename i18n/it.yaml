@@ -117,7 +117,7 @@ AC2D20.RESISTANCE.fatigue: Affaticamento
 AC2D20.RESISTANCE.resistance: Resistenza
 AC2D20.SETTINGS.compendiumHint: Ogni volta che viene creato un nuovo personaggio includerà questa serie di abilità.
 AC2D20.SETTINGS.compendiumName: Compendio Abilità
-AC2D20.SETTINGS.ctHint: Se abilitata, il Tracker di Combattimento decrementerà il Pool di Momentum quando inizia un nuovo Round di Combattimento o quando termina la Battaglia.
+AC2D20.SETTINGS.ctHint: Se abilitato, il Tracker di Combattimento decrementerà il Pool di Momentum quando inizia un nuovo Round di Combattimento o quando termina la Battaglia.
 AC2D20.SETTINGS.ctName: Tracker di Combattimento aggiorna il Momentum?
 AC2D20.SETTINGS.debugEnabled.hint: Abilita o disabilita funzioni di debug aggiuntive
 AC2D20.SETTINGS.debugEnabled.label: Attiva/Disattiva Debug
@@ -127,7 +127,7 @@ AC2D20.SETTINGS.maxappHint: Consente ai giocatori di configurare la MAX AP del P
 AC2D20.SETTINGS.maxappName: I Giocatori Possono Impostare Max App
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Esegui la migrazione dei dati sui compendi di sistema integrati (non modificare questo a meno che tu non sappia cosa stai facendo)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migra Compendi Di Sistema
-AC2D20.SETTINGS.showmomentumHint: Mostra la finestra del Momentum GM a tutti. Richiede aggiornamento sul lato dei giocatori.
+AC2D20.SETTINGS.showmomentumHint: Mostra la finestra del Momentum GM a tutti. Richiede aggiornamento sulla pagina dei giocatori.
 AC2D20.SETTINGS.showmomentumName: Mostra Momentum GM Ai Giocatori
 AC2D20.SETTINGS.systemVersion.hint: Registra l'attuale Achtung! Cthulhu 2d20 numero di versione di sistema (non modificare questo a meno che tu non sappia cosa stai facendo)
 AC2D20.SETTINGS.systemVersion.label: 'Versione di sistema:'
@@ -206,9 +206,9 @@ AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMI PREFERITE
 AC2D20.TEMPLATES.FIRE_RATE: CADENZA DI FUOCO
 AC2D20.TEMPLATES.Focus: Focus
 AC2D20.TEMPLATES.fortune: Punti Sorte
-AC2D20.TEMPLATES.Gear: Attrezzo
+AC2D20.TEMPLATES.Gear: Equip.
 AC2D20.TEMPLATES.GENERAL: GENERALE
-AC2D20.TEMPLATES.GM_MOMENTUM: GM Minaccia
+AC2D20.TEMPLATES.GM_MOMENTUM: Punti Minaccia
 AC2D20.TEMPLATES.Healthy: Sano
 AC2D20.TEMPLATES.HP_Healed: HP Curati
 AC2D20.TEMPLATES.INITIATIVE: INIZIATIVA
@@ -231,7 +231,7 @@ AC2D20.TEMPLATES.MODULES: MODULI
 AC2D20.TEMPLATES.Name_Prefix: Prefisso
 AC2D20.TEMPLATES.Name: Nome
 AC2D20.TEMPLATES.Nationality: Nazionalità
-AC2D20.TEMPLATES.PARTY_MOMENTUM: Momentum Party
+AC2D20.TEMPLATES.PARTY_MOMENTUM: Momentum
 AC2D20.TEMPLATES.Personal_Truth_Scars: Verità Personali e Cicatrici
 AC2D20.TEMPLATES.PHYS: FISI
 AC2D20.TEMPLATES.Points: Punti
@@ -241,7 +241,7 @@ AC2D20.TEMPLATES.Qualities: Qualità
 AC2D20.TEMPLATES.RANGE: Portata
 AC2D20.TEMPLATES.Rank: Rango
 AC2D20.TEMPLATES.Ranks_current_maximum: Rango [corrente/massimo]
-AC2D20.TEMPLATES.rating: Valutazione
+AC2D20.TEMPLATES.rating: Valore
 AC2D20.TEMPLATES.Re_roll: Ritira
 AC2D20.TEMPLATES.Requirements: Requisiti
 AC2D20.TEMPLATES.Resistance: Resistenza
@@ -261,7 +261,7 @@ AC2D20.TEMPLATES.scale: Scala
 AC2D20.TEMPLATES.Size: Taglia
 AC2D20.TEMPLATES.SizeLevels.Major: Maggiore
 AC2D20.TEMPLATES.SizeLevels.Minor: Minore
-AC2D20.TEMPLATES.SizeLevels.Trivial: Ordinari
+AC2D20.TEMPLATES.SizeLevels.Trivial: Ordinario
 AC2D20.TEMPLATES.Skill_Focus: Focus Abilità
 AC2D20.TEMPLATES.skill_focus: Abilità/Focus
 AC2D20.TEMPLATES.Skill_Value: Valore Abilità
@@ -303,7 +303,7 @@ AC2D20.Tooltips.DamageEffect.intense: Se l'attacco infligge un Trauma e si ottie
 AC2D20.Tooltips.DamageEffect.persistent_x: L'attacco o il pericolo ha un effetto persistente. Se si ottengono uno o più Effetti, il bersaglio subisce stress X all'inizio del suo turno, per un numero di turni pari agli Effetti ottenuti.
 AC2D20.Tooltips.DamageEffect.piercing_x: L'attacco ignora X resistenza per ogni Effetto ottenuto.
 AC2D20.Tooltips.DamageEffect.snare: L'attacco o il pericolo possono intralciare e immobilizzare il bersaglio. Il bersaglio non può fare altro che provare a liberarsi. Richiede un test di abilità con una difficoltà pari al numero di Effetti ottenuti per liberarsi.
-AC2D20.Tooltips.DamageEffect.stun: L'attacco o il pericolo lascia il bersaglio momentaneamente incapace di agire. Se un certo numero di Effetti vengono ottenuti ed equivalgono o superano la capacità di Determinazione del bersaglio, il bersaglio non può intraprendere alcuna azione nel prossimo turno.
+AC2D20.Tooltips.DamageEffect.stun: L'attacco o il pericolo lascia il bersaglio momentaneamente incapace di agire. Se il numero di Effetti ottenuti equivalgono o superano la capacità di Determinazione del bersaglio, il bersaglio non può intraprendere alcuna azione nel prossimo turno.
 AC2D20.Tooltips.DamageEffect.vicious: L'attacco è pericoloso e particolarmente potente. Aggiungere +1 allo stress totale inflitto per ogni effetto ottenuto.
 AC2D20.Tooltips.Focus.air-force: Aeronautica — riguarda l'addestramento in tattiche di combattimento e bombardamento, come i dogfight, la formazione di volo e la navigazione, nonché la strategia militare aerea.
 AC2D20.Tooltips.Focus.aircraft: Velivoli — riguarda le operazioni su aeromobili civili e militari, sia monomotore che plurimotore e a elica. Verso la fine del conflitto, comprende anche gli aerei e la tecnologia dei motori a reazione più recenti.
@@ -391,8 +391,8 @@ AC2D20.Tooltips.VehicleQuality.enclosed: Il veicolo è completamente chiuso, pro
 AC2D20.Tooltips.VehicleQuality.exposed: Il passeggero e l'equipaggio di un veicolo esposto possono essere presi di mira da attacchi dall'esterno del veicolo e possono attaccare con le loro armi.
 AC2D20.Tooltips.VehicleQuality.high_performance: Il veicolo è potente e ben elaborato. Il pilota può spendere 2 Momentum dopo un test di abilità riuscito per spingere il veicolo a muoversi di 1 zona aggiuntiva. Qualsiasi prova per riparare il veicolo aumenta di difficoltà di +1, a causa della sua natura finemente elaborata.
 AC2D20.Tooltips.VehicleQuality.single_seat: Un veicolo monoposto è progettato per essere guidato da un solo pilota che assume anche il ruolo di fuciliere senza la normale penalizzazione.
-AC2D20.Tooltips.VehicleQuality.tough_x: Il veicolo può subire più danni della maggior parte. Il numero di ferite che il veicolo può sopportare prima di essere sconfitto è aumentato di X. Puoi anche generare 3 Minaccia per ignorare un infortunio inflitto al veicolo (i veicoli PNG spendono 3 Minacce).
-AC2D20.Tooltips.WeaponQuality.accurate: Se intraprendi l'azione minore <em>Mirare</em> prima di attaccare con questa arma, l'arma ottiene l'effetto Intenso per quell'attacco.
+AC2D20.Tooltips.VehicleQuality.tough_x: Il veicolo può subire più danni del normale. Il numero di ferite che il veicolo può sopportare prima di essere sconfitto è aumentato di X. Puoi anche generare 3 Minaccia per ignorare un trauma inflitto al veicolo (i veicoli PNG spendono 3 Minacce).
+AC2D20.Tooltips.WeaponQuality.accurate: Se intraprendi l'azione minore <em>Mirare</em> prima di attaccare con questa arma, l'arma ottiene l'effetto Potente per quell'attacco.
 AC2D20.Tooltips.WeaponQuality.bane: L'arma è particolarmente efficace contro le creature dei Miti e ignora gli effetti della regola speciale Invulnerabile contro tali creature. Inoltre, le creature dei Miti con la regola speciale Robusto X non possono spendere Minaccia per ignorare le ferite causate da un'arma con la qualità Anatema
 AC2D20.Tooltips.WeaponQuality.close_quarters: L'arma è compatta e facile da usare in confini stretti e nella pressione di mischia. L'arma non subisce alcuna penalità quando viene usata per fare un attacco a distanza mentre un nemico è a Portata.
 AC2D20.Tooltips.WeaponQuality.cumbersome: L'arma è pesante e scomoda da portare contro piccoli bersagli come la fanteria. Quando fai un attacco con quest'arma, aumenta la difficoltà dell'attacco di +1, se il bersaglio è di dimensioni umane o più piccole.
