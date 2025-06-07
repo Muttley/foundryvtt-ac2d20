@@ -25,6 +25,11 @@
 	font-weight: 400;
 	color: colors.$c-dark;
 
+    a {
+		color: colors.$c-red-dark;
+		font-style: italic;
+	}
+
 	a.content-link {
 		font-family: $font-germania;
 	}
