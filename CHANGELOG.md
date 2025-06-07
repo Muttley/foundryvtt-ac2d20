@@ -14,6 +14,7 @@
 - [#168] Accessing the global "Actors" which is now namespaced under foundry.documents.collections.Actors
 - [#169] Accessing the global "Items" which is now namespaced under foundry.documents.collections.Item
 - [#170] Accessing the global "loadTemplates" which is now namespaced under foundry.applications.handlebars.loadTemplates
+- [#171] Accessing the global "TextEditor" which is now namespaced under foundry.applications.ux.TextEditor.implementation
 
 ---
 

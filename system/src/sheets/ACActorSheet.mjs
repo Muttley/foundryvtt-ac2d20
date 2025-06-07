@@ -67,7 +67,9 @@ export default class ACActorSheet
 			rollData: this.actor.getRollData.bind(this.actor),
 		};
 
-		context.biographyHTML = await TextEditor.enrichHTML(context.system.biography, {
+		const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+		context.biographyHTML = await textEditor.enrichHTML(context.system.biography, {
 			secrets: this.actor.isOwner,
 			rollData: context.rollData,
 			async: true,
@@ -91,7 +93,7 @@ export default class ACActorSheet
 		for await (let item of this.actor.items) {
 			if (itemTypes.includes(item.type)) {
 				const descriptionRich =
-					await TextEditor.enrichHTML(item.system.description, {async: true});
+					await textEditor.enrichHTML(item.system.description, {async: true});
 
 				itemsEnrichedDescriptions[item._id] = descriptionRich;
 			}
@@ -778,7 +780,9 @@ export default class ACActorSheet
 			});
 		}
 		else {
-			let _descriptionText = await TextEditor.enrichHTML(
+			const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+			let _descriptionText = await textEditor.enrichHTML(
 				item.system.description, {async: true}
 			);
 

@@ -111,11 +111,13 @@ AC2D20.spellcastingTypes = {
 };
 
 export async function generateEnrichedTooltips() {
+	const textEditor = foundry.applications.ux.TextEditor.implementation;
+
 	// Damage Effects
 	CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK = {};
 	CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS = [];
 	for (const key in CONFIG.AC2D20.DAMAGE_EFFECTS) {
-		CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS[key] = await TextEditor.enrichHTML(
+		CONFIG.AC2D20.DAMAGE_EFFECT_TOOLTIPS[key] = await textEditor.enrichHTML(
 			game.i18n.localize(
 				`AC2D20.Tooltips.DamageEffect.${key}`
 			)
@@ -127,7 +129,7 @@ export async function generateEnrichedTooltips() {
 	CONFIG.AC2D20.VEHICLE_QUALITY_HAS_RANK = {};
 	CONFIG.AC2D20.VEHICLE_QUALITY_TOOLTIPS = [];
 	for (const key in CONFIG.AC2D20.VEHICLE_QUALITIES) {
-		CONFIG.AC2D20.VEHICLE_QUALITY_TOOLTIPS[key] = await TextEditor.enrichHTML(
+		CONFIG.AC2D20.VEHICLE_QUALITY_TOOLTIPS[key] = await textEditor.enrichHTML(
 			game.i18n.localize(
 				`AC2D20.Tooltips.VehicleQuality.${key}`
 			)
@@ -138,7 +140,7 @@ export async function generateEnrichedTooltips() {
 	// Weapon Qualities
 	CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS = {};
 	for (const key in CONFIG.AC2D20.WEAPON_QUALITIES) {
-		CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key] = await TextEditor.enrichHTML(
+		CONFIG.AC2D20.WEAPON_QUALITY_TOOLTIPS[key] = await textEditor.enrichHTML(
 			game.i18n.localize(
 				`AC2D20.Tooltips.WeaponQuality.${key}`
 			)

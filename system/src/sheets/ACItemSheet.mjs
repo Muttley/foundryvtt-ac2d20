@@ -114,7 +114,9 @@ export default class ACItemSheet
 			type: item.type,
 		});
 
-		context.descriptionHTML = await TextEditor.enrichHTML(
+		const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+		context.descriptionHTML = await textEditor.enrichHTML(
 			item.system.description,
 			{
 				secrets: item.isOwner,
