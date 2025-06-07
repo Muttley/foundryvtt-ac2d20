@@ -105,7 +105,7 @@ function registerDocumentSheets() {
 		}
 	);
 
-	Items.registerSheet("ac2d20",
+	foundry.documents.collections.Items.registerSheet("ac2d20",
 		sheets.ACItemSheet,
 		{
 			makeDefault: true,
