@@ -2,27 +2,19 @@
 @use "../utils/colors";
 
 .ac2d20.momentum-tracker {
-	position: absolute;
+	bottom: 250px;
 	display: block;
+	left: 10px;
 	margin: 5px;
-	//padding: 10px;
-	//border: 1px solid black;
-	//border-radius: 12px;
-	//background-color: $f-vault-blue;
-	bottom: 40px !important;
-	right: 320px !important;
-	max-width: 180px;
+	position: absolute;
 	z-index: 1000;
 
 	.ap-resource {
-		position: relative;
-		padding: 10px 20px;
-		background-size: 100% 100%;
-		background-repeat: no-repeat;
 		border-radius: 9px;
 		font-family: $font-germania;
+		padding: 10px 20px;
+		position: relative;
 
-		//color: white;
 		&.gm {
 			background-color: colors.$c-green-olive;
 		}
@@ -36,10 +28,10 @@
 		}
 
 		.toggle-maxAp {
-			position: absolute;
-			top: 8px;
-			right: 5px;
 			color: beige;
+			position: absolute;
+			right: 5px;
+			top: 8px;
 		}
 
 		margin-bottom: 10px;
@@ -49,26 +41,30 @@
 		}
 
 		h4 {
-			margin: 0 0 2px 0;
 			color: bisque;
+			font-family: $font-germania;
+			font-size: 14px;
+			font-weight: normal;
+			margin: 0 0 4px 0;
 		}
 
 		input[type="number"] {
-			margin: 0 5px;
-			font-size: 20px;
-			text-align: center;
 			color: #494e31;
+			font-size: 18px;
+			margin: 0 5px;
+			text-align: center;
 		}
 
 		.ap-btn {
-			min-width: 24px;
-			min-height: 24px;
-			max-width: 24px;
-			display: flex;
-			justify-content: center;
 			align-items: center;
 			background-color: bisque;
 			border-radius: 6px;
+			color: colors.$c-green-olive;
+			display: flex;
+			justify-content: center;
+			max-width: 24px;
+			min-height: 24px;
+			min-width: 24px;
 		}
 	}
 }

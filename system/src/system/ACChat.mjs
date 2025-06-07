@@ -6,7 +6,7 @@ export class ACChat {
 		template,
 		mode
 	) {
-		const html = await renderTemplate(template, data);
+		const html = await foundry.applications.handlebars.renderTemplate(template, data);
 
 		if (!mode) {
 			mode = game.settings.get("core", "rollMode");
@@ -33,19 +33,15 @@ export class ACChat {
 	}
 
 	static async onRenderChatMessage(message, html, data) {
-		ac2d20.logger.debug("Running renderChatMessage hook");
+		ac2d20.logger.debug("Running renderChatMessageHTML hook");
 
-		const rerollButton = html.find(".reroll-button");
-
-		if (rerollButton.length > 0) {
-			rerollButton[0].setAttribute("data-messageId", message.id);
-
-			rerollButton.click(el => {
-				const selectedDiceForReroll = html.find(".dice-selected");
-
+		html.querySelectorAll(".reroll-button").forEach(element => {
+			element.addEventListener("click", async event => {
 				const rerollIndex = [];
-				for (const die of selectedDiceForReroll) {
-					rerollIndex.push($(die).data("index"));
+
+				const selectedDice = html.querySelectorAll(".dice-selected");
+				for (const die of selectedDice) {
+					rerollIndex.push(die.dataset.index);
 				}
 
 				const rollData = message.flags.ac2d20Roll;
@@ -56,8 +52,8 @@ export class ACChat {
 							rollName: rollData.rollName,
 							rerollIndexes: rerollIndex,
 							diceRolled: rollData.diceRolled,
-							itemId: message.flags.itemId,
-							actorId: message.flags.actorId,
+							itemId: rollData.itemId,
+							actorId: rollData.actorId,
 						});
 						break;
 					case "d20":
@@ -74,27 +70,27 @@ export class ACChat {
 						ui.notifications.error(`Unrecognised dice face "${rollData.diceFace}`);
 				}
 			});
-		}
-
-
-		html.find(".dice-icon").click(el => {
-			if ($(el.currentTarget).hasClass("dice-selected")) {
-				$(el.currentTarget).removeClass("dice-selected");
-			}
-			else {
-				$(el.currentTarget).addClass("dice-selected");
-			}
 		});
 
 
-		const addButton = html.find(".add-button");
-		if (addButton.length > 0) {
-			addButton[0].setAttribute("data-messageId", message.id);
+		html.querySelectorAll(".dice-icon").forEach(element => {
+			element.addEventListener("click", async event => {
+				const target = event.currentTarget;
+				if (target.classList.contains("dice-selected")) {
+					target.classList.remove("dice-selected");
+				}
+				else {
+					target.classList.add("dice-selected");
+				}
+			});
+		});
 
-			addButton.click(ev => {
+
+		html.querySelectorAll(".add-button").forEach(element => {
+			element.addEventListener("click", async ev => {
 				const ac2d20Roll = message.flags.ac2d20Roll;
-				const actorId = message.flags.actorId;
-				const itemId = message.flags.itemId;
+				const actorId = ac2d20Roll.actorId;
+				const itemId = ac2d20Roll.itemId;
 
 				game.ac2d20.DialogD6.createDialog({
 					ac2d20Roll,
@@ -104,7 +100,7 @@ export class ACChat {
 					rollName: ac2d20Roll.rollName,
 				});
 			});
-		}
+		});
 	}
 
 }

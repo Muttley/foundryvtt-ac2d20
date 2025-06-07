@@ -1,3 +1,33 @@
+## v11.7.0
+
+### Enhancement
+- [#176] Replace old custom combat tracker with new ApplicationV2 version to work with FoundryVTT v13
+
+### Bugfix
+- [#160] Button icons messed up in FoundryVTT v13
+- [#161] Journal styles messed up in FoundryVTT v13
+- [#162] Dialog button text not visible
+- [#163] Error when rerolling or adding extra stress dice
+- [#164] Momentum/Threat tracker position clashes with new FoundryVTT v13 sidebar
+
+### Chores
+- [#152] Foundry v13 compatibility verification
+- [#159] Merge new Italian translation updates from Crowdin
+- [#165] Accessing the global "CombatTracker" which is now namespaced under foundry.applications.sidebar.tabs.CombatTracker
+- [#166] Accessing the global "ActorSheet" which is now namespaced under foundry.appv1.sheets.ActorSheet
+- [#167] Accessing the global "ItemSheet" which is now namespaced under foundry.appv1.sheets.ItemSheet
+- [#168] Accessing the global "Actors" which is now namespaced under foundry.documents.collections.Actors
+- [#169] Accessing the global "Items" which is now namespaced under foundry.documents.collections.Item
+- [#170] Accessing the global "loadTemplates" which is now namespaced under foundry.applications.handlebars.loadTemplates
+- [#171] Accessing the global "TextEditor" which is now namespaced under foundry.applications.ux.TextEditor.implementation
+- [#172] The renderChatMessage hook is deprecated
+- [#173] Accessing the global "ContextMenu" which is now namespaced under foundry.applications.ux.ContextMenu.implementation
+- [#174] ContextMenu is changing to no longer transact jQuery objects for menu item callbacks
+- [#175] ContextMenu is changing to no longer transact jQuery objects. You must begin passing an HTMLElement instead
+- [#177] Accessing the global "Hotbar" which is now namespaced under foundry.applications.ui.Hotbar
+
+---
+
 ## v11.6.6
 
 ### Enhancements

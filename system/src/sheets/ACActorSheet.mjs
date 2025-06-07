@@ -5,7 +5,8 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export default class ACActorSheet extends ActorSheet {
+export default class ACActorSheet
+	extends foundry.appv1.sheets.ActorSheet {
 
 	/** @override */
 	static get defaultOptions() {
@@ -66,7 +67,9 @@ export default class ACActorSheet extends ActorSheet {
 			rollData: this.actor.getRollData.bind(this.actor),
 		};
 
-		context.biographyHTML = await TextEditor.enrichHTML(context.system.biography, {
+		const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+		context.biographyHTML = await textEditor.enrichHTML(context.system.biography, {
 			secrets: this.actor.isOwner,
 			rollData: context.rollData,
 			async: true,
@@ -84,18 +87,15 @@ export default class ACActorSheet extends ActorSheet {
 			context.vehicleQualities = this._getVehicleQualities();
 		}
 
-		// Add roll data for TinyMCE editors.
-		// context.rollData = context.actor.getRollData();
-
 		// Prepare Items Enriched Descriptions
 		const itemTypes = ["talent"];
 		let itemsEnrichedDescriptions = {};
-		for await (let itm of this.actor.items) {
-			if (itemTypes.includes(itm.type)) {
+		for await (let item of this.actor.items) {
+			if (itemTypes.includes(item.type)) {
 				const descriptionRich =
-					await TextEditor.enrichHTML(itm.system.description, {async: true});
+					await textEditor.enrichHTML(item.system.description, {async: true});
 
-				itemsEnrichedDescriptions[itm._id] = descriptionRich;
+				itemsEnrichedDescriptions[item._id] = descriptionRich;
 			}
 		}
 
@@ -556,26 +556,6 @@ export default class ACActorSheet extends ActorSheet {
 		// TRUTHS
 		html.find(".truth-create").click(this._onTruthCreate.bind(this));
 
-		const truthsMenuItems = [
-			{
-				icon: '<i class="fas fa-edit"></i>',
-				name: "",
-				callback: t => {
-					this._onTruthEdit(t.data());
-				},
-			},
-			{
-				icon: '<i class="fas fa-trash"></i>',
-				name: "",
-				callback: t => {
-					this._onTruthDelete(t.data());
-				},
-			},
-		];
-
-		new ContextMenu(html, ".truth-edit", truthsMenuItems);
-
-
 		// * Delete Inventory Item
 		html.find(".item-delete").click(async ev => {
 			const li = $(ev.currentTarget).parents(".item");
@@ -626,40 +606,53 @@ export default class ACActorSheet extends ActorSheet {
 		/* -------------------------------------------- */
 		/* ADD RIGHT CLICK CONTENT MENU
         /* -------------------------------------------- */
-		let menu_items = [
-			{
-				icon: '<i class="fas fa-comment"></i>',
-				name: "",
+		const contextMenu = foundry.applications.ux.ContextMenu.implementation;
 
-				callback: t => {
-					this._onPostItem(t.data("item-id"));
-				},
-			},
+		const truthsMenu = [
 			{
 				icon: '<i class="fas fa-edit"></i>',
 				name: "",
 				callback: t => {
-					this._editOwnedItemById(t.data("item-id"));
+					this._onTruthEdit(t.dataset);
 				},
 			},
 			{
 				icon: '<i class="fas fa-trash"></i>',
 				name: "",
 				callback: t => {
-					this._deleteOwnedItemById(t.data("item-id"));
-				},
-				condition: t => {
-					if (t.data("coreskill")) {
-						return t.data("coreskill").length < 1;
-					}
-					else {
-						return true;
-					}
+					this._onTruthDelete(t.dataset);
 				},
 			},
 		];
 
-		new ContextMenu(html, ".editable-item", menu_items);
+		new contextMenu(html.get(0), ".truth-edit", truthsMenu, {jQuery: false});
+
+
+		const editableItemsMenu = [
+			{
+				icon: '<i class="fas fa-comment"></i>',
+				name: "",
+				callback: t => {
+					this._onPostItem(t.dataset.itemId);
+				},
+			},
+			{
+				icon: '<i class="fas fa-edit"></i>',
+				name: "",
+				callback: t => {
+					this._editOwnedItemById(t.dataset.itemId);
+				},
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "",
+				callback: t => {
+					this._deleteOwnedItemById(t.dataset.itemId);
+				},
+			},
+		];
+
+		new contextMenu(html.get(0), ".editable-item", editableItemsMenu, {jQuery: false});
 
 
 		// ! DON'T LET NUMBER FIELDS EMPTY
@@ -780,7 +773,9 @@ export default class ACActorSheet extends ActorSheet {
 			});
 		}
 		else {
-			let _descriptionText = await TextEditor.enrichHTML(
+			const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+			let _descriptionText = await textEditor.enrichHTML(
 				item.system.description, {async: true}
 			);
 

@@ -90,31 +90,39 @@ export default class ACItem extends Item {
 
 	async sendToChat() {
 		const itemData = foundry.utils.duplicate(this.system);
+
 		itemData._id = this._id;
 		itemData.img = this.img;
+		itemData.isArmor = this.type === "armor";
+		itemData.isEquipment = this.type === "equipment";
+		itemData.isPhysical = this.system.hasOwnProperty("weight");
+		itemData.isSkill = this.type === "skill";
+		itemData.isSkillkit = this.type === "skillkit";
+		itemData.isSpecial_rule = this.type === "special_rule";
+		itemData.isSpell = this.type === "spell";
+		itemData.isTalent = this.type === "talent";
+		itemData.isWeapon = this.type === "weapon";
 		itemData.name = this.name;
 		itemData.type = this.type;
-		itemData.isPhysical = this.system.hasOwnProperty("weight");
-		itemData.isWeapon = this.type === "weapon";
-		itemData.isArmor = this.type === "armor";
-		itemData.isTalent = this.type === "talent";
-		itemData.isSpell = this.type === "spell";
-		itemData.isSkillkit = this.type === "skillkit";
-		itemData.isEquipment = this.type === "equipment";
-		itemData.isSpecial_rule = this.type === "special_rule";
-		itemData.isSkill = this.type === "skill";
-		const html = await renderTemplate("systems/ac2d20/templates/chat/item.hbs", itemData);
+
+		const html = await foundry.applications.handlebars.renderTemplate(
+			"systems/ac2d20/templates/chat/item.hbs",
+			itemData
+		);
+
 		const chatData = {
 			user: game.user.id,
 			rollMode: game.settings.get("core", "rollMode"),
 			content: html,
 		};
+
 		if (["gmroll", "blindroll"].includes(chatData.rollMode)) {
 			chatData.whisper = ChatMessage.getWhisperRecipients("GM");
 		}
 		else if (chatData.rollMode === "selfroll") {
 			chatData.whisper = [game.user];
 		}
+
 		ChatMessage.create(chatData);
 	}
 

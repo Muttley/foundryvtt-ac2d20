@@ -23,9 +23,17 @@
 {
 	font-family: $font-charis;
 	font-weight: 400;
+	color: colors.$c-dark;
+
+    a {
+		color: colors.$c-red-dark;
+		font-weight: bold;
+	}
 
 	a.content-link {
+		color: var(--content-link-text-color);
 		font-family: $font-germania;
+		font-style: normal;
 	}
 
 	aside {
@@ -181,12 +189,13 @@
 		}
 
 		tbody {
+
 			tr:nth-child(even) {
-				background-color: rgba(111, 140, 84, 0.15);
+				background-color: rgb(211, 210, 198);
 			}
 
 			tr:nth-child(odd) {
-				background-color: rgba(111, 140, 84, 0.35);
+				background-color: rgb(188, 194, 171);
 			}
 
 			tr:first-child {
@@ -203,6 +212,7 @@
 			padding-left: 6px;
 			padding-right: 6px;
 		}
+
 	}
 
 	section {

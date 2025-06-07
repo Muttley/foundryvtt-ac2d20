@@ -1,4 +1,4 @@
-<div class="ac2d20-chat-message">
+<div class="ac2d20 ac2d20-chat-message">
 	<div class="content">
 		<h2>
 			{{rollName}}
@@ -13,20 +13,25 @@
 			</p>
 		</div>
 		{{#if item}}
-			<p class="font-size-11">
+			<p class="damage-effects">
 				{{#ifCond item.type "===" "spell"}}
-					{{localize "AC2D20.TEMPLATES.Effects"}}: {{itemEffects}}
+					<b>{{localize "AC2D20.TEMPLATES.Effects"}}:</b>
+					{{itemEffects}}
 				{{else}}
-					{{localize "AC2D20.TEMPLATES.Effects"}}: {{{listDamageEffects item.system.effect}}}
+					<b>{{localize "AC2D20.TEMPLATES.Effects"}}:</b>
+					{{{listDamageEffects item.system.effect}}}
 				{{/ifCond}}
 			</p>
 		{{/if}}
 		<div class="dices-result" style="display: flex; flex-wrap: wrap;">
 			{{#each results as |dice|}}
-				<span class="dice-icon d6 face-{{dice.face}}{{#if reroll}} reroll{{/if}}{{#ifCond effect '==' 1}} effect{{/ifCond}}" data-index="{{@index}}">&nbsp;</span>
+				<span
+					class="dice-icon d6 face-{{dice.face}}{{#if reroll}} reroll{{/if}}{{#ifCond effect '==' 1}} effect{{/ifCond}}"
+					data-index="{{@index}}"
+				>&nbsp;</span>
 			{{/each}}
 		</div>
-		<div class="flexrow">
+		<div class="grid-2-columns">
 			<button class="reroll-button">
 				{{localize "AC2D20.TEMPLATES.Re_roll"}}
 			</button>

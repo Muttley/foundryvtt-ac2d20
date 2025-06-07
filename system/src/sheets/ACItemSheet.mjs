@@ -4,7 +4,8 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
-export default class ACItemSheet extends ItemSheet {
+export default class ACItemSheet
+	extends foundry.appv1.sheets.ItemSheet {
 
 	/** @override */
 	static get defaultOptions() {
@@ -113,7 +114,9 @@ export default class ACItemSheet extends ItemSheet {
 			type: item.type,
 		});
 
-		context.descriptionHTML = await TextEditor.enrichHTML(
+		const textEditor = foundry.applications.ux.TextEditor.implementation;
+
+		context.descriptionHTML = await textEditor.enrichHTML(
 			item.system.description,
 			{
 				secrets: item.isOwner,

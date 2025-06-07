@@ -56,7 +56,7 @@ export async function initHook() {
 	CONFIG.Dice.terms.s = DieACChallenge;
 
 	// Combat tracker stuff
-	CONFIG.ui.combat = apps.CombatTracker2d20;
+	CONFIG.ui.combat = apps.CombatTracker2d20V2;
 
 	registerSettings();
 
@@ -78,10 +78,8 @@ function registerDocumentClasses() {
 }
 
 function registerDocumentSheets() {
-	Actors.unregisterSheet("core", ActorSheet);
-	Items.unregisterSheet("core", ItemSheet);
-
-	Actors.registerSheet("ac2d20",
+	foundry.documents.collections.Actors.registerSheet(
+		"ac2d20",
 		sheets.ACActorSheet,
 		{
 			makeDefault: true,
@@ -89,7 +87,8 @@ function registerDocumentSheets() {
 		}
 	);
 
-	Actors.registerSheet("ac2d20",
+	foundry.documents.collections.Actors.registerSheet(
+		"ac2d20",
 		sheets.ACNPCSheet,
 		{
 			makeDefault: true,
@@ -97,7 +96,8 @@ function registerDocumentSheets() {
 		}
 	);
 
-	Actors.registerSheet("ac2d20",
+	foundry.documents.collections.Actors.registerSheet(
+		"ac2d20",
 		sheets.ACVehicleSheet,
 		{
 			makeDefault: true,
@@ -105,7 +105,7 @@ function registerDocumentSheets() {
 		}
 	);
 
-	Items.registerSheet("ac2d20",
+	foundry.documents.collections.Items.registerSheet("ac2d20",
 		sheets.ACItemSheet,
 		{
 			makeDefault: true,

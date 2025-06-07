@@ -31,5 +31,5 @@ export const preloadHandlebarsTemplates = async function() {
 		paths[key] = path;
 	}
 
-	return loadTemplates(paths);
+	return foundry.applications.handlebars.loadTemplates(paths);
 };

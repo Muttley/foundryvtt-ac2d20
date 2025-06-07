@@ -1,52 +1,57 @@
-// import Counter from '../system/counter';
-
 export default class Combat2d20 extends Combat {
 
-	constructor(options) {
-		super(options);
-
-		this.flags.combatantsTurnDone = this.flags.combatantsTurnDone ?? [];
+	get combatantsTurnDone() {
+		return this.getFlag(SYSTEM_ID, "combatantsTurnDone") ?? [];
 	}
 
-	get combatantsTurnDone() {
-		const combatantsTurnDone = this.flags.combatantsTurnDone ?? [];
+
+	get combatantsTurnsDoneThisRound() {
+		const combatantsTurnDone = this.combatantsTurnDone;
 		return combatantsTurnDone[this.round] ?? {};
 	}
+
 
 	get momentumLog() {
 		const momentumLog = this.flags.momentumLog ?? [];
 		return momentumLog[this.round] ?? {};
 	}
 
+
 	get shouldUpdateMomentum() {
 		return game.settings.get(
-			"ac2d20", "combatTrackerMomentumUpdate"
+			SYSTEM_ID, "combatTrackerMomentumUpdate"
 		);
 	}
 
-	async endCombat() {
-		return Dialog.confirm({
-			title: game.i18n.localize("COMBAT.EndTitle"),
-			content: `<p>${game.i18n.localize("COMBAT.EndConfirmation")}</p>`,
-			yes: () => {
-				if (this.shouldUpdateMomentum && this.started) {
-					if (game.user.isGM) {
-						game.ac2d20.MomentumTracker.adjustAP("partyMomentum", -1);
-					}
-					else {
-						game.socket.emit("system.ac2d20", {
-							operation: "adjustAP",
-							data: { diff: -1, type: "partyMomentum" },
-						});
-					}
 
-					ui.notifications.info(
-						game.i18n.localize("AC2D20.Combat.CombatEndMomentumPoolDecremented")
-					);
-				}
-				this.delete();
+	async endCombat() {
+		const proceed = await foundry.applications.api.DialogV2.confirm({
+			window: {
+				title: game.i18n.localize("COMBAT.EndTitle"),
 			},
+			content: game.i18n.localize("COMBAT.EndConfirmation"),
+			rejectClose: false,
+			modal: true,
 		});
+
+		if (proceed) {
+			if (this.shouldUpdateMomentum && this.started) {
+				if (game.user.isGM) {
+					game.ac2d20.MomentumTracker.adjustAP("partyMomentum", -1);
+				}
+				else {
+					game.socket.emit("system.ac2d20", {
+						operation: "adjustAP",
+						data: { diff: -1, type: "partyMomentum" },
+					});
+				}
+
+				ui.notifications.info(
+					game.i18n.localize("AC2D20.Combat.CombatEndMomentumPoolDecremented")
+				);
+			}
+			this.delete();
+		}
 	}
 
 	async nextRound() {
@@ -143,9 +148,8 @@ export default class Combat2d20 extends Combat {
 
 	async startCombat() {
 		const updateData = {
-			"round": 1,
-			"turn": 0,
-			"flags.combatantsTurnDone": [],
+			round: 1,
+			turn: 0,
 		};
 
 		Hooks.callAll("combatStart", this, updateData);
@@ -157,13 +161,14 @@ export default class Combat2d20 extends Combat {
 		if (!game.user.isGM) return;
 		if (!this.started) return;
 
+		const combatantsTurnsDoneThisRound = this.combatantsTurnsDoneThisRound;
+
+		const turnDone = !(combatantsTurnsDoneThisRound[combatantId] ?? false);
+		combatantsTurnsDoneThisRound[combatantId] = turnDone;
+
 		const combatantsTurnDone = this.combatantsTurnDone;
+		combatantsTurnDone[this.round] = combatantsTurnsDoneThisRound;
 
-		const turnDone = !(combatantsTurnDone[combatantId] ?? false);
-		combatantsTurnDone[combatantId] = turnDone;
-
-		this.flags.combatantsTurnDone[this.round] = combatantsTurnDone;
-
-		return this.update({"flags.combatantsTurnDone": this.flags.combatantsTurnDone});
+		this.setFlag(SYSTEM_ID, "combatantsTurnDone", combatantsTurnDone);
 	}
 }
