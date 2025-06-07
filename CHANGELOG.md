@@ -1,3 +1,10 @@
+## v11.7.0
+
+### Chores
+- [#159] Merge new Italian translation updates from Crowdin
+
+---
+
 ## v11.6.6
 
 ### Enhancements
