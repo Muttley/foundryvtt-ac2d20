@@ -69,9 +69,10 @@ a {
 		background-color: beige;
 		appearance: none;
 		text-indent: 1px;
-		text-overflow: '';
+		text-overflow: "";
 		margin-left: 5px;
 		font-family: $font-germania;
+		line-height: 1;
 	}
 
 	.resource {
