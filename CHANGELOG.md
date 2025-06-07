@@ -23,6 +23,7 @@
 - [#173] Accessing the global "ContextMenu" which is now namespaced under foundry.applications.ux.ContextMenu.implementation
 - [#174] ContextMenu is changing to no longer transact jQuery objects for menu item callbacks
 - [#175] ContextMenu is changing to no longer transact jQuery objects. You must begin passing an HTMLElement instead
+- [#177] Accessing the global "Hotbar" which is now namespaced under foundry.applications.ui.Hotbar
 
 ---
 

@@ -59,18 +59,15 @@ export default class ACUtils {
 	//
 	static async showNewReleaseNotes() {
 		if (game.user.isGM) {
-			const savedVersion = game.settings.get("ac2d20", "systemVersion");
+			const savedVersion = game.settings.get(SYSTEM_ID, "systemVersion");
 			const systemVersion = game.system.version;
 
 			if (systemVersion !== savedVersion) {
-				Hotbar.toggleDocumentSheet(
+				foundry.applications.ui.Hotbar.toggleDocumentSheet(
 					CONFIG.AC2D20.JOURNAL_UUIDS.releaseNotes
 				);
 
-				game.settings.set(
-					"ac2d20", "systemVersion",
-					systemVersion
-				);
+				game.settings.set(SYSTEM_ID, "systemVersion", systemVersion);
 			}
 		}
 	}
