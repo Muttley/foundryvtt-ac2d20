@@ -11,6 +11,7 @@
 - [#165] Accessing the global "CombatTracker" which is now namespaced under foundry.applications.sidebar.tabs.CombatTracker
 - [#166] Accessing the global "ActorSheet" which is now namespaced under foundry.appv1.sheets.ActorSheet
 - [#167] Accessing the global "ItemSheet" which is now namespaced under foundry.appv1.sheets.ItemSheet
+- [#168] Accessing the global "Actors" which is now namespaced under foundry.documents.collections.Actors
 
 ---
 

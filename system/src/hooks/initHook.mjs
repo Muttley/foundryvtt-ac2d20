@@ -78,7 +78,8 @@ function registerDocumentClasses() {
 }
 
 function registerDocumentSheets() {
-	Actors.registerSheet("ac2d20",
+	foundry.documents.collections.Actors.registerSheet(
+		"ac2d20",
 		sheets.ACActorSheet,
 		{
 			makeDefault: true,
@@ -86,7 +87,8 @@ function registerDocumentSheets() {
 		}
 	);
 
-	Actors.registerSheet("ac2d20",
+	foundry.documents.collections.Actors.registerSheet(
+		"ac2d20",
 		sheets.ACNPCSheet,
 		{
 			makeDefault: true,
@@ -94,7 +96,8 @@ function registerDocumentSheets() {
 		}
 	);
 
-	Actors.registerSheet("ac2d20",
+	foundry.documents.collections.Actors.registerSheet(
+		"ac2d20",
 		sheets.ACVehicleSheet,
 		{
 			makeDefault: true,
