@@ -1,5 +1,8 @@
 ## v11.7.0
 
+### Enhancement
+- [#176] Replace old custom combat tracker with new ApplicationV2 version to work with FoundryVTT v13
+
 ### Bugfix
 - [#160] Button icons messed up in FoundryVTT v13
 - [#161] Journal styles messed up in FoundryVTT v13

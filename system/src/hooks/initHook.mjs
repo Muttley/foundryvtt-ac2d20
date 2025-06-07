@@ -56,7 +56,7 @@ export async function initHook() {
 	CONFIG.Dice.terms.s = DieACChallenge;
 
 	// Combat tracker stuff
-	CONFIG.ui.combat = apps.CombatTracker2d20;
+	CONFIG.ui.combat = apps.CombatTracker2d20V2;
 
 	registerSettings();
 

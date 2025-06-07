@@ -3,6 +3,9 @@ export const SYSTEM_NAME = "Achtung! Cthulhu 2d20";
 
 export const AC2D20 = {};
 
+globalThis.systemPath = path => `systems/${SYSTEM_ID}/${path ?? ""}`;
+globalThis.templatePath = path => path ? systemPath(`templates/${path}.hbs`) : systemPath("templates");
+
 AC2D20.attributes = {
 	agi: "AC2D20.AbilityAgi",
 	bra: "AC2D20.AbilityBra",
