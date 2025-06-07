@@ -4,6 +4,7 @@
 - [#160] Button icons messed up in FoundryVTT v13
 - [#161] Journal styles messed up in FoundryVTT v13
 - [#162] Dialog button text not visible
+- [#163] Error when rerolling or adding extra stress dice
 - [#164] Momentum/Threat tracker position clashes with new FoundryVTT v13 sidebar
 
 ### Chores
