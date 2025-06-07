@@ -2,10 +2,10 @@
 	"id": "ac2d20",
 	"title": "Achtung! Cthulhu 2d20",
 	"description": "An unofficial system for playing Achtung! Cthulhu 2d20 from Modiphius Entertainment Ltd.",
-	"version": "11.6.6",
+	"version": "11.7.0",
 	"compatibility": {
-		"minimum": "11",
-		"verified": "12"
+		"minimum": "13",
+		"verified": "13"
 	},
 	"authors": [
 		{

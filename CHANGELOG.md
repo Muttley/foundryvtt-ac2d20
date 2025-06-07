@@ -11,6 +11,7 @@
 - [#164] Momentum/Threat tracker position clashes with new FoundryVTT v13 sidebar
 
 ### Chores
+- [#152] Foundry v13 compatibility verification
 - [#159] Merge new Italian translation updates from Crowdin
 - [#165] Accessing the global "CombatTracker" which is now namespaced under foundry.applications.sidebar.tabs.CombatTracker
 - [#166] Accessing the global "ActorSheet" which is now namespaced under foundry.appv1.sheets.ActorSheet
