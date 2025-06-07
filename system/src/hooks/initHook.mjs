@@ -78,9 +78,6 @@ function registerDocumentClasses() {
 }
 
 function registerDocumentSheets() {
-	Actors.unregisterSheet("core", ActorSheet);
-	Items.unregisterSheet("core", ItemSheet);
-
 	Actors.registerSheet("ac2d20",
 		sheets.ACActorSheet,
 		{
