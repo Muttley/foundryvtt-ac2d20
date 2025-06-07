@@ -562,8 +562,26 @@ nav {
 	min-width: unset;
 	width: unset;
 
+    height: max-content;
+    max-width: 360px;
+    position: absolute;
+    background: #23221d;
+    border: 1px solid var(--color-border-dark);
+    border-radius: 5px;
+    color: #eee;
+
 	li.context-item {
 		line-height: 26px;
+		font-size: 14px;
+		padding: 0px 5px;
+
+		&:active,
+		&:hover {
+			background-color: unset;
+			border: unset;
+			color: white;
+			text-shadow: 0 0 4px var(--color-shadow-primary);
+		}
 	}
 
 	.context-items {

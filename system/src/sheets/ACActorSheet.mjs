@@ -556,26 +556,6 @@ export default class ACActorSheet
 		// TRUTHS
 		html.find(".truth-create").click(this._onTruthCreate.bind(this));
 
-		const truthsMenuItems = [
-			{
-				icon: '<i class="fas fa-edit"></i>',
-				name: "",
-				callback: t => {
-					this._onTruthEdit(t.data());
-				},
-			},
-			{
-				icon: '<i class="fas fa-trash"></i>',
-				name: "",
-				callback: t => {
-					this._onTruthDelete(t.data());
-				},
-			},
-		];
-
-		new ContextMenu(html, ".truth-edit", truthsMenuItems);
-
-
 		// * Delete Inventory Item
 		html.find(".item-delete").click(async ev => {
 			const li = $(ev.currentTarget).parents(".item");
@@ -626,40 +606,53 @@ export default class ACActorSheet
 		/* -------------------------------------------- */
 		/* ADD RIGHT CLICK CONTENT MENU
         /* -------------------------------------------- */
-		let menu_items = [
-			{
-				icon: '<i class="fas fa-comment"></i>',
-				name: "",
+		const contextMenu = foundry.applications.ux.ContextMenu.implementation;
 
-				callback: t => {
-					this._onPostItem(t.data("item-id"));
-				},
-			},
+		const truthsMenu = [
 			{
 				icon: '<i class="fas fa-edit"></i>',
 				name: "",
 				callback: t => {
-					this._editOwnedItemById(t.data("item-id"));
+					this._onTruthEdit(t.dataset);
 				},
 			},
 			{
 				icon: '<i class="fas fa-trash"></i>',
 				name: "",
 				callback: t => {
-					this._deleteOwnedItemById(t.data("item-id"));
-				},
-				condition: t => {
-					if (t.data("coreskill")) {
-						return t.data("coreskill").length < 1;
-					}
-					else {
-						return true;
-					}
+					this._onTruthDelete(t.dataset);
 				},
 			},
 		];
 
-		new ContextMenu(html, ".editable-item", menu_items);
+		new contextMenu(html.get(0), ".truth-edit", truthsMenu, {jQuery: false});
+
+
+		const editableItemsMenu = [
+			{
+				icon: '<i class="fas fa-comment"></i>',
+				name: "",
+				callback: t => {
+					this._onPostItem(t.dataset.itemId);
+				},
+			},
+			{
+				icon: '<i class="fas fa-edit"></i>',
+				name: "",
+				callback: t => {
+					this._editOwnedItemById(t.dataset.itemId);
+				},
+			},
+			{
+				icon: '<i class="fas fa-trash"></i>',
+				name: "",
+				callback: t => {
+					this._deleteOwnedItemById(t.dataset.itemId);
+				},
+			},
+		];
+
+		new contextMenu(html.get(0), ".editable-item", editableItemsMenu, {jQuery: false});
 
 
 		// ! DON'T LET NUMBER FIELDS EMPTY
