@@ -7,6 +7,19 @@
 	.window-content {
 		background-image: url(../assets/paper.webp);
 		background-size: cover;
+
+		button {
+			font-family: $font-germania;
+			font-size: 16px;
+			color: colors.$c-green-olive;
+			background-color: colors.$c-beige;
+
+			&:hover {
+				text-shadow: 0 0 10px colors.$c-green-light;
+				box-shadow: 0 0 5px colors.$c-green-light;
+				cursor: pointer;
+			}
+		}
 	}
 }
 
@@ -50,8 +63,6 @@ a {
 		cursor: pointer;
 	}
 }
-
-
 
 .ac2d20-dialog {
 	select {

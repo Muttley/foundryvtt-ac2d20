@@ -3,6 +3,7 @@
 ### Bugfix
 - [#160] Button icons messed up in FoundryVTT v13
 - [#161] Journal styles messed up in FoundryVTT v13
+- [#162] Dialog button text not visible
 
 ### Chores
 - [#159] Merge new Italian translation updates from Crowdin
