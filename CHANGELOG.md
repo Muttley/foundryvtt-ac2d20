@@ -1,5 +1,8 @@
 ## v11.7.0
 
+### Bugfix
+- [#160] Button icons messed up in FoundryVTT v13
+
 ### Chores
 - [#159] Merge new Italian translation updates from Crowdin
 
