@@ -12,7 +12,7 @@ export default class DialogEditTruth extends Dialog {
 			index,
 		};
 
-		const html = await renderTemplate(
+		const html = await foundry.applications.handlebars.renderTemplate(
 			"systems/ac2d20/templates/dialogs/edit-truth.hbs",
 			dialogData
 		);

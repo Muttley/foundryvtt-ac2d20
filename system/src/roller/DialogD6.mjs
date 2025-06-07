@@ -21,7 +21,7 @@ export default class DialogD6 extends Dialog {
 			rollName,
 		};
 
-		const html = await renderTemplate(
+		const html = await foundry.applications.handlebars.renderTemplate(
 			"systems/ac2d20/templates/dialogs/dialogD6.hbs",
 			dialogData
 		);

@@ -12,18 +12,18 @@ export default class Roller2D20 {
 	static async addD6({
 		ac2d20Roll = null,
 		actorId = null,
-		dicenum = 2,
+		diceNum = 2,
 		diceRolled = [],
 		itemId = null,
 		rollName = "Roll D6",
 	} = {}) {
-		let formula = `${dicenum}ds`;
+		let formula = `${diceNum}ds`;
 		let roll = new Roll(formula);
 
 		await roll.evaluate();
 		this.showDiceSoNice(roll);
 
-		let newRollName = `${ac2d20Roll.rollName} [+ ${dicenum} DC]`;
+		let newRollName = `${ac2d20Roll.rollName} [+${diceNum}@s]`;
 		let oldDiceRolled = ac2d20Roll.diceRolled;
 
 		await Roller2D20.parseD6Roll({
@@ -360,16 +360,18 @@ export default class Roller2D20 {
 			rollName,
 		};
 
-		const html = await renderTemplate(
+		const html = await foundry.applications.handlebars.renderTemplate(
 			"systems/ac2d20/templates/chat/rollD6.hbs",
 			rollData
 		);
 
 		const ac2d20Roll = {
+			actorId,
 			damage,
 			diceFace: "d6",
 			diceRolled,
 			effects,
+			itemId,
 			rerollIndexes,
 			rollName,
 		};
@@ -381,7 +383,7 @@ export default class Roller2D20 {
 		const chatData = {
 			blind,
 			content: html,
-			flags: { ac2d20Roll, itemId, actorId },
+			flags: { ac2d20Roll },
 			roll,
 			rollMode: game.settings.get("core", "rollMode"),
 			speaker,
@@ -417,16 +419,18 @@ export default class Roller2D20 {
 			successThreshold: successThreshold,
 		};
 
-		const html = await renderTemplate(
+		const html = await foundry.applications.handlebars.renderTemplate(
 			"systems/ac2d20/templates/chat/roll2d20.hbs",
 			rollData
 		);
 
 		const ac2d20Roll = {
+			actorId,
 			complicationThreshold,
 			critThreshold,
 			diceFace: "d20",
 			diceRolled,
+			itemId,
 			rerollIndexes,
 			rollName,
 			successThreshold,

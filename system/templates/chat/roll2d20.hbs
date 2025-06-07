@@ -7,7 +7,7 @@
 			{{localize "AC2D20.TEMPLATES.Successes"}}:
 			{{successes}}
 			<span class="TN">
-				&nbsp;&nbsp;&nbsp;({{localize "AC2D20.TEMPLATES.TN"}}{{successThreshold}})
+				({{localize "AC2D20.TEMPLATES.TN"}} {{successThreshold}})
 			</span>
 		</p>
 		{{#ifCond complications '>' 0}}
@@ -26,8 +26,10 @@
 				</span>
 			{{/each}}
 		</div>
-		<button class="reroll-button">
-			{{localize "AC2D20.TEMPLATES.Re_roll"}}
-		</button>
+		<div class="grid-1-columns">
+			<button class="reroll-button">
+				{{localize "AC2D20.TEMPLATES.Re_roll"}}
+			</button>
+		</div>
 	</div>
 </div>

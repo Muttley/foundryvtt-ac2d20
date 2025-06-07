@@ -98,7 +98,7 @@ export default class Dialog2d20 extends Dialog {
 			skill,
 		};
 
-		const html = await renderTemplate(
+		const html = await foundry.applications.handlebars.renderTemplate(
 			"systems/ac2d20/templates/dialogs/dialog2d20.hbs",
 			dialogData
 		);
