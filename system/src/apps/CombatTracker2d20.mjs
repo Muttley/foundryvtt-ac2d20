@@ -1,4 +1,5 @@
-export default class CombatTracker2d20 extends CombatTracker {
+export default class CombatTracker2d20
+	extends foundry.applications.sidebar.tabs.CombatTracker {
 
 	static get defaultOptions() {
 		return {
