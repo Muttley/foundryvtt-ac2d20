@@ -27,11 +27,13 @@
 
     a {
 		color: colors.$c-red-dark;
-		font-style: italic;
+		font-weight: bold;
 	}
 
 	a.content-link {
+		color: var(--content-link-text-color);
 		font-family: $font-germania;
+		font-style: normal;
 	}
 
 	aside {
