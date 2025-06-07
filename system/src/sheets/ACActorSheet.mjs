@@ -85,18 +85,15 @@ export default class ACActorSheet
 			context.vehicleQualities = this._getVehicleQualities();
 		}
 
-		// Add roll data for TinyMCE editors.
-		// context.rollData = context.actor.getRollData();
-
 		// Prepare Items Enriched Descriptions
 		const itemTypes = ["talent"];
 		let itemsEnrichedDescriptions = {};
-		for await (let itm of this.actor.items) {
-			if (itemTypes.includes(itm.type)) {
+		for await (let item of this.actor.items) {
+			if (itemTypes.includes(item.type)) {
 				const descriptionRich =
-					await TextEditor.enrichHTML(itm.system.description, {async: true});
+					await TextEditor.enrichHTML(item.system.description, {async: true});
 
-				itemsEnrichedDescriptions[itm._id] = descriptionRich;
+				itemsEnrichedDescriptions[item._id] = descriptionRich;
 			}
 		}
 
