@@ -1,3 +1,13 @@
+## v11.7.1
+
+### Bugfix
+- [#181] Unable to add new Active Effects to Actors and Items
+
+### Chores
+- [#156] Merge new French translation updates from Crowdin
+
+---
+
 ## v11.7.0
 
 ### Enhancement
