@@ -53,7 +53,7 @@ AC2D20.FOCUS.Finance: Finances
 AC2D20.FOCUS.First Aid: Premiers secours
 AC2D20.FOCUS.Foraging: Cueillette
 AC2D20.FOCUS.Fortitude: Vigueur
-AC2D20.FOCUS.Hand-to-Hand: Main à main
+AC2D20.FOCUS.Hand-to-Hand: À mains nues
 AC2D20.FOCUS.Handguns: Arme de poing
 AC2D20.FOCUS.Hearing: Ouïe
 AC2D20.FOCUS.Heavy Vehicles: Véhicules lourds
@@ -118,7 +118,7 @@ AC2D20.RESISTANCE.resistance: Résistance
 AC2D20.SETTINGS.compendiumHint: Chaque fois qu'un nouveau personnage est créé, cet ensemble de compétences sera inclus.
 AC2D20.SETTINGS.compendiumName: Compendium des compétences
 AC2D20.SETTINGS.ctHint: Si activé, le Traqueur de Combat réduira la réserve de Momentum quand un nouveau round de combat commence, ou quand le combat se termine.
-AC2D20.SETTINGS.ctName: Le Traqueur de Combat met à jour le Momentum?
+AC2D20.SETTINGS.ctName: Le Traqueur de Combat met à jour le Momentum ?
 AC2D20.SETTINGS.debugEnabled.hint: Activer ou désactiver les fonctionnalités de débogage supplémentaires
 AC2D20.SETTINGS.debugEnabled.label: Activer/Désactiver le débogage
 AC2D20.SETTINGS.hoverHint: Emplacement du fichier json contenant le texte pour les qualités et les effets de dégâts.
@@ -128,7 +128,7 @@ AC2D20.SETTINGS.maxappName: Les joueurs peuvent configurer le max de PA
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Effectuez la migration de données dans les compendiums du système (ne modifiez pas ceci à moins que vous ne sachiez ce que vous faîtes)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrer les Compendiums du système
 AC2D20.SETTINGS.showmomentumHint: Affiche la fenêtre GM de Momentum pour tout le monde. Nécessite une actualisation du côté des joueurs.
-AC2D20.SETTINGS.showmomentumName: Afficher le Momentum du GM à tous les joueurs
+AC2D20.SETTINGS.showmomentumName: Afficher le Momentum du GM à tous les joueurs.
 AC2D20.SETTINGS.systemVersion.hint: Enregistre le numéro de version système actuel d'Achtung! Cthulhu 2d20 (ne modifiez pas ce numéro à moins que vous ne sachiez ce que vous faîtes)
 AC2D20.SETTINGS.systemVersion.label: Version du système
 AC2D20.SETTINGS.worldSchemaVersion.hint: Enregistre la version actuelle du schéma pour Achtung! Cthulhu 2d20 données système. (ne modifiez pas cela à moins que vous ne sachiez ce que vous faîtes)
@@ -201,14 +201,14 @@ AC2D20.TEMPLATES.Encumbrance: Encombrement
 AC2D20.TEMPLATES.ENG: FRE
 AC2D20.TEMPLATES.equipped: équipé
 AC2D20.TEMPLATES.Experience: Expérience
-AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
+AC2D20.TEMPLATES.ExperienceAvailable: Expérience Disponible
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMES FAVORITES
 AC2D20.TEMPLATES.FIRE_RATE: CADENCE DE TIR
 AC2D20.TEMPLATES.Focus: Expertise
 AC2D20.TEMPLATES.fortune: Chance
 AC2D20.TEMPLATES.Gear: Équipement
 AC2D20.TEMPLATES.GENERAL: GÉNÉRAL
-AC2D20.TEMPLATES.GM_MOMENTUM: Menace du GM
+AC2D20.TEMPLATES.GM_MOMENTUM: Momentum/Menace du GM
 AC2D20.TEMPLATES.Healthy: Bonne Santé
 AC2D20.TEMPLATES.HP_Healed: PV soignés
 AC2D20.TEMPLATES.INITIATIVE: INITIATIVE
@@ -232,7 +232,7 @@ AC2D20.TEMPLATES.Name_Prefix: Préfixe du nom
 AC2D20.TEMPLATES.Name: Nom
 AC2D20.TEMPLATES.Nationality: Nationalité
 AC2D20.TEMPLATES.PARTY_MOMENTUM: Momentum du groupe
-AC2D20.TEMPLATES.Personal_Truth_Scars: Vérités personnelles et cicatrices
+AC2D20.TEMPLATES.Personal_Truth_Scars: Conditions personnelles et cicatrices
 AC2D20.TEMPLATES.PHYS: PHYS
 AC2D20.TEMPLATES.Points: Points
 AC2D20.TEMPLATES.POISON: POISON
@@ -279,8 +279,8 @@ AC2D20.TEMPLATES.Successes: Succès
 AC2D20.TEMPLATES.Talents: Talents
 AC2D20.TEMPLATES.TN: SR
 AC2D20.TEMPLATES.Total: Total
-AC2D20.TEMPLATES.TotalExperienceEarned: Total Experience Earned
-AC2D20.TEMPLATES.Truths: Vérités
+AC2D20.TEMPLATES.TotalExperienceEarned: Expérience Totale Acquise
+AC2D20.TEMPLATES.Truths: Conditions
 AC2D20.TEMPLATES.Use_Agility: Utiliser l'Agilité
 AC2D20.TEMPLATES.Use_Brawn: Utiliser la Force
 AC2D20.TEMPLATES.Use_Coordination: Utiliser la Coordination
@@ -380,7 +380,7 @@ AC2D20.Tooltips.Skill.fighting: Cette compétence couvre la capacité de votre p
 AC2D20.Tooltips.Skill.medicine: Cette compétence couvre le traitement des blessures physiques et mentales ainsi que le diagnostic et le traitement des poisons et des maladies. Il peut également être utilisé pour effectuer des autopsies afin de déterminer la cause du décès d’une personne.
 AC2D20.Tooltips.Skill.observation: Cette compétence couvre la conscience et la capacité de votre personnage à discerner des informations sur son environnement. Il décrit à quel point ils sont observateurs et astucieux, à quelle vitesse ils choisissent des détails importants et les utilisent, ainsi que leur capacité à ignorer les distractions. L’Observation se chevauche avec de nombreuses autres compétences, et se rapproche souvent de l'Érudition, car tous deux visent à obtenir des informations, quoique de différentes manières.
 AC2D20.Tooltips.Skill.persuasion: Cette compétence englobe la capacité de votre personnage à influencer les autres, grâce à un mélange de langage de parole et de langage corporel. Il vous permet également de repérer lorsque d’autres tentent d’utiliser ces techniques – il faut souvent un menteur pour repérer un menteur.
-AC2D20.Tooltips.Skill.resilience: Cette compétence englobe la capacité de votre personnage à résister et à se remettre des effets physiques et mentales — des blessures, des douleurs et de la fatigue et de la détresse mentale. Cela inclut également les effets des poisons, des maladies et des effets magiques. Vous pouvez utiliser la Résilience pour essayer de résister aux effets avant qu'ils ne se produisent, ou pour récupérer des effets durables déjà succombés. Alors que la Médecine et la Résilience peuvent se chevaucher, la Résilience se préoccupe davantage de la endurance intrinsèque d’un individu.
+AC2D20.Tooltips.Skill.resilience: Cette compétence englobe la capacité de votre personnage à résister et à se remettre des effets physiques et mentales — des blessures, des douleurs et de la fatigue et de la détresse mentale. Cela inclut également les effets des poisons, des maladies et des effets magiques. Vous pouvez utiliser la Résilience pour essayer de résister aux effets avant qu'ils ne se produisent, ou pour récupérer des effets durables déjà succombés. Alors que la Médecine et la Résilience peuvent se chevaucher, la Résilience se préoccupe davantage de l'endurance intrinsèque d’un individu.
 AC2D20.Tooltips.Skill.stealth: Cette compétence englobe la capacité de votre personnage à passer inaperçu, de se déplacer discrètement, à utiliser les ténèbres, les couvertures et les dissimulations pour rester invisibles. Il couvre également votre capacité à utiliser des déguisements, à se cacher à la vue ou à utiliser le camouflage pour se cacher et se dissimuler.
 AC2D20.Tooltips.Skill.survival: Cette compétence exprime la capacité de votre personnage à survivre à des conditions inhospitalières, y compris les extrêmes de température et de météo, les plantes et les animaux dangereux — en plus de trouver suffisamment d’eau et de nourriture, et de créer un feu et un abri. Il couvre également la capacité de suivre les animaux (et les ennemis), ainsi que la communication avec et l'entraînement des animaux.
 AC2D20.Tooltips.Skill.tactics: Cette compétence traite de la capacité de votre personnage à percevoir et évaluer une situation de combat et à élaborer un plan approprié. Cela couvre non seulement la stratégie et la tactique militaires, mais aussi la dynamique et le commandement, ou l’organisation d’un groupe de scientifiques ou d’ingénieurs.
@@ -389,7 +389,7 @@ AC2D20.Tooltips.VehicleQuality.cargo_x: Le véhicule peut transporter jusqu'à X
 AC2D20.Tooltips.VehicleQuality.cumbersome: Le véhicule est volumineux et non réactif, et augmente les tests de difficulté pour se déplacer de +1.
 AC2D20.Tooltips.VehicleQuality.enclosed: Le véhicule est entièrement fermé, protégeant les membres d'équipage et les passagers à l'intérieur. Les équipages et les passagers ne peuvent pas être visés par des attaques de l'extérieur du véhicule, mais ne peuvent pas non plus utiliser leur propre arme.
 AC2D20.Tooltips.VehicleQuality.exposed: Le passager et l'équipage d'un véhicule exposé peuvent être pris pour cible par des attaques de l'extérieur du véhicule et peuvent attaquer avec leurs propres armes.
-AC2D20.Tooltips.VehicleQuality.high_performance: Le véhicule est puissant et peaufiné. Le pilote peut dépenser 2 Momentum après un test de compétence réussi pour pousser le véhicule à se déplacer d'1 zone supplémentaire. Tout test de réparation du véhicule augmente en difficulté de +1, en raison de sa nature peaufinée.
+AC2D20.Tooltips.VehicleQuality.high_performance: Le véhicule est puissant et peaufiné. Le pilote peut dépenser 2 points de Momentum après un test de compétence réussi pour pousser le véhicule à se déplacer d'1 zone supplémentaire. Tout test de réparation du véhicule augmente en difficulté de +1, en raison de sa nature peaufinée.
 AC2D20.Tooltips.VehicleQuality.single_seat: Un véhicule à siège unique est conçu pour être exploité par un seul pilote, en assumant également le rôle de fusilleur sans pénalité normale.
 AC2D20.Tooltips.VehicleQuality.tough_x: Le véhicule peut subir plus de dégâts que la plupart des autres. Le nombre de blessures que le véhicule peut supporter avant d'être détruit est augmenté de X. Vous pouvez également générer 3 Menaces pour ignorer une blessure infligée au véhicule (les véhicules PNJ dépensent 3 Menaces à la place).
 AC2D20.Tooltips.WeaponQuality.accurate: Si vous prenez une action mineure de <em>Visée</em> avant d'attaquer avec cette arme, l'arme gagne l'effet Aggravant pour cette attaque.
@@ -398,20 +398,20 @@ AC2D20.Tooltips.WeaponQuality.close_quarters: L'arme est compacte et facile à m
 AC2D20.Tooltips.WeaponQuality.cumbersome: L'arme est lourde et maladroite à porter contre de petites cibles comme l'infanterie. Lors d'une attaque avec cette arme, augmente la difficulté de l'attaque de +1, si la cible est de taille humaine ou plus petite.
 AC2D20.Tooltips.WeaponQuality.debilitating: La difficulté de n'importe quel test de compétence pour traiter les blessures physiques de cette arme est augmentée de +1.
 AC2D20.Tooltips.WeaponQuality.escalation: Entrer dans une scène avec l'arme génère 1 Menace.
-AC2D20.Tooltips.WeaponQuality.experimental: Les tests avec cet objet augmentent leur portée de complication de 2. De plus, pour chaque 2 Momentum généré lors d'un test avec cet objet, vous générez également 1 Menace.
+AC2D20.Tooltips.WeaponQuality.experimental: Les tests avec cet objet augmentent leur portée de complication de 2. De plus, pour chaque 2 points de Momentum générés lors d'un test avec cet objet, vous générez également 1 Menace.
 AC2D20.Tooltips.WeaponQuality.giant_killer: La puissance destructrice de l’arme est gaspillée sur des cibles faibles ou molles, mais plus la cible est grande, plus la létalité de l’arme est grande. Lorsque vous lancez des dégâts pour une arme de cette qualité, ajoutez +X@s aux dégâts de l'arme, où X est la taille de la cible. Une arme ne peut pas obtenir plus de dés supplémentaires de cette qualité que ses dégâts de base, une arme dont les dégâts de base sont de 6@s ne peut pas gagner plus de +6@s à partir de cette qualité.
 AC2D20.Tooltips.WeaponQuality.heavy: Les attaques avec cette arme augmentent la difficulté de +2 à moins que l'arme n'ait été mise en place (bloquée contre le sol ou l'objet solide, ou monté sur un trépied). La mise en place d'une arme lourde nécessite la préparation d'une action mineure.
 AC2D20.Tooltips.WeaponQuality.hidden: Quand l'arme est cachée, elle ne peut pas être détectée par ceux qui regardent simplement le personnage, et n'importe quel test de compétence pour rechercher l'arme augmente de 1 en difficulté.
-AC2D20.Tooltips.WeaponQuality.hunger: "Chaque fois que l'arme est utilisée pour infliger une ou plusieurs blessures, le porteur peut obtenir l'un des bonus suivants: récupérer 5 stress, Soigne une seule blessure, ou gagner +1@s de puissance pendant le reste de la scène (ce bonus à la puissance ne peut être gagné qu'une fois par scène)."
+AC2D20.Tooltips.WeaponQuality.hunger: "Chaque fois que l'arme est utilisée pour infliger une ou plusieurs blessures, le porteur peut obtenir l'un des bonus suivants : récupérer 5 stress, Soigne une seule blessure ou gagne +1@s de puissance pendant le reste de la scène (ce bonus à la puissance ne peut être gagné qu'une fois par scène)."
 AC2D20.Tooltips.WeaponQuality.inaccurate: Vous ne pouvez pas profiter de l'action mineure Visée avec cette arme.
 AC2D20.Tooltips.WeaponQuality.indirect: L'arme n'est pas conçue pour le tir direct, mais pour lâcher sa charge sur les ennemis à grande distance. Les attaques avec l'arme augmentent en difficulté de +1, mais ne nécessitent pas de ligne de vue.
 AC2D20.Tooltips.WeaponQuality.munition: Les munitions pour cette arme sont particulièrement grossières, quand vous lancez une attaque avec une arme à munition, vous devez utiliser 1 munition. L'arme ne peut pas être utilisée pour faire des attaques de salve.
 AC2D20.Tooltips.WeaponQuality.parrying: Quand le porteur de l’arme fait un test contre une attaque de mêlée, il peut relancer un seul d20 lors de son test. Cela ne se cumule pas si le personnage possède plusieurs armes de parade.
-AC2D20.Tooltips.WeaponQuality.precise: Attacks with this weapon use Coordination rather than any other attribute when generating additional @s.
+AC2D20.Tooltips.WeaponQuality.precise: Les attaques menées avec cette arme se font avec Coordination et non un autre attribut lorsque cela génère un @s additionnel.
 AC2D20.Tooltips.WeaponQuality.reliable: Vous pouvez ignorer la première complication déroulée en utilisant cette arme dans une scène d'action.
-AC2D20.Tooltips.WeaponQuality.subtle: Les attaques avec cette arme sont difficiles à entendre, nécessitant un test de difficulté 2 <strong>Perception + Observation </strong> à signaler. Le MJ peut ajuster cette difficulté en fonction de la distance et du bruit ambiant.
+AC2D20.Tooltips.WeaponQuality.subtle: Les attaques avec cette arme sont difficiles à entendre, nécessitant un test de difficulté 2 <strong><strong></strong> + Observation </strong> pour être averti. L'OGM peut ajuster cette difficulté en fonction de la distance et du bruit ambiant.
 AC2D20.Tooltips.WeaponQuality.unreliable: Les attaques avec cette arme augmentent le niveau de difficulté du test de 1.
-AC2D20.Tooltips.WeaponQuality.venomous: "An Ophidian weapon with the Venomous trait which rolls one or more effects on damage will inflict the Poisoned truth on the target (or the Poisoned: Ophidian Toxins truth p.79). They will suffer Persistent 1 damage with a Piercing 2 effect every turn until cured. Due to the technology involved in their creation, Ophidian Venomous Weapons have a distinctive red flash when they fire, making them easy to spot and revealing the shooter’s location."
+AC2D20.Tooltips.WeaponQuality.venomous: "Une arme Ophidienne avec le trait Venimeux qui lance un ou plusieurs effets sur les dégâts infligera la condition Empoisonné à la cible (ou la condition Empoisonné : Toxines ophidiennes p.79). Ils subiront 1 de dégâts persistants avec un effet perforant de 2 à chaque tour jusqu'à ce qu'ils soient guéris. En raison de la technologie impliquée dans leur création, les armes Ophidiennes venimeuses ont un flash rouge distinctif lorsqu'elles tirent, ce qui les rend faciles à repérer et révèle l'emplacement du tireur."
 AC2D20.UI.Add: Ajouter
 AC2D20.UI.CarryWeight: Charge
 AC2D20.UI.Cost: Coût
@@ -452,7 +452,7 @@ AC2D20.WEAPONS.damageType.poison: Poison
 AC2D20.WEAPONS.damageType.radiation: Radiation
 AC2D20.WEAPONS.qualities: Qualités
 AC2D20.WEAPONS.type: Type d'Arme
-AC2D20.WEAPONS.weaponQuality.accurate: Précis
+AC2D20.WEAPONS.weaponQuality.accurate: Précise
 AC2D20.WEAPONS.weaponQuality.bane: Fléau
 AC2D20.WEAPONS.weaponQuality.close_quarters: Combat rapproché
 AC2D20.WEAPONS.weaponQuality.cumbersome: Encombrant
@@ -467,11 +467,11 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Imprécis
 AC2D20.WEAPONS.weaponQuality.indirect: Indirecte
 AC2D20.WEAPONS.weaponQuality.munition: Munition
 AC2D20.WEAPONS.weaponQuality.parrying: Parer
-AC2D20.WEAPONS.weaponQuality.precise: Precise
+AC2D20.WEAPONS.weaponQuality.precise: Précise
 AC2D20.WEAPONS.weaponQuality.reliable: Fiable
 AC2D20.WEAPONS.weaponQuality.subtle: Subtil
 AC2D20.WEAPONS.weaponQuality.unreliable: Imprévisible
-AC2D20.WEAPONS.weaponQuality.venomous: Venomous
+AC2D20.WEAPONS.weaponQuality.venomous: Venimeux
 AC2D20.WEAPONS.weaponTypes.agi: Mêlée
 AC2D20.WEAPONS.weaponTypes.coo: À distance
 AC2D20.WEAPONS.weaponTypes.Melee: Mêlée
