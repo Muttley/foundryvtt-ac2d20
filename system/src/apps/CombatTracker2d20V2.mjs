@@ -4,7 +4,7 @@ export default class CombatTracker2d20V2
 	/** @inheritDoc */
 	static DEFAULT_OPTIONS = {
 		actions: {
-			toggleCombatantTurnDone: CombatTracker2d20V2._onConanCombatantControl,
+			toggleCombatantTurnDone: CombatTracker2d20V2._onCombatantControl,
 		},
 	};
 
@@ -57,7 +57,7 @@ export default class CombatTracker2d20V2
 	}
 
 
-	static async _onConanCombatantControl(event, target) {
+	static async _onCombatantControl(event, target) {
 		event.preventDefault();
 		event.stopPropagation();
 
@@ -70,10 +70,10 @@ export default class CombatTracker2d20V2
 			return;
 		}
 
-		const { combatantId } = target.closest("[data-combatant-id]")?.dataset ?? {};
+		const {combatantId} = target.closest("[data-combatant-id]")?.dataset ?? {};
 		const combatant = this.viewed?.combatants.get(combatantId);
 
-		if ( !combatant ) return;
+		if (!combatant) return;
 
 		if (combatant.isOwner) {
 			this.viewed.toggleTurnDone(combatant.id);

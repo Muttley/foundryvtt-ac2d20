@@ -36,15 +36,7 @@ export default class Combat2d20 extends Combat {
 
 		if (proceed) {
 			if (this.shouldUpdateMomentum && this.started) {
-				if (game.user.isGM) {
-					game.ac2d20.MomentumTracker.adjustAP("partyMomentum", -1);
-				}
-				else {
-					game.socket.emit("system.ac2d20", {
-						operation: "adjustAP",
-						data: { diff: -1, type: "partyMomentum" },
-					});
-				}
+				ac2d20.apps.MomentumTrackerV2.changeCounter(-1, "partyMomentum");
 
 				ui.notifications.info(
 					game.i18n.localize("AC2D20.Combat.CombatEndMomentumPoolDecremented")
@@ -54,19 +46,12 @@ export default class Combat2d20 extends Combat {
 		}
 	}
 
+
 	async nextRound() {
 		this.turn = null;
 
 		if (this.shouldUpdateMomentum) {
-			if (game.user.isGM) {
-				game.ac2d20.MomentumTracker.adjustAP("partyMomentum", -1);
-			}
-			else {
-				game.socket.emit("system.ac2d20", {
-					operation: "adjustAP",
-					data: { diff: -1, type: "partyMomentum" },
-				});
-			}
+			ac2d20.apps.MomentumTrackerV2.changeCounter(-1, "partyMomentum");
 
 			ui.notifications.info(
 				game.i18n.localize("AC2D20.Combat.CombatRoundMomentumPoolDecremented")

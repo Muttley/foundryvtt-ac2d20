@@ -5,7 +5,7 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
 export default class MomentumTrackerV2
 	extends HandlebarsApplicationMixin(ApplicationV2) {
 
-	static #firstRun = true;
+	static _firstRun = true;
 
 	static #instance;
 
@@ -199,8 +199,8 @@ export default class MomentumTrackerV2
 		const context = await super._prepareContext(options);
 
 		// Make sure the party momentum <= the max setting value
-		if (this.#firstRun) {
-			this.#firstRun = false;
+		if (this._firstRun) {
+			this._firstRun = false;
 
 			await game.settings.set(
 				SYSTEM_ID, "partyMomentum",
