@@ -1,20 +1,20 @@
 AC2D20.Ability.agi: Agilidade
-AC2D20.Ability.bra: Força
+AC2D20.Ability.bra: Músculo
 AC2D20.Ability.coo: Coordenação
-AC2D20.Ability.ins: Discernimento
+AC2D20.Ability.ins: Intuição
 AC2D20.Ability.rea: Razão
 AC2D20.Ability.wil: Vontade
 AC2D20.AbilityAbbr.agi: agi
-AC2D20.AbilityAbbr.bra: for
+AC2D20.AbilityAbbr.bra: mús
 AC2D20.AbilityAbbr.coo: coo
 AC2D20.AbilityAbbr.ins: int
 AC2D20.AbilityAbbr.rea: raz
 AC2D20.AbilityAbbr.wil: von
 AC2D20.ARMOR.qualities.heavy: Pesada
 AC2D20.ARMOR.qualities.shield: Escudo
-AC2D20.ARMOR.qualities.uncomfortable: Desconfortavel
-AC2D20.Combat.CombatantsTurnDone: Turno concluído
-AC2D20.Combat.CombatantsTurnNotDone: Turno não concluído
+AC2D20.ARMOR.qualities.uncomfortable: Desconfortável
+AC2D20.Combat.CombatantsTurnDone: Turno Concluído
+AC2D20.Combat.CombatantsTurnNotDone: Turno Não Concluído
 AC2D20.Combat.CombatEndMomentumPoolDecremented: A reserva de Ímpeto diminuiu no final do combate
 AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
 AC2D20.Combat.CombatRoundMomentumPoolDecremented: A reserva de Ímpeto diminuiu no começo de uma nova rodada
@@ -123,8 +123,8 @@ AC2D20.SETTINGS.debugEnabled.hint: Habilitar ou desabilitar recursos de depuraç
 AC2D20.SETTINGS.debugEnabled.label: Habilitar/Desabilitar debug
 AC2D20.SETTINGS.hoverHint: Localização do arquivo json contendo o texto para qualidades e efeitos de danos.
 AC2D20.SETTINGS.hoverName: Arquivo JSON de passagem do mouse
-AC2D20.SETTINGS.maxappHint: Permite que os jogadores configurem o AP MÁXIMO do grupo. Requer atualização por parte dos jogadores.
-AC2D20.SETTINGS.maxappName: Os jogadores podem configurar o aplicativo Max
+AC2D20.SETTINGS.maxPlayerMomentumHint: The maximum amount of momentum the players can store in the party pool
+AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Executar a migração de dados nos compêndios do sistema integrados (não modifique isso, a menos que saiba o que está fazendo)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar Compêndios do Sistema
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização por parte dos jogadores.
@@ -200,6 +200,8 @@ AC2D20.TEMPLATES.Encumbrance_Level: Nível de sobrecarga
 AC2D20.TEMPLATES.Encumbrance: Sobrecarga
 AC2D20.TEMPLATES.ENG: PT-BR
 AC2D20.TEMPLATES.equipped: equipado
+AC2D20.TEMPLATES.Escalation: Escalation
+AC2D20.TEMPLATES.EscalationOptions: Escalation Options
 AC2D20.TEMPLATES.Experience: Experiência
 AC2D20.TEMPLATES.ExperienceAvailable: Experiência Disponível
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
@@ -290,6 +292,9 @@ AC2D20.TEMPLATES.Use_Will: Usar Vontade
 AC2D20.TEMPLATES.Weapon_Qualities: QUALIDADES DE ARMA
 AC2D20.TEMPLATES.Weapon_Type: Tipo de Arma
 AC2D20.TEMPLATES.Weapons: Armas
+AC2D20.Tooltips.ArmorQuality.heavy: Due to its size and weight, the armour counts as a major item even if it is worn.
+AC2D20.Tooltips.ArmorQuality.shield: The armour is held rather than worn and provides no benefit unless the user devotes one hand to wielding it; it always counts as a major item. A shield may be used as a melee weapon (Hand-to-Hand Combat, 3@s Stun), and its armour resistance stacks with other armour worn.
+AC2D20.Tooltips.ArmorQuality.uncomfortable: The armour is uncomfortable and awkward to wear for long periods. At the end of every scene the character wears the armour, they suffer 1 Fatigue.
 AC2D20.Tooltips.Attribute.agi: Agilidade é uma mistura de velocidade, equilíbrio e memória muscular, responsável pelo movimento e destreza do personagem. Um personagem ágil é rápido, movendo-se com certeza e precisão.
 AC2D20.Tooltips.Attribute.bra: Força é a aptidão física e resistência do personagem. Um personagem forte é resistente e vigoroso.
 AC2D20.Tooltips.Attribute.coo: Coordenação mede as capacidades motoras, precisão e senso de ritmo do personagem. Personagens bem coordenados são bons atirando, pilotando e dirigindo, capazes de atos de prestidigitação e outras tarefas delicadas e precisas.
