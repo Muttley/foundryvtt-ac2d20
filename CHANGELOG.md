@@ -7,6 +7,7 @@
 
 ### Chores
 - [#186] Migrate momentum tracker application to ApplicationV2
+- [#187] Merge new translations from Crowdin
 
 ---
 
