@@ -201,6 +201,7 @@ AC2D20.TEMPLATES.Encumbrance: Encumbrance
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: equipped
 AC2D20.TEMPLATES.Escalation: Escalation
+AC2D20.TEMPLATES.EscalationOptions: Escalation Options
 AC2D20.TEMPLATES.Experience: Experience
 AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: FAVORITE WEAPONS
@@ -291,6 +292,9 @@ AC2D20.TEMPLATES.Use_Will: Use Will
 AC2D20.TEMPLATES.Weapon_Qualities: WEAPON QUALITIES
 AC2D20.TEMPLATES.Weapon_Type: Weapon Type
 AC2D20.TEMPLATES.Weapons: Weapons
+AC2D20.Tooltips.ArmorQuality.heavy: Due to its size and weight, the armour counts as a major item even if it is worn.
+AC2D20.Tooltips.ArmorQuality.shield: The armour is held rather than worn and provides no benefit unless the user devotes one hand to wielding it; it always counts as a major item. A shield may be used as a melee weapon (Hand-to-Hand Combat, 3@s Stun), and its armour resistance stacks with other armour worn.
+AC2D20.Tooltips.ArmorQuality.uncomfortable: The armour is uncomfortable and awkward to wear for long periods. At the end of every scene the character wears the armour, they suffer 1 Fatigue.
 AC2D20.Tooltips.Attribute.agi: Agility is a mixture of speed, balance, and muscle memory, and is responsible for a character’s movement and dexterity. An agile character is quick, moving with certainty and precision.
 AC2D20.Tooltips.Attribute.bra: Brawn is the character’s physical fitness and endurance. A brawny character is strong and hardy.
 AC2D20.Tooltips.Attribute.coo: Coordination is a measure of your fine motor skills, accuracy, and sense of timing. Coordinated characters are good shots, good drivers and pilots, and excel at sleight of hand and other delicate, precise tasks.

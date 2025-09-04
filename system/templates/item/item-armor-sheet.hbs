@@ -32,7 +32,10 @@
 					</div>
 					<div class="items-list" style="border: 1px solid #759549;">
 						{{#each system.qualities as |item key|}}
-						<div class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}">
+						<div
+							class="flexrow toggle-label {{#ifCond item.value '==' true}}active{{/ifCond}}"
+							data-tooltip="{{fromConfig "ARMOR_QUALITY_TOOLTIPS" key}}"
+						>
 							<label>
 								<input type="checkbox" name="system.qualities.{{key}}.value" {{#ifCond item.value '==' true}}checked{{/ifCond}}>{{localize (concat 'AC2D20.ARMOR.qualities.' key)}}
 							</label>

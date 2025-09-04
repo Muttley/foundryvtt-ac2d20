@@ -2,6 +2,7 @@
 
 ### Enhancement
 - [#121] Improve positioning of "GM Threat" and "Party Momentum" boxes
+- [#184] Show tooltips for Armor Qualities
 
 ### Chores
 - [#186] Migrate momentum tracker application to ApplicationV2
