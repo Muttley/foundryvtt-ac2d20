@@ -123,8 +123,8 @@ AC2D20.SETTINGS.debugEnabled.hint: Habilitar características adicionales de dep
 AC2D20.SETTINGS.debugEnabled.label: Habilitar/deshabilitar depuración
 AC2D20.SETTINGS.hoverHint: Localización del fichero json que contiene las descripciones de cualidades y efectos de daño que aparecen al pasar el ratón por encima de los objetos.
 AC2D20.SETTINGS.hoverName: Fichero JSON de descripciones
-AC2D20.SETTINGS.maxappHint: Permite que los jugadores ajusten el máx PA del grupo. Necesita que los jugadores recarguen el programa.
-AC2D20.SETTINGS.maxappName: Jugadores pueden ajustar Máx PA
+AC2D20.SETTINGS.maxPlayerMomentumHint: The maximum amount of momentum the players can store in the party pool
+AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Realiza la migración de datos en esta version de los compendios del sistema (no toque esto si no sabe lo que está haciendo)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar compendios del sistema
 AC2D20.SETTINGS.showmomentumHint: Muestra la ventana de la amenaza del GM a todos los jugadores. Necesita que los jugadores recarguen el programa.
@@ -200,6 +200,8 @@ AC2D20.TEMPLATES.Encumbrance_Level: Nivel de carga
 AC2D20.TEMPLATES.Encumbrance: Carga
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: Equipado
+AC2D20.TEMPLATES.Escalation: Escalation
+AC2D20.TEMPLATES.EscalationOptions: Escalation Options
 AC2D20.TEMPLATES.Experience: Experiencia
 AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
@@ -290,6 +292,9 @@ AC2D20.TEMPLATES.Use_Will: Usar Voluntad
 AC2D20.TEMPLATES.Weapon_Qualities: CUALIDADES DE ARMA
 AC2D20.TEMPLATES.Weapon_Type: Tipo de arma
 AC2D20.TEMPLATES.Weapons: Armas
+AC2D20.Tooltips.ArmorQuality.heavy: Due to its size and weight, the armour counts as a major item even if it is worn.
+AC2D20.Tooltips.ArmorQuality.shield: The armour is held rather than worn and provides no benefit unless the user devotes one hand to wielding it; it always counts as a major item. A shield may be used as a melee weapon (Hand-to-Hand Combat, 3@s Stun), and its armour resistance stacks with other armour worn.
+AC2D20.Tooltips.ArmorQuality.uncomfortable: The armour is uncomfortable and awkward to wear for long periods. At the end of every scene the character wears the armour, they suffer 1 Fatigue.
 AC2D20.Tooltips.Attribute.agi: <b>Agilidad</b><br>Es una mezcla de velocidad, equilibrio y memoria muscular. Es responsable del movimiento y la destreza del personaje. Un personaje ágil es veloz, y se mueve con seguridad y precisión.<br><i class='fa-solid fa-helmet-un'></i> La Agilidad se usa para desplazarse por un terreno complicado y moverse con rapidez o en silencio.
 AC2D20.Tooltips.Attribute.bra: <b>Fuerza</b><br>Representa la forma física y la resistencia del personaje. Un personaje fuerte es robusto y resistente.<br><i class='fa-solid fa-helmet-un'></i> Se usa para atacar cuerpo a cuerpo.<br><i class='fa-solid fa-helmet-un'></i> Ayuda a determinar el estrés máximo de un personaje.<br><i class='fa-solid fa-helmet-un'></i> Añade más dados de desafío ( ) al daño cuerpo a cuerpo.<br><i class='fa-solid fa-helmet-un'></i> Ofrece resistencia, con forma de Blindaje, a tu personaje.
 AC2D20.Tooltips.Attribute.coo: <b>Coordinación</b><br>Mide tus capacidades motoras, la precisión y el sentido del paso del tiempo. Los personajes coordinados tienen buena puntería, son excelentes conductores y pilotos, y destacan en juegos de manos y otras tareas que requieran delicadeza o precisión.<br><i class='fa-solid fa-helmet-un'></i> Se usa para atacar a distancia.
