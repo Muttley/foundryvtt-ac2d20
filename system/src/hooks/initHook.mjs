@@ -32,13 +32,19 @@ export async function initHook() {
 	// Add utility classes to the global game object so that they're more easily
 	// accessible in global contexts.
 	globalThis.ac2d20 = game.ac2d20 = {
+		apps,
 		dialogs,
 		Dialog2d20,
 		DialogD6,
 		logger: Logger,
-		MomentumTracker: apps.MomentumTracker,
+		// MomentumTracker: apps.MomentumTracker,
 		Roller2D20,
 		utils: ACUtils,
+		// Logger shortcuts
+		debug: Logger.debug,
+		error: Logger.error,
+		log: Logger.log,
+		warn: Logger.warn,
 	};
 
 	/**

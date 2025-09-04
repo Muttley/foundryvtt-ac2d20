@@ -123,8 +123,8 @@ AC2D20.SETTINGS.debugEnabled.hint: Enable or Disable additional debug features
 AC2D20.SETTINGS.debugEnabled.label: Enable/Disable Debug
 AC2D20.SETTINGS.hoverHint: Location of the json file containing the text for qualities and damage effects.
 AC2D20.SETTINGS.hoverName: Mouse Hover JSON file
-AC2D20.SETTINGS.maxappHint: Allows players to settup the Party's MAX AP. Requires refresh on players side.
-AC2D20.SETTINGS.maxappName: Players Can Setup Max App
+AC2D20.SETTINGS.maxPlayerMomentumHint: The maximum amount of momentum the players can store in the party pool
+AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Perform data migration on the built in system compendiums (don't modify this unless you know what you are doing)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrate System Compendiums
 AC2D20.SETTINGS.showmomentumHint: Shows the GM momentum window to everyone. Requires refresh on players side.
@@ -200,6 +200,7 @@ AC2D20.TEMPLATES.Encumbrance_Level: Encumbrance Level
 AC2D20.TEMPLATES.Encumbrance: Encumbrance
 AC2D20.TEMPLATES.ENG: ENG
 AC2D20.TEMPLATES.equipped: equipped
+AC2D20.TEMPLATES.Escalation: Escalation
 AC2D20.TEMPLATES.Experience: Experience
 AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: FAVORITE WEAPONS

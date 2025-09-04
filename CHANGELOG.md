@@ -1,3 +1,13 @@
+## v11.8.0
+
+### Enhancement
+- [#121] Improve positioning of "GM Threat" and "Party Momentum" boxes
+
+### Chores
+- [#186] Migrate momentum tracker application to ApplicationV2
+
+---
+
 ## v11.7.1
 
 ### Bugfix

@@ -1,76 +1,6 @@
-<div class="ac2d20 momentum-tracker">
-	{{#if showGMMomentum}}
-		<div class="ap-resource gm" data-type="gmMomentum">
-			<div class="flexcol">
-				<h4>
-					{{localize "AC2D20.TEMPLATES.GM_MOMENTUM"}}
-				</h4>
-			</div>
-			<div class="flexrow align-mid">
-				{{#if isGM}}
-					<a class="ap-btn ap-sub">
-						<i class="fa-solid fa-minus"></i>
-					</a>
-				{{else}}
-					<a class="ap-btn">
-						<i class="fa-solid fa-minus"></i>
-					</a>
-				{{/if}}
+<div>
 
-				<input
-					class="ap-input num-short-3"
-					type="number"
-					value={{gmMomentum}}
-					{{#unless isGM}}
-						disabled
-					{{/unless}}
-				>
-
-				{{#if isGM}}
-					<a class="ap-btn ap-add">
-						<i class="fa-solid fa-plus"></i>
-					</a>
-				{{else}}
-					<a class="ap-btn">
-						<i class="fa-solid fa-plus"></i>
-					</a>
-				{{/if}}
-			</div>
-		</div>
-	{{/if}}
-
-	{{#if showMaxApp}}
-		<div class="ap-resource maxMomentum-box" data-type="maxMomentum">
-			<div class="flexcol">
-				<h4>
-					{{localize "AC2D20.TEMPLATES.MAX_PARTY_MOMENTUM"}}
-				</h4>
-			</div>
-			<div class="flexrow align-mid">
-				<a class="ap-btn ap-sub">
-					<i class="fa-solid fa-minus"></i>
-				</a>
-
-				<input
-					class="ap-input num-short-3"
-					type="number"
-					value="{{maxMomentum}}"
-				>
-
-				<a class="ap-btn ap-add">
-					<i class="fa-solid fa-plus"></i>
-				</a>
-			</div>
-		</div>
-	{{/if}}
-
-	<div class="ap-resource party" data-type="partyMomentum">
-		{{#if showMaxApp}}
-			<a class='toggle-maxAp'>
-				<i class="fas fa-cog"></i>
-			</a>
-		{{/if}}
-
+	<div class="ap-resource party">
 		<div class="flexcol">
 			<h4>
 				{{localize "AC2D20.TEMPLATES.PARTY_MOMENTUM"}}
@@ -78,20 +8,64 @@
 		</div>
 
 		<div class="flexrow align-mid">
-			<a class="ap-btn ap-sub">
+			<a class="ap-btn ap-sub" data-action="decrementPool" data-type="partyMomentum">
 				<i class="fa-solid fa-minus"></i>
 			</a>
 
 			<input
 				class="ap-input num-short-3"
+				data-dtype="Number"
 				type="number"
+				name="partyMomentum"
 				value="{{partyMomentum}}"
 			>
 
-			<a class="ap-btn ap-add">
+			<a class="ap-btn ap-add" data-action="incrementPool" data-type="partyMomentum">
 				<i class="fa-solid fa-plus"></i>
 			</a>
 		</div>
 	</div>
+
+	{{#if showGMMomentum}}
+		<div class="ap-resource gm">
+			<div class="flexcol">
+				<h4>
+					{{localize "AC2D20.TEMPLATES.GM_MOMENTUM"}}
+				</h4>
+			</div>
+			<div class="flexrow align-mid">
+				{{#if isGM}}
+					<a class="ap-btn ap-sub" data-action="decrementPool" data-type="gmMomentum">
+						<i class="fa-solid fa-minus"></i>
+					</a>
+				{{else}}
+					<div class="ap-btn">
+						<i class="fa-solid fa-minus"></i>
+					</div>
+				{{/if}}
+
+				<input
+					class="ap-input num-short-3"
+					type="number"
+					data-dtype="Number"
+					value={{gmMomentum}}
+					name=gmMomentum
+					{{#unless isGM}}
+						disabled
+					{{/unless}}
+				>
+
+				{{#if isGM}}
+					<a class="ap-btn ap-add" data-action="incrementPool" data-type="gmMomentum">
+						<i class="fa-solid fa-plus"></i>
+					</a>
+				{{else}}
+					<div class="ap-btn">
+						<i class="fa-solid fa-plus"></i>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	{{/if}}
 
 </div>
