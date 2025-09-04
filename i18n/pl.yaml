@@ -123,8 +123,8 @@ AC2D20.SETTINGS.debugEnabled.hint: Włącz lub wyłacz dodatkowe funkcje debugow
 AC2D20.SETTINGS.debugEnabled.label: Aktywne/Nieaktywne debugowanie
 AC2D20.SETTINGS.hoverHint: Lokalizacja plików jsnon zawierających informacje o cechach i efektach obrażeń.
 AC2D20.SETTINGS.hoverName: Plik JSON kursora myszy
-AC2D20.SETTINGS.maxappHint: Opcja pozwala graczom na ustawienie Maksymalnego APP drużyny. Zastosowanie zmian wymaga odświeżenia strony po stronie graczy
-AC2D20.SETTINGS.maxappName: Gracze mogą ustawić maksymalne APP
+AC2D20.SETTINGS.maxPlayerMomentumHint: The maximum amount of momentum the players can store in the party pool
+AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Wykonanie migracji danych systemowych w compendiach (nie modyfikuj tej opcji chyba że wiesz co robisz)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migracja kompendiów systemowych
 AC2D20.SETTINGS.showmomentumHint: Pokazuje okno zasobów impetu GM wszystkim. Wymaga odświeżenia strony przez graczy
@@ -200,6 +200,8 @@ AC2D20.TEMPLATES.Encumbrance_Level: Poziom przeciążenia
 AC2D20.TEMPLATES.Encumbrance: Udźwig
 AC2D20.TEMPLATES.ENG: PL
 AC2D20.TEMPLATES.equipped: Wyposażony
+AC2D20.TEMPLATES.Escalation: Escalation
+AC2D20.TEMPLATES.EscalationOptions: Escalation Options
 AC2D20.TEMPLATES.Experience: Doświadczenie
 AC2D20.TEMPLATES.ExperienceAvailable: Experience Available
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: Ulubione bronie
@@ -290,6 +292,9 @@ AC2D20.TEMPLATES.Use_Will: Użyj woli
 AC2D20.TEMPLATES.Weapon_Qualities: JAKOŚĆ BRONI
 AC2D20.TEMPLATES.Weapon_Type: Rodzaj broni
 AC2D20.TEMPLATES.Weapons: Uzbrojenie
+AC2D20.Tooltips.ArmorQuality.heavy: Due to its size and weight, the armour counts as a major item even if it is worn.
+AC2D20.Tooltips.ArmorQuality.shield: The armour is held rather than worn and provides no benefit unless the user devotes one hand to wielding it; it always counts as a major item. A shield may be used as a melee weapon (Hand-to-Hand Combat, 3@s Stun), and its armour resistance stacks with other armour worn.
+AC2D20.Tooltips.ArmorQuality.uncomfortable: The armour is uncomfortable and awkward to wear for long periods. At the end of every scene the character wears the armour, they suffer 1 Fatigue.
 AC2D20.Tooltips.Attribute.agi: Zwinność to połączenie prędkości, zmysłu równowagi oraz pamięci mięśniowej; odpowiada za poruszanie się oraz zręczność bohatera. Ruchy zwinnej postaci są szybkie, pewne i precyzyjne.
 AC2D20.Tooltips.Attribute.bra: Krzepa to sprawność fizyczna oraz kondycja. Krzepki bohater jest silny i wytrzymały.
 AC2D20.Tooltips.Attribute.coo: Koordynacja jest miarą zdolności motorycznych, precyzji oraz wyczucia czasu. Jej wysoka wartość sprawia, że bohater celnie strzela, jest dobrym kierowcą bądź pilotem, ma zręczne ręce oraz doskonale radzi sobie z innymi delikatnymi,wymagającymi dokładności zadaniami.
