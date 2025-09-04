@@ -335,6 +335,7 @@
 					"value": false
 				}
 			},
+			"escalation": false,
 			"focus": "",
 			"melee": false,
 			"qualities": {

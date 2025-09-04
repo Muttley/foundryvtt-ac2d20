@@ -229,6 +229,7 @@ export default class ACActorSheet
 		const talents = [];
 		const spells = [];
 		const weapons = [];
+		const escalationWeapons = [];
 		const armor = [];
 		const skillkits = [];
 		const equipment = [];
@@ -252,7 +253,12 @@ export default class ACActorSheet
 				armor.push(i);
 			}
 			else if (i.type === "weapon") {
-				weapons.push(i);
+				if (this.actor.type === "npc" && i.system.escalation) {
+					escalationWeapons.push(i);
+				}
+				else {
+					weapons.push(i);
+				}
 			}
 			else if (i.type === "skillkit") {
 				skillkits.push(i);
@@ -269,6 +275,7 @@ export default class ACActorSheet
 
 		context.armor = armor;
 		context.equipment = equipment;
+		context.escalationWeapons = escalationWeapons;
 		context.skillkits = skillkits;
 		context.specialRules = specialRules;
 		context.spells = spells;

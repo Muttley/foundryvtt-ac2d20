@@ -22,6 +22,20 @@
 		{{!-- Attributes Tab --}}
 		<div class="tab attributes" data-group="primary" data-tab="attributes">
 
+			<div class="resource-row flexrow bgOdd resource">
+				<label class="resource-label" for="system.escalation">
+					<strong>{{localize "AC2D20.TEMPLATES.Escalation"}}?</strong>
+				</label>
+				<input
+					class="focus-cb"
+					name="system.escalation"
+					type="checkbox"
+					{{#if system.escalation}}
+						checked
+					{{/if}}
+				>
+			</div>
+
 			<div class="resource-row flexrow bgEven resource">
 				<label class="resource-label" for="system.weaponType"><strong>{{localize "AC2D20.WEAPONS.type"}}</strong></label>
 				<select name="system.weaponType">
