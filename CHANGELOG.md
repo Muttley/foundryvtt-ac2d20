@@ -4,6 +4,7 @@
 - [#121] Improve positioning of "GM Threat" and "Party Momentum" boxes
 - [#184] Show tooltips for Armor Qualities
 - [#185] Provide a method of indicating an NPC weapon is an escalation option
+- [#188] Make individual truths easier to distinguish from each other on sheets
 
 ### Chores
 - [#186] Migrate momentum tracker application to ApplicationV2

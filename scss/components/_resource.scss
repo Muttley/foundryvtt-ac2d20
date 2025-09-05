@@ -1,5 +1,6 @@
 @use "sass:color";
 @use "../utils/colors";
+@use "../global/typography" as *;
 
 input[type="text"],
 input[type="number"] {
@@ -22,7 +23,6 @@ input[type="number"] {
 		border: none;
 	}
 }
-
 
 .toggle-label {
 
@@ -53,7 +53,6 @@ input[type="number"] {
 	}
 
 }
-
 
 .resource {
 	margin-bottom: 5px;
@@ -117,19 +116,21 @@ select {
 	height: 100%;
 	padding: 0.3rem;
 	border: 1px solid grey;
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: none;
 	resize: none;
 
 	p {
-		margin: 0;
-		padding: 0;
+		margin: 2px;
+		padding: 4px;
+		font-weight: bold;
+		background: rgba(0, 0, 0, 0.1);
+		line-height: 1;
 
 		&:hover {
-			background: rgba(0, 0, 0, 0.05);
+			background: rgba(0, 0, 0, 0.2);
 		}
 	}
-
 
 	textarea {
 		resize: none;
