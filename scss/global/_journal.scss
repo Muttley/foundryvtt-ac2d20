@@ -81,14 +81,14 @@
 
 	blockquote::before {
 		content: '“';
-		left: -1.25rem;
-		top: -4rem;
+		left: -2.5rem;
+		top: -2.5rem;
 	}
 
 	blockquote::after {
 		content: '”';
-		right: 1.25rem;
-		bottom: 4rem;
+		right: 0rem;
+		bottom: 1.25rem;
 	}
 
 	h1, h2, h3, h4, h5 {

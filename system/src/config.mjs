@@ -24,6 +24,12 @@ AC2D20.abilityAbbreviations = {
 	wil: "AC2D20.AbilityWilAbr",
 };
 
+AC2D20.ARMOR_QUALITIES = {
+	heavy: "AC2D20.ARMOR.qualities.heavy",
+	shield: "AC2D20.ARMOR.qualities.shield",
+	uncomfortable: "AC2D20.ARMOR.qualities.uncomfortable",
+};
+
 AC2D20.DEFAULT_TOKENS = {
 	character: "systems/ac2d20/assets/doc-icons/character.svg",
 	npc: "systems/ac2d20/assets/doc-icons/npc.svg",
@@ -126,6 +132,18 @@ export async function generateEnrichedTooltips() {
 			)
 		);
 		CONFIG.AC2D20.DAMAGE_EFFECT_HAS_RANK[key] = key.endsWith("_x");
+	}
+
+	// Armor Qualities
+	CONFIG.AC2D20.ARMOR_QUALITY_HAS_RANK = {};
+	CONFIG.AC2D20.ARMOR_QUALITY_TOOLTIPS = [];
+	for (const key in CONFIG.AC2D20.ARMOR_QUALITIES) {
+		CONFIG.AC2D20.ARMOR_QUALITY_TOOLTIPS[key] = await textEditor.enrichHTML(
+			game.i18n.localize(
+				`AC2D20.Tooltips.ArmorQuality.${key}`
+			)
+		);
+		CONFIG.AC2D20.ARMOR_QUALITY_HAS_RANK[key] = key.endsWith("_x");
 	}
 
 	// Vehicle Qualities

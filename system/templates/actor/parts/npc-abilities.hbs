@@ -148,6 +148,41 @@
 							}}
 					</li>
 				{{/each}}
+				{{#if escalationWeapons}}
+					<div class="section-title">
+						<h3 class="blue">
+							{{localize "AC2D20.TEMPLATES.EscalationOptions"}}
+						</h3>
+						<span class="right-slope blue"></span>
+					</div>
+					{{#each escalationWeapons}}
+						<li class="item editable-item" data-item-id="{{this._id}}">
+							<span class="main-row">
+								<label class="item-name clickable roll-weapon">
+									{{this.name}}
+								</label>
+								<label class="item-name clickable roll-stress">
+									{{this.system.stress}}
+									<span class="cth-ico-cth"></span>
+								</label>
+							</span>
+							<div class="skill-focuses">
+								<span class="skill-focus focus-name" data-item-id="{{this._id}}">
+									{{#if this.system.focus}}
+										<strong>
+											{{localize (concat 'AC2D20.FOCUS.' this.system.focus)}}
+										</strong>
+									{{else}}
+										&mdash;
+									{{/if}}
+									|&nbsp;
+								</span>
+								{{> actor/_shared-partials/weapon-details-hint
+									weapon=this
+								}}
+						</li>
+					{{/each}}
+				{{/if}}
 			</ul>
 		</div>
 		<div style="margin-bottom: 2rem;">

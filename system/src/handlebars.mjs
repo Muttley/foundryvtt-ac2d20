@@ -135,6 +135,41 @@ export const registerHandlebarsHelpers = function() {
 		return listString;
 	});
 
+	Handlebars.registerHelper("listArmorQualities", function(qualities) {
+		const elements = [];
+
+		for (const key in qualities) {
+			if (!CONFIG.AC2D20.ARMOR_QUALITIES.hasOwnProperty(key)) continue;
+
+			const effect = qualities[key];
+
+			if (!effect.value) continue;
+
+			let qualityName = CONFIG.AC2D20.ARMOR_QUALITIES[key];
+
+			const tooltip = CONFIG.AC2D20.ARMOR_QUALITY_TOOLTIPS[key];
+
+			const resultHtml = document.createElement("span");
+			resultHtml.classList.add("quality", "hover");
+			resultHtml.dataset.key = key;
+			resultHtml.dataset.tooltip = tooltip;
+			resultHtml.innerHTML = qualityName;
+
+			elements.push(resultHtml.outerHTML);
+		}
+
+		let listString = "";
+
+		if (elements.length > 0) {
+			listString = elements.join(",&nbsp;");
+		}
+		else {
+			listString = "&mdash;";
+		}
+
+		return listString;
+	});
+
 	Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
 		lvalue = parseFloat(lvalue);
 		rvalue = parseFloat(rvalue);

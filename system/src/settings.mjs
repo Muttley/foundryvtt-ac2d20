@@ -21,14 +21,6 @@ export default async function registerSettings() {
 		type: Number,
 	});
 
-	game.settings.register(SYSTEM_ID, "maxMomentum", {
-		name: "Max Momentum",
-		scope: "world",
-		config: false,
-		default: 6,
-		type: Number,
-	});
-
 	// -------------------
 	//  STANDARD SETTINGS
 	// -------------------
@@ -40,16 +32,19 @@ export default async function registerSettings() {
 		config: true,
 		default: false,
 		type: Boolean,
+		requiresReload: true,
 	});
 
-	game.settings.register(SYSTEM_ID, "maxAppShowToPlayers", {
-		name: game.i18n.localize("AC2D20.SETTINGS.maxappName"),
-		hint: game.i18n.localize("AC2D20.SETTINGS.maxappHint"),
+	game.settings.register(SYSTEM_ID, "maxMomentum", {
+		name: game.i18n.localize("AC2D20.SETTINGS.maxPlayerMomentumName"),
+		hint: game.i18n.localize("AC2D20.SETTINGS.maxPlayerMomentumHint"),
 		scope: "world",
 		config: true,
-		default: false,
-		type: Boolean,
+		default: 6,
+		type: Number,
+		requiresReload: true,
 	});
+
 
 	game.settings.register(SYSTEM_ID, "combatTrackerMomentumUpdate", {
 		name: game.i18n.localize("AC2D20.SETTINGS.ctName"),

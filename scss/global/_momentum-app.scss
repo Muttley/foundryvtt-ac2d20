@@ -2,18 +2,19 @@
 @use "../utils/colors";
 
 .ac2d20.momentum-tracker {
-	bottom: 250px;
-	display: block;
-	left: 10px;
-	margin: 5px;
-	position: absolute;
-	z-index: 1000;
+	display: flex;
+	flex-direction: row;
+	width: max-content;
+	margin-bottom: 0.75rem;
+	gap: 0.5rem;
+	pointer-events: all;
 
 	.ap-resource {
 		border-radius: 9px;
 		font-family: $font-germania;
 		padding: 10px 20px;
-		position: relative;
+		margin-bottom: 10px;
+		min-width: 140px;
 
 		&.gm {
 			background-color: colors.$c-green-olive;
@@ -23,34 +24,18 @@
 			background-color: colors.$c-green-light;
 		}
 
-		&.maxMomentum-box {
-			background-color: colors.$c-green-olive;
-		}
-
-		.toggle-maxAp {
-			color: beige;
-			position: absolute;
-			right: 5px;
-			top: 8px;
-		}
-
-		margin-bottom: 10px;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-
 		h4 {
 			color: bisque;
 			font-family: $font-germania;
-			font-size: 14px;
+			font-size: 16px;
 			font-weight: normal;
+			text-align: center;
 			margin: 0 0 4px 0;
 		}
 
 		input[type="number"] {
 			color: #494e31;
-			font-size: 18px;
+			font-size: 22px;
 			margin: 0 5px;
 			text-align: center;
 		}
