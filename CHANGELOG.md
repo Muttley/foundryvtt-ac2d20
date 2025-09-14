@@ -1,3 +1,10 @@
+## v11.8.1
+
+### Bugfix
+- [#191] Skill values cannot be changed directly on the character sheet
+
+---
+
 ## v11.8.0
 
 ### Enhancement
