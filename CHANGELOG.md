@@ -1,5 +1,8 @@
 ## v11.8.1
 
+### Enhancement
+- [#192] Lighten up the content-link text style in journals to make them easier to read
+
 ### Bugfix
 - [#191] Skill values cannot be changed directly on the character sheet
 
