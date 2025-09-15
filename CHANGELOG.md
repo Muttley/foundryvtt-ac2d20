@@ -1,3 +1,10 @@
+## v11.8.2
+
+### Bugfix
+- [#195] Unable to roll skill by clicking on skill name on character sheet
+
+---
+
 ## v11.8.1
 
 ### Enhancement
