@@ -360,10 +360,10 @@ export default class ACActorSheet
 
 		// Change Skill Rank value
 		html.find(".skill-value-input").change(async ev => {
-			let newRank = parseInt($(ev.currentTarget).val());
-			const li = $(ev.currentTarget).parents(".item");
-			const item = this.actor.items.get(li.data("itemId"));
-			let updatedItem = { _id: item.id, system: { value: newRank } };
+			const value = parseInt(ev.currentTarget.value);
+			const itemId = ev.currentTarget.dataset.itemId;
+
+			let updatedItem = { _id: itemId, system: { value } };
 			await this.actor.updateEmbeddedDocuments("Item", [updatedItem]);
 		});
 
