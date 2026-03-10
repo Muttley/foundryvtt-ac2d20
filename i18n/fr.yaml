@@ -123,7 +123,7 @@ AC2D20.SETTINGS.debugEnabled.hint: Activer ou désactiver les fonctionnalités d
 AC2D20.SETTINGS.debugEnabled.label: Activer/Désactiver le débogage
 AC2D20.SETTINGS.hoverHint: Emplacement du fichier json contenant le texte pour les qualités et les effets de dégâts.
 AC2D20.SETTINGS.hoverName: Survol de la souris du fichier JSON
-AC2D20.SETTINGS.maxPlayerMomentumHint: The maximum amount of momentum the players can store in the party pool
+AC2D20.SETTINGS.maxPlayerMomentumHint: La quantité maximale d'élan que les joueurs peuvent stocker dans la réserve de groupe
 AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Effectuez la migration de données dans les compendiums du système (ne modifiez pas ceci à moins que vous ne sachiez ce que vous faîtes)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrer les Compendiums du système
