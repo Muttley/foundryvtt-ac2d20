@@ -457,7 +457,7 @@ AC2D20.WEAPONS.damageType.poison: Poison
 AC2D20.WEAPONS.damageType.radiation: Radiation
 AC2D20.WEAPONS.qualities: Qualités
 AC2D20.WEAPONS.type: Type d'Arme
-AC2D20.WEAPONS.weaponQuality.accurate: Précise
+AC2D20.WEAPONS.weaponQuality.accurate: Dévastateur
 AC2D20.WEAPONS.weaponQuality.bane: Fléau
 AC2D20.WEAPONS.weaponQuality.close_quarters: Combat rapproché
 AC2D20.WEAPONS.weaponQuality.cumbersome: Encombrant
@@ -472,7 +472,7 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Imprécis
 AC2D20.WEAPONS.weaponQuality.indirect: Indirecte
 AC2D20.WEAPONS.weaponQuality.munition: Munition
 AC2D20.WEAPONS.weaponQuality.parrying: Parer
-AC2D20.WEAPONS.weaponQuality.precise: Précise
+AC2D20.WEAPONS.weaponQuality.precise: De précision
 AC2D20.WEAPONS.weaponQuality.reliable: Fiable
 AC2D20.WEAPONS.weaponQuality.subtle: Subtil
 AC2D20.WEAPONS.weaponQuality.unreliable: Imprévisible
