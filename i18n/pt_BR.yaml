@@ -1,13 +1,13 @@
 AC2D20.Ability.agi: Agilidade
 AC2D20.Ability.bra: Força
 AC2D20.Ability.coo: Coordenação
-AC2D20.Ability.ins: Intuição
+AC2D20.Ability.ins: Discernimento
 AC2D20.Ability.rea: Razão
 AC2D20.Ability.wil: Vontade
 AC2D20.AbilityAbbr.agi: agi
-AC2D20.AbilityAbbr.bra: mús
+AC2D20.AbilityAbbr.bra: for
 AC2D20.AbilityAbbr.coo: coo
-AC2D20.AbilityAbbr.ins: int
+AC2D20.AbilityAbbr.ins: dis
 AC2D20.AbilityAbbr.rea: raz
 AC2D20.AbilityAbbr.wil: von
 AC2D20.ARMOR.qualities.heavy: Pesada
@@ -15,18 +15,18 @@ AC2D20.ARMOR.qualities.shield: Escudo
 AC2D20.ARMOR.qualities.uncomfortable: Desconfortável
 AC2D20.Combat.CombatantsTurnDone: Turno Concluído
 AC2D20.Combat.CombatantsTurnNotDone: Turno Não Concluído
-AC2D20.Combat.CombatEndMomentumPoolDecremented: A reserva de Ímpeto diminuiu no final do combate
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva de Ímpeto Diminui no Final do Combate
 AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: A reserva de Ímpeto diminuiu no começo de uma nova rodada
-AC2D20.Combat.ToggleCombatantsTurnDone: Ativar turno concluído
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva de Ímpeto Diminui no Começo de uma Nova Rodada
+AC2D20.Combat.ToggleCombatantsTurnDone: Ativar Turno Concluído
 AC2D20.Dialog.NumberOfDice: Quantidade de Dados
-AC2D20.EffectCreate: Criar efeito
-AC2D20.EffectDelete: Deletar efeito
-AC2D20.EffectEdit: Editar efeito
-AC2D20.EFFECTS.Inactive: Efeitos inativos
-AC2D20.EFFECTS.Passive: Efeitos passivos
-AC2D20.EFFECTS.Temporary: Efeitos temporários
-AC2D20.EffectToggle: Ativar/Desativar efeito
+AC2D20.EffectCreate: Criar Efeito
+AC2D20.EffectDelete: Deletar Efeito
+AC2D20.EffectEdit: Editar Efeito
+AC2D20.EFFECTS.Inactive: Efeitos Inativos
+AC2D20.EFFECTS.Passive: Efeitos Passivos
+AC2D20.EFFECTS.Temporary: Efeitos Temporários
+AC2D20.EffectToggle: Ativar/Desativar Efeito
 AC2D20.equipped: Equipado
 AC2D20.Error.NumberOfDiceMustBeNonZero: O número de dados inseridos deve ser um valor inteiro maior que zero.
 AC2D20.FOCUS.Air Force: Aeronáutica
@@ -36,7 +36,7 @@ AC2D20.FOCUS.Architecture: Arquitetura
 AC2D20.FOCUS.Army: Exército
 AC2D20.FOCUS.Art: Arte
 AC2D20.FOCUS.Camouflage: Camuflagem
-AC2D20.FOCUS.Cars: Automóveis
+AC2D20.FOCUS.Cars: Carros
 AC2D20.FOCUS.Charm: Charme
 AC2D20.FOCUS.Climbing: Escalar
 AC2D20.FOCUS.Close Quarters: Combate Próximo
@@ -45,17 +45,17 @@ AC2D20.FOCUS.Covert Operations: Operações Secretas
 AC2D20.FOCUS.Cryptography: Criptografia
 AC2D20.FOCUS.Deceive: Dissimulação
 AC2D20.FOCUS.Discipline: Disciplina
-AC2D20.FOCUS.Disguise: Disfarce
+AC2D20.FOCUS.Disguise: Disfarces
 AC2D20.FOCUS.Electronics: Eletrônica
-AC2D20.FOCUS.Exotic: Armas Exóticas
+AC2D20.FOCUS.Exotic: Exóticas
 AC2D20.FOCUS.Explosives: Explosivos
 AC2D20.FOCUS.Finance: Finanças
 AC2D20.FOCUS.First Aid: Primeiros Socorros
 AC2D20.FOCUS.Foraging: Forragear
 AC2D20.FOCUS.Fortitude: Fortitude
-AC2D20.FOCUS.Hand-to-Hand: Combate Corporal
+AC2D20.FOCUS.Hand-to-Hand: Combate Desarmado
 AC2D20.FOCUS.Handguns: Pistolas
-AC2D20.FOCUS.Hearing: 'Sentidos Aguçados (Audição):'
+AC2D20.FOCUS.Hearing: Audição
 AC2D20.FOCUS.Heavy Vehicles: Veículos Pesados
 AC2D20.FOCUS.Heavy Weapons: Armas Pesadas
 AC2D20.FOCUS.History: História
@@ -63,14 +63,14 @@ AC2D20.FOCUS.Hunting: Caça
 AC2D20.FOCUS.Immunity: Imunidade
 AC2D20.FOCUS.Infectious Diseases: Doenças Infecciosas
 AC2D20.FOCUS.Innuendo: Insinuação
-AC2D20.FOCUS.Instincts: Instinto
+AC2D20.FOCUS.Instincts: Instintos
 AC2D20.FOCUS.Intimidation: Intimidação
 AC2D20.FOCUS.Invocation: Invocação
 AC2D20.FOCUS.Leadership: Liderança
 AC2D20.FOCUS.Lifting: Levantamento
 AC2D20.FOCUS.Linguistics: Linguística
 AC2D20.FOCUS.Mechanical Engineering: Engenharia Mecânica
-AC2D20.FOCUS.Melee Weapons: Armas Corporais
+AC2D20.FOCUS.Melee Weapons: Armas Brancas
 AC2D20.FOCUS.Motorcycles: Motocicletas
 AC2D20.FOCUS.Mysticism: Misticismo
 AC2D20.FOCUS.Navy: Marinha
@@ -78,7 +78,7 @@ AC2D20.FOCUS.Negotiation: Negociação
 AC2D20.FOCUS.Occultism: Ocultismo
 AC2D20.FOCUS.Orienteering: Orientação
 AC2D20.FOCUS.Pharmacology: Farmacologia
-AC2D20.FOCUS.Physical Training: Treinamento Físico
+AC2D20.FOCUS.Physical Training: Condicionamento Físico
 AC2D20.FOCUS.Psychiatry: Psiquiatria
 AC2D20.FOCUS.Rhetoric: Retórica
 AC2D20.FOCUS.Rifles: Rifles e Fuzis
@@ -92,7 +92,7 @@ AC2D20.FOCUS.Swimming: Natação
 AC2D20.FOCUS.Tanks: Tanques
 AC2D20.FOCUS.Technical Projects: Projetos Técnicos
 AC2D20.FOCUS.Threat Awareness: Discernir Ameaças
-AC2D20.FOCUS.Throwing: Arremessável
+AC2D20.FOCUS.Throwing: Arremessar
 AC2D20.FOCUS.Toxicology: Toxicologia
 AC2D20.FOCUS.Tracking: Rastrear
 AC2D20.FOCUS.Urban Stealth: Furtividade Urbana
@@ -124,7 +124,7 @@ AC2D20.SETTINGS.debugEnabled.label: Habilitar/Desabilitar debug
 AC2D20.SETTINGS.hoverHint: Localização do arquivo json contendo o texto para qualidades e efeitos de danos.
 AC2D20.SETTINGS.hoverName: Arquivo JSON de passagem do mouse
 AC2D20.SETTINGS.maxPlayerMomentumHint: A quantidade máxima de Ímpeto que os jogadores podem guardar na reserva
-AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
+AC2D20.SETTINGS.maxPlayerMomentumName: Ímpeto Máximo do Jogador
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Executar a migração de dados nos compêndios do sistema integrados (não modifique isso, a menos que saiba o que está fazendo)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar Compêndios do Sistema
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização por parte dos jogadores.
@@ -201,7 +201,7 @@ AC2D20.TEMPLATES.Encumbrance: Sobrecarga
 AC2D20.TEMPLATES.ENG: PT-BR
 AC2D20.TEMPLATES.equipped: equipado
 AC2D20.TEMPLATES.Escalation: Agravamento
-AC2D20.TEMPLATES.EscalationOptions: Escalation Options
+AC2D20.TEMPLATES.EscalationOptions: Opções de Agravamento
 AC2D20.TEMPLATES.Experience: Experiência
 AC2D20.TEMPLATES.ExperienceAvailable: Experiência Disponível
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
@@ -264,11 +264,11 @@ AC2D20.TEMPLATES.Size: Tamanho
 AC2D20.TEMPLATES.SizeLevels.Major: Grande
 AC2D20.TEMPLATES.SizeLevels.Minor: Menor
 AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
-AC2D20.TEMPLATES.Skill_Focus: Foco em perícia
+AC2D20.TEMPLATES.Skill_Focus: Foco de Perícia
 AC2D20.TEMPLATES.skill_focus: Perícia/Foco
 AC2D20.TEMPLATES.Skill_Value: Valor de perícia
 AC2D20.TEMPLATES.Skill: Perícia
-AC2D20.TEMPLATES.SkillFocus: Foco em perícia
+AC2D20.TEMPLATES.SkillFocus: Foco de Perícia
 AC2D20.TEMPLATES.Skills: Perícias
 AC2D20.TEMPLATES.Source: Fonte
 AC2D20.TEMPLATES.SpecialRule: Regra especial
@@ -310,25 +310,25 @@ AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X de resistência para 
 AC2D20.Tooltips.DamageEffect.snare: O ataque ou perigo podem emaranhar e prender o alvo. O alvo não pode fazer nenhuma ação além de tentar se libertar. Libertar-se exige um teste de perícia com dificuldade igual à quantidade de efeitos obtidos.
 AC2D20.Tooltips.DamageEffect.stun: O ataque ou perigo deixa o alvo momentaneamente incapaz de agir. Se a quantidade de efeitos obtidos igualar ou exceder a perícia Resiliência do alvo, ele não poderá fazer ações no turno seguinte dele.
 AC2D20.Tooltips.DamageEffect.vicious: O ataque ou perigo é especialmente poderoso. Para cada efeito obtido, adicione +1 ao total de estresse causado.
-AC2D20.Tooltips.Focus.air-force: Aeronáutica — Engloba o treinamento em táticas com caças e bombardeiros, como dogfighting, formação de vôo e navegação, além de estratégia militar aérea.
-AC2D20.Tooltips.Focus.aircraft: Aeronaves — Abrange a operação de aeronaves civis e militares, tanto monomotores quanto multimotores e aviões movidos a hélice. No final do conflito, também abrange novos aviões a jato.
-AC2D20.Tooltips.Focus.animal-handling: Treinar Animais — Abrange o conhecimento sobre uma variedade de animais diferentes, como eles se comportam, como agir em torno deles, bem como como treiná-los e comandá-los.
+AC2D20.Tooltips.Focus.air-force: Aeronáutica — Engloba o treinamento em táticas com caças e bombardeiros, como dogfighting, formação de voo e navegação, além de estratégia militar aérea.
+AC2D20.Tooltips.Focus.aircraft: Aeronaves — Abrange a operação de aeronaves civis e militares, tanto monomotores quanto multimotores e aviões movidos a hélice. No final da Segunda Guerra, também abrange novos aviões a jato.
+AC2D20.Tooltips.Focus.animal-handling: Treinar Animais — Abrange o conhecimento sobre uma variedade de animais diferentes, como eles se comportam, como agir em torno deles, bem como treiná-los e comandá-los.
 AC2D20.Tooltips.Focus.architecture: Arquitetura — Abrange a compreensão de como os edifícios são projetados e construídos, sua estrutura interna e externa e como sua massa é suportada e distribuída.
-AC2D20.Tooltips.Focus.army: Exército— Engloba a familiaridade com a estratégia militar e táticas para a infantaria, bem como a guerra terrestre mecanizada.
+AC2D20.Tooltips.Focus.army: Exército — Engloba a familiaridade com a estratégia militar e tática para a infantaria, bem como a guerra terrestre mecanizada.
 AC2D20.Tooltips.Focus.art: Arte — Abrange o conhecimento de obras de arte individuais, o estudo de diferentes técnicas artísticas e escolas de pensamento, a história da arte dentro de diferentes culturas e suas influências sobre essas culturas.
 AC2D20.Tooltips.Focus.camouflage: Camuflagem — Abrange o uso de materiais para ocultar uma pessoa, objeto ou local, escondendo-a das vistas.
 AC2D20.Tooltips.Focus.cars: Carros — Abrange a operação de veículos civis e militares de quatro rodas, incluindo pequenos caminhões.
 AC2D20.Tooltips.Focus.charm: Charme — Métodos de manipular os outros através do carisma natural e do magnetismo.
-AC2D20.Tooltips.Focus.climbing: Escalar — Abrange escalar superfícies verticais, como muralhas ou penhascos, e também montanhismo.
-AC2D20.Tooltips.Focus.close-quarters: Combate Próximo — Abrange o uso de espingardas, sub-metralhadoras e armas semelhantes projetadas para uso a distância Curta ou em ambientes confinados, como trincheiras ou edifícios.
+AC2D20.Tooltips.Focus.climbing: Escalar — Abrange escalar superfícies verticais, como muralhas ou penhascos, bem como montanhismo.
+AC2D20.Tooltips.Focus.close-quarters: Combate Próximo — Abrange o uso de espingardas, submetralhadoras e armas semelhantes projetadas para uso ao alcance Curta ou em ambientes confinados, como trincheiras ou edifícios.
 AC2D20.Tooltips.Focus.combat-engineering: Engenharia de Combate — Abrange o trabalho realizado para apoiar ou impedir os movimentos de tropas, incluindo a construção e demolição de estradas, trincheiras, fortificações e outras infraestruturas militares.
 AC2D20.Tooltips.Focus.covert-operations: Operações Secretas — Abrange a organização de uma equipe para operar silenciosa e eficientemente atrás das linhas inimigas.
 AC2D20.Tooltips.Focus.cryptography: Criptografia — Abrange o conhecimento de códigos e cifras, tanto criá-los quanto decifrá-los.
-AC2D20.Tooltips.Focus.deceive: Embuste — Métodos de manipular os outros para que acreditem em algo que é mentira.
+AC2D20.Tooltips.Focus.deceive: Dissimulação — Métodos de manipular os outros para que acreditem em algo que é mentira.
 AC2D20.Tooltips.Focus.discipline: Disciplina — Representa a durabilidade e o autocontrole do personagem, e sua capacidade de resistir e se recuperar de confusão, medo ou dos efeitos sobrenaturais que afligem a mente.
 AC2D20.Tooltips.Focus.disguise: Disfarces — Abrange o uso de maquiagem, roupas, adereços e linguagem corporal apropriada para se disfarçar de outra pessoa.
-AC2D20.Tooltips.Focus.electronics: Eletrônica — Abrange uma compreensão de como os dispositivos eletrônicos funcionam, como eles são montados, o que pode dar errado com eles e como construí-los, modificá-los e consertá-los. Eletrônica conhecida como \"radioeletrônica\" é algo relativamente novo na Segunda Guerra Mundial, com tecnologias como radar, sonar, comunicações e até mesmo os primeiros passos na computação, desenvolvendo-se significativamente à medida que a guerra avança.
-AC2D20.Tooltips.Focus.exotic: Exóticas — Abrange armamento estranho ou experimental e a capacidade de descobrir como uma arma desconhecida deve ser operada sem risco.
+AC2D20.Tooltips.Focus.electronics: Eletrônica — Abrange uma compreensão de como os dispositivos eletrônicos funcionam, como são montados, o que pode dar errado com eles e como construí-los, modificá-los e consertá-los. Eletrônica conhecida como “radioeletrônica” é algo relativamente novo na Segunda Guerra Mundial, com tecnologias como radar, sonar, comunicações e até mesmo os primeiros passos na computação, desenvolvendo-se significativamente à medida que a guerra avança.
+AC2D20.Tooltips.Focus.exotic: Exóticas — Abrange armamento estranho ou experimental, e também a capacidade de descobrir como uma arma desconhecida deve ser operada sem risco.
 AC2D20.Tooltips.Focus.explosives: Explosivos — Abrange a compreensão das substâncias explosivas e os propósitos para os quais elas são mais adequadas, bem como o conhecimento de como empregá-las efetivamente, incluindo como criar e desarmar bombas e minas.
 AC2D20.Tooltips.Focus.finance: Finanças — Abrange o conhecimento do comércio e do sistema bancário, tanto contemporâneo quanto histórico, e da influência do dinheiro na política e na cultura.
 AC2D20.Tooltips.Focus.first-aid: Primeiros Socorros — Abrange atenção médica de emergência para estabilizar um paciente e mantê-lo vivo até que possa receber cuidados médicos adequados.
@@ -336,38 +336,38 @@ AC2D20.Tooltips.Focus.foraging: Forragear — Abrange a capacidade de coletar al
 AC2D20.Tooltips.Focus.fortitude: Fortitude — Representa a resistência do corpo e sua capacidade de resistir e se recuperar da Fadiga, dor e ferimentos.
 AC2D20.Tooltips.Focus.hand-to-hand: Combate Desarmado — Abrange o combate desarmado, golpear e agarrar oponentes, e pode representar treinamento em uma arte marcial como boxe ou judô.
 AC2D20.Tooltips.Focus.handguns: Pistolas — Abrange o uso de armas secundárias, revólveres e pistolas semiautomáticas e automáticas.
-AC2D20.Tooltips.Focus.hearing: Audição — Engloba a percepção auditiva, distinguir entre sons diferentes e a capacidade de discernir informações através deles (como ser capaz de captar um leve sotaque na voz de alguém). Este foco é um grande trunfo para operadores de rádio, quebradores de códigos e especialistas em comunicação.
-AC2D20.Tooltips.Focus.heavy-vehicles: Veículos Pesados ​​— Abrange a operação de veículos civis e militares pesados, incluindo caminhões pesados, semi-largartas e veículos semelhantes.
+AC2D20.Tooltips.Focus.hearing: Audição — Engloba a percepção auditiva, a capacidade de distinguir entre sons diferentes e discernir informações através deles (como ser capaz de captar um leve sotaque na voz de alguém). Este foco é um grande trunfo para operadores de rádio, quebradores de códigos e especialistas em comunicação.
+AC2D20.Tooltips.Focus.heavy-vehicles: Veículos Pesados — Abrange a operação de veículos civis e militares pesados, incluindo caminhões pesados, semilargartas e veículos semelhantes.
 AC2D20.Tooltips.Focus.heavy-weapons: Armas Pesadas — Abrange o uso de metralhadoras, lança-chamas, armas antitanque e morteiros, bem como armas montadas em veículos.
-AC2D20.Tooltips.Focus.history: História — Abrange o conhecimento de eventos históricos, e as forças e indivíduos que movimentaram esses eventos, bem como diferentes perspectivas históricas.
-AC2D20.Tooltips.Focus.hunting: Caça — Engloba a capacidade de perseguir, capturar e matar animais e o conhecimento de preparar carne de caça.
+AC2D20.Tooltips.Focus.history: História — Abrange o conhecimento de eventos históricos, as forças e indivíduos que movimentaram esses eventos, bem como diferentes perspectivas históricas.
+AC2D20.Tooltips.Focus.hunting: Caça — Engloba a capacidade de perseguir, capturar e matar animais, além do conhecimento de preparar carne de caça.
 AC2D20.Tooltips.Focus.immunity: Imunidade — Representa a capacidade natural de um personagem para resistir a doenças ou toxinas, bem como sua capacidade de se recuperar desses efeitos.
 AC2D20.Tooltips.Focus.infectious-diseases: Doenças Infecciosas — Abrange uma compreensão das doenças, suas causas, a maneira como se espalham, seus sintomas e como podem ser tratadas.
 AC2D20.Tooltips.Focus.innuendo: Insinuação — A arte de transmitir significados indiretamente.
-AC2D20.Tooltips.Focus.instincts: Instinto — Abrange o \"sexto sentido\" ou \"sensações viscerais\" feitos a partir de observações e outras percepções extra-sensoriais que você pode não conseguir descrever exatamente a fonte. É improvável que Instintos forneça informações detalhadas, normalmente se trata de um palpite ou sentimento geral sobre uma situação.
+AC2D20.Tooltips.Focus.instincts: Instintos — Abrange o “sexto sentido” ou “sensações viscerais” retirados de observações e outras percepções extrassensoriais que você pode não conseguir descrever exatamente a fonte. É improvável que Instintos forneçam informações detalhadas, normalmente se trata de um palpite ou sentimento geral sobre uma situação.
 AC2D20.Tooltips.Focus.intimidation: Intimidação — Inspirar medo, dúvida, hesitação ou usar as fraquezas de uma pessoa contra ela.
-AC2D20.Tooltips.Focus.invocation: Invocação — Métodos incomuns e esotéricos de comunicação com entidades paranormais que geralmente não estão abertos à pessoas comuns.
+AC2D20.Tooltips.Focus.invocation: Invocação — Métodos incomuns e esotéricos de comunicação com entidades paranormais que geralmente não estão disponíveis às pessoas comuns.
 AC2D20.Tooltips.Focus.leadership: Liderança — Abrange o comando e a liderança dos outros, dar ordens claras e manter o moral.
-AC2D20.Tooltips.Focus.lifting: Levantamento — Abrange erguer e mover objetos pesados ​​com o condicionamento necessário para tornar esses esforços mais eficazes.
+AC2D20.Tooltips.Focus.lifting: Levantamento — Abrange erguer e mover objetos pesados com o condicionamento necessário para tornar esses esforços mais eficazes.
 AC2D20.Tooltips.Focus.linguistics: Linguística — Abrange o estudo de línguas em sua forma atual, bem como línguas históricas e mortas, e as formas pelas quais a linguagem muda com o tempo.
 AC2D20.Tooltips.Focus.mechanical-engineering: Engenharia Mecânica — Abrange uma compreensão dos dispositivos mecânicos, como eles operam, como podem falhar e como construí-los e consertá-los. Este foco pode ser aplicado a todos os veículos de combate, como tanques, aviões, navios e outras embarcações de apoio.
 AC2D20.Tooltips.Focus.melee-weapons: Armas Brancas — Abrange lutar com uma arma corporal, como uma faca ou baioneta.
 AC2D20.Tooltips.Focus.motorcycles: Motocicletas — Abrange a operação de veículos motorizados civis e militares de duas e três rodas.
 AC2D20.Tooltips.Focus.mysticism: Misticismo — Abrange o conhecimento dos ritos e práticas realizadas por antigos líderes espirituais (e seus descendentes modernos) para comungar com seus deuses e espíritos, e como eles podem ser combatidos ou resistidos.
-AC2D20.Tooltips.Focus.navy: Marinha — Abrange estratégia naval e táticas, de águas rasas a profundas, desde ações de um navio solitário a grandes operações de frotas.
+AC2D20.Tooltips.Focus.navy: Marinha — Abrange estratégia naval e tática de águas rasas a profundas, desde ações de um navio solitário a grandes operações de frotas.
 AC2D20.Tooltips.Focus.negotiation: Negociação — Chegar a um acordo através de conversas, possivelmente envolvendo comércio ou pagamento.
 AC2D20.Tooltips.Focus.occultism: Ocultismo — Abrange o estudo de fenômenos sobrenaturais e ocultistas, práticas, criaturas e tradições.
-AC2D20.Tooltips.Focus.orienteering: Orientação — Abrange a capacidade de se orientar, manter uma direção, planejar uma rota e as demandas físicas de caminhadas.
+AC2D20.Tooltips.Focus.orienteering: Orientação — Abrange a capacidade de se orientar, manter uma direção, planejar uma rota, além de mensurar as demandas físicas de caminhadas.
 AC2D20.Tooltips.Focus.pharmacology: Farmacologia — Abrange uma compreensão de fármacos, tanto seus usos em tratamento quanto seus efeitos colaterais.
 AC2D20.Tooltips.Focus.physical-training: Condicionamento Físico — Abrange como treinar a si mesmo e outros.
 AC2D20.Tooltips.Focus.psychiatry: Psiquiatria — Abrange o estudo e tratamento de doenças mentais.
 AC2D20.Tooltips.Focus.rhetoric: Retórica — Usar a linguagem ao falar em público ou num debate formal para informar, persuadir, motivar ou convencer os outros.
-AC2D20.Tooltips.Focus.rifles: Fuzis — Abrange o uso de fuzis, carabinas e outras armas de fogo para uso em alcance Médio ou maior.
+AC2D20.Tooltips.Focus.rifles: Rifles e Fuzis — Abrange o uso de fuzis, carabinas e outras armas de fogo para uso ao alcance Médio ou maior.
 AC2D20.Tooltips.Focus.running: Corrida — Abrange corrida de curta e de longa distância.
 AC2D20.Tooltips.Focus.rural-stealth: Furtividade Rural — Abrange técnicas para mover-se silenciosamente e permanecer escondido em ambientes rurais.
-AC2D20.Tooltips.Focus.science: Ciência — Abrange o método científico e as várias disciplinas associadas à ciência, da matemática à física, química e biologia, também inclui campos de estudo mais detalhados e específicos dentro desses ramos.
-AC2D20.Tooltips.Focus.sight: Visão — Abrange a percepção visual, proporcionando maior sensibilidade quando a visibilidade é fraca, uma capacidade de discernir detalhes à distância e a capacidade de detectar pequenas variações ou movimentos breves. Observadores, navegadores e bombardeiros são particularmente adequados para utilizar esse foco.
-AC2D20.Tooltips.Focus.smell-and-taste: Olfato e Paladar — Engloba a capacidade de detectar e discernir informações de aromas e gostos. Este não é um foco comum para seres humanos, pois não apresentam sentidos olfativos especialmente sensíveis, embora seja um foco valioso para envenenadores, médicos ou sommeliers.
+AC2D20.Tooltips.Focus.science: Ciência — Abrange o método científico e as várias disciplinas associadas à ciência, da matemática à física, química e biologia. Também inclui campos de estudo mais detalhados e específicos dentro desses ramos.
+AC2D20.Tooltips.Focus.sight: Visão — Abrange a percepção visual, proporcionando maior sensibilidade quando a visibilidade é fraca, uma capacidade de discernir detalhes a distância e a capacidade de detectar pequenas variações ou movimentos breves. Observadores, navegadores e bombardeiros são particularmente adequados para utilizar este foco.
+AC2D20.Tooltips.Focus.smell-and-taste: Olfato e Paladar — Engloba a capacidade de detectar e discernir informações de aromas e gostos. Este não é um foco comum para seres humanos, pois não apresentam sentidos olfativos especialmente sensíveis, embora seja valioso para envenenadores, médicos ou sommeliers.
 AC2D20.Tooltips.Focus.surgery: Cirurgia — Abrange procedimentos médicos cirúrgicos, instrumentais e operativos que exigem abrir um paciente, extração de tecido e objetos estranhos ou fechamento manual de feridas.
 AC2D20.Tooltips.Focus.swimming: Natação — Abrange natação sem equipamento e mergulho com aparelho de respiração.
 AC2D20.Tooltips.Focus.tanks: Tanques — Abrange a operação de tanques de todos os tamanhos.
