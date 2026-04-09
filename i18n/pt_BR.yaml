@@ -210,7 +210,7 @@ AC2D20.TEMPLATES.Focus: Foco
 AC2D20.TEMPLATES.fortune: Fortuna
 AC2D20.TEMPLATES.Gear: Equipamento
 AC2D20.TEMPLATES.GENERAL: Geral
-AC2D20.TEMPLATES.GM_MOMENTUM: Ameaça do mestre.
+AC2D20.TEMPLATES.GM_MOMENTUM: Ameaça do Mestre
 AC2D20.TEMPLATES.Healthy: Saudável
 AC2D20.TEMPLATES.HP_Healed: PVs curados
 AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
@@ -397,7 +397,7 @@ AC2D20.Tooltips.VehicleQuality.exposed: Os passageiros e a tripulação de um ve
 AC2D20.Tooltips.VehicleQuality.high_performance: O veículo é potente e muito bem calibrado. O piloto pode gastar 2 de Ímpeto após um teste bem-sucedido para forçar o veículo a se mover 1 zona adicional. A dificuldade dos testes feitos para consertar o veículo aumentam em +1, devido a ser muito bem calibrado.
 AC2D20.Tooltips.VehicleQuality.single_seat: Um veículo de assento único é projetado para ser operado por um único piloto, que também assume o papel de artilheiro, mas sem a penalidade normal.
 AC2D20.Tooltips.VehicleQuality.tough_x: O veículo pode receber mais dano do que a maioria. A quantidade de ferimentos que o veículo pode receber antes de ser derrotado aumenta em X. Você também pode gerar 3 de Ameaça para ignorar um ferimento causado ao veículo (PdMs gastam 3 de Ameaça em vez disso).
-AC2D20.Tooltips.WeaponQuality.accurate: Se você fizer a ação menor Mirar antes de atacar com esta arma, ela ganha o efeito Violenta para esse ataque.
+AC2D20.Tooltips.WeaponQuality.accurate: Se você fizer a ação menor <em>Mirar</em> antes de atacar com esta arma, ela ganha o efeito Violenta para esse ataque.
 AC2D20.Tooltips.WeaponQuality.bane: Esta arma é especialmente efetiva contra criaturas do Mythós e ignora os efeitos das regras especiais de Invulnerável quando usadas contra essas criaturas. Além disso, criaturas do Mythós com a regra especial Vigoroso X não podem gastar Ameaça para ignorar ferimentos causados por uma arma com a qualidade Desgraça.
 AC2D20.Tooltips.WeaponQuality.close_quarters: A arma é compacta e fácil de manejar em ambientes confinados e durante combates corporais. Ela não sofre penalidade quando é usada para fazer um ataque a distância enquanto um inimigo está Adjacente.
 AC2D20.Tooltips.WeaponQuality.cumbersome: A arma é pesada e difícil de usar contra alvos pequenos, como soldados de infantaria. Ao atacar com esta arma, aumente a dificuldade do ataque em +1, se o alvo for de tamanho humano ou menor.
@@ -434,11 +434,11 @@ AC2D20.UI.Type: Tipo
 AC2D20.UI.UNSORTED: Não organizado
 AC2D20.UI.Weight: Peso
 AC2D20.VEHICLES.QUALITIES.cargo_x: Carga
-AC2D20.VEHICLES.QUALITIES.cumbersome: Volumosa
+AC2D20.VEHICLES.QUALITIES.cumbersome: Desajeitado
 AC2D20.VEHICLES.QUALITIES.enclosed: Fechado
 AC2D20.VEHICLES.QUALITIES.exposed: Exposto
-AC2D20.VEHICLES.QUALITIES.high_performance: Alto desempenho
-AC2D20.VEHICLES.QUALITIES.single_seat: Assento único
+AC2D20.VEHICLES.QUALITIES.high_performance: Alto-Desempenho
+AC2D20.VEHICLES.QUALITIES.single_seat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough_x: Vigoroso
 AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
 AC2D20.Warnings.OnEditOwnedItemActiveEffects: O gerenciamento de efeitos ativos de Itens Possuídos não é suportado no momento.
@@ -457,10 +457,10 @@ AC2D20.WEAPONS.damageType.poison: Veneno
 AC2D20.WEAPONS.damageType.radiation: Radiação
 AC2D20.WEAPONS.qualities: Qualidades
 AC2D20.WEAPONS.type: Tipo de Arma
-AC2D20.WEAPONS.weaponQuality.accurate: Preciso
+AC2D20.WEAPONS.weaponQuality.accurate: Precisa
 AC2D20.WEAPONS.weaponQuality.bane: Desgraça
 AC2D20.WEAPONS.weaponQuality.close_quarters: Combate Próximo
-AC2D20.WEAPONS.weaponQuality.cumbersome: Volumosa
+AC2D20.WEAPONS.weaponQuality.cumbersome: Desajeitada
 AC2D20.WEAPONS.weaponQuality.debilitating: Debilitante
 AC2D20.WEAPONS.weaponQuality.escalation: Agravamento
 AC2D20.WEAPONS.weaponQuality.experimental: Experimental
@@ -472,7 +472,7 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Imprecisa
 AC2D20.WEAPONS.weaponQuality.indirect: Indireta
 AC2D20.WEAPONS.weaponQuality.munition: Munição
 AC2D20.WEAPONS.weaponQuality.parrying: Aparagem
-AC2D20.WEAPONS.weaponQuality.precise: Precisa
+AC2D20.WEAPONS.weaponQuality.precise: Certeira
 AC2D20.WEAPONS.weaponQuality.reliable: Confiável
 AC2D20.WEAPONS.weaponQuality.subtle: Sutil
 AC2D20.WEAPONS.weaponQuality.unreliable: Inconstante
