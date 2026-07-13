@@ -1,13 +1,13 @@
 AC2D20.Ability.agi: Agilidade
-AC2D20.Ability.bra: Músculo
+AC2D20.Ability.bra: Força
 AC2D20.Ability.coo: Coordenação
-AC2D20.Ability.ins: Intuição
+AC2D20.Ability.ins: Discernimento
 AC2D20.Ability.rea: Razão
 AC2D20.Ability.wil: Vontade
 AC2D20.AbilityAbbr.agi: agi
-AC2D20.AbilityAbbr.bra: mús
+AC2D20.AbilityAbbr.bra: for
 AC2D20.AbilityAbbr.coo: coo
-AC2D20.AbilityAbbr.ins: int
+AC2D20.AbilityAbbr.ins: dis
 AC2D20.AbilityAbbr.rea: raz
 AC2D20.AbilityAbbr.wil: von
 AC2D20.ARMOR.qualities.heavy: Pesada
@@ -15,18 +15,18 @@ AC2D20.ARMOR.qualities.shield: Escudo
 AC2D20.ARMOR.qualities.uncomfortable: Desconfortável
 AC2D20.Combat.CombatantsTurnDone: Turno Concluído
 AC2D20.Combat.CombatantsTurnNotDone: Turno Não Concluído
-AC2D20.Combat.CombatEndMomentumPoolDecremented: A reserva de Ímpeto diminuiu no final do combate
+AC2D20.Combat.CombatEndMomentumPoolDecremented: Reserva de Ímpeto Diminui no Final do Combate
 AC2D20.Combat.CombatHasNotStarted: O Combate Não Começou
-AC2D20.Combat.CombatRoundMomentumPoolDecremented: A reserva de Ímpeto diminuiu no começo de uma nova rodada
-AC2D20.Combat.ToggleCombatantsTurnDone: Ativar turno concluído
-AC2D20.Dialog.NumberOfDice: Quantidade de dados
-AC2D20.EffectCreate: Criar efeito
-AC2D20.EffectDelete: Deletar efeito
-AC2D20.EffectEdit: Editar efeito
-AC2D20.EFFECTS.Inactive: Efeitos inativos
-AC2D20.EFFECTS.Passive: Efeitos passivos
-AC2D20.EFFECTS.Temporary: Efeitos temporários
-AC2D20.EffectToggle: Ativar/Desativar efeito
+AC2D20.Combat.CombatRoundMomentumPoolDecremented: Reserva de Ímpeto Diminui no Começo de uma Nova Rodada
+AC2D20.Combat.ToggleCombatantsTurnDone: Ativar Turno Concluído
+AC2D20.Dialog.NumberOfDice: Quantidade de Dados
+AC2D20.EffectCreate: Criar Efeito
+AC2D20.EffectDelete: Deletar Efeito
+AC2D20.EffectEdit: Editar Efeito
+AC2D20.EFFECTS.Inactive: Efeitos Inativos
+AC2D20.EFFECTS.Passive: Efeitos Passivos
+AC2D20.EFFECTS.Temporary: Efeitos Temporários
+AC2D20.EffectToggle: Ativar/Desativar Efeito
 AC2D20.equipped: Equipado
 AC2D20.Error.NumberOfDiceMustBeNonZero: O número de dados inseridos deve ser um valor inteiro maior que zero.
 AC2D20.FOCUS.Air Force: Aeronáutica
@@ -36,7 +36,7 @@ AC2D20.FOCUS.Architecture: Arquitetura
 AC2D20.FOCUS.Army: Exército
 AC2D20.FOCUS.Art: Arte
 AC2D20.FOCUS.Camouflage: Camuflagem
-AC2D20.FOCUS.Cars: Automóveis
+AC2D20.FOCUS.Cars: Carros
 AC2D20.FOCUS.Charm: Charme
 AC2D20.FOCUS.Climbing: Escalar
 AC2D20.FOCUS.Close Quarters: Combate Próximo
@@ -45,17 +45,17 @@ AC2D20.FOCUS.Covert Operations: Operações Secretas
 AC2D20.FOCUS.Cryptography: Criptografia
 AC2D20.FOCUS.Deceive: Dissimulação
 AC2D20.FOCUS.Discipline: Disciplina
-AC2D20.FOCUS.Disguise: Disfarce
+AC2D20.FOCUS.Disguise: Disfarces
 AC2D20.FOCUS.Electronics: Eletrônica
-AC2D20.FOCUS.Exotic: Armas Exóticas
+AC2D20.FOCUS.Exotic: Exóticas
 AC2D20.FOCUS.Explosives: Explosivos
 AC2D20.FOCUS.Finance: Finanças
 AC2D20.FOCUS.First Aid: Primeiros Socorros
 AC2D20.FOCUS.Foraging: Forragear
 AC2D20.FOCUS.Fortitude: Fortitude
-AC2D20.FOCUS.Hand-to-Hand: Combate Corporal
+AC2D20.FOCUS.Hand-to-Hand: Combate Desarmado
 AC2D20.FOCUS.Handguns: Pistolas
-AC2D20.FOCUS.Hearing: 'Sentidos Aguçados (Audição):'
+AC2D20.FOCUS.Hearing: Audição
 AC2D20.FOCUS.Heavy Vehicles: Veículos Pesados
 AC2D20.FOCUS.Heavy Weapons: Armas Pesadas
 AC2D20.FOCUS.History: História
@@ -63,14 +63,14 @@ AC2D20.FOCUS.Hunting: Caça
 AC2D20.FOCUS.Immunity: Imunidade
 AC2D20.FOCUS.Infectious Diseases: Doenças Infecciosas
 AC2D20.FOCUS.Innuendo: Insinuação
-AC2D20.FOCUS.Instincts: Instinto
+AC2D20.FOCUS.Instincts: Instintos
 AC2D20.FOCUS.Intimidation: Intimidação
 AC2D20.FOCUS.Invocation: Invocação
 AC2D20.FOCUS.Leadership: Liderança
 AC2D20.FOCUS.Lifting: Levantamento
 AC2D20.FOCUS.Linguistics: Linguística
 AC2D20.FOCUS.Mechanical Engineering: Engenharia Mecânica
-AC2D20.FOCUS.Melee Weapons: Armas Corporais
+AC2D20.FOCUS.Melee Weapons: Armas Brancas
 AC2D20.FOCUS.Motorcycles: Motocicletas
 AC2D20.FOCUS.Mysticism: Misticismo
 AC2D20.FOCUS.Navy: Marinha
@@ -78,7 +78,7 @@ AC2D20.FOCUS.Negotiation: Negociação
 AC2D20.FOCUS.Occultism: Ocultismo
 AC2D20.FOCUS.Orienteering: Orientação
 AC2D20.FOCUS.Pharmacology: Farmacologia
-AC2D20.FOCUS.Physical Training: Treinamento Físico
+AC2D20.FOCUS.Physical Training: Condicionamento Físico
 AC2D20.FOCUS.Psychiatry: Psiquiatria
 AC2D20.FOCUS.Rhetoric: Retórica
 AC2D20.FOCUS.Rifles: Rifles e Fuzis
@@ -92,7 +92,7 @@ AC2D20.FOCUS.Swimming: Natação
 AC2D20.FOCUS.Tanks: Tanques
 AC2D20.FOCUS.Technical Projects: Projetos Técnicos
 AC2D20.FOCUS.Threat Awareness: Discernir Ameaças
-AC2D20.FOCUS.Throwing: Arremessável
+AC2D20.FOCUS.Throwing: Arremessar
 AC2D20.FOCUS.Toxicology: Toxicologia
 AC2D20.FOCUS.Tracking: Rastrear
 AC2D20.FOCUS.Urban Stealth: Furtividade Urbana
@@ -123,8 +123,8 @@ AC2D20.SETTINGS.debugEnabled.hint: Habilitar ou desabilitar recursos de depuraç
 AC2D20.SETTINGS.debugEnabled.label: Habilitar/Desabilitar debug
 AC2D20.SETTINGS.hoverHint: Localização do arquivo json contendo o texto para qualidades e efeitos de danos.
 AC2D20.SETTINGS.hoverName: Arquivo JSON de passagem do mouse
-AC2D20.SETTINGS.maxPlayerMomentumHint: The maximum amount of momentum the players can store in the party pool
-AC2D20.SETTINGS.maxPlayerMomentumName: Max Player Momentum
+AC2D20.SETTINGS.maxPlayerMomentumHint: A quantidade máxima de Ímpeto que os jogadores podem guardar na reserva
+AC2D20.SETTINGS.maxPlayerMomentumName: Ímpeto Máximo do Jogador
 AC2D20.SETTINGS.migrateSystemCompendiums.hint: Executar a migração de dados nos compêndios do sistema integrados (não modifique isso, a menos que saiba o que está fazendo)
 AC2D20.SETTINGS.migrateSystemCompendiums.label: Migrar Compêndios do Sistema
 AC2D20.SETTINGS.showmomentumHint: Mostra a janela de Ímpeto do Mestre para todos. Requer atualização por parte dos jogadores.
@@ -181,7 +181,7 @@ AC2D20.TEMPLATES.DAMAGE_EFFECTS: EFEITOS DE DANO
 AC2D20.TEMPLATES.DAMAGE_TYPE: TIPO DE DANO
 AC2D20.TEMPLATES.DAMAGE: DANO
 AC2D20.TEMPLATES.Data: Dados
-AC2D20.TEMPLATES.Default_Attribute: Atributo padrão
+AC2D20.TEMPLATES.Default_Attribute: Atributo Padrão
 AC2D20.TEMPLATES.DEFENSE: DEFESA
 AC2D20.TEMPLATES.Delete_Item: Deletar Item
 AC2D20.TEMPLATES.Delete: Deletar
@@ -200,8 +200,8 @@ AC2D20.TEMPLATES.Encumbrance_Level: Nível de sobrecarga
 AC2D20.TEMPLATES.Encumbrance: Sobrecarga
 AC2D20.TEMPLATES.ENG: PT-BR
 AC2D20.TEMPLATES.equipped: equipado
-AC2D20.TEMPLATES.Escalation: Escalation
-AC2D20.TEMPLATES.EscalationOptions: Escalation Options
+AC2D20.TEMPLATES.Escalation: Agravamento
+AC2D20.TEMPLATES.EscalationOptions: Opções de Agravamento
 AC2D20.TEMPLATES.Experience: Experiência
 AC2D20.TEMPLATES.ExperienceAvailable: Experiência Disponível
 AC2D20.TEMPLATES.FAVORITE_WEAPONS: ARMAS FAVORITAS
@@ -210,7 +210,7 @@ AC2D20.TEMPLATES.Focus: Foco
 AC2D20.TEMPLATES.fortune: Fortuna
 AC2D20.TEMPLATES.Gear: Equipamento
 AC2D20.TEMPLATES.GENERAL: Geral
-AC2D20.TEMPLATES.GM_MOMENTUM: Ameaça do mestre.
+AC2D20.TEMPLATES.GM_MOMENTUM: Ameaça do Mestre
 AC2D20.TEMPLATES.Healthy: Saudável
 AC2D20.TEMPLATES.HP_Healed: PVs curados
 AC2D20.TEMPLATES.INITIATIVE: INICIATIVA
@@ -264,11 +264,11 @@ AC2D20.TEMPLATES.Size: Tamanho
 AC2D20.TEMPLATES.SizeLevels.Major: Grande
 AC2D20.TEMPLATES.SizeLevels.Minor: Menor
 AC2D20.TEMPLATES.SizeLevels.Trivial: Trivial
-AC2D20.TEMPLATES.Skill_Focus: Foco em perícia
+AC2D20.TEMPLATES.Skill_Focus: Foco de Perícia
 AC2D20.TEMPLATES.skill_focus: Perícia/Foco
 AC2D20.TEMPLATES.Skill_Value: Valor de perícia
 AC2D20.TEMPLATES.Skill: Perícia
-AC2D20.TEMPLATES.SkillFocus: Foco em perícia
+AC2D20.TEMPLATES.SkillFocus: Foco de Perícia
 AC2D20.TEMPLATES.Skills: Perícias
 AC2D20.TEMPLATES.Source: Fonte
 AC2D20.TEMPLATES.SpecialRule: Regra especial
@@ -292,15 +292,15 @@ AC2D20.TEMPLATES.Use_Will: Usar Vontade
 AC2D20.TEMPLATES.Weapon_Qualities: QUALIDADES DE ARMA
 AC2D20.TEMPLATES.Weapon_Type: Tipo de Arma
 AC2D20.TEMPLATES.Weapons: Armas
-AC2D20.Tooltips.ArmorQuality.heavy: Due to its size and weight, the armour counts as a major item even if it is worn.
-AC2D20.Tooltips.ArmorQuality.shield: The armour is held rather than worn and provides no benefit unless the user devotes one hand to wielding it; it always counts as a major item. A shield may be used as a melee weapon (Hand-to-Hand Combat, 3@s Stun), and its armour resistance stacks with other armour worn.
-AC2D20.Tooltips.ArmorQuality.uncomfortable: The armour is uncomfortable and awkward to wear for long periods. At the end of every scene the character wears the armour, they suffer 1 Fatigue.
+AC2D20.Tooltips.ArmorQuality.heavy: Devido ao seu tamanho e peso, a armadura conta como um item grande, mesmo se estiver sendo usada.
+AC2D20.Tooltips.ArmorQuality.shield: A armadura é segurada em vez de usada e não oferece nenhum benefício, a menos que o usuário dedique uma mão a empunhá-la. Sempre conta como um item Grande. Um escudo pode ser usado como uma arma corporal (Combate Desarmado, Atordoante 3@), e sua resistência à armadura se acumula com outra armadura trajada.
+AC2D20.Tooltips.ArmorQuality.uncomfortable: A armadura é desconfortável e difícil de usar por longos períodos. No final de cada cena, o personagem que está usando a armadura sofre 1 de Fadiga.
 AC2D20.Tooltips.Attribute.agi: Agilidade é uma mistura de velocidade, equilíbrio e memória muscular, responsável pelo movimento e destreza do personagem. Um personagem ágil é rápido, movendo-se com certeza e precisão.
 AC2D20.Tooltips.Attribute.bra: Força é a aptidão física e resistência do personagem. Um personagem forte é resistente e vigoroso.
 AC2D20.Tooltips.Attribute.coo: Coordenação mede as capacidades motoras, precisão e senso de ritmo do personagem. Personagens bem coordenados são bons atirando, pilotando e dirigindo, capazes de atos de prestidigitação e outras tarefas delicadas e precisas.
-AC2D20.Tooltips.Attribute.ins: Discernimento é a sua percepção, instintos e sua capacidade de compreender o mundo ao seu redor. Personagens de grande discernimento são observadores, astutos, 'malandros' e sábios.
-AC2D20.Tooltips.Attribute.rea: Razão é a capacidade de aplicar lógica, intelecto e fatos aprendidos. Personagens donos de muita razão tendem a serem lúcidos, racionais, contemplativos e movidos por uma necessidade de aprender ou entender.
-AC2D20.Tooltips.Attribute.wil: Vontade é o seu senso de si mesmo, força mental e autodisciplina. Personagens voluntariosos tendem a ser obstinados, teimosos e a ter personalidades fortes.
+AC2D20.Tooltips.Attribute.ins: Discernimento são seus instintos, sua percepção e capacidade de compreender o mundo ao seu redor. Personagens de grande discernimento são observadores, astutos, “malandros” e sábios.
+AC2D20.Tooltips.Attribute.rea: Razão é a capacidade de aplicar lógica, intelecto e fatos aprendidos. Personagens donos de muita razão tendem a ser lúcidos, racionais, contemplativos e movidos por uma necessidade de aprender ou entender.
+AC2D20.Tooltips.Attribute.wil: Vontade é o senso de si mesmo, força mental e autodisciplina. Personagens voluntariosos tendem a ser obstinados, teimosos e a ter personalidades fortes.
 AC2D20.Tooltips.DamageEffect.area: O ataque ou perigo atinge um alvo adicional dentro da distância Curta do alvo inicial. Os alvos secundários sofrem todos os efeitos do ataque.
 AC2D20.Tooltips.DamageEffect.backlash_x: Cada efeito causa X de dano ao atacante. Esse estresse pode ser físico ou mental, ao critério do mestre.
 AC2D20.Tooltips.DamageEffect.drain: O alvo sofre 1 de Fadiga para cada efeito obtido.
@@ -310,25 +310,25 @@ AC2D20.Tooltips.DamageEffect.piercing_x: O ataque ignora X de resistência para 
 AC2D20.Tooltips.DamageEffect.snare: O ataque ou perigo podem emaranhar e prender o alvo. O alvo não pode fazer nenhuma ação além de tentar se libertar. Libertar-se exige um teste de perícia com dificuldade igual à quantidade de efeitos obtidos.
 AC2D20.Tooltips.DamageEffect.stun: O ataque ou perigo deixa o alvo momentaneamente incapaz de agir. Se a quantidade de efeitos obtidos igualar ou exceder a perícia Resiliência do alvo, ele não poderá fazer ações no turno seguinte dele.
 AC2D20.Tooltips.DamageEffect.vicious: O ataque ou perigo é especialmente poderoso. Para cada efeito obtido, adicione +1 ao total de estresse causado.
-AC2D20.Tooltips.Focus.air-force: Aeronáutica — Engloba o treinamento em táticas com caças e bombardeiros, como dogfighting, formação de vôo e navegação, além de estratégia militar aérea.
-AC2D20.Tooltips.Focus.aircraft: Aeronaves — Abrange a operação de aeronaves civis e militares, tanto monomotores quanto multimotores e aviões movidos a hélice. No final do conflito, também abrange novos aviões a jato.
-AC2D20.Tooltips.Focus.animal-handling: Treinar Animais — Abrange o conhecimento sobre uma variedade de animais diferentes, como eles se comportam, como agir em torno deles, bem como como treiná-los e comandá-los.
+AC2D20.Tooltips.Focus.air-force: Aeronáutica — Engloba o treinamento em táticas com caças e bombardeiros, como dogfighting, formação de voo e navegação, além de estratégia militar aérea.
+AC2D20.Tooltips.Focus.aircraft: Aeronaves — Abrange a operação de aeronaves civis e militares, tanto monomotores quanto multimotores e aviões movidos a hélice. No final da Segunda Guerra, também abrange novos aviões a jato.
+AC2D20.Tooltips.Focus.animal-handling: Treinar Animais — Abrange o conhecimento sobre uma variedade de animais diferentes, como eles se comportam, como agir em torno deles, bem como treiná-los e comandá-los.
 AC2D20.Tooltips.Focus.architecture: Arquitetura — Abrange a compreensão de como os edifícios são projetados e construídos, sua estrutura interna e externa e como sua massa é suportada e distribuída.
-AC2D20.Tooltips.Focus.army: Exército— Engloba a familiaridade com a estratégia militar e táticas para a infantaria, bem como a guerra terrestre mecanizada.
+AC2D20.Tooltips.Focus.army: Exército — Engloba a familiaridade com a estratégia militar e tática para a infantaria, bem como a guerra terrestre mecanizada.
 AC2D20.Tooltips.Focus.art: Arte — Abrange o conhecimento de obras de arte individuais, o estudo de diferentes técnicas artísticas e escolas de pensamento, a história da arte dentro de diferentes culturas e suas influências sobre essas culturas.
 AC2D20.Tooltips.Focus.camouflage: Camuflagem — Abrange o uso de materiais para ocultar uma pessoa, objeto ou local, escondendo-a das vistas.
 AC2D20.Tooltips.Focus.cars: Carros — Abrange a operação de veículos civis e militares de quatro rodas, incluindo pequenos caminhões.
 AC2D20.Tooltips.Focus.charm: Charme — Métodos de manipular os outros através do carisma natural e do magnetismo.
-AC2D20.Tooltips.Focus.climbing: Escalar — Abrange escalar superfícies verticais, como muralhas ou penhascos, e também montanhismo.
-AC2D20.Tooltips.Focus.close-quarters: Combate Próximo — Abrange o uso de espingardas, sub-metralhadoras e armas semelhantes projetadas para uso a distância Curta ou em ambientes confinados, como trincheiras ou edifícios.
+AC2D20.Tooltips.Focus.climbing: Escalar — Abrange escalar superfícies verticais, como muralhas ou penhascos, bem como montanhismo.
+AC2D20.Tooltips.Focus.close-quarters: Combate Próximo — Abrange o uso de espingardas, submetralhadoras e armas semelhantes projetadas para uso ao alcance Curta ou em ambientes confinados, como trincheiras ou edifícios.
 AC2D20.Tooltips.Focus.combat-engineering: Engenharia de Combate — Abrange o trabalho realizado para apoiar ou impedir os movimentos de tropas, incluindo a construção e demolição de estradas, trincheiras, fortificações e outras infraestruturas militares.
 AC2D20.Tooltips.Focus.covert-operations: Operações Secretas — Abrange a organização de uma equipe para operar silenciosa e eficientemente atrás das linhas inimigas.
 AC2D20.Tooltips.Focus.cryptography: Criptografia — Abrange o conhecimento de códigos e cifras, tanto criá-los quanto decifrá-los.
-AC2D20.Tooltips.Focus.deceive: Embuste — Métodos de manipular os outros para que acreditem em algo que é mentira.
+AC2D20.Tooltips.Focus.deceive: Dissimulação — Métodos de manipular os outros para que acreditem em algo que é mentira.
 AC2D20.Tooltips.Focus.discipline: Disciplina — Representa a durabilidade e o autocontrole do personagem, e sua capacidade de resistir e se recuperar de confusão, medo ou dos efeitos sobrenaturais que afligem a mente.
 AC2D20.Tooltips.Focus.disguise: Disfarces — Abrange o uso de maquiagem, roupas, adereços e linguagem corporal apropriada para se disfarçar de outra pessoa.
-AC2D20.Tooltips.Focus.electronics: Eletrônica — Abrange uma compreensão de como os dispositivos eletrônicos funcionam, como eles são montados, o que pode dar errado com eles e como construí-los, modificá-los e consertá-los. Eletrônica conhecida como \"radioeletrônica\" é algo relativamente novo na Segunda Guerra Mundial, com tecnologias como radar, sonar, comunicações e até mesmo os primeiros passos na computação, desenvolvendo-se significativamente à medida que a guerra avança.
-AC2D20.Tooltips.Focus.exotic: Exóticas — Abrange armamento estranho ou experimental e a capacidade de descobrir como uma arma desconhecida deve ser operada sem risco.
+AC2D20.Tooltips.Focus.electronics: Eletrônica — Abrange uma compreensão de como os dispositivos eletrônicos funcionam, como são montados, o que pode dar errado com eles e como construí-los, modificá-los e consertá-los. Eletrônica conhecida como “radioeletrônica” é algo relativamente novo na Segunda Guerra Mundial, com tecnologias como radar, sonar, comunicações e até mesmo os primeiros passos na computação, desenvolvendo-se significativamente à medida que a guerra avança.
+AC2D20.Tooltips.Focus.exotic: Exóticas — Abrange armamento estranho ou experimental, e também a capacidade de descobrir como uma arma desconhecida deve ser operada sem risco.
 AC2D20.Tooltips.Focus.explosives: Explosivos — Abrange a compreensão das substâncias explosivas e os propósitos para os quais elas são mais adequadas, bem como o conhecimento de como empregá-las efetivamente, incluindo como criar e desarmar bombas e minas.
 AC2D20.Tooltips.Focus.finance: Finanças — Abrange o conhecimento do comércio e do sistema bancário, tanto contemporâneo quanto histórico, e da influência do dinheiro na política e na cultura.
 AC2D20.Tooltips.Focus.first-aid: Primeiros Socorros — Abrange atenção médica de emergência para estabilizar um paciente e mantê-lo vivo até que possa receber cuidados médicos adequados.
@@ -336,60 +336,60 @@ AC2D20.Tooltips.Focus.foraging: Forragear — Abrange a capacidade de coletar al
 AC2D20.Tooltips.Focus.fortitude: Fortitude — Representa a resistência do corpo e sua capacidade de resistir e se recuperar da Fadiga, dor e ferimentos.
 AC2D20.Tooltips.Focus.hand-to-hand: Combate Desarmado — Abrange o combate desarmado, golpear e agarrar oponentes, e pode representar treinamento em uma arte marcial como boxe ou judô.
 AC2D20.Tooltips.Focus.handguns: Pistolas — Abrange o uso de armas secundárias, revólveres e pistolas semiautomáticas e automáticas.
-AC2D20.Tooltips.Focus.hearing: Audição — Engloba a percepção auditiva, distinguir entre sons diferentes e a capacidade de discernir informações através deles (como ser capaz de captar um leve sotaque na voz de alguém). Este foco é um grande trunfo para operadores de rádio, quebradores de códigos e especialistas em comunicação.
-AC2D20.Tooltips.Focus.heavy-vehicles: Veículos Pesados ​​— Abrange a operação de veículos civis e militares pesados, incluindo caminhões pesados, semi-largartas e veículos semelhantes.
+AC2D20.Tooltips.Focus.hearing: Audição — Engloba a percepção auditiva, a capacidade de distinguir entre sons diferentes e discernir informações através deles (como ser capaz de captar um leve sotaque na voz de alguém). Este foco é um grande trunfo para operadores de rádio, quebradores de códigos e especialistas em comunicação.
+AC2D20.Tooltips.Focus.heavy-vehicles: Veículos Pesados — Abrange a operação de veículos civis e militares pesados, incluindo caminhões pesados, semilargartas e veículos semelhantes.
 AC2D20.Tooltips.Focus.heavy-weapons: Armas Pesadas — Abrange o uso de metralhadoras, lança-chamas, armas antitanque e morteiros, bem como armas montadas em veículos.
-AC2D20.Tooltips.Focus.history: História — Abrange o conhecimento de eventos históricos, e as forças e indivíduos que movimentaram esses eventos, bem como diferentes perspectivas históricas.
-AC2D20.Tooltips.Focus.hunting: Caça — Engloba a capacidade de perseguir, capturar e matar animais e o conhecimento de preparar carne de caça.
+AC2D20.Tooltips.Focus.history: História — Abrange o conhecimento de eventos históricos, as forças e indivíduos que movimentaram esses eventos, bem como diferentes perspectivas históricas.
+AC2D20.Tooltips.Focus.hunting: Caça — Engloba a capacidade de perseguir, capturar e matar animais, além do conhecimento de preparar carne de caça.
 AC2D20.Tooltips.Focus.immunity: Imunidade — Representa a capacidade natural de um personagem para resistir a doenças ou toxinas, bem como sua capacidade de se recuperar desses efeitos.
 AC2D20.Tooltips.Focus.infectious-diseases: Doenças Infecciosas — Abrange uma compreensão das doenças, suas causas, a maneira como se espalham, seus sintomas e como podem ser tratadas.
 AC2D20.Tooltips.Focus.innuendo: Insinuação — A arte de transmitir significados indiretamente.
-AC2D20.Tooltips.Focus.instincts: Instinto — Abrange o \"sexto sentido\" ou \"sensações viscerais\" feitos a partir de observações e outras percepções extra-sensoriais que você pode não conseguir descrever exatamente a fonte. É improvável que Instintos forneça informações detalhadas, normalmente se trata de um palpite ou sentimento geral sobre uma situação.
+AC2D20.Tooltips.Focus.instincts: Instintos — Abrange o “sexto sentido” ou “sensações viscerais” retirados de observações e outras percepções extrassensoriais que você pode não conseguir descrever exatamente a fonte. É improvável que Instintos forneçam informações detalhadas, normalmente se trata de um palpite ou sentimento geral sobre uma situação.
 AC2D20.Tooltips.Focus.intimidation: Intimidação — Inspirar medo, dúvida, hesitação ou usar as fraquezas de uma pessoa contra ela.
-AC2D20.Tooltips.Focus.invocation: Invocação — Métodos incomuns e esotéricos de comunicação com entidades paranormais que geralmente não estão abertos à pessoas comuns.
+AC2D20.Tooltips.Focus.invocation: Invocação — Métodos incomuns e esotéricos de comunicação com entidades paranormais que geralmente não estão disponíveis às pessoas comuns.
 AC2D20.Tooltips.Focus.leadership: Liderança — Abrange o comando e a liderança dos outros, dar ordens claras e manter o moral.
-AC2D20.Tooltips.Focus.lifting: Levantamento — Abrange erguer e mover objetos pesados ​​com o condicionamento necessário para tornar esses esforços mais eficazes.
+AC2D20.Tooltips.Focus.lifting: Levantamento — Abrange erguer e mover objetos pesados com o condicionamento necessário para tornar esses esforços mais eficazes.
 AC2D20.Tooltips.Focus.linguistics: Linguística — Abrange o estudo de línguas em sua forma atual, bem como línguas históricas e mortas, e as formas pelas quais a linguagem muda com o tempo.
 AC2D20.Tooltips.Focus.mechanical-engineering: Engenharia Mecânica — Abrange uma compreensão dos dispositivos mecânicos, como eles operam, como podem falhar e como construí-los e consertá-los. Este foco pode ser aplicado a todos os veículos de combate, como tanques, aviões, navios e outras embarcações de apoio.
 AC2D20.Tooltips.Focus.melee-weapons: Armas Brancas — Abrange lutar com uma arma corporal, como uma faca ou baioneta.
 AC2D20.Tooltips.Focus.motorcycles: Motocicletas — Abrange a operação de veículos motorizados civis e militares de duas e três rodas.
 AC2D20.Tooltips.Focus.mysticism: Misticismo — Abrange o conhecimento dos ritos e práticas realizadas por antigos líderes espirituais (e seus descendentes modernos) para comungar com seus deuses e espíritos, e como eles podem ser combatidos ou resistidos.
-AC2D20.Tooltips.Focus.navy: Marinha — Abrange estratégia naval e táticas, de águas rasas a profundas, desde ações de um navio solitário a grandes operações de frotas.
+AC2D20.Tooltips.Focus.navy: Marinha — Abrange estratégia naval e tática de águas rasas a profundas, desde ações de um navio solitário a grandes operações de frotas.
 AC2D20.Tooltips.Focus.negotiation: Negociação — Chegar a um acordo através de conversas, possivelmente envolvendo comércio ou pagamento.
 AC2D20.Tooltips.Focus.occultism: Ocultismo — Abrange o estudo de fenômenos sobrenaturais e ocultistas, práticas, criaturas e tradições.
-AC2D20.Tooltips.Focus.orienteering: Orientação — Abrange a capacidade de se orientar, manter uma direção, planejar uma rota e as demandas físicas de caminhadas.
+AC2D20.Tooltips.Focus.orienteering: Orientação — Abrange a capacidade de se orientar, manter uma direção, planejar uma rota, além de mensurar as demandas físicas de caminhadas.
 AC2D20.Tooltips.Focus.pharmacology: Farmacologia — Abrange uma compreensão de fármacos, tanto seus usos em tratamento quanto seus efeitos colaterais.
 AC2D20.Tooltips.Focus.physical-training: Condicionamento Físico — Abrange como treinar a si mesmo e outros.
 AC2D20.Tooltips.Focus.psychiatry: Psiquiatria — Abrange o estudo e tratamento de doenças mentais.
 AC2D20.Tooltips.Focus.rhetoric: Retórica — Usar a linguagem ao falar em público ou num debate formal para informar, persuadir, motivar ou convencer os outros.
-AC2D20.Tooltips.Focus.rifles: Fuzis — Abrange o uso de fuzis, carabinas e outras armas de fogo para uso em alcance Médio ou maior.
+AC2D20.Tooltips.Focus.rifles: Rifles e Fuzis — Abrange o uso de fuzis, carabinas e outras armas de fogo para uso ao alcance Médio ou maior.
 AC2D20.Tooltips.Focus.running: Corrida — Abrange corrida de curta e de longa distância.
 AC2D20.Tooltips.Focus.rural-stealth: Furtividade Rural — Abrange técnicas para mover-se silenciosamente e permanecer escondido em ambientes rurais.
-AC2D20.Tooltips.Focus.science: Ciência — Abrange o método científico e as várias disciplinas associadas à ciência, da matemática à física, química e biologia, também inclui campos de estudo mais detalhados e específicos dentro desses ramos.
-AC2D20.Tooltips.Focus.sight: Visão — Abrange a percepção visual, proporcionando maior sensibilidade quando a visibilidade é fraca, uma capacidade de discernir detalhes à distância e a capacidade de detectar pequenas variações ou movimentos breves. Observadores, navegadores e bombardeiros são particularmente adequados para utilizar esse foco.
-AC2D20.Tooltips.Focus.smell-and-taste: Olfato e Paladar — Engloba a capacidade de detectar e discernir informações de aromas e gostos. Este não é um foco comum para seres humanos, pois não apresentam sentidos olfativos especialmente sensíveis, embora seja um foco valioso para envenenadores, médicos ou sommeliers.
+AC2D20.Tooltips.Focus.science: Ciência — Abrange o método científico e as várias disciplinas associadas à ciência, da matemática à física, química e biologia. Também inclui campos de estudo mais detalhados e específicos dentro desses ramos.
+AC2D20.Tooltips.Focus.sight: Visão — Abrange a percepção visual, proporcionando maior sensibilidade quando a visibilidade é fraca, uma capacidade de discernir detalhes a distância e a capacidade de detectar pequenas variações ou movimentos breves. Observadores, navegadores e bombardeiros são particularmente adequados para utilizar este foco.
+AC2D20.Tooltips.Focus.smell-and-taste: Olfato e Paladar — Engloba a capacidade de detectar e discernir informações de aromas e gostos. Este não é um foco comum para seres humanos, pois não apresentam sentidos olfativos especialmente sensíveis, embora seja valioso para envenenadores, médicos ou sommeliers.
 AC2D20.Tooltips.Focus.surgery: Cirurgia — Abrange procedimentos médicos cirúrgicos, instrumentais e operativos que exigem abrir um paciente, extração de tecido e objetos estranhos ou fechamento manual de feridas.
 AC2D20.Tooltips.Focus.swimming: Natação — Abrange natação sem equipamento e mergulho com aparelho de respiração.
 AC2D20.Tooltips.Focus.tanks: Tanques — Abrange a operação de tanques de todos os tamanhos.
 AC2D20.Tooltips.Focus.technical-projects: Projetos Técnicos — Abrange uma compreensão de como dividir o trabalho e gerenciar membros da equipe em um grande projeto científico, de engenharia ou acadêmico.
-AC2D20.Tooltips.Focus.threat-awareness: Discernir Ameaças — Abrange prontidão e detecção de perigo e a capacidade de evitar ataques ou emboscadas.
+AC2D20.Tooltips.Focus.threat-awareness: Discernir Ameaças — Abrange prontidão, detecção de perigo e a capacidade de evitar ataques ou emboscadas.
 AC2D20.Tooltips.Focus.throwing: Arremessar — Abrange objetos de arremesso, desde o estilo olímpico, passando por lança e martelo, até o uso de facas e granadas.
 AC2D20.Tooltips.Focus.toxicology: Toxicologia — Abrange o estudo de substâncias tóxicas (venenos, toxinas e outras substâncias estranhas) e seu efeito sobre o corpo, bem como os meios para neutralizá-las ou expulsá-las.
-AC2D20.Tooltips.Focus.tracking: Rastrear — Abrange a prática de identificar os rastros de um animal, pessoa ou grupo específico e segui-los. Também está relacionado à capacidade de determinar informações sobre eles, como direção, quantos havia, seu estado físico, velocidade e outras características.
+AC2D20.Tooltips.Focus.tracking: Rastrear — Abrange a prática de identificar os rastros de um animal, pessoa ou grupo específico e segui-los. Também está relacionado à capacidade de determinar informações sobre eles, como direção, quantidade, seu estado físico, velocidade e outras características.
 AC2D20.Tooltips.Focus.urban-stealth: Furtividade Urbana — Abrange técnicas para mover-se silenciosamente e permanecer invisível em ambientes urbanos.
-AC2D20.Tooltips.Focus.watercraft: Embarcações — Abrande a operação de barcos civis e militares, submarinos e navios.
-AC2D20.Tooltips.Skill.academia: Essa perícia cobre a educação do personagem e o conhecimento acumulado dele, bem como sua capacidade de pesquisar assuntos desconhecidos. Academia é mais útil ao tentar estudar novas informações ou lembrar fatos sobre um assunto.
-AC2D20.Tooltips.Skill.athletics: Esta perícia cobre o condicionamento físico e a capacidade atlética do seu personagem. Atletismo também cobre as tentativas de um personagem se mover com pressa.
+AC2D20.Tooltips.Focus.watercraft: Embarcações — Abrange a operação de barcos civis e militares, submarinos e navios.
+AC2D20.Tooltips.Skill.academia: Esta perícia cobre a educação do personagem e o conhecimento acumulado dele, bem como sua capacidade de pesquisar assuntos desconhecidos. Academia é mais útil ao tentar estudar novas informações ou lembrar fatos sobre um assunto.
+AC2D20.Tooltips.Skill.athletics: Esta perícia cobre o condicionamento físico e a capacidade atlética do seu personagem. Atletismo também abarca as tentativas de um personagem se mover com pressa.
 AC2D20.Tooltips.Skill.engineering: "Esta perícia engloba a experiência técnica e mecânica do seu personagem, com ênfase em aplicações práticas: projetar, construir e consertar dispositivos, máquinas e estruturas, além de saber como operar equipamentos complexos ou não testados e determinar como desativar ou destruir máquinas desconhecidas. Há certa sobreposição entre Engenharia e Veículos, mas Engenharia se concentra na parte mecânica de um veículo."
-AC2D20.Tooltips.Skill.fighting: Esta perícia cobre a capacidade do seu personagem de lutar e se defender contra ataques, uma combinação de técnicas aprendidas, condicionamento físico e instinto. É usada para atacar, avaliar situações ameaçadoras e cobre uma compreensão prática de armas e estilos de combate.
-AC2D20.Tooltips.Skill.medicine: Esta perícia cobre o tratamento de lesões físicas e mentais, bem como o diagnóstico e cura de venenos e doenças. Também pode ser usada para realizar autópsias e determinar a causa da morte de uma pessoa.
-AC2D20.Tooltips.Skill.observation: Esta perícia engloba atenção do personagem e sua capacidade de discernir informações observando os arredores. Ela descreve o quão observador e astuto o personagem é, com que rapidez ele discerne detalhes importantes e fazer uso deles, além da capacidade de ignorar distrações. Observar se sobrepõe a muitas outras perícias e, muitas vezes, anda junto com Academia, pois ambas são sobre a obtenção de informações, embora de maneiras diferentes.
+AC2D20.Tooltips.Skill.fighting: Esta perícia descreve a capacidade do seu personagem de lutar e se defender, uma combinação de técnicas aprendidas, condicionamento físico e instinto. É usada para atacar, avaliar situações ameaçadoras e envolve uma compreensão prática de armas e estilos de combate.
+AC2D20.Tooltips.Skill.medicine: Esta perícia engloba o tratamento de lesões físicas e mentais, bem como o diagnóstico e cura de venenos e doenças. Também pode ser usada para realizar autópsias e determinar a causa da morte de um personagem.
+AC2D20.Tooltips.Skill.observation: "Esta perícia engloba a atenção do personagem e sua capacidade de discernir informações observando os arredores. Ela descreve o quão observador e astuto o personagem é, com que rapidez ele discerne detalhes importantes e faz uso deles, além da capacidade de ignorar distrações.\nObservar se sobrepõe a muitas outras perícias e, muitas vezes, anda junto com Academia, pois ambas são sobre a obtenção de informações, embora de maneiras diferentes."
 AC2D20.Tooltips.Skill.persuasion: Esta perícia abrange a capacidade do seu personagem influenciar os outros, através de uma mistura de fala e linguagem corporal. Ela também permite identificar quando outras pessoas estão tentando usar essas mesmas técnicas — muitas vezes é preciso um mentiroso para identificar outro mentiroso.
-AC2D20.Tooltips.Skill.resilience: Esta perícia abrange a capacidade do seu personagem de resistir e se recuperar de debilidades físicas e mentais — de ferimentos, dor, Fadiga e sofrimento mental. Isso também inclui resistir aos efeitos de venenos, doenças e efeitos mágicos. Você pode usar Resiliência para tentar resistir aos efeitos antes que eles aconteçam, ou para se recuperar de efeitos duradouros que já afetaram o personagem. Embora Medicina se sobreponha a Resiliência de algumas formas, este foco está mais relacionado à resistência inerente do indivíduo.
+AC2D20.Tooltips.Skill.resilience: "Esta perícia abrange a capacidade do seu personagem de resistir e se recuperar de debilidades físicas e mentais — de ferimentos, dor, Fadiga e sofrimento mental. Isso também inclui resistir aos efeitos de venenos, doenças e efeitos mágicos. Você pode usar Resiliência para tentar resistir aos efeitos antes que eles aconteçam, ou para se recuperar de efeitos duradouros que já afetaram o personagem. Embora Medicina se sobreponha à Resiliência de algumas formas, este foco está mais relacionado à resistência inerente do indivíduo.\nResiliência é usada para calcular o estresse máximo de um personagem, junto com Força ou Vontade, o que for maior."
 AC2D20.Tooltips.Skill.stealth: Esta habilidade engloba a capacidade do seu personagem de passar despercebido, se mover silenciosamente, usar escuridão, cobertura e ocultação para permanecer invisível. Também abrange sua capacidade de usar disfarces, esconder-se à vista de todos ou usar camuflagem para ocultar a si mesmo e aos outros.
 AC2D20.Tooltips.Skill.survival: Esta perícia expressa a capacidade do seu personagem sobreviver a condições inóspitas, incluindo temperatura e clima extremos, plantas e animais perigosos — além de encontrar comida e água suficientes, bem como conseguir abrigo e fazer uma fogueira. Também abrange a capacidade de rastrear animais (e inimigos), bem como se comunicar e treinar animais.
-AC2D20.Tooltips.Skill.tactics: Esta perícia lida com a capacidade do seu personagem de perceber e avaliar uma situação de combate e elaborar um plano apropriado. Isso não abrange apenas estratégias e as táticas militares, mas também a dinâmica e a liderança da equipe, ou a organização de um grupo de cientistas ou engenheiros.
-AC2D20.Tooltips.Skill.vehicles: Esta perícia abrange a operação e manutenção de veículos de todos os tipos. Um personagem habilidoso em Veículos tem conhecimento de como eles funcionam, o que os faz falhar e como fazer manutenção neles e consertá-los, bem como operá-los. Isso se sobrepõe à Engenharia em relação especificamente aos veículos, e um personagem dirigindo um veículo usa Veículos em vez de Atletismo para evitar ou superar obstáculos, como características do terreno.
+AC2D20.Tooltips.Skill.tactics: Esta perícia lida com a capacidade do seu personagem de perceber e avaliar uma situação de combate e elaborar um plano apropriado. Isso não se limita a estratégias e a táticas militares, mas também inclui dinâmica e liderança da equipe, ou a organização de um grupo de cientistas ou engenheiros.
+AC2D20.Tooltips.Skill.vehicles: Esta perícia abrange a operação e manutenção de veículos de todos os tipos. Um personagem habilidoso em Veículos tem conhecimento de como eles funcionam, o que os faz falhar e como fazer manutenção neles e consertá-los, bem como operá-los. É uma perícia que se sobrepõe a Engenharia em relação especificamente a veículos, e um personagem dirigindo um veículo usa Veículos em vez de Atletismo para evitar ou superar obstáculos, como características do terreno.
 AC2D20.Tooltips.VehicleQuality.cargo_x: O veículo pode transportar até X itens grandes adicionais.
 AC2D20.Tooltips.VehicleQuality.cumbersome: O veículo é volumoso e difícil de manobrar, aumentando em +1 a dificuldade dos seus testes de movimento.
 AC2D20.Tooltips.VehicleQuality.enclosed: O veículo é completamente fechado, protegendo a tripulação e os passageiros dentro dele. A tripulação e os passageiros não podem ser alvos de ataques vindos de fora do veículo, mas também não podem usar seu próprio armamento.
@@ -397,24 +397,24 @@ AC2D20.Tooltips.VehicleQuality.exposed: Os passageiros e a tripulação de um ve
 AC2D20.Tooltips.VehicleQuality.high_performance: O veículo é potente e muito bem calibrado. O piloto pode gastar 2 de Ímpeto após um teste bem-sucedido para forçar o veículo a se mover 1 zona adicional. A dificuldade dos testes feitos para consertar o veículo aumentam em +1, devido a ser muito bem calibrado.
 AC2D20.Tooltips.VehicleQuality.single_seat: Um veículo de assento único é projetado para ser operado por um único piloto, que também assume o papel de artilheiro, mas sem a penalidade normal.
 AC2D20.Tooltips.VehicleQuality.tough_x: O veículo pode receber mais dano do que a maioria. A quantidade de ferimentos que o veículo pode receber antes de ser derrotado aumenta em X. Você também pode gerar 3 de Ameaça para ignorar um ferimento causado ao veículo (PdMs gastam 3 de Ameaça em vez disso).
-AC2D20.Tooltips.WeaponQuality.accurate: Se você fizer a ação menor Mirar antes de atacar com esta arma, ela ganha o efeito Violenta para esse ataque.
+AC2D20.Tooltips.WeaponQuality.accurate: Se você fizer a ação menor <em>Mirar</em> antes de atacar com esta arma, ela ganha o efeito Violenta para esse ataque.
 AC2D20.Tooltips.WeaponQuality.bane: Esta arma é especialmente efetiva contra criaturas do Mythós e ignora os efeitos das regras especiais de Invulnerável quando usadas contra essas criaturas. Além disso, criaturas do Mythós com a regra especial Vigoroso X não podem gastar Ameaça para ignorar ferimentos causados por uma arma com a qualidade Desgraça.
-AC2D20.Tooltips.WeaponQuality.close_quarters: A arma é compacta e fácil de manejar em ambientes confinados e durante combates corporais. Ela não sofre penalidade quando é usada para fazer um ataque a distância enquanto um inimigo está Adjacente.
-AC2D20.Tooltips.WeaponQuality.cumbersome: A arma é pesada e difícil de usar contra alvos pequenos, como soldados de infantaria. Ao atacar com esta arma, aumente a dificuldade do ataque em +1, se o alvo for de tamanho humano ou menor.
-AC2D20.Tooltips.WeaponQuality.debilitating: A dificuldade de qualquer teste  para tratar os ferimentos físicos desta arma é aumentada em +1.
+AC2D20.Tooltips.WeaponQuality.close_quarters: A arma é compacta e fácil de manejar em ambientes confinados e durante combates corporais. Ela não sofre penalidade quando usada para fazer um ataque a distância enquanto um inimigo está Adjacente.
+AC2D20.Tooltips.WeaponQuality.cumbersome: A arma é pesada e difícil de usar contra alvos pequenos, como soldados de infantaria. Ao atacar com esta arma, dificulte o teste em um passo, se o alvo for de tamanho humano ou menor.
+AC2D20.Tooltips.WeaponQuality.debilitating: Todos os testes para tratar os ferimentos físicos desta são dificultados em um passo.
 AC2D20.Tooltips.WeaponQuality.escalation: Entrar em uma cena com esta arma gera 1 de ameaça.
 AC2D20.Tooltips.WeaponQuality.experimental: Testes com este item aumentam sua margem de complicação em 2. Além disso, para cada 2 de Ímpeto gerados em um teste com este item, você também gera 1 de Ameaça.
-AC2D20.Tooltips.WeaponQuality.giant_killer: O poder destrutivo dessa arma é desperdiçado em alvos pequenos ou leves, mas quanto maior for o adversário, maior é a letalidade dela. Ao jogar dano de uma arma com essa qualidade, adicione +X@s ao dano da arma, onde X é a Escala do alvo. Essa qualidade só fornece dados adicionais até o valor do dano base da arma — uma arma com um dano básico 6@s não pode ganhar mais de +6@s dessa forma.
-AC2D20.Tooltips.WeaponQuality.heavy: Os ataques feitos com esta arma têm a dificuldade aumentada em +2, a menos que ela tenha sido preparada (apoiada no solo ou objeto sólido, ou então montada em um bipé ou tripé). Preparar uma arma pesada exige o uso da ação menor Aprumar.
-AC2D20.Tooltips.WeaponQuality.hidden: Quando esta arma está oculta, ela não pode ser detectada por quem simplesmente olhar para o personagem, e qualquer teste feito para encontrá-la tem a dificuldade aumentada em 1.
-AC2D20.Tooltips.WeaponQuality.hunger: "Sempre que a arma é usada para causar um ou mais ferimentos, o portador pode ganhar um dos seguintes bônus: recuperar 5 de estresse, curar um único ferimento, ou ganhar +1@s de poder pelo restante da cena (esse bônus de poder só pode ser ganhado uma vez por cena)."
+AC2D20.Tooltips.WeaponQuality.giant_killer: O poder destrutivo da arma é desperdiçado em alvos pequenos ou leves, mas quanto maior for o adversário, maior é a letalidade dela. Ao jogar o dano de uma arma com esta qualidade, adicione +X@ ao dano da arma, onde X é a Escala do alvo. Esta qualidade só fornece dados adicionais até o valor do dano base da arma — uma arma com um dano básico de 6@ não pode ganhar mais de +6@ dessa forma.
+AC2D20.Tooltips.WeaponQuality.heavy: Os ataques feitos com esta arma são dificultados em dois passos, a menos que ela tenha sido preparada (apoiada no solo ou objeto sólido, ou então montada em um bipé ou tripé). Preparar uma arma pesada exige o uso da ação menor Aprumar.
+AC2D20.Tooltips.WeaponQuality.hidden: Quando esta arma está ocultada, ela não pode ser detectada por quem simplesmente olhar para o personagem, e qualquer teste feito para encontrá-la será dificultado em um passo.
+AC2D20.Tooltips.WeaponQuality.hunger: "Sempre que a arma é usada para causar um ou mais ferimentos, o portador pode ganhar um dos seguintes bônus: recuperar 5 de estresse, curar um único ferimento, ou ganhar +1@s de poder pelo restante da cena (esse bônus de poder só pode ser ganho uma vez por cena)."
 AC2D20.Tooltips.WeaponQuality.inaccurate: Você não pode se beneficiar da ação menor Mirar com esta arma.
-AC2D20.Tooltips.WeaponQuality.indirect: A arma não foi projetada para fogo direto, em vez disso, lançando sua carga útil sobre os inimigos a grandes distâncias. Os ataques feitos com esta arma são dificultados em um passo, mas não exigem linha de visão.
+AC2D20.Tooltips.WeaponQuality.indirect: A arma não foi projetada para fogo direto, mas sim para lançar sua carga útil sobre os inimigos a grandes distâncias. Os ataques feitos com esta arma são dificultados em um passo, mas não exigem linha de visão.
 AC2D20.Tooltips.WeaponQuality.munition: A munição desta arma é especialmente volumosa — quando você fizer um ataque usando uma arma de Munição, você precisa gastar 1 de munição. A arma não pode ser usada para ataques de barragem.
-AC2D20.Tooltips.WeaponQuality.parrying: Quando o portador da Arma faz um teste disputado em defesa contra um ataque corporal, ele pode rejogar um único d20. Isso não se acumula se o personagem tiver várias armas de aparagem.
+AC2D20.Tooltips.WeaponQuality.parrying: Quando o portador da arma faz um teste disputado em defesa contra um ataque corporal, ele pode rejogar um único d20. Isso não se acumula se o personagem tiver várias armas de aparagem.
 AC2D20.Tooltips.WeaponQuality.precise: Ataques com esta arma usam Coordenação, em vez de qualquer outro atributo, ao gerar @s adicionais.
 AC2D20.Tooltips.WeaponQuality.reliable: Você pode ignorar a primeira complicação obtida ao usar esta arma em uma cena de ação.
-AC2D20.Tooltips.WeaponQuality.subtle: Ataques com esta arma são difíceis de escutar, exigindo um teste Difícil (D2) de <strong>Discernimento + Observar</strong> para notá-lo. O Mestre pode ajustar essa dificuldade com base na distância e no ruído ambiente.
+AC2D20.Tooltips.WeaponQuality.subtle: Ataques com esta arma são difíceis de escutar, exigindo um teste Desafiador (D2) de <strong>Discernimento + Observar</strong> para notá-lo. O Mestre pode ajustar essa dificuldade com base na distância e no ruído ambiente.
 AC2D20.Tooltips.WeaponQuality.unreliable: Ataques com esta arma aumentam a margem de complicações do teste em 1.
 AC2D20.Tooltips.WeaponQuality.venomous: "Quando uma arma Ofídica com o traço Venenosa obtiver um ou mais efeitos no dano, causará a verdade Envenenado no alvo (Ou a verdade Envenenado: Toxinas Ofídicas p.79). A vítima sofrerá 1 de dano Persistente com efeito Perfurante 2 a cada turno até ser curados. Devido à tecnologia envolvida em sua criação, as Armas Venenosas Ofídicas têm um brilho vermelho característico quando disparam, o que as torna fáceis de localizar e revela a localização do atirador."
 AC2D20.UI.Add: Adicionar
@@ -434,11 +434,11 @@ AC2D20.UI.Type: Tipo
 AC2D20.UI.UNSORTED: Não organizado
 AC2D20.UI.Weight: Peso
 AC2D20.VEHICLES.QUALITIES.cargo_x: Carga
-AC2D20.VEHICLES.QUALITIES.cumbersome: Volumosa
+AC2D20.VEHICLES.QUALITIES.cumbersome: Desajeitado
 AC2D20.VEHICLES.QUALITIES.enclosed: Fechado
 AC2D20.VEHICLES.QUALITIES.exposed: Exposto
-AC2D20.VEHICLES.QUALITIES.high_performance: Alto desempenho
-AC2D20.VEHICLES.QUALITIES.single_seat: Assento único
+AC2D20.VEHICLES.QUALITIES.high_performance: Alto-Desempenho
+AC2D20.VEHICLES.QUALITIES.single_seat: Assento Único
 AC2D20.VEHICLES.QUALITIES.tough_x: Vigoroso
 AC2D20.Warnings.DerivedValue: Este é um valor calculado automaticamente que não pode ser editado.
 AC2D20.Warnings.OnEditOwnedItemActiveEffects: O gerenciamento de efeitos ativos de Itens Possuídos não é suportado no momento.
@@ -457,10 +457,10 @@ AC2D20.WEAPONS.damageType.poison: Veneno
 AC2D20.WEAPONS.damageType.radiation: Radiação
 AC2D20.WEAPONS.qualities: Qualidades
 AC2D20.WEAPONS.type: Tipo de Arma
-AC2D20.WEAPONS.weaponQuality.accurate: Preciso
+AC2D20.WEAPONS.weaponQuality.accurate: Precisa
 AC2D20.WEAPONS.weaponQuality.bane: Desgraça
 AC2D20.WEAPONS.weaponQuality.close_quarters: Combate Próximo
-AC2D20.WEAPONS.weaponQuality.cumbersome: Volumosa
+AC2D20.WEAPONS.weaponQuality.cumbersome: Desajeitada
 AC2D20.WEAPONS.weaponQuality.debilitating: Debilitante
 AC2D20.WEAPONS.weaponQuality.escalation: Agravamento
 AC2D20.WEAPONS.weaponQuality.experimental: Experimental
@@ -472,7 +472,7 @@ AC2D20.WEAPONS.weaponQuality.inaccurate: Imprecisa
 AC2D20.WEAPONS.weaponQuality.indirect: Indireta
 AC2D20.WEAPONS.weaponQuality.munition: Munição
 AC2D20.WEAPONS.weaponQuality.parrying: Aparagem
-AC2D20.WEAPONS.weaponQuality.precise: Precisa
+AC2D20.WEAPONS.weaponQuality.precise: Certeira
 AC2D20.WEAPONS.weaponQuality.reliable: Confiável
 AC2D20.WEAPONS.weaponQuality.subtle: Sutil
 AC2D20.WEAPONS.weaponQuality.unreliable: Inconstante
